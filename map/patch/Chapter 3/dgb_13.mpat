@@ -1,0 +1,115 @@
+
+@ $Script_Main_EnterWalk
+{
+    0:  Set  *WorldMapLocation  0000000F 
+   10:  Call     SetSpriteShading 	( FFFFFFFF )
+   20:  Call     SetCamPerspective 	( .Cam:Default 00000003 00000019 00000010 00001000 )
+   40:  Call     SetCamBGColor 	( .Cam:Default 00000000 00000000 00000000 )
+   5C:  Call     SetCamLeadPlayer 	( .Cam:Default .False )
+   70:  Call     SetCamEnabled 	( .Cam:Default .True )
+  If  *Flag_DGB_21  ==  00000001 
+   	Call     ModifyColliderFlags 	( 00000000 ~Collider:wall 7FFFFE00 )
+  Else
+  	Call     MakeNpcs    	( 00000001 $NpcGroupList_Death)
+%	Bind     $MegaRush  .Trigger:FloorTouch {Collider:death} 00000001 00000000	
+  EndIf
+   84:  ExecWait $Script_80240270 
+   90:  Call     ModifyColliderFlags 	( 00000000 ~Collider:deilits 7FFFFE00 )
+   A8:  ExecWait $Script_80240680 
+   B4:  Exec     $Script_80240050 
+   C0:  Set  *Var[0]  $Script_8024014C 
+   D0:  Exec     EnterWalk 
+   DC:  Wait     00000001 
+   E8:  Return
+   F0:  End
+}
+
+  /% 
+    #new:Script $MegaRush
+	   If  *Flag_DGB_21  ==  00000000
+	   Set  *MapFlag[2] .True
+	   Call     DisablePlayerInput	( .True )
+		EndIf
+     Return
+     End  
+  %/ 
+   
+#new:NpcGroupList $NpcGroupList_Death
+{
+00000001 $NpcGroup_Death 0F0B0000 
+00000000 00000000 00000000
+}
+
+#new:NpcGroup $NpcGroup_Death
+{
+00000001 $BlankSettings ~Vec3f:death % 1260 0 -40
+00A40D01 $Script_Init_802421EC 00000000 00000000 00000000 
+~NoItems ~NoHP ~NoFP ~NoCoinBonus
+~Movement:death
+00390902 00390903 00390902 00390903 00390904 00390904 00390902 00390902 
+0039090C 0039090C 00390911 00390912 00390907 00390908 00390901 00390902 
+00000000 00000000 00000000 00000000
+}
+
+   #new:Script $Script_Init_802421EC
+{
+		Call     BindNpcIdle 		( .Npc:Self $Script_IdleAI )
+		Call     BindNpcInteract	( .Npc:Self $Script_Interact )
+		% If  *Flag_DGB_21  ==  00000000 
+     	Call     BindNpcDefeat 	( .Npc:Self $Script_802421A8 )
+    % Else
+     	%Call     RemoveEncounter ( FFFFFFFF )
+     %EndIf
+     Return
+     End
+}
+
+	 #new:Script $Script_802421A8
+{
+	 	Call     DisablePlayerInput	( .False )
+		Call     ModifyColliderFlags 	( 00000000 ~Collider:wall 7FFFFE00 )
+		Set  *Flag_DGB_21  00000001 
+		Call     DoNpcDefeat 	( )
+		Call     SetMusicTrack		( 00000000 .Song:TubbasManor 00000000 00000008 )
+		Set  *MapFlag[2] .False 
+		Call     DisablePlayerInput 	( .False )
+		Call     EnablePartnerAI 	( )
+   34:  Return
+   3C:  End 
+}
+   
+#new:Script $Script_IdleAI
+{
+Label 00000000
+	Call     GetPlayerPos 	( *Var[0] *Var[1] *Var[2] )
+    Wait     00000001 
+    If  *Var[0]  <  -700`
+	Goto 00000001
+	Else
+	Goto 00000000
+	EndIf
+	Label 00000001
+	Call     GetPlayerPos 	( *Var[0] *Var[1] *Var[2] )
+    Wait     00000001 
+    If  *Var[2]  <  -100`
+			Call     DisablePlayerInput 	( .True )
+		 	Call     StartBossBattle 	( .Song:SpecialBattle )
+	Else
+	Goto 00000000
+	EndIf
+	Wait     00000001 
+Return
+End
+}
+   
+#new:NpcSettings $BlankSettings
+{
+00000000 00200018 00000000 00000000 00000000 00000000 00000000 00000000 
+00000000 00000000 00630000
+}
+
+   #new:Script $Script_Interact
+{
+	Return
+	End
+}

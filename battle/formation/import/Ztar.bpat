@@ -1,0 +1,524 @@
+% Ztar Enemy
+% ===========
+% Made by JaThePlayer
+% Recolor + Small script modifications by Thamz
+
+% easier to change animations and palettes.
+#define .AnimStop	00200500
+#define .AnimIdle	0020051B
+#define .AnimPoison	00200503
+#define .AnimGrabBook 0020051C
+#define .AnimStartBook 0020051D
+#define .AnimReadBook 0020051E
+#define .AnimStopBook 0020051F
+#define .AnimPain	00200511
+#define .AnimDizzy	0020050E
+#define .AnimDead	00200520
+
+#new:Actor $Ztar
+{
+% stats
+[Index]        F6b
+[Level]        27`b
+[MaxHP]        12`b
+[Coins]         5`b
+[Flags]       00000200
+[StatusTable] $StatusTable_ZTARStar 
+% ai
+[PartsCount]  1`s 
+[PartsTable] $PartsTable_ZTARStar 
+[Script]      $Script_Init_ZTARStar 
+% move effectiveness
+[Escape]       20`b 
+[Item]         50`b 
+[AirLift]       5`b 
+[Hurricane]    60`b % Bow's "Spook" as well
+[UpAndAway]    70`b 
+[PowerBounce]   0`b 
+[SpinSmash]     4`b % weight (0-4)
+% ui positions
+[Size]         36`b  16`b % width height - affects shadow
+[HealthBar]     0`b   4`b % dx dy
+[StatusTurn]  -10`b  20`b % dx dy
+[StatusIcon]   10`b  20`b % dx dy
+}
+
+#new:StatusTable $StatusTable_ZTARStar
+{
+.Status:Normal            0`
+.Status:Sleep             0`
+.Status:Poison            0`
+.Status:Frozen            0`
+.Status:Dizzy             0`
+.Status:Static            0`
+.Status:Paralyze          0`
+.Status:Shrink            0`
+.Status:Stop              0`
+.Status:SleepTurnMod     -1`
+.Status:PoisonTurnMod     0`
+.Status:FrozenTurnMod     0`
+.Status:DizzyTurnMod     -1`
+.Status:StaticTurnMod     0`
+.Status:ParalyzeTurnMod  -2`
+.Status:ShrinkTurnMod    -2`
+.Status:StopTurnMod      -1`
+.Status:End
+}
+
+#new:PartsTable $PartsTable_ZTARStar
+{
+00800000 % flags      = targetable by multi-target attacks
+01000000 % II-XXYYZZ    SpriteCount index, pos offset
+001600FF % XXYY-AAAA    cursor pos, opacity was FE19
+$IdleAnimations_ZTARStar
+$DefenseTable_ZTARStar
+00000000
+00000000
+00000000 % FDF6
+00000000
+}
+
+#new:IdleAnimations $IdleAnimations_ZTARStar
+{
+.Status:Normal    .AnimIdle
+.Status:Stone     .AnimStop
+.Status:Sleep     .AnimIdle
+.Status:Poison    .AnimPoison
+.Status:Stop      .AnimStop
+.Status:Static    .AnimIdle
+.Status:Paralyze  .AnimStop
+.Status:Dizzy     .AnimDizzy
+.Status:End
+}
+
+#new:DefenseTable $DefenseTable_ZTARStar
+{
+.Element:Normal 00000001
+.Element:Fire 	00000063
+.Element:Ice    00000063 % immune
+.Element:Cosmic 00000063 % immune
+.Element:Quake  00000063
+.Element:End
+}
+
+#new:Script $Script_Init_ZTARStar
+{
+	Call	BindTakeTurn	( .Actor:Self $Script_TakeTurn_ZTARStar )
+	% Call	BindIdle		( .Actor:Self $Script_Idle_ZTARStar )
+	Call	BindHandleEvent	( .Actor:Self $Script_HandleEvent_ZTARStar )
+	Call	GetActorPos		( .Actor:Self *Var[0] *Var[1] *Var[2] )
+	Call	HPBarToHome		( .Actor:Self )
+	%Call     SetPartEventFlags 	( .Actor:Self 00000010 00000080 ) % spiky
+	Return
+	End
+}
+
+#new:Script $Script_HandleEvent_ZTARStar
+{
+	Call     UseIdleAnimation 	( .Actor:Self .False )
+	Call     EnableIdleScript 	( .Actor:Self 00000000 )
+	Call     GetLastEvent 	( .Actor:Self *Var[0] )
+	Switch  *Var[0] 
+		CaseOR  ==  .Event:HitCombo
+		CaseOR  ==  .Event:Hit
+			SetConst  *Var[0]  00000001 
+			SetConst  *Var[1]  .AnimPain 
+			ExecWait DoNormalHit 
+		EndCaseGroup
+		Case  ==  .Event:BurnHit
+			SetConst  *Var[0]  00000001 
+			SetConst  *Var[1]  .AnimPain 
+			SetConst  *Var[2]  .AnimDead 
+			ExecWait DoBurnHit 
+		Case  ==  .Event:BurnDeath
+			SetConst  *Var[0]  00000001 
+			SetConst  *Var[1]  .AnimPain 
+			SetConst  *Var[2]  .AnimDead 
+			ExecWait DoBurnHit 
+			SetConst  *Var[0]  00000001 
+			SetConst  *Var[1]  .AnimDead 
+			ExecWait DoDeath 
+			Return
+		Case  ==  .Event:SpinSmashHit
+			SetConst  *Var[0]  00000001 
+			SetConst  *Var[1]  .AnimPain 
+			ExecWait 8029B998 
+		Case  ==  .Event:SpinSmashDeath
+			SetConst  *Var[0]  00000001 
+			SetConst  *Var[1]  .AnimPain 
+			ExecWait 8029B998 
+			SetConst  *Var[0]  00000001 
+			SetConst  *Var[1]  .AnimPain 
+			ExecWait DoDeath 
+			Return
+		Case  ==  .Event:ShockHit
+			Call     PlaySoundAtActor 	( .Actor:Self 00000759 )
+			SetConst  *Var[0]  00000001 
+			SetConst  *Var[1]  .AnimPain 
+			ExecWait DoShockHit 
+			SetConst  *Var[0]  00000001 
+			SetConst  *Var[1]  .AnimPain 
+			ExecWait 8029BD70 
+			%ExecWait $Script_ReturnHome_ZTARStar 
+		Case  ==  .Event:ShockDeath
+			Call     PlaySoundAtActor 	( .Actor:Self 00000759 )
+			SetConst  *Var[0]  00000001 
+			SetConst  *Var[1]  .AnimPain 
+			ExecWait DoShockHit 
+			SetConst  *Var[0]  00000001 
+			SetConst  *Var[1]  .AnimPain 
+			ExecWait DoDeath 
+			Return
+		CaseOR  ==  00000017
+		CaseOR  ==  .Event:Immune
+		CaseOR  ==  .Event:AirLiftFailed
+		CaseOR  ==  .Event:BurnTaunt
+			SetConst  *Var[0]  00000001 
+			SetConst  *Var[1]  .AnimIdle 
+			ExecWait DoImmune 
+		EndCaseGroup
+		Case  ==  .Event:Death
+			SetConst  *Var[0]  00000001 
+			SetConst  *Var[1]  .AnimPain 
+			ExecWait DoNormalHit 
+			SetConst  *Var[0]  00000001 
+			SetConst  *Var[1]  .AnimPain 
+			ExecWait DoDeath 
+			Return
+		Case  ==  .Event:BeginFirstStrike
+			%Call     SetActorPos 	( .Actor:Self 00000014 00000000 00000000 )
+			%Call     HPBarToCurrent ( .Actor:Self )
+		Case  ==  .Event:EndFirstStrike
+			%ExecWait $Script_ReturnHome_ZTARStar 
+			%Call     HPBarToHome 	( .Actor:Self )
+		Case  ==  .Event:RecoverStatus
+			SetConst  *Var[0]  00000001 
+			SetConst  *Var[1]  .AnimIdle 
+			ExecWait DoRecover 
+		Case  ==  .Event:ScareAway
+			SetConst  *Var[0]  00000001 
+			SetConst  *Var[1]  .AnimIdle 
+			SetConst  *Var[2]  .AnimPain 
+			ExecWait DoScareAway 
+			Return
+		Case  ==  .Event:BeginAirLift
+			SetConst  *Var[0]  00000001 
+			SetConst  *Var[1]  .AnimIdle 
+			ExecWait DoAirLift 
+		Case  ==  .Event:BlowAway
+			SetConst  *Var[0]  00000001 
+			SetConst  *Var[1]  .AnimIdle 
+			ExecWait DoBlowAway 
+			Return
+		Default
+	EndSwitch
+	Call     EnableIdleScript 	( .Actor:Self 00000001 )
+	Call     UseIdleAnimation 	( .Actor:Self .True )
+	Return
+	End
+}
+
+#new:Script $Script_TakeTurn_ZTARStar
+{
+		ExecWait	$Script_AttackZTAR
+	Return
+	End
+}
+	
+#new:Script $Script_ReadBookZTAR
+{
+% Read a book to increase everyone's defense and damage
+	% begin buffing all
+	Call     UseIdleAnimation 	( FFFFFF81 00000000 )
+	Call     EnableIdleScript 	( FFFFFF81 00000000 )
+	Call     SetTargetActor 	( FFFFFF81 00000000 )
+	Call     UseBattleCamPreset 	( 0000000E )
+	Call     BattleCamTargetActor 	( FFFFFF81 )
+	Call     MoveBattleCamOver 	( 0000000F )
+	Wait     0000000F 
+	% reading animation
+	Call     SetAnimation 		( FFFFFF81 00000001 .AnimPain )
+	Wait 16`
+	Call     SetAnimation 		( FFFFFF81 00000001 .AnimDead )
+	Call     GetOwnerID 	( *Var[0] )
+	Call     GetActorPos       	( *Var[0] *Var[1] *Var[2] *Var[3] )
+	Call     PlaySoundAtActor   ( FFFFFF81 000002F8 )
+	Call     PlaySoundAtActor   ( FFFFFF81 00000214 )
+	Call     PlaySoundAtActor   ( FFFFFF81 00000000 )
+	Call     SetAnimation 		( FFFFFF81 00000001 .AnimDead ) % read
+	Add      *Var[2] 00000032 
+	Call     PlayEffect       	( 00000033 00000001 *Var[1] *Var[2] *Var[3] 0000000A 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 )
+	Call     PlayEffect       	( 00000033 00000002 *Var[1] *Var[2] *Var[3] 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 )
+	Wait     30` 
+	Call     SetAnimation 	( FFFFFF81 00000001 .AnimPain ) % stop reading
+	Wait     10` 
+	% loop over all enemies
+	Call     EnemyCreateTargetList 	( 00008002 )
+	Call     InitTargetIterator	( )
+		Label    00000000 
+		Call     GetOwnerTarget 	( *Var[0] *Var[1] )
+		Thread
+			Wait     00000005 
+			Call     PlaySoundAtActor    ( *Var[0] 0000206D )
+			Call     PlaySoundAtActor    ( *Var[0] 00000214 )
+			Wait     30` 
+			Call     PlaySoundAtActor    ( *Var[0] 0000025C )
+		EndThread
+		Thread
+			Call	8026BF48	( 00000001 )
+			Call	BoostDefense	( *Var[0] 00000001 )
+			%Call	8026BF48	( 00000000 )
+			%Call	8026BF48	( 00000001 )
+			Call	BoostAttack 	( *Var[0] 00000001 )
+			Call	8026BF48	( 00000000 )
+		EndThread
+		Call     ChooseNextTarget    	( 00000000 *Var[0] )
+		If       *Var[0]  !=  FFFFFFFF
+			Goto     00000000 
+		EndIf
+	% reset and return
+	%Call     WaitForBuffDone 	( )
+	Wait     1` 
+	Call     UseBattleCamPreset 	( 00000002 )
+	Wait     10` 
+	%Call     YieldTurn 	( )
+	%Call     EnableIdleScript 	( FFFFFF81 00000001 )
+	%Call     UseIdleAnimation 	( FFFFFF81 00000001 )
+	%ExecWait	$Script_AttackZTAR
+	Return
+	End
+}
+
+#new:Script $Script_AttackZTAR    % Monstar's attack - I am going to make this work
+{
+	Call     UseIdleAnimation 	( .Actor:Self .False )
+    Call     SetActorVar 	( .Actor:Self 00000001 00000001 )
+    Call     SetTargetActor ( .Actor:Self .Actor:Player )
+     Call     UseBattleCamPreset 	( 00000013 )
+     Call     GetActorPos 	( .Actor:Self *Var[0] *Var[1] *Var[2] )
+     Call     SetBattleCamTarget 	( *Var[0] *Var[1] *Var[2] )
+     %Call     SetBattleCamZoom  	( 00000015 )
+     Call     SetBattleCamOffsetZ 	( 00000021 )
+     Call     BattleCamTargetActor ( .Actor:Self )
+     Call     MoveBattleCamOver 	( 0000001E )
+     Wait     0000001E 
+     	Call     SetAnimation 	( .Actor:Self 00000001 00200511 )
+    Thread
+    	Call     $Function_80218458_STAR ( )
+    	Call     MakeLerp    	( 00000000 000000C8 0000003C 00000001 )
+    	Label    00000000 
+    	Call     UpdateLerp  	( )
+    	Call     $Function_8021849C_STAR ( *Var[0] )
+   	Wait     00000001 
+    	If  *Var[1]  ==  00000001 
+    		Goto     00000000 
+    	EndIf
+    EndThread
+    Call     PlaySoundAtActor 	( .Actor:Self .Sound:BigPowerUp )
+    Call     $Function_802184D4_STAR ( 00000050 00000078 )
+    Call     UseBattleCamPreset 	( 00000013 )
+    Call     GetActorPos 	( .Actor:Self *Var[0] *Var[1] *Var[2] )
+    Call     SetBattleCamTarget 	( *Var[0] *Var[1] *Var[2] )
+    %Call     SetBattleCamZoom  	( 0000015 )
+   Call     SetBattleCamOffsetZ 	( 00000021 )
+   Call     BattleCamTargetActor ( .Actor:Self )
+  Call     MoveBattleCamOver 	( 0000003C )
+    Wait     0000003C 
+    Call     PlaySoundAtActor 	( .Actor:Self 000002EA )
+    Call     PlaySoundAtActor 	( .Actor:Self 0000036E )
+    Thread
+    	Wait     0000000A 
+    	Loop     00000012 
+    		Call     RandInt     	( 00000096 *Var[0] )
+    		Add  *Var[0]  00000064 
+    		Call     $Function_802184D4_STAR ( *Var[0] 00000014 )
+    		Wait     0000000A 
+    	EndLoop
+    EndThread
+    Thread
+    	Loop     00000022 % loop this less so that the stars dont last way longer than the attack (was 3C)
+    		Call     RandInt     	( 00000001 *Var[0] )
+    		Add  *Var[0]  00000002 
+    		Call     RandInt     	( 00000190 *Var[1] )
+    		Sub  *Var[1]  00000064 
+    		Call     RandInt     	( 00000064 *Var[2] )
+    		Sub  *Var[2]  00000032 
+    		Set  *Var[3]  *Var[1] 
+   		Sub  *Var[3]  000000C8 
+    		Set  *Var[4]  *Var[2] 
+    		Call     RandInt     	( 0000000A *Var[5] )
+    		Add  *Var[5]  0000000A 
+   		Call     PlayEffect  	( 0000000F *Var[0] *Var[1] 000000F0 *Var[2] *Var[3] 00000000 *Var[4] *Var[5] 00000000 00000000 00000000 00000000 00000000 )
+    		Wait     00000003 
+   	EndLoop
+    EndThread
+    Wait     00000008 
+   Call     UseBattleCamPreset 	( 00000002 )
+    Call     MoveBattleCamOver 	( 0000000A )
+    Call     GetActorPos 	( .Actor:Self *Var[0] *Var[1] *Var[2] )
+    Add  *Var[1]  00000008 
+    %Add  *Var[2]  00000005 
+    Call     PlayEffect  	( ~FX:RadialFlowOut:BlueSpikes *Var[0] *Var[1] *Var[2] *Fixed[0.80078125] 000000A0 00000000 00000000 00000000 00000000 00000000 00000000 00000000 )
+   % Call     SetAnimation 	( .Actor:Self 00000001 007E0007 )
+    Call     EnemyTestTarget ( .Actor:Self *Var[0] 00000000 00000000 00000000 00000010 )
+    Switch  *Var[0] 
+    	CaseOR  ==  00000006 
+   	CaseOR  ==  00000005 
+    		Set  *Var[A]  *Var[0] 
+    		Wait     000000AA 
+    		Call     SetAnimation 	( .Actor:Self 00000001 0020051B )
+    		Call     SetIdleAnimations 	( .Actor:Self 00000001 $IdleAnimations_ZTARStar )
+    		Call     MakeLerp    	( 000000C8 00000000 0000003C 00000000 )
+    		Label    00000001 
+    		Call     UpdateLerp  	( )
+    		Call     $Function_8021849C_STAR ( *Var[0] )
+    		Wait     00000001 
+   		If  *Var[1]  ==  00000001 
+    			Goto     00000001 
+    		EndIf
+    		If  *Var[A]  ==  00000005 
+   			Call     EnemyTestTarget ( .Actor:Self *Var[0] 80000000 00000000 00000000 00000000 )
+    		EndIf
+    		Wait     00000014 
+    		Call     SetActorVar 	( .Actor:Self 00000001 00000000 )
+			%Call     UseIdleAnimation 	( .Actor:Self .True )
+    		Return
+    	EndCaseGroup
+   EndSwitch
+  Wait     00000030 %much faster than normal monstar attack 
+    Wait     00000002 
+   Call     SetGoalToTarget 	( .Actor:Self )
+   Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 10000100 00000000 00000000 00000005 00000020 )
+ %  Call     $Function_Subtract_1_SP
+ Wait 0000000F
+   Call     GetStatusFlags ( .Actor:Partner *Var[B] ) % so it doesnt stunlock your partner
+	If  *Var[B]  &  01000000
+Goto 00000009
+Else	
+   Call    SetTargetActor ( .Actor:Self .Actor:Partner )
+	Call	EnemyDamageTarget	( .Actor:Self *Var[0] 00000000 0000FFFF 00000000 00000001 00000020 )
+	EndIf
+	Label 00000009
+Call     $SPSubtractMainFunction ( 00000000 00000080 )
+  Switch  *Var[0] 
+    	CaseOR  ==  00000000 
+   	CaseOR  ==  00000002 
+  		Call     SetAnimation 	( .Actor:Self 00000001 .AnimIdle )
+ 		%Call     SetIdleAnimations 	( .Actor:Self 00000001 $IdleAnimations_80219F90_STAR )
+  		Call     MakeLerp    	( 000000C8 00000000 0000003C 00000000 )
+  		Label    00000002 
+   		Call     UpdateLerp  	( )
+  		Call     $Function_8021849C_STAR ( *Var[0] )
+    		Wait     00000001 
+   		If  *Var[1]  ==  00000001 
+  			Goto     00000002 
+  		EndIf
+  		Wait     00000014 
+ 	EndCaseGroup
+ EndSwitch
+ 	 Call	GetActorDefenseBoost	( .Actor:Self *Var[0] ) % check defense boost on itself to determine if he should buff everyone.
+		If  *Var[0]  <  00000002	
+		Call	RandInt	( 100` *Var[0] )		
+			If  *Var[0]  <  75`
+				Set  *Var[0]  .Actor:Self
+				ExecWait	$Script_ReadBookZTAR
+			EndIf
+		EndIf
+  Call     SetActorVar 	( .Actor:Self 00000001 00000000 )
+  Call     UseIdleAnimation 	( .Actor:Self .True )
+  Return
+End
+}
+
+ 
+ 
+#new:Script $Script_AngerBoost
+{
+	Call	SetAnimation	( .Actor:Self 00000001 .AnimDead ) % Get very angry... I guess
+	Thread
+			Call	8026BF48	( 00000001 )
+			Call	BoostAttack 	( .Actor:Self 00000003 )
+			Call	8026BF48	( 00000000 )
+	EndThread
+	Call	SetAnimation	( .Actor:Self 00000001 .AnimIdle )
+Return
+End
+}
+
+
+
+#new:Function $Function_80218458_STAR
+{
+    0:  ADDIU     SP, SP, FFE8
+    4:  SW        RA, 10 (SP)
+    8:  JAL       8011D82C
+    C:  ADDIU     A0, R0, 1
+   10:  DADDU     A0, R0, R0
+   14:  ADDIU     V0, R0, 1
+   18:  DADDU     A1, A0, R0
+   1C:  DADDU     A2, A0, R0
+   20:  LAW       V1, 801512F0
+   28:  DADDU     A3, A0, R0
+   2C:  JAL       8011BE5C
+   30:  SB        V0, 0 (V1)
+   34:  LW        RA, 10 (SP)
+   38:  ADDIU     V0, R0, 2
+   3C:  JR        RA
+   40:  ADDIU     SP, SP, 18
+}
+
+#new:Function $Function_8021849C_STAR
+{
+    0:  ADDIU     SP, SP, FFE8
+    4:  SW        RA, 10 (SP)
+    8:  LW        V0, C (A0)
+    C:  JAL       ~Func:get_variable
+   10:  LW        A1, 0 (V0)
+   14:  DADDU     A0, R0, R0
+   18:  DADDU     A1, A0, R0
+   1C:  DADDU     A2, A0, R0
+   20:  JAL       8011BE5C
+   24:  ANDI      A3, V0, FF
+   28:  LW        RA, 10 (SP)
+   2C:  ADDIU     V0, R0, 2
+   30:  JR        RA
+   34:  ADDIU     SP, SP, 18
+}
+
+#new:Function $Function_802184D4_STAR
+{
+    0:  ADDIU     SP, SP, FFE0
+    4:  SW        S1, 14 (SP)
+    8:  DADDU     S1, A0, R0
+    C:  SW        RA, 18 (SP)
+   10:  SW        S0, 10 (SP)
+   14:  LW        S0, C (S1)
+   18:  LW        A1, 0 (S0)
+   1C:  JAL       ~Func:get_variable
+   20:  ADDIU     S0, S0, 4
+   24:  DADDU     A0, S1, R0
+   28:  LW        A1, 0 (S0)
+   2C:  JAL       ~Func:get_variable
+   30:  DADDU     S0, V0, R0
+   34:  DADDU     A0, S0, R0
+   38:  JAL       80028F08
+   3C:  DADDU     A1, V0, R0
+   40:  LW        RA, 18 (SP)
+   44:  LW        S1, 14 (SP)
+   48:  LW        S0, 10 (SP)
+   4C:  ADDIU     V0, R0, 2
+   50:  JR        RA
+   54:  ADDIU     SP, SP, 20
+}
+   
+   #new:Function $Function_Subtract_1_SP
+{
+LAB t1, 8010F520 %load current sp into t1
+ORI t2, r0, 00FF %load FF into t2
+ADD t1, t2, t1 %add FF to t1
+BEQ t1, t2, .oend %if t1 = FF and t2 = FF go to .oend
+NOP
+SAB t1, 8010F520
+.oend
+JR RA
+}

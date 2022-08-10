@@ -1,0 +1,22 @@
+@ $Script_80241028
+{
+[F8]  			Call     MakeItemEntity ( .Item:LastStand ~Vec3d:Item80241120 00000000 *GF_FLO22_Item_FlowerSaverB )
+[380]  			Call     SetNpcAnimation 	( 00000000 004B0201 )
+[3C0]  			Call     SetNpcAnimation 	( 00000000 004B0204 )
+}
+
+@ $Script_Defeat_802405E4
+{
+[B8]  		Call     SetNpcAnimation 	( .Npc:Self 004B0201 )
+}
+
+@ $NpcGroup_80240A04
+{
+00000000 $NpcSettings_80240520 ~Vec3f:NPC_Bzzap_00 % 0 -1000 0
+00000F04 $Script_Init_80240740 00000000 00000000 0000010E 
+~NoItems ~NoHP ~NoFP ~NoCoinBonus
+~Movement:NPC_Bzzap_00
+004B0202 004B0202 004B0203 004B0203 004B0201 004B0202 004B0206 004B0206 
+004B0204 004B0202 004B0201 004B0201 004B0201 004B0201 004B0201 004B0201 
+00000000 00000000 00000000 00000000 % no tattle string
+}

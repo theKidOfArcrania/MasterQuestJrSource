@@ -1,0 +1,17 @@
+@ $Script_ExitWalk_80241CB8
+{
+    0:  SetGroup 0000001B 
+    C:  Call     UseExitHeading ( 0000003C 00000001 )
+   20:  Exec     ExitWalk 
+   2C:  If  *StoryProgress  >=  FFFFFF94 
+   3C:  	Call     GotoMap     	( "kmr_34" 00000000 )
+   50:  	Wait     00000064 
+   5C:  	Return
+   64:  Else
+   6C:  	Wait     0000000A 
+   78:  	ExecWait $Script_802460C0 
+   84:  EndIf
+   8C:  Unbind
+   94:  Return
+   9C:  End
+}

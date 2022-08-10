@@ -1,0 +1,11 @@
+@ $Script_MakeEntities
+{
+      If  *StoryProgress  <  00000060 
+    	Call     MakeEntity  	( .Entity:SavePoint ~Vec4d:Entity80249140 80000000 )
+        	Call     MakeEntity   ( .Entity:HealingBlock ~Vec4d:heartblock 80000000 )
+     EndIf
+    Return
+    End
+}
+	
+	%0:  Call     MakeItemEntity ( .Item:SJumpChg {Vec3d:Item80240AC0} 00000011 *GF_FLO19_Item_SJumpChg )

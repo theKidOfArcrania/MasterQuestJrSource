@@ -1,0 +1,130 @@
+@ $Function_802A15A0
+{
+    0:  ADDIU     SP, SP, FFE8
+    4:  SW        S0, 10 (SP)
+    8:  DADDU     S0, A0, R0
+    C:  SW        RA, 14 (SP)
+   10:  LW        V0, C (S0)
+   14:  JAL       ~Func:get_variable
+   18:  LW        A1, 0 (V0)
+   1C:  LIA       V1, 800878E0
+   24:  SLL       V0, V0, 5
+   28:  ADDU      V0, V0, V1
+   2C:  LB        V1, 1B (V0)
+	%		
+		JAL        $IsBadgeEquiped
+        ADDIU      A0, R0, .Item:MedicineMan
+        BEQ        A0, R0, .NotEquipped
+        NOP
+        BLTZ       V1, .NotEquipped
+        NOP
+        SRL        A0, V1, 1
+        ADDU       V1, V1, A0
+        .NotEquipped
+	%
+   30:  SW        V1, B0 (S0)
+   34:  LB        V1, 1C (V0)
+  %
+    JAL        $IsBadgeEquiped
+        ADDIU     A0, R0, .Item:MedicineMan
+        BEQ       A0, R0, .StillNotEquipped
+        NOP
+        BLTZ      V1, .StillNotEquipped
+        NOP
+        SRL       A0, V1, 1
+        ADDU      V1, V1, A0
+        .StillNotEquipped
+  % 
+   38:  SW        R0, B8 (S0)
+   3C:  SW        V1, B4 (S0)
+   40:  LHU       V0, 18 (V0)
+   44:  ANDI      V0, V0, 100
+   48:  BEQ       V0, R0, .o54
+   4C:  ADDIU     V0, R0, 1
+   50:  SW        V0, B8 (S0)
+        .o54
+   54:  LW        V0, B0 (S0)
+   58:  BLTZ      V0, .o74
+   5C:  DADDU     V1, R0, R0
+   60:  BGTZL     V0, .o7C
+   64:  SW        V1, C0 (S0)
+   68:  LW        V0, B4 (S0)
+   6C:  BGEZL     V0, .o7C
+   70:  SW        V1, C0 (S0)
+        .o74
+   74:  ADDIU     V1, R0, 1
+   78:  SW        V1, C0 (S0)
+        .o7C
+   7C:  LW        RA, 14 (SP)
+   80:  LW        S0, 10 (SP)
+   84:  ADDIU     V0, R0, 2
+   88:  JR        RA
+   8C:  ADDIU     SP, SP, 18
+}
+
+   
+@ $Script_UseItem
+{
+    0:  Set      *Var[E] *Var[1] 
+   10:  Call     GetMenuSelection 	( *Var[0] *Var[1] *Var[2] )
+   28:  Set      *Var[A] *Var[1] 
+   38:  Call     $Function_802A15A0 ( *Var[A] )
+   48:  Call     InitTargetIterator 	( )
+   54:  Call     GetOwnerTarget ( *Var[0] *Var[1] )
+   68:  If       *Var[0] ==  00000100 
+   78:     ExecWait $Script_802A1BEC 
+   84:     Return
+   8C:  EndIf
+   94:  Set      *Var[1] *Var[E] 
+   A4:  ExecWait $Script_802A1630 
+   B0:  If       *Var[D] ==  00000000 
+   C0:     ExecWait $Script_802A1AFC 
+   CC:  Else
+   D4:     ExecWait $Script_802A1B74 
+   E0:  EndIf
+   E8:  If       *Var[F] ==  00000001 
+   F8:     Call     SetAnimation 	( .Actor:Player 00000000 0001001D )
+  110:  EndIf
+  118:  If       *Var[B]  >  00000000 
+  128:     Call     GetActorPos 	( .Actor:Player *Var[0] *Var[1] *Var[2] )
+  144:     Add      *Var[0] 00000000 
+  154:     Add      *Var[1] 00000023 
+  164:     Call     $Function_802A1378 ( *Var[0] *Var[1] *Var[2] *Var[B] )
+  180:  EndIf
+  188:  If       *Var[B]  <  00000000 
+  198:     Call     GetActorPos 	( .Actor:Player *Var[0] *Var[1] *Var[2] )
+  1B4:     Add      *Var[0] 00000000 
+  1C4:     Add      *Var[1] 00000023 
+  1D4:     Call     $Function_802A1378 ( *Var[0] *Var[1] *Var[2] *Var[B] )
+  1F0:  EndIf
+  1F8:  If       *Var[C]  >  00000000 
+  208:     Call     GetActorPos 	( .Actor:Player *Var[0] *Var[1] *Var[2] )
+  224:     Add      *Var[0] 00000014 
+  234:     Add      *Var[1] 00000019 
+  244:     Call     $Function_802A1438 ( *Var[0] *Var[1] *Var[2] *Var[C] )
+  260:  EndIf
+  268:  Call     GetActorPos 	( .Actor:Player *Var[0] *Var[1] *Var[2] )
+  284:  Add      *Var[1] 00000019 
+  294:  Call     802D7520 ( *Var[0] *Var[1] *Var[2] *Var[B] )
+  2B0:  If       *Var[B] !=  00000000 
+  2C0:     Call     $Function_802A14F8 ( *Var[B] )
+  2D0:  EndIf
+  2D8:  If       *Var[C] !=  00000000 
+  2E8:     Call     $Function_802A154C ( *Var[C] )
+  2F8:  EndIf
+  300:  If       *Var[F] ==  00000000 
+  310:     Wait     0000000A 
+  31C:     Call     SetAnimation 	( .Actor:Player 00000000 00010032 )
+  334:     Wait     0000001E 
+  340:  Else
+  348:     Wait     0000001E 
+  354:  EndIf
+  35C:  Call     GetActorPos 	( .Actor:Player *Var[0] *Var[1] *Var[2] )
+  378:  Call     802D75D8 ( *Var[0] *Var[1] *Var[2] *Var[B] )
+  394:  Call     SetAnimation 	( .Actor:Player 00000000 00010002 )
+  3AC:  Wait     00000014 
+  3B8:  ExecWait $Script_802A1A60 
+  3C4:  Return
+  3CC:  End
+}
+  

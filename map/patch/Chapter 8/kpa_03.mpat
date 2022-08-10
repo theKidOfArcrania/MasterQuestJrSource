@@ -1,0 +1,80 @@
+@ $NpcGroupList_802435B8
+{
+00000001 $NpcGroup_80242A18 22200004 
+00000001 $NpcGroup_80242C08 221F0004 
+00000001 $NpcGroup_80242DF8 22010004 
+00000001 $NpcGroup_80242FE8 22040004 
+00000002 $NpcGroup_802431D8 222F0004
+00000001 $NpcGroup_8024IBLG 22020004 
+00000000 00000000 00000000 
+}
+
+#new:NpcGroup $NpcGroup_8024IBLG
+{
+0000000F $BlankSettings ~Vec3f:blg % 1260 0 -40
+00A40D01 $Script_Init_802421EC 00000000 00000000 00000000 
+~NoItems ~NoHP ~NoFP ~NoCoinBonus
+~Movement:blg
+00950001 00950002 00950003 00950003 00950001 00950001 00950000 00950000 
+00950001 00950002 00950003 00950003 00950001 00950001 00950000 00950000 
+00000000 00000000 00000000 00000000 % no tattle string
+}
+
+#new:NpcSettings $BlankSettings
+{
+00000000 00200018 00000000 00000000 00000000 00000000 00000000 00000000 
+00000000 00000000 00630000
+}
+
+#new:Script $Script_Init_802421EC
+{
+		Call     BindNpcIdle 		( .Npc:Self $Script_IdleAI )
+      If  *Flag_KPA_30  ==  00000000 
+     	Call     BindNpcDefeat 	( .Npc:Self $Script_802421A8 )
+     Else
+     	Call     RemoveEncounter ( FFFFFFFF )
+     EndIf
+     Return
+     End
+}
+	
+#new:Script $Script_802421A8
+{
+		Call     DisablePlayerInput	( .False )
+   18:  Set  *Flag_KPA_30  00000001 
+   28:  Call     DoNpcDefeat 	( )
+   		Call     SetMusicTrack		( 00000000 .Song:BowsersCastleCaves 00000000 00000008 )
+		Set  *MapFlag[0] .False 		
+   34:  Return
+   3C:  End	
+}
+	
+#new:Script $Script_BattleStart	
+{
+	 If *Flag_KPA_30  ==  00000000
+	 		Call     DisablePlayerInput	( .True )
+	 Set  *MapFlag[0] .True
+	 EndIf
+	 Return
+	 End
+}
+	 
+#new:Script $Script_IdleAI
+{
+	Loop
+		If  *MapFlag[0]  ==  .True 
+		 	Call     StartBossBattle 	( .Song:SpecialBattle )
+		EndIf
+		Wait     00000001 
+	EndLoop
+		Bind     $Script_BattleStart  .Trigger:FloorTouch ~Collider:lionsarebad 00000001 00000000
+	% This didnt work. I would fix it, but the previous miniboss was such a pain
+	% that having another not even 4 maps later would be rude, even for MQ.
+	% You will die plenty in CH8, I promise!
+	Return
+	End
+}
+	
+	%I named this collider the day the Lions lost to the Cowboys in the 2018
+	%season of the NFL. That put them 1-3 for the season so far and means
+	%my team will probably not even make 8-8 this season. Stupid Lions.

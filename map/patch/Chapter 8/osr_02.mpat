@@ -1,0 +1,99 @@
+
+% Added a warp pipe connecting this to Peach's castle in Toad Town (osr_01).
+
+@ $EntryList
+{
+~Vec4f:Entry0 % -205.0    0.0   55.0  135.0
+~Vec4f:Entry1 %    0.0   20.0 -290.0  180.0
+00000000 00000000 00000000 00000000  % dummy entry for cutscene
+~Vec4f:WarpEntry
+}
+
+@ $Header
+{
+00000000 00000000 00000000 00000000 
+$Script_Main $EntryList 00000004 00000000 % update number of entrances
+00000000 00000000 00000000 00000000 
+00000000 00000000 80200000 0019000A 
+}
+
+#import EnterWarpPipe.mpat
+
+@ $Script_EnterDoubleDoor_80240408
+{
+	Call     GetLoadType 	( *Var[1] )
+	If       *Var[1] ==  00000001 
+		Exec     EnterSavePoint
+		Exec     $Script_80240384 
+		Return
+	EndIf
+	Call     GetEntryID  	( *Var[0] )
+	Switch   *Var[0] 
+		Case     ==  00000000 
+			Call     UseDoorSounds 	( 00000001 )
+			Set      *Var[2] 00000031 
+			Set      *Var[3] FFFFFFFF 
+			ExecWait EnterSingleDoor
+		Case     ==  00000001 
+			Call     UseDoorSounds 	( 00000002 )
+			Set      *Var[2] 0000002E 
+			Set      *Var[3] 0000002C 
+			ExecWait EnterDoubleDoor
+		Case     ==  00000002 
+			Exec     $Script_80241190 
+		Case  ==  3	% call the entry script for the new entrance
+			Set		*Var[A] $Script_80240384
+			Exec	$Script_EnterWarpPipe
+			Return
+	EndSwitch
+	Exec     $Script_80240384 
+	Return
+	End
+}
+
+@ $Script_MakeEntities
+{
+	If       *GF_KKJ25_Defeated_Bowser ==  00000001 
+		Return
+	EndIf
+	If       *StoryProgress  <  00000059 
+		Return
+	EndIf
+	Call     MakeEntity  	( .Entity:HiddenYellowBlock ~Vec4d:Entity802409D0 .Item:UltraShroom 80000000 )
+	Call     AssignBlockFlag 	( *GF_OSR02_HiddenItem_UltraShroom )
+	Call     MakeEntity  	( .Entity:SavePoint ~Vec4d:Entity80240A08 80000000 )
+	% NEW: blue warp pipe and blue switch
+	If       *Flag_CastleWarpPipeA ==  00000000 
+		Call     MakeEntity  	( .Entity:BlueSwitch ~Vec4d:BlueSwitch 80000000 )
+		Call     AssignAreaFlag ( 00000003 )
+		Set      *MapVar[1] *Var[0] 
+		Bind     $Script_RaisePipe .Trigger:AreaFlagSet *AreaFlag[003] 00000001 00000000 
+	EndIf
+	Call     MakeEntity  	( .Entity:BlueWarpPipe ~Vec4d:WarpPipe 00000003 $Script_UseBluePipe ~Index:*Flag_CastleWarpPipeA 80000000 )
+	% /NEW
+	Return
+	End
+}
+  
+#new:Script $Script_RaisePipe
+{
+	Wait     0000000A 
+	Call     PlaySound   	( 0000208E )
+	Set      *Flag_CastleWarpPipeA 00000001 
+	Unbind
+	Return
+	End
+}
+  
+#new:Script $Script_UseBluePipe
+{
+	Call     GotoMap     	( $ASCII_PipeDest 4 )
+	Wait     00000064 
+	Return
+	End
+}
+   
+#new:ASCII $ASCII_PipeDest
+{
+"osr_01"
+}

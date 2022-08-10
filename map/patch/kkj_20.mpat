@@ -1,0 +1,7 @@
+
+@ $Script_802409CC
+{
+    [0]  Set  *Var[A]  000000E4 
+}
+	
+	%change last stand to power bounce, but only if you do other stuff as well in other files, namely hos_06 and kkj_17

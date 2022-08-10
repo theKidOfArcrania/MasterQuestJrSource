@@ -1,0 +1,27 @@
+@ $Script_UseMove0
+{
+    0:  Call     802694A4 ( 00000001 )
+   10:  Call     80269EAC ( 00000002 )
+   20:  Call     GetMenuSelection 	( *Var[0] *Var[1] *Var[2] )
+   38:  Switch  *Var[1] 
+   Loop *Var[1]
+   44:  	Case  ==  00000000 
+   50:  		Set  *Var[D]  0000003C 
+   60:  		Set  *Var[E]  00000001 
+   70:  		Set  *Var[F]  00000002 
+   80:  		ExecWait $Script_802A3258 
+   8C:  	Case  ==  00000001 
+   98:  		Set  *Var[D]  0000003C 
+   A8:  		Set  *Var[E]  00000002 
+   B8:  		Set  *Var[F]  00000004 
+   C8:  		ExecWait $Script_802A3920 
+   D4:  	Case  ==  00000002 
+   E0:  		Set  *Var[D]  0000003C 
+   F0:  		Set  *Var[E]  00000003 
+  100:  		Set  *Var[F]  00000006 
+  110:  		ExecWait $Script_802A3FC4 
+  11C:  EndSwitch
+  EndLoop
+  124:  Return
+  12C:  End
+}

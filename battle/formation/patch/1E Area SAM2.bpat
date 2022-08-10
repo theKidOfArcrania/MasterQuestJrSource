@@ -1,0 +1,609 @@
+% ====================================================
+% Monstar
+% + 90HP, immune to everything
+% + at first, but loses his immunity when he does a heavy
+% + attack, this is the time to strike!
+% ==================================================== 
+
+@ $Monstar
+{
+% stats 
+[MaxHP]         50`b
+[PowerBounce]  3`b 
+}
+
+@ $DefenseTable_80219E60
+{
+.Element:Normal   00000063 %start the battle immune to everything
+.Element:Ice	  00000063 
+.Element:Fire     00000063 
+.Element:Water    00000063 
+.Element:Shock    00000063
+.Element:Blast    00000063
+.Element:Cosmic   00000063
+.Element:End 
+}
+
+% I canned these because I thought it was too complicated
+
+/%
+#new:DefenseTable $DefenseTable_Electric
+.Element:Normal   00000063 % develop electric weakness
+.Element:Ice	  00000063 
+.Element:Fire     00000063 
+.Element:Water    00000063 
+.Element:Shock    FFFFFFFD
+.Element:Blast    00000063
+.Element:Cosmic   00000063
+.Element:End 
+
+#new:DefenseTable $DefenseTable_Normal
+.Element:Normal   FFFFFFFF % develop normal weakness
+.Element:Ice	  00000063 
+.Element:Fire     00000063 
+.Element:Water    00000063 
+.Element:Shock    00000063
+.Element:Blast    00000063
+.Element:Cosmic   00000063
+.Element:End 
+
+#new:DefenseTable $DefenseTable_Blast
+.Element:Normal   00000063 % develop blast weakness
+.Element:Ice	  00000063 
+.Element:Fire     00000063 
+.Element:Water    00000063 
+.Element:Shock    00000063
+.Element:Blast    FFFFFFFD
+.Element:Cosmic   00000063
+.Element:End 
+
+#new:DefenseTable $DefenseTable_Water
+.Element:Normal   00000063 % develop water weakness
+.Element:Ice	  00000063 
+.Element:Fire     00000063 
+.Element:Water    FFFFFFFD 
+.Element:Shock    00000063
+.Element:Blast    00000063
+.Element:Cosmic   00000063
+.Element:End 
+%/
+
+#new:DefenseTable $DefenseTable_Immune
+{
+.Element:Normal   00000063 % develop no weakness
+.Element:Ice	  00000063 
+.Element:Fire     00000063 
+.Element:Water    00000063 
+.Element:Shock    00000063
+.Element:Blast    00000063
+.Element:Cosmic   00000063
+.Element:End 
+}
+
+#new:DefenseTable $DefenseTable_Weak
+{
+.Element:Normal   00000001 % develop all weakness
+.Element:Ice	  FFFFFFFE 
+.Element:Fire     FFFFFFFE 
+.Element:Water    FFFFFFFE 
+.Element:Shock    FFFFFFFE
+.Element:Blast    FFFFFFFE
+.Element:Cosmic   00000063
+.Element:End
+}
+
+@ $Script_TakeTurn_8021B394
+{
+Call     GetActorVar 	( .Actor:Self 0000000D *Var[B] )
+Switch *Var[B]
+	Case == 0`
+		ExecWait $Script_Attack	
+	Case == 1`
+		ExecWait $Script_AttackFast
+	Case == 2`
+		ExecWait $Script_Rest
+EndSwitch
+ExecWait $SetDefense
+Call     UseBattleCamPreset 	( 00000013 )
+Call     GetActorPos 	( .Actor:Self *Var[0] *Var[1] *Var[2] )
+Add  *Var[1]  00000048 
+Call     SetBattleCamTarget 	( *Var[0] *Var[1] *Var[2] )
+Call     SetBattleCamZoom  	( 00000154 )
+Call     MoveBattleCamOver 	( 00000014 )
+Call     UseIdleAnimation 	( .Actor:Self .False )
+Call     GetActorVar 	( .Actor:Self 00000003 *Var[0] )
+Switch  *Var[0] 
+	Case  ==  00000000 
+		Call     ActorSpeak  	( 001200E5 .Actor:Self 00000001 007E0009 007E0009 ) % Are you scaaaaared yet?	
+	Case  ==  00000001 
+		Call     ActorSpeak  	( 001200E7 .Actor:Self 00000001 007E0009 007E0009 ) % Thiiiis is your only chance!
+	Case  ==  00000002 
+		Call     ActorSpeak  	( 001200E6 .Actor:Self 00000001 007E0009 007E0009 ) % Ho ho ho ho! Your puuuuny attack doesn't hurt me a ...
+		Call     SetActorVar 	    ( .Actor:Self 00000003 00000000 ) % recycle it so he says this is your only chance the last turn you can hurt him
+	Default
+		Call     ActorSpeak  	( 001200E5 .Actor:Self 00000001 007E0009 007E0009 ) % Are you scaaaaared yet?
+EndSwitch
+Call     AddActorVar 	( .Actor:Self 00000003 00000001 )
+Call     UseIdleAnimation 	( .Actor:Self .True )
+Call     UseBattleCamPreset 	( 00000002 )
+Call     MoveBattleCamOver 	( 00000014 )
+Return
+End
+}
+
+#new:Script $SetDefense
+{
+Call     GetActorVar 	( .Actor:Self 0000000D *Var[A] )
+If *Var[A] == 0`
+	Call     SetActorVar 	    ( .Actor:Self 0000000D 00000001 )
+	Call     SetDefenseTable 	( .Actor:Enemy0 00000001 $DefenseTable_Weak )
+	Call     SetDefenseTable 	( .Actor:Enemy0 00000002 $DefenseTable_Weak )
+EndIf
+If *Var[A] == 1`
+	Call     SetActorVar 	    ( .Actor:Self 0000000D 00000002 )
+	Call     SetDefenseTable 	( .Actor:Enemy0 00000001 $DefenseTable_Weak )
+	Call     SetDefenseTable 	( .Actor:Enemy0 00000002 $DefenseTable_Weak )
+EndIf
+If *Var[A] == 2`	
+	Call     SetActorVar 	    ( .Actor:Self 0000000D 00000000 )
+	Call     SetDefenseTable 	( .Actor:Enemy0 00000001 $DefenseTable_Immune )
+	Call     SetDefenseTable 	( .Actor:Enemy0 00000002 $DefenseTable_Immune )
+EndIf
+Return
+End	
+}
+	
+@ $Script_Init_80219FF0
+{
+    0:  Call     BindTakeTurn 	( .Actor:Self $Script_TakeTurn_8021B394 )
+   14:  Call     BindIdle    	( .Actor:Self $Script_Idle_8021A2D0 )
+   28:  Call     BindHandleEvent 	( .Actor:Self $Script_HandleEvent_8021A4FC )
+   3C:  Call     BindNextTurn 	( .Actor:Self $Script_NextTurn_8021B384 )
+   50:  Call     SetActorVar 	( .Actor:Self 00000000 00000000 )
+   68:  Call     SetActorVar 	( .Actor:Self 00000001 00000000 )
+   80:  Call     SetActorVar 	( .Actor:Self 00000003 00000000 )
+   80:  Call     SetActorVar 	( .Actor:Self 0000000D 00000000 ) % which attack will he use
+   98:  Return
+   A0:  End
+}
+
+%RIP Mario, even Luigi is gonna feel this one.   
+#new:Script $Script_Attack
+{
+    0:  Call     UseIdleAnimation 	( .Actor:Self .False )
+   14:  Call     SetActorVar 	( .Actor:Self 00000001 00000001 )
+   2C:  Call     SetTargetActor ( .Actor:Self .Actor:Player )
+   40:  Call     UseBattleCamPreset 	( 00000013 )
+   50:  Call     GetActorPos 	( .Actor:Self *Var[0] *Var[1] *Var[2] )
+   6C:  Call     SetBattleCamTarget 	( *Var[0] *Var[1] *Var[2] )
+   84:  Call     SetBattleCamZoom  	( 000000FA )
+   94:  Call     SetBattleCamOffsetZ 	( 00000037 )
+   A4:  Call     BattleCamTargetActor ( .Actor:Self )
+   B4:  Call     MoveBattleCamOver 	( 0000001E )
+   C4:  Wait     0000001E 
+   D0:  Thread
+   D8:  	Call     SetAnimation 	( .Actor:Self 00000001 007E0004 )
+   F0:  	Wait     00000014 
+   FC:  	Call     SetAnimation 	( .Actor:Self 00000001 007E0005 )
+  114:  	Wait     00000014 
+  120:  	Call     SetAnimation 	( .Actor:Self 00000001 007E0006 )
+  138:  EndThread
+  140:  Thread
+  148:  	Call     $Function_80218458 ( )
+  154:  	Call     MakeLerp    	( 00000000 000000C8 0000003C 00000001 )
+  170:  	Label    00000000 
+  17C:  	Call     UpdateLerp  	( )
+  188:  	Call     $Function_8021849C ( *Var[0] )
+  198:  	Wait     00000001 
+  1A4:  	If  *Var[1]  ==  00000001 
+  1B4:  		Goto     00000000 
+  1C0:  	EndIf
+  1C8:  EndThread
+  1D0:  Call     PlaySoundAtActor 	( .Actor:Self .Sound:BigPowerUp )
+  1E4:  Call     $Function_802184D4 ( 00000050 00000078 )
+  1F8:  Call     UseBattleCamPreset 	( 00000013 )
+  208:  Call     GetActorPos 	( .Actor:Self *Var[0] *Var[1] *Var[2] )
+  224:  Call     SetBattleCamTarget 	( *Var[0] *Var[1] *Var[2] )
+  23C:  Call     SetBattleCamZoom  	( 00000064 )
+  24C:  Call     SetBattleCamOffsetZ 	( 0000003C )
+  25C:  Call     BattleCamTargetActor ( .Actor:Self )
+  26C:  Call     MoveBattleCamOver 	( 0000003C )
+  27C:  Wait     0000003C 
+  288:  Call     PlaySoundAtActor 	( .Actor:Self 000002EA )
+  29C:  Call     PlaySoundAtActor 	( .Actor:Self 0000036E )
+  2B0:  Thread
+  2B8:  	Wait     0000000A 
+  2C4:  	Loop     00000012 
+  2D0:  		Call     RandInt     	( 00000096 *Var[0] )
+  2E4:  		Add  *Var[0]  00000064 
+  2F4:  		Call     $Function_802184D4 ( *Var[0] 00000014 )
+  308:  		Wait     0000000A 
+  314:  	EndLoop
+  31C:  EndThread
+  324:  Thread
+  32C:  	Loop     0000003C 
+  338:  		Call     RandInt     	( 00000001 *Var[0] )
+  34C:  		Add  *Var[0]  00000002 
+  35C:  		Call     RandInt     	( 00000190 *Var[1] )
+  370:  		Sub  *Var[1]  00000064 
+  380:  		Call     RandInt     	( 00000064 *Var[2] )
+  394:  		Sub  *Var[2]  00000032 
+  3A4:  		Set  *Var[3]  *Var[1] 
+  3B4:  		Sub  *Var[3]  000000C8 
+  3C4:  		Set  *Var[4]  *Var[2] 
+  3D4:  		Call     RandInt     	( 0000000A *Var[5] )
+  3E8:  		Add  *Var[5]  0000000A 
+  3F8:  		Call     PlayEffect  	( 0000000F *Var[0] *Var[1] 000000F0 *Var[2] *Var[3] 00000000 *Var[4] *Var[5] 00000000 00000000 00000000 00000000 00000000 )
+  43C:  		Wait     00000003 
+  448:  	EndLoop
+  450:  EndThread
+  458:  Wait     00000008 
+  464:  Call     UseBattleCamPreset 	( 00000002 )
+  474:  Call     MoveBattleCamOver 	( 0000000A )
+  484:  Call     GetActorPos 	( .Actor:Self *Var[0] *Var[1] *Var[2] )
+  4A0:  Add  *Var[1]  00000032 
+  4B0:  Add  *Var[2]  00000005 
+  4C0:  Call     PlayEffect  	( ~FX:RadialFlowOut:BlueSpikes *Var[0] *Var[1] *Var[2] *Fixed[0.80078125] 000000A0 00000000 00000000 00000000 00000000 00000000 00000000 00000000 )
+  504:  Call     SetAnimation 	( .Actor:Self 00000001 007E0007 )
+/%
+		Call     EnemyTestTarget ( .Actor:Self *Var[0] 00000000 00000000 00000000 00000010 )
+  540:  Switch  *Var[0] 
+  54C:  	CaseOR  ==  00000006 
+  558:  	CaseOR  ==  00000005 
+  564:  		Set  *Var[A]  *Var[0] 
+  574:  		Wait     000000AA 
+  580:  		Call     SetAnimation 	( .Actor:Self 00000001 007E0001 )
+  598:  		Call     SetIdleAnimations 	( .Actor:Self 00000001 $IdleAnimations_80219F90 )
+  5B0:  		Call     MakeLerp    	( 000000C8 00000000 0000003C 00000000 )
+  5CC:  		Label    00000001 
+  5D8:  		Call     UpdateLerp  	( )
+  5E4:  		Call     $Function_8021849C ( *Var[0] )
+  5F4:  		Wait     00000001 
+  600:  		If  *Var[1]  ==  00000001 
+  610:  			Goto     00000001 
+  61C:  		EndIf
+  624:  		If  *Var[A]  ==  00000005 
+  634:  			Call     EnemyTestTarget ( .Actor:Self *Var[0] 80000000 00000000 00000000 00000000 )
+  658:  		EndIf
+  660:  		Wait     00000014 
+  66C:  		Call     SetActorVar 	( .Actor:Self 00000001 00000000 )
+  684:  		Call     UseIdleAnimation 	( .Actor:Self .True )
+  698:  		Return
+  6A0:  	EndCaseGroup
+  6A8:  EndSwitch
+%/
+  6B0:  Wait     000000AA 
+  6BC:  Wait     00000002 
+  6C8:  Call     SetGoalToTarget 	( .Actor:Self )
+  6D8:  Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 10000100 00000000 00000000 00000010 00000020 )
+  Wait 0000000F
+   Call     GetStatusFlags ( .Actor:Partner *Var[B] ) % so it doesnt stunlock your partner
+	If  *Var[B]  &  01000000
+Goto 00000009
+Else	
+   Call    SetTargetActor ( .Actor:Self .Actor:Partner )
+	Call	EnemyDamageTarget	( .Actor:Self *Var[0] 00000000 0000FFFF 00000000 00000001 00000020 )
+	EndIf
+	Label 00000009
+  700:  Switch  *Var[0] 
+  70C:  	CaseOR  ==  00000000 
+  718:  	CaseOR  ==  00000002 
+  724:  		Call     SetAnimation 	( .Actor:Self 00000001 007E0001 )
+  73C:  		Call     SetIdleAnimations 	( .Actor:Self 00000001 $IdleAnimations_80219F90 )
+  754:  		Call     MakeLerp    	( 000000C8 00000000 0000003C 00000000 )
+  770:  		Label    00000002 
+  77C:  		Call     UpdateLerp  	( )
+  788:  		Call     $Function_8021849C ( *Var[0] )
+  798:  		Wait     00000001 
+  7A4:  		If  *Var[1]  ==  00000001 
+  7B4:  			Goto     00000002 
+  7C0:  		EndIf
+  7C8:  		Wait     00000014 
+  7D4:  	EndCaseGroup
+  7DC:  EndSwitch
+  7E4:  Call     SetActorVar 	( .Actor:Self 00000001 00000000 )
+  7FC:  Call     UseIdleAnimation 	( .Actor:Self .True )
+  810:  Return
+  818:  End
+}
+ 
+#new:Script $Script_AttackFast
+{
+    0:  Call     UseIdleAnimation 	( .Actor:Self .False )
+   14:  Call     SetActorVar 	( .Actor:Self 00000001 00000001 )
+   2C:  Call     SetTargetActor ( .Actor:Self .Actor:Player )
+   40:  Call     UseBattleCamPreset 	( 00000013 )
+   50:  Call     GetActorPos 	( .Actor:Self *Var[0] *Var[1] *Var[2] )
+   6C:  Call     SetBattleCamTarget 	( *Var[0] *Var[1] *Var[2] )
+   84:  Call     SetBattleCamZoom  	( 000000FA )
+   94:  Call     SetBattleCamOffsetZ 	( 00000037 )
+   A4:  Call     BattleCamTargetActor ( .Actor:Self )
+   B4:  Call     MoveBattleCamOver 	( 0000001E )
+   C4:  Wait     0000001E 
+   D0:  Thread
+   D8:  	Call     SetAnimation 	( .Actor:Self 00000001 007E0004 )
+   F0:  	Wait     00000014 
+   FC:  	Call     SetAnimation 	( .Actor:Self 00000001 007E0005 )
+  114:  	Wait     00000014 
+  120:  	Call     SetAnimation 	( .Actor:Self 00000001 007E0006 )
+  138:  EndThread
+  140:  Thread
+  148:  	Call     $Function_80218458 ( )
+  154:  	Call     MakeLerp    	( 00000000 000000C8 0000003C 00000001 )
+  170:  	Label    00000000 
+  17C:  	Call     UpdateLerp  	( )
+  188:  	Call     $Function_8021849C ( *Var[0] )
+  198:  	Wait     00000001 
+  1A4:  	If  *Var[1]  ==  00000001 
+  1B4:  		Goto     00000000 
+  1C0:  	EndIf
+  1C8:  EndThread
+  1D0:  Call     PlaySoundAtActor 	( .Actor:Self .Sound:BigPowerUp )
+  1E4:  Call     $Function_802184D4 ( 00000050 00000078 )
+  1F8:  Call     UseBattleCamPreset 	( 00000013 )
+  208:  Call     GetActorPos 	( .Actor:Self *Var[0] *Var[1] *Var[2] )
+  224:  Call     SetBattleCamTarget 	( *Var[0] *Var[1] *Var[2] )
+  23C:  Call     SetBattleCamZoom  	( 00000064 )
+  24C:  Call     SetBattleCamOffsetZ 	( 0000003C )
+  25C:  Call     BattleCamTargetActor ( .Actor:Self )
+  26C:  Call     MoveBattleCamOver 	( 0000003C )
+  27C:  Wait     0000003C 
+  288:  Call     PlaySoundAtActor 	( .Actor:Self 000002EA )
+  29C:  Call     PlaySoundAtActor 	( .Actor:Self 0000036E )
+  2B0:  Thread
+  2B8:  	Wait     0000000A 
+  2C4:  	Loop     00000012 
+  2D0:  		Call     RandInt     	( 00000096 *Var[0] )
+  2E4:  		Add  *Var[0]  00000064 
+  2F4:  		Call     $Function_802184D4 ( *Var[0] 00000014 )
+  308:  		Wait     0000000A 
+  314:  	EndLoop
+  31C:  EndThread
+  324:  Thread
+  32C:  	Loop     0000003C 
+  338:  		Call     RandInt     	( 00000001 *Var[0] )
+  34C:  		Add  *Var[0]  00000002 
+  35C:  		Call     RandInt     	( 00000190 *Var[1] )
+  370:  		Sub  *Var[1]  00000064 
+  380:  		Call     RandInt     	( 00000064 *Var[2] )
+  394:  		Sub  *Var[2]  00000032 
+  3A4:  		Set  *Var[3]  *Var[1] 
+  3B4:  		Sub  *Var[3]  000000C8 
+  3C4:  		Set  *Var[4]  *Var[2] 
+  3D4:  		Call     RandInt     	( 0000000A *Var[5] )
+  3E8:  		Add  *Var[5]  0000000A 
+  3F8:  		Call     PlayEffect  	( 0000000F *Var[0] *Var[1] 000000F0 *Var[2] *Var[3] 00000000 *Var[4] *Var[5] 00000000 00000000 00000000 00000000 00000000 )
+  43C:  		Wait     00000003 
+  448:  	EndLoop
+  450:  EndThread
+  458:  Wait     00000008 
+  464:  Call     UseBattleCamPreset 	( 00000002 )
+  474:  Call     MoveBattleCamOver 	( 0000000A )
+  484:  Call     GetActorPos 	( .Actor:Self *Var[0] *Var[1] *Var[2] )
+  4A0:  Add  *Var[1]  00000032 
+  4B0:  Add  *Var[2]  00000005 
+  4C0:  Call     PlayEffect  	( ~FX:RadialFlowOut:BlueSpikes *Var[0] *Var[1] *Var[2] *Fixed[0.80078125] 000000A0 00000000 00000000 00000000 00000000 00000000 00000000 00000000 )
+  504:  Call     SetAnimation 	( .Actor:Self 00000001 007E0007 )
+/%
+		Call     EnemyTestTarget ( .Actor:Self *Var[0] 00000000 00000000 00000000 00000010 )
+  540:  Switch  *Var[0] 
+  54C:  	CaseOR  ==  00000006 
+  558:  	CaseOR  ==  00000005 
+  564:  		Set  *Var[A]  *Var[0] 
+  574:  		Wait     000000AA 
+  580:  		Call     SetAnimation 	( .Actor:Self 00000001 007E0001 )
+  598:  		Call     SetIdleAnimations 	( .Actor:Self 00000001 $IdleAnimations_80219F90 )
+  5B0:  		Call     MakeLerp    	( 000000C8 00000000 0000003C 00000000 )
+  5CC:  		Label    00000001 
+  5D8:  		Call     UpdateLerp  	( )
+  5E4:  		Call     $Function_8021849C ( *Var[0] )
+  5F4:  		Wait     00000001 
+  600:  		If  *Var[1]  ==  00000001 
+  610:  			Goto     00000001 
+  61C:  		EndIf
+  624:  		If  *Var[A]  ==  00000005 
+  634:  			Call     EnemyTestTarget ( .Actor:Self *Var[0] 80000000 00000000 00000000 00000000 )
+  658:  		EndIf
+  660:  		Wait     00000014 
+  66C:  		Call     SetActorVar 	( .Actor:Self 00000001 00000000 )
+  684:  		Call     UseIdleAnimation 	( .Actor:Self .True )
+  698:  		Return
+  6A0:  	EndCaseGroup
+  6A8:  EndSwitch
+%/
+  6B0:  Wait     100` 
+  6BC:  Wait     00000002 
+  6C8:  Call     SetGoalToTarget 	( .Actor:Self )
+  6D8:  Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 10000100 00000000 00000000 0000000D 00000020 )
+  Wait 0000000F
+   Call     GetStatusFlags ( .Actor:Partner *Var[B] ) % so it doesnt stunlock your partner
+	If  *Var[B]  &  01000000
+Goto 00000009
+Else	
+   Call    SetTargetActor ( .Actor:Self .Actor:Partner )
+	Call	EnemyDamageTarget	( .Actor:Self *Var[0] 00000000 0000FFFF 00000000 00000001 00000020 )
+	EndIf
+	Label 00000009
+6BC:  Wait     0000000F
+		Call    SetTargetActor ( .Actor:Self .Actor:Player )
+  6D8:  Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 10000100 00000000 00000000 00000009 00000020 )
+  Wait 00000002
+  700:  Switch  *Var[0] 
+  70C:  	CaseOR  ==  00000000 
+  718:  	CaseOR  ==  00000002 
+  724:  		Call     SetAnimation 	( .Actor:Self 00000001 007E0001 )
+  73C:  		Call     SetIdleAnimations 	( .Actor:Self 00000001 $IdleAnimations_80219F90 )
+  754:  		Call     MakeLerp    	( 000000C8 00000000 0000003C 00000000 )
+  770:  		Label    00000002 
+  77C:  		Call     UpdateLerp  	( )
+  788:  		Call     $Function_8021849C ( *Var[0] )
+  798:  		Wait     00000001 
+  7A4:  		If  *Var[1]  ==  00000001 
+  7B4:  			Goto     00000002 
+  7C0:  		EndIf
+  7C8:  		Wait     00000014 
+  7D4:  	EndCaseGroup
+  7DC:  EndSwitch
+  7E4:  Call     SetActorVar 	( .Actor:Self 00000001 00000000 )
+  7FC:  Call     UseIdleAnimation 	( .Actor:Self .True )
+  810:  Return
+  818:  End
+}
+
+#new:Script $Script_Rest
+{
+    0:  Call     UseIdleAnimation 	( .Actor:Self .False )
+   14:  Call     SetActorVar 	( .Actor:Self 00000001 00000001 )
+   2C:  Call     SetTargetActor ( .Actor:Self .Actor:Player )
+   40:  Call     UseBattleCamPreset 	( 00000013 )
+   50:  Call     GetActorPos 	( .Actor:Self *Var[0] *Var[1] *Var[2] )
+   6C:  Call     SetBattleCamTarget 	( *Var[0] *Var[1] *Var[2] )
+   84:  Call     SetBattleCamZoom  	( 000000FA )
+   94:  Call     SetBattleCamOffsetZ 	( 00000037 )
+   A4:  Call     BattleCamTargetActor ( .Actor:Self )
+   B4:  Call     MoveBattleCamOver 	( 0000001E )
+   C4:  Wait     0000001E 
+   D0:  Thread
+   D8:  	Call     SetAnimation 	( .Actor:Self 00000001 007E0004 )
+   F0:  	Wait     00000014 
+   FC:  	Call     SetAnimation 	( .Actor:Self 00000001 007E0005 )
+  114:  	Wait     00000014 
+  120:  	Call     SetAnimation 	( .Actor:Self 00000001 007E0006 )
+  138:  EndThread
+  140:  Thread
+  148:  	Call     $Function_80218458 ( )
+  154:  	Call     MakeLerp    	( 00000000 000000C8 0000003C 00000001 )
+  170:  	Label    00000000 
+  17C:  	Call     UpdateLerp  	( )
+  188:  	Call     $Function_8021849C ( *Var[0] )
+  198:  	Wait     00000001 
+  1A4:  	If  *Var[1]  ==  00000001 
+  1B4:  		Goto     00000000 
+  1C0:  	EndIf
+  1C8:  EndThread
+  1D0:  Call     PlaySoundAtActor 	( .Actor:Self .Sound:BigPowerUp )
+	      Wait     00000020
+		/%
+		Thread
+			Wait     00000005 
+			Call     PlaySoundAtActor    ( *Var[0] 0000206D )
+			Call     PlaySoundAtActor    ( *Var[0] 00000214 )
+			Wait     30` 
+			Call     PlaySoundAtActor    ( *Var[0] 0000025C )
+		EndThread
+		Call	8026BF48	( 00000001 )
+		Call	HealActor	( .Actor:Self 0000000A 00000001 )
+		Call	8026BF48	( 00000000 )
+		%/
+		Wait     00000008 
+  464:  Call     UseBattleCamPreset 	( 00000002 )
+  474:  Call     MoveBattleCamOver 	( 0000000A )
+        Call     SetAnimation 	( .Actor:Self 00000001 007E0001 )
+  73C:  		Call     SetIdleAnimations 	( .Actor:Self 00000001 $IdleAnimations_80219F90 )
+  754:  		Call     MakeLerp    	( 000000C8 00000000 0000003C 00000000 )
+  770:  		Label    00000002 
+  77C:  		Call     UpdateLerp  	( )
+  788:  		Call     $Function_8021849C ( *Var[0] )
+  798:  		Wait     00000001 
+  7A4:  		If  *Var[1]  ==  00000001 
+  7B4:  			Goto     00000002 
+  7C0:  		EndIf
+  7C8:  		Wait     00000014 
+  7E4:  Call     SetActorVar 	( .Actor:Self 00000001 00000000 )
+  7FC:  Call     UseIdleAnimation 	( .Actor:Self .True )
+  810:  Return
+  818:  End
+}
+  
+% ====================================================
+% GRYMagikoopa
+% + Shape spell flies in from off screen
+% + Vanish lasts longer (2 -> 3 turns)
+% + 50% chance to spawn transparent
+% ====================================================
+
+% Immediately vanishes owner of calling script.
+#new:Function $Function_Vanish % ( duration )
+{
+	ADDIU	SP, SP, FFE0
+	SW		RA, 10 (SP)
+	SW		S1, 14 (SP)
+	SW		S2, 18 (SP)
+	% get turn count
+	LW		A1, 0 (S0)
+	JAL		~Func:get_variable
+	DADDU	S1, A0, R0
+	ANDI	V0, V0, 00FF
+	% add electify status
+	LW		A0, 148 (S1)
+	JAL		~Func:get_actor
+	DADDU	S2, V0, R0
+	ORI		S2, S2, 0E00
+	SH		S2, 218 (V0)
+	% return
+	LW		RA, 10 (SP)
+	LW		S1, 14 (SP)
+	LW		S2, 18 (SP)
+	ADDIU	V0, R0, 2
+	JR		RA
+	ADDIU	SP, SP, 20
+}
+
+@ $Script_Init_80221568
+{
+    0:  Call     BindIdle    	( .Actor:Self $Script_Idle_8021F424 )
+   14:  Call     BindTakeTurn 	( .Actor:Self $Script_TakeTurn_802216B0 )
+   28:  Call     BindHandleEvent 	( .Actor:Self $Script_HandleEvent_8021F434 )
+   3C:  Call     GetBattleVar 	( 00000002 *Var[0] )
+   50:  If       *Var[0] ==  00000000 
+   60:     Call     SetBattleVar 	( 00000002 FFFFFFFF )
+   74:  EndIf
+   7C:  Call     SetActorVar 	( .Actor:Self 00000000 00000000 )
+   % 50% chance to spawn with invisible status
+	Call	RandInt	 ( 100` *Var[0] )
+	If	*Var[0] > 50`
+		Call	$Function_Vanish ( 2 )
+	EndIf
+   94:  Return
+   9C:  End
+}
+
+@ $Script_Init_8022160C
+{
+    0:  Call     BindIdle    	( .Actor:Self $Script_Idle_8021F424 )
+   14:  Call     BindTakeTurn 	( .Actor:Self $Script_TakeTurn_802216B0 )
+   28:  Call     BindHandleEvent 	( .Actor:Self $Script_HandleEvent_80220054 )
+   3C:  Call     GetBattleVar 	( 00000002 *Var[0] )
+   50:  If       *Var[0] ==  00000000 
+   60:     Call     SetBattleVar 	( 00000002 FFFFFFFF )
+   74:  EndIf
+   7C:  Call     SetActorVar 	( .Actor:Self 00000000 00000000 )
+   % 50% chance to spawn with invisible status
+	Call	RandInt	 ( 100` *Var[0] )
+	If	*Var[0] > 50`
+		Call	$Function_Vanish ( 2 )
+	EndIf
+   94:  Return
+   9C:  End
+}
+
+@ $Script_TakeTurn_802216B0
+{
+[6A8]	Call     VanishActor 	( *Var[8] 00000003 ) % was 2
+}
+
+#define .SpellStartX  -300`
+#define .SpellStartY   300`
+
+% Shape spell now rains down from the top left corner of the screen.
+@ $Script_GRYMagikoopa_ShapeSpell
+{
+[288]	Set      *Var[0] .SpellStartX
+		Set      *Var[1] .SpellStartY
+[2B0]	Set      *Var[0] .SpellStartX
+		Set      *Var[1] .SpellStartY
+[4A4]	Set      *Var[0] .SpellStartX
+		Set      *Var[1] .SpellStartY
+[4CC]	Set      *Var[0] .SpellStartX
+		Set      *Var[1] .SpellStartY
+}

@@ -1,0 +1,35 @@
+% Added Dizzy proc, changed name to "Dizzy Dance"
+
+@ $Script_802A26A8
+{
+  [104]  			Call     PlayerDamageEnemy 	( *Var[0] 21000080 00000000 80040364 00000002 00000070 )
+  [14C]  			Call     PlayerDamageEnemy 	( *Var[0] 21000080 00000000 80040364 00000002 00000070 )  
+  [19C]  			Call     PlayerDamageEnemy 	( *Var[0] 21000080 00000000 80040364 00000002 00000030 ) 
+  [4FC]  			Call     PlayerDamageEnemy 	( *Var[0] 21000080 00000000 80040364 00000002 00000070 )
+  [544]  			Call     PlayerDamageEnemy 	( *Var[0] 21000080 00000000 80040364 00000002 000000F0 )
+  [5A4]  			Call     PlayerDamageEnemy 	( *Var[0] 21000080 00000000 80040364 00000002 00000030 )
+  [5EC] 			Call     PlayerDamageEnemy 	( *Var[0] 21000080 00000000 80040364 00000002 000000F0 )
+}
+  
+@ $Script_802A2EC0
+{
+  [104]  			Call     PlayerDamageEnemy 	( *Var[0] 21000080 00000000 80040364 00000003 00000070 )
+  [14C]	 			Call     PlayerDamageEnemy 	( *Var[0] 21000080 00000000 80040364 00000003 00000070 )
+  [19C]  			Call     PlayerDamageEnemy 	( *Var[0] 21000080 00000000 80040364 00000003 00000030 )
+  [550]  			Call     PlayerDamageEnemy 	( *Var[0] 21000080 00000000 80040364 00000003 00000070 )
+  [598]  			Call     PlayerDamageEnemy 	( *Var[0] 21000080 00000000 80040364 00000003 000000F0 )
+  [5F8] 			Call     PlayerDamageEnemy 	( *Var[0] 21000080 00000000 80040364 00000003 00000030 )
+  [640]  			Call     PlayerDamageEnemy 	( *Var[0] 21000080 00000000 80040364 00000003 000000F0 )
+}
+  
+@ $Script_802A372C
+{
+  [104] 			Call     PlayerDamageEnemy 	( *Var[0] 21000080 00000000 80040364 00000004 00000070 )
+  [14C]  			Call     PlayerDamageEnemy 	( *Var[0] 21000080 00000000 80040364 00000004 00000070 )
+  [19C]  			Call     PlayerDamageEnemy 	( *Var[0] 21000080 00000000 80040364 00000004 00000030 )
+  [4E0]  			Call     PlayerDamageEnemy 	( *Var[0] 21000080 00000000 80040364 00000004 00000070 )
+  [528] 			Call     PlayerDamageEnemy 	( *Var[0] 21000080 00000000 80040364 00000004 000000F0 )
+  [588]  			Call     PlayerDamageEnemy 	( *Var[0] 21000080 00000000 80040364 00000004 00000030 )
+  [5D0]  			Call     PlayerDamageEnemy 	( *Var[0] 21000080 00000000 80040364 00000004 000000F0 )
+}
+

@@ -1,0 +1,5 @@
+
+@ $Script_80234624
+{
+  [6AC] 	Call     EnemyDamageTarget 	( .Actor:Self *Var[F] 00000000 00000000 00000000 00000002 *Var[0] ) % there we go I fixed it. Thanks sin biscuit for saying something so I would look at it again.
+}

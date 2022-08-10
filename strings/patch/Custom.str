@@ -1,0 +1,1584 @@
+#message:2F:000
+{
+Crazy Heart[End]
+}
+
+#message:2F:001
+{
+Restores HP automatically during[BR]
+battle at a faster rate.[End]
+}
+
+#message:2F:002
+{
+Flower Fanatic[End]
+}
+
+#message:2F:003
+{
+During battle, saves 2 FP every[BR]
+time you attack.[End]
+}
+
+#message:2F:004
+{
+Mega HP Drain[End]
+}
+
+#message:2F:005
+{
+Decreases Mario's attack power[BR]
+by 2. Leech 2 HP per enemy hit.[End]
+}
+
+#message:2F:006
+{
+Gambler's J.[End]
+}
+
+#message:2F:007
+{
+Jump on an enemy with high[BR]
+damage variance.[End]
+}
+
+#message:2F:008
+{
+Gambler's S.[End]
+}
+
+#message:2F:009
+{
+Smash one enemy with high[BR]
+damage variance.[End]
+}
+
+#message:2F:00C
+{
+Berserker[End]
+}
+
+#message:2F:00D
+{
+Increases Mario's attack power[BR]
+but makes him uncontrollable.[End]
+}
+
+#message:2F:00E
+{
+Double Pain[End]
+}
+
+#message:2F:00F
+{
+Doubles the damage done to Mario[BR]
+after being hit with 0 benefit.[End]
+}
+
+#message:2F:010
+{
+Medicine Man[End]
+}
+
+#message:2F:011
+{
+During battle, all healing items[BR]
+are more effective.[End]
+}
+
+#message:2F:012
+{
+Hustle Drink[End]
+}
+
+#message:2F:013
+{
+A special drink that gives Mario[BR]
+an extra action next turn.[End]
+}
+
+#message:2F:014
+{
+Gold Bar[End]
+}
+
+#message:2F:015
+{
+A heavy ingot of solid gold.[BR]
+Shops will buy it for a high price.[End]
+}
+
+#message:2F:016
+{
+Tornado Jump[End]
+}
+
+#message:2F:017
+{
+The ultimate power. Inflict[BR]
+heavy damage to all enemies.[End]
+}
+
+#message:2F:020
+{
+Amazy Dayzee sings a haunting[BR]
+melody... 3 turns remain.[End]
+}
+
+#message:2F:021
+{
+Amazy Dayzee's song echoes[BR]
+in the distance. Last turn.[End]
+}
+
+#message:2F:022
+{
+Amazy Dayzee's song lulls[BR]
+Mario into an eternal sleep.[End]
+}
+
+#message:2F:023
+{
+The pharaoh's curse will[BR]
+claim Mario in 13 turns.[End]
+}
+
+#message:2F:024
+{
+The pharaoh's curse claims[BR]
+Mario's life.[End]
+}
+
+#message:2F:025
+{
+10 turns remain.[End]
+}
+
+#message:2F:026
+{
+7 turns remain.[End]
+}
+
+#message:2F:027
+{
+4 turns remain.[End]
+}
+
+#message:2F:028
+{
+1 turn remains.[End]
+}
+
+#message:23:003
+{
+If it works, inflicts shrink[BR]
+on one enemy.[End]
+}
+
+#message:25:05F
+{
+Lets you do a Shrink Stomp.[BR]
+Uses 4 FP.[BR]
+If it works, the enemy Mario[BR]
+stomps on shrinks.[BR]
+It also decreases the enemy's[BR]
+attack power by half for a bit.[End]
+}
+
+#message:25:067
+{
+Lets you do a Shrink Smash.[BR]
+Uses 3 FP.[BR]
+If it works, the enemy Mario hits[BR]
+shrinks.[BR]
+It also decreases the enemy's[BR]
+attack power by half for a bit.[End]
+}
+
+#message:25:000
+{
+A flower that burns all enemies[BR]
+with fireballs. Strong against[BR]
+plants. Attack Power: 3[End]
+}
+
+#message:25:05C
+{
+Lets you do a Sleep Stomp.[BR]
+Uses 5 FP.[BR]
+If it works, the enemy Mario[BR]
+jumps on falls asleep for a bit.[End]
+}
+
+#message:25:05D
+{
+Lets you do a Dizzy Stomp.[BR]
+Uses 5 FP.[BR]
+If it works, the enemy Mario[BR]
+jumps on becomes dizzy.[BR]
+It also paralyzes the enemy for[BR]
+a short time.[BR]
+[End]
+}
+
+#message:23:0C9
+{
+An un-charged Ultra Stone. Give[BR]
+it to Donluvlee.[End]
+}
+
+#message:25:0C9
+{
+An un-charged Ultra Stone. Give[BR]
+it to Donluvlee.[End]
+}
+
+#message:23:0D0
+{
+An ordinary scarf from Donle in[BR]
+Starborn Valley.[End]
+}
+
+#message:25:0D0
+{
+An ordinary scarf from Donle in[BR]
+Starborn Valley.[End]
+}
+
+#message:23:0EB
+{
+A letter to Donlon in Toad Town.[BR]
+[End]
+}
+
+#message:25:0EB
+{
+A letter to Donlon in Toad Town.[BR]
+You can deliver it with your[BR]
+Paratroopa partner, Parakarry.[End]
+}
+
+#message:23:0F0
+{
+A letter to Donlow at Shooting[BR]
+Star Summit.[End]
+}
+
+#message:25:0F0
+{
+A letter to Donlow at Shooting[BR]
+Star Summit.[BR]
+You can deliver it with your[BR]
+Paratroopa partner, Parakarry.[End]
+}
+
+#message:23:107
+{
+An autograph from Donluvlee.[BR]
+Koopa Koot wants this.[End]
+}
+
+#message:25:107
+{
+An autograph from Donluvlee.[BR]
+Koopa Koot wants this.[End]
+}
+
+#message:25:060
+{
+Lets you do a D-Down Jump.[BR]
+Uses 4 FP.[BR]
+Disables an enemy's defense[BR]
+power and causes some damage.[BR]
+Boot upgrades aren't as[BR]
+effective at increasing DMG.[End]
+}
+
+#message:25:069
+{
+Lets you do a D-Down Pound.[BR]
+Uses 4 FP.[BR]
+Disables an enemy's defense[BR]
+power and injures it.[End]
+}
+
+#message:25:06D
+{
+During battle, lets you use two[BR]
+items during one turn.[BR]
+Uses 9 FP.[BR]
+[End]
+}
+
+#message:25:061
+{
+Lets you do a Power Bounce.[BR]
+Uses 5 FP.[BR]
+Jumps on one enemy continuously[BR]
+until you miss an action command.[BR]
+Difficult to use on most bosses.[End]
+}
+
+#message:1D:071
+{
+This shady character will[BR]
+increase your attack power![End]
+}
+
+#message:1D:072
+{
+This shady character will[BR]
+decrease the damage you take![End]
+}
+
+#message:1D:073
+{
+This shady character will[BR]
+increase Star Points you earn![End]
+}
+
+#message:1D:074
+{
+This shady character will[BR]
+give you more coins![End]
+}
+
+#message:1D:075
+{
+The shady characters left.[End]
+}
+
+#message:1D:0F9
+{
+They say this summit is the[BR]
+closest place to Star Haven.[BR]
+At the base of the summit live[BR]
+Donlow and Donluvlee.[BR]
+They're brother and sister.[End]
+}
+
+#message:1D:0FA
+{
+They say this summit is the[BR]
+closest place to Star Haven.[BR]
+At the base of the summit live[BR]
+Donlow and Donluvlee.[BR]
+They're brother and sister.[End]
+}
+
+#message:1D:141
+{
+Star Kids are born in this[BR]
+sparkling valley.[BR]
+Frost T. and Ninjis take care[BR]
+of the newly born Star Kids.[BR]
+Donle's house and a Toad House[BR]
+are here, too.[End]
+}
+
+#message:1D:142
+{
+Star Kids are born in this[BR]
+sparkling valley.[BR]
+Frost T. and Ninjis take care[BR]
+of the newly born Star Kids.[BR]
+Donle's house and a Toad House[BR]
+are here, too.[End]
+}
+
+#message:1D:16D
+{
+[DelayOff][Style Sign]
+[CenterX 255][Right 15][Down 6]Need information?[BR]
+[Down 6]Donluvlee has it, for a price. [RIGHT][BR]
+[DelayOn][Wait][End]
+}
+
+#message:26:0C9
+{
+Ultra Stone?[End]
+}
+
+#message:25:066
+{
+Lets you do a Hammer Throw.[BR]
+Uses 3 FP.[BR]
+Hits one enemy with the Hammer,[BR]
+no matter where the enemy is.[BR]
+Damage is increased by 2.[End]
+}
+
+#message:25:063
+{
+Lets you do a Mega Smash.[BR]
+Uses 9 FP.[BR]
+Hammers an enemy with a huge[BR]
+amount of attack power.[End]
+}
+
+#message:25:068
+{
+Lets you do a Spin Smash.[BR]
+Uses 1 FP.[BR]
+If Mario hits an enemy, it[BR]
+smashes into the ones behind it.[End]
+}
+
+#message:25:06A
+{
+Lets you do a Quake Hammer.[BR]
+Uses 3 FP.[BR]
+Slightly damages all enemies on[BR]
+the ground or ceiling.[End]
+}
+
+#message:25:06B
+{
+Lets you do a Power Quake.[BR]
+Uses 4 FP.[BR]
+Greatly damages all enemies on[BR]
+the ground or ceiling.[End]
+}
+
+#message:25:06C
+{
+Lets you do a Mega Quake.[BR]
+Uses 5 FP.[BR]
+Severely damages all enemies on[BR]
+the ground or ceiling.[End]
+}
+
+#message:25:059
+{
+Lets you do a Mega Jump.[BR]
+Uses 9 FP.[BR]
+Mario stomps on a single enemy[BR]
+using tons of attack power.[End]
+}
+
+#message:24:021
+{
+100% Guaranteed not a Yoshi Egg![BR]
+Restores 5 HP.[End]
+}
+
+#message:24:01E
+{
+A highly nutritious fruit found[BR]
+in the desert. Restores 13 HP.[End]
+}
+
+#message:26:10D
+{
+Truth Stomp[End]
+}
+
+#message:23:10D
+{
+Damages one enemy, even if[BR]
+it's transparent.[End]
+}
+
+#message:25:10D
+{
+Stomp an invisible enemy using[BR]
+the power of truth. Uses 1 FP.[End]
+}
+
+#message:23:002
+{
+Lightning that shrinks all[BR]
+enemies. Attack Power: 1[End]
+}
+
+#message:24:002
+{
+Lightning that shrinks all[BR]
+enemies. Attack Power: 1[End]
+}
+
+#message:25:002
+{
+Lightning that shrinks all[BR]
+enemies. Attack Power: 1[End]
+}
+
+#message:23:003
+{
+Lightning that shrinks an[BR]
+enemy. Attack Power: 1[End]
+}
+
+#message:24:003
+{
+Lightning that shrinks an[BR]
+enemy. Attack Power: 1[End]
+}
+
+#message:25:003
+{
+Lightning that shrinks an[BR]
+enemy. Attack Power: 1[End]
+}
+
+#message:2B:003
+{
+Ironbonk[End]
+}
+
+#message:28:005
+{
+Headbonk any enemy safely.[BR]
+Second strike pierces defense.[End]
+}
+
+#message:28:00C
+{
+Headbonk any enemy safely.[BR]
+Second strike pierces defense.[End]
+}
+
+#message:28:004
+{
+Charge attack power. It goes up[BR]
+by 3 then returns to normal.[End]
+}
+
+#message:28:00B
+{
+Charge to raise attack power[BR]
+by 3.[BR]
+You can charge up to 2 times,[BR]
+but power fades after attack.[End]
+}
+
+#message:1E:026
+{
+[Style Choice pos=110,70 size=100,62]
+[StartChoice]
+[Option 0]Goomba[BR]
+[Option 1]Anti Guy[BR]
+[Option 2]Mushroom[BR]
+[EndChoice][End]
+}
+
+#message:26:10E
+{
+Dual-Smash[End]
+}
+
+#message:23:10E
+{
+Damages one enemy with two[BR]
+strikes.[End]
+}
+
+#message:25:10E
+{
+Smash one enemy two times.[BR]
+Action command must be done[BR]
+for both strikes. Uses 6 FP.[End]
+}
+
+#message:12:167
+{
+[Style Right]
+You can't go through here unless[BR]
+you solve the puzzle.[BR]
+[Pause 10]Once you solve the puzzle, we'll[BR]
+test you once more.[Wait][End]
+}
+
+#message:12:168
+{
+[Style Right]
+You can't go through here unless[BR]
+you solve the puzzle.[BR]
+[Pause 10]Once you solve the puzzle, we'll[BR]
+test you once more.[Wait][End]
+}
+
+#message:12:169
+{
+[Style Right]
+You can't go through here unless[BR]
+you solve the puzzle.[BR]
+[Pause 10]Once you solve the puzzle, we'll[BR]
+test you once more.[Wait][End]
+}
+
+#message:13:017
+{
+[Style Right]
+Uh-oh![BR]
+[Pause 10]Ma... [Pause 3]Mario...is right...there![BR]
+[Wait][Next]
+Now what were we supposed to[BR]
+do in this situation?[BR]
+[Pause 10]Kammy Koopa told us something,[BR]
+but I'm drawing a total blank.[BR]
+[Wait][Next]
+I think... she told us not to let[BR]
+him touch that switch...[BR]
+[Wait][Next]
+Oh... oh...no... Do you think that[BR]
+means we have to fight him?[Wait][End]
+}
+
+#message:13:018
+{
+[Style Right]
+[Shake]No!!!!!![BR]
+[Pause 10]He'll wipe the floor with us![Wait][End]
+}
+
+#message:13:019
+{
+[Style Right]
+Stop your bellyaching!![BR]
+[Pause 10]Who says we should be afraid of[BR]
+Mario, huh? He's not so bad![HEART][BR]
+[Wait][Next]
+Whatever happens, we can't let[BR]
+him push this switch![BR]
+[Wait][Next]
+[Wave] Don't you care that King Bowser[BR]
+needs our help?[HEART][BR]
+[Wait][Next]
+C'mon!! We can easily beat this[BR]
+[Pause 10]weakling!! Piece of cake!!![HEART][Wait][End]
+}
+
+#message:13:01A
+{
+[Style Right]
+[Shake]Waahh!! We have no choice![BR]
+[Pause 10]Gotta be brave... Gotta be...[BR]
+[Wait][Next]
+[Down 8][Size 32][PrintRising]Attaaack![Wait][End]
+}
+
+#message:1A:122
+{
+[Style Tattle]
+[EnableCDownNext]This Boo is a guard for[BR]
+the mansion. He takes his[BR]
+job really seriously.[BR]
+[Wait][Next]
+I don't think he'll let[BR]
+you through. We're going[BR]
+to have to fight this[BR]
+chump![BR]
+[Wait][Next]
+He's all alone out here,[BR]
+so he should be no problem[BR]
+as long as he doesn't[BR]
+bring any backup.[BR]
+[Wait][Next]
+I hope I didn't just give[BR]
+him the idea...[Wait][End]
+}
+
+#message:1A:123
+{
+[Style Tattle]
+[EnableCDownNext]It's one of the honorable[BR]
+Star Spirits. Well, it's[BR]
+just a projection.[BR]
+[Wait][Next]
+At least nothing bad[BR]
+happens when we talk[BR]
+to them.[BR]
+[Wait][End]
+}
+
+#message:1A:124
+{
+[Style Tattle]
+[EnableCDownNext]This Boo is blocking[BR]
+the way down the mountain.[BR]
+He won't budge.[BR]
+[Wait][Next]
+Still, I thought we were in[BR]
+a gulch. How are we going[BR]
+down this gulch?[BR]
+[Wait][Next]
+Oh well, let's just come[BR]
+back later. The path will[BR]
+be cleared eventually.[BR]
+[Wait][End]
+}
+
+#message:0C:116
+{
+[Style Right]
+[Voice Star]Next, allow me to explain about[BR]
+Star Powers.[BR]
+[Pause 10]First, let me tell you about[BR]
+Refresh, all right?[BR]
+[Wait][Next]
+This Power enables you to[BR]
+restore 7 points of both HP[BR]
+and FP at once.[BR]
+[Wait][Next]
+Why don't you try out Refresh[BR]
+right now?[Wait][End]
+}
+
+#message:0C:117
+{
+[Style Right]
+[Voice Star]See? Both HP and FP have[BR]
+recovered 7 points each.[BR]
+[Wait][Next]
+You used one unit of Star[BR]
+Energy, so you're empty now.[BR]
+[Wait][Next]
+Watch your Star Energy gauge[BR]
+carefully during battle.[Wait][End]
+}
+
+#message:1D:0EA
+{
+She'll master Turbo Charge to[BR]
+increase Mario's attack power.[End]
+}
+
+#message:1D:0EB
+{
+She'll master Mega Shock[BR]
+to paralyze all enemies.[End]
+}
+
+#message:26:110
+{
+Dizzy Dance[End]
+}
+
+#message:23:110
+{
+Automatically jumps on all[BR]
+enemies and inflicts dizzy.[End]
+}
+
+#message:25:110
+{
+Lets you do the Dizzy Dance.[BR]
+Uses 6 FP.[BR]
+This attack will automatically[BR]
+strike all enemies and might[BR]
+inflict dizzy.[End]
+}
+
+#message:26:10F
+{
+Stop Smash[End]
+}
+
+#message:23:10F
+{
+Smash one grounded enemy,[BR]
+inflicting the stop status.[End]
+}
+
+#message:25:10F
+{
+Lets you do a Stop Smash.[BR]
+Uses 4 FP.[BR]
+This attack strikes a single[BR]
+enemy and will often inflict[BR]
+stop.[End]
+}
+
+#message:0A:013
+{
+[Style Right]
+[Voice Star]This is the "Speedy Spin" from[BR]
+Princess Peach! It will allow you[BR]
+to move much faster.[BR]
+[Wait][Next]
+You should equip it right away![BR]
+[Wait][End]
+}
+
+#message:14:02D
+{
+[Style Right]
+[Voice Star]This is [Color 0x20]Speedy Spin[Color 0x0A], isn't it?[BR]
+[Wait][Next]
+OK! I'll do it! Princess Peach,[BR]
+[Pause 10]I'll fly to the Mushroom Kingdom[BR]
+just as quick as I can![Wait][End]
+}
+
+#message:28:062
+{
+Throw a spiny egg at an enemy[BR]
+with a chance for extra damage.[End]
+}
+
+#message:28:063
+{
+Throw a spiny egg at an enemy[BR]
+with a chance for extra damage.[End]
+}
+
+#message:28:064
+{
+Throw a spiny egg at an enemy[BR]
+with a chance for extra damage.[End]
+}
+
+#message:28:05C
+{
+His specialty is throwing spiny[BR]
+eggs at foes.[End]
+}
+
+#message:28:05D
+{
+Throw a spiny egg at an enemy.[BR]
+There's a chance for extra damage.[End]
+}
+
+#message:08:012
+{
+[Style Right]
+Hello there, Mario![BR]
+[Pause 5]Welcome to the Playroom![BR]
+[Wait][Next]
+To play here, you need a[BR]
+Member Credit.[BR]
+[Wait][Next]
+The kind of game you can play[BR]
+depends on the kind of[BR]
+Member Credit you have.[BR]
+[Wait][Next]
+Per company policy I am[BR]
+required to inform you[BR]
+that savestating is[BR]
+forbidden.[BR]
+[Wait][Next]
+We can't stop you, but I'll[BR]
+lose my job if the Playroom[BR]
+loses too much money.[BR]
+[Wait][Next]
+I know being a hero isn't[BR]
+a lucrative career, but[BR]
+I've got a brother to feed[BR]
+too, y'know![BR]
+[Wait][Yield][End]
+}
+
+#message:0E:008
+{
+[Style Right]
+Listen carefully...[BR]
+[Wait][Next]
+If you want to get through this[BR]
+forest, you have to pay really[BR]
+close attention to your[BR]
+surroundings.[BR]
+[Wait][Next]
+If you choose the wrong paths,[BR]
+you'll end up back at the forest[BR]
+edge before you know it.[BR]
+[Wait][Next]
+The areas around the correct[BR]
+paths will always look slightly[BR]
+different from the others.[BR]
+[Pause 10]Watch carefully for clues.[BR]
+[Wait][Next]
+For example, in this area, take a[BR]
+good look at the inner trees as[BR]
+you walk around.[BR]
+[Wait][Next]
+In one of them, you'll spot[BR]
+strange, glowing eyes.[BR]
+[Pause 10]The exit near that tree is the[BR]
+path you want to take.[BR]
+[Wait][Next]
+These clues will be different in[BR]
+other parts of the forest.[BR]
+[Pause 10]Watch the inner forest very,[BR]
+very carefully as you go.[BR]
+[Wait][Next]
+If you trust your gut and not[BR]
+just your eyes,[Color 0x20] you might[BR]
+even find hidden treasures[BR]
+around here.[Color 0x0A][BR]
+[Wait][End]
+}
+
+#message:23:02E
+{
+An apple pie baked by Tayce T.[BR]
+Restores 11 HP and 20 FP.[End]
+}
+
+#message:25:02E
+{
+An apple pie baked by Tayce T.[BR]
+Restores 11 HP and 20 FP.[End]
+}
+
+#message:23:03D
+{
+A yummy cake baked by Tayce T.[BR]
+Restores 10 HP and 25 FP.[End]
+}
+
+#message:25:03D
+{
+A yummy cake baked by Tayce T.[BR]
+Restores 10 HP and 25 FP.[End]
+}
+
+#message:25:042
+{
+A juice blend made by Tayce T.[BR]
+Restores 25 HP and 25 FP.[End]
+}
+
+#message:23:042
+{
+A juice blend made by Tayce T.[BR]
+Restores 25 HP and 25 FP.[End]
+}
+
+#message:25:047
+{
+Spaghetti cooked by Tayce T.[BR]
+Restores 10 HP and 5 FP.[End]
+}
+
+#message:23:047
+{
+Spaghetti cooked by Tayce T.[BR]
+Restores 10 HP and 5 FP.[End]
+}
+
+#message:25:038
+{
+Special pasta made by Tayce T.[BR]
+Restores 25 HP and 10 FP.[End]
+}
+
+#message:23:038
+{
+Special pasta made by Tayce T.[BR]
+Restores 25 HP and 10 FP.[BR]
+[End]
+}
+
+#message:25:039
+{
+A snack made by Tayce T.[BR]
+Restores 6 HP and 4 FP.[End]
+}
+
+#message:23:039
+{
+A snack made by Tayce T.[BR]
+Restores 6 HP and 4 FP.[End]
+}
+
+#message:25:03A
+{
+A snack made by Tayce T.[BR]
+Restores 12 HP.[End]
+}
+
+#message:23:03A
+{
+A snack made by Tayce T.[BR]
+Restores 12 HP.[End]
+}
+
+#message:25:056
+{
+Food cooked by Tayce T.[BR]
+Restores 15 HP and 20 FP.[End]
+}
+
+#message:23:056
+{
+Food cooked by Tayce T.[BR]
+Restores 15 HP and 20 FP.[End]
+}
+
+#message:25:02D
+{
+A hot soup cooked by Tayce T.[BR]
+Restores 4 HP and 6 FP.[End]
+}
+
+#message:23:02D
+{
+A hot soup cooked by Tayce T.[BR]
+Restores 4 HP and 6 FP.[End]
+}
+
+#message:23:055
+{
+A nut cake baked by Tayce T.[BR]
+Restores 1 HP and 9 FP.[End]
+}
+
+#message:25:055
+{
+A nut cake baked by Tayce T.[BR]
+Restores 1 HP and 9 FP.[End]
+}
+
+#message:23:049
+{
+Food cooked by Tayce T.[BR]
+Restores 9 HP and 1 FP.[End]
+}
+
+#message:25:049
+{
+Food cooked by Tayce T.[BR]
+Restores 9 HP and 1 FP.[End]
+}
+
+#message:23:03C
+{
+A cake baked by Tayce T.[BR]
+Restores 13 HP and 7 FP.[End]
+}
+
+#message:25:03C
+{
+A cake baked by Tayce T.[BR]
+Restores 13 HP and 7 FP.[End]
+}
+
+#message:23:043
+{
+A huge cookie baked by Tayce T.[BR]
+Restores 8 HP and 18 FP.[End]
+
+}
+
+#message:25:043
+{
+A huge cookie baked by Tayce T.[BR]
+Restores 8 HP and 18 FP.[End]
+
+}
+
+#message:23:057
+{
+A cookie baked by Tayce T.[BR]
+Restores 35 FP.[End]
+}
+
+#message:25:057
+{
+A cookie baked by Tayce T.[BR]
+Restores 35 FP.[End]
+}
+
+#message:23:041
+{
+A smoothie made by Tayce T.[BR]
+Restores 35 HP.[End]
+}
+
+#message:25:041
+{
+A smoothie made by Tayce T.[BR]
+Restores 35 HP.[End]
+}
+
+#message:23:023
+{
+A succulent, ripe melon. Restores[BR]
+7 HP and 12 FP.[End]
+}
+
+#message:25:023
+{
+A succulent, ripe melon. Restores[BR]
+7 HP and 12 FP.[End]
+}
+
+#message:23:040
+{
+	Amazing food cooked by Tayce T.[BR]
+	Restores 30 HP and 30 FP.[End]
+}
+
+#message:25:040
+{
+	Amazing food cooked by Tayce T.[BR]
+	Restores 30 HP and 30 FP.[End]
+}
+
+#message:22:018
+{
+Traveller's Parasol[End]
+}
+
+#message:22:016
+{
+A Parasol that lets you warp[BR]
+to faraway places. Press [SaveColor][Color 0x14][~R][RestoreColor][BR]
+to open the menu and the D-Pad[BR]
+to select where to travel.[BR]
+Press [SaveColor][Color 0x14][~L][RestoreColor] to warp.[End]
+}
+
+#message:22:017
+{
+A Parasol that lets you warp[BR]
+to faraway places.[End]
+}
+
+#message:25:05A
+{
+Lets you charge up Jump power.[BR]
+Uses 3 FP.[BR]
+When charged, Mario's Jump[BR]
+power goes up by 2.[BR]
+Lets you charge up to +6 damage,[BR]
+but power fades after attack.[End]
+}
+
+#message:25:05B
+{
+Greatly charges up Jump power.[BR]
+Uses 5 FP.[BR]
+When supercharged, Mario's Jump[BR]
+power goes up by 3.[BR]
+Lets you charge up to +6 damage,[BR]
+but power fades after attack.[End]
+}
+
+#message:25:064
+{
+Lets you charge up your Hammer.[BR]
+Uses 1 FP.[BR]
+When charged, Mario's Hammer[BR]
+power goes up by 2.[BR]
+Lets you charge up to +6 damage,[BR]
+but power fades after attack.[End]
+}
+
+#message:25:065
+{
+Greatly charges up your Hammer.[BR]
+Uses 4 FP.[BR]
+When supercharged, Mario's[BR]
+Hammer power goes up by 3.[BR]
+Lets you charge up to +6 damage,[BR]
+but power fades after attack.[End]
+}
+
+#message:1D:0E1
+{
+He'll master Ironbonk and be[BR]
+able to flip spiky foes.[BR]
+[End]
+}
+
+#message:1D:0EA
+{
+She'll master Turbo Charge to[BR]
+increase Mario's attack power.[End]
+}
+
+#message:1D:0EB
+{
+She'll master Mega Shock[BR]
+to paralyze all enemies.[End]
+}
+
+#message:1D:0E8
+{
+She'll master Screech to[BR]
+damage all enemies.[End]
+}
+
+#message:2F:02C
+{
+Your items burned up![End]
+}
+
+#message:2F:02D
+{
+Your items dissolved![End]
+}
+
+#message:2B:01E
+{
+Comfy Cloud[End]
+}
+
+#message:1D:0EE
+{
+He'll master Comfy Cloud to[BR]
+heal Mario's HP by up to 12.[End]
+}
+
+#message:28:066
+{
+Create a cloud to heal Mario[BR]
+for up to 12 HP.[BR]
+More hits of the action command[BR]
+mean more HP is regained.[End]
+}
+
+#message:28:05F
+{
+Create a cloud to heal Mario[BR]
+for up to 12 HP.[End]
+}
+
+#message:2B:012
+{
+Screech[End]
+}
+
+#message:28:038
+{
+Scream at enemies and inflict[BR]
+small piercing damage to all.[End]
+}
+
+#message:28:03F
+{
+Scream at enemies and inflict[BR]
+small piercing damage to all.[BR]
+When used on fiery enemies,[BR]
+the gas in her breath will[BR]
+cause Bow to take recoil.[End]
+}
+
+#message:23:00E
+{
+A very tasty tonic. Effect[BR]
+differs in and out of battle.[End]
+}
+
+#message:24:00E
+{
+A very tasty tonic. Effect[BR]
+differs in and out of battle.[End]
+}
+
+#message:25:00E
+{
+A very tasty tonic. Cures[BR]
+poisoning and shrinking while[BR]
+in battle. Heals up to 99 HP[BR]
+out of battle at the cost of[BR]
+10 FP. FP cannot drop below[BR]
+1 when using this item.[BR]
+Please drink responsibly![End]
+}
+
+#message:1D:175
+{
+[DelayOff][Style Sign]
+[Down 6]Welcome to Toad Town's Famous[BR]
+[Down 6]Li'l Oink Farm.[BR]
+[Up 12][BR]
+Hit the bar overhead, pay 1[BR]
+coin, and wait for the egg.[BR]
+Hit it with the Hammer to[BR]
+hatch the Li'l Oink.[BR]
+Try to find out what kind of[BR]
+Li'l Oink will be born![BR]
+Have fun watching those[BR]
+adorable Li'l Oinks![BR]
+Be careful, though--if someone[BR]
+gets inside the fence, all[BR]
+the Li'l Oinks will run away.[BR]
+You can have a maximum of[BR]
+10 Li'l Oinks on the farm.[BR]
+When the 11th Li'l Oink enters,[BR]
+the 1st will leave.[BR]
+Now, try to see all of the[BR]
+different types of Li'l Oinks![BR]
+[DelayOn][Wait][Scroll 4][Wait][Scroll 4][Wait][Scroll 4][Wait][Scroll 4][Wait][Scroll 4][DelayOn][Wait][End]
+}
+
+#message:26:081
+{
+Star Gift[End]
+}
+
+#message:26:082
+{
+Star Blessing[End]
+}
+
+#message:26:083
+{
+Hold Fast[End]
+}
+
+#message:23:081
+{
+Doubles passive Star Energy[BR]
+regeneration.[End]
+}
+
+#message:23:082
+{
+Refunds 1/3 of the cost after[BR]
+using a Star Spirit's ability.[End]
+}
+
+#message:23:083
+{
+When Mario's in Danger, defense[BR]
+is raised by 1.[End]
+}
+
+#message:24:081
+{
+Doubles passive Star Energy[BR]
+regeneration.[End]
+}
+
+#message:24:082
+{
+Refunds 1/3 of the cost after[BR]
+using a Star Spirit's ability.[End]
+}
+
+#message:24:083
+{
+When Mario's in Danger, defense[BR]
+is raised by 1.[End]
+}
+
+#message:25:081
+{
+Doubles passive Star Energy[BR]
+regeneration.[End]
+}
+
+#message:25:082
+{
+Refunds 1/3 of the cost after[BR]
+using a Star Spirit's ability.[End]
+}
+
+#message:25:083
+{
+When Mario's in Danger, defense[BR]
+is raised by 1.[End]
+}
+
+#message:23:051
+{
+Drain half a bar of Star Energy.[BR]
+In-battle only.[End]
+}
+
+#message:23:052
+{
+Restores 15 FP and half of a bar[BR]
+of Star Energy.[End]
+}
+
+#message:24:051
+{
+Drain half a bar of Star Energy.[BR]
+In-battle only.[End]
+}
+
+#message:24:052
+{
+Restores 15 FP and half of a bar[BR]
+of Star Energy.[End]
+}
+
+#message:25:051
+{
+Drain half a bar of Star Energy.[BR]
+In-battle only.[End]
+}
+
+#message:25:06E
+{
+During battle, lets you use three[BR]
+items during one turn.[BR]
+Uses 10 FP.[BR]
+[End]
+}
+
+#message:25:052
+{
+Restores 15 FP and half of a bar[BR]
+of Star Energy.[End]
+}
+
+#message:23:053
+{
+A side dish made by Tayce T.[BR]
+Restores 40 HP.[End]
+}
+
+#message:24:053
+{
+A side dish made by Tayce T.[BR]
+Restores 40 HP.[End]
+}
+
+#message:25:053
+{
+A side dish made by Tayce T.[BR]
+Restores 40 HP.[End]
+}
+
+#message:1D:07D
+{
+Goombario's attack power will[BR]
+increase by 3![End]
+}
+
+#message:1D:07E
+{
+Goombario's attack power will[BR]
+increase by 3 more![End]
+}
+
+#message:23:00B
+{
+	An ultra-fine Mushroom. Restores[BR]
+	20 HP.[End]
+}
+
+#message:23:018
+{
+	A highly nutritious snack.[BR]
+	Restores 20 FP.[End]
+}
+
+#message:23:031
+{
+	A dessert made by Tayce T.[BR]
+	Restores 5 HP and 20 FP.[End]
+}
+
+#message:23:034
+{
+	A dessert made by Tayce T.[BR]
+	Restores 10 HP and 20 FP.[BR]
+	[End]
+}
+
+#message:23:035
+{
+	A dessert made by Tayce T.[BR]
+	Restores 20 HP and 5 FP.[End]
+}
+
+#message:23:036
+{
+	A dessert made by Tayce T.[BR]
+	Restores 20 HP and 10 FP.[BR]
+	[End]
+}
+
+#message:23:037
+{
+	A dessert made by Tayce T.[BR]
+	Restores 20 HP and 20 FP.[End]
+}
+
+#message:24:00B
+{
+	An ultra-fine Mushroom. Restores[BR]
+	20 HP.[End]
+}
+
+#message:24:018
+{
+	A highly nutritious snack.[BR]
+	Restores 20 FP.[End]
+}
+
+
+#message:24:031
+{
+	A dessert made by Tayce T.[BR]
+	Restores 5 HP and 20 FP.[End]
+}
+
+#message:24:034
+{
+	A dessert made by Tayce T.[BR]
+	Restores 10 HP and 20 FP.[BR]
+	[End]
+}
+
+#message:24:035
+{
+	A dessert made by Tayce T.[BR]
+	Restores 20 HP and 5 FP.[End]
+}
+
+#message:24:036
+{
+	A dessert made by Tayce T.[BR]
+	Restores 20 HP and 10 FP.[BR]
+	[End]
+}
+
+#message:24:037
+{
+	A dessert made by Tayce T.[BR]
+	Restores 20 HP and 20 FP.[End]
+}
+
+#message:25:00B
+{
+	An ultra-fine Mushroom. Restores[BR]
+	20 HP.[End]
+}
+
+#message:25:018
+{
+	A highly nutritious snack.[BR]
+	Restores 20 FP.[End]
+}
+
+
+#message:25:031
+{
+	A dessert made by Tayce T.[BR]
+	Restores 5 HP and 20 FP.[End]
+}
+
+#message:25:034
+{
+	A dessert made by Tayce T.[BR]
+	Restores 10 HP and 20 FP.[BR]
+	[End]
+}
+
+#message:25:035
+{
+	A dessert made by Tayce T.[BR]
+	Restores 20 HP and 5 FP.[End]
+}
+
+#message:25:036
+{
+	A dessert made by Tayce T.[BR]
+	Restores 20 HP and 10 FP.[BR]
+	[End]
+}
+
+#message:25:037
+{
+	A dessert made by Tayce T.[BR]
+	Restores 20 HP and 20 FP.[End]
+}

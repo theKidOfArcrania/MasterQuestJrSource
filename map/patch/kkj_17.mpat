@@ -1,0 +1,14 @@
+@ $Script_80240D9C
+{
+[7C]  	CaseOR  ==  000000E4 % Used to be 111
+}
+
+@ $IntTable_8024092C
+{
+0000010D 00000083 00000129 000000E4 000000A2 % 0E4 used to be 111
+}
+
+@ $Function_802402BC
+{
+  [98]  LA        S8, $Global_ItemHudScripts
+}

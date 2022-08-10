@@ -1,0 +1,68 @@
+
+% Improved HP and FP recovery.
+#define .RecoverAmount *GameByte[034]
+
+@ $Script_UsePower
+{
+	ExecWait $Script_802A1A70 
+	SetConst *Var[0] 00190001 
+	ExecWait $Script_802A21A0 
+	Call     SetNpcAnimation 	( 00000064 00190002 )
+	Wait     00000010 
+	Thread
+		Wait     0000000A 
+		Call     UseBattleCamPreset 	( 00000002 )
+	EndThread
+	Call     PlaySound   	( 00000242 )
+	Call     EnableNpcBlur 	( 00000064 .True )
+	Call     $Function_802A1518 ( 00000064 )
+	Call     EnableNpcBlur 	( 00000064 .False )
+	Call     DeleteNpc ( 00000064 )
+	Call     GetActorPos 	( .Actor:Player *Var[0] *Var[1] *Var[2] )
+	Add      *Var[0] 00000000 
+	Add      *Var[1] 00000023 
+	Call     $Function_802A18E8 ( *Var[0] *Var[1] *Var[2] .RecoverAmount )
+	Call     GetActorPos 	( .Actor:Player *Var[0] *Var[1] *Var[2] )
+	Add      *Var[0] 00000014 
+	Add      *Var[1] 00000019 
+	Call     $Function_802A19A8 ( *Var[0] *Var[1] *Var[2] .RecoverAmount )
+	Call     GetActorPos 	( .Actor:Player *Var[0] *Var[1] *Var[2] )
+	Add      *Var[1] 00000019 
+	Call     802D7520 ( *Var[0] *Var[1] *Var[2] .RecoverAmount )
+	Call     $Function_802A1840 ( .RecoverAmount )
+	Call     $Function_802A1894 ( .RecoverAmount )
+	Call     $Function_802A17D4 ( )
+	Wait     0000001E 
+	Call     80276EFC ( )
+	ExecWait $Script_802A27FC 
+	If .RecoverAmount > 00000001
+		Sub .RecoverAmount 00000001
+	EndIf
+	Call $LuckyStarRefund
+	Return
+	End
+}
+	
+#new:Function $LuckyStarRefund
+{
+  PUSH        V0, RA                        % Putting the registers onto the stack to work with them
+  JAL         $IsBadgeEquiped               % Check for Lucky Day
+  ADDIU       A0, R0, 114                   % id of badge (Lucky Day = 114) - HAS TO BE LOADED INTO A0 FOR $IsBadgeEquiped
+  BEQ         A0, R0, .NotEquipped          % Branch on the badge NOT being equipped (GoTo .NotEquipped)
+  NOP                                       % Nullpointer below the BEQ, because a BEQ ALWAYS reads the next line too
+  LIO         S0, $SPSubtractArguments      % Load the Arguments for SPSubtractMainFunction
+  JAL         $SPSubtractMainFunction       % Execute SPSubtractMainFunction
+  NOP                                       % Nullpointer below the JAL, because a JAL ALWAYS reads the next line too
+  .NotEquipped
+  ADDIU       V0, R0, 2                     % Set V0 to == 2 so the Function can return
+  POP         V0, RA                        % Clearing/Emptying the registers by removing them from the stack
+  ADDIU       V0, R0, 2                     % Set V0 to == 2 so the Function can return
+  JR          RA                            % Return to the Script
+  NOP                                       % Nullpointer below the JR, because a JR ALWAYS reads the next line too
+}
+
+#new:Unknown $SPSubtractArguments
+{
+FFFFFFFF 000000AA                           % The typical SPSubtractMainFunction Arguments ( Full bars / Fractions of a bar )
+}
+	

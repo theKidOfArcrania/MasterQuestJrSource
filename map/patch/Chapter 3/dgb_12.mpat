@@ -1,0 +1,52 @@
+
+@ $Script_802405E0
+{
+	SetGroup 000000EF 
+	Call     ModifyColliderFlags   	( 00000003 0000000C 00000002 )
+	Call     ModifyColliderFlags   	( 00000003 00000000 00000002 )
+	Call     ModifyColliderFlags   	( 00000003 0000000E 00000002 )
+	Thread
+		Call     ResetFromLava	( $LavaResetList_802405C0 )
+	EndThread
+	Wait     00000032 
+	Call     TranslateModel	( ~Model:o190 00000000 00000000 00000000 )
+	Call     ParentColliderToModel	( 0000000C 00000013 )
+	Loop
+		Thread
+			Wait     00000002 
+			Call     ModifyColliderFlags   	( 00000000 00000000 7FFFFE00 )
+		EndThread
+		Call     MakeLerp         	( 00000000 FFFFFFDD 0000000F 00000000 )
+		Loop
+			Call     UpdateLerp       	( )
+			Call     TranslateModel	( ~Model:o190 00000000 *Var[0] 00000000 )
+			Call     UpdateColliderTransform	( 0000000C )
+			Wait     00000001 
+			If       *Var[1]  ==  00000000
+				BreakLoop
+			EndIf
+		EndLoop
+		% Randomize the delay before spikes pop up, was originally 3C
+		Call	RandInt	( 24 *Var[A] )
+		Wait	*Var[A]
+		Wait	16
+		% End script modification
+		Call    PlaySoundAtCollider       	( 00000000 00002093 00000000 )
+		Thread
+			Call     ModifyColliderFlags   	( 00000001 00000000 7FFFFE00 )
+		EndThread
+		Call     MakeLerp         	( FFFFFFDD 00000000 00000004 00000000 )
+		Loop
+			Call     UpdateLerp       	( )
+			Call     TranslateModel	( ~Model:o190 00000000 *Var[0] 00000000 )
+			Call     UpdateColliderTransform	( 0000000C )
+			Wait     00000001 
+			If       *Var[1]  ==  00000000
+				BreakLoop
+			EndIf
+		EndLoop
+		Wait     00000023 
+	EndLoop
+	Return
+	End
+}

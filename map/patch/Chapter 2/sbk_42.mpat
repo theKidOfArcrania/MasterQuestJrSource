@@ -1,0 +1,119 @@
+
+% This map now has a 1/4 chance of spawning the elusive Bandit Leader
+
+#import SetTexturePanner.mpat
+
+@ $Script_Main_EnterWalk
+{
+    0:  Set      *GameByte[01A9] 0000000A 
+   10:  Call     SetSpriteShading	( FFFFFFFF )
+   20:  If       *GameByte[0000]  ==  FFFFFFC1
+   30:     Call     DisablePulseStone	( 00000000 )
+   40:  EndIf
+   48:  Call     SetCamPerspective	( 00000000 00000003 00000019 00000010 00001000 )
+   68:  Call     SetCamBGColor	( 00000000 00000000 00000000 00000000 )
+   84:  Call     SetCamEnabled	( 00000000 00000001 )
+   98:  Call     SetCamLeadPlayer	( 00000000 00000000 )
+ Call  RandInt	( 3 *Var[A] )
+	If	*Var[A] == 0
+	 Call	  MakeNpcs      ( 00000000 $NpcGroupList_BanditLeader )
+	Else
+     Call     MakeNpcs         	( 00000000 $NpcGroupList_80240C10 )
+	EndIf
+   C0:  Call     $Function_80240000 ( )
+   CC:  Call     SetMusicTrack    	( 00000000 00000017 00000000 00000008 )
+   E8:  Set      *Var[0] $Script_80240330 
+   F8:  Exec     80285960 
+		Exec     $ScrollSand
+  104:  Return
+  10C:  End
+}
+
+#new:Script $ScrollSand
+{
+	SetGroup 00000000 
+	% may also use 802C9208, perhaps this does scaling or rotation instead  -- see mac_00 model 000000D6
+	Call     SetTexPanner	( ~Model:FallingSand 00000001 )
+	Thread
+	   Set      *Var[0] 00000001 
+	   Set      *Var[1] 0		% main texture speed U
+	   Set      *Var[2] 128`	% main texture speed V
+	   Set      *Var[3] 0		% aux texture speed U
+	   Set      *Var[4] 0		% aux texture speed U
+	   Set      *Var[5] 00000000 
+	   Set      *Var[6] 00000001 
+	   Set      *Var[7] 00000000 
+	   Set      *Var[8] 00000000 
+	   Set      *Var[9] 00000000 
+	   Set      *Var[A] 00000000 
+	   Set      *Var[B] 00000000 
+	   Set      *Var[C] 00000000 
+	   Exec     $Script_SetTexturePanner 
+	EndThread
+	Return
+	End
+}
+
+% Force recalculation of entrances -- since we Set d one of them.
+@ $EntryList
+{
+~Vec4f:Entry0 ~Vec4f:Entry1 ~Vec4f:Entry2 ~Vec4f:Entry3
+}
+
+%%
+% Add a new Lava Bubble NPC.
+%%
+
+#import NPC_Ember.mpat
+
+@ $NpcGroupList_80240C10
+{
+00000001 $NpcGroup_80240830 0A0A0001 
+00000001 $NpcGroup_80240A20 0A0B0001 
+00000001 $NPC_Ember         0A100001
+00000000 00000000 00000000 
+}
+
+#new:NpcGroupList $NpcGroupList_BanditLeader
+{
+00000001 $NpcGroup_80240830     0A0A0001 
+00000001 $NpcGroup_BanditLeader 0A140001
+00000001 $NPC_Ember             0A100001 
+00000000 00000000 00000000 
+}
+
+@ $NPC_Ember
+{
+[00] 2					% npc ID
+[08] 0.0 10.0 0.0		% spawn position
+[14] 00000400			% flags
+[E0] 112` 10` 0 360`	% wander origin and radius
+[FC] 0` 10` 0 500` 500`	% detection bounds
+}
+
+@ $AISettings_80244918_kzn_02
+{
+ 0.8		% wander speed  (3F4CCCCD)
+00000064	% wander step distance
+00000000	% wander step delay
+140.0		% alert radius -- originally 90.0 (42B40000)
+00000000 00000004
+ 3.2		% chase speed  (404CCCCD)
+0000000A 00000001
+160.0		% chase radius -- originally 100.0 (42C80000)
+00000000 00000001 
+}
+
+#new:NpcGroup $NpcGroup_BanditLeader
+{
+00000006 $NpcSettings_80240804 ~Vec3f:NPC_Bandit_01 % 60 0 30
+00002C00 00000000 00000000 00000000 0000010E 
+~Items:5:HoneySyrup:A
+~HP:20:70:2:50 ~HP:30:60:2:50 ~HP:50:50:2:40 ~HP:80:40:2:40 ~HP:100:30:2:30 ~HP:None ~HP:None ~HP:None 
+~FP:20:50:2:40 ~FP:30:40:2:40 ~FP:50:40:2:40 ~FP:80:40:2:40 ~FP:100:30:2:40 ~FP:None ~FP:None ~FP:None 
+~CoinBonus:1:3
+~Movement:NPC_Bandit_01
+00320601 00320605 00320607 00320607 00320601 00320601 00320609 00320609 
+00320600 00320600 00320600 00320600 00320600 00320600 00320600 00320600 
+00000001 00000000 00000000 00000000 % no tattle string
+}

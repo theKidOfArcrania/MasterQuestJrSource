@@ -1,0 +1,25 @@
+
+% ====================================================
+% Changed battle from Paragoomba x1 to Paragoomba x3
+% ====================================================
+
+@ $Script_MakeEntities
+{
+    If  *StoryProgress  <  FFFFFFE8 
+  	Call     MakeEntity  	( .Entity:Padlock ~Vec4d:Entity80243B64 80000000 )
+    Call     AssignScript 	( $Script_80243B28 )
+    Set  *MapVar[0]  *Var[0] 
+   	Call     MakeEntity			( .Entity:HiddenPanel ~Vec4d:panel ~Model:kusa 80000000 )
+	Call	 AssignPanelFlag 	( *Flag_ARN_19 )
+    EndIf
+    Return
+    End
+}
+
+@ $NpcGroupList_802478B8
+{
+00000001 $NpcGroup_802470BC 0E080002 % changed from 0E060002
+00000001 $NpcGroup_802472AC 0E070002 
+00000001 $NpcGroup_8024749C 0E080002 
+00000000 00000000 00000000 
+}

@@ -1,0 +1,32 @@
+
+#import NPC_Ember.mpat
+
+@ $NpcGroupList_80240CB8
+{
+00000001 $NpcGroup_802408D8 0A040001 
+00000001 $NpcGroup_80240AC8 0A0D0001 
+00000001 $NPC_Ember   0A100001
+00000000 00000000 00000000 
+}
+
+@ $NPC_Ember
+{
+[00] 2					% npc ID
+[08] 0.0 10.0 0.0		% spawn position
+[14] 00000400			% flags
+[E0] 0` 10` 0 300`		% wander origin and radius
+[FC] 0` 10` 0 500` 500`	% detection bounds
+}
+
+@ $AISettings_80244918_kzn_02
+{
+ 0.8		% wander speed  (3F4CCCCD)
+00000064	% wander step distance
+00000000	% wander step delay
+140.0		% alert radius -- originally 90.0 (42B40000)
+00000000 00000004
+ 3.2		% chase speed  (404CCCCD)
+0000000A 00000001
+160.0		% chase radius -- originally 100.0 (42C80000)
+00000000 00000001 
+}

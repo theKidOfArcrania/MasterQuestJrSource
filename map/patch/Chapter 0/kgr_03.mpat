@@ -1,0 +1,171 @@
+
+#new:Header $Header
+{
+00000000 00000000 00000000 00000000 
+$Script_Main $EntryList 00000003 00000000 
+00000000 00000000 00000000 00000000 
+00000000 00000000 80200000 $Function_GetTattle
+}
+
+#new:Function $Function_GetTattle
+{
+	ADDIU     SP, SP, FFE8
+	LIO       V0, $MapTattle
+	JR        RA
+	ADDIU     SP, SP, 18
+}
+
+#string $MapTattle
+{
+[Style Tattle]
+[EnableCDownNext]The trap in this room is[BR]
+still functional. The[BR]
+craftsmanship on the[BR]
+blade is amazing.[BR]
+[Wait][Next]
+Better not get too close.[BR]
+Even a slight touch could[BR]
+be our last.[BR]
+[Wait][Next]
+I wish I had a Melon or[BR]
+something to throw at it.[BR]
+I bet it cuts it right in half![BR]
+[Wait][End]
+}
+
+#new:Function_Init $Function_Init
+{
+	PUSH	RA
+	/%
+	% Override map geometry
+	LIA       A0, 800D9230
+	LIA       A1, "XXX_shape"
+	JAL       {Func:StringPrintf}
+	RESERVED
+	% Override map collision
+	LIA       A0, 800D91E0
+	LIA       A1, "XXX_hit"
+	JAL       {Func:StringPrintf}
+	RESERVED
+	%/
+	% Override texture package
+	LIA		A0, 800B0CF0
+	LIA		A1, "kpa_tex"
+	JAL		~Func:sprintf
+	RESERVED
+	% Done
+	DADDU	V0, R0, R0
+	JPOP	RA
+}
+
+#new:EntryList $EntryList
+{
+~Vec4f:Entry0 %  coordinates
+~Vec4f:Entry1
+~Vec4f:Entry2
+}
+
+#new:Script_Main $Script_Main
+{
+	Set      *WorldMapLocation 0000000A % sets the location on the pause screen map
+	Call     SetSpriteShading 	( FFFFFFFF )
+	Call     SetCamPerspective	( .Cam:Default  3  25` 16` 4096` ) % default type, half vertical FOV, near clip, and far clip
+	Call     SetCamBGColor   	( .Cam:Default  0  0  0 ) % color values are RGB bytes; (0,0,0) is black, (255`,255`,255`) is white, etc.
+	Call     SetCamEnabled 	 	( .Cam:Default  .True )   % Enabled?
+	Call     SetMusicTrack    	( 00000000 .Song:DryDryRuins 00000000 00000008 )
+	ExecWait $Script_MakeEntities
+   %Exec     $Script_RotateThatBlade
+	%Call     ModifyColliderFlags ( 00000003 {Collider:blade} 00000002 )
+  % Thread
+	%Call     ResetFromLava 	( $Demo_LavaResetList )
+  % EndThread
+   Wait 00000009
+		Set		*Var[0] $Script_MakeExits 
+		Exec	EnterWalk 
+	Return
+	End
+}
+
+/%	
+#new:LavaResetList $Demo_LavaResetList
+{Collider:lavaN} {Vec3f:lavaN}
+{Collider:lavaE} {Vec3f:lavaE}
+{Collider:lavaS} {Vec3f:lavaS}
+{Collider:lavaW} {Vec3f:lavaW}
+FFFFFFFF 00000000 00000000 00000000
+%/
+
+#new:Script $Script_MakeEntities
+{
+	Call     MakeEntity       	( .Entity:HiddenPanel ~Vec4d:starpiecepanel ~Model:panelmodel 80000000 )
+	Call     AssignPanelFlag 	( *Flag_KMR_63 )
+	Return
+	End
+}
+
+/%
+#new:Script $Script_RotateThatBlade
+    Exec     $Script_RotationProceed 
+    Return
+    End
+
+#new:Script $Script_RotationProceed
+Call	ParentColliderToModel 	( {Collider:blade} {Model:blade} )
+Call	ParentColliderToModel 	( {Collider:center} {Model:center} )
+Loop
+  Add  *Var[9]  00000001 
+   SetF  *Var[3]  *Fixed[0.0]
+  If *Var[9] == 00000005
+  Call PlaySoundAt 	( 0000212C 00000000 00000004 0000001A FFFFFFF4 ) %Call     PlaySoundAtModel 	( {Model:center} 0000001A FFFFFFF4 )
+	Set *Var[9] 00000000
+  EndIf
+   AddF  *Var[3]  *Fixed[1.0] 
+    Call     RotateModel 	( {Model:center} *Var[3] 00000000 00000000 00000001 )
+   	Call     RotateModel 	( {Model:blade}  *Var[3] 00000000 00000000 00000001 )
+ Wait 00000016
+EndLoop
+ Return
+ End	
+%/
+ 
+#new:Script $Script_MakeExits
+{
+Bind     $Script_Exit0  .Trigger:FloorAbove ~Collider:exit1 00000001 00000000
+%Bind     $Script_Exit1  .Trigger:FloorAbove {Collider:exit2} 00000001 00000000
+%Bind     $Script_Exit2  .Trigger:FloorAbove {Collider:exit3} 00000001 00000000
+Return
+End
+}
+	
+	#new:Script $Script_Exit0
+{
+	SetGroup 0000001B 
+	Call     UseExitHeading ( 0000003C 00000000 ) % direction opposing Entry#0
+	Exec     ExitWalk 
+	Call     GotoMap     	( "kmr_40" 00000001 )
+	Wait     00000064 
+	Return
+	End	
+}
+	 
+	#new:Script $Script_Exit1
+{
+	SetGroup 0000001B 
+	Call     UseExitHeading ( 0000003C 00000001 ) % direction opposing Entry#0
+	Exec     ExitWalk 
+	Call     GotoMap     	( "kmr_40" 00000001 )
+	Wait     00000064 
+	Return
+	End
+}
+
+	#new:Script $Script_Exit2
+{
+	SetGroup 0000001B 
+	Call     UseExitHeading ( 0000003C 00000002 ) % direction opposing Entry#0
+	Exec     ExitWalk 
+	Call     GotoMap     	( "kmr_40" 00000001 )
+	Wait     00000064 
+	Return
+	End	
+}

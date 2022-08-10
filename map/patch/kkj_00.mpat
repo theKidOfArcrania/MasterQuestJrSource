@@ -1,0 +1,72 @@
+	
+@ $Script_Interact_80241DD8
+{
+	Call     EnableNpcAI	( 00000001 .False )
+	Call     SetNpcAnimation 	( 00000000 00820004 )
+	Call     SetNpcAnimation 	( 00000001 00830001 )
+	Wait     10` 
+	Call	$Function_IsLuigiChallengeAccepted ( *Var[0] )
+	If  *Var[0]  ==  00000000
+		Call     SpeakToPlayer	( 00000000 00820014 00820004 00000000 $LuigiChallenge1 )
+		Call     ShowChoice		( 001E000D ) % Yes No 
+		If  *Var[0]  ==  00000000
+			Call     ContinueSpeech	( 00000000 00820014 00820004 00000000 $LuigiChallenge2 )
+			Call     ShowChoice		( 001E000D ) % Yes No 
+			If  *Var[0]  ==  00000000
+				Call     ContinueSpeech	( 00000000 00820014 00820004 00000000 $LuigiChallenge3 )
+				Call     ShowChoice		( 001E000D ) % Yes No 
+				If  *Var[0]  ==  00000000
+					Call	ContinueSpeech	( 00000000 00820014 00820004 00000000 $LuigiChallengeAccepted )
+					Call	$Function_ActivateLuigiChallenge ( )
+					Goto	ScriptEnd
+				EndIf
+			EndIf
+		EndIf
+		Call	ContinueSpeech	( 00000000 00820014 00820004 00000000 $LuigiChallengeDeclined )
+	Else
+		Call	SpeakToPlayer	( .Npc:Self 00820014 00820004 00000010 00000025 ) % Say, Mario, why don't you go see Princess Peach? I ...
+	EndIf
+	Label	ScriptEnd
+	Call	EnableNpcAI		( 00000001 .True )
+	Return
+	End
+}
+	
+#string $LuigiChallenge1
+{
+[Style Right]
+Hey bro, I've got a challenge[BR]
+for you. Do you want to hear it?[BR]
+[Yield][End]
+}
+
+#string $LuigiChallenge2
+{
+[Next]
+This is for true veterans only.[BR]
+Are you sure you want to hear[BR]
+about it?[BR]
+[Yield][End]
+}
+
+#string $LuigiChallenge3
+{
+[Next]
+Here's the challenge:[BR]
+You can't earn any Star Points,[BR]
+[Pause 16]but [Pause 16]you can equip 16 badges for[BR]
+free. Do you want to try it?[BR]
+[Yield][End]
+}
+
+#string $LuigiChallengeAccepted
+{
+[Next]
+Good luck, bro![Wait][End]
+}
+
+#string $LuigiChallengeDeclined
+{
+[Next]
+All right then. Maybe next time.[Wait][End]
+}

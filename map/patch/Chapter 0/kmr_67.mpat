@@ -1,0 +1,419 @@
+#import EnterWarpPipe.mpat
+#define .PipeTrig *GameFlag[00D]
+#define .PipeRaiseSound 0000208E
+#define .Parasol *GameByte[00A]
+#define .Beaten *GameByte[0BE]
+
+#new:Header $Header
+{
+00000000 00000000 00000000 00000000 
+$Script_Main $EntryList 00000001 00000000 
+00000000 00000000 00000000 00000000 
+00000000 00000000 80200000 $Function_GetTattle 
+}
+
+#new:Function $Function_GetTattle
+{
+	ADDIU     SP, SP, FFE8
+	LIO       V0, $MapTattle
+	JR        RA
+	ADDIU     SP, SP, 18
+}
+
+#string $MapTattle
+{
+[Style Tattle]
+[EnableCDownNext]This is it. Floor 100.[BR]
+There's no pipe here, so[BR]
+how did they expect people[BR]
+to get back out of here?[BR]
+[Wait][Next]
+Unless...[Pause 10] you think maybe,[BR]
+they intended for people[BR]
+to just stay down here,[BR]
+forever?[BR]
+[Wait][Next]
+An eternity down here[BR]
+would do some crazy stuff[BR]
+to your mind. You'd go[BR]
+insane![BR]
+[Wait][Next]
+I'm not worried, though.[BR]
+Mom would never let me[BR]
+miss dinner. Not even if[BR]
+I was stuck here.[BR]
+[Wait][Next]
+She'd probably come all the[BR]
+way down here and drag me[BR]
+back up.[BR]
+[Wait][Next]
+Then I'd have to hear it[BR]
+for being late for dinner. [BR]
+[Wait][Next]
+I can't catch a break.[BR]
+[Wait][End]
+}
+
+#new:Function_Init $Function_Init
+{
+	PUSH	RA
+	/%
+	% Override map geometry
+	LIA       A0, 800D9230
+	LIA       A1, "XXX_shape"
+	JAL       {Func:StringPrintf}
+	RESERVED
+	% Override map collision
+	LIA       A0, 800D91E0
+	LIA       A1, "XXX_hit"
+	JAL       {Func:StringPrintf}
+	RESERVED
+	%/
+	% Override texture package
+	LIA		A0, 800B0CF0
+	LIA		A1, "kpa_tex"
+	JAL		~Func:sprintf
+	RESERVED
+	% Done
+	DADDU	V0, R0, R0
+	JPOP	RA
+}
+
+#new:EntryList $EntryList
+{
+~Vec4f:Entry0 %  coordinates
+}
+
+#new:Script_Main $Script_Main
+{
+Set .PipeTrig 00000000
+Set *Flag_TRD_20 00000000
+%If .Floor == 00000064 % If you try and cheat down here somehow without having the floor set correctly you can enjoy a softlock.
+	%Set      *WorldMapLocation 0000000A % sets the location on the pause screen map
+	Call     SetSpriteShading 	( FFFFFFFF )
+	Call     SetCamPerspective	( .Cam:Default  3  25` 16` 4096` ) % default type, half vertical FOV, near clip, and far clip
+	Call     SetCamBGColor   	( .Cam:Default  0  0  0 ) % color values are RGB bytes; (0,0,0) is black, (255`,255`,255`) is white, etc.
+	Call     SetCamEnabled 	 	( .Cam:Default  .True )   % Enabled?
+	Call     SetMusicTrack    	( 00000000 .Song:DryDryRuins 00000000 00000008 )
+	Call     MakeNpcs           ( 00000001 $NpcGroupList_Illusion)
+	If *Flag_TRD_20 == 00000000
+	Bind     $Script_IllusionBoss  .Trigger:FloorTouch ~Collider:center  00000001 00000000
+					Set *Var[2] 1000`
+			Call	TranslateModel	( ~Model:lightinner 00000000 *Var[2] 00000000 )
+			Call	TranslateModel	( ~Model:brightlight 00000000 *Var[2] 00000000 )
+			Call	TranslateModel	( ~Model:lightouter 00000000 *Var[2] 00000000 )
+			   Exec     $Script_RotateThatSmoke
+	Else
+						Set *Var[2] 1000`
+			%Set		*WarpLock	00000000
+			Call	TranslateModel	( ~Model:darkinner 00000000 *Var[2] 00000000 )
+			%Call	TranslateModel	( {Model:darklight} 00000000 *Var[2] 00000000 )
+			Call	TranslateModel	( ~Model:darkouter 00000000 *Var[2] 00000000 )
+			Call	TranslateModel	( ~Model:darksmoke 00000000 *Var[2] 00000000 )
+			ExecWait $Script_MakeEntitiesChest
+	EndIf
+	Call     MakeEntity  	( .Entity:Signpost ~Vec4d:signpost 80000000 )
+	Call     AssignScript 	( $Script_SignPost1 )
+%EndIf
+	Return
+	End
+}
+
+#new:Script $Script_SignPost1
+{
+    0:  Call     DisablePlayerInput 	( .True )
+   10:  Call     ShowMessageAtScreenPos 	( $Floor1 000000A0 00000028 ) % Private  
+   28:  Call     DisablePlayerInput 	( .False )
+   38:  Return
+   40:  End
+}
+	   
+#string $Floor1
+{
+[DelayOff][Style Sign]
+[CenterX 255][Down 15]Floor 100[BR]
+[DelayOn][Wait][End]
+}
+
+	/%
+	#new:Script $Script_MakeEntities
+	Call	MakeEntity  	( .Entity:Chest {Vec4d:chest10} 00000000 80000000 )
+	Call	AssignFlag  	( *GameFlag[38C])
+	Call	AssignScript 	( $Script_UseChest )
+	Return
+	End	
+	%/
+	
+	#new:Script $Script_RotateThatSmoke
+{
+    Exec     $Script_RotationProceed 
+    Return
+    End
+}
+
+#new:Script $Script_RotationProceed
+{
+    0:  SetF  *Var[0]  *Fixed[0.0] 
+   10:  Set  *Var[1]  0000001E 
+  % 20:  Call     PlaySoundAtModel 	( {Model:center} 8000004A 00000000 )
+   38:  Label    00000000 
+   44:  AddF  *Var[0]  *Fixed[1.0] 
+   54:  Call     $Function_80240800 ( )
+   If *Flag_TRD_20 == 00000000
+    Call     RotateModel 	( ~Model:darksmoke *Var[0] 00000000 00000001 00000000 )
+   Else
+   Set *Var[B] 1000`
+   Call	TranslateModel	( ~Model:darksmoke 00000000 *Var[B] 00000000 )
+      Goto     00000006
+   EndIf
+   80:  Wait     00000001 
+   8C:  Sub  *Var[1]  00000001 
+   9C:  If  *Var[1]  >  00000000 
+   AC:  	Goto     00000000 
+   B8:  EndIf
+   C0:  Set  *Var[1]  0000001E 
+   D0:  Call     RandInt     	( 00000064 *Var[2] )
+   E4:  If  *Var[2]  >  0000000A 
+   F4:  	Goto     00000000 
+  100:  EndIf
+  108:  SetF  *Var[2]  *Fixed[1.0] 
+  118:  Loop     00000032 
+  124:  	SubF  *Var[2]  *Fixed[0.0107421875] 
+  134:  	AddF  *Var[0]  *Var[2] 
+      If *Flag_TRD_20 == 00000000 
+    Call     RotateModel 	( ~Model:darksmoke *Var[0] 00000000 00000001 00000000 )
+   Else
+   Set *Var[B] 1000`
+   Call	TranslateModel	( ~Model:darksmoke 00000000 *Var[B] 00000000 )
+   Goto     00000006
+   EndIf
+  164:  	Wait     00000001 
+  170:  EndLoop
+  178:  Loop     00000032 
+  184:  	AddF  *Var[2]  *Fixed[0.0107421875] 
+  194:  	AddF  *Var[0]  *Var[2] 
+     If *Flag_TRD_20 == 00000000 
+    Call     RotateModel 	( ~Model:darksmoke *Var[0] 00000000 00000001 00000000 )
+   Else
+   Set *Var[B] 1000`
+   Call	TranslateModel	( ~Model:darksmoke 00000000 *Var[B] 00000000 )
+      Goto     00000006
+   EndIf
+  1C4:  	Wait     00000001 
+  1D0:  EndLoop
+  1D8:  Set  *Var[1]  0000001E 
+  1E8:  Goto     00000000 
+  Label 00000006
+  1F4:  Return
+  1FC:  End
+}
+	
+	%NOT USED - BROKEN - if you try and make this work for whatever reason give the pipe its own entry instead of using entry #3, which isn't even in the entry list
+	
+	#new:Script $Script_GetPipeWorking
+{
+	Bind     $Script_RaisePipe .Trigger:GameFlagSet .PipeTrig 00000001 00000000
+	Call     MakeEntity  ( .Entity:BlueWarpPipe ~Vec4d:pipe 00000003 $Script_UseBluePipe ~Index:*GameFlag00C 80000000 )
+	Return
+	End	
+}
+	
+	#new:Script $Script_GetPipeWorkingDone
+{
+	Bind     $Script_RaisePipeDone .Trigger:GameFlagSet .PipeTrig 00000001 00000000
+	Call     MakeEntity  ( .Entity:BlueWarpPipe ~Vec4d:pipe 00000003 $Script_UseBluePipe ~Index:*GameFlag00C 80000000 )
+	Return
+	End
+}
+		
+	#new:Script $Script_RaisePipeDone
+{
+	Wait     0000000A 
+	Set .PipeTrig 00000001
+	Unbind
+	Return
+	End
+}
+	
+	#new:Script $Script_RaisePipe
+{
+	Wait     0000000A
+	Call     PlaySound  ( .PipeRaiseSound )	
+	Set .PipeTrig 00000001
+	Unbind
+	Return
+	End
+}
+	
+		#define .Floor *GameByte[003]
+	
+	#new:Script $Script_UseBluePipe
+{
+	Set .Floor 00000000 
+	Call     GotoMap    ( "kmr_38" 1 )
+	Wait     00000064 
+	Return
+	End
+}
+	
+	#new:Script $Script_MakeEntitiesChest
+{
+	Call	MakeEntity  	( .Entity:Chest ~Vec4d:chest 00000000 80000000 )
+	Call	AssignFlag  	( *Flag_TRD_21)
+	Call	AssignScript 	( $Script_UseChest )
+	Return
+	End	
+}
+
+	#new:Script $Script_UseChest
+{
+			Set  *Var[A]  .Item:Screwdriver
+			Set  *Var[B]  00000001 
+			Set  *GameFlag[395]  .True
+			Set .Parasol 00000001
+	ExecWait $Script_OpenChest 
+	Return
+	End
+}
+
+	#new:Script $Script_OpenChest
+{
+	Call     DisablePlayerInput 	( .True )
+	Set  *Var[0]  *Var[A] 
+	If  *Var[A]  !=  00000000 
+		ExecWait $Script_GetItem 
+	EndIf
+	Switch  *Var[B] 
+		Case  ==  00000000 
+			Call     AddItem     	( *Var[A] *Var[0] )
+		Case  ==  00000001 
+			Call     AddKeyItem  	( *Var[A] )
+		Case  ==  00000002 
+			Call     AddBadge    	( *Var[A] *Var[0] )
+	EndSwitch
+	Wait     0000000F 
+	Call     DisablePlayerInput 	( .False )
+	Return
+	End
+}
+	
+	#new:Script $Script_GetItem
+{
+	SetGroup 00000000 
+	Call     SetTimeFreezeMode ( 00000002 )
+	Wait     00000028 
+	Call     ShowGotItem 	( *Var[0] 00000000 00000000 )
+	Call     SetTimeFreezeMode ( 00000000 )
+	Return
+	End
+}
+	
+#new:Script $Script_IllusionBoss
+{
+		Wait 00000001
+	Set  *MapFlag[0] .True	
+Return
+End
+}
+
+#new:Script $Script_Init_Illusion
+{
+		Call     BindNpcIdle 		( .Npc:Self $Script_IdleAI )
+		Call     BindNpcDefeat 	( .Npc:Self $Script_802421A8 )
+     Return
+     End
+}
+ 
+#new:Script $Script_IdleAI
+{
+	Loop
+		If  *MapFlag[0]  ==  .True 
+		 	Call     StartBossBattle 	( .Song:CreepyToybox )
+		EndIf
+		Wait     00000001 
+	EndLoop
+	Return
+	End
+}
+ 
+ 
+#new:Script $Script_802421A8
+{
+		%Set		*WarpLock	00000000
+		Set  *Flag_TRD_20  00000001 
+		Set  *MapFlag[0] .False
+		If .Beaten == 00000000
+ExecWait $Script_MakeEntitiesChest
+		EndIf
+						Set *Var[2] 1000`
+			Call	TranslateModel	( ~Model:darkinner 00000000 *Var[2] 00000000 )
+			%Call	TranslateModel	( {Model:darklight} 00000000 *Var[2] 00000000 )
+			Call	TranslateModel	( ~Model:darkouter 00000000 *Var[2] 00000000 )
+			Call	TranslateModel	( ~Model:darksmoke 00000000 *Var[2] 00000000 )
+					Set *Var[3] 0`
+			Call	TranslateModel	( ~Model:lightinner 00000000 *Var[3] 00000000 )
+			Call	TranslateModel	( ~Model:brightlight 00000000 *Var[3] 00000000 )
+			Call	TranslateModel	( ~Model:lightouter 00000000 *Var[3] 00000000 )
+Set .Beaten 00000001			
+   Return
+   End 
+}
+
+#new:NpcGroupList $NpcGroupList_Illusion
+{
+00000001 $NpcGroup_Illusion 08020000
+00000000 00000000 00000000
+}
+   
+#new:NpcGroup $NpcGroup_Illusion
+{
+0000000A $BlankSettings ~Vec3f:npc % 1260 0 -40
+00A40D01 $Script_Init_Illusion 00000000 00000000 00000000 
+~NoItems ~NoHP ~NoFP ~NoCoinBonus
+~Movement:npc
+00950001 00950002 00950003 00950003 00950001 00950001 00950000 00950000 
+00950001 00950002 00950003 00950003 00950001 00950001 00950000 00950000
+00000000 00000000 00000000 001A0122 % he has a tattle now!
+}
+
+#new:NpcSettings $BlankSettings
+{
+00000000 00200018 00000000 00000000 00000000 00000000 00000000 00000000 
+00000000 00000000 00630000
+}
+
+
+	#new:Function $Function_80240800
+{
+    0:  ADDIU     SP, SP, FFE8
+    4:  SW        S0, 10 (SP)
+    8:  DADDU     S0, A0, R0
+    C:  LUI       A1, FE36
+   10:  SW        RA, 14 (SP)
+   14:  JAL       ~Func:get_float_variable
+   18:  ORI       A1, A1, 3C80
+   1C:  MOV.S     F2, F0
+   20:  LAD       F4, $ConstDouble_80247940
+   28:  CVT.D.S   F0, F2
+   2C:  C.LE.D    F4, F0
+   30:  NOP
+   34:  BC1F      .o44
+   38:  DADDU     A0, S0, R0
+   3C:  SUB.D     F0, F0, F4
+   40:  CVT.S.D   F2, F0
+        .o44
+   44:  LUI       A1, FE36
+   48:  MFC1      A2, F2
+   4C:  JAL       ~Func:set_float_variable
+   50:  ORI       A1, A1, 3C80
+   54:  LW        RA, 14 (SP)
+   58:  LW        S0, 10 (SP)
+   5C:  ADDIU     V0, R0, 2
+   60:  JR        RA
+   64:  ADDIU     SP, SP, 18
+}
+   
+   #new:ConstDouble $ConstDouble_80247940
+{
+	360.000000d
+}

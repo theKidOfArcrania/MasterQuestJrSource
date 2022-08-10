@@ -1,0 +1,314 @@
+#define .BowserBeat *GameByte[069]
+
+@ $Script_Main
+{
+    0:  Call     GetEntryID  	( *Var[0] )
+   10:  Switch  *Var[0] 
+   1C:  	Case  ==  00000001 
+   28:  		Set  *GF_KKJ25_Defeated_Kammy  00000001 
+   38:  	Case  ==  00000002 
+   44:  		Set  *GF_KKJ25_Defeated_Kammy  00000001 
+   54:  		Set  *GF_KKJ25_Defeated_Bowser  00000001 
+   64:  EndSwitch
+   6C:  Set  *WorldMapLocation  0000001A 
+   7C:  Call     SetSpriteShading 	( 00050009 )
+   8C:  Call     SetCamLeadPlayer 	( .Cam:Default .False )
+   A0:  Call     SetCamPerspective 	( .Cam:Default 00000003 00000019 00000010 00001000 )
+   C0:  Call     SetCamBGColor 	( .Cam:Default 00000000 00000000 00000000 )
+   DC:  Call     SetCamEnabled 	( .Cam:Default .True )
+   F0:  Call     SetCamSpeed 	( .Cam:Default *Fixed[0.75] )
+  104:  If  *GF_KKJ25_Defeated_Bowser  ==  00000000 
+  114:  	If  *GF_KKJ25_Defeated_Kammy  ==  00000000 
+  124:  		Call     MakeNpcs    	( 00000000 $NpcGroupList_80242854 )
+  138:  	Else
+  140:  		Call     MakeNpcs    	( 00000000 $NpcGroupList_8024487C )
+  154:  		Call     EnableGroup 	( ~Model:g30 .False )
+  168:  	EndIf
+  170:  Else
+  178:  	Call     MakeNpcs    	( 00000000 $NpcGroupList_802455F4 )
+  18C:  	Call     EnableGroup 	( ~Model:g30 .False )
+  1A0:  EndIf
+  1A8:  ExecWait $Script_MakeEntities
+  1B4:  Call     UseDoorSounds 	( 00000002 )
+  1C4:  Exec     $Script_EnterDoubleDoor_80241060 
+  1D0:  Call     ParentColliderToModel 	( ~Collider:o128 ~Model:o1 )
+  1E4:  Exec     $Script_8024132C 
+  1F0:  Call     GetEntryID  	( *Var[0] )
+  200:  Thread
+  208:  	Set  *MapVar[B]  00000000 
+  218:  	If  *Var[0]  ==  00000000 
+  228:  		Call     EnableModel 	( ~Model:o122 .False )
+  23C:  		Loop     
+  248:  			Wait     00000001 
+  254:  			If  *MapVar[B]  ==  00000001 
+  264:  				BreakLoop
+  26C:  			EndIf
+  274:  		EndLoop
+  27C:  	Else
+  284:  		Call     ScaleModel  	( ~Model:o122 000000FA 00000001 000000FA )
+  2A0:  	EndIf
+  2A8:  	Exec     $Script_80247194 
+  2B4:  EndThread
+		Set .BowserBeat 00000000
+  2BC:  Return
+  2C4:  End
+}
+
+@ $Script_8024B254
+{
+    0:  Call     DisablePlayerInput 	( .True )
+   10:  Call     DisablePartnerAI 	( 00000000 )
+   20:  Exec     $Script_8024AA8C 
+   2C:  Call     SetPlayerPos 	( 00000096 00000000 00000000 )
+   44:  Call     InterpPlayerYaw 	( 0000005A 00000000 )
+   58:  Call     PartnerIsFlying ( *Var[0] )
+   68:  If  *Var[0]  ==  00000000 
+   78:  	Call     SetNpcPos   	( .Npc:Partner 0000006E 0000000A 00000000 )
+   94:  Else
+   9C:  	Call     SetNpcPos   	( .Npc:Partner 0000006E 00000000 00000000 )
+   B8:  EndIf
+   C0:  Call     SetNpcYaw   	( .Npc:Partner 0000005A )
+   D4:  Call     SetNpcAnimation 	( .Npc:Partner 00000106 )
+   E8:  Call     GetNpcPos   	( 0000000F *Var[0] *Var[1] *Var[2] )
+  104:  Add  *Var[0]  FFFFFFD8 
+  114:  Add  *Var[1]  0000003C 
+  124:  Set  *Var[3]  00000014 
+  134:  Set  *Var[4]  00000003 
+  144:  Call     $Function_80240EB8 ( )
+  150:  Set  *MapVar[0]  *Var[0] 
+  160:  Call     SetCamType  	( .Cam:Default 00000000 00000000 )
+  178:  Call     UseSettingsFrom 	( .Cam:Default 0000012C 00000000 00000032 )
+  194:  Call     SetPanTarget 	( .Cam:Default 0000012C 00000000 00000032 )
+  1B0:  Call     SetCamDistance ( .Cam:Default 00000177 )
+  1C4:  Call     SetCamPitch 	( .Cam:Default *Fixed[17.0] *Fixed[-9.0] )
+  1DC:  Call     SetCamPosA  	( .Cam:Default 00000000 0000001E )
+  1F4:  Call     SetCamPosB  	( .Cam:Default 00000000 00000014 )
+  20C:  Call     SetCamSpeed 	( .Cam:Default *Fixed[90.0] )
+  220:  Call     PanToTarget 	( .Cam:Default 00000000 00000001 )
+  238:  Call     WaitForCam  	( .Cam:Default *Fixed[1.0] )
+  24C:  Wait     0000001E 
+  258:  Thread
+  260:  	Call     GetPlayerPos 	( *Var[0] *Var[1] *Var[2] )
+  278:  	Call     SetPanTarget 	( .Cam:Default *Var[0] *Var[1] *Var[2] )
+  294:  	Call     SetCamSpeed 	( .Cam:Default *Fixed[0.5] )
+  2A8:  	Call     PanToTarget 	( .Cam:Default 00000000 00000001 )
+  2C0:  	Call     WaitForCam  	( .Cam:Default *Fixed[1.0] )
+  2D4:  	Set  *Var[0]  *MapVar[0] 
+  2E4:  	Call     $Function_80240F2C ( )
+  2F0:  EndThread
+  2F8:  Call     FadeOutMusic 	( 00000000 00000096 )
+  30C:  Call     ClearAmbientSounds ( 00000096 )
+  31C:  Wait     0000000A 
+  328:  Call     SetMusicTrack 	( 00000000 .Song:RecoveredStarRod 00000000 00000008 )
+  344:  Call     NpcJump0    	( 00000013 000000E6 00000012 00000000 00000019 )
+  364:  Call     NpcJump0    	( 00000013 000000BE 00000012 00000000 00000014 )
+  384:  Thread
+  38C:  	Wait     0000000A 
+  398:  	Call     SetPlayerAnimation 	( 0006000C )
+  3A8:  EndThread
+  3B0:  Call     NpcJump0    	( 00000013 00000096 0000003C 00000000 0000000F )
+  3D0:  Call     PlayEffect  	( ~FX:RadialFlowIn:GoldenRays 00000096 0000003C 00000000 00000001 0000014A 00000000 00000000 00000000 00000000 00000000 00000000 00000000 )
+  414:  Wait     00000136 
+  420:  Call     ShowMessageAtScreenPos 	( 001300AA 000000A0 00000028 ) %  You took back the Star Rod!
+  438:  Call     PlaySound   	( 0000022D )
+  448:  Call     RemoveNpc   	( 00000013 )
+  458:  Call     SetPlayerAnimation 	( .PlayerAnim:ThumbsUp )
+  468:  Call     GetCurrentPartnerID 	( *Var[0] )
+  478:  Switch  *Var[0] 
+  484:  	Case  ==  00000001 
+  490:  		Set  *Var[1]  00010009 
+  4A0:  	Case  ==  00000002 
+  4AC:  		Set  *Var[1]  00020010 
+  4BC:  	Case  ==  00000003 
+  4C8:  		Set  *Var[1]  0003000F 
+  4D8:  	Case  ==  00000004 
+  4E4:  		Set  *Var[1]  00040007 
+  4F4:  	Case  ==  00000009 
+  500:  		Set  *Var[1]  0005000A 
+  510:  	Case  ==  00000006 
+  51C:  		Set  *Var[1]  00060006 
+  52C:  	Case  ==  00000007 
+  538:  		Set  *Var[1]  00070006 
+  548:  	Case  ==  00000008 
+  554:  		Set  *Var[1]  0008000D 
+  564:  EndSwitch
+  56C:  Call     SetNpcAnimation 	( .Npc:Partner *Var[1] )
+  580:  Switch  *Var[0] 
+  58C:  	CaseOR  ==  00000007 
+  598:  	CaseOR  ==  00000009 
+  5A4:  		Wait     0000001E 
+  5B0:  	EndCaseGroup
+  5B8:  	Default
+  5C0:  		Loop     00000003 
+  5CC:  			Call     GetNpcPos   	( .Npc:Partner *Var[1] *Var[2] *Var[3] )
+  5E8:  			Call     NpcJump0    	( .Npc:Partner *Var[1] *Var[2] *Var[3] 0000000A )
+  608:  		EndLoop
+  610:  EndSwitch
+  618:  Call     SetNpcAnimation 	( .Npc:Partner 00000106 )
+  62C:  Wait     00000014 
+  638:  Call     SetPlayerAnimation 	( 00010002 )
+  648:  Wait     00000014 
+  654:  Call     SpeakToPlayer 	( 00000010 000C0000 000A0001 00000000 001300AB ) % Oh, Mario!
+  674:  Thread
+  67C:  	Call     SetNpcAnimation 	( 00000010 000A0002 )
+  690:  	Call     NpcMoveTo   	( 00000010 000000C8 00000000 00000055 )
+  6AC:  	Call     SetNpcAnimation 	( 00000010 000A0001 )
+  6C0:  EndThread
+  6C8:  Thread
+  6D0:  	Call     GetPlayerPos 	( *Var[0] *Var[1] *Var[2] )
+  6E8:  	Add  *Var[0]  00000019 
+  6F8:  	Call     UseSettingsFrom 	( .Cam:Default *Var[0] *Var[1] *Var[2] )
+  714:  	Call     SetPanTarget 	( .Cam:Default *Var[0] *Var[1] *Var[2] )
+  730:  	Call     SetCamDistance ( .Cam:Default 00000113 )
+  744:  	Call     SetCamPitch 	( .Cam:Default *Fixed[17.0] *Fixed[-9.5] )
+  75C:  	Call     SetCamSpeed 	( .Cam:Default *Fixed[1.2001953] )
+  770:  	Call     PanToTarget 	( .Cam:Default 00000000 00000001 )
+  788:  EndThread
+  790:  Call     NpcMoveTo   	( 00000012 000000E6 0000001E 00000055 )
+  7AC:  Wait     0000000A 
+  7B8:  Call     SpeakToPlayer 	( 00000010 000C0000 000A0001 00000000 001300AC ) % Mario... I knew you would save me. Thank you, Mari ...
+  7D8:  Wait     00000014 
+  7E4:  Call     PlaySound   	( 8000006B )
+  7F4:  Set  *MapVar[C]  00000001 
+  804:  Call     PlaySoundAtPlayer 	( 00000262 00000000 )
+  818:  Call     ShowEmote   	( 00000000 .Emote:Exclamation 00000000 00000014 00000000 00000000 00000000 00000000 00000000 )
+  848:  Call     PlaySoundAtNpc ( 00000010 00000262 00000000 )
+  860:  Call     ShowEmote   	( 00000010 .Emote:Exclamation 00000000 00000014 00000001 00000000 00000000 00000000 00000000 )
+  890:  Wait     00000014 
+  89C:  Call     InterpPlayerYaw 	( 0000010E 00000000 )
+  8B0:  Call     InterpNpcYaw 	( 00000010 0000005A 00000000 )
+  8C8:  Wait     0000000F 
+  8D4:  Call     InterpPlayerYaw 	( 0000005A 00000000 )
+  8E8:  Call     InterpNpcYaw 	( 00000010 0000010E 00000000 )
+  900:  Wait     0000000A 
+  90C:  Call     GetNpcPos   	( 0000000F *Var[0] *Var[1] *Var[2] )
+  928:  Call     UseSettingsFrom 	( .Cam:Default *Var[0] *Var[1] *Var[2] )
+  944:  Call     SetPanTarget 	( .Cam:Default *Var[0] *Var[1] *Var[2] )
+  960:  Call     SetCamSpeed 	( .Cam:Default *Fixed[90.0] )
+  974:  Call     SetCamPitch 	( .Cam:Default *Fixed[3.0] *Fixed[-1.5] )
+  98C:  Call     SetCamDistance ( .Cam:Default 000002EE )
+  9A0:  Call     PanToTarget 	( .Cam:Default 00000000 00000001 )
+  9B8:  Wait     00000028 
+  9C4:  Call     PlaySoundAt 	( 0000203C 00000000 000000DC FFFFFFD5 0000015E )
+  9E4:  Call     PlayEffect  	( ~FX:RingBlast:Red 000000DC FFFFFFD5 0000015E *Fixed[8.0] 00000028 00000000 00000000 00000000 00000000 00000000 00000000 00000000 )
+  A28:  Set  *MapVar[C]  00000002 
+  A38:  Wait     00000032 
+  A44:  Set  *MapVar[B]  0000000A 
+  A54:  Call     GetNpcPos   	( 0000000F *Var[0] *Var[1] *Var[2] )
+  A70:  Call     UseSettingsFrom 	( .Cam:Default *Var[0] *Var[1] *Var[2] )
+  A8C:  Call     SetPanTarget 	( .Cam:Default *Var[0] *Var[1] *Var[2] )
+  AA8:  Call     SetCamSpeed 	( .Cam:Default *Fixed[90.0] )
+  ABC:  Call     SetCamPitch 	( .Cam:Default *Fixed[17.0] *Fixed[-10.5] )
+  AD4:  Call     SetCamDistance ( .Cam:Default 0000012C )
+  AE8:  Call     PanToTarget 	( .Cam:Default 00000000 00000001 )
+  B00:  Call     SetNpcAnimation 	( 00000010 000C0006 )
+  B14:  Call     SetNpcAnimation 	( 00000012 0020000E )
+  B28:  Call     SetNpcAnimation 	( 0000000F 0080000D )
+  B3C:  Call     SetNpcJumpscale 	( 0000000F *Fixed[1.0] )
+  B50:  Call     NpcJump0    	( 0000000F 0000012C 00000000 00000028 00000014 )
+  B70:  Call     SetNpcAnimation 	( 0000000F 00800002 )
+  B84:  Call     SetNpcRotation ( 0000000F 00000000 00000000 00000000 )
+  BA0:  Wait     0000000A 
+  BAC:  Call     InterpNpcYaw 	( 0000000F 0000005A 00000000 )
+  BC4:  Wait     0000000A 
+  BD0:  Call     InterpNpcYaw 	( 0000000F 0000010E 00000000 )
+  BE8:  Wait     0000000A 
+  BF4:  Call     InterpNpcYaw 	( 0000000F 0000005A 00000000 )
+  C0C:  Wait     00000014 
+  C18:  Call     SpeakToPlayer 	( 0000000F 00800006 00800002 00000200 001300AD ) % Whuh? Huh? I'm awake! Huh? What's going on!? This  ...
+  C38:  Call     PlaySoundAt 	( 0000203C 00000000 00000172 FFFFFFF6 000000B4 )
+  C58:  Call     PlayEffect  	( ~FX:RingBlast:Red 00000172 FFFFFFF6 000000B4 *Fixed[6.0] 00000028 00000000 00000000 00000000 00000000 00000000 00000000 00000000 )
+  C9C:  Set  *MapVar[C]  00000003 
+  CAC:  Wait     00000014 
+  CB8:  Call     InterpNpcYaw 	( 00000010 0000005A 00000000 )
+  CD0:  Call     InterpNpcYaw 	( 00000012 0000005A 00000000 )
+  CE8:  Wait     0000001E 
+  CF4:  Call     GetNpcPos   	( 0000000F *Var[0] *Var[1] *Var[2] )
+  D10:  Call     UseSettingsFrom 	( .Cam:Default *Var[0] *Var[1] *Var[2] )
+  D2C:  Call     SetPanTarget 	( .Cam:Default *Var[0] *Var[1] *Var[2] )
+  D48:  Call     SetCamSpeed 	( .Cam:Default *Fixed[90.0] )
+  D5C:  Call     SetCamPitch 	( .Cam:Default *Fixed[6.0] *Fixed[5.0] )
+  D74:  Call     SetCamDistance ( .Cam:Default 0000044C )
+  D88:  Call     PanToTarget 	( .Cam:Default 00000000 00000001 )
+  DA0:  Thread
+  DA8:  	Wait     0000000A 
+  DB4:  	Call     SetNpcAnimation 	( 0000000F 00800004 )
+  DC8:  	Call     NpcMoveTo   	( 0000000F 000001C2 00000000 0000008C )
+  DE4:  	Call     SetNpcAnimation 	( 0000000F 00800002 )
+  DF8:  EndThread
+  E00:  Set  *MapVar[C]  00000004 
+  E10:  Wait     0000009B 
+  E1C:  Call     GetNpcPos   	( 0000000F *Var[0] *Var[1] *Var[2] )
+  E38:  Add  *Var[0]  00000032 
+  E48:  Call     UseSettingsFrom 	( .Cam:Default *Var[0] *Var[1] *Var[2] )
+  E64:  Call     SetPanTarget 	( .Cam:Default *Var[0] *Var[1] *Var[2] )
+  E80:  Call     SetCamSpeed 	( .Cam:Default *Fixed[90.0] )
+  E94:  Call     SetCamPitch 	( .Cam:Default *Fixed[17.0] *Fixed[-10.5] )
+  EAC:  Call     SetCamDistance ( .Cam:Default 0000015E )
+  EC0:  Call     PanToTarget 	( .Cam:Default 00000000 00000001 )
+  ED8:  Call     WaitForCam  	( .Cam:Default *Fixed[1.0] )
+  EEC:  Call     SpeakToNpc 	( 0000000F 00800006 00800002 00000200 00000011 001300AE ) % Yo! Kammy Koopa! What's with all the shaking?
+  F10:  Wait     00000005 
+  F1C:  Call     PlaySoundAt 	( 0000203C 00000000 0000015E 00000032 FFFFFF9C )
+  F3C:  Call     PlayEffect  	( ~FX:RingBlast:Red 0000015E 00000032 FFFFFF9C *Fixed[4.0] 00000014 00000000 00000000 00000000 00000000 00000000 00000000 00000000 )
+  F80:  Set  *MapVar[C]  00000005 
+  F90:  Wait     00000019 
+  F9C:  Call     SpeakToNpc 	( 00000011 00610006 00610004 00000200 0000000F 001300AF ) % Uh, your Kingship, the battle with Mario was so in ...
+  FC0:  Wait     0000000A 
+  FCC:  Thread
+  FD4:  	Call     SetNpcAnimation 	( 0000000F 0080000D )
+  FE8:  	Wait     00000014 
+  FF4:  	Call     SetNpcAnimation 	( 0000000F 00800002 )
+ 1008:  EndThread
+ 1010:  Thread
+ 1018:  	Call     PlaySoundAt 	( 0000203C 00000000 0000023A 00000000 00000064 )
+ 1038:  	Call     PlayEffect  	( ~FX:RingBlast:Red 0000023A 00000000 00000064 *Fixed[4.0] 00000014 00000000 00000000 00000000 00000000 00000000 00000000 00000000 )
+ 107C:  	Set  *MapVar[C]  00000006 
+ 108C:  EndThread
+ 1094:  Wait     0000001E 
+ 10A0:  Call     SpeakToNpc 	( 0000000F 00800006 00800002 00000200 00000011 001300B0 ) % What...? Are you... Really? That's...a big problem ...
+ 10C4:  Set  *MapVar[B]  FFFFFFFF 
+ 10D4:  Wait     00000014 
+ 10E0:  Call     StopSound ( 000003BC )
+ 10F0:  Call     PlaySoundAt 	( 00000230 00000000 000001F4 00000000 00000064 )
+ 1110:  Call     PlayEffect  	( ~FX:RingBlast:Red 000001F4 00000000 00000064 *Fixed[8.0] 0000005A 00000000 00000000 00000000 00000000 00000000 00000000 00000000 )
+ 1154:  Set  *MapVar[C]  00000007 
+ 1164:  Call     SetNpcAnimation 	( 0000000F 0080000D )
+ 1178:  Call     ShowMessageAtScreenPos 	( 001300B1 000000A0 00000028 ) % Aaahhh!!!! 
+ 1190:  Call     $Function_80240D30 ( )
+ 119C:  Call     TranslateGroup ( ~Model:Root FFFFFF38 00000000 00000000 )
+ 11B8:  Call     UpdateColliderTransform 	( ~Collider:o128 )
+ 11C8:  Call     GetPlayerPos 	( *Var[0] *Var[1] *Var[2] )
+ 11E0:  Add  *Var[0]  FFFFFF38 
+ 11F0:  Call     SetPlayerPos 	( *Var[0] *Var[1] *Var[2] )
+ 1208:  Call     GetNpcPos   	( 00000010 *Var[0] *Var[1] *Var[2] )
+ 1224:  Add  *Var[0]  FFFFFF38 
+ 1234:  Call     SetNpcPos   	( 00000010 *Var[0] *Var[1] *Var[2] )
+ 1250:  Call     GetNpcPos   	( 00000012 *Var[0] *Var[1] *Var[2] )
+ 126C:  Add  *Var[0]  FFFFFF38 
+ 127C:  Call     SetNpcPos   	( 00000012 *Var[0] *Var[1] *Var[2] )
+ 1298:  Set  *Var[0]  000001F4 
+ 12A8:  Set  *Var[1]  00000000 
+ 12B8:  Set  *Var[2]  00000000 
+ 12C8:  Call     UseSettingsFrom 	( .Cam:Default *Var[0] *Var[1] *Var[2] )
+ 12E4:  Call     SetPanTarget 	( .Cam:Default *Var[0] *Var[1] *Var[2] )
+ 1300:  Call     SetCamSpeed 	( .Cam:Default *Fixed[90.0] )
+ 1314:  Call     SetCamPitch 	( .Cam:Default *Fixed[0.0] *Fixed[-7.0] )
+ 132C:  Call     SetCamDistance ( .Cam:Default 0000044C )
+ 1340:  Call     PanToTarget 	( .Cam:Default 00000000 00000001 )
+ 1358:  Call     SetNpcAnimation 	( 0000000F 00800002 )
+ 136C:  Call     InterpNpcYaw 	( 00000011 0000005A 00000000 )
+ 1384:  Wait     00000005 
+ 1390:  Call     802CDE68 ( 0000000F 00000022 )
+ 13A4:  Call     802CDE68 ( 00000011 0000000C )
+ 13B8:  Wait     0000000A 
+		Set .BowserBeat 00000001
+ 13C4:  Thread
+ 13CC:  	Call     $Function_80240E54 ( )
+ 13D8:  EndThread
+ 13E0:  ExecWait $Script_8024AEA8 
+ 13EC:  Call     GotoMap     	( $ASCII_8024C718 00000005 )
+ 1400:  Wait     00000064 
+ 140C:  Return
+ 1414:  End
+}

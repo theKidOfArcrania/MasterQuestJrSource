@@ -1,0 +1,19 @@
+@  $Script_MakeEntities
+{
+    Call     MakeEntity  	( .Entity:BrickBlock ~Vec4d:Entity802425F0 80000000 )
+    Call     MakeEntity  	( .Entity:YellowBlock ~Vec4d:Entity80242614 .Item:Coin 80000000 )
+    Call     AssignBlockFlag 	( *GF_NOK11_ItemBlock_Coin )
+    Call     MakeEntity  	( .Entity:BrickBlock ~Vec4d:Entity8024264C 80000000 )
+    Call     MakeEntity  	( .Entity:RedBlock ~Vec4d:Entity80242670 .Item:DizzyAttack 80000000 )
+    Call     AssignBlockFlag 	( *GF_NOK11_BadgeBlock_DizzyAttack )
+    Call     MakeEntity  	( .Entity:BrickBlock ~Vec4d:Entity802426A8 80000000 )
+    Call     MakeEntity  	( .Entity:BrickBlock ~Vec4d:Entity802426CC 80000000 )
+    Call     MakeEntity  	( .Entity:YellowBlock ~Vec4d:Entity802426F0 .Item:FrightJar 80000000 )
+    Call     AssignBlockFlag 	( *GF_NOK11_ItemBlock_FrightJar )
+	Call     MakeEntity  	( .Entity:YellowBlock ~Vec4d:newbadge .Item:DeluxeFeast 80000000 )
+    Call     AssignBlockFlag 	( *Flag_NOK_37 )
+    Return
+    End
+}
+
+

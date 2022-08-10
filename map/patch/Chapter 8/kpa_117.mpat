@@ -1,0 +1,28 @@
+%This is being removed because for some odd reason the map got bugged and I'm too lazy to open up the map editor!
+
+/%
+@ $Script_Main_EnterWalk
+{
+    0:  Set  *WorldMapLocation  00000016 
+   10:  Call     SetSpriteShading 	( FFFFFFFF )
+   20:  Call     SetCamPerspective 	( .Cam:Default 00000003 00000019 00000010 00001000 )
+   40:  Call     SetCamBGColor 	( .Cam:Default 00000000 00000000 00000000 )
+   5C:  Call     SetCamLeadPlayer 	( .Cam:Default .False )
+   70:  Call     SetCamEnabled 	( .Cam:Default .True )
+   84:  ExecWait $Script_802400C0 
+   90:  Set  *Var[0]  $Script_8024012C 
+   A0:  Exec     EnterWalk 
+   AC:  Wait     00000001 
+   ExecWait $Script_MakeEntities 
+   B8:  Exec     $Script_80240050 
+   C4:  Return
+   CC:  End
+}
+   
+   #new:Script $Script_MakeEntities
+{
+   	Call     MakeItemEntity ( .Item:LifeShroom ~Vec3d:lifeshroom 00000011 *Flag_KPA_31 )
+   Return
+	End
+}
+	 

@@ -1,0 +1,73 @@
+
+@ $Script_Main_EnterWalk
+{
+    0:  Set      *WorldMapLocation 0000000A 
+   10:  Call     SetSpriteShading 	( FFFFFFFF )
+   20:  If       *StoryProgress ==  FFFFFFC1 
+   30:     Call     DisablePulseStone 	( .False )
+   40:  EndIf
+   48:  Call     SetCamPerspective 	( .Cam:Default 00000003 00000019 00000010 00001000 )
+   68:  Call     SetCamBGColor 	( .Cam:Default 00000000 00000000 00000000 )
+   84:  Call     SetCamEnabled 	( .Cam:Default .True )
+   98:  Call     SetCamLeadPlayer 	( .Cam:Default .False )
+		Exec     $Script_SandFlow
+		If  *Flag_ShortcutBlock2  ==  .False 
+			Call     MakeEntity  	( .Entity:Hammer2Block ~Vec4d:ShortcutBlock 80000000 )
+			Call     AssignScript 	( $Script_SmashBlock )
+		EndIf
+   AC:  Call     MakeNpcs    	( 00000000 $NpcGroupList_80240E88 )
+   C0:  Call     $Function_80240000 ( )
+   CC:  Call     SetMusicTrack 	( 00000000 .Song:DryDryDesert 00000000 00000008 )
+   E8:  Set      *Var[0] $Script_80240534 
+   F8:  Exec     EnterWalk 
+  104:  Exec     $Script_80241868 
+  110:  Return
+  118:  End
+}
+  
+#new:Script $Script_SmashBlock
+{
+	Set  *Flag_ShortcutBlock2  .True
+	Return
+	End
+}
+  
+#new:Script $Script_SandFlow
+{
+	Call     EnableTexPanning 	( ~Model:SandFlowA .True )
+	Call     EnableTexPanning 	( ~Model:SandFlowB .True )
+	Set      *Var[0] 00000000 
+	Loop     
+		Add      *Var[0] 100`  
+		Call     SetTexPanOffset ( 00000001 00000000 00000000 *Var[0] )
+		Wait     00000001 
+	EndLoop
+	Return
+	End
+}
+
+% Overwrite entity locations for the palm tree.
+
+@ $TreeDropList_Tree1
+{
+00000001 .Item:Coin ~Vec3d:Tree80241824_Drop0 0000000F *GameFlag[0346] 00000000 
+}
+
+@ $TriggerCoord_80241858
+{
+~Vec4f:80241858 
+}
+
+% Also overwrite NPC positions.
+
+@ $NpcGroup_80240AA8
+{
+[08] ~Vec3f:NPC_Bandit_00
+[E0] ~Vec3d:NPC_Bandit_00
+}
+
+@ $NpcGroup_80240C98
+{
+[08] ~Vec3f:NPC_Pokey_01
+[E0] ~Vec3d:NPC_Pokey_01
+}

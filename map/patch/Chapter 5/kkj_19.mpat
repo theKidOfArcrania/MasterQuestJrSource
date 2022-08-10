@@ -1,0 +1,17 @@
+
+% The correct time is 30 seconds = 900 frames.
+% The original time window ia 23-36 seconds (690-1080 frames).
+@ $Script_80243F14 { [18E0]
+ 18E0:  If       *Var[0] <=  690` % 28 seconds
+ 18F0:     Set      *AreaFlag[009] 00000001 
+ 1900:  EndIf
+ 1908:  If       *Var[0] >=  1080` % 32 seconds
+ 1918:     Set      *AreaFlag[009] 00000001 
+ 1928:  EndIf
+}
+
+@ $Script_80243F14 { [C00]
+  C00:  If       *Var[0] <=  50` 	% was 27`
+  C10:     Set      *AreaFlag[009] 00000001 
+  C20:  EndIf
+}

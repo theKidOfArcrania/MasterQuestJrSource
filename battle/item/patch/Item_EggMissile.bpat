@@ -1,0 +1,4 @@
+@ $Script_UseItem
+{
+  [2B4]  Call     ItemDamageEnemy 	( *Var[0] 18000200 00000000 *Var[0] 00000020 )
+}

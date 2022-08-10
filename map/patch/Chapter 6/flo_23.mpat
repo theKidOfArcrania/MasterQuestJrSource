@@ -1,0 +1,8 @@
+
+@ $NpcGroupList_80242568
+{
+00000001 $NpcGroup_80242188 180E0003 % changed from 0C -> 0E, this way it can be a unique battle
+00000001 $NpcGroup_80242378 180D0003 
+00000001 $NpcGroup_80241F98 00000000 
+00000000 00000000 00000000 
+}

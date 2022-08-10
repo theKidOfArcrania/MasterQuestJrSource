@@ -1,0 +1,9 @@
+@ $Script_MakeEntities
+{
+    0:  Call     MakeEntity  	( .Entity:RedBlock ~Vec4d:Entity80247970 .Item:DDownJump 80000000 )
+   28:  Call     AssignBlockFlag 	( *GF_JAN05_BadgeBlock_PowerQuake )
+   38:  Call     MakeEntity  	( .Entity:CymbalPlant ~Vec4d:Entity802479A8 80000000 )
+   5C:  Call     MakeEntity  	( .Entity:TrumpetPlant ~Vec4d:Entity802479CC 80000000 )
+   80:  Return
+   88:  End
+}

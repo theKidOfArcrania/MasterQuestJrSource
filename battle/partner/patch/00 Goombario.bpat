@@ -1,0 +1,150 @@
+
+#define .Ironbonk *GameByte[013]
+ 
+@ $Function_80238B60
+{
+[2C]  LTW	V0, V0 ($Global_ActorTattleTable)
+[38]  LIA	V1, $Global_ActorTattleTable
+}
+	
+@ $Function_80238BCC
+{
+[1CC]  LTB	V1, V0 ($Global_ActorOffsetsTable)
+[1EC]  LTB	V1, V0 ($Global_ActorOffsetsTable[1])
+[210]  LTB	A0, V0 ($Global_ActorOffsetsTable[2])
+}
+
+%charge cap
+
+/%
+@ $Function_80238E74
+[48]  SLTI  V0, V0, 5
+%/
+
+@ $Function_80238E74
+{
+[48]  SLTI      V0, V0, 5 % Sets charge cap to +6
+}
+
+@ $Function_80238EDC
+{
+[84]  ADDIU     V0, V0, 3 % Sets charge to +3
+}
+
+@ $Script_8023BB9C
+{
+ 0:  Call     LoadActionCommand   ( 00000001 )
+   10:  Call     802A9000 ( )
+   1C:  ExecWait $Script_8023A52C 
+   28:  ExecWait $Script_8023A66C 
+   34:  Call     SetAnimation   ( .Actor:Self 00000001 00090007 )
+   4C:  Call     SetActorDispOffset ( 00000100 00000000 00000012 00000000 )
+   68:  Wait     00000005 
+   74:  Call     SetActorDispOffset ( 00000100 00000000 00000013 00000000 )
+   90:  Wait     00000001 
+   9C:  Call     UseBattleCamPreset   ( 00000034 )
+   AC:  Call     802A9120 ( *Var[A] 00000003 )
+   C0:  Call     UseBattleCamPreset   ( 00000034 )
+   D0:  Call     SetAnimation   ( .Actor:Self 00000001 00090006 )
+   E8:  Call     SetActorDispOffset ( 00000100 00000000 00000009 00000000 )
+  104:  Call     SetGoalToTarget  ( .Actor:Partner )
+  114:  Call     SetJumpAnimations  ( .Actor:Partner 00000000 00090006 00090006 00090006 )
+  134:  Call     PlaySoundAtActor   ( .Actor:Partner 0000200D )
+  148:  Call     $Function_8023817C ( *Var[A] 00000000 )
+  15C:  Call     PartnerTestEnemy   ( *Var[0] 00000080 00000014 00000000 00000001 00000010 )
+  180:  If  *Var[0]  ==  00000006 
+  190:    Call     SetJumpAnimations  ( .Actor:Partner 00000000 00090006 00090006 00090006 )
+  1B0:    Call     $Function_80238A20 ( )
+  1BC:    Thread
+  1C4:      Call     ShakeCam     ( 00000001 00000000 00000005 *Fixed[1.0] )
+  1E0:    EndThread
+  1E8:    Call     PlaySoundAtActor   ( .Actor:Partner 00000162 )
+  1FC:    Wait     00000014 
+  208:    ExecWait $Script_80239CA8 
+  214:    Return
+  21C:  EndIf
+  224:  ChildThread
+  22C:    Call     SetActorScale  ( .Actor:Partner *Fixed[1.1005859] *Fixed[0.80078125] *Fixed[1.0] )
+  248:    Wait     00000001 
+  254:    Call     SetActorScale  ( .Actor:Partner *Fixed[1.3007812] *Fixed[0.5] *Fixed[1.0] )
+  270:    Wait     00000001 
+  27C:    Call     SetActorScale  ( .Actor:Partner *Fixed[1.0] *Fixed[1.0] *Fixed[1.0] )
+  298:  EndChildThread
+  2A0:  Wait     00000001 
+  2AC:  Call     GetActionCommandResult ( *Var[0] )
+  2BC:  Switch  *Var[0] 
+  2C8:    Case  >  00000000 
+            Thread
+              Call     GetItemPower   ( .Item:POWBlock *Var[3] *Var[4] )
+              Call     ApplyShrinkFromOwner ( *Var[3] )
+              Call     80269EAC ( 00000016 )
+              Call     GetActionCommandResult ( *Var[0] )
+              Call     $Function_802390B0 ( )
+              Add  *Var[3]  *Var[0]
+              Add  *Var[3]  00000001
+              Call     ItemDamageEnemy  ( *Var[0] 08000400 00000000 *Var[3] 00000050 ) %should fix crash when iron-bonking CK with clones out (maybe)
+            EndThread
+  314:    Default
+  31C:      Call     $Function_80239068 ( )
+  328:      Add  *Var[0]  00000001 
+  338:      Call     PartnerDamageEnemy   ( *Var[0] 08000400 00000000 00000000 00000001 00000050 )
+  35C:  EndSwitch
+  364:  Call     PlaySoundAtActor   ( .Actor:Partner 00000000 )
+  378:  Switch  *Var[0] 
+  384:    CaseOR  ==  00000000 
+  390:    CaseOR  ==  00000002 
+  39C:      ExecWait $Script_80239CA8 
+  3A8:      Return
+  3B0:    EndCaseGroup
+  3B8:    CaseOR  ==  00000001 
+  3C4:    CaseOR  ==  00000003 
+  3D0:    EndCaseGroup
+  3D8:  EndSwitch
+  3E0:  Thread
+  3E8:    Call     UseBattleCamPreset   ( 00000032 )
+  3F8:    Wait     00000005 
+  404:    Call     SetGoalToTarget  ( .Actor:Partner )
+  414:    Call     UseBattleCamPreset   ( 00000035 )
+  424:  EndThread
+  42C:  Call     80269524 ( *Var[F] )
+  43C:  Call     CloseActionCommandInfo ( )
+  448:  Call     LoadActionCommand  ( 00000001 )
+  458:  Call     802A9000 ( )
+  464:  Call     802694A4 ( 00000000 )
+  474:  Call     802A9120 ( 00000018 00000003 )
+  488:  Set  *Var[A]  00000018 
+  498:  Thread
+  4A0:    Wait     00000004 
+  4AC:    Set  *Var[0]  00000000 
+  4BC:    Loop     00000006 
+  4C8:      Add  *Var[0]  FFFFFFE2 
+  4D8:      Call     SetActorRotation   ( .Actor:Self 00000000 00000000 *Var[0] )
+  4F4:      Wait     00000001 
+  500:    EndLoop
+  508:  EndThread
+  510:  Call     SetGoalToTarget  ( .Actor:Partner )
+  520:  Call     SetJumpAnimations  ( .Actor:Partner 00000000 00090006 00090006 00090006 )
+  540:  Call     PlaySoundAtActor   ( .Actor:Partner 00000281 )
+  554:  Call     $Function_8023817C ( *Var[A] 00000003 )
+  568:  ChildThread
+  570:    Call     SetActorScale  ( .Actor:Partner *Fixed[1.1005859] *Fixed[0.80078125] *Fixed[1.0] )
+  58C:    Wait     00000001 
+  598:    Call     SetActorScale  ( .Actor:Partner *Fixed[1.3007812] *Fixed[0.5] *Fixed[1.0] )
+  5B4:    Wait     00000001 
+  5C0:    Call     SetActorScale  ( .Actor:Partner *Fixed[1.0] *Fixed[1.0] *Fixed[1.0] )
+  5DC:  EndChildThread
+  5E4:  Wait     00000001 
+              Call     GetItemPower   ( .Item:POWBlock *Var[3] *Var[4] )
+              Call     ApplyShrinkFromOwner ( *Var[3] )
+              Call     80269EAC ( 00000016 )
+              Call     $Function_80239068 ( )
+              Add  *Var[3]  *Var[0]
+              Add  *Var[3]  00000001
+              Call     ItemDamageEnemy  ( *Var[0] 08000400 00000000 *Var[3] 00000020 )
+  630:  Call     PlaySoundAtActor   ( .Actor:Partner 00000000 )
+  644:  Call     80269550 ( *Var[F] )
+  654:  ExecWait $Script_8023A06C 
+  660:  Return
+  668:  End
+}
+  

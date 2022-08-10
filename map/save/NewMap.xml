@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Map background="kpa_bg" textures="kpa_tex">
+	<ModelTree>
+		<Node name="Root" id="0"/>
+	</ModelTree>
+	<ColliderTree>
+		<Node name="Root" id="0"/>
+	</ColliderTree>
+	<ZoneTree>
+		<Node name="Root" id="0"/>
+	</ZoneTree>
+	<MarkerTree>
+		<Node name="Root" id="FFFFFFFF"/>
+	</MarkerTree>
+	<LightSets>
+		<LightSet name="Lights_None" a="0" b="0">
+		</LightSet>
+	</LightSets>
+	<Models>
+		<Model ver="2" type="ROOT" lightset="0">
+			<MapObject ver="1" name="Root" id="0"/>
+			<BoundingBox empty="true" min="0,0,0" max="0,0,0"/>
+			<PropertyList>
+			</PropertyList>
+		</Model>
+	</Models>
+	<Colliders>
+		<Collider ver="0" flags="0">
+			<MapObject ver="1" name="Root" id="0"/>
+			<HitObject type="ROOT"/>
+		</Collider>
+	</Colliders>
+	<Zones>
+		<Zone ver="0">
+			<MapObject ver="1" name="Root" id="0"/>
+			<HitObject type="ROOT"/>
+		</Zone>
+	</Zones>
+	<Markers>
+		<Marker ver="2" type="Root">
+			<MapObject ver="1" name="Root" id="FFFFFFFF"/>
+		</Marker>
+	</Markers>
+</Map>

@@ -1,0 +1,337 @@
+% HyperCleft Changes
+
+@ $HyperCleft
+{
+% stats
+[MaxHP]         5`b %hp boost
+}
+
+@ $DefenseTable_80220B40
+{
+.Element:Normal 00000002 %will only take 2 from superrank bomb, and nothing from pathetic hammer
+.Element:Fire   00000063 %FF is bad
+.Element:End
+}
+
+@ $DefenseTable_80220B54
+{
+.Element:Normal 00000001 %oh you flipped me? still cant kill with jump. Power Smash after the bomb still nets the kill, however.
+.Element:Fire   00000063
+.Element:End
+}
+
+@ $Script_80220DC0
+{
+  [914]  Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 00000000 00000000 00000000 00000000C 00000020 ) %supercharged hit- 14dmg May God have mercy on you if you have to eat this
+}
+
+@ $Script_80223310
+{
+  [658]  Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 00000000 00000000 00000000 00000004 00000020 ) %normal hit, gonna hurt
+}
+  
+% ====================================================
+% Hyper Goomba
+% + Increase base damage 1 -> 2
+% ====================================================
+
+@ $HyperGoomba
+{
+% stats
+[MaxHP]         7`b %superhp 
+}
+
+@ $Script_802189D4
+{
+[878]  Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 00000000 00000000 00000000 0000000A 00000020 ) %10 dmg. gonna hurt bunches
+}
+
+@ $Script_TakeTurn_8021A628
+{
+[9AC]	Call  EnemyDamageTarget  ( FFFFFF81 *Var[0] 00000000 00000000 00000000 00000003 00000020 )
+}
+
+% ====================================================
+% Hyper Paragoomba
+% + Increase base damage 1 -> 2
+% ====================================================
+
+@ $HyperParagoomba
+{
+% stats 
+[MaxHP]         7`b 
+}
+
+% Flying attacks
+@ $Script_TakeTurn_8021D1DC
+{
+[6B4]  Call     EnemyDamageTarget       	( FFFFFF81 *Var[0] 00000000 00000000 00000000 00000004 00000020 )
+}
+
+@ $Script_8021B678
+{
+[9E4]  Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 00000000 00000000 00000000 0000000A 00000020 )
+}
+  
+% Goomba attacks
+@ $Script_TakeTurn_8021FE6C
+{
+[9AC]	Call  EnemyDamageTarget  ( FFFFFF81 *Var[0] 00000000 00000000 00000000 00000003 00000020 )
+}
+
+@ $Script_8021E218
+{
+[878]  Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 00000000 00000000 00000000 0000000A 00000020 )
+}
+  
+
+% ====================================================
+% Tubba Blubba
+% + Increased max HP
+% + Attacks have a chance to inflict shrink
+% ====================================================
+
+@ $Script_Init_80225D98
+{
+    0:  Call     BindTakeTurn 	( .Actor:Self $Script_TakeTurn_802264AC )
+		Call     BindNextTurn 	( .Actor:Self $Script_NextTurn_Tubba )
+   14:  Call     BindIdle    	( .Actor:Self $Script_Idle_80225F58 )
+   28:  Call     BindHandleEvent 	( .Actor:Self $Script_HandleEvent_802260D0 )
+   3C:  Call     SetActorVar 	( .Actor:Self 00000008 00000000 )
+   54:  Exec     $Script_80225E08 
+   60:  Return
+   68:  End
+}
+
+	 #new:Script $Script_NextTurn_Tubba
+{
+	Call	GetBattlePhase ( *Var[0] )
+	If  *Var[0] ==  .Phase:EnemyEnd
+		Call	GetActorAttackBoost ( .Actor:Self *Var[0] )
+		If  *Var[0]  <  10
+			Call	PlaySoundAtActor	( .Actor:Self 000002D8 )
+			Call	8026BF48	( 00000001 )
+			Call	BoostAttack	( .Actor:Self 00000001 )
+			Call	8026BF48	( 00000000 )
+		EndIf
+		%
+	EndIf
+	Return
+	End
+}
+		
+@ $TubbaBlubba
+{
+[MaxHP]  10`b %40hp because not crazy enough
+[PowerBounce]  3`b 
+}
+
+@ $StatusTable_80225CA0
+{
+.Status:Normal      0`
+.Status:Default    0`
+.Status:Sleep       0`
+.Status:Poison      0`
+.Status:Frozen      0`
+.Status:Dizzy       0`
+.Status:Fear    0`
+.Status:Static      0`
+.Status:Paralyze    0`
+.Status:Shrink     100`
+.Status:Stop        0`
+.Status:DefaultTurnMod   0`
+.Status:SleepTurnMod      0`
+.Status:PoisonTurnMod     0`
+.Status:FrozenTurnMod     0`
+.Status:DizzyTurnMod      0`
+.Status:FearTurnMod   0`
+.Status:StaticTurnMod     0`
+.Status:ParalyzeTurnMod   0`
+.Status:ShrinkTurnMod     -1`
+.Status:StopTurnMod       0`
+.Status:End
+}
+
+@ $Script_80226558 % smash attack - 50% chance to shrink
+{
+[4F4]  Call     EnemyDamageTarget       	( FFFFFF81 *Var[F] 00000000 00000000 80080332 00000007 00000020 )
+}
+
+@ $Script_80226B88 % leap attack - 50% chance to shrink
+{
+[66C]  Call     EnemyDamageTarget       	( FFFFFF81 *Var[F] 00000000 00000000 80080332 0000000A 00000020 )
+}
+
+% TubbasHeart
+
+@ $TubbasHeart
+{
+% stats
+[MaxHP]        40`b %hp is now 40, other changes make this fight tougher!
+[PowerBounce]  3`b 
+}
+
+@ $StatusTable_80225CA0
+{
+.Status:Normal      0`
+.Status:Default    0`
+.Status:Sleep      0`
+.Status:Poison      0`
+.Status:Frozen      0`
+.Status:Dizzy      0`
+.Status:Fear    0`
+.Status:Static      0`
+.Status:Paralyze   0`
+.Status:Shrink    50`
+.Status:Stop       0`
+.Status:DefaultTurnMod   0`
+.Status:SleepTurnMod      0`
+.Status:PoisonTurnMod     0`
+.Status:FrozenTurnMod     0`
+.Status:DizzyTurnMod      0`
+.Status:FearTurnMod   0`
+.Status:StaticTurnMod     0`
+.Status:ParalyzeTurnMod   0`
+.Status:ShrinkTurnMod     0`
+.Status:StopTurnMod       0`
+.Status:End
+}
+
+@ $Script_80224B3C
+{
+[48C]  Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 00000000 00000000 80040164 00000004 00000020 ) % 100% chance to dizzy for 1 turn.
+}
+
+@ $Script_802255D8
+{
+[62C]  Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 10000000 00000000 00000000 00000012 00000020 )
+}
+
+% ====================================================
+% Formation Changes
+% ====================================================
+
+#import Bristle.bpat
+#import RedClubba.bpat
+
+@ $Formation_00
+{
+$HyperGoomba 		00000000 0000000A 00000000 00000000 00000000 00000000
+$HyperParagoomba 	00000005 00000009 00000000 00000000 00000000 00000000 % added
+$HyperCleft 		00000002 00000009 00000000 00000000 00000000 00000000
+}
+
+@ $Formation_06
+{
+$HyperParagoomba 	00000004 0000000A 00000000 00000000 00000000 00000000
+$HyperGoomba 		00000001 0000000A 00000000 00000000 00000000 00000000
+$HyperCleft 		00000002 00000009 00000000 00000000 00000000 00000000 % added
+}
+
+@ $Formation_0A
+{
+$HyperCleft 00000001 0000000A 00000000 00000000 00000000 00000000 
+$HyperCleft 00000002 00000009 00000000 00000000 00000000 00000000 % added
+$HyperParagoomba 00000007 00000008 00000000 00000000 00000000 00000000 % added
+}
+
+@ $Formation_0F
+{
+$RedClubba 00000001 0000000A 00000000 00000000 00000000 00000000 % added
+$TubbasHeart $Vector3D_802280C0 00000009 00000000 00000000 00000000 00000000
+$RedClubba 00000003 00000008 00000000 00000000 00000000 00000000 % added
+}
+
+#new:Formation $20sFormation5_11
+{
+$HyperGoomba 		00000000 0000000A 00000000 00000000 00000000 00000000
+$HyperParagoomba 	00000005 00000009 00000000 00000000 00000000 00000000 % added
+$HyperCleft 		00000003 00000008 00000000 00000000 00000000 00000000
+$HyperParagoomba 	00000006 00000007 00000000 00000000 00000000 00000000 % added
+}
+
+#new:Formation $20sFormation6_12
+{
+$HyperCleft      00000000 0000000A 00000000 00000000 00000000 00000000 
+$HyperCleft      00000001 00000009 00000000 00000000 00000000 00000000 
+$Bristle         00000002 00000008 00000000 00000000 00000000 00000000 % added
+$HyperParagoomba 00000007 00000007 00000000 00000000 00000000 00000000 % added
+}
+
+#new:Formation $20sFormation7_13
+{
+$HyperParagoomba 00000004 0000000A 00000000 00000000 00000000 00000000 
+$Bristle 		 00000001 00000009 00000000 00000000 00000000 00000000 
+$HyperParagoomba 00000006 00000008 00000000 00000000 00000000 00000000 % added
+}
+
+#new:Formation $20sFormation8_14
+{
+$HyperGoomba     00000000 0000000A 00000000 00000000 00000000 00000000 
+$HyperParagoomba 00000005 00000009 00000000 00000000 00000000 00000000 
+$RedClubba       00000002 00000008 00000000 00000000 00000000 00000000 % added
+$Bristle         00000003 00000007 00000000 00000000 00000000 00000000 % added
+}
+
+#new:Formation $20sFormation9_15
+{
+$HyperCleft 00000000 0000000A 00000000 00000000 00000000 00000000 
+$RedClubba 	00000001 00000009 00000000 00000000 00000000 00000000 % added
+$RedClubba 	00000002 00000008 00000000 00000000 00000000 00000000 % added
+$RedClubba  00000003 00000007 00000000 00000000 00000000 00000000 
+}
+
+@ $FormationTable
+{
+$SJIS_80228580 00000003 $Formation_00 $Stage_8022792C 00000000 
+$SJIS_8022856C 00000002 $Formation_01 $Stage_8022792C 00000000 
+$SJIS_80228558 00000003 $Formation_02 $Stage_8022792C 00000000 
+$SJIS_80228530 00000003 $Formation_03 $Stage_8022792C 00000000 
+$SJIS_80228508 00000004 $Formation_04 $Stage_8022792C 00000000 
+$SJIS_802284CC 00000004 $Formation_05 $Stage_8022792C 00000000 
+$SJIS_802284B4 00000003 $Formation_06 $Stage_8022792C 00000000 
+$SJIS_8022849C 00000002 $Formation_07 $Stage_8022792C 00000000 
+$SJIS_80228484 00000003 $Formation_08 $Stage_8022792C 00000000 
+$SJIS_8022846C 00000004 $Formation_09 $Stage_8022792C 00000000 
+$SJIS_80228458 00000003 $Formation_0A $Stage_8022792C 00000000 
+$SJIS_80228440 00000002 $Formation_0B $Stage_8022792C 00000000 
+$SJIS_80228428 00000003 $Formation_0C $Stage_8022792C 00000000 
+$SJIS_80228400 00000003 $Formation_0D $Stage_8022792C 00000000 
+$SJIS_802283D8 00000004 $Formation_0E $Stage_8022792C 00000000 
+$SJIS_802283C4 00000003 $Formation_0F $Stage_80227C38 00000000 
+$SJIS_802283B8 00000001 $Formation_10 $Stage_8022792C 00000000
+00000000 00000004 $20sFormation5_11 $AncientStage 00000000 %These formations are
+00000000 00000004 $20sFormation6_12 $AncientStage 00000000 
+00000000 00000003 $20sFormation7_13 $AncientStage 00000000 
+00000000 00000004 $20sFormation8_14 $AncientStage 00000000 
+00000000 00000004 $20sFormation9_15 $AncientStage 00000000 
+00000000 00000000 00000000 00000000 00000000 
+}
+
+#new:Stage $AncientStage
+{
+"kpa_tex"
+"kmr_bt07_shape"
+"kmr_bt07_hit"
+$Script_BeforeBoss 
+$Script_AfterBoss
+00000000 
+00000000
+00000000 
+00000000 
+00000000 
+}
+
+#new:Script $Script_BeforeBoss
+{
+	Call	SetSpriteShading 	( FFFFFFFF )
+	Call	SetCamBGColor 	( 00000001 00000000 00000000 00000000 )
+	Return
+	End
+}
+
+#new:Script $Script_AfterBoss
+{
+	Return
+	End 
+}

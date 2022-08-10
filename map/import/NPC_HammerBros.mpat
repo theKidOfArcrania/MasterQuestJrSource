@@ -1,0 +1,1530 @@
+
+#new:NpcGroup $NpcGroup_HammerBros
+{
+00000032 $NpcSettings_HammerBros 0.0 -1000.0 0.0
+00000C00 $Script_Init_Enemy 00000000 00000000 0000010E 
+~Items:5:SuperShroom:5:MapleSyrup:5
+~HP:20:70:4:50 ~HP:30:60:4:50 ~HP:50:50:4:40 ~HP:80:40:4:40 ~HP:100:30:4:30 ~HP:None ~HP:None ~HP:None 
+~FP:20:50:3:40 ~FP:30:40:3:40 ~FP:50:40:3:40 ~FP:80:40:3:40 ~FP:100:30:3:40 ~FP:None ~FP:None ~FP:None 
+~CoinBonus:0:3
+00000000 00000000 00000000 0000001E 00000000 FFFF8001 00000000 00000000 
+00000000 00000000 000000C8 00000000 00000000 00000001 00000000 00000000 
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+005A0002 005A0004 005A0007 005A0007 005A0002 005A0002 005A000E 005A000E 
+005A0018 005A0019 005A0002 005A0002 005A0002 005A0002 005A0002 005A0002 
+00000000 00000000 00000000 00000000 % no tattle string
+% 
+00000033 $NpcSettings_Hammers 0.0 -1000.0 0.0
+00800C00 00000000 00000000 00000000 0000005A 
+~NoItems ~NoHP ~NoFP ~NoCoinBonus
+00000000 00000000 00000000 00000000 00000000 FFFF8001 00000000 00000000 
+00000000 00000000 00000000 00000000 00000000 00000001 00000000 00000000 
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+005A000D 005A000D 005A000D 005A000D 005A000D 005A000D 005A000D 005A000D 
+005A000D 005A000D 005A000D 005A000D 005A000D 005A000D 005A000D 005A000D 
+00000000 00000000 $ExtraAnimations_Hammers 00000000 % no tattle string
+% 
+00000034 $NpcSettings_Hammers 0.0 -1000.0 0.0
+00800C00 00000000 00000000 00000000 0000005A 
+~NoItems ~NoHP ~NoFP ~NoCoinBonus
+00000000 00000000 00000000 00000000 00000000 FFFF8001 00000000 00000000 
+00000000 00000000 00000000 00000000 00000000 00000001 00000000 00000000 
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+005A000D 005A000D 005A000D 005A000D 005A000D 005A000D 005A000D 005A000D 
+005A000D 005A000D 005A000D 005A000D 005A000D 005A000D 005A000D 005A000D 
+00000000 00000000 $ExtraAnimations_Hammers 00000000 % no tattle string
+% 
+00000035 $NpcSettings_Hammers 0.0 -1000.0 0.0
+00800C00 00000000 00000000 00000000 0000005A 
+~NoItems ~NoHP ~NoFP ~NoCoinBonus
+00000000 00000000 00000000 00000000 00000000 FFFF8001 00000000 00000000 
+00000000 00000000 00000000 00000000 00000000 00000001 00000000 00000000 
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+005A000D 005A000D 005A000D 005A000D 005A000D 005A000D 005A000D 005A000D 
+005A000D 005A000D 005A000D 005A000D 005A000D 005A000D 005A000D 005A000D 
+00000000 00000000 $ExtraAnimations_Hammers 00000000 % no tattle string
+% 
+00000036 $NpcSettings_Hammers 0.0 -1000.0 0.0
+00800C00 00000000 00000000 00000000 0000005A 
+~NoItems ~NoHP ~NoFP ~NoCoinBonus
+00000000 00000000 00000000 00000000 00000000 FFFF8001 00000000 00000000 
+00000000 00000000 00000000 00000000 00000000 00000001 00000000 00000000 
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+005A000D 005A000D 005A000D 005A000D 005A000D 005A000D 005A000D 005A000D 
+005A000D 005A000D 005A000D 005A000D 005A000D 005A000D 005A000D 005A000D 
+00000000 00000000 $ExtraAnimations_Hammers 00000000 % no tattle string
+% 
+00000037 $NpcSettings_Hammers 0.0 -1000.0 0.0
+00800C00 00000000 00000000 00000000 0000005A 
+~NoItems ~NoHP ~NoFP ~NoCoinBonus
+00000000 00000000 00000000 00000000 00000000 FFFF8001 00000000 00000000 
+00000000 00000000 00000000 00000000 00000000 00000001 00000000 00000000 
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+005A000D 005A000D 005A000D 005A000D 005A000D 005A000D 005A000D 005A000D 
+005A000D 005A000D 005A000D 005A000D 005A000D 005A000D 005A000D 005A000D 
+00000000 00000000 $ExtraAnimations_Hammers 00000000 % no tattle string
+% 
+00000038 $NpcSettings_Hammers 0.0 -1000.0 0.0
+00800C00 00000000 00000000 00000000 0000005A 
+~NoItems ~NoHP ~NoFP ~NoCoinBonus
+00000000 00000000 00000000 00000000 00000000 FFFF8001 00000000 00000000 
+00000000 00000000 00000000 00000000 00000000 00000001 00000000 00000000 
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+005A000D 005A000D 005A000D 005A000D 005A000D 005A000D 005A000D 005A000D 
+005A000D 005A000D 005A000D 005A000D 005A000D 005A000D 005A000D 005A000D 
+00000000 00000000 $ExtraAnimations_Hammers 00000000 % no tattle string
+}
+
+#new:ExtraAnimationList $ExtraAnimations_Hammers
+{
+005A000D FFFFFFFF 
+}
+
+% ====================================================
+% Hammerbros Scripts
+% ====================================================	
+
+#new:NpcSettings $NpcSettings_HammerBros
+{
+00000000 00240018 00000000 00000000 $Script_NpcAI_HammerBros 80077F70 00000000 8007809C 
+00000000 00000000 001B0000 
+}
+
+#new:Script $Script_NpcAI_HammerBros
+{
+	Call     SetSelfVar 	( 00000000 00000046 )
+	Call     SetSelfVar 	( 00000001 00000003 )
+	Call     SetSelfVar 	( 00000002 00000003 )
+	Call     SetSelfVar 	( 00000003 00000006 )
+	Call     $Function_HammerBrosAI ( $AISettings_HammerBros )
+	Return
+	End
+}
+
+#new:AISettings $AISettings_HammerBros
+{
+    1.5 % move speed
+    30` % move time
+    30` % wait time
+  120.0 % alert radius
+   20.0
+    5`
+    3.0 % chase speed
+    90`
+    3`
+  140.0 % chase radius
+   20.0
+    0`
+}
+
+% ====================================================
+% Hammers Scripts
+% ====================================================	
+
+#new:NpcSettings $NpcSettings_Hammers
+{
+00000000 000C000C 00000000 00000000 $Script_NpcAI_Hammers $Script_Touch_Hammers 00000000 $Script_Defeat_Hammers 
+00000000 00000000 00000008 
+}
+	
+#new:Script $Script_NpcAI_Hammers
+{
+	Call     SetSelfVar 	( 00000000 00000000 )
+	Call     SetSelfVar 	( 00000001 00000003 )
+	Call     SetSelfVar 	( 00000002 00000014 )
+	Call     $Function_HammersAI ( $AISettings_Hammers )
+	Return
+	End
+}
+	
+#new:AISettings $AISettings_Hammers
+{
+    5.4 % move speed
+    0` % move time
+    0` % wait time
+   13.0 % alert radius
+    1.4
+    -1`
+    0.0 % chase speed
+    0`
+    0`
+    0.0 % chase radius
+    0.0
+    0`
+}
+
+#new:Script $Script_Touch_Hammers
+{
+	Call     $Function_80241524 ( )
+	If       *Var[0] ==  00000000 
+		Return
+	EndIf
+	Call     BindNpcAI	( .Npc:Self $Script_DoNothing )
+	Call     GetOwnerEncounterTrigger	( *Var[0] )
+	Switch   *Var[0] 
+		CaseOR   ==  00000004 
+		CaseOR   ==  00000003 
+			Call     SetSelfVar 	( 00000000 00000003 )
+			Call     $Function_80240DA8 ( )
+			If       *Var[0] ==  00000000 
+				Return
+			EndIf
+		EndCaseGroup
+		CaseOR   ==  00000002 
+		CaseOR   ==  00000006 
+			Call     SetSelfVar 	( 00000000 00000004 )
+			Call     GetNpcPos   	( .Npc:Self *Var[0] *Var[1] *Var[2] )
+			Call     PlayEffect  	( 00000007 00000002 *Var[0] *Var[1] *Var[2] 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 )
+			Call     SetNpcPos   	( .Npc:Self 00000000 FFFFFC18 00000000 )
+			Call     SetSelfVar 	( 00000000 00000000 )
+		EndCaseGroup
+		Default
+			Call     800457F8 ( )
+		EndCaseGroup
+	EndSwitch
+	Call     BindNpcAI   	( .Npc:Self $Script_NpcAI_Hammers )
+	Return
+	End
+}
+	
+#new:Script $Script_DoNothing
+{
+	Return
+	End
+}
+
+#new:Script $Script_Defeat_Hammers
+{
+	Call     GetBattleOutcome 	( *Var[0] )
+	Switch   *Var[0] 
+		Case     ==  00000000 
+			Call     SetSelfVar 	( 00000000 00000005 )
+			Call     RemoveNpc   	( .Npc:Self )
+		Case     ==  00000002 
+			Call     SetNpcPos   	( .Npc:Self 00000000 FFFFFC18 00000000 )
+			Call     80045900 ( 00000001 )
+		Case     ==  00000003 
+			Call     SetEnemyFlagBits 	( .Npc:Self 00000010 00000001 )
+			Call     RemoveNpc   	( .Npc:Self )
+	EndSwitch
+	Return
+	End
+}
+
+% ====================================================
+% Hammerbros Code
+% ====================================================	
+
+#new:Function $Function_80240310
+{
+	ADDIU     SP, SP, FFD0
+	SW        S1, 14 (SP)
+	DADDU     S1, A0, R0
+	LIA       A1, 800B1D80
+	SW        RA, 20 (SP)
+	SW        S3, 1C (SP)
+	SW        S2, 18 (SP)
+	SW        S0, 10 (SP)
+	SDC1      F20, 28 (SP)
+	LW        S3, 148 (S1)
+	LAH       V1, 8009A634
+	LW        S0, C (S1)
+	SLL       V0, V1, 2
+	ADDU      V0, V0, V1
+	SLL       V0, V0, 2
+	SUBU      V0, V0, V1
+	SLL       V1, V0, 3
+	ADDU      V0, V0, V1
+	SLL       V0, V0, 3
+	LH        A0, 8 (S3)
+	JAL       8003AAEC
+	ADDU      S2, V0, A1
+	DADDU     A0, S1, R0
+	LW        A1, 0 (S0)
+	JAL       ~Func:get_variable
+	DADDU     S0, V0, R0
+	DADDU     A0, S3, R0
+	LW        A2, 24 (V0)
+	LW        A3, 28 (V0)
+	JAL       800493EC
+	DADDU     A1, R0, R0
+	BEQ       V0, R0, .o1D0
+	ADDIU     V0, R0, FFFF
+	LWC1      F12, 6C (S2)
+	LWC1      F14, C (S0)
+	LIF       F20, 270.0
+	JAL       80029C28
+	NOP
+	JAL       80029B24
+	MOV.S     F12, F0
+	LAD       F2, $ConstDouble_80245B20
+	CVT.D.S   F0, F0
+	C.LT.D    F0, F2
+	NOP
+	BC1F      .oD0
+	NOP
+	LIF       F20, 90.0
+        .oD0
+	LIA       S1, 800F7B30
+	LWC1      F12, 38 (S0)
+	LW        V0, 0 (S1)
+	LWC1      F14, 40 (S0)
+	LW        A2, 28 (V0)
+	JAL       80029C80
+	LW        A3, 30 (V0)
+	MOV.S     F12, F20
+	JAL       80029C28
+	MOV.S     F14, F0
+	ABS.S     F0, F0
+	LAD       F2, $ConstDouble_80245B28
+	CVT.D.S   F0, F0
+	C.LT.D    F2, F0
+	NOP
+	BC1T      .o1D0
+	ADDIU     V0, R0, FFFF
+	LW        V0, 0 (S1)
+	LWC1      F0, 3C (S0)
+	LWC1      F2, 2C (V0)
+	LH        V0, A8 (S0)
+	SUB.S     F0, F0, F2
+	MTC1      V0, F2
+	NOP
+	CVT.D.W   F2, F2
+	ADD.D     F2, F2, F2
+	ABS.S     F0, F0
+	CVT.D.S   F0, F0
+	C.LE.D    F2, F0
+	NOP
+	BC1T      .o1D0
+	ADDIU     V0, R0, FFFF
+	LAB       V1, 8010EBB3
+	ADDIU     V0, R0, 9
+	BEQ       V1, V0, .o1CC
+	ADDIU     V0, R0, 7
+	BNE       V1, V0, .o184
+	ADDIU     V0, R0, FFFF
+	BEQ       R0, R0, .o1D0
+	NOP
+        .o17C
+	BEQ       R0, R0, .o1D0
+	DADDU     V0, S2, R0
+        .o184
+	LW        V0, 78 (S3)
+	BLEZ      V0, .o1CC
+	DADDU     S1, R0, R0
+        .o190
+	LH        V0, 8 (S3)
+	ADDU      V0, V0, S1
+	ADDIU     S2, V0, 1
+	JAL       8003ECE8
+	DADDU     A0, S2, R0
+	DADDU     A0, S2, R0
+	JAL       8003AAEC
+	DADDU     S0, V0, R0
+	LW        V0, 6C (S0)
+	BEQ       V0, R0, .o17C
+	ADDIU     S1, S1, 1
+	LW        V0, 78 (S3)
+	SLT       V0, S1, V0
+	BNE       V0, R0, .o190
+	NOP
+        .o1CC
+	ADDIU     V0, R0, FFFF
+        .o1D0
+	LW        RA, 20 (SP)
+	LW        S3, 1C (SP)
+	LW        S2, 18 (SP)
+	LW        S1, 14 (SP)
+	LW        S0, 10 (SP)
+	LDC1      F20, 28 (SP)
+	JR        RA
+	ADDIU     SP, SP, 30
+}
+
+#new:Function $Function_80240500
+{
+	ADDIU     SP, SP, FFB0
+	SW        S2, 38 (SP)
+	DADDU     S2, A0, R0
+	SW        S0, 30 (SP)
+	SW        RA, 3C (SP)
+	SW        S1, 34 (SP)
+	SDC1      F22, 48 (SP)
+	SDC1      F20, 40 (SP)
+	LW        S1, 148 (S2)
+	MTC1      A1, F20
+	LH        A0, 8 (S1)
+	MTC1      A2, F22
+	JAL       8003AAEC
+	DADDU     S0, A3, R0
+	DADDU     A0, S0, R0
+	DADDU     A1, S1, R0
+	ADDIU     V1, R0, 1
+	MFC1      A2, F20
+	MFC1      A3, F22
+	DADDU     S0, V0, R0
+	JAL       800490B4
+	SW        V1, 10 (SP)
+	BNE       V0, R0, .oD0
+	ADDIU     A0, R0, 2
+	DADDU     A1, S0, R0
+	DADDU     A2, R0, R0
+	LH        V1, A8 (S0)
+	LIF       F0, 1.0
+	LIF       F2, 2.0
+	LIF       F4, -20.0
+	ADDIU     V0, R0, F
+	SW        V0, 1C (SP)
+	MTC1      V1, F6
+	NOP
+	CVT.S.W   F6, F6
+	MFC1      A3, F6
+	ADDIU     V0, SP, 28
+	SW        V0, 20 (SP)
+	SWC1      F0, 10 (SP)
+	SWC1      F2, 14 (SP)
+	JAL       8006FE90
+	SWC1      F4, 18 (SP)
+	LW        V0, CC (S1)
+	LW        V1, 0 (V0)
+	ADDIU     V0, R0, 14
+	SH        V0, 8E (S0)
+	ADDIU     V0, R0, 21
+	BEQ       R0, R0, .o120
+	SW        V1, 28 (S0)
+        .oD0
+	JAL       $Function_80240310
+	DADDU     A0, S2, R0
+	DADDU     A0, V0, R0
+	ADDIU     V0, R0, FFFF
+	BEQ       A0, V0, .o124
+	NOP
+	JAL       8003ECE8
+	NOP
+	LW        V0, 6C (V0)
+	BNE       V0, R0, .o124
+	NOP
+	LH        V0, 8C (S0)
+	BNE       V0, R0, .o124
+	NOP
+	LW        V0, CC (S1)
+	LW        V0, 20 (V0)
+	SW        V0, 28 (S0)
+	LHU       V0, 72 (S1)
+	SH        V0, 8E (S0)
+	ADDIU     V0, R0, 1E
+        .o120
+	SW        V0, 70 (S2)
+        .o124
+	LW        RA, 3C (SP)
+	LW        S2, 38 (SP)
+	LW        S1, 34 (SP)
+	LW        S0, 30 (SP)
+	LDC1      F22, 48 (SP)
+	LDC1      F20, 40 (SP)
+	JR        RA
+	ADDIU     SP, SP, 50
+}
+
+#new:Function $Function_80240644
+{
+	ADDIU     SP, SP, FFC0
+	SW        S2, 38 (SP)
+	DADDU     S2, A0, R0
+	SW        RA, 3C (SP)
+	SW        S1, 34 (SP)
+	SW        S0, 30 (SP)
+	LW        S1, 148 (S2)
+	JAL       8003AAEC
+	LH        A0, 8 (S1)
+	DADDU     S0, V0, R0
+	LHU       V0, 8E (S0)
+	ADDIU     V0, V0, FFFF
+	SH        V0, 8E (S0)
+	SLL       V0, V0, 10
+	BGTZ      V0, .oE8
+	NOP
+	JAL       $Function_80240310
+	DADDU     A0, S2, R0
+	DADDU     A0, V0, R0
+	BGEZ      A0, .oB8
+	ADDIU     V0, R0, F
+	ADDIU     A0, R0, 2
+	LH        V1, A8 (S0)
+	SW        V0, 1C (SP)
+	ADDIU     V0, SP, 28
+	DADDU     A1, S0, R0
+	LIF       F0, 1.0
+	LIF       F2, 2.0
+	LIF       F4, -20.0
+	MTC1      V1, F6
+	NOP
+	CVT.S.W   F6, F6
+	MFC1      A3, F6
+	DADDU     A2, R0, R0
+	SW        V0, 20 (SP)
+	SWC1      F0, 10 (SP)
+	SWC1      F2, 14 (SP)
+	JAL       8006FE90
+	SWC1      F4, 18 (SP)
+	LW        V0, CC (S1)
+	LW        V0, 0 (V0)
+	BEQ       R0, R0, .oD8
+	SW        V0, 28 (S0)
+        .oB8
+	LW        V0, CC (S1)
+	LW        V0, 24 (V0)
+	JAL       8003ECE8
+	SW        V0, 28 (S0)
+	LH        A0, 8 (S1)
+	ADDIU     V1, R0, 1
+	SW        V1, 6C (V0)
+	SW        A0, 7C (V0)
+        .oD8
+	LHU       V0, 76 (S1)
+	SH        V0, 8E (S0)
+	ADDIU     V0, R0, 21
+	SW        V0, 70 (S2)
+        .oE8
+	LW        RA, 3C (SP)
+	LW        S2, 38 (SP)
+	LW        S1, 34 (SP)
+	LW        S0, 30 (SP)
+	JR        RA
+	ADDIU     SP, SP, 40
+}
+
+#new:Function $Function_80240744
+{
+	ADDIU     SP, SP, FFE0
+	SW        S1, 14 (SP)
+	DADDU     S1, A0, R0
+	SW        RA, 18 (SP)
+	SW        S0, 10 (SP)
+	LW        S0, 148 (S1)
+	JAL       8003AAEC
+	LH        A0, 8 (S0)
+	LHU       V1, 76 (S0)
+	SH        V1, 8E (V0)
+	ADDIU     V0, R0, 21
+	SW        V0, 70 (S1)
+	LW        RA, 18 (SP)
+	LW        S1, 14 (SP)
+	LW        S0, 10 (SP)
+	JR        RA
+	ADDIU     SP, SP, 20
+}
+
+#new:Function $Function_80240788
+{
+	ADDIU     SP, SP, FFD8
+	SW        S3, 1C (SP)
+	DADDU     S3, A0, R0
+	SW        RA, 20 (SP)
+	SW        S2, 18 (SP)
+	SW        S1, 14 (SP)
+	SW        S0, 10 (SP)
+	LW        S2, 148 (S3)
+	JAL       8003AAEC
+	LH        A0, 8 (S2)
+	LH        A0, 8 (S2)
+	DADDU     S1, V0, R0
+	JAL       8003ECE8
+	ADDIU     A0, A0, 1
+	DADDU     S0, V0, R0
+	JAL       8003AAEC
+	LH        A0, 8 (S0)
+	LWC1      F12, 38 (S1)
+	LWC1      F14, 40 (S1)
+	LW        A2, 38 (V0)
+	JAL       80029C80
+	LW        A3, 40 (V0)
+	SWC1      F0, C (S1)
+	LW        V0, 6C (S0)
+	BNE       V0, R0, .o84
+	NOP
+	LW        V0, CC (S2)
+	LW        V0, 0 (V0)
+	SW        V0, 28 (S1)
+	LHU       V0, 76 (S2)
+	SH        V0, 8E (S1)
+	ADDIU     V0, R0, 21
+	SW        V0, 70 (S3)
+        .o84
+	LW        RA, 20 (SP)
+	LW        S3, 1C (SP)
+	LW        S2, 18 (SP)
+	LW        S1, 14 (SP)
+	LW        S0, 10 (SP)
+	JR        RA
+	ADDIU     SP, SP, 28
+}
+
+#new:Function $Function_80240828
+{
+	ADDIU     SP, SP, FFE8
+	SW        S0, 10 (SP)
+	DADDU     S0, A0, R0
+	SW        RA, 14 (SP)
+	LW        V0, 148 (S0)
+	JAL       8003AAEC
+	LH        A0, 8 (V0)
+	LHU       V1, 8E (V0)
+	ADDIU     V1, V1, FFFF
+	SH        V1, 8E (V0)
+	SLL       V1, V1, 10
+	BLEZL     V1, .o34
+	SW        R0, 70 (S0)
+        .o34
+	LW        RA, 14 (SP)
+	LW        S0, 10 (SP)
+	JR        RA
+	ADDIU     SP, SP, 18
+}
+
+#new:Function $Function_HammerBrosAI
+{
+	ADDIU     SP, SP, FFB0
+	SW        S3, 3C (SP)
+	DADDU     S3, A0, R0
+	SW        RA, 48 (SP)
+	SW        S5, 44 (SP)
+	SW        S4, 40 (SP)
+	SW        S2, 38 (SP)
+	SW        S1, 34 (SP)
+	SW        S0, 30 (SP)
+	LW        S2, 148 (S3)
+	LH        A0, 8 (S2)
+	LW        S0, C (S3)
+	JAL       8003AAEC
+	DADDU     S1, A1, R0
+	DADDU     A0, S3, R0
+	LW        A1, 0 (S0)
+	JAL       ~Func:get_variable
+	DADDU     S4, V0, R0
+	SW        R0, 10 (SP)
+	LW        V1, D0 (S2)
+	LW        V1, 30 (V1)
+	SW        V1, 14 (SP)
+	LW        V1, D0 (S2)
+	LW        V1, 1C (V1)
+	SW        V1, 18 (SP)
+	LW        V1, D0 (S2)
+	LW        V1, 24 (V1)
+	SW        V1, 1C (SP)
+	LW        V1, D0 (S2)
+	LW        V1, 28 (V1)
+	ADDIU     S5, SP, 10
+	SW        V1, 20 (SP)
+	LW        V1, D0 (S2)
+	LIF       F0, 40.0
+	LW        V1, 2C (V1)
+	DADDU     S0, V0, R0
+	SWC1      F0, 28 (SP)
+	SH        R0, 2C (SP)
+	BNE       S1, R0, .oB4
+	SW        V1, 24 (SP)
+	LW        V0, B0 (S2)
+	ANDI      V0, V0, 4
+	BEQ       V0, R0, .o16C
+	NOP
+        .oB4
+	ADDIU     A0, R0, F7FF
+	SW        R0, 70 (S3)
+	SH        R0, 8E (S4)
+	LW        V0, CC (S2)
+	LW        V1, 0 (S4)
+	LW        V0, 0 (V0)
+	AND       V1, V1, A0
+	SW        V1, 0 (S4)
+	SW        V0, 28 (S4)
+	LW        V0, D0 (S2)
+	LW        V0, 34 (V0)
+	BNEL      V0, R0, .oF8
+	ADDIU     V0, R0, FDFF
+	ORI       V0, V1, 200
+	ADDIU     V1, R0, FFF7
+	BEQ       R0, R0, .o100
+	AND       V0, V0, V1
+        .oF8
+	AND       V0, V1, V0
+	ORI       V0, V0, 8
+        .o100
+	SW        V0, 0 (S4)
+	LW        V0, B0 (S2)
+	ANDI      V0, V0, 4
+	BEQ       V0, R0, .o130
+	ADDIU     V0, R0, 63
+	SW        V0, 70 (S3)
+	SW        R0, 74 (S3)
+	LW        V0, B0 (S2)
+	ADDIU     V1, R0, FFFB
+	AND       V0, V0, V1
+	BEQ       R0, R0, .o148
+	SW        V0, B0 (S2)
+        .o130
+	LW        V0, 0 (S2)
+	LUI       V1, 4000
+	AND       V0, V0, V1
+	BEQ       V0, R0, .o148
+	ADDIU     V0, R0, C
+	SW        V0, 70 (S3)
+        .o148
+	LIO       A1, BFFFFFFF
+	ADDIU     A0, R0, FFFB
+	LW        V0, B0 (S2)
+	LW        V1, 0 (S2)
+	AND       V0, V0, A0
+	AND       V1, V1, A1
+	SW        V0, B0 (S2)
+	SW        V1, 0 (S2)
+        .o16C
+	LW        V1, 70 (S3)
+	SLTIU     V0, V1, 64
+	BEQ       V0, R0, .o2F8
+	SLL       V0, V1, 2
+	LTW       V0, V0 ($JumpTable_80245B48)
+	JR        V0
+	NOP
+% LBL: from $JumpTable_80245B48 , entry 0`
+	DADDU     A0, S3, R0
+	DADDU     A1, S0, R0
+	JAL       800495A0
+	DADDU     A2, S5, R0
+% LBL: from $JumpTable_80245B48 , entry 1`
+	DADDU     A0, S3, R0
+	DADDU     A1, S0, R0
+	JAL       800496B8
+	DADDU     A2, S5, R0
+	BEQ       R0, R0, .o2F8
+	NOP
+% LBL: from $JumpTable_80245B48 , entry 2`
+	DADDU     A0, S3, R0
+	DADDU     A1, S0, R0
+	JAL       80049B44
+	DADDU     A2, S5, R0
+% LBL: from $JumpTable_80245B48 , entry 3`
+	DADDU     A0, S3, R0
+	DADDU     A1, S0, R0
+	JAL       80049C04
+	DADDU     A2, S5, R0
+	BEQ       R0, R0, .o2F8
+	NOP
+% LBL: from $JumpTable_80245B48 , entry 10`
+	DADDU     A0, S3, R0
+	DADDU     A1, S0, R0
+	JAL       80049E3C
+	DADDU     A2, S5, R0
+% LBL: from $JumpTable_80245B48 , entry 11`
+	DADDU     A0, S3, R0
+	DADDU     A1, S0, R0
+	JAL       80049ECC
+	DADDU     A2, S5, R0
+	BEQ       R0, R0, .o2F8
+	NOP
+% LBL: from $JumpTable_80245B48 , entry 12`
+	LAW       V0, 800F7B30
+	LWC1      F12, 38 (S4)
+	LWC1      F14, 40 (S4)
+	LW        A2, 28 (V0)
+	JAL       80029ED4
+	LW        A3, 30 (V0)
+	LW        V0, 6C (S2)
+	BEQ       V0, R0, .o24C
+	MOV.S     F2, F0
+	MTC1      V0, F0
+	NOP
+	CVT.S.W   F0, F0
+	C.LT.S    F0, F2
+	NOP
+	BC1F      .o274
+	DADDU     A0, S3, R0
+        .o24C
+	DADDU     A0, S3, R0
+	LW        A1, 24 (S0)
+	LW        A2, 28 (S0)
+	JAL       $Function_80240500
+	DADDU     A3, S5, R0
+	LW        V1, 70 (S3)
+	ADDIU     V0, R0, C
+	BNE       V1, V0, .o2F8
+	NOP
+	DADDU     A0, S3, R0
+        .o274
+	DADDU     A1, S0, R0
+	JAL       80049F7C
+	DADDU     A2, S5, R0
+% LBL: from $JumpTable_80245B48 , entry 13`
+	DADDU     A0, S3, R0
+	DADDU     A1, S0, R0
+	JAL       8004A124
+	DADDU     A2, S5, R0
+	BEQ       R0, R0, .o2F8
+	NOP
+% LBL: from $JumpTable_80245B48 , entry 14`
+	DADDU     A0, S3, R0
+	DADDU     A1, S0, R0
+	JAL       8004A3E8
+	DADDU     A2, S5, R0
+	BEQ       R0, R0, .o2F8
+	NOP
+% LBL: from $JumpTable_80245B48 , entry 30`
+	JAL       $Function_80240644
+	DADDU     A0, S3, R0
+	BEQ       R0, R0, .o2F8
+	NOP
+% LBL: from $JumpTable_80245B48 , entry 31`
+	JAL       $Function_80240744
+	DADDU     A0, S3, R0
+	BEQ       R0, R0, .o2F8
+	NOP
+% LBL: from $JumpTable_80245B48 , entry 32`
+	JAL       $Function_80240788
+	DADDU     A0, S3, R0
+	BEQ       R0, R0, .o2F8
+	NOP
+% LBL: from $JumpTable_80245B48 , entry 33`
+	JAL       $Function_80240828
+	DADDU     A0, S3, R0
+	BEQ       R0, R0, .o2F8
+	NOP
+% LBL: from $JumpTable_80245B48 , entry 99`
+	JAL       8004A73C
+	DADDU     A0, S3, R0
+% LBL: from $JumpTable_80245B48 , entry 98`
+        .o2F8
+	LW        RA, 48 (SP)
+	LW        S5, 44 (SP)
+	LW        S4, 40 (SP)
+	LW        S3, 3C (SP)
+	LW        S2, 38 (SP)
+	LW        S1, 34 (SP)
+	LW        S0, 30 (SP)
+	DADDU     V0, R0, R0
+	JR        RA
+	ADDIU     SP, SP, 50
+}
+	
+#new:ConstDouble $ConstDouble_80245B20
+{
+180.000000d
+}
+
+#new:ConstDouble $ConstDouble_80245B28
+{
+75.000000d
+}
+
+#new:JumpTable $JumpTable_80245B48
+{
+$Function_HammerBrosAI[190] $Function_HammerBrosAI[1A0] $Function_HammerBrosAI[1B8] $Function_HammerBrosAI[1C8] 
+$Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] 
+$Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] $Function_HammerBrosAI[1E0] $Function_HammerBrosAI[1F0] 
+$Function_HammerBrosAI[208] $Function_HammerBrosAI[280] $Function_HammerBrosAI[298] $Function_HammerBrosAI[2F8] 
+$Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] 
+$Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] 
+$Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] 
+$Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2B0] $Function_HammerBrosAI[2C0] 
+$Function_HammerBrosAI[2D0] $Function_HammerBrosAI[2E0] $Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] 
+$Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] 
+$Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] 
+$Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] 
+$Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] 
+$Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] 
+$Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] 
+$Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] 
+$Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] 
+$Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] 
+$Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] 
+$Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] 
+$Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] 
+$Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] 
+$Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] 
+$Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] 
+$Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F8] $Function_HammerBrosAI[2F0] 
+}
+	
+% ====================================================
+% Hammers Code
+% ====================================================	
+
+#new:Function $Function_HammersAI
+{
+	ADDIU     SP, SP, FFA8
+	SW        S7, 4C (SP)
+	DADDU     S7, A0, R0
+	SW        S1, 34 (SP)
+	DADDU     S1, A1, R0
+	SW        RA, 50 (SP)
+	SW        S6, 48 (SP)
+	SW        S5, 44 (SP)
+	SW        S4, 40 (SP)
+	SW        S3, 3C (SP)
+	SW        S2, 38 (SP)
+	SW        S0, 30 (SP)
+	LW        S3, 148 (S7)
+	LH        A0, 8 (S3)
+	LW        S0, C (S7)
+	JAL       8003ED68
+	DADDU     S6, R0, R0
+	BEQ       V0, R0, .o50C
+	ADDIU     V0, R0, 5
+	LW        V1, 6C (S3)
+	BEQ       V1, V0, .o510
+	DADDU     V0, R0, R0
+	LW        A1, 0 (S0)
+	JAL       ~Func:get_variable
+	DADDU     A0, S7, R0
+	LH        A0, 8 (S3)
+	JAL       8003AAEC
+	DADDU     S5, V0, R0
+	LW        V1, 70 (S3)
+	ANDI      V1, V1, 2
+	BEQ       V1, R0, .o9C
+	DADDU     S2, V0, R0
+	LHU       V0, A8 (S2)
+	SLL       V0, V0, 10
+	SRA       V1, V0, 10
+	SRL       V0, V0, 1F
+	ADDU      V1, V1, V0
+	SRA       V1, V1, 1
+	SB        V1, AB (S2)
+        .o9C
+	BNE       S1, R0, .oB4
+	LUI       V1, 4
+	LW        V0, B0 (S3)
+	ANDI      V0, V0, 4
+	BEQ       V0, R0, .o114
+	NOP
+        .oB4
+	ORI       V1, V1, 102
+	SW        R0, 70 (S7)
+	LW        V0, 0 (S2)
+	DADDU     A0, S2, R0
+	SH        R0, 8E (S2)
+	OR        V0, V0, V1
+	JAL       8003ABFC
+	SW        V0, 0 (S2)
+	LUI       A0, 1F30
+	LW        V0, 0 (S2)
+	ADDIU     V1, R0, F7FF
+	AND       V0, V0, V1
+	SW        V0, 0 (S2)
+	LW        V0, 0 (S3)
+	LW        V1, B0 (S3)
+	ORI       A0, A0, 40
+	SW        R0, 6C (S3)
+	OR        V0, V0, A0
+	SW        V0, 0 (S3)
+	ANDI      V0, V1, 4
+	BEQ       V0, R0, .o114
+	ADDIU     V0, R0, FFFB
+	AND       V0, V1, V0
+	SW        V0, B0 (S3)
+        .o114
+	LW        V1, 70 (S7)
+	ADDIU     S0, R0, 1
+	BEQ       V1, S0, .o168
+	SLTI      V0, V1, 2
+	BEQ       V0, R0, .o13C
+	ADDIU     V0, R0, 2
+	BEQ       V1, R0, .o14C
+	DADDU     V0, R0, R0
+	BEQ       R0, R0, .o510
+	NOP
+        .o13C
+	BEQ       V1, V0, .o2AC
+	DADDU     V0, R0, R0
+	BEQ       R0, R0, .o510
+	NOP
+        .o14C
+	LW        V0, 0 (S2)
+	DADDU     A0, S2, R0
+	ORI       V0, V0, 2
+	JAL       8003ABFC
+	SW        V0, 0 (S2)
+	SW        R0, 6C (S3)
+	SW        S0, 70 (S7)
+        .o168
+	LW        S4, 6C (S3)
+	ADDIU     V0, R0, 1
+	BNE       S4, V0, .o510
+	DADDU     V0, R0, R0
+	LW        A0, 7C (S3)
+	ADDIU     S1, R0, 2
+	JAL       8003AAEC
+	SW        S1, 6C (S3)
+	DADDU     S0, V0, R0
+	LWC1      F0, 38 (S0)
+	SWC1      F0, 38 (S2)
+	LWC1      F0, 40 (S0)
+	SWC1      F0, 40 (S2)
+	LWC1      F2, 34 (S0)
+	LIF       F0, 270.0
+	ADDIU     A0, S2, 38
+	SUB.S     F0, F0, F2
+	LWC1      F8, 78 (S3)
+	CVT.S.W   F8, F8
+	MFC1      A2, F8
+	MFC1      A3, F0
+	JAL       80029F9C
+	ADDIU     A1, S2, 40
+	LWC1      F0, 3C (S0)
+	LWC1      F2, 74 (S3)
+	CVT.S.W   F2, F2
+	ADD.S     F0, F0, F2
+	SWC1      F0, 3C (S2)
+	SB        S4, 7 (S3)
+	LWC1      F0, 38 (S2)
+	TRUNC.W.S F8, F0
+	MFC1      V0, F8
+	NOP
+	SH        V0, 10 (S3)
+	LWC1      F0, 3C (S2)
+	TRUNC.W.S F8, F0
+	MFC1      V0, F8
+	NOP
+	SH        V0, 12 (S3)
+	LWC1      F0, 40 (S2)
+	TRUNC.W.S F8, F0
+	MFC1      V0, F8
+	NOP
+	SH        V0, 14 (S3)
+	SW        R0, 44 (S2)
+	SW        R0, 48 (S2)
+	SW        R0, 4C (S2)
+	LWC1      F0, 0 (S5)
+	LAW       V0, 800F7B30
+	LWC1      F12, 38 (S2)
+	LWC1      F14, 40 (S2)
+	SWC1      F0, 18 (S2)
+	LW        A2, 28 (V0)
+	JAL       80029C80
+	LW        A3, 30 (V0)
+	SWC1      F0, C (S2)
+	LWC1      F0, C (S5)
+	LW        V0, 0 (S2)
+	DADDU     A0, S2, R0
+	SWC1      F0, 1C (S2)
+	LWC1      F0, 10 (S5)
+	ADDIU     V1, R0, FFFD
+	SWC1      F0, 14 (S2)
+	LWC1      F0, 3C (S0)
+	AND       V0, V0, V1
+	SW        V0, 0 (S2)
+	JAL       8003ABA0
+	SWC1      F0, 64 (S2)
+	LW        V0, 0 (S2)
+	LUI       V1, E0FF
+	ORI       V0, V0, 800
+	SW        V0, 0 (S2)
+	LW        V0, 0 (S3)
+	ORI       V1, V1, FFFF
+	AND       V0, V0, V1
+	SW        V0, 0 (S3)
+	ADDIU     V0, R0, 5A
+	SH        V0, 8E (S2)
+	SW        S1, 70 (S7)
+        .o2AC
+	DADDU     A0, R0, R0
+	ADDIU     S0, SP, 20
+	LH        V0, A8 (S2)
+	LIF       F1, 1.75
+	MTC1      R0, F0
+	MTC1      V0, F2
+	NOP
+	CVT.D.W   F2, F2
+	MUL.D     F2, F2, F0
+	NOP
+	DADDU     A1, S0, R0
+	LWC1      F4, 38 (S2)
+	LWC1      F0, 3C (S2)
+	ADDIU     S1, SP, 24
+	SWC1      F4, 20 (SP)
+	LWC1      F4, 40 (S2)
+	CVT.D.S   F0, F0
+	ADD.D     F0, F0, F2
+	SWC1      F4, 28 (SP)
+	LWC1      F2, 18 (S2)
+	CVT.S.D   F0, F0
+	SWC1      F0, 24 (SP)
+	SWC1      F2, 10 (SP)
+	LWC1      F0, C (S2)
+	DADDU     A2, S1, R0
+	SWC1      F0, 14 (SP)
+	LH        V0, A6 (S2)
+	ADDIU     S4, SP, 28
+	MTC1      V0, F0
+	NOP
+	CVT.S.W   F0, F0
+	SWC1      F0, 18 (SP)
+	LH        V0, A8 (S2)
+	DADDU     A3, S4, R0
+	MTC1      V0, F0
+	NOP
+	CVT.S.W   F0, F0
+	JAL       800DDAE4
+	SWC1      F0, 1C (SP)
+	BNEL      V0, R0, .o354
+	ADDIU     S6, R0, 1
+        .o354
+	DADDU     A1, S0, R0
+	DADDU     A2, S1, R0
+	LWC1      F0, 38 (S2)
+	LWC1      F2, 3C (S2)
+	LWC1      F4, 40 (S2)
+	LIF       F6, 1000.0
+	ADDIU     V0, SP, 2C
+	SWC1      F0, 20 (SP)
+	SWC1      F2, 24 (SP)
+	SWC1      F4, 28 (SP)
+	SWC1      F6, 2C (SP)
+	SW        V0, 10 (SP)
+	LW        A0, 80 (S2)
+	JAL       800DCB7C
+	DADDU     A3, S4, R0
+	BEQ       V0, R0, .o3FC
+	NOP
+	LWC1      F0, 1C (S2)
+	LWC1      F2, 2C (SP)
+	ABS.S     F0, F0
+	C.LT.S    F2, F0
+	NOP
+	BC1F      .o3FC
+	NOP
+	LWC1      F4, 24 (SP)
+	LWC1      F0, 64 (S2)
+	SUB.S     F0, F4, F0
+	LIF       F3, 2.8125
+	MTC1      R0, F2
+	ABS.S     F0, F0
+	CVT.D.S   F0, F0
+	C.LT.D    F0, F2
+	NOP
+	BC1F      .o3FC
+	DADDU     A0, S2, R0
+	LW        A1, 18 (S2)
+	LW        A2, C (S2)
+	ADDIU     S6, R0, A
+	JAL       8003AA54
+	SWC1      F4, 3C (S2)
+        .o3FC
+	LWC1      F0, 2C (SP)
+	LIF       F3, 1.875
+	MTC1      R0, F2
+	CVT.D.S   F0, F0
+	C.LT.D    F0, F2
+	NOP
+	BC1TL     .o420
+	ADDIU     S6, R0, B
+        .o420
+	LHU       V0, 8E (S2)
+	ADDIU     V0, V0, FFFF
+	SH        V0, 8E (S2)
+	SLL       V0, V0, 10
+	BLEZL     V0, .o438
+	ADDIU     S6, R0, 14
+        .o438
+	BNEL      S6, R0, .o4A0
+	SW        R0, 10 (SP)
+	LW        V0, 70 (S3)
+	ANDI      V0, V0, 1
+	BEQ       V0, R0, .o470
+	NOP
+	LWC1      F0, 4C (S2)
+	LIF       F3, 3.0625
+	MTC1      R0, F2
+	CVT.D.S   F0, F0
+	ADD.D     F0, F0, F2
+	CVT.S.D   F0, F0
+	SWC1      F0, 4C (S2)
+        .o470
+	LW        A1, 18 (S2)
+	LW        A2, C (S2)
+	JAL       8003AA54
+	DADDU     A0, S2, R0
+	LWC1      F4, 3C (S2)
+	LWC1      F0, 1C (S2)
+	ADD.S     F4, F4, F0
+	LWC1      F2, 14 (S2)
+	SUB.S     F0, F0, F2
+	SWC1      F4, 3C (S2)
+	BEQ       R0, R0, .o50C
+	SWC1      F0, 1C (S2)
+        .o4A0
+	SW        R0, 14 (SP)
+	LW        A1, 38 (S2)
+	LW        A2, 3C (S2)
+	LW        A3, 40 (S2)
+	JAL       8006FB30
+	ADDIU     A0, R0, 2
+	LIF       F0, -1000.0
+	SW        R0, 6C (S3)
+	LW        V0, 0 (S2)
+	DADDU     A0, S2, R0
+	SW        R0, 38 (S2)
+	SW        R0, 40 (S2)
+	SW        R0, 1C (S2)
+	ORI       V0, V0, 2
+	SWC1      F0, 3C (S2)
+	JAL       8003ABFC
+	SW        V0, 0 (S2)
+	LW        V0, 0 (S2)
+	ADDIU     V1, R0, F7FF
+	AND       V0, V0, V1
+	SW        V0, 0 (S2)
+	LW        V0, 0 (S3)
+	LUI       V1, 1F00
+	OR        V0, V0, V1
+	SW        V0, 0 (S3)
+	SW        R0, 70 (S7)
+        .o50C
+	DADDU     V0, R0, R0
+        .o510
+	LW        RA, 50 (SP)
+	LW        S7, 4C (SP)
+	LW        S6, 48 (SP)
+	LW        S5, 44 (SP)
+	LW        S4, 40 (SP)
+	LW        S3, 3C (SP)
+	LW        S2, 38 (SP)
+	LW        S1, 34 (SP)
+	LW        S0, 30 (SP)
+	JR        RA
+	ADDIU     SP, SP, 58
+}
+
+#new:Function $Function_80240DA8
+{
+	ADDIU     SP, SP, FFA0
+	SW        S3, 3C (SP)
+	DADDU     S3, A0, R0
+	SW        S4, 40 (SP)
+	DADDU     S4, R0, R0
+	LAH       V1, 8009A634
+	LIA       A0, 800B1D80
+	SW        RA, 44 (SP)
+	SW        S2, 38 (SP)
+	SW        S1, 34 (SP)
+	SW        S0, 30 (SP)
+	SDC1      F24, 58 (SP)
+	SDC1      F22, 50 (SP)
+	SDC1      F20, 48 (SP)
+	LW        S1, 148 (S3)
+	SLL       V0, V1, 2
+	ADDU      V0, V0, V1
+	SLL       V0, V0, 2
+	SUBU      V0, V0, V1
+	SLL       V1, V0, 3
+	ADDU      V0, V0, V1
+	SLL       V0, V0, 3
+	BEQ       A1, R0, .o6C
+	ADDU      S2, V0, A0
+	SW        R0, 70 (S3)
+        .o6C
+	JAL       8003ED68
+	LH        A0, 8 (S1)
+	BNE       V0, R0, .o90
+	ADDIU     V0, R0, 5
+	DADDU     A0, S3, R0
+	LIO       A1, *Var[0]
+	BEQ       R0, R0, .o3F0
+	DADDU     A2, R0, R0
+        .o90
+	LW        V1, 6C (S1)
+	BNE       V1, V0, .oAC
+	DADDU     A0, S3, R0
+	LIO       A1, *Var[0]
+	BEQ       R0, R0, .o3F0
+	DADDU     A2, R0, R0
+        .oAC
+	LH        A0, 8 (S1)
+	JAL       8003ED68
+	NOP
+	BNE       V0, R0, .oD0
+	DADDU     A0, S3, R0
+	LIO       A1, *Var[0]
+	BEQ       R0, R0, .o3F0
+	DADDU     A2, R0, R0
+        .oD0
+	LH        A0, 8 (S1)
+	JAL       8003AAEC
+	NOP
+	LW        V1, 70 (S3)
+	BEQ       V1, R0, .oFC
+	DADDU     S0, V0, R0
+	ADDIU     V0, R0, 1
+	BEQ       V1, V0, .o1EC
+	DADDU     V0, R0, R0
+	BEQ       R0, R0, .o430
+	NOP
+        .oFC
+	SW        R0, 10 (SP)
+	SW        R0, 14 (SP)
+	LW        A1, 38 (S0)
+	LW        A2, 3C (S0)
+	LW        A3, 40 (S0)
+	JAL       8006FB30
+	ADDIU     A0, R0, 2
+	LWC1      F12, 6C (S2)
+	JAL       80029B24
+	NOP
+	LAD       F24, $ConstDouble_80245B30
+	CVT.D.S   F20, F0
+	ADD.D     F12, F20, F24
+	LAD       F22, $ConstDouble_80245B38
+	JAL       80029B24
+	CVT.S.D   F12, F12
+	ADD.D     F20, F20, F22
+	CVT.S.D   F12, F20
+	JAL       80029B24
+	MOV.S     F20, F0
+	CVT.D.S   F20, F20
+	ADD.D     F20, F20, F22
+	MOV.S     F22, F0
+	JAL       80029B24
+	CVT.S.D   F12, F20
+	LAW       V0, 800F7B30
+	LWC1      F12, 6C (S2)
+	LWC1      F14, 84 (V0)
+	JAL       80029C28
+	MOV.S     F20, F0
+	JAL       80029B24
+	MOV.S     F12, F0
+	CVT.D.S   F0, F0
+	C.LT.D    F0, F24
+	NOP
+	BC1FL     .o1A0
+	SWC1      F20, C (S0)
+	SWC1      F22, C (S0)
+        .o1A0
+	LWC1      F0, 18 (S0)
+	LAD       F2, $ConstDouble_80245B40
+	CVT.D.S   F0, F0
+	MUL.D     F0, F0, F2
+	NOP
+	LIO       AT, 3F666666
+	MTC1      AT, F4
+	ADDIU     V0, R0, 1E
+	SH        V0, 8E (S0)
+	LIF       F2, 10.0
+	ADDIU     V0, R0, 1
+	SWC1      F4, 14 (S0)
+	SWC1      F2, 1C (S0)
+	CVT.S.D   F0, F0
+	SWC1      F0, 18 (S0)
+	SW        V0, 70 (S3)
+        .o1EC
+	LWC1      F0, 38 (S0)
+	LWC1      F2, 3C (S0)
+	LWC1      F4, 40 (S0)
+	LWC1      F6, 18 (S0)
+	DADDU     A0, R0, R0
+	SWC1      F0, 20 (SP)
+	SWC1      F2, 24 (SP)
+	SWC1      F4, 28 (SP)
+	SWC1      F6, 10 (SP)
+	LWC1      F0, C (S0)
+	ADDIU     A1, SP, 20
+	SWC1      F0, 14 (SP)
+	LH        V0, A6 (S0)
+	ADDIU     A2, SP, 24
+	MTC1      V0, F0
+	NOP
+	CVT.S.W   F0, F0
+	SWC1      F0, 18 (SP)
+	LH        V0, A8 (S0)
+	ADDIU     A3, SP, 28
+	MTC1      V0, F0
+	NOP
+	CVT.S.W   F0, F0
+	JAL       800DDC44
+	SWC1      F0, 1C (SP)
+	BNEL      V0, R0, .o270
+	ADDIU     S4, R0, 1
+	LW        A1, 18 (S0)
+	LW        A2, C (S0)
+	JAL       8003AA54
+	DADDU     A0, S0, R0
+	BEQ       R0, R0, .o274
+	DADDU     S2, R0, R0
+        .o270
+	DADDU     S2, R0, R0
+        .o274
+	LWC1      F0, 1C (S0)
+	MTC1      R0, F2
+	MTC1      R0, F3
+	CVT.D.S   F0, F0
+	C.LT.D    F0, F2
+	NOP
+	BC1F      .o330
+	ADDIU     A1, SP, 20
+	ADDIU     A2, SP, 24
+	ADDIU     V0, SP, 2C
+	LWC1      F2, 3C (S0)
+	LWC1      F6, 38 (S0)
+	LIF       F21, 2.65625
+	MTC1      R0, F20
+	CVT.D.S   F2, F2
+	ADD.D     F2, F2, F20
+	LWC1      F0, 1C (S0)
+	LWC1      F4, 40 (S0)
+	ABS.S     F0, F0
+	SWC1      F4, 28 (SP)
+	LIF       F5, 2.75
+	MTC1      R0, F4
+	CVT.D.S   F0, F0
+	SWC1      F6, 20 (SP)
+	ADD.D     F0, F0, F4
+	CVT.S.D   F2, F2
+	SWC1      F2, 24 (SP)
+	CVT.S.D   F0, F0
+	SWC1      F0, 2C (SP)
+	SW        V0, 10 (SP)
+	LW        A0, 80 (S0)
+	JAL       800DCB7C
+	ADDIU     A3, SP, 28
+	BEQ       V0, R0, .o330
+	NOP
+	LWC1      F0, 1C (S0)
+	LWC1      F2, 2C (SP)
+	ABS.S     F0, F0
+	CVT.D.S   F0, F0
+	ADD.D     F0, F0, F20
+	CVT.D.S   F2, F2
+	C.LE.D    F2, F0
+	NOP
+	BC1TL     .o330
+	ADDIU     S2, R0, 1
+        .o330
+	BNEL      S2, R0, .o354
+	ADDIU     S4, R0, A
+	LWC1      F4, 3C (S0)
+	LWC1      F0, 1C (S0)
+	ADD.S     F4, F4, F0
+	LWC1      F2, 14 (S0)
+	SUB.S     F0, F0, F2
+	SWC1      F4, 3C (S0)
+	SWC1      F0, 1C (S0)
+        .o354
+	LHU       V0, 8E (S0)
+	ADDIU     V0, V0, FFFF
+	SH        V0, 8E (S0)
+	SLL       V0, V0, 10
+	BLEZL     V0, .o36C
+	ADDIU     S4, R0, B
+        .o36C
+	BEQ       S4, R0, .o400
+	NOP
+	SW        R0, 10 (SP)
+	SW        R0, 14 (SP)
+	LW        A1, 38 (S0)
+	LW        A2, 3C (S0)
+	LW        A3, 40 (S0)
+	JAL       8006FB30
+	ADDIU     A0, R0, 2
+	LIF       F0, -1000.0
+	SW        R0, 6C (S1)
+	LW        V0, 0 (S0)
+	DADDU     A0, S0, R0
+	SW        R0, 38 (S0)
+	SW        R0, 40 (S0)
+	ORI       V0, V0, 2
+	SWC1      F0, 3C (S0)
+	JAL       8003ABFC
+	SW        V0, 0 (S0)
+	DADDU     A0, S3, R0
+	LIO       A1, *Var[0]
+	ADDIU     A2, R0, 1
+	LW        V0, 0 (S0)
+	ADDIU     V1, R0, F7FF
+	AND       V0, V0, V1
+	SW        V0, 0 (S0)
+	LW        V0, 0 (S1)
+	LUI       V1, 1F00
+	OR        V0, V0, V1
+	SW        V0, 0 (S1)
+	SW        R0, 70 (A0)
+        .o3F0
+	JAL       ~Func:set_variable
+	NOP
+	BEQ       R0, R0, .o430
+	ADDIU     V0, R0, 2
+        .o400
+	LW        V0, 70 (S1)
+	ANDI      V0, V0, 1
+	BEQ       V0, R0, .o430
+	DADDU     V0, R0, R0
+	LWC1      F0, 4C (S0)
+	LIF       F3, 3.21875
+	MTC1      R0, F2
+	CVT.D.S   F0, F0
+	ADD.D     F0, F0, F2
+	CVT.S.D   F0, F0
+	SWC1      F0, 4C (S0)
+        .o430
+	LW        RA, 44 (SP)
+	LW        S4, 40 (SP)
+	LW        S3, 3C (SP)
+	LW        S2, 38 (SP)
+	LW        S1, 34 (SP)
+	LW        S0, 30 (SP)
+	LDC1      F24, 58 (SP)
+	LDC1      F22, 50 (SP)
+	LDC1      F20, 48 (SP)
+	JR        RA
+	ADDIU     SP, SP, 60
+}
+
+#new:Function $Function_80241524
+{
+	ADDIU     SP, SP, FFE8
+	LUI       A1, FE36
+	SW        RA, 10 (SP)
+	LW        V0, 148 (A0)
+	LAW       A2, 800B0F9C
+	ORI       A1, A1, 3C80
+	XOR       A2, A2, V0
+	JAL       ~Func:set_variable
+	SLTIU     A2, A2, 1
+	LW        RA, 10 (SP)
+	ADDIU     V0, R0, 2
+	JR        RA
+	ADDIU     SP, SP, 18
+}
+	
+#new:ConstDouble $ConstDouble_80245B30
+{
+180.000000d
+}
+
+#new:ConstDouble $ConstDouble_80245B38
+{
+90.000000d
+}
+
+#new:ConstDouble $ConstDouble_80245B40
+{
+1.200000d
+}

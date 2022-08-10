@@ -1,0 +1,347 @@
+@ $Script_80246060
+{
+    0:  Call     DisablePlayerInput 	( .True )
+   10:  ExecWait $Script_80245F00 
+   1C:  Set  *Var[0]  00000001 
+   2C:  Call     $Function_8024228C ( )
+   38:  Switch  *Var[0] 
+   44:  	Case  ==  FFFFFFFF 
+   50:  	Case  ==  00000000 
+   5C:  		Call     ShowMessageAtScreenPos 	( 001D00D4 000000A0 00000028 ) % It's empty.
+   74:  	CaseOR  ==  0000010D 
+   80:  	CaseOR  ==  00000129 
+   8C:  	CaseOR  ==  000000E4 % was 111 - Last Stand, now is E4 - Power Bounce
+   98:  		SetGroup 00000000 
+   A4:  		Call     SetTimeFreezeMode ( 00000002 )
+   B4:  		Call     ShowGotItem 	( *Var[0] 00000000 00000000 )
+   CC:  		Call     SetTimeFreezeMode ( 00000000 )
+   DC:  		Call     AddBadge    	( *Var[0] *Var[1] )
+   F0:  		Call     $Function_802424CC ( )
+   FC:  	EndCaseGroup
+  104:  	Default
+  10C:  		Call     $Function_80242534 ( )
+  118:  		If  *Var[1]  <=  00000000 
+  128:  			Call     ShowMessageAtScreenPos 	( 001D00D5 000000A0 00000028 ) % You already have as many items as you can carry.
+  140:  		Else
+  148:  			Call     ShowGotItem 	( *Var[0] 00000000 00000002 )
+  160:  			Call     AddItem     	( *Var[0] *Var[1] )
+  174:  			Call     $Function_802424CC ( )
+  180:  		EndIf
+  188:  EndSwitch
+  190:  ExecWait $Script_80245FB0 
+  19C:  Call     DisablePlayerInput 	( .False )
+  1AC:  Return
+  1B4:  End
+}
+
+@ $Function_8024228C
+{
+[94]    LA        S8, $Global_ItemHudScripts
+}
+
+@ $IntTable_80245EEC {
+0000010D 00000083 00000129 000000E4 000000A2 % Changed the 111 to 0E4
+}
+  
+@ $Script_Main_EnterWalk {
+    0:  Set  *WorldMapLocation  0000001B 
+   10:  Call     SetSpriteShading 	( FFFFFFFF )
+   20:  Call     SetCamPerspective 	( .Cam:Default 00000003 00000019 00000010 00001000 )
+   40:  Call     SetCamBGColor 	( .Cam:Default 00000000 00000000 00000000 )
+   5C:  Call     SetCamLeadPlayer 	( .Cam:Default .False )
+   70:  Call     SetCamEnabled 	( .Cam:Default .True )
+   84:  Set  *AreaFlag[0B6]  00000000 
+   94:  Call     MakeNpcs    	( 00000000 $NpcGroupList_80244048 )
+   A8:  ExecWait $Script_MakeEntities 
+   B4:  Exec     $Script_8024621C 
+   C0:  Exec     $Script_8024271C 
+   CC:  Set  *Var[0]  $Script_80242814 
+   DC:  Exec     EnterWalk 
+   E8:  Wait     00000001 
+   F4:  Call     SetMusicTrack 	( 00000000 .Song:ShootingStarSummit 00000000 00000008 )
+  110:  Exec     $Script_802444B8 
+  11C:  Exec     $Script_80242840 
+  %128:  Bind     $Script_80245878 .Trigger:WallPressA {Collider:o224} 00000001 00000000 % everything she says is wrong anyway
+  144:  Return
+  14C:  End
+}
+  
+/%
+@ $MerlowBadgeInventory
+.Item:AttackFXA        1`    0024008D % Changes the sound effects when Mario's attacking.
+.Item:PayOff           1`    00240096 % The more damage Mario takes, the more coins he rec ...
+.Item:ChillOut         3`    00240098 % Keeps you from being hit by a First Strike.
+.Item:PrettyLucky      5`    00240081 % Makes enemies fail to attack Mario every once in a ...
+.Item:FeelingFine      5`    0024008C % Protects Mario from poisoning and dizziness during ...
+.Item:HappyHeartA      8`    00240079 % Restores HP automatically during battle at a slow  ...
+.Item:HappyFlowerA     8`    0024007A % Restores FP automatically during battle at a slow  ...
+.Item:Peekaboo        10`    0024009F % Makes it possible to see your enemy's HP.
+.Item:ZapTap          10`    00240099 % In battle, makes most enemies who touch Mario take ...
+.Item:HeartFinder     12`    0024007C % After beating an enemy, makes more hearts appear t ...
+.Item:FlowerFinder    12`    0024007D % After beating an enemy, makes  more flowers appear ...
+.Item:HPDrain         15`    00240078 % Decreases Mario's attack power  by 1. Restores 1 H ...
+.Item:MoneyMoney      20`    0024009A % After a battle, lets Mario get twice as many coins ...
+.Item:FlowerSaverA    25`    0024007B % During battle, saves 1 FP every time you attack. 
+.Item:PowerPlusA      25`    00240073 % Increases Mario's Jump and Hammer attack powers by ...
+%/
+
+% ====================================================
+% Changed the way Merlow selects badges from his table.
+% Now you can supply up to 33` badges. As a bonus,
+% Flag_NPC_43 through Flag_NPC_51 are no longer used.
+% ====================================================
+
+% When the number of badges in the table is changed,
+% be sure to update this number! Maximum is 21 (33`).
+#define .BadgeCount 18`
+
+@ $MerlowBadgeInventory
+{
+.Item:AttackFXA        1`    0024008D % Changes the sound effects when Mario's attacking.
+.Item:ChillOut         2`    00240098 % Keeps you from being hit by a First Strike.
+.Item:PayOff           3`    00240096 % The more damage Mario takes, the more coins he rec ...
+.Item:Berserker        5`    002F000D % ADDED
+.Item:HPDrain          5`    00240078 % Decreases Mario's attack power  by 1. Restores 1 H ...
+.Item:PrettyLucky      7`    00240081 % Makes enemies fail to attack Mario every once in a ...
+.Item:HeartFinder      7`    0024007C % After beating an enemy, makes more hearts appear t ...
+.Item:FlowerFinder     7`    0024007D % After beating an enemy, makes  more flowers appear ...
+.Item:HappyHeartA     10`    00240079 % Restores HP automatically during battle at a slow  ...
+.Item:HappyHeartX     10`    00240079 % Restores HP automatically during battle at a slow  ...
+.Item:HappyFlowerA    10`    0024007A % Restores FP automatically during battle at a slow  ...
+.Item:HappyFlowerX    10`    0024007A % Restores FP automatically during battle at a slow  ...
+%.Item:MoneyMoney      10`    0024009A % After a battle, lets Mario get twice as many coins ...
+.Item:DoubleDip       15`    0024006D % During battle, lets you use two items during one t ...
+.Item:MegaHPDrain     20`    002F0005 % ADDED
+.Item:ZapTap          20`    00240099 % In battle, makes most enemies who touch Mario take ...
+.Item:FlowerSaverA    20`    0024007B % During battle, saves 1 FP every time you attack. 
+.Item:CrazyHeart      20`    002F0001 % ADDED
+.Item:FlowerFanatic   30`    002F0003 % ADDED
+}
+
+%There are 22 more star pieces required now, from Pro Mode. (180 -> 202)
+%There is one on gusty gulch, one on a new area near gusty gulch/dry dry desert, two extra in shyguys toybox, one extra in mt lavalava, one on goomba ridge, 
+%one in ancient tombs second room, one new panel hos_11, one sitting out on sam_16, one panel in scythe room, one panel in rotating platform room, one panel in
+%the bandit room kmr_63
+%CURRENTLY, THERE ARE 10 STAR PIECES THAT NEED ADDED TO BE ABLE TO AFFORD THIS LIST
+
+% Do not change anything below this point!
+% =================================================
+
+% Note: positions of the badges prices are set by [800F3F10].
+% I don't bother changing this even though the last two badge names are slightly obscured by the cost.
+
+@ $Script_Interact_802436A0
+{
+[38]	If  *MerlowSaleCount  >=  .BadgeCount 
+[43C]	If  *MerlowSaleCount  >=  .BadgeCount
+}
+
+% Merlow used to have N flags indicating weather the Nth badge was sold.
+% His code has been modified to search the player's inventory instead, freeing up
+% 15` flags and allowing his inventory to be easily modified.
+
+#new:Function $Function_HasBadge % args: A0 = badgeID
+{
+	LIO		A2, 8010F344
+	ADDIU	A3, A2, 100
+	.Loop
+	LH		A1, 0 (A2)
+	BEQL	A0, A1, .End
+	ADDIU	V0, R0, 1 % return true
+	BNE		A2, A3, .Loop
+	ADDIU	A2, A2, 2
+	ADDIU	V0, R0, 0 % return false
+	.End
+	JR		RA
+	NOP
+}
+
+/%
+This function mallocs a 0x330 byte buffer to store the badge data, which
+is a substantial over-allocation. The buffer has enough space for 0x21
+badges, even though the table only has 0xF entries.
+Here is how badge data is organized in the buffer:
+  0 + 4i = icon pointer
+ 84 + 4i = name string
+108 + 4i = index
+18C + 4i = hasEnoughStarPieces flag
+210 + 4i = badge cost
+294 + 4i = desc string
+318 = initialized to 3
+324 = num badges
+328 = initialized to 0
+%/
+
+% removed the 'hasBought' flags in favor of checking the player's inventory
+@ $Function_80240AD0
+{
+	ADDIU     SP, SP, FFC8
+	SW        RA, 34 (SP)
+	SW        S8, 30 (SP)
+	SW        S7, 2C (SP)
+	SW        S6, 28 (SP)
+	SW        S5, 24 (SP)
+	SW        S4, 20 (SP)
+	SW        S3, 1C (SP)
+	SW        S2, 18 (SP)
+	SW        S1, 14 (SP)
+	SW        S0, 10 (SP)
+	LIA       S6, 8010F290
+	BEQ       A1, R0, .InitializationDone
+	DADDU     S3, A0, R0
+	JAL       8002ACE4		% malloc 330 bytes == 0x36 * 0xF + 6
+	ADDIU     A0, R0, 330
+	SW        V0, 78 (S3)	% script[78] = addr
+	DADDU     S5, V0, R0
+	DADDU     S4, R0, R0
+	DADDU     S2, S4, R0	% loop counter
+	/%
+	LIO       S7, *Flag_Merlow_Badge_00
+	LIA       S8, 8008A680	% icon table
+	LIA       S1, $MerlowBadgeInventory
+	DADDU     S0, S5, R0
+       .BeginLoadingLoop
+	DADDU     A0, R0, R0
+	JAL       {Func:get_variable}
+	ADDU      A1, S2, S7	% get Flag_Merlow_Badge_00 + i
+	BNEL      V0, R0, .EndLoadingLoop
+	ADDIU     S2, S2, 1
+	% this badge has not been bought yet
+	LW        V0, 0 (S1)	% get badge ID
+	%/
+	LIA		S8, $Global_ItemHudScripts	% icon table
+	LIA		S1, $MerlowBadgeInventory
+	DADDU	S0, S5, R0
+	.BeginLoadingLoop
+	DADDU	A0, R0, R0
+	LW		S7, 0 (S1)	% get badge ID
+	JAL		$Function_HasBadge
+	DADDU	A0, S7, R0
+	BNEL	V0, R0, .EndLoadingLoop
+	ADDIU	S2, S2, 1
+	DADDU	V0, S7, R0
+	% this badge has not been bought yet
+	LIA       A2, 800878E0	% item table
+	SLL       V0, V0, 5
+	ADDU      V0, V0, A2	% V0 = item table entry
+	LH        V1, 4 (V0)	% icon ID
+	SW        S2, 108 (S0)	% save entry index
+	LW        V0, 0 (V0)	% name
+	SLL       V1, V1, 3
+	ADDU      A0, V1, S8	% get icon 
+	SW        V0, 84 (S0)	% save name string
+	LW        V0, 0 (A0)
+	SW        V0, 0 (S0)	% save icon pointer
+	LBU       V0, F (S6)
+	LW        V1, 4 (S1)	% get star piece cost
+	SLT       V0, V0, V1
+	XORI      V0, V0, 1
+	SW        V0, 18C (S0)	% save hasEnough?
+	LBU       V0, F (S6)
+	LW        V1, 4 (S1)
+	SLT       V0, V0, V1
+	BEQ       V0, R0, .CanAfford
+	NOP
+	LW        V0, 4 (A0)
+	SW        R0, 18C (S0)
+	SW        V0, 0 (S0)	% overwrite icon with disabled icon
+        .CanAfford
+	LW        V0, 8 (S1)
+	SW        V0, 294 (S0)	% save desc string
+	LW        V0, 4 (S1)
+	ADDIU     S4, S4, 1
+	SW        V0, 210 (S0)	% save star piece cost
+	ADDIU     S0, S0, 4
+	ADDIU     S2, S2, 1
+        .EndLoadingLoop
+	SLTI      V0, S2, .BadgeCount
+	BNE       V0, R0, .BeginLoadingLoop
+	ADDIU     S1, S1, C
+	DADDU     A0, S5, R0
+	ADDIU     V0, R0, 3
+	SW        V0, 318 (A0)	% save 3
+	SW        S4, 324 (A0)	% save num badges
+	JAL       800F4E40
+	SW        R0, 328 (A0)
+	SW        R0, 70 (S3)
+        .InitializationDone
+	LW        V0, 70 (S3)
+	LW        S5, 78 (S3)
+	BNE       V0, R0, .o15C
+	ADDIU     V0, V0, 1
+	LH        V0, 32C (S5)
+	BEQ       V0, R0, .o16C
+	SW        V0, 74 (S3)
+	JAL       800F13B0
+	NOP
+	LW        V0, 70 (S3)
+	ADDIU     V0, V0, 1
+        .o15C
+	SW        V0, 70 (S3)
+	SLTI      V0, V0, 14
+	BEQ       V0, R0, .o174
+	NOP
+        .o16C
+	BEQ       R0, R0, .o224
+	DADDU     V0, R0, R0
+        .o174
+	JAL       800F1538
+	NOP
+	LW        V1, 74 (S3)
+	ADDIU     V0, R0, FF
+	BEQ       V1, V0, .o210
+	ADDIU     V0, V1, FFFF
+	SLL       V0, V0, 2
+	ADDU      V0, S5, V0
+	LW        S2, 108 (V0)
+	LIA       V0, $MerlowBadgeInventory
+	SLL       V1, S2, 1
+	ADDU      V1, V1, S2
+	SLL       V1, V1, 2
+	ADDU      V1, V1, V0
+	LW        V0, 0 (V1)
+	SW        V0, 84 (S3)
+	LW        V0, 4 (V1)
+	SW        S2, 8C (S3)
+	SW        V0, 88 (S3)
+	LW        V0, 0 (V1)
+	SLL       V0, V0, 5
+	LTW       V0, V0 (800878E0)
+	SW        V0, 94 (S3)
+	LW        V0, 0 (V1)
+	SLL       V0, V0, 5
+	LTBU      V1, V0 (800878FA)
+	SLL       V0, V1, 2
+	ADDU      V0, V0, V1
+	SLL       V0, V0, 2
+	LTB       V0, V0 (8008F072)
+	BEQ       R0, R0, .o218
+	SW        V0, 98 (S3)
+        .o210
+	ADDIU     V0, R0, FFFF
+	SW        V0, 84 (S3)
+        .o218
+	JAL       8002AD2C
+	LW        A0, 78 (S3)
+	ADDIU     V0, R0, 2
+        .o224
+	LW        RA, 34 (SP)
+	LW        S8, 30 (SP)
+	LW        S7, 2C (SP)
+	LW        S6, 28 (SP)
+	LW        S5, 24 (SP)
+	LW        S4, 20 (SP)
+	LW        S3, 1C (SP)
+	LW        S2, 18 (SP)
+	LW        S1, 14 (SP)
+	LW        S0, 10 (SP)
+	JR        RA
+	ADDIU     SP, SP, 38
+}
+
+% dummy out this function -- 'bought' flags are no longer used
+@ $Function_80240A94
+{
+	JR		RA
+	ADDIU	V0, R0, 2
+}

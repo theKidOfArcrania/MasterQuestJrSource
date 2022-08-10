@@ -1,0 +1,191 @@
+
+% Increase the damage taken when crushed.
+@ $Function_80240330
+{
+    0:  ADDIU     SP, SP, FFE8
+    4:  SW        RA, 10 (SP)
+    8:  JAL       800EA334
+    C:  ADDIU     A0, R0, 5	% was 1
+   10:  LW        RA, 10 (SP)
+   14:  ADDIU     V0, R0, 2
+   18:  JR        RA
+   1C:  ADDIU     SP, SP, 18
+}
+
+% Spiky thwomp rolls much faster.
+@ $Script_80241464
+{
+    0:  SetGroup 000000EF 
+    C:  Call     SetGroupEnabled ( 00000029 00000000 )
+   20:  Call     EnableModel 	( ~Model:me .False )
+   34:  Call     TranslateGroup ( ~Model:goron 00000000 00000000 00000000 )
+   50:  Call     RotateGroup 	( ~Model:goron 00000000 00000000 00000000 00000001 )
+   70:  Set      *AreaFlag[004] 00000000 
+   80:  Set      *AreaFlag[003] 00000000 
+   90:  Set      *AreaFlag[002] 00000000 
+   % Wait for the player to approach
+   A0:  Call     GetEntryID  	( *Var[3] )
+   B0:  Loop     
+   BC:     Call     GetPlayerPos 	( *Var[0] *Var[1] *Var[2] )
+   D4:     If       *Var[3] ==  00000000 
+   E4:        If       *Var[0]  >  -350`	% was 400
+   F4:           BreakLoop
+   FC:        EndIf
+  104:     Else
+  10C:        If       *Var[0]  <  -350`	% was 400
+  11C:           BreakLoop
+  124:        EndIf
+  12C:     EndIf
+  134:     Wait     00000001 
+  140:  EndLoop
+  % Fall down, Mario reacts
+  148:  Call     802D2B6C ( )
+  154:  Call     SetGroupEnabled ( 00000029 00000001 )
+  168:  Call     EnableModel 	( ~Model:me .True )
+  17C:  Call     DisablePlayerInput 	( .True )
+  18C:  Set      *Var[0] FFFFFE2B 
+  19C:  Set      *Var[2] 00000000 
+  1AC:  Call     $Function_8024037C ( )
+  1B8:  Call     MakeLerp    	( 000000C8 *Var[2] 00000014 00000001 )
+  1D4:  Label    0000000A 
+  1E0:  Call     UpdateLerp  	( )
+  1EC:  Set      *MapVar[0] FFFFFE2B 
+  1FC:  Call     TranslateGroup ( ~Model:goron FFFFFE2B *Var[0] 00000000 )
+  218:  Call     TranslateModel ( ~Model:me FFFFFE2B *Var[0] 00000000 )
+  234:  Wait     00000001 
+  240:  If       *Var[1] ==  00000001 
+  250:     Goto     0000000A 
+  25C:  EndIf
+  264:  Sub      *Var[2] 00000037 
+  274:  Call     PlayEffect  	( 00000006 00000004 FFFFFE2B *Var[2] 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 )
+  2B8:  Exec     $Script_80241224 
+  2C4:  Thread
+  2CC:     Call     GetCurrentPartner ( *Var[0] )
+  2DC:     Switch   *Var[0] 
+  2E8:        Case     ==  00000004 
+  2F4:        Case     ==  00000009 
+  300:        Default
+  308:           Call     GetPlayerPos 	( *Var[1] *Var[2] *Var[3] )
+  320:           Call     SetPlayerJumpscale 	( *Fixed[2.5] )
+  330:           Call     PlayerJump1 ( *Var[1] *Var[2] *Var[3] 00000008 )
+  34C:           Call     InterpPlayerYaw 	( 0000010E 00000000 )
+  360:           If       *Var[0] !=  00000008 
+  370:              Wait     00000003 
+  37C:              Call     SetPlayerAnimation 	( 0001002B )
+  38C:              Wait     0000000A 
+  398:              Call     SetPlayerAnimation 	( 00010002 )
+  3A8:           EndIf
+  3B0:     EndSwitch
+  3B8:  EndThread
+  3C0:  Call     PlaySoundAt 	( 000001E3 00000000 FFFFFE2F 00000000 00000000 )
+  3E0:  Call     ShakeCam    	( .Cam:Default 00000000 0000000A *Fixed[2.5] )
+  3FC:  Call     ShakeCam    	( .Cam:Default 00000000 00000005 *Fixed[1.2001953] )
+  418:  Wait     0000000F 
+  424:  Call     DisablePlayerInput 	( .False )
+  % Start rolling
+  434:  Exec     $Script_80240FB0 *Var[A] 
+  444:  Exec     $Script_80241424 *MapVar[A] 
+  454:  Call     PlaySoundAt 	( 8000001B 00000000 FFFFFE2F 00000000 00000000 )
+  474:  Set      *Var[2] 00000000 
+  484:  Set      *Var[3] 00000000 
+  494:  Call     MakeLerp    	( FFFFFE2B 000001A2 100` 00000001 ) % was 180`
+  4B0:  Loop     
+  4BC:     Call     UpdateLerp  	( )
+  4C8:     Call     $Function_8024037C ( )
+  4D4:     Call     $Function_80240638 ( *Var[0] *Var[1] *Var[2] )
+  4EC:     Set      *MapVar[0] *Var[0] 
+  4FC:     Call     TranslateGroup ( ~Model:goron *Var[0] *Var[2] 00000000 )
+  518:     Call     TranslateModel ( ~Model:me *Var[0] *Var[2] 00000000 )
+  534:     Set      *Var[8] *Var[0] 
+  544:     Set      *Var[9] *Var[2] 
+  554:     Call     RotateGroup 	( ~Model:goron *Var[3] 00000000 00000000 00000001 )
+  574:     Call     RotateModel 	( ~Model:me *Var[3] 00000000 00000000 00000001 )
+  594:     Call     $Function_802404EC ( )
+  5A0:     Call     TranslateModel ( ~Model:me *Var[5] *Var[6] 00000000 )
+  5BC:     Call     $Function_802405A4 ( )
+  5C8:     Wait     00000001 
+  5D4:     Call     $Function_80240414 ( )
+  5E0:     If       *Var[4] <=  00000050 
+  5F0:        If       *AreaFlag[003] ==  00000000 
+  600:           Call     $Function_80240350 ( )
+  60C:           If       *Var[0] !=  00000009 
+  61C:              Exec     $Script_80240D10 
+  628:              If       *AreaFlag[003] ==  00000000 
+  638:                 Kill     *Var[A] 
+  644:                 Set      *AreaFlag[003] 00000001 
+  654:              EndIf
+  65C:              Thread
+  664:                 Call     ResetCam    	( .Cam:Default *Fixed[2.0] )
+  678:                 Wait     0000002D 
+  684:                 Set      *AreaFlag[002] 00000001 
+  694:              EndThread
+  69C:           EndIf
+  6A4:        EndIf
+  6AC:     EndIf
+  6B4:     If       *Var[1] ==  00000000 
+  6C4:        BreakLoop
+  6CC:     EndIf
+  6D4:  EndLoop
+  6DC:  Set      *AreaFlag[004] 00000001 
+  6EC:  Kill     *MapVar[A] 
+  6F8:  Thread
+  700:     Call     ShakeCam    	( .Cam:Default 00000000 00000023 *Fixed[2.0] )
+  71C:     Call     ShakeCam    	( .Cam:Default 00000000 00000014 *Fixed[1.0] )
+  738:     Call     ShakeCam    	( .Cam:Default 00000000 0000000A *Fixed[0.5] )
+  754:  EndThread
+  75C:  Call     StopSound ( 8000001B )
+  76C:  Call     PlaySoundAt 	( 000001E4 00000000 0000019F FFFFFF10 00000000 )
+  78C:  Call     EnableModel 	( ~Model:me .False )
+  7A0:  Thread
+  7A8:     Set      *Var[0] 000001A2 
+  7B8:     Set      *Var[2] 00000000 
+  7C8:     Call     $Function_8024037C ( )
+  7D4:     Call     PlayEffect  	( 00000000 *Var[0] *Var[2] 00000000 00000001 00000014 00000003 00000008 00000000 00000000 00000000 00000000 00000000 00000000 )
+  818:  EndThread
+  % Shatter
+  820:  Set      *Var[0] *Var[8] 
+  830:  Set      *Var[1] *Var[9] 
+  840:  Set      *Var[2] *Var[8] 
+  850:  Set      *Var[3] *Var[9] 
+  860:  Set      *Var[4] *Var[8] 
+  870:  Set      *Var[5] *Var[9] 
+  880:  Set      *Var[6] *Var[8] 
+  890:  Set      *Var[7] *Var[9] 
+  8A0:  Loop     0000005A 
+  8AC:     Call     TranslateModel ( ~Model:o70 *Var[6] *Var[1] 00000000 )
+  8C8:     Call     TranslateModel ( ~Model:o72 *Var[6] *Var[3] 00000000 )
+  8E4:     Call     TranslateModel ( ~Model:o73 *Var[4] *Var[5] 00000000 )
+  900:     Call     TranslateModel ( ~Model:o74 *Var[4] *Var[7] 00000000 )
+  91C:     Call     TranslateModel ( ~Model:2_1 *Var[2] *Var[3] 00000000 )
+  938:     Call     TranslateModel ( ~Model:2_2 *Var[2] *Var[1] 00000000 )
+  954:     Call     TranslateModel ( ~Model:2_3 *Var[0] *Var[7] 00000000 )
+  970:     Call     TranslateModel ( ~Model:2_4 *Var[0] *Var[5] 00000000 )
+  98C:     Call     TranslateModel ( ~Model:3_1 *Var[0] *Var[5] 00000000 )
+  9A8:     Call     TranslateModel ( ~Model:3_2 *Var[0] *Var[7] 00000000 )
+  9C4:     Call     TranslateModel ( ~Model:3_3 *Var[2] *Var[1] 00000000 )
+  9E0:     Call     TranslateModel ( ~Model:3_4 *Var[2] *Var[3] 00000000 )
+  9FC:     Call     TranslateModel ( ~Model:4_1 *Var[4] *Var[7] 00000000 )
+  A18:     Call     TranslateModel ( ~Model:4_2 *Var[4] *Var[5] 00000000 )
+  A34:     Call     TranslateModel ( ~Model:4_3 *Var[6] *Var[3] 00000000 )
+  A50:     Call     TranslateModel ( ~Model:4_4 *Var[6] *Var[1] 00000000 )
+  A6C:     Add      *Var[0] 00000002 
+  A7C:     Add      *Var[1] FFFFFFF9 
+  A8C:     Add      *Var[2] FFFFFFFB 
+  A9C:     Add      *Var[3] 00000007 
+  AAC:     Add      *Var[4] 00000009 
+  ABC:     Add      *Var[5] FFFFFFFD 
+  ACC:     Add      *Var[6] FFFFFFFA 
+  ADC:     Add      *Var[7] 00000007 
+  AEC:     Wait     00000001 
+  AF8:  EndLoop
+  B00:  Call     SetGroupEnabled ( 00000029 00000000 )
+  B14:  Call     EnableModel 	( ~Model:me .False )
+  B28:  Wait     0000000A 
+  B34:  If       *AreaFlag[003] ==  00000000 
+  B44:     Kill     *Var[A] 
+  B50:     Call     ResetCam    	( .Cam:Default *Fixed[90.0] )
+  B64:     Set      *AreaFlag[002] 00000001 
+  B74:  EndIf
+  B7C:  Return
+  B84:  End
+}

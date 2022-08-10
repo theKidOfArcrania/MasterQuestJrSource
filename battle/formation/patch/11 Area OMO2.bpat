@@ -1,0 +1,610 @@
+
+% This special keyword can be used to prevent any structs from being placed in a specified
+% memory region. Only one region can be reserved per map/battle section.
+% This is the region that General Guy uses to load each enemy wave into.
+#reserve 80231000 80238000 % 802367D0 is the last used by existing waves, but we'll be adding our own
+
+@ $ToyTank
+{
+[MaxHP]	40`b
+[PowerBounce]  3`b 
+}
+
+@ $DefenseTable_8022C838
+{
+.Element:Normal 00000003 %make no mistake,
+.Element:Fire   00000063 %this thing is beefy!
+.Element:Ice    00000063
+.Element:Quake  00000063 %not even quake works!
+.Element:End
+}
+
+@ $LightBulb
+{
+[MaxHP]	12`b
+}
+
+% changed base damage to 9, added shock proc (100% chance / 2 turns)
+@ $Script_LightningAttack
+{
+[228]  		Call     RandInt     	( 00000006 *Var[0] )
+[23C]  		Add  *Var[0]  00000003
+[934]	Call     EnemyDamageTarget 	( FFFFFF81 *Var[F] 10000020 00000000 80010164 00000005 00000020 )
+}
+
+
+@ $Script_BombAttack %this is the bomb attack, it does solid damage now but no proc
+{
+   0:  Call     UseIdleAnimation 	( .Actor:Self .False )
+   14:  Call     EnableIdleScript 	( .Actor:Self 00000000 )
+   28:  Call     SetTargetActor ( .Actor:Self .Actor:Player )
+   3C:  Call     SetGoalToTarget 	( .Actor:Self )
+   4C:  Call     UseBattleCamPreset 	( 0000000F )
+   5C:  Call     BattleCamTargetActor ( .Actor:Self )
+   6C:  Call     MoveBattleCamOver 	( 0000001E )
+   7C:  Thread
+   84:  	Wait     00000023 
+   90:  	Call     UseBattleCamPreset 	( 00000002 )
+   A0:  	Call     MoveBattleCamOver 	( 0000001E )
+   B0:  EndThread
+   B8:  Wait     00000005 
+   C4:  Call     PlaySoundAtPart 	( .Actor:Enemy0 00000001 0000206A )
+   DC:  Call     SetAnimation 	( .Actor:Enemy0 00000001 0076000B )
+   F4:  Call     SetPartFlagBits 	( .Actor:Enemy0 00000001 00000001 .False )
+  110:  Call     PlayModelAnimation 	( 00000000 $ModelAnimation_80220D88 )
+  124:  Wait     00000014 
+  130:  Call     SetAnimation 	( .Actor:Self 00000001 0076000B )
+  148:  Call     GetActorPos 	( .Actor:Self *Var[0] *Var[1] *Var[2] )
+  164:  Sub  *Var[0]  00000008 
+  174:  Add  *Var[1]  0000001B 
+  184:  Sub  *Var[2]  00000004 
+  194:  Call     SetPartPos 	( .Actor:Self 00000002 *Var[0] *Var[1] *Var[2] )
+  1B4:  Call     SetAnimation 	( .Actor:Self 00000002 00770000 )
+  1CC:  Call     SetPartFlagBits 	( .Actor:Self 00000002 00000001 .False )
+  1E8:  Wait     0000000F 
+  1F4:  Call     SetAnimation 	( .Actor:Self 00000001 0076000A )
+  20C:  Call     SetPartFlagBits 	( .Actor:Self 00000002 00000001 .True )
+  228:  Wait     00000006 
+  234:  Call     GetActorPos 	( .Actor:Self *Var[0] *Var[1] *Var[2] )
+  250:  Sub  *Var[0]  00000008 
+  260:  Add  *Var[1]  00000014 
+  270:  Call     SetPartPos 	( .Actor:Self 00000002 *Var[0] *Var[1] *Var[2] )
+  290:  Call     SetAnimation 	( .Actor:Self 00000002 00770001 )
+  2A8:  Call     SetPartFlagBits 	( .Actor:Self 00000002 00000001 .False )
+  2C4:  Call     EnemyTestTarget ( .Actor:Self *Var[0] 10000000 00000000 00000004 00000020 )
+  2E8:  Switch  *Var[0] 
+  2F4:  	Case  ==  00000006 
+  300:  		Call     PlaySoundAtPart 	( .Actor:Enemy0 00000002 000002F9 )
+  318:  		Call     SetTargetActor ( .Actor:Self .Actor:Player )
+  32C:  		Call     SetGoalToTarget 	( .Actor:Self )
+  33C:  		Call     GetGoalPos  	( .Actor:Self *Var[0] *Var[1] *Var[2] )
+  358:  		Sub  *Var[0]  00000078 
+  368:  		Call     SetPartMoveSpeed ( .Actor:Self 00000002 *Fixed[12.0] )
+  380:  		Call     SetPartJumpGravity 	( .Actor:Self 00000002 *Fixed[0.10058594] )
+  398:  		Call     JumpPartTo 	( .Actor:Self 00000002 *Var[0] *Var[1] *Var[2] 00000000 .True )
+  3C0:  		Call     SetPartFlagBits 	( .Actor:Self 00000002 00000001 .True )
+  3DC:  		Call     SetAnimation 	( .Actor:Enemy0 00000001 00760002 )
+  3F4:  		Call     SetPartFlagBits 	( .Actor:Enemy0 00000001 00000001 .True )
+  410:  		Call     PlayModelAnimation 	( 00000000 $ModelAnimation_8021E798 )
+  424:  		Call     PlaySoundAtPart 	( .Actor:Enemy0 00000001 0000206B )
+				ExecWait $Script_CheatBuff
+  43C:  		Call     EnableIdleScript 	( .Actor:Self 00000001 )
+  450:  		Call     UseIdleAnimation 	( .Actor:Self .True )
+  464:  		Return
+  46C:  	Case  ==  00000005 
+  478:  		Call     PlaySoundAtPart 	( .Actor:Enemy0 00000002 000002F9 )
+  490:  		Call     SetTargetActor ( .Actor:Self .Actor:Player )
+  4A4:  		Call     SetGoalToTarget 	( .Actor:Self )
+  4B4:  		Call     GetGoalPos  	( .Actor:Self *Var[0] *Var[1] *Var[2] )
+  4D0:  		Sub  *Var[0]  00000032 
+  4E0:  		Set  *Var[1]  FFFFFFFB 
+  4F0:  		Call     SetPartMoveSpeed ( .Actor:Self 00000002 *Fixed[14.0] )
+  508:  		Call     SetPartJumpGravity 	( .Actor:Self 00000002 *Fixed[0.10058594] )
+  520:  		Call     FlyPartTo 	( .Actor:Self 00000002 *Var[0] *Var[1] *Var[2] 00000000 0000001E .Easing:Linear )
+  54C:  		Call     EnemyTestTarget ( .Actor:Self *Var[0] 80000000 00000000 00000000 00000000 )
+  570:  		Call     UseBattleCamPreset 	( 00000002 )
+  580:  		Call     GetActorPos 	( .Actor:Player *Var[0] *Var[1] *Var[2] )
+  59C:  		Sub  *Var[0]  00000041 
+  5AC:  		Set  *Var[1]  FFFFFFFB 
+  5BC:  		Call     SetPartMoveSpeed ( .Actor:Self 00000002 *Fixed[6.0] )
+  5D4:  		Call     SetPartJumpGravity 	( .Actor:Self 00000002 *Fixed[0.10058594] )
+  5EC:  		Call     FlyPartTo 	( .Actor:Self 00000002 *Var[0] *Var[1] *Var[2] 00000000 0000000F .Easing:Linear )
+  618:  		Call     SetPartFlagBits 	( .Actor:Self 00000002 00000001 .True )
+  634:  		Call     SetAnimation 	( .Actor:Enemy0 00000001 00760002 )
+  64C:  		Call     SetPartFlagBits 	( .Actor:Enemy0 00000001 00000001 .True )
+  668:  		Call     PlayModelAnimation 	( 00000000 $ModelAnimation_8021E798 )
+  67C:  		Call     PlaySoundAtPart 	( .Actor:Enemy0 00000001 0000206B )
+				ExecWait $Script_CheatBuff
+  694:  		Call     EnableIdleScript 	( .Actor:Self 00000001 )
+  6A8:  		Call     UseIdleAnimation 	( .Actor:Self .True )
+  6BC:  		Return
+  6C4:  EndSwitch
+  6CC:  Call     PlaySoundAtPart 	( .Actor:Enemy0 00000002 000002F9 )
+  6E4:  Call     GetGoalPos  	( .Actor:Self *Var[0] *Var[1] *Var[2] )
+  700:  Call     SetPartMoveSpeed ( .Actor:Self 00000002 *Fixed[20.0] )
+  718:  Call     SetPartJumpGravity 	( .Actor:Self 00000002 *Fixed[0.10058594] )
+  730:  Call     FlyPartTo 	( .Actor:Self 00000002 *Var[0] *Var[1] *Var[2] 00000000 0000000F .Easing:Linear )
+  75C:  Call     GetGoalPos  	( .Actor:Self *Var[0] *Var[1] *Var[2] )
+  778:  Call     PlayEffect  	( ~FX:BigSmokePuff *Var[0] *Var[1] *Var[2] 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 )
+  7BC:  Call     PlaySoundAtPart 	( .Actor:Self 00000002 .Sound:BombBlast )
+  7D4:  Call     SetPartFlagBits 	( .Actor:Self 00000002 00000001 .True )
+  7F0:  Wait     00000002 
+  7FC:  Call     SetGoalToTarget 	( .Actor:Self )
+  80C:  Call     EnemyDamageTarget 	( .Actor:Self *Var[F] 10000200 00000000 00000000 00000004 00000020 )
+  834:  Switch  *Var[F] 
+  840:  	CaseOR  ==  00000000 
+  84C:  	CaseOR  ==  00000002 
+  858:  	CaseOR  ==  0000000A 
+  864:  		Call     SetAnimation 	( .Actor:Self 00000001 00760002 )
+  87C:  		Wait     0000001E 
+  888:  		If  *Var[F]  ==  0000000A 
+  898:  			Call     SetAnimation 	( .Actor:Enemy0 00000001 00760002 )
+  8B0:  			Call     SetPartFlagBits 	( .Actor:Enemy0 00000001 00000001 .True )
+  8CC:  			Call     PlayModelAnimation 	( 00000000 $ModelAnimation_8021E798 )
+  8E0:  			Call     PlaySoundAtPart 	( .Actor:Enemy0 00000001 0000206B )
+  8F8:  			Return
+  900:  		EndIf
+  908:  	EndCaseGroup
+  910:  EndSwitch
+  918:  Call     SetAnimation 	( .Actor:Enemy0 00000001 00760002 )
+  930:  Call     SetPartFlagBits 	( .Actor:Enemy0 00000001 00000001 .True )
+  94C:  Call     PlayModelAnimation 	( 00000000 $ModelAnimation_8021E798 )
+  960:  Call     PlaySoundAtPart 	( .Actor:Enemy0 00000001 0000206B )
+  978:  Call     EnableIdleScript 	( .Actor:Self 00000001 )
+  98C:  Call     UseIdleAnimation 	( .Actor:Self .True )
+  9A0:  Return
+  9A8:  End
+}
+  
+#new:Script $Script_CheatBuff
+{
+  Call	GetActorDefenseBoost	( .Actor:Self *Var[1] )
+		If  *Var[1]  <= 00000001
+			ExecWait $OpenHatch
+			Call	ActorSpeak	( $DefenseString .Actor:Enemy0 00000001 00760005 00760005 )
+		    ExecWait $CloseHatch
+			Thread
+				Wait	0000000A 
+				Call	PlaySoundAtActor	( .Actor:Self 000002DD )
+			EndThread
+			Thread
+				Call	8026BF48	( 00000001 )
+				Call	BoostDefense	( .Actor:Enemy1 1` )
+				Call	8026BF48	( 00000000 )
+			EndThread
+		EndIf
+	Return
+	End
+}
+
+#string $DefenseString
+{
+[Style Right]
+[BR]
+Your ability to evade my[BR]
+attacks is impressive! But[BR]
+I'm prepared for your[BR]
+counter attack![BR]
+[Wait][End]
+}
+  
+% This part of the ToyTank AI is responsible for summoning new waves of enemies.
+% We'll make a small addition to the end of the script to load our new enemies.
+@ $Script_8022D5E8
+{
+	Label    00000000 
+	Call     ActorExists 	( .Actor:Enemy1 *Var[0] )
+	If       *Var[0] ==  00000000 
+		Goto     00000063 
+	EndIf
+	Call     GetActorVar 	( .Actor:Self 00000001 *Var[0] )
+	If       *Var[0] ==  00000001 
+		Call     SetActorVar 	( .Actor:Self 00000001 00000002 )
+		Call     CancelEnemyTurn ( 00000001 )
+		ExecWait $Script_8022DB10 
+		ExecWait $Script_8022DBA0 
+	Else
+		Wait     00000001 
+		Goto     00000000 
+	EndIf
+	Label    00000001 
+	Call     ActorExists 	( .Actor:Enemy1 *Var[0] )
+	If       *Var[0] ==  00000000 
+		Goto     00000063 
+	EndIf
+	Call     GetActorVar 	( .Actor:Self 00000002 *Var[0] )
+	If       *Var[0] ==  00000002 
+		Call     SetActorVar 	( .Actor:Self 00000002 00000003 )
+		Call     CancelEnemyTurn ( 00000001 )
+		ExecWait $Script_8022DB10 
+		ExecWait $Script_8022DEA8 
+	Else
+		Wait     00000001 
+		Goto     00000001 
+	EndIf
+	Label    00000002 
+	Call     ActorExists 	( .Actor:Enemy1 *Var[0] )
+	If       *Var[0] ==  00000000 
+		Goto     00000063 
+	EndIf
+	Call     GetActorVar 	( .Actor:Self 00000003 *Var[0] )
+	If       *Var[0] !=  00000002 
+		Wait     00000001 
+		Goto     00000002 
+	EndIf
+	Call     SetActorVar 	( .Actor:Self 00000004 00000002 )
+	Call     CancelEnemyTurn ( 00000001 )
+	Call     SetActorVar 	( .Actor:Enemy0 00000002 00000008 )
+	ExecWait $Script_8022EB80 
+	Goto     00000063 
+	Label    00000003 
+	Call     ActorExists 	( .Actor:Enemy1 *Var[0] )
+	If       *Var[0] ==  00000000 
+		Goto     00000063 
+	EndIf
+	Call     GetActorVar 	( .Actor:Self 00000002 *Var[0] )
+	If       *Var[0] !=  00000002 
+		Wait     00000001 
+		Goto     00000003 
+	EndIf
+	Call     GetCurrentPartnerID ( *Var[0] )
+	If       *Var[0] ==  00000006 
+		Call     SetActorVar 	( .Actor:Self 00000002 00000003 )
+		Call     SetActorVar 	( .Actor:Self 00000003 00000000 )
+		Call     CancelEnemyTurn ( 00000001 )
+		ExecWait $Script_8022DB10 
+		ExecWait $Script_8022DEA8 
+		Wait     00000001 
+		Goto     00000002 
+	Else
+		Call     SetActorVar 	( .Actor:Self 00000003 00000003 )
+		Call     SetActorVar 	( .Actor:Self 00000002 00000003 )
+		Call     CancelEnemyTurn ( 00000001 )
+		Call     SetActorVar 	( .Actor:Enemy0 00000002 00000007 )
+		ExecWait $Script_8022E734 
+		Wait     00000001 
+		Goto     0000000A 
+	EndIf
+	Label    0000000A 
+	Call     ActorExists 	( .Actor:Enemy1 *Var[0] )
+	If       *Var[0] ==  00000000 
+		Goto     00000063 
+	EndIf
+	Call     GetActorVar 	( .Actor:Self 00000004 *Var[0] )
+	If       *Var[0] ==  00000001 
+		Call     SetActorVar 	( .Actor:Self 00000004 00000002 )
+		Call     CancelEnemyTurn ( 00000001 )
+		Call     SetActorVar 	( .Actor:Enemy0 00000002 00000008 )
+		ExecWait $Script_8022EB80 
+	EndIf
+	Wait     00000001 
+	Goto     0000000A 
+	Label    00000063 
+	Call     LoadBattleSection 	( 0000002F )	% load new enemies to summon
+	Return
+	End
+}
+
+@ $Script_Init_8021858C
+{
+	Call     SetActorPos 	( .Actor:Self 000000C8 00000000 00000000 )
+	Call     ForceHomePos 	( .Actor:Self 000000C8 00000000 00000000 )
+	Call     HPBarToHome 	( .Actor:Self )
+	Call     BindTakeTurn 	( .Actor:Self $Script_TakeTurn_80218BA0 )
+	Call     BindIdle    	( .Actor:Self $Script_Idle_802186B8 )
+	Call     BindHandleEvent 	( .Actor:Self $Script_HandleEvent_802186EC )
+	Call     BindNextTurn 	( .Actor:Self $Script_NextTurn_802184FC )
+	Call     SetAnimation 	( .Actor:Self 00000001 00760002 )
+	Call     SetActorVar 	( .Actor:Self 00000000 00000000 )
+	Call     SetActorVar 	( .Actor:Self 00000001 00000000 )
+	Call     SetActorVar 	( .Actor:Self 00000002 00000000 )
+	Call     SetActorVar 	( .Actor:Self 0000000A 00000000 )	% Initialize backup message flag.
+	Call     LoadBattleSection 	( 00000029 )
+	Call     SummonEnemy 	( $SpecialFormation_8021A284 00000001 )
+	Return
+	End
+}
+	
+#string $BackupString
+{
+[Style Right]
+[BR]
+Argh! I can't do this alone![BR]
+Troops, report![BR]
+[Wait][End]
+}
+
+@ $Script_TakeTurn_80218BA0
+{
+	Call	GetActorVar   	( .Actor:Self 00000000 *Var[0] )
+	If		*Var[0] ==  00000000 
+		Return
+	EndIf
+%	Call	GetActorHP	( .Actor:Self *Var[0] )
+%	If *Var[0] < 30`
+		ExecWait $Script_GetFirstOpenColumn
+		If *Var[A] != FFFFFFFF
+				ExecWait $OpenHatch
+				% Only speak when calling for backp the first time.
+				%Call	GetActorVar		( .Actor:Self 0000000A *Var[0] )
+				%If *Var[0] == 0
+				%	Call	ActorSpeak	( $BackupString .Actor:Enemy0 00000001 00760005 00760005 )
+				%	Call	SetActorVar	( .Actor:Self 0000000A 00000001 )
+				%EndIf
+				% Play whistle sound and summon random enemy.
+				Thread
+					Call	PlaySoundAtPart 	( .Actor:Enemy0 00000001 .Sound:GeneralWhistle )
+					Call	SetAnimation 		( .Actor:Enemy0 00000001 0076000A )
+					Wait	30
+					ExecWait $CloseHatch
+				EndThread
+				Call     GetPlayerHP  	( *Var[9] )
+				Switch *Var[9]
+				Case  >=  30`
+					Set		*Var[0]  $Formation_SummonSpyGuy
+					Set		*Var[C]  003F0007
+					Set		*Var[D]  003F0003
+					ExecWait $Script_DoSummon
+				Case  >=  25`
+					Set		*Var[0]  $Formation_SummonPyroGuy
+					Set		*Var[C]  003E0003
+					Set		*Var[D]  003E0001
+					ExecWait $Script_DoSummon
+				Case  >=  20`
+					Set		*Var[0]  $Formation_SummonSpyGuy
+					Set		*Var[C]  003F0007
+					Set		*Var[D]  003F0003
+					ExecWait $Script_DoSummon
+				Case  >=  15`
+					Set		*Var[0]  $Formation_SummonPyroGuy
+					Set		*Var[C]  003E0003
+					Set		*Var[D]  003E0001
+					ExecWait $Script_DoSummon
+				Case  >=  10`
+					Set		*Var[0]  $Formation_SummonSpyGuy
+					Set		*Var[C]  003F0007
+					Set		*Var[D]  003F0003
+					ExecWait $Script_DoSummon
+				Case  >=  5`
+					Set		*Var[0]  $Formation_SummonPyroGuy
+					Set		*Var[C]  003E0003
+					Set		*Var[D]  003E0001
+					ExecWait $Script_DoSummon
+				Case  >=  0`
+					Set		*Var[0]  $Formation_SummonSpyGuy
+					Set		*Var[C]  003F0007
+					Set		*Var[D]  003F0003
+					ExecWait $Script_DoSummon
+				EndSwitch
+				Wait	20
+			EndIf
+%	EndIf
+	Call	ActorExists		( .Actor:Enemy2 *Var[0] )
+	If	*Var[0] != 0
+		Call	GetOriginalActorType	( .Actor:Enemy2 *Var[0] )
+		If		*Var[0] ==  AB 
+			Call		GetStatusFlags	( 00000100 *Var[0] )
+			If		*Var[0] !&  01000000 
+				Call		RandInt		( 00000064 *Var[0] )
+				If 		*Var[0] <=  0000003C 
+					ExecWait $Script_LightningAttack 
+					Return
+				EndIf
+			EndIf
+		EndIf
+	EndIf
+	ExecWait $Script_BombAttack 
+	Return
+	End
+}
+
+#new:Vector3D $SpawnPos
+{
+0` -1000` 0`
+}
+
+#new:Formation $Formation_SummonSpyGuy
+{
+80233AB4 $SpawnPos 00000064 00000000 00000000 00000000 00000000 
+}
+	
+#new:Formation $Formation_SummonPyroGuy
+{
+80233A8C $SpawnPos 00000064 00000000 00000000 00000000 00000000 
+}
+	
+%#new:Formation $Formation_SummonMediGuy
+%80234500 $SpawnPos 00000064 00000000 00000000 00000000 00000000
+
+#new:Script $Script_DoSummon
+{
+	Call	UseIdleAnimation 	( FFFFFF81 .False )
+	Call	EnableIdleScript 	( FFFFFF81 .False )
+	Call	SummonEnemy      	( *Var[0] 00000000 )
+	Set		*Var[B] *Var[0]
+	Call	SetActorPos       	( *Var[B] 200` 0` 50` )
+	Call	SetAnimation		( *Var[B] 00000001 *Var[C] )
+	Call	SetActorSpeed     	( *Var[B] *Fixed[4.000000] )
+	Call	SetGoalPos       	( *Var[B] 60` 0` 50` )
+	Call	RunToGoal      	( *Var[B] 00000000 00000000 )
+	Call	SetGoalToIndex  	( *Var[B] *Var[A] )
+	Call	RunToGoal      	( *Var[B] 00000000 00000000 )
+	Call	SetAnimation 		( *Var[B] 00000001 *Var[D] )
+	Call	GetActorPos       	( *Var[B] *Var[0] *Var[1] *Var[2] )
+	Call	ForceHomePos 		( *Var[B] *Var[0] *Var[1] *Var[2] )
+	Call	HPBarToHome    		( *Var[B] )
+	Call	EnableIdleScript 	( FFFFFF81 .True )
+	Call	UseIdleAnimation 	( FFFFFF81 .True )
+	Return
+	End
+}
+
+#new:Script $Script_GetFirstOpenColumn
+{
+	Set      *Flag[01] 00000000 
+	Set      *Flag[02] 00000000 
+	Call     EnemyCreateTargetList ( 00008002 )
+	Call     InitTargetIterator 	( )
+	Label    00000000 
+	Call     GetOwnerTarget ( *Var[0] *Var[5] )
+	Call     GetIndexFromHome ( *Var[0] *Var[5] )
+	Mod      *Var[5] 00000004 
+	Switch   *Var[5] 
+		Case     ==  00000000 
+			Set      *Flag[01] 00000001 
+		Case     ==  00000001 
+			Set      *Flag[02] 00000001 
+	EndSwitch
+	Call     ChooseNextTarget 	( 00000000 *Var[0] )
+	If       *Var[0] !=  FFFFFFFF 
+		Goto     00000000 
+	EndIf
+	If       *Flag[01] ==  00000000 
+		Set      *Var[A] 00000000 
+		Return
+	EndIf
+	If       *Flag[02] ==  00000000 
+		Set      *Var[A] 00000001 
+		Return
+	EndIf
+	Set      *Var[A] FFFFFFFF 
+	Return
+	End
+}
+	
+#new:Script $OpenHatch
+{
+	Call     PlaySoundAtPart	( .Actor:Enemy0 00000001 0000206A )
+	Call     SetAnimation		( .Actor:Enemy0 00000001 0076000B )
+	Call     SetPartFlagBits	( .Actor:Enemy0 00000001 00000001 .False )
+	Call     PlayModelAnimation			( 00000000 $ModelAnimation_80220D88 )
+	Wait     00000014 
+	Call     SetAnimation		( .Actor:Self 00000001 0076000B )
+	Return
+	End
+}
+
+#new:Script $CloseHatch
+{
+	Call     SetAnimation		( .Actor:Enemy0 00000001 00760002 )
+	Call     SetPartFlagBits	( .Actor:Enemy0 00000001 00000001 .True )
+	Call     PlayModelAnimation			( 00000000 $ModelAnimation_8021E798 )
+	Call     PlaySoundAtPart	( .Actor:Enemy0 00000001 0000206B )
+	Return
+	End
+}
+
+% This script executes when the ToyTank dies. A line is added to also remove
+% the GeneralGuy actor. Otherwise, he can continue to attack so long as other
+% enemies remain in the battle.
+@ $Script_8022ED80
+{
+	Wait     0000000F 
+	Call     PlaySoundAtActor 	( .Actor:Enemy1 0000036F )
+	Call     PlayModelAnimation ( 00000000 $ModelAnimation_8021D318 )
+	Call     GetActorVar 	( .Actor:Self 00000005 *Var[0] )
+	If       *Var[0] !=  00000000 
+		Call     RemoveEffect ( *Var[0] )
+		Call     SetActorVar 	( .Actor:Self 00000005 00000000 )
+		Call     SetActorVar 	( .Actor:Self 00000006 00000000 )
+	EndIf
+	Wait     0000002D 
+	Wait     0000000A 
+	Call     UseIdleAnimation 	( .Actor:Enemy0 .False )
+	Call     SetAnimation 	( .Actor:Enemy0 00000001 00760005 )
+	Wait     0000000F 
+	Call     PlayEffect  	( 00000019 00000002 00000066 00000028 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 )
+	Call     SetActorVar 	( .Actor:Self 00000000 00000000 )
+	Call     UseBattleCamPreset 	( 0000000E )
+	Call     BattleCamTargetActor ( 00000200 )
+	Call     MoveBattleCamOver 	( 0000003C )
+	Call     PlaySoundAtActor 	( .Actor:Enemy1 0000034E )
+	Call     SetActorJumpGravity 	( .Actor:Enemy0 *Fixed[0.60058594] )
+	Call     SetActorDispOffset ( 00000200 00000000 00000000 00000000 )
+	Call     GetActorPos 	( .Actor:Enemy0 *Var[0] *Var[1] *Var[2] )
+	Set      *Var[1] 00000000 
+	Call     SetAnimation 	( .Actor:Enemy0 00000001 00760005 )
+	Thread
+		Wait     00000019 
+		Call     SetAnimatedModelRootPosition ( 00000000 0000017C 00000000 00000000 )
+	EndThread
+	Call     SetGoalPos 	( .Actor:Enemy0 *Var[0] *Var[1] *Var[2] )
+	Call     JumpToGoal 	( .Actor:Enemy0 00000032 00000000 00000001 00000000 )
+	Call     PlaySoundAtActor 	( .Actor:Enemy0 000020E4 )
+	Call     UseBattleCamPreset 	( 00000002 )
+	Call     MoveBattleCamOver 	( 0000001E )
+	Call     SetAnimation 	( .Actor:Enemy0 00000001 00760010 )
+	Call     GetActorPos 	( .Actor:Enemy0 *Var[0] *Var[1] *Var[2] )
+	Add      *Var[0] 00000012 
+	Call     ForceHomePos 	( .Actor:Enemy0 *Var[0] *Var[1] *Var[2] )
+	Call     SetEnemyHP  	( .Actor:Enemy0 00000001 )
+	Call     SetPartDispOffset 	( .Actor:Enemy0 00000001 00000000 00000000 00000000 )
+	Call     SetActorRotation 	( .Actor:Enemy0 00000000 00000000 00000000 )
+	Call     SetActorJumpGravity 	( .Actor:Enemy0 *Fixed[1.0] )
+	Call     GetActorPos 	( .Actor:Enemy0 *Var[0] *Var[1] *Var[2] )
+	Call     SetGoalPos 	( .Actor:Enemy0 *Var[0] *Var[1] *Var[2] )
+	Call     JumpToGoal 	( .Actor:Enemy0 0000000C 00000000 00000001 00000000 )
+	Call     SetAnimation 	( .Actor:Enemy0 00000001 00760007 )
+	Call     ShakeCam    	( 00000001 00000000 00000006 *Fixed[1.0] )
+	Call     GetActorPos 	( .Actor:Enemy0 *Var[0] *Var[1] *Var[2] )
+	Add      *Var[0] 0000000A 
+	Add      *Var[1] 0000001E 
+	Call     PlayEffect  	( 0000002F 00000000 *Var[0] *Var[1] *Var[2] 00000014 00000004 *Var[F] 00000000 00000000 00000000 00000000 00000000 00000000 )
+	Call     PlaySoundAtActor 	( .Actor:Enemy0 000020E5 )
+	Call     DropStarPoints ( 00000200 )
+	Wait     0000001E 
+	Call     RemoveEffect ( *Var[F] )
+	Call     ActorExists 	( .Actor:Enemy2 *Var[0] )
+% Only disable if Enemy2 is a LightBulb.
+    If       *Var[0] !=  00000000 
+        Call    GetOriginalActorType    (.Actor:Enemy2 *Var[0])
+        If        *Var[0]  ==  AB
+            Call     SetActorFlagBits     ( .Actor:Enemy2 00400000 .True )
+            Call     RemoveActor     ( .Actor:Enemy2 )    % Added -- remove LightBulb.
+        EndIf
+    EndIf
+    Call     SetActorFlagBits     ( .Actor:Enemy0 00400000 .True )
+    Call     RemoveActor     ( .Actor:Self )
+    Call     RemoveActor     ( .Actor:Enemy0 )    % Added -- remove GeneralGuy.
+    Return
+    End
+}
+
+@ $Script_Idle_8022CC38
+{
+	Label    00000000 
+	Call     ActorExists 	( .Actor:Enemy1 *Var[0] )
+	If       *Var[0] !=  00000000 
+		Call     GetActorVar 	( .Actor:Self 00000000 *Var[0] )
+		If       *Var[0] !=  00000000 
+			Call     GetAnimatedNodePosition ( 00000000 0000003E *Var[0] *Var[1] *Var[2] )
+			Call     SetActorPos 	( .Actor:Enemy0 *Var[0] *Var[1] *Var[2] )
+			Call     GetAnimatedNodeRotation ( 00000000 0000003E *Var[0] *Var[1] *Var[2] )
+			Call     SetActorRotation 	( .Actor:Enemy0 *Var[0] 00000000 *Var[2] )
+		EndIf
+		Call     GetActorVar 	( .Actor:Self 00000005 *Var[5] )
+		If       *Var[5] !=  00000000 
+			Call     ActorExists 	( .Actor:Enemy2 *Var[0] )
+			If       *Var[0] !=  00000000 
+				% Only continue if Enemy2 is a LightBulb.
+				Call	GetOriginalActorType	(.Actor:Enemy2 *Var[0])
+				If		*Var[0]  ==  AB
+					Call     GetAnimatedNodeRotation ( 00000000 0000003E *Var[0] *Var[1] *Var[3] )
+					Call     GetModelCenter ( 00000027 )
+					Call     GetActorVar 	( .Actor:Self 00000006 *Var[6] )
+					If       *Var[6] ==  00000000 
+						Call     GetActorVar 	( .Actor:Self 00000007 *Var[A] )
+						If       *Var[A] !=  00000000 
+						   Set      *Var[0] 000003E8 
+						EndIf
+					EndIf
+					Call     $Function_80218120 ( *Var[0] *Var[1] *Var[2] *Var[3] *Var[5] )
+				EndIf
+			EndIf
+		EndIf
+		Wait     00000001 
+		Goto     00000000 
+	EndIf
+	Return
+	End
+}

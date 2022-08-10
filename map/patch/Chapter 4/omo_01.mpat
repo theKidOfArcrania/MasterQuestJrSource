@@ -1,0 +1,62 @@
+@ $Script_ExitWalk_80240CB0
+{
+     SetGroup 0000001B 
+     Call     UseExitHeading ( 0000003C 00000000 )
+     Exec     ExitWalk 
+     Call     GotoMap     	( "omo_18" 00000000 )
+     Wait     00000064 
+     Return
+     End
+}
+   
+#import NPC_SpyGuy.mpat
+
+@ $NpcGroupList_80242310
+{
+00000001 $NpcGroup_802417A0 10000001 
+00000001 $NpcGroup_80241A00 10020001 
+00000001 $NpcGroup_80241C60 10020001 
+00000001 $NpcGroup_80241EC0 10010001 
+00000001 $NpcGroup_80242120 10050001 
+00000004 $NPC_SpyGuy 101A0001 
+00000000 00000000 00000000 
+}
+
+@ $NPC_SpyGuy
+{
+% npc IDs for main enemy and projectiles
+[000] 5
+[1F0] 6
+[3E0] 7
+[5D0] 8
+[008] 0.0 0.0 0.0 % spawn position
+[E0] 0` 0` 0` 300` % wander area
+[FC] 0` 0` 0` 500` 500` % detection volume
+}
+
+@ $???_80246338_omo_17
+{
+1.5			% move speed
+0000003C	% move time
+0000000F	% wait time
+180.0		% alert radius (was 90.0)
+50.0 
+00000003 
+3.8			% chase speed
+00000008 
+00000001 
+300.0 		% chase radius (was 140.0)
+60.0 
+00000001 
+}
+
+@ $???_80246410_omo_17
+{
+16.0		% move speed (was 8.0)
+00000000	
+00000000 	
+4.0			% alert radius
+0.5 
+FFFFFFFF 00000000 00000000 
+00000000 00000000 00000000 00000000 
+}

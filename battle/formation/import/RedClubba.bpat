@@ -1,0 +1,392 @@
+
+#new:Actor $RedClubba
+{
+% basic stats
+[Index]         62b % via enemy name table
+[Level]        16`b
+[MaxHP]        20`b
+[Coins]         1`b
+[Flags]        00000000
+% move effectiveness
+[Escape]       25`b
+[Item]          0`b
+[AirLift]       0`b
+[Hurricane]     0`b % Bow's "Spook" as well
+[UpAndAway]     0`b
+[PowerBounce]  50`b
+[SpinSmash]     0`b % weight (0-4)
+% screen position offsets
+[Size]         42`b  42`b % width height
+[HealthBar]     0`b   0`b % dx dy
+[StatusTurn]  -10`b  20`b % dx dy
+[StatusIcon]   10`b  35`b % dx dy
+% ai
+[PartsCount]  1`s
+[PartsTable]  $PartsTable_80218104_RedClubba
+[StatusTable]  $StatusTable_80218058_RedClubba
+[Script]       $Script_StartAI_80218150_RedClubba
+}
+
+
+#new:IdleAnimations $IdleAnimations_80218000_RedClubba
+{
+.Status:Normal    003A0901
+.Status:Stone     003A0900
+.Status:Sleep     003A0903
+.Status:Poison    003A0901
+.Status:Stop      003A0900
+.Status:Static    003A0901
+.Status:Paralyze  003A0900
+.Status:Dizzy     003A0905
+.Status:Fear  003A0905
+.Status:End
+}
+
+#new:StatusTable $StatusTable_80218058_RedClubba
+{
+.Status:Normal      0`
+.Status:Default    0`
+.Status:Sleep      50`
+.Status:Poison     50`
+.Status:Frozen      0`
+.Status:Dizzy       0`
+.Status:Fear  100`
+.Status:Static     50`
+.Status:Paralyze   10`
+.Status:Shrink     60`
+.Status:Stop       10`
+.Status:DefaultTurnMod   0`
+.Status:SleepTurnMod     -2`
+.Status:PoisonTurnMod     0`
+.Status:FrozenTurnMod     0`
+.Status:DizzyTurnMod     -2`
+.Status:FearTurnMod   0`
+.Status:StaticTurnMod     0`
+.Status:ParalyzeTurnMod  -1`
+.Status:ShrinkTurnMod    -2`
+.Status:StopTurnMod      -1`
+.Status:End
+}
+
+#new:DefenseTable $DefenseTable_8021804C_RedClubba
+{
+.Element:Normal  00000000
+.Element:End
+}
+
+#new:PartsTable $PartsTable_80218104_RedClubba
+{
+00800000 01000000 F42000FF $IdleAnimations_80218000_RedClubba $DefenseTable_8021804C_RedClubba 00000000 00000000 08FD0000 00000000 
+}
+
+#new:Script $Script_StartAI_80218150_RedClubba
+{
+	Call     BindTakeTurn  		( FFFFFF81 $Script_TakeTurn_802186BC_RedClubba )
+	Call     BindIdle	   		( FFFFFF81 $Script_8021819C_RedClubba )
+	Call     BindHandleEvent  	( FFFFFF81 $Script_HandleEvent_802181AC_RedClubba )
+	Call	 SetActorScale  	( FFFFFF81 *Fixed[1.20] *Fixed[1.20] *Fixed[1.20] )
+	Return
+	End
+}
+
+#new:Script $Script_8021819C_RedClubba
+{
+	Return
+	End
+}
+
+#new:Script $Script_HandleEvent_802181AC_RedClubba
+{
+	Call     UseIdleAnimation 	( .Actor:Self .False )
+	Call     EnableIdleScript 	( .Actor:Self 00000000 )
+	Call     GetLastEvent 	( .Actor:Self *Var[0] )
+	Switch   *Var[0] 
+		CaseOR   ==  .Event:HitCombo
+		CaseOR   ==  .Event:Hit
+			SetConst *Var[0] 00000001 
+			SetConst *Var[1] 003A0904 
+			ExecWait 80299044 
+		EndCaseGroup
+		Case     ==  .Event:BurnHit
+			SetConst *Var[0] 00000001 
+			SetConst *Var[1] 003A0906 
+			SetConst *Var[2] 003A0907 
+			ExecWait 8029A0D0 
+		Case     ==  .Event:BurnDeath
+			SetConst *Var[0] 00000001 
+			SetConst *Var[1] 003A0906 
+			SetConst *Var[2] 003A0907 
+			ExecWait 8029A0D0 
+			SetConst *Var[0] 00000001 
+			SetConst *Var[1] 003A0907 
+			ExecWait 8029AEC0 
+			Return
+		Case     ==  0000000B
+			SetConst *Var[0] 00000001 
+			SetConst *Var[1] 003A0904 
+			ExecWait 8029B998 
+		Case     ==  00000021
+			SetConst *Var[0] 00000001 
+			SetConst *Var[1] 003A0904 
+			ExecWait 8029B998 
+			SetConst *Var[0] 00000001 
+			SetConst *Var[1] 003A0904 
+			ExecWait 8029AEC0 
+			Return
+		Case     ==  .Event:ShockHit
+			SetConst *Var[0] 00000001 
+			SetConst *Var[1] 003A0904 
+			ExecWait 8029A6FC 
+			SetConst *Var[0] 00000001 
+			SetConst *Var[1] 003A0904 
+			ExecWait 8029BD70 
+			SetConst *Var[0] 00000001 
+			SetConst *Var[1] 003A0902 
+			ExecWait 8029BEB8 
+		Case     ==  .Event:ShockDeath
+			SetConst *Var[0] 00000001 
+			SetConst *Var[1] 003A0904 
+			ExecWait 8029A6FC 
+			SetConst *Var[0] 00000001 
+			SetConst *Var[1] 003A0904 
+			ExecWait 8029AEC0 
+			Return
+		CaseOR   ==  00000017
+		CaseOR   ==  .Event:Immune
+		CaseOR   ==  .Event:AirLiftFailed
+			SetConst *Var[0] 00000001 
+			SetConst *Var[1] 003A0901 
+			ExecWait 8029AC70 
+		EndCaseGroup
+		Case     ==  .Event:Death
+			SetConst *Var[0] 00000001 
+			SetConst *Var[1] 003A0904 
+			ExecWait 80299044 
+			Wait     0000000A 
+			SetConst *Var[0] 00000001 
+			SetConst *Var[1] 003A0904 
+			ExecWait 8029AEC0 
+			Return
+		Case     ==  .Event:RecoverStatus
+			SetConst *Var[0] 00000001 
+			SetConst *Var[1] 003A0901 
+			ExecWait 8029BFA0 
+		Case     ==  .Event:ScareAway
+			SetConst *Var[0] 00000001 
+			SetConst *Var[1] 003A0902 
+			SetConst *Var[2] 003A0904 
+			ExecWait 8029B22C 
+			Return
+		Case     ==  .Event:BeginAirLift
+			SetConst *Var[0] 00000001 
+			SetConst *Var[1] 003A0904 
+			ExecWait 8029C37C 
+		Case     ==  .Event:BlowAway
+			SetConst *Var[0] 00000001 
+			SetConst *Var[1] 003A0904 
+			ExecWait 8029C4A8 
+			Return
+		Default
+	EndSwitch
+	Call     EnableIdleScript 	( .Actor:Self 00000001 )
+	Call     UseIdleAnimation 	( .Actor:Self .True )
+	Return
+	End
+}
+
+#new:Script $Script_TakeTurn_802186BC_RedClubba
+{
+	Call     UseIdleAnimation	( FFFFFF81 00000000 )
+	Call     EnableIdleScript	( FFFFFF81 00000000 )
+	Call     SetTargetActor	( FFFFFF81 00000000 )
+	Call     UseBattleCamPreset 	( 0000003F )
+	Call     BattleCamTargetActor	( FFFFFF81 )
+	Call     8024ECF8	( FFFFFFFF 00000001 00000000 )
+	Call     GetBattlePhase  	( *Var[0] )
+	If       *Var[0]  ==  00000001
+		Call     SetGoalToTarget 	( FFFFFF81 )
+		Call     GetGoalPos 	( FFFFFF81 *Var[0] *Var[1] *Var[2] )
+		Add      *Var[0] 0000001B 
+		Set      *Var[1] 00000000 
+		Sub      *Var[2] 00000006 
+		Call     SetActorPos    	( FFFFFF81 *Var[0] *Var[1] *Var[2] )
+		Wait     15` 
+	Else
+		Call     SetAnimation 	( FFFFFF81 00000001 003A0902 )
+		Call     SetActorSpeed     	( FFFFFF81 *Fixed[4.000000] )
+		Call     SetGoalToTarget 		( FFFFFF81 )
+		Call     GetStatusFlags	( FFFFFF81 *Var[0] )
+		If       *Var[0]  !&  00080000
+			Call     AddGoalPos     	( FFFFFF81 0000001B 00000000 FFFFFFFA )
+		Else
+			Call     AddGoalPos     	( FFFFFF81 0000000A 00000000 FFFFFFFA )
+		EndIf
+		Call     RunToGoal      	( FFFFFF81 00000000 00000000 )
+		Call     SetAnimation 	( FFFFFF81 00000001 003A0901 )
+		Wait     10` 
+	EndIf
+	Call     EnemyTestTarget   	( FFFFFF81 *Var[0] 00000000 00000000 00000001 00000010 )
+	Switch   *Var[0] 
+		   CaseOR  == 00000006 
+		   CaseOR  == 00000005 
+			   Call     PlaySoundAtActor    	( FFFFFF81 000020C5 )
+			   Call     SetAnimation 	( FFFFFF81 00000001 003A0908 )
+			   Wait     00000014 
+			   If       *Var[0]  ==  00000005
+					Call     EnemyTestTarget   	( FFFFFF81 *Var[0] 80000000 00000000 00000000 00000000 )
+					Wait     00000014 
+			   EndIf
+			   Call     UseBattleCamPreset 	( 00000002 )
+			   Call     YieldTurn	( )
+			   Call     SetActorYaw	( FFFFFF81 000000B4 )
+			   Call     AddActorDecoration	( FFFFFF81 00000001 00000000 00000002 )
+			   SetConst *Var[0] 00000001 
+			   SetConst *Var[1] 003A0902 
+			   ExecWait 8029BEB8 
+			   Call     RemoveActorDecoration	( FFFFFF81 00000001 00000000 )
+			   Call     SetActorYaw	( FFFFFF81 00000000 )
+			   Call     EnableIdleScript	( FFFFFF81 00000001 )
+			   Call     UseIdleAnimation	( FFFFFF81 00000001 )
+			   Return
+		   EndCaseGroup 
+	EndSwitch
+	Call     GetBattlePhase  	( *Var[0] )
+	If       *Var[0]  ==  00000001
+		Goto     00000028 
+	EndIf
+	Call     GetActorHP        	( FFFFFF81 *Var[0] )
+	Call     GetEnemyMaxHP     	( FFFFFF81 *Var[1] )
+	MulF     *Var[0] *Fixed[100.000000] 
+	DivF     *Var[0] *Var[1] 
+	If       *Var[0]  <=  30`
+		Goto     00000032 
+	EndIf
+	Call     RandInt   	( 100` *Var[0] )
+	If       *Var[0]  <=  40`
+		Goto     00000032 
+	EndIf
+	Label    00000028 
+	Call     SetAnimation 	( FFFFFF81 00000001 003A0909 )
+	Wait     16` 
+	Call     PlaySoundAtActor    	( FFFFFF81 000020C5 )
+	Call     SetAnimation 	( FFFFFF81 00000001 003A090A )
+	Wait     2`
+	Wait     2`
+	Call     SetGoalToTarget   	( FFFFFF81 )
+	Call     EnemyDamageTarget      	( FFFFFF81 *Var[0] 10000000 00000000 80080364 00000006 00000020 )
+	Thread
+		Call     ShakeCam	( 00000001 00000000 0000000A *Fixed[1.500000] )
+	EndThread
+	Goto     00000064 
+	Label    00000032 
+	% multi-hit attack
+		Call     SetAnimation 	( FFFFFF81 00000001 003A0909 )
+		Wait     00000008 
+		Call     PlaySoundAtActor    	( FFFFFF81 000020C5 )
+		Call     SetAnimation 	( FFFFFF81 00000001 003A090A )
+		Wait     00000002 
+		Wait     00000002 
+		Call     SetGoalToTarget   	( FFFFFF81 )
+		Call     EnemyDamageTarget      	( FFFFFF81 *Var[0] 10000000 00000000 00000000 00000001 00000040 )
+		Thread
+			Call     ShakeCam	( 00000001 00000000 0000000A *Fixed[1.500000] )
+		EndThread
+		Call     GetActorHP     ( 00000000 *Var[0] )
+		If       *Var[0]  ==  00000000
+			Goto     00000064 
+		EndIf
+		%
+		Call     SetAnimation 	( FFFFFF81 00000001 003A0909 )
+		Wait     00000008 
+		Call     PlaySoundAtActor    	( FFFFFF81 000020C5 )
+		Call     SetAnimation 	( FFFFFF81 00000001 003A090A )
+		Wait     00000002 
+		Wait     00000002 
+		Call     SetGoalToTarget   	( FFFFFF81 )
+		Call     EnemyDamageTarget      	( FFFFFF81 *Var[0] 10000000 00000000 00000000 00000001 00000040 )
+		Thread
+			Call     ShakeCam	( 00000001 00000000 0000000A *Fixed[1.500000] )
+		EndThread
+		Call     GetActorHP     ( 00000000 *Var[0] )
+		If       *Var[0]  ==  00000000
+			Goto     00000064 
+		EndIf
+		%
+		Call     SetAnimation 	( FFFFFF81 00000001 003A0909 )
+		Wait     00000008 
+		Call     PlaySoundAtActor    	( FFFFFF81 000020C5 )
+		Call     SetAnimation 	( FFFFFF81 00000001 003A090A )
+		Wait     00000002 
+		Wait     00000002 
+		Call     SetGoalToTarget   	( FFFFFF81 )
+		Call     EnemyDamageTarget      	( FFFFFF81 *Var[0] 10000000 00000000 00000000 00000001 00000040 )
+		Thread
+			Call     ShakeCam	( 00000001 00000000 0000000A *Fixed[1.500000] )
+		EndThread
+		Call     GetActorHP     ( 00000000 *Var[0] )
+		If       *Var[0]  ==  00000000
+			Goto     00000064 
+		EndIf
+		%
+		Call     SetAnimation 	( FFFFFF81 00000001 003A0909 )
+		Wait     00000008 
+		Call     PlaySoundAtActor    	( FFFFFF81 000020C5 )
+		Call     SetAnimation 	( FFFFFF81 00000001 003A090A )
+		Wait     00000002 
+		Wait     00000002 
+		Call     SetGoalToTarget   	( FFFFFF81 )
+		Call     EnemyDamageTarget      	( FFFFFF81 *Var[0] 10000000 00000000 00000000 00000001 00000040 )
+		Thread
+			Call     ShakeCam	( 00000001 00000000 0000000A *Fixed[1.500000] )
+		EndThread
+		Call     GetActorHP   	( 00000000 *Var[0] )
+		If       *Var[0]  ==  00000000
+			Goto     00000064 
+		EndIf
+		%
+		Call     SetAnimation 	( FFFFFF81 00000001 003A0909 )
+		Wait     00000008 
+		Call     PlaySoundAtActor    	( FFFFFF81 000020C5 )
+		Call     SetAnimation 	( FFFFFF81 00000001 003A090A )
+		Wait     00000002 
+		Wait     00000002 
+		Call     SetGoalToTarget   	( FFFFFF81 )
+		Call     EnemyDamageTarget      	( FFFFFF81 *Var[0] 10000000 00000000 00000000 00000001 00000040 )
+		Thread
+			Call     ShakeCam	( 00000001 00000000 0000000A *Fixed[1.500000] )
+		EndThread
+		Call     GetActorHP     ( 00000000 *Var[0] )
+		If       *Var[0]  ==  00000000
+			Goto     00000064 
+		EndIf
+		%
+		Call     SetAnimation 	( FFFFFF81 00000001 003A0909 )
+		Wait     00000008 
+		Call     PlaySoundAtActor    	( FFFFFF81 000020C5 )
+		Call     SetAnimation 	( FFFFFF81 00000001 003A090A )
+		Wait     00000002 
+		Wait     00000002 
+		Call     SetGoalToTarget   	( FFFFFF81 )
+		Call     EnemyDamageTarget      	( FFFFFF81 *Var[0] 10000000 00000000 00000000 00000003 00000040 )
+		Thread
+			Call     ShakeCam	( 00000001 00000000 0000000A *Fixed[1.500000] )
+		EndThread
+	% end multi-hit attack
+	Label    00000064 
+	Switch   *Var[0] 
+		   CaseOR  == 00000000 
+		   CaseOR  == 00000002 
+			   Call     UseBattleCamPreset 	( 00000002 )
+			   Wait     00000013 
+			   Call     YieldTurn	( )
+			   SetConst *Var[0] 00000001 
+			   SetConst *Var[1] 003A0902 
+			   ExecWait 8029BEB8 
+		   EndCaseGroup 
+	EndSwitch
+	Call     EnableIdleScript	( FFFFFF81 00000001 )
+	Call     UseIdleAnimation	( FFFFFF81 00000001 )
+	Return
+	End
+}
+

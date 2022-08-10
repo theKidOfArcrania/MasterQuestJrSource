@@ -1,0 +1,154 @@
+% Updated the group to reflect a change to the formation. Dont want a YMagikoopa changing into an anti guy for no reason
+
+@ $Script_80244774
+{
+[90]  Call     SpeakToPlayer     ( 00000004 00400506 00400506 00000000 001100BB )
+}
+
+@ $Script_80244ED0
+{
+    0:  Switch  *MapVar[A] 
+    C:  	Case  ==  00000000 
+   18:  		Call     SpeakToPlayer 	( 00000003 003B0502 003B0501 00000010 001100B9 ) % Hey! Stop that! The Puff Puff Machine is extremely ...
+   38:  		Call     InterpNpcYaw 	( 00000003 0000005A 00000000 )
+   50:  	Case  ==  00000001 
+   5C:  		Call     SpeakToPlayer 	( 00000000 00490016 00490001 00000010 001100BF ) % Hey! What're you doing! The Puff Puff Machine's  d ...
+   7C:  		Call     InterpNpcYaw 	( 00000000 0000005A 00000000 )
+   94:  	Case  ==  00000002 
+   A0:  		Call     SpeakToPlayer 	( 00000001 00490016 00490001 00000010 001100BF ) % Hey! What're you doing! The Puff Puff Machine's  d ...
+   C0:  		Call     InterpNpcYaw 	( 00000001 0000010E 00000000 )
+   D8:  	Case  ==  00000003 
+   E4:  		Call     SpeakToPlayer 	( 00000002 00490016 00490001 00000010 001100BF ) % Hey! What're you doing! The Puff Puff Machine's  d ...
+  104:  		Call     InterpNpcYaw 	( 00000002 0000010E 00000000 )
+  11C:  EndSwitch
+  124:  Return
+  12C:  End
+}
+  
+@ $Script_80245004
+{
+    0:  Switch  *MapVar[A] 
+    C:  	Case  ==  00000000 
+   18:  		Call     SpeakToPlayer 	( 00000003 003B0502 003B0501 00000010 001100BA ) % I said don't hit it! Don't you realize that if the ...
+   38:  	Case  ==  00000001 
+   44:  		Call     SpeakToPlayer 	( 00000000 00490016 00490001 00000010 001100C0 ) % Didn't you hear me? Stop it! If you break that mac ...
+   64:  	Case  ==  00000002 
+   70:  		Call     SpeakToPlayer 	( 00000001 00490016 00490001 00000010 001100C0 ) % Didn't you hear me? Stop it! If you break that mac ...
+   90:  	Case  ==  00000003 
+   9C:  		Call     SpeakToPlayer 	( 00000002 00490016 00490001 00000010 001100C0 ) % Didn't you hear me? Stop it! If you break that mac ...
+   BC:  EndSwitch
+   C4:  Call     SetNpcVar   	( 00000003 00000000 00000001 )
+   DC:  Wait     00000005 
+   E8:  Exec     $Script_802445D4 
+   F4:  Return
+   FC:  End
+}
+
+@ $Script_Interact_802457D4
+{
+    0:  Switch  *AreaByte[6] 
+    C:  	Case  ==  00000000 
+   18:  		Call     GetSelfNpcID 	( *Var[0] )
+   28:  		If  *Var[0]  ==  00000003 
+   38:  			Call     SpeakToPlayer 	( .Npc:Self 003B0502 003B0501 00000005 001100B6 ) % Let's go!! C'mon! We need more clouds! I wanna see ...
+   58:  		Else
+   60:  			Call     SpeakToPlayer 	( .Npc:Self 00490016 00490001 00000005 001100BC ) %  Aw, fluffy fluffy  Great Puff Puff Machine, spewi ...
+   80:  		EndIf
+   88:  		Add  *AreaByte[6]  00000001 
+   98:  	Case  ==  00000001 
+   A4:  		Call     GetSelfNpcID 	( *Var[0] )
+   B4:  		If  *Var[0]  ==  00000003 
+   C4:  			Call     SpeakToPlayer 	( .Npc:Self 003B0502 003B0501 00000005 001100B7 ) % Go away! Don't disturb me! I'm completely absorbed ...
+   E4:  		Else
+   EC:  			Call     SpeakToPlayer 	( .Npc:Self 00490016 00490001 00000005 001100BD ) % Quit it! Leave me alone, man! Can't you see I'm bu ...
+  10C:  		EndIf
+  114:  		Add  *AreaByte[6]  00000001 
+  124:  	Case  ==  00000002 
+  130:  		Call     AdjustCam 	( .Cam:Default *Fixed[8.0] 00000000 0000012C *Fixed[19.0] *Fixed[-9.0] )
+  154:  		Call     GetSelfNpcID 	( *Var[0] )
+  164:  		If  *Var[0]  ==  00000003 
+  174:  			Call     SpeakToPlayer 	( .Npc:Self 003B0502 003B0501 00000005 001100B8 ) % Huff N. Puff is making a name for himself as an ev ...
+  194:  			Call     NpcFacePlayer 	( .Npc:Self 00000000 )
+  1A8:  			Wait     0000000F 
+  1B4:  			Call     EndSpeech 	( .Npc:Self 003B0502 003B0501 00000000 )
+  1D0:  		Else
+  1D8:  			Call     SpeakToPlayer 	( .Npc:Self 00490016 00490001 00000005 001100BE ) % Master Huff N. Puff is the man with the plan, all  ...
+  1F8:  			Call     NpcFacePlayer 	( .Npc:Self 00000000 )
+  20C:  			Wait     0000000F 
+  218:  			Call     EndSpeech 	( .Npc:Self 00490016 00490001 00000000 )
+  234:  		EndIf
+  23C:  		Call     SetNpcVar   	( 00000003 00000000 00000001 )
+  254:  		Wait     00000005 
+  260:  		Exec     $Script_802445D4 
+  26C:  		Call     BindNpcInteract 	( 00000000 00000000 )
+  280:  		Call     BindNpcInteract 	( 00000001 00000000 )
+  294:  		Call     BindNpcInteract 	( 00000002 00000000 )
+  2A8:  		Call     BindNpcInteract 	( 00000003 00000000 )
+  2BC:  EndSwitch
+  2C4:  Return
+  2CC:  End   
+}
+   
+@ $NpcGroup_80245CEC
+{
+00000000 $NpcSettings_80243F10 ~Vec3f:NPC_Lakitu_00 % 0 15 60
+00440D05 $Script_Init_80245B90 00000000 00000000 0000005A 
+~Items:25:SuperShroom:2:MapleSyrup:2:ThunderRage:2:StopWatch:2
+~HP:20:70:2:50 ~HP:30:60:2:50 ~HP:50:50:2:40 ~HP:80:40:2:40 ~HP:100:30:2:30 ~HP:None ~HP:None ~HP:None 
+~FP:20:50:3:40 ~FP:30:40:3:40 ~FP:50:40:3:40 ~FP:80:40:3:40 ~FP:100:30:3:40 ~FP:None ~FP:None ~FP:None 
+~CoinBonus:0:2
+~Movement:NPC_Lakitu_00
+00490001 00490002 00490003 00490003 00490001 00490001 00490004 00490004 
+00490003 00490001 00490001 00490001 00490001 00490001 00490001 00490001 
+00000000 00000000 00000000 001A00E4 % These followers of Bowser run the Puff Puff Machin ...
+% 
+% $NpcGroup_80245CEC[1F0]
+00000001 $NpcSettings_80243F10 ~Vec3f:NPC_Lakitu_01 % 65 15 60
+00440D05 $Script_Init_80245C04 00000000 00000000 0000010E 
+~Items:25:SuperShroom:2:MapleSyrup:2:ThunderRage:2:StopWatch:2
+~HP:20:70:2:50 ~HP:30:60:2:50 ~HP:50:50:2:40 ~HP:80:40:2:40 ~HP:100:30:2:30 ~HP:None ~HP:None ~HP:None 
+~FP:20:50:3:40 ~FP:30:40:3:40 ~FP:50:40:3:40 ~FP:80:40:3:40 ~FP:100:30:3:40 ~FP:None ~FP:None ~FP:None 
+~CoinBonus:0:2
+~Movement:NPC_Lakitu_01
+00490001 00490002 00490003 00490003 00490001 00490001 00490004 00490004 
+00490003 00490001 00490001 00490001 00490001 00490001 00490001 00490001 
+00000000 00000000 00000000 001A00E4 % These followers of Bowser run the Puff Puff Machin ...
+% 
+% $NpcGroup_80245CEC[3E0]
+00000002 $NpcSettings_80243F10 ~Vec3f:NPC_Lakitu_02 % 135 15 35
+00440D05 $Script_Init_80245C78 00000000 00000000 0000010E 
+~Items:25:SuperShroom:2:MapleSyrup:2:ThunderRage:2:StopWatch:2
+~HP:20:70:2:50 ~HP:30:60:2:50 ~HP:50:50:2:40 ~HP:80:40:2:40 ~HP:100:30:2:30 ~HP:None ~HP:None ~HP:None 
+~FP:20:50:3:40 ~FP:30:40:3:40 ~FP:50:40:3:40 ~FP:80:40:3:40 ~FP:100:30:3:40 ~FP:None ~FP:None ~FP:None 
+~CoinBonus:0:2
+~Movement:NPC_Lakitu_02
+00490001 00490002 00490003 00490003 00490001 00490001 00490004 00490004 
+00490003 00490001 00490001 00490001 00490001 00490001 00490001 00490001 
+00000000 00000000 00000000 001A00E4 % These followers of Bowser run the Puff Puff Machin ...
+% 
+% $NpcGroup_80245CEC[5D0]
+00000003 $NpcSettings_80243F3C ~Vec3f:NPC_Magikoopa_03 % -60 0 50
+00440D05 $Script_Init_80245AA8 00000000 00000000 0000005A 
+~Items:25:SuperShroom:2:MapleSyrup:2:ThunderRage:2:StopWatch:2
+~HP:20:70:2:50 ~HP:30:60:2:50 ~HP:50:50:2:40 ~HP:80:40:2:40 ~HP:100:30:2:30 ~HP:None ~HP:None ~HP:None 
+~FP:20:50:3:40 ~FP:30:40:3:40 ~FP:50:40:3:40 ~FP:80:40:3:40 ~FP:100:30:3:40 ~FP:None ~FP:None ~FP:None 
+~CoinBonus:0:2
+~Movement:NPC_Magikoopa_03
+003B0501 003B0501 003B0501 003B0501 003B0501 003B0501 003B0500 003B0500 
+003B0501 003B0501 003B0501 003B0501 003B0501 003B0501 003B0501 003B0501 
+00000000 00000000 00000000 001A00E4 % These followers of Bowser run the Puff Puff Machin ...
+% 
+% $NpcGroup_80245CEC[7C0]
+00000004 $NpcSettings_80243F3C ~Vec3f:NPC_FlyingMagikoopa_04 % 0 -1000 0
+00440D05 $Script_Init_80245B30 00000000 00000000 0000010E 
+~Items:25:SuperShroom:2:MapleSyrup:2:ThunderRage:2:StopWatch:2
+~HP:20:70:2:50 ~HP:30:60:2:50 ~HP:50:50:2:40 ~HP:80:40:2:40 ~HP:100:30:2:30 ~HP:None ~HP:None ~HP:None 
+~FP:20:50:3:40 ~FP:30:40:3:40 ~FP:50:40:3:40 ~FP:80:40:3:40 ~FP:100:30:3:40 ~FP:None ~FP:None ~FP:None 
+~CoinBonus:0:2
+~Movement:NPC_FlyingMagikoopa_04
+00400501 00400501 00400501 00400501 00400501 00400501 00400500 00400500 
+00400501 00400501 00400501 00400501 00400501 00400501 00400501 00400501 
+00000000 00000000 00000000 001A00E4 % These followers of Bowser run the Puff Puff Machin ...
+}
+
+%To fly away he becomes a malpractice guy, just go with it.

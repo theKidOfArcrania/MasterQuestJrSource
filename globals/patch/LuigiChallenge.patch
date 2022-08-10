@@ -1,0 +1,374 @@
+% Updated version by Quackles, keeps 0BP badges 0BP even in Luigi's Challenge
+
+#new:Function $Function_ActivateLuigiChallenge
+{
+LIO		A1, 8010F298
+ADDIU	A2, R0, 16`
+SB		A2, 0 (A1)
+JR		RA
+ADDIU	V0, R0, 2
+}
+
+#new:Function $Function_IsLuigiChallengeAccepted
+{
+PUSH	RA
+LIO		V0, 8010F298
+LBU		V0, 0 (V0)
+ADDI	V0, V0, -16`
+BEQ		V0, R0, .SetVariable
+ADDI	A2, R0, 1
+ADDI	A2, R0, 0
+.SetVariable
+LW		V0, C (A0)
+JAL		~Func:set_variable
+LW		A1, 0 (V0)
+POP		RA
+JR		RA
+ADDIU	V0, R0, 2
+}
+
+% Simply check if max BP == 16
+#new:Function $IsLuigiChallengeAccepted
+{
+LIO		V0, 8010F298
+LBU		V0, 0 (V0)
+ADDI	V0, V0, -16`
+BEQ		V0, R0, .End
+ADDI	V0, R0, 1
+ADDI	V0, R0, 0
+.End
+JR		RA
+NOP
+}
+
+% Force XP to be zero
+@Hook 1AB208
+{
+ADDIU	SP, SP, -8
+SW		RA, 4 (SP)
+SW		A0, 8 (SP)
+JAL		$IsLuigiChallengeAccepted
+NOP
+BNE		V0, R0, .End	% Branch if Luigi's Challenge is active.
+ADDIU	V1, R0, 1B		% Use player level of 27 -- no XP.
+LUI		V0, 8011
+ADDIU	V0, V0, F290
+LB		V1, 9 (V0)		% Load player level
+.End
+LW		RA, 4 (SP)
+LW		A0, 8 (SP)
+J		8027C934
+ADDIU	SP, SP, 8
+}
+
+% FOR REFERENCE: LIO = LUI + ORI
+
+% BP value displayed next to badge
+@Hook 13AF44
+{
+ADDIU	SP, SP, -4
+SW		V0, 4 (SP)
+JAL		$IsLuigiChallengeAccepted
+LB		A0, 12 (V0)
+BEQL	A0, R0, .done    	%skip check for 0 cost badges - game treats them normally
+NOP				%blank instr for branch delay
+BNEL	V0, R0, .done
+ADDI	A0, R0, 1
+.done 
+LW		V0, 4 (SP)
+ADDIU	SP, SP, 4
+J		80247C0C
+LW		T2, 68 (SP)
+}
+
+% Red circles displayed next to badge
+@Hook 13B138
+{
+ADDIU	SP, SP, -4
+SW		V0, 4 (SP)
+JAL		$IsLuigiChallengeAccepted
+LB		S3, 12 (V0)
+BEQL	S3, R0, .done    	%skip check for 0 cost badges - game treats them normally
+NOP				%blank instr for branch delay
+BNEL	V0, R0, .done
+ADDI	S3, R0, 1
+.done
+LW		V0, 4 (SP)
+ADDIU	SP, SP, 4
+J		80247E00
+SLTI	V0, S3, B
+}
+
+% BP for "Available: X" message
+@Hook 137B7C
+{
+LB		V0, 12 (V0)
+BEQL	V0, R0, .skipall    	%skip check for 0 cost badges - game treats them normally
+NOP				%blank instr for branch delay
+ADDIU	SP, SP, -8
+SW		RA, 4 (SP)
+SW		V0, 8 (SP)
+JAL		$IsLuigiChallengeAccepted
+NOP
+BNEL	V0, R0, .done
+ADDI	V0, R0, 1
+LW		V0, 8 (SP)
+.done
+LW		RA, 4 (SP)
+ADDIU	SP, SP, 8
+.skipall
+J		80244844
+ADDU	A2, A2, V0
+}
+
+% Check if badge can be equipped
+@Hook 13A728
+{
+LB		V0, F072 (AT)		%I THINK this loads the badge cost for passthrough to the hook, because...
+BEQL	V0, R0, .done    	%(skip check for 0 cost badges)
+NOP				%(blank instr for branch delay)
+JAL		$IsLuigiChallengeAccepted
+NOP
+BNEL	V0, R0, .done
+ADDI	V0, R0, 1			%... this sets it to 1 before it’s flushed out
+LB		V0, F072 (AT) 		%The LC check clobbers V0, so if we’re in normal mode, reset it
+.done
+J		802473F0
+LB		V1, 8 (S1)
+}
+
+% Number of circles to light up for available BP count
+@Hook 13ACE8
+{
+LB		V0, 12 (V0)
+ADDIU	SP, SP, -4
+BEQL	V0, R0, .done    	%skip check for 0 cost badges - game treats them normally
+NOP				%blank instr for branch delay
+SW		V0, 4 (SP)
+JAL		$IsLuigiChallengeAccepted
+NOP
+BNEL	V0, R0, .done
+ADDI	V0, R0, 1
+LW		V0, 4 (SP)
+.done
+ADDIU	SP, SP, 4
+J		802479B0
+SLT		V0, T3, V0
+}
+
+% Not sure exactly what this done, change it anyway
+@Hook 13AC84
+{
+ADDU	V0, V0, T2
+LB		V0, 12 (V0)
+ADDIU	SP, SP, -4
+BEQL	V0, R0, .done    	%skip check for 0 cost badges - game treats them normally
+NOP				%blank instr for branch delay
+SW		V0, 4 (SP)
+JAL		$IsLuigiChallengeAccepted
+NOP
+BNEL	V0, R0, .done
+ADDI	V0, R0, 1
+LW		V0, 4 (SP)
+.done
+J		8024794C
+ADDIU	SP, SP, 4
+}
+
+% Hide the "Available" string
+@Hook 13B7BC
+{
+JAL		$IsLuigiChallengeAccepted
+NOP
+BNE		V0, R0, .done
+DADDU	A2, S0, R0
+JAL		8024EE94
+NOP
+.done
+J		80248484
+NOP
+}
+
+% Hide the remaining BP count
+@Hook 13B7E4
+{
+JAL		$IsLuigiChallengeAccepted
+NOP
+BNE		V0, R0, .done
+DADDU	A1, T3, A1
+JAL		8012769C
+NOP
+.done
+J		802484AC
+NOP
+}
+
+% Original version by Clover
+/%
+
+#new:Function $Function_ActivateLuigiChallenge
+LIO		A1, 8010F298
+ADDIU	A2, R0, 16`
+SB		A2, 0 (A1)
+JR		RA
+ADDIU	V0, R0, 2
+
+#new:Function $Function_IsLuigiChallengeAccepted
+PUSH	RA
+LIO		V0, 8010F298
+LBU		V0, 0 (V0)
+ADDI	V0, V0, -16`
+BEQ		V0, R0, .SetVariable
+ADDI	A2, R0, 1
+ADDI	A2, R0, 0
+.SetVariable
+LW		V0, C (A0)
+JAL		{Func:set_variable}
+LW		A1, 0 (V0)
+POP		RA
+JR		RA
+ADDIU	V0, R0, 2
+
+% Simply check if max BP == 16
+#new:Function $IsLuigiChallengeAccepted
+LIO		V0, 8010F298
+LBU		V0, 0 (V0)
+ADDI	V0, V0, -16`
+BEQ		V0, R0, .End
+ADDI	V0, R0, 1
+ADDI	V0, R0, 0
+.End
+JR		RA
+NOP
+
+% Force XP to be zero
+@Hook 1AB208
+ADDIU	SP, SP, -8
+SW		RA, 4 (SP)
+SW		A0, 8 (SP)
+JAL		$IsLuigiChallengeAccepted
+NOP
+BNE		V0, R0, .End	% Branch if Luigi's Challenge is active.
+ADDIU	V1, R0, 1B		% Use player level of 27 -- no XP.
+LUI		V0, 8011
+ADDIU	V0, V0, F290
+LB		V1, 9 (V0)		% Load player level
+.End
+LW		RA, 4 (SP)
+LW		A0, 8 (SP)
+J		8027C934
+ADDIU	SP, SP, 8
+
+% BP value displayed next to badge
+@Hook 13AF44
+ADDIU	SP, SP, -4
+SW		V0, 4 (SP)
+JAL		$IsLuigiChallengeAccepted
+LB		A0, 12 (V0)
+BNEL	V0, R0, .done
+ADDI	A0, R0, 1
+.done 
+LW		V0, 4 (SP)
+ADDIU	SP, SP, 4
+J		80247C0C
+LW		T2, 68 (SP)
+
+% Red circles displayed next to badge
+@Hook 13B138
+ADDIU	SP, SP, -4
+SW		V0, 4 (SP)
+JAL		$IsLuigiChallengeAccepted
+LB		S3, 12 (V0)
+BNEL	V0, R0, .done
+ADDI	S3, R0, 1
+.done
+LW		V0, 4 (SP)
+ADDIU	SP, SP, 4
+J		80247E00
+SLTI	V0, S3, B
+
+% BP for "Available: X" message
+@Hook 137B7C
+LB		V0, 12 (V0)
+ADDIU	SP, SP, -8
+SW		RA, 4 (SP)
+SW		V0, 8 (SP)
+JAL		$IsLuigiChallengeAccepted
+NOP
+BNEL	V0, R0, .done
+ADDI	V0, R0, 1
+LW		V0, 8 (SP)
+.done
+LW		RA, 4 (SP)
+ADDIU	SP, SP, 8
+J		80244844
+ADDU	A2, A2, V0
+
+% Check if badge can be equipped
+@Hook 13A728
+JAL		$IsLuigiChallengeAccepted
+NOP
+BNEL	V0, R0, .done
+ADDI	V0, R0, 1
+LB		V0, F072 (AT)
+.done
+J		802473F0
+LB		V1, 8 (S1)
+
+% Number of circles to light up for available BP count
+@Hook 13ACE8
+LB		V0, 12 (V0)
+ADDIU	SP, SP, -4
+SW		V0, 4 (SP)
+JAL		$IsLuigiChallengeAccepted
+NOP
+BNEL	V0, R0, .done
+ADDI	V0, R0, 1
+LW		V0, 4 (SP)
+.done
+ADDIU	SP, SP, 4
+J		802479B0
+SLT		V0, T3, V0
+
+% Not sure exactly what this done, change it anyway
+@Hook 13AC84
+ADDU	V0, V0, T2
+LB		V0, 12 (V0)
+ADDIU	SP, SP, -4
+SW		V0, 4 (SP)
+JAL		$IsLuigiChallengeAccepted
+NOP
+BNEL	V0, R0, .done
+ADDI	V0, R0, 1
+LW		V0, 4 (SP)
+.done
+J		8024794C
+ADDIU	SP, SP, 4
+
+% Hide the "Available" string
+@Hook 13B7BC
+JAL		$IsLuigiChallengeAccepted
+NOP
+BNE		V0, R0, .done
+DADDU	A2, S0, R0
+JAL		8024EE94
+NOP
+.done
+J		80248484
+NOP
+
+% Hide the remaining BP count
+@Hook 13B7E4
+JAL		$IsLuigiChallengeAccepted
+NOP
+BNE		V0, R0, .done
+DADDU	A1, T3, A1
+JAL		8012769C
+NOP
+.done
+J		802484AC
+NOP
+%/
+
+#export $Function_IsLuigiChallengeAccepted
+#export $Function_ActivateLuigiChallenge

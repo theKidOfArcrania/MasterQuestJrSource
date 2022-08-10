@@ -1,0 +1,29 @@
+
+#import NPC_RedClubba.mpat
+
+@ $NpcGroupList_80240B44
+{
+00000001 $NpcGroup_80240954 00000000 
+00000002 $NpcGroup_RedClubba 0F060004 
+00000000 00000000 00000000 
+}
+
+@ $NpcGroup_RedClubba
+{
+[00] 1							% npc1 ID
+[08] -300.0 50.0 -163.0			% spawn position
+[E0] -300` 50` -163` 150`		% wander origin and radius
+[FC] -300` 50` -163` 300` 175`	% detection bounds -- originally 70x200 (half-lengths)
+[1F0] 2							% npc2 ID
+}
+
+% We moved the chest, so recompile this script.
+@ $Script_MakeEntities
+{
+    0:  Call     MakeEntity       	( .Entity:Chest -480` 50` -200` 0` 00000000 80000000 )
+   28:  Call     AssignFlag       	( *GameFlag[0418] )
+   38:  Call     AssignScript     	( $Script_8024076C )
+   48:  Call     MakeEntity       	( .Entity:HealingBlock ~Vec3d:Entity80240800 ~Angle:Entity80240800 80000000 )
+   6C:  Return
+   74:  End
+}

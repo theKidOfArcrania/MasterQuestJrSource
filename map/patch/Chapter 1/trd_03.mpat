@@ -1,0 +1,13 @@
+@ $Script_MakeEntities
+{
+    0:  Set  *MapVar[0]  00000000 
+   10:  Call     MakeEntity  	( .Entity:RedSwitch ~Vec4d:Entity802419B0 80000000 )
+   34:  Call     AssignScript 	( $Script_80243174 )
+   44:  Call     MakeEntity  	( .Entity:RedSwitch ~Vec4d:Entity802419E4 80000000 )
+   68:  Call     AssignScript 	( $Script_8024374C )
+   78:  Call     MakeItemEntity ( .Item:KoopaFortressKey ~Vec3d:Item80241A18 00000000 *GF_TRD03_Item_FortressKeyA )
+   9C:  Call     MakeItemEntity ( .Item:KoopaFortressKey ~Vec3d:Item80241A3C 00000000 *GF_TRD03_Item_FortressKeyB )
+   C0:  Call     MakeItemEntity ( .Item:AutoJump ~Vec3d:Item80241A60 00000011 *GF_TRD03_Item_PowerBounce )
+   E4:  Return
+   EC:  End
+}

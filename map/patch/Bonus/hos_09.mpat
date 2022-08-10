@@ -1,0 +1,1368 @@
+
+#new:Header $Header
+{
+00000000 00000000 00000000 00000000 
+$Script_Main $EntryList 00000001 00000000 
+00000000 00000000 00000000 00000000 
+00000000 00000000 80200000 $Function_GetTattle 
+}
+
+#new:Function $Function_GetTattle
+{
+	ADDIU     SP, SP, FFE8
+	LIO       V0, $MapTattle
+	JR        RA
+	ADDIU     SP, SP, 18
+}
+
+#string $MapTattle
+{
+[Style Tattle]
+[EnableCDownNext]I've heard of this place--it's the[BR]
+Star Temple.[BR]
+[Wait][Next]
+People used to come here to call[BR]
+upon and honor the Star Spirits.[BR]
+[Wait][End]
+}
+
+#new:EntryList $EntryList
+{
+~Vec4f:EntryS
+}
+
+#new:Script_Main $Script_Main
+{
+	Set  *WorldMapLocation 0000001B 
+	Call	SetSpriteShading 	( 00030000 )
+	Call	SetCamPerspective 	( .Cam:Default 00000003 00000019 00000010 00001000 )
+	Call	SetCamBGColor 	( .Cam:Default 00000000 00000000 00000000 )
+	Call	SetCamEnabled 	( .Cam:Default .True )
+	Call	SetCamLeadPlayer 	( .Cam:Default .False )
+	ExecWait	$Script_UpdateCompletionIndicators
+	Call     MakeEntity  	( .Entity:SavePoint ~Vec4d:SavePoint 80000000 )
+	Call     MakeEntity  	( .Entity:HealingBlock ~Vec4d:HealBlock 80000000 )
+	Exec	$Script_ScrollTex
+	Exec	$Script_RegenerateSP
+	Exec	$Script_ToggleColumnsVis
+	If  *StoryProgress  <  0000005A
+		Call	EnableModel		( ~Model:Starbeam .False )
+	EndIf
+	Call	SetMusicTrack 	( 00000000 .Song:ShootingStarSummit 00000000 00000008 )
+	Call	MakeNpcs    	( 00000000 $BossNpcGroups )
+	Exec	$Script_EnterMap 
+	Return
+	End
+}
+	
+% ====================================================
+% Entry/exit scripts
+% ====================================================
+	
+#new:Script $Script_CreateExitTriggers
+{
+	Bind     $Script_ExitS  .Trigger:FloorAbove ~Collider:TriggerExitS 00000001 00000000 
+	Return
+	End
+}
+
+#new:Script $Script_ExitS
+{
+	SetGroup 0000001B 
+	Call     UseExitHeading ( 60` 0 ) % direction opposing Entry#0
+	Exec     ExitWalk 
+	Call     GotoMap     	( "hos_08" 1 )
+	Wait     100` 
+	Return
+	End
+}
+	
+#new:Script $Script_EnterMap
+{
+	Call     GetLoadType 	( *Var[1] )
+	If       *Var[1] ==  00000001 
+		Exec     EnterSavePoint 
+		Exec     $Script_CreateExitTriggers 
+	Else
+		Set  *Var[0]  $Script_CreateExitTriggers 
+		Exec	EnterWalk 
+	EndIf
+	Return
+	End
+}
+	
+% ====================================================
+% Fill in stars for completed rematch fights
+% ====================================================
+	
+#new:Script $Script_UpdateCompletionIndicators
+{
+	Call	EnableModel		( ~Model:Complete0 .False )
+	Call	EnableModel		( ~Model:Complete1 .False )
+	Call	EnableModel		( ~Model:Complete2 .False )
+	Call	EnableModel		( ~Model:Complete3 .False )
+	Call	EnableModel		( ~Model:Complete4 .False )
+	Call	EnableModel		( ~Model:Complete5 .False )
+	Call	EnableModel		( ~Model:Complete6 .False )
+	Call	EnableModel		( ~Model:Complete7 .False )
+	If  *Flag_BeatRematch0  ==  .True
+		Call	EnableModel		( ~Model:Complete0 .True )
+	EndIf
+	If  *Flag_BeatRematch1  ==  .True
+		Call	EnableModel		( ~Model:Complete1 .True )
+	EndIf
+	If  *Flag_BeatRematch2  ==  .True
+		Call	EnableModel		( ~Model:Complete2 .True )
+	EndIf
+	If  *Flag_BeatRematch3  ==  .True
+		Call	EnableModel		( ~Model:Complete3 .True )
+	EndIf
+	If  *Flag_BeatRematch4  ==  .True
+		Call	EnableModel		( ~Model:Complete4 .True )
+	EndIf
+	If  *Flag_BeatRematch5  ==  .True
+		Call	EnableModel		( ~Model:Complete5 .True )
+	EndIf
+	If  *Flag_BeatRematch6  ==  .True
+		Call	EnableModel		( ~Model:Complete6 .True )
+	EndIf
+	If  *Flag_BeatRematch7  ==  .True
+		Call	EnableModel		( ~Model:Complete7 .True )
+	EndIf
+	Return
+	End
+}
+	
+% ====================================================
+% Gradually recover Star Power on this map
+% ====================================================
+	
+#new:Script $Script_RegenerateSP
+{
+	Loop
+		Call	$Function_RecoverSP ( 1 *Var[0] )
+		/%
+		If  *Var[0]  >  0
+			Mod		*Var[0] 100
+			If  *Var[0]  ==  0
+				Call	GetPlayerPos	( *Var[0] *Var[1] *Var[2] )
+				Add  *Var[1]  20`
+				Call	PlayEffect	( 00000049 00000000 *Var[0] *Var[1] *Var[2] 00000001 20` 00000000 00000000 00000000 00000000 00000000 00000000 00000000 )
+			EndIf
+		EndIf
+		%/
+		Wait	1
+	EndLoop
+	Return
+	End
+}
+	
+#new:Function $Function_RecoverSP
+{
+	PUSH	RA, S0, S1
+	DADDU	S0, A0, R0
+	LW		S1, C (S0)
+	LW		A1, 0 (S1)
+	JAL		~Func:get_variable
+	LW		S1, 4 (S1)
+	LIO		V1, 8010F290
+	LB		A0, 28E (V1)
+	SLL		A0, A0, 8
+	LH		A1, 290 (V1)
+	DADDU	A1, A1, V0
+	SLT		A0, A0, A1
+	BNE		A0, R0, .Done
+	ADDIU	A2, R0, FFFF
+	DADDU	A2, A1, R0
+	SH		A2, 290 (V1)
+	.Done
+	DADDU	A0, S0, R0
+	JAL		~Func:set_variable
+	DADDU	A1, S1, R0
+	POP		RA, S0, S1
+	JR		RA
+	ADDIU	V0, R0, 2
+}
+	
+% ====================================================
+% The columns along the pool block frequently block
+% the camera. To get around this, manipulate their
+% visibility, hiding them in certain circumstances.
+% ====================================================
+
+#new:Script $Script_ToggleColumnsVis
+{
+	Loop
+		Set  *Var[4]  .True
+		Set  *Var[5]  .True
+		Call	$Function_GetCameraYaw ( 0 *Var[0] )
+		% convert angle to [-180,180]
+		If  *Var[0]  <  0
+			Add  *Var[0]  360`
+		EndIf
+		If  *Var[0]  >  180`
+			Sub  *Var[0]  360`
+		EndIf
+		% disable
+		If  *Var[0]  <  -70`
+			Set  *Var[4]  .False
+		EndIf
+		If  *Var[0]  >  70`
+			Set  *Var[5]  .False
+		EndIf
+		Call	GetPlayerPos	( *Var[0] *Var[1] *Var[2] )
+		If  *Var[0]  >  -200`
+			Set  *Var[4]  .True
+		EndIf
+		If  *Var[0]  <  200`
+			Set  *Var[5]  .True
+		EndIf
+		Call	EnableGroup	( ~Model:EastColumns *Var[4] )
+		Call	EnableGroup	( ~Model:WestColumns *Var[5] )
+		Wait	1
+	EndLoop
+	Return
+	End
+}
+	
+% There may already be a script API binding for this. I didn't find one.
+#new:Function $Function_GetCameraYaw % ( camID, *out )
+{
+	PUSH	RA, S0, S1, S2
+	DADDU	S2, A0, R0
+	LW		S1, C (S2)
+	LW		A1, 0 (S1)
+	JAL		~Func:get_variable
+	ADDIU	S1, S1, 4
+	LIA		V1, 800B1D80
+	SLL		S0, V0, 2
+	ADDU	S0, S0, V0
+	SLL		S0, S0, 2
+	SUBU	S0, S0, V0
+	SLL		V0, S0, 3
+	ADDU	S0, S0, V0
+	SLL		S0, S0, 3
+	ADDU	S0, S0, V1
+	LW		A1, 0 (S1)
+	% convert to int
+	LW		S1, 6C (S0)
+	MTC1	S1, F0
+	ROUND.W.S	F0, F0
+	MFC1	A2, F0
+	JAL		~Func:set_variable
+	DADDU	A0, S2, R0
+	POP		RA, S0, S1, S2
+	JR		RA
+	ADDIU	V0, R0, 2
+}
+
+% ====================================================
+% Set up models with scrolling textures
+% ====================================================
+	
+#import SetTexturePanner.mpat
+	
+#new:Script $Script_ScrollTex
+{
+	Thread
+		Set  *Var[0] 1
+		Set  *Var[1] 0`
+		Set  *Var[2] 0`
+		Set  *Var[3] 0`
+		Set  *Var[4] 300` 
+		Set  *Var[5] 00000001 
+		Set  *Var[6] 00000001 
+		Set  *Var[7] 00000001 
+		Set  *Var[8] 00000001 
+		Set  *Var[9] 00000000 
+		Set  *Var[A] 00000000 
+		Set  *Var[B] 00000000 
+		Set  *Var[C] 00000000 
+		Exec	$Script_SetTexturePanner
+	EndThread
+	Call     SetTexPanner 	( ~Model:Starbeam 00000001 )
+	Thread
+		Set  *Var[0] 2
+		Set  *Var[1] 0` 		
+		Set  *Var[2] 150` 		
+		Set  *Var[3] 0` 
+		Set  *Var[4] 0` 
+		Set  *Var[5] 00000001 
+		Set  *Var[6] 00000001 
+		Set  *Var[7] 00000001 
+		Set  *Var[8] 00000001 
+		Set  *Var[9] 00000000 
+		Set  *Var[A] 00000000 
+		Set  *Var[B] 00000000 
+		Set  *Var[C] 00000000 
+		Exec     $Script_SetTexturePanner
+	EndThread
+	Call     SetTexPanner 	( ~Model:ShootingStars 00000002 )
+	Thread
+		Set  *Var[0] 3
+		Set  *Var[1] 100` % main horizontal scroll
+		Set  *Var[2] -80` % main vertical scroll
+		Set  *Var[3] -50` % aux horizontal scroll
+		Set  *Var[4] 120` % aux vertical scroll
+		Set  *Var[5] 00000001 
+		Set  *Var[6] 00000001 
+		Set  *Var[7] 00000001 
+		Set  *Var[8] 00000001 
+		Set  *Var[9] 00000000 
+		Set  *Var[A] 00000000 
+		Set  *Var[B] 00000000 
+		Set  *Var[C] 00000000 
+		Exec     $Script_SetTexturePanner
+	EndThread
+	Call     SetTexPanner 	( ~Model:WaterSurface 00000003 )
+	Thread
+		Set  *Var[0] 4
+		Set  *Var[1] -90` 		
+		Set  *Var[2] 150` 		
+		Set  *Var[3] 170` 
+		Set  *Var[4] 40` 
+		Set  *Var[5] 00000001 
+		Set  *Var[6] 00000001 
+		Set  *Var[7] 00000001 
+		Set  *Var[8] 00000001 
+		Set  *Var[9] 00000000 
+		Set  *Var[A] 00000000 
+		Set  *Var[B] 00000000 
+		Set  *Var[C] 00000000 
+		Exec     $Script_SetTexturePanner
+	EndThread
+	Call     SetTexPanner 	( ~Model:Mist0 00000004 )
+	Call     SetTexPanner 	( ~Model:Mist1 00000004 )
+	Call     SetTexPanner 	( ~Model:Mist2 00000004 )
+	Call     SetTexPanner 	( ~Model:Mist3 00000004 )
+	Call     SetTexPanner 	( ~Model:Mist4 00000004 )
+	Call     SetTexPanner 	( ~Model:Mist5 00000004 )
+	Call     SetTexPanner 	( ~Model:Mist6 00000004 )
+	Call     SetTexPanner 	( ~Model:Mist7 00000004 )
+	Return
+	End
+}
+
+% ====================================================
+% NPCs
+% ====================================================
+
+#new:NpcGroupList $BossNpcGroups
+{
+00000001 $NpcGroup_Ch0 31000000
+00000001 $NpcGroup_Ch1 32000000
+00000001 $NpcGroup_Ch2 33000000
+00000001 $NpcGroup_Ch3 34000000
+00000001 $NpcGroup_Ch4 35000000
+00000001 $NpcGroup_Ch5 36000000
+00000001 $NpcGroup_Ch6 37000000
+00000001 $NpcGroup_Ch7 38000000
+00000001 $NpcGroup_Ch8 39000000
+00000000 00000000 00000000 
+}
+
+#new:NpcGroup $NpcGroup_Ch0
+{
+00000000 $NpcSettings_Twink ~Vec3f:NPC_0
+00850D0D $Script_Init_RematchSpirit 00000000 00000000 00000000 
+~NoItems ~NoHP ~NoFP ~NoCoinBonus ~NoMovement
+00200001 00200001 00200001 00200001 00200001 00200001 00200001 00200001 
+00200000 00200001 00200001 00200001 00200001 00200001 00200001 00200001 
+00000000 00000000 00000000 $Twink
+}
+	
+#new:NpcGroup $NpcGroup_Ch1
+{
+00000001 $NpcSettings_StarSpirit ~Vec3f:NPC_1
+00850D0D $Script_Init_RematchSpirit 00000000 00000000 00000000 
+~NoItems ~NoHP ~NoFP ~NoCoinBonus ~NoMovement
+00190001 00190001 00190001 00190001 00190001 00190001 00190001 00190001 
+00190000 00190001 00190001 00190001 00190001 00190001 00190001 00190001 
+00000000 00000000 00000000 001A0123
+}
+
+#new:NpcGroup $NpcGroup_Ch2
+{
+00000002 $NpcSettings_StarSpirit ~Vec3f:NPC_2
+00850D0D $Script_Init_RematchSpirit 00000000 00000000 00000000 
+~NoItems ~NoHP ~NoFP ~NoCoinBonus ~NoMovement
+001A0001 001A0001 001A0001 001A0001 001A0001 001A0001 001A0001 001A0001 
+001A0000 001A0001 001A0001 001A0001 001A0001 001A0001 001A0001 001A0001 
+00000000 00000000 00000000 001A0123
+}
+
+#new:NpcGroup $NpcGroup_Ch3
+{
+00000003 $NpcSettings_StarSpirit ~Vec3f:NPC_3
+00850D0D $Script_Init_RematchSpirit 00000000 00000000 00000000 
+~NoItems ~NoHP ~NoFP ~NoCoinBonus ~NoMovement
+001B0001 001B0001 001B0001 001B0001 001B0001 001B0001 001B0001 001B0001 
+001B0000 001B0001 001B0001 001B0001 001B0001 001B0001 001B0001 001B0001 
+00000000 00000000 00000000 001A0123
+}
+
+#new:NpcGroup $NpcGroup_Ch4
+{
+00000004 $NpcSettings_StarSpirit ~Vec3f:NPC_4
+00850D0D $Script_Init_RematchSpirit 00000000 00000000 00000000 
+~NoItems ~NoHP ~NoFP ~NoCoinBonus ~NoMovement
+001C0001 001C0001 001C0001 001C0001 001C0001 001C0001 001C0001 001C0001 
+001C0000 001C0001 001C0001 001C0001 001C0001 001C0001 001C0001 001C0001 
+00000000 00000000 00000000 001A0123
+}
+
+#new:NpcGroup $NpcGroup_Ch5
+{
+00000005 $NpcSettings_StarSpirit ~Vec3f:NPC_5
+00850D0D $Script_Init_RematchSpirit 00000000 00000000 00000000 
+~NoItems ~NoHP ~NoFP ~NoCoinBonus ~NoMovement
+001D0001 001D0001 001D0001 001D0001 001D0001 001D0001 001D0001 001D0001 
+001D0000 001D0001 001D0001 001D0001 001D0001 001D0001 001D0001 001D0001 
+00000000 00000000 00000000 001A0123
+}
+
+#new:NpcGroup $NpcGroup_Ch6
+{
+00000006 $NpcSettings_StarSpirit ~Vec3f:NPC_6
+00850D0D $Script_Init_RematchSpirit 00000000 00000000 00000000 
+~NoItems ~NoHP ~NoFP ~NoCoinBonus ~NoMovement
+001E0001 001E0001 001E0001 001E0001 001E0001 001E0001 001E0001 001E0001 
+001E0000 001E0001 001E0001 001E0001 001E0001 001E0001 001E0001 001E0001 
+00000000 00000000 00000000 001A0123
+}
+
+#new:NpcGroup $NpcGroup_Ch7
+{
+00000007 $NpcSettings_StarSpirit ~Vec3f:NPC_7
+00850D0D $Script_Init_RematchSpirit 00000000 00000000 00000000 
+~NoItems ~NoHP ~NoFP ~NoCoinBonus ~NoMovement
+001F0001 001F0001 001F0001 001F0001 001F0001 001F0001 001F0001 001F0001 
+001F0000 001F0001 001F0001 001F0001 001F0001 001F0001 001F0001 001F0001 
+00000000 00000000 00000000 001A0123
+}
+
+#new:NpcGroup $NpcGroup_Ch8
+{
+00000008 $NpcSettings_Peach ~Vec3f:NPC_8
+00850D0D $Script_Init_RematchSpirit 00000000 00000000 0000010E 
+~NoItems ~NoHP ~NoFP ~NoCoinBonus ~NoMovement
+00D60004 00D60004 00D60004 00D60004 00D60004 00D60004 00D60004 00D60004 
+00D60004 00D60004 00D60004 00D60004 00D60004 00D60004 00D60004 00D60004 
+00000000 00000000 00000000 $Peach
+}
+	
+#new:NpcSettings $NpcSettings_Twink
+{
+00000000 001B0014 00000000 00000000 00000000 00000000 00000000 00000000 
+00000000 00000000 00630000 
+}
+	
+#new:NpcSettings $NpcSettings_StarSpirit
+{
+00000000 001A0018 00000000 00000000 00000000 00000000 00000000 00000000 
+00000000 00000000 00630000 
+}
+	
+#new:NpcSettings $NpcSettings_Peach
+{
+00000000 002E0024 00000000 00000000 00000000 00000000 00000000 00000000 
+00000000 00000000 00630000 
+}
+
+#string $Peach
+{
+[Style Tattle]
+[EnableCDownNext]It's the lovely Princess[BR]
+Peach. Well it's[BR]
+just a projection.[BR]
+[Wait][Next]
+At least nothing bad[BR]
+happens when we talk[BR]
+to her.[BR]
+[Wait][End]
+}
+
+#string $Twink
+{
+[Style Tattle]
+[EnableCDownNext]It's the young star kid[BR]
+Twink. Well it's[BR]
+just a projection.[BR]
+[Wait][Next]
+At least nothing bad[BR]
+happens when we talk[BR]
+to him.[BR]
+[Wait][End]
+}
+
+% 0: required story progress to unlock
+% 1: flag indicating boss is defeated
+% 2: talk animation
+% 3: idle animation
+#new:IntTable $NpcProperties
+{
+FFFFFF98 *Flag_BeatRematch0 00200009 00200001 $Ch0_Strings $Ch0_EffectPos .Song:GoombaKingBattle  	.Item:UltraShroom	.Item:LifeShroom
+FFFFFFB5 *Flag_BeatRematch1 00190002 00190001 $Ch1_Strings $Ch1_EffectPos .Song:KoopaBrosBattle		.Item:StoneCap		.Item:ThunderRage
+FFFFFFCB *Flag_BeatRematch2 001A0002 001A0001 $Ch2_Strings $Ch2_EffectPos .Song:TutankoopaBattle	.Item:JamminJelly	.Item:WhackasBump
+FFFFFFF3 *Flag_BeatRematch3 001B0002 001B0001 $Ch3_Strings $Ch3_EffectPos .Song:TubbaBlubbaBattle	.Item:LifeShroom	.Item:LifeShroom
+00000007 *Flag_BeatRematch4 001C0002 001C0001 $Ch4_Strings $Ch4_EffectPos .Song:GeneralGuyBattle	.Item:HustleDrink	.Item:HustleDrink
+00000027 *Flag_BeatRematch5 001D0002 001D0001 $Ch5_Strings $Ch5_EffectPos .Song:LavaPiranhaBattle	.Item:UltraShroom	.Item:UltraShroom
+0000003B *Flag_BeatRematch6 001E0002 001E0001 $Ch6_Strings $Ch6_EffectPos .Song:HuffNPuffBattle		.Item:JamminJelly	.Item:JamminJelly
+00000059 *Flag_BeatRematch7 001F0002 001F0001 $Ch7_Strings $Ch7_EffectPos .Song:CrystalKingBattle	.Item:RepelGel		.Item:RepelGel
+0000005F *Flag_BeatRematch8 00D60002 00D60004 $Ch8_Strings $Ch8_EffectPos .Song:FinalBowserBattle	.Item:DeluxeFeast	.Item:DeluxeFeast
+}
+	
+% Define names for NPC variables for readability.
+#define .BattleStarted	00000000
+#define .BattleOutcome	00000001
+#define .CompletionFlag	00000002
+#define .TalkAnimation	00000003
+#define .IdleAnimation	00000004
+#define .Strings		00000005
+#define .EffectPos		00000006
+#define .BattleSong		00000007
+#define .RewardItem1	00000008
+#define .RewardItem2	00000008
+	
+#new:Script $Script_Init_RematchSpirit
+{
+	Call	EnableNpcShadow	( .Npc:Self .False )
+	Call	BindNpcIdle 	( .Npc:Self $Script_MonitorBattleStatus )
+	Call	BindNpcDefeat 	( .Npc:Self $Script_AfterBattle )
+	Call	BindNpcAux		( .Npc:Self $Script_FloatingHologramAux )
+	Call	GetSelfNpcID	( *Var[0] )	
+	If  *Var[0]  ==  8
+		Call	BindNpcInteract ( .Npc:Self $Script_Interact_Peach )
+	Else
+		Call	BindNpcInteract ( .Npc:Self $Script_Interact_Spirits )
+	EndIf
+	UseIntBuffer  $NpcProperties
+	Set  *Var[1]  0
+	Label	0
+		Get3Int	( *Var[2] *Var[3] *Var[4] )
+		Get3Int	( *Var[5] *Var[6] *Var[7] )
+		Get3Int	( *Var[8] *Var[9] *Var[A] )
+		Add  *Var[1]  1
+	If  *Var[1]  <=  *Var[0]
+		Goto	0
+	EndIf
+	If	*StoryProgress  <  *Var[2] 
+		Label	1
+		Call	RemoveNpc	( .Npc:Self )
+		Return
+	EndIf
+	Call	SetSelfVar	( .CompletionFlag *Var[3] )
+	Call	SetSelfVar	( .TalkAnimation *Var[4] )
+	Call	SetSelfVar	( .IdleAnimation *Var[5] )
+	Call	SetSelfVar	( .Strings *Var[6] )
+	Call	SetSelfVar	( .EffectPos *Var[7] )
+	Call	SetSelfVar	( .BattleSong *Var[8] )
+	Call	SetSelfVar	( .RewardItem1 *Var[9] )
+	Call	SetSelfVar	( .RewardItem2 *Var[A] )
+	Return
+	End
+}
+	
+% ====================================================
+% Scripts for interactions / initiating battles
+% The same scripts are shared between all spirits,
+% loading values from the NpcProperties table.
+% ====================================================
+	
+#new:Script $Script_Interact_Spirits
+{
+	Exec	$Script_Conversation_Spirits
+	Wait	30` 
+	Return
+	End
+}
+
+	#define .TextBox *GameByte[033]
+	
+#new:Script $Script_Conversation_Spirits
+{
+	Call	DisablePlayerInput 	( .True )
+	Set .TextBox 00000000 % so lava piranha works correctly, we reset this byte whenever you try and fight one of the bosses
+	Call	GetSelfNpcID	( *Var[2] )	
+	Call	GetSelfVar		( .TalkAnimation *Var[3] )
+	Call	GetSelfVar		( .IdleAnimation *Var[4] )
+	Call	GetSelfVar		( .Strings *Var[5] )
+	UseIntBuffer  *Var[5]
+	GetIntN *Var[6]  0
+	Call	SpeakToPlayer 	( *Var[2] *Var[3] *Var[4] 00000000 *Var[6] )
+	Call	ShowChoice  	( $YesNo )
+	If  *Var[0]  ==  00000001
+		GetIntN *Var[6]  1
+		Call	ContinueSpeech 	( *Var[2] *Var[3] *Var[4] 00000000 *Var[6]  )
+		Call	DisablePlayerInput 	( .False )
+		Return
+	EndIf
+	GetIntN *Var[6]  2
+	Call	ContinueSpeech 	( *Var[2] *Var[3] *Var[4] 00000000 *Var[6] )
+	Wait	10` 
+	Call	SetSelfVar 	( .BattleStarted .True )
+	Call	GetSelfVar		( .BattleSong *Var[0] )
+	Call	StartBossBattle ( *Var[0] )
+	Wait	30` 
+	Return
+	End
+}
+	
+#new:Script $Script_Interact_Peach
+{
+	% must clear all other rematches to face giga bowser
+	Set  *Var[2]  0
+	Add  *Var[2]  *Flag_BeatRematch0
+	Add  *Var[2]  *Flag_BeatRematch1
+	Add  *Var[2]  *Flag_BeatRematch2
+	Add  *Var[2]  *Flag_BeatRematch3
+	Add  *Var[2]  *Flag_BeatRematch4
+	Add  *Var[2]  *Flag_BeatRematch5
+	Add  *Var[2]  *Flag_BeatRematch6
+	Add  *Var[2]  *Flag_BeatRematch7
+	If  *Var[2]  ==  8
+		Exec	$Script_Conversation_Spirits 
+		Wait	30` 
+	Else
+		Call	DisablePlayerInput 	( .True )
+		Call	SpeakToPlayer 	( 00000008 00D60002 00D60004 00000000 $String_PeachNotReady )
+		Call	DisablePlayerInput 	( .False )
+	EndIf
+	Return
+	End
+}
+	
+#new:Script $Script_MonitorBattleStatus
+{
+	Label	0
+	Call	SetSelfVar 	( .BattleStarted .False )
+	Call	SetSelfVar 	( .BattleOutcome FFFFFFFF )
+	% wait for battle to begin
+	Label	1
+		Call	GetSelfVar	( .BattleStarted *Var[0] )
+		If	*Var[0]  ==  .False
+			Wait	1
+			Goto	1
+		EndIf
+	% wait for battle to finish (set by $Script_AfterBattle)
+	Label	2
+		Call	GetSelfVar	( .BattleOutcome *Var[0] )
+		If	*Var[0]  ==  FFFFFFFF
+			Wait	1
+			Goto	2
+		EndIf
+	% handle the battle outcome
+	Call     GetSelfVar 	( .BattleOutcome *Var[0] )
+	If  *Var[0]  ==  00000000 % won
+		Call	GetSelfVar 	( .CompletionFlag *Var[1] )
+		Call	GetValueByRef	( *Var[1] *Var[A] )
+		If	*Var[A]  ==  .False
+			% first rematch win
+			Call	SetValueByRef	( *Var[1] .True )
+			Call	GetSelfNpcID	( *Var[0] )	
+			If  *Var[0]  !=  8
+				Call	GetSelfVar		( .EffectPos *Var[5] )
+				UseIntBuffer  *Var[5]
+				Get3Int	( *Var[0] *Var[1] *Var[2] )
+				Add		*Var[2]  10`
+				Call	PlaySoundAt 	( 00000055 00000000 *Var[0] *Var[1] *Var[2] )
+				Call	PlayEffect  	( 00000083 00000003 *Var[0] *Var[1] *Var[2] 00000001 30` 00000000 00000000 00000000 00000000 00000000 00000000 00000000 )
+				ExecWait	$Script_UpdateCompletionIndicators
+				Wait	45`
+			EndIf
+		EndIf
+		Call	GetSelfNpcID	( *Var[2] )	
+		Call	GetSelfVar	( .TalkAnimation *Var[3] )
+		Call	GetSelfVar	( .IdleAnimation *Var[4] )
+		Call	GetSelfVar		( .Strings *Var[5] )
+		UseIntBuffer  *Var[5]
+		% give reward: star pieces or item
+		If  *Var[A]  ==  .False
+			GetIntN *Var[6]  3
+			Call	GetSelfNpcID	( *Var[0] )	
+			If  *Var[0]  ==  8
+				Call	SpeakToPlayer ( *Var[2] *Var[3] *Var[4] 00000000 *Var[6] )
+				Call	ShowGotItem	( .Item:RightOn 00000000 00000000 )
+				Call	AddBadge	( .Item:RightOn *Var[0] )
+			Else		
+				Call	SpeakToPlayer ( *Var[2] *Var[3] *Var[4] 00000000 *Var[6] )
+				Call	ShowGotItem	( .Item:StarPiece 00000001 00000000 )
+				Call	ShowGotItem	( .Item:StarPiece 00000001 00000000 )
+				Call	AddStarPieces	( 2 )
+			EndIf
+		Else
+			GetIntN *Var[6]  4
+			Call	SpeakToPlayer ( *Var[2] *Var[3] *Var[4] 00000000 *Var[6] )
+			Call	RandInt		( 1 *Var[0] )	
+			If  *Var[0]  ==  0
+				Call	GetSelfVar	( .RewardItem2 *Var[2] )
+			Else
+				Call	GetSelfVar	( .RewardItem1 *Var[2] )
+			EndIf
+			Call	$Function_CountEmptySlots	( )
+			If	*Var[0] <=  00000000 
+				Call	GetNpcPos		( .Npc:Self *Var[6] *Var[7] *Var[8] )
+				Add		*Var[4]  10`
+				Call	MakeItemEntity	( *Var[2] *Var[6] *Var[7] *Var[8] 00000006 00000000 )
+			Else
+				Call	ShowGotItem	( *Var[2] 00000001 00000000 )
+				Call	AddItem		( *Var[2] *Var[2] )
+			EndIf
+		EndIf
+	EndIf
+	Call	DisablePlayerInput 	( .False )
+	Goto	0 
+	Return
+	End
+}
+	
+#new:Script $Script_AfterBattle
+{
+	Call	SetEncounterStatusFlags 			( 00000001 00000001 ) % prevent thumbs up animation
+	Call	SetEncounterStatusFlags			( 00000004 00000001 ) % prevent coin drops from fleeing
+	Call	GetBattleOutcome	( *Var[0] )
+	Call	SetSelfVar			( .BattleOutcome *Var[0] )
+	Return
+	End
+}
+
+#new:Function $Function_CountEmptySlots
+{
+	PUSH      RA, S0
+	JAL       800E7620
+	DADDU     S0, A0, R0
+	SW        V0, 84 (S0)
+	POP       RA, S0
+	JR        RA
+	ADDIU     V0, R0, 2
+}
+	
+% ====================================================
+% Efect position vectors
+% ====================================================
+	
+#new:IntTable $Ch0_EffectPos
+{
+~Vec3d:CompletionEffect0
+}
+
+#new:IntTable $Ch1_EffectPos
+{
+~Vec3d:CompletionEffect1
+}
+
+#new:IntTable $Ch2_EffectPos
+{
+~Vec3d:CompletionEffect2
+}
+
+#new:IntTable $Ch3_EffectPos
+{
+~Vec3d:CompletionEffect3
+}
+
+#new:IntTable $Ch4_EffectPos
+{
+~Vec3d:CompletionEffect4
+}
+
+#new:IntTable $Ch5_EffectPos
+{
+~Vec3d:CompletionEffect5
+}
+
+#new:IntTable $Ch6_EffectPos
+{
+~Vec3d:CompletionEffect6
+}
+
+#new:IntTable $Ch7_EffectPos
+{
+~Vec3d:CompletionEffect7
+}
+
+#new:IntTable $Ch8_EffectPos
+{
+~Vec3d:CompletionEffect0 % no effect for peach
+}
+	
+% ====================================================
+% Strings
+% ====================================================
+
+#string $YesNo
+{
+[Style Choice pos=120,90 size=75,46]
+[StartChoice]
+[Option 0]Yes[BR]
+[Option 1]No[BR]
+[EndChoice cancel=1][End]
+}
+	
+#new:IntTable $Ch0_Strings
+{
+$Ch0_Offer $Ch0_Rejected $Ch0_Accepted $Ch0_Reward1 $Ch0_Reward2
+}
+
+#new:IntTable $Ch1_Strings
+{
+$Ch1_Offer $Ch1_Rejected $Ch1_Accepted $Ch1_Reward1 $Ch1_Reward2
+}
+
+#new:IntTable $Ch2_Strings
+{
+$Ch2_Offer $Ch2_Rejected $Ch2_Accepted $Ch2_Reward1 $Ch2_Reward2
+}
+
+#new:IntTable $Ch3_Strings
+{
+$Ch3_Offer $Ch3_Rejected $Ch3_Accepted $Ch3_Reward1 $Ch3_Reward2
+}
+
+#new:IntTable $Ch4_Strings
+{
+$Ch4_Offer $Ch4_Rejected $Ch4_Accepted $Ch4_Reward1 $Ch4_Reward2
+}
+
+#new:IntTable $Ch5_Strings
+{
+$Ch5_Offer $Ch5_Rejected $Ch5_Accepted $Ch5_Reward1 $Ch5_Reward2
+}
+
+#new:IntTable $Ch6_Strings
+{
+$Ch6_Offer $Ch6_Rejected $Ch6_Accepted $Ch6_Reward1 $Ch6_Reward2
+}
+
+#new:IntTable $Ch7_Strings
+{
+$Ch7_Offer $Ch7_Rejected $Ch7_Accepted $Ch7_Reward1 $Ch7_Reward2
+}
+
+#new:IntTable $Ch8_Strings
+{
+$Ch8_Offer $Ch8_Rejected $Ch8_Accepted $Ch8_Reward1 $Ch8_Reward2
+}
+
+#string $Ch0_Offer
+{
+[Style Right]
+[Voice Star][DitherFade 217]Hey Mario, ready for a rematch[BR]
+against the Goomba King and his[BR]
+two lackeys?[BR]
+[Yield][End]
+}
+
+#string $Ch0_Accepted
+{
+[Next]
+[Voice Star][DitherFade 217]Alright, show them who's boss![Wait][End]
+}
+
+#string $Ch0_Rejected
+{
+[Next]
+[Voice Star][DitherFade 217]Aww man, I was ready to watch[BR]
+an exciting battle.[Pause 8].[Pause 8].[Pause 16] let me know[BR]
+if you change your mind.[Wait][End]
+}
+
+#string $Ch0_Reward1
+{
+[Style Right]
+[Voice Star][DitherFade 217]Yeah! That was awesome![BR]
+Take these two Star Pieces.[BR]
+You've earned them.[Wait][End]
+}
+
+#string $Ch0_Reward2
+{
+[Style Right]
+[Voice Star][DitherFade 217]They didn't stand a chance![BR]
+Here, take this reward.[Wait][End]
+}
+
+#string $Ch1_Offer
+{
+[Style Right]
+[Voice Star][DitherFade 217]Well met, Mario.[BR]
+The Koopa Bros are prepared[BR]
+for a rematch. Are you?[BR]
+[Yield][End]
+}
+
+#string $Ch1_Accepted
+{
+[Next]
+[Voice Star][DitherFade 217]Give them no quarter.[Wait][End]
+}
+
+#string $Ch1_Rejected
+{
+[Next]
+[Voice Star][DitherFade 217]Very well. Gather your strength,[BR]
+and return when you're ready[BR]
+to defeat them.[Wait][End]
+}
+
+#string $Ch1_Reward1
+{
+[Style Right]
+[Voice Star][DitherFade 217]Excellent work.[BR]
+These two Star Pieces are all[BR]
+I can give for your efforts.[Wait][End]
+}
+
+#string $Ch1_Reward2
+{
+[Style Right]
+[Voice Star][DitherFade 217]Excellent work, as always.[BR]
+Have this item as a reward.[Wait][End]
+}
+
+#string $Ch2_Offer
+{
+[Style Right]
+[Voice Star][DitherFade 217]Good to see you![BR]
+Would you like to try a rematch[BR]
+against King Tutankoopa?[BR]
+[Yield][End]
+}
+
+#string $Ch2_Accepted
+{
+[Next]
+[Voice Star][DitherFade 217]I know you can do it, Mario![Wait][End]
+}
+
+#string $Ch2_Rejected
+{
+[Next]
+[Voice Star][DitherFade 217]Rest up and come back when[BR]
+you're feeling ready.[Wait][End]
+}
+
+#string $Ch2_Reward1
+{
+[Style Right]
+[Voice Star][DitherFade 217]Wonderful![BR]
+Please take my last two Star[BR]
+Pieces as a reward.[Wait][End]
+}
+
+#string $Ch2_Reward2
+{
+[Style Right]
+[Voice Star][DitherFade 217]Great job![BR]
+Please take this item as a[BR]
+reward for your trouble.[Wait][End]
+}
+
+#string $Ch3_Offer
+{
+[Style Right]
+[Voice Star][DitherFade 217]Good day, Mario. Are you[BR]
+ready for another round with[BR]
+the 'invincible' Tubba Blubba?[BR]
+[Yield][End]
+}
+
+#string $Ch3_Accepted
+{
+[Next]
+[Voice Star][DitherFade 217]This should be interesting.[BR]
+Best of luck, and keep your[BR]
+wits about you.[BR]
+[Wait][End]
+}
+
+#string $Ch3_Rejected
+{
+[Next]
+[Voice Star][DitherFade 217]Wisdom is knowing when to fight.[BR]
+I'll be here when you're ready.[BR]
+[Wait][End]
+}
+
+#string $Ch3_Reward1
+{
+[Style Right]
+[Voice Star][DitherFade 217]So much for the 'invincible'[BR]
+Tubba Blubba, eh?[BR]
+Here, take these Star Pieces.[BR]
+Use them as you see fit.[BR]
+[Wait][End]
+}
+
+#string $Ch3_Reward2
+{
+[Style Right]
+[Voice Star][DitherFade 217]Impressive work.[BR]
+I hope you'll find this item[BR]
+to be a suitable reward.[BR]
+[Wait][End]
+}
+
+#string $Ch4_Offer
+{
+[Style Right]
+[Voice Star][DitherFade 217]I heard General Guy and his[BR]
+troops are looking for another[BR]
+fight. What do you say?[BR]
+[Yield][End]
+}
+
+#string $Ch4_Accepted
+{
+[Next]
+[Voice Star][DitherFade 217]That's what I like to hear![BR]
+Send 'em back to whatever toybox[BR]
+they crawled out of.[BR]
+[Wait][End]
+}
+
+#string $Ch4_Rejected
+{
+[Next]
+[Voice Star][DitherFade 217]You've gotta knock some sense[BR]
+into those guys! Come back when[BR]
+you're feeling up for it.[BR]
+[Wait][End]
+}
+
+#string $Ch4_Reward1
+{
+[Style Right]
+[Voice Star][DitherFade 217]Ooo, those guys got crushed![BR]
+Here, I've got two Star Pieces[BR]
+for you. Use them well.[BR]
+[Wait][End]
+}
+
+#string $Ch4_Reward2
+{
+[Style Right]
+[Voice Star][DitherFade 217]You really put the hurt on them![BR]
+Take this item. You've earned it.[BR]
+[Wait][End]
+}
+
+#string $Ch5_Offer
+{
+[Style Right]
+[Voice Star][DitherFade 217]Well,[Pause 16] are you ready to fight[BR]
+the Lava Piranha again?[BR]
+[Yield][End]
+}
+
+#string $Ch5_Accepted
+{
+[Next]
+[Voice Star][DitherFade 217]No holding back. I'm expecting[BR]
+a decisive victory from you.[BR]
+[Wait][End]
+}
+
+#string $Ch5_Rejected
+{
+[Next]
+[Voice Star][DitherFade 217]You'll be back.[BR]
+[Wait][End]
+}
+
+#string $Ch5_Reward1
+{
+[Style Right]
+[Voice Star][DitherFade 217]Well done![Pause 8] Even better than[BR]
+the first time.[BR]
+[Wait][Next]
+Take these Star Pieces.[BR]
+[Wait][End]
+}
+
+#string $Ch5_Reward2
+{
+[Style Right]
+[Voice Star][DitherFade 217]You never disappoint, Mario.[BR]
+[Pause 16]This is for you.[BR]
+[Wait][End]
+}
+
+#string $Ch6_Offer
+{
+[Style Right]
+[Voice Star][DitherFade 217]Hello again, Mario.[BR]
+Do you want another fight with[BR]
+Master Huff N Puff?[BR]
+[Yield][End]
+}
+
+#string $Ch6_Accepted
+{
+[Next]
+[Voice Star][DitherFade 217]Be careful. You barely beat[BR]
+him the first time![BR]
+[Wait][End]
+}
+
+#string $Ch6_Rejected
+{
+[Next]
+[Voice Star][DitherFade 217]I don't blame you.[BR]
+But, if you change your mind,[BR]
+you know where to find me.[BR]
+[Wait][End]
+}
+
+#string $Ch6_Reward1
+{
+[Style Right]
+[Voice Star][DitherFade 217]There really is no stopping you![BR]
+[Pause 8]I've got two Star Pieces with [BR]
+your name on them.[BR]
+[Pause 24][Wait][Next]
+Not literally, of course.[BR]
+[Wait][End]
+}
+
+#string $Ch6_Reward2
+{
+[Style Right]
+[Voice Star][DitherFade 217]Astonishing work.[BR]
+You really beat the daylights[BR]
+out of that,[Pause 16] uh,[Pause 16] cloud.[BR]
+Please, take this item.[BR]
+[Wait][End]
+}
+
+#string $Ch7_Offer
+{
+[Style Right]
+[Voice Star][DitherFade 217]Nice to see you.[BR]
+I can arrange another battle[BR]
+with the Crystal King, if that[BR]
+is what you want.[BR]
+[Yield][End]
+}
+
+#string $Ch7_Accepted
+{
+[Next]
+[Voice Star][DitherFade 217]Do not underestimate your foe,[BR]
+no matter how easily you may[BR]
+have defeated them before.[BR]
+[Wait][End]
+}
+
+#string $Ch7_Rejected
+{
+[Next]
+[Voice Star][DitherFade 217]There's more to life than[BR]
+endless struggle.[BR]
+[Wait][End]
+}
+
+#string $Ch7_Reward1
+{
+[Style Right]
+[Voice Star][DitherFade 217]Once again, he is defeated.[BR]
+[Pause 8]But not for good.[Pause 8][BR]
+No victory lasts forever.[BR]
+[Wait][Next]
+Take these Star Pieces and go[BR]
+in peace.[BR]
+[Wait][End]
+}
+
+#string $Ch7_Reward2
+{
+[Style Right]
+[Voice Star][DitherFade 217]Do you feel accomplished?[BR]
+[Pause 8]He can never be truly defeated.[BR]
+[Pause 8]Take this item and be content.[BR]
+[Wait][End]
+}
+
+#string $Ch8_Offer
+{
+[Style Right]
+[Voice Star][DitherFade 217]I'm so glad to see you're safe.[Pause 24][BR]
+Are you here to face Bowser[BR]
+in his strongest form?[BR]
+[Yield][End]
+}
+
+#string $Ch8_Accepted
+{
+[Next]
+[Voice Star][DitherFade 217]I know you can do it, Mario.[BR]
+You've never let me down before.[BR]
+[HEART][Wait][End]
+}
+
+#string $Ch8_Rejected
+{
+[Next]
+[Voice Star][DitherFade 217]Please hurry, Mario. I'm counting[BR]
+on you![Pause 16] We all are.[Wait][End]
+}
+
+#string $Ch8_Victory
+{
+[Style Right]
+[Voice Star][DitherFade 217]Incredible... you beat him![BR]
+I want you to have this.[Wait][End]
+}
+
+#string $Ch8_Reward1
+{
+[Style Right]
+[Voice Star][DitherFade 217]You never cease to amaze me,[BR]
+Mario.[Pause 16] I have a special badge[BR]
+for you.[Pause 8] Please take it.[BR]
+[Wait][Next]
+And please, Mario, hurry to the[BR]
+castle and save the Star Rod.[BR]
+Everyone is counting on you to[BR]
+defeat Bowser.[BR]
+[Wait][End]
+}
+
+#string $Ch8_Reward2
+{
+[Style Right]
+[Voice Star][DitherFade 217]Amazing job, Mario. I think you're[BR]
+ready to face the real Bowser![BR]
+Take this item as a reward.[BR]
+[Wait][Next]
+And please, hurry to the castle.[BR]
+I think Bowser is starting to get[BR]
+worried...[BR]
+[Wait][End]
+}
+
+#string $String_PeachNotReady
+{
+[Style Right]
+[Voice Star][DitherFade 217]I'm so glad to see you're safe.[Pause 24][BR]
+But you're not ready for this[BR]
+fight until you finish the others.[BR]
+[Wait][End]
+}
+
+% ====================================================
+% Hologram Effects for NPCs
+% ====================================================
+
+#new:Script $Script_FloatingHologramAux
+{
+	% only start the floating effect for star spirits
+	Call	GetSelfNpcID	( *Var[0] )
+	If	*Var[0]  <  8
+		Thread
+			Call     $Function_LevitateEffect ( )
+		EndThread
+	EndIf
+	% start the hologram effect
+	NewArray 00000001 *Var[A] 
+	UseArray *Var[A] 
+	Thread
+		UseArray *Var[A] 
+		Label    00000000 
+		Call     RandInt     	( 0000005A *Var[0] )
+		Add      *Var[0] 0000001E 
+		SetF     *Array[0] *Fixed[10.0] 
+		Wait     *Var[0] 
+		Call     RandInt     	( 00000064 *Var[1] )
+		If       *Var[1]  <  00000050 
+			Set      *Var[1] 00000001 
+		Else
+			Set      *Var[1] 00000002 
+		EndIf
+		Loop     *Var[1] 
+			SetF     *Array[0] *Fixed[40.0] 
+			Wait     00000001 
+			SetF     *Array[0] *Fixed[50.0] 
+			Wait     00000001 
+			SetF     *Array[0] *Fixed[80.0] 
+			Wait     00000001 
+			SetF     *Array[0] *Fixed[70.0] 
+			Wait     00000001 
+			SetF     *Array[0] *Fixed[60.0] 
+			Wait     00000001 
+			SetF     *Array[0] *Fixed[50.0] 
+			Wait     00000001 
+		EndLoop
+		Goto     00000000 
+	EndThread
+	SetF     *Var[0] *Fixed[100.0] 
+	Label    00000001 
+	Loop     00000032 
+		AddF     *Var[0] *Fixed[0.80078125] 
+		Call     802CFD30 ( FFFFFFFF 0000000D 00000000 *Array[0] *MapVar[1] *Var[0] )
+		Wait     00000001 
+	EndLoop
+	Loop     00000032 
+		AddF     *Var[0] *Fixed[-0.7998047] 
+		Call     802CFD30 ( FFFFFFFF 0000000D 00000000 *Array[0] *MapVar[1] *Var[0] )
+		Wait     00000001 
+	EndLoop
+	Goto     00000001 
+	Return
+	End
+}
+  
+#new:Function $Function_LevitateEffect
+{
+	ADDIU     SP, SP, FFE0
+	SW        S1, 14 (SP)
+	DADDU     S1, A0, R0
+	SW        RA, 18 (SP)
+	BEQ       A1, R0, .o44
+	SW        S0, 10 (SP)
+	LW        A0, 14C (S1)
+	JAL       8003AB48
+	SW        R0, 74 (S1)
+	LW        V1, 14C (S1)
+	SW        V0, 78 (S1)
+	ADDIU     V1, V1, FFFF
+	SLL       V1, V1, 1
+	LTH       V0, V1 ($BounceAmplitudeTable)
+	SW        V0, 7C (S1)
+        .o44
+	LW        V0, 7C (S1)
+	BNE       V0, R0, .oA0
+	ADDIU     V0, V0, FFFF
+	LWC1      F12, 74 (S1)
+	JAL       8002A2EC
+	LW        S0, 78 (S1)
+	LIF       F2, 1.5
+	NOP
+	MUL.S     F0, F0, F2
+	NOP
+	LIF       F12, 18.0
+	TRUNC.W.S F4, F0
+	MFC1      V0, F4
+	NOP
+	SB        V0, AB (S0)
+	LWC1      F0, 74 (S1)
+	JAL       80029B24
+	ADD.S     F12, F0, F12
+	DADDU     V0, R0, R0
+	BEQ       R0, R0, .oA8
+	SWC1      F0, 74 (S1)
+        .oA0
+	SW        V0, 7C (S1)
+	DADDU     V0, R0, R0
+        .oA8
+	LW        RA, 18 (SP)
+	LW        S1, 14 (SP)
+	LW        S0, 10 (SP)
+	JR        RA
+	ADDIU     SP, SP, 20
+}
+   
+#new:ShortTable $BounceAmplitudeTable
+{
+00010003 00050007 00070005 00030000 
+}

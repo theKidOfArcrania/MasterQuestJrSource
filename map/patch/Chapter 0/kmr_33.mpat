@@ -1,0 +1,307 @@
+#new:Header $Header
+{
+00000000 00000000 00000000 00000000 
+$Script_Main $EntryList 00000001 00000000 
+00000000 00000000 00000000 00000000 
+00000000 00000000 80200000 $Function_GetTattle 
+}
+
+#new:Function $Function_GetTattle
+{
+	ADDIU     SP, SP, FFE8
+	LIO       V0, $MapTattle
+	JR        RA
+	ADDIU     SP, SP, 18
+}
+
+#string $MapTattle
+{
+[Style Tattle]
+[EnableCDownNext]What a dilapidated house! The door[BR]
+doesn't look remotely usable...[BR]
+[Wait][Next]
+Just think of the secret base you[BR]
+could have with just a little work.[BR]
+[Pause 18]Okay, maybe a lot of work.[BR]
+[Wait][End]
+}
+
+#new:EntryList $EntryList
+{
+~Vec4f:entry0 %  coordinates
+}
+
+#define .KootFight *GameByte[0A6]	
+#define .Why *GameByte[037]	
+#define .KootFightBeat *GameByte[0A7]
+#define .KootFightFirst *GameByte[0A8]
+
+#new:Script_Main $Script_Main
+{
+	Set      *WorldMapLocation 0000000A % sets the location on the pause screen map
+	Call     SetSpriteShading 	( FFFFFFFF )
+	Call     SetCamPerspective	( .Cam:Default  3  25` 16` 4096` ) % default type, half vertical FOV, near clip, and far clip
+	Call     SetCamBGColor   	( .Cam:Default  0  0  0 ) % color values are RGB bytes; (0,0,0) is black, (255`,255`,255`) is white, etc.
+	Call     SetCamEnabled 	 	( .Cam:Default  .True )   % Enabled?
+	Call     SetCamLeadPlayer 	 	( .Cam:Default  .False )  % Lead player motion?
+	Call     SetMusicTrack    	( 00000000 .Song:PleasantPath 00000000 00000008 )
+	If .KootFight == 00000001
+	Call     MakeNpcs       ( 00000001 $NpcGroups_KoopaKoot )
+	Else
+	Call     MakeNpcs       ( 00000001 $NpcGroups_KMR_33 )
+	EndIf
+	ExecWait $Script_MakeEntities 
+		Set		*Var[0] $Script_MakeExits 
+		Set  .Why 00000000
+		Exec	EnterWalk 
+	Return
+	End
+}
+	
+#new:Script $Script_MakeEntities
+{
+	Call     MakeEntity			( .Entity:HiddenPanel ~Vec4d:panel ~Model:panelmodel 80000000 )
+	Call	 AssignPanelFlag 	( *Flag_KMR_53 )
+	Call     MakeEntity       	( .Entity:YellowBlock ~Vec4d:itemblock .Item:SuperShroom 80000000 )
+	Call     AssignBlockFlag 	( *Flag_KMR_54 )
+	Return
+	End
+}
+	 
+#new:NpcGroupList $NpcGroups_KMR_33
+{
+00000001 $NPC_Chomp 00030000
+00000000 00000000 00000000	
+}
+ 
+#new:NpcGroupList $NpcGroups_KoopaKoot
+{
+00000001 $NPC_KoopKoot 05150001
+00000000 00000000 00000000
+}
+
+#new:NpcGroup $NPC_KoopKoot
+{
+00000009 $BlankSettings ~Vec3f:koopakoot % 330 0 -100
+00A40D01 $Script_Init_8024E94C 00000000 00000000 00000000
+~NoItems ~NoHP ~NoFP ~NoCoinBonus
+~Movement:koopakoot
+00B50001 00B50001 00B50001 00B50001 00B50001 00B50001 00B50001 00B50001 
+00B50001 00B50001 00B50001 00B50001 00B50001 00B50001 00B50001 00B50001 
+00000000 00000000 00000000 001A0075 % This is the oldest Koopa in Koopa Village. His nam ...
+}
+
+#new:NpcSettings $BlankSettings
+{
+00000000 00200018 00000000 00000000 00000000 00000000 00000000 00000000 
+00000000 00000000 00630000
+}
+
+#new:NpcGroup $NPC_Chomp
+{
+00000001 $NpcSettings_Chomp ~Vec3f:chomp
+00002C00 00000000 00000000 00000000 0000005A 
+~Items:20:Mushroom:A
+~HP:20:70:2:50 ~HP:30:60:2:50 ~HP:50:50:2:40 ~HP:80:40:2:40 ~HP:100:30:2:30 ~HP:None ~HP:None ~HP:None 
+~FP:20:50:2:40 ~FP:30:40:2:40 ~FP:50:40:2:40 ~FP:80:40:2:40 ~FP:100:30:2:40 ~FP:None ~FP:None ~FP:None 
+~CoinBonus:2:6
+~Movement:chomp
+00260001 00260002 00260003 00260003 00260001 00260001 00260005 00260005 
+00260003 00260003 00260003 00260003 00260003 00260003 00260003 00260003  
+00000000 00000000 00000000 00000000 % no tattle string
+}
+
+#new:NpcSettings $NpcSettings_Chomp
+{
+00000000 00180018 00000000 00000000 $Script_ChompAI 80077F70 00000000 8007809C
+00000000 00000000 00060000 
+}
+
+
+#new:Script $Script_ChompAI
+{
+     Call     DoBasicAI   	( $AISettings_Chomp )
+     Return
+     End
+}
+	 
+#new:AISettings $AISettings_Chomp
+{
+    1.6 % move speed
+    60` % move time
+    30` % wait time
+   80.0 % alert radius
+    0.0
+    5`
+    2.6 % chase speed
+    60`
+    15`
+  100.0 % chase radius
+    0.0
+    1`
+}
+	 
+#new:Script $Script_MakeExits
+{
+	Bind     $Script_Entry1  .Trigger:FloorAbove ~Collider:Entry1 00000001 00000000
+Return
+End
+}
+	
+	#new:Script $Script_Entry1
+{
+	SetGroup 0000001B 
+	Call     UseExitHeading ( 0000003C 00000000 ) % direction opposing Entry#0
+	Exec     ExitWalk 
+	Call     GotoMap     	( "kmr_34" 00000001 )
+	Wait     00000064 
+	Return
+	End	
+}
+
+	#new:Script $Script_Init_8024E94C
+{
+        Call     BindNpcIdle 		( .Npc:Self $Script_IdleAI )
+		Call     BindNpcInteract 	( .Npc:Self $Script_Interact )
+     	Call     BindNpcDefeat 		( .Npc:Self $Script_802421A8 )
+   20:  Return
+   28:  End
+}
+   
+#new:Script $Script_Interact
+{
+	Call     GetPlayerPos 	( *Var[0] *Var[1] *Var[2] )
+	If *Var[2] > -351`
+		Call     SpeakToPlayer 	( .Npc:Self 00B50004 00B50001 00000000 $SpeakUp )
+		Return
+	EndIf
+	Call     SpeakToPlayer 	( .Npc:Self 00B50004 00B50001 00000000 $TauntString )
+	Call     ShowChoice		( 001E001D ) % yes / no
+	If	*Var[0]  ==  0
+		Call     ContinueSpeech	( .Npc:Self 00B50004 00B50001 00000000 $AcceptString )
+		Call     DisablePlayerInput	( .True )
+		Set  .Why 00000001
+	Else
+		Call     ContinueSpeech	( .Npc:Self 00B50004 00B50001 00000000 $DeclineString )
+	EndIf
+	Return
+	End
+}
+	
+	#new:Script $Script_IdleAI
+{
+	Loop
+		If  .Why == 00000001
+		 	Call     StartBossBattle 	( .Song:SpecialBattle )
+		EndIf
+		Wait     00000001 
+	EndLoop
+	Return
+	End
+}
+	
+#string $SpeakUp
+{
+[Style Right]
+[Shake]Eh?[Pause 10] Sorry, sonny, could you try[BR]
+moving behind me a bit? The[BR]
+accoustics here are terrible[BR]
+for my hearing aid.[BR]
+[Wait][Next]
+Don't argue with me! Just do[BR]
+it for an old Koopa! It's[BR]
+not like I've ever asked[BR]
+much from you.[BR]
+[Wait][End]
+}
+
+#string $TauntString
+{
+[Style Right]
+[Shake]So then, shall we get[BR]
+our battle underway?[BR]
+[Yield][End]
+}
+
+#string $AcceptString
+{
+[Next]
+[PrintRising]THEN BRING IT ON![Wait][End]
+}
+
+#string $DeclineString
+{
+[Next]
+[Shake]Don't keep me waiting![BR]
+I didn't come all this way to beat[BR]
+up that Goomba and his dogs![BR]
+[Wait][End]
+}
+
+#string $DefeatString
+{
+[Style Right]
+[Shake]Oooooh! I can't believe[BR]
+[Pause 5]I lost! If only I were still[BR]
+in my youth![BR]
+[Wait][Next]
+Well, I'm always up for another[BR]
+fight if you are, young man.[BR]
+[Pause 10]Just come visit whenever[BR]
+you're ready.[BR]
+[Wait][End]
+}
+
+#string $DefeatStringFirst
+{
+[Style Right]
+[Shake]Oooooh! I can't believe[BR]
+[Pause 5]I lost! If only I were still[BR]
+in my youth![BR]
+[Wait][Next]
+[Pause 10]On the way over I decided to[BR]
+check out the Lil' Oink farm.[BR]
+It wasn't working at first,[BR]
+and I was quite upset.[BR]
+[Wait][Next]
+You know me, I love to gamble.[BR]
+[Pause 10]Anywho, I got so mad I hit[BR]
+that machine with all my[BR]
+might![BR]
+[Wait][Next]
+It threw my back out a bit.[BR]
+I'm not trying to say that's[BR]
+why I lost, but that's[BR]
+probably why I lost.[BR]
+[Wait][Next]
+At least the machine isn't[BR]
+broken anymore. If you want[BR]
+to use it, you can.[BR]
+[Wait][Next]
+Well, I'm always up for another[BR]
+fight if you are, young man.[BR]
+[Pause 10]Just come visit whenever[BR]
+you're ready.[BR]
+[Wait][End]
+}
+
+#new:Script $Script_802421A8
+{
+   	Call     SetMusicTrack		( 00000000 .Song:PleasantPath 00000000 00000008 )
+	Set  .Why           00000000
+	Set  .KootFight     00000000
+	Set  .KootFightBeat 00000001
+	If   .KootFightFirst == 00000000
+		Call     SpeakToPlayer		( .Npc:Self 00B50004 00B50001 00000000 $DefeatStringFirst )	
+		Set  .KootFightFirst 00000001
+	Else
+		Call     SpeakToPlayer		( .Npc:Self 00B50004 00B50001 00000000 $DefeatString )	
+	EndIf
+	Call     SetNpcSpeed 	( .Npc:Self *Fixed[4.0] )
+	Call     SetNpcAnimation 	( .Npc:Self 00B50002 )
+    Call     NpcMoveTo   	( .Npc:Self -150` 125` 125` )
+	Call     DisablePlayerInput	( .False )
+	Call     EnablePartnerAI 	( )	
+   34:  Return
+   3C:  End
+}

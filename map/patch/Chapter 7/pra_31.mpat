@@ -1,0 +1,138 @@
+@ $NpcGroupList_802420A4
+{
+00000003 $NpcGroup_80241AD4 1F0E0002 
+00000000 00000000 00000000
+}
+
+@ $Script_Init_80241A68
+{
+        Call     BindNpcIdle 		( .Npc:Self $Script_IdleAI )
+    0:  Call     BindNpcInteract 	( .Npc:Self $Script_Interact_802419B4 )
+	    Call     BindNpcDefeat 	( .Npc:Self $Script_802421A8 )
+   14:  Return
+   1C:  End
+}
+   
+#new:Script $Script_IdleAI
+{
+	Loop
+		If  *MapFlag[0]  ==  .True 
+		 	Call     StartBossBattle 	( .Song:SpecialBattle )
+		EndIf
+		Wait     00000001 
+	EndLoop
+	Return
+	End
+}
+	
+#new:Script $Script_802421A8
+{
+	Call     DisablePlayerInput	( .False )
+   	Call     SetMusicTrack		( 00000000 .Song:CrystalPalace 00000000 00000008 )
+	Set  *MapFlag[0] .False 
+	Call     ShowMessageAtScreenPos     	( $DefeatString 000000A0 00000028 )		
+	Return
+	End
+}
+	
+#string $DefeatString
+{
+[Style Right]
+You have solved our puzzle.[Pause 5][BR]
+We allow you to pass.[BR]
+[Pause 21][Wait][End]
+}
+	
+@ $Script_80242570
+{
+    0:  Loop     
+    C:  	If  *MapVar[1]  ==  00000001 
+   1C:  		BreakLoop
+   24:  	EndIf
+   2C:  	Wait     00000001 
+   38:  EndLoop
+   40:  Call     DisablePlayerInput 	( .True )
+   50:  Loop     
+   5C:  	If  *MapVar[2]  ==  00000000 
+   6C:  		BreakLoop
+   74:  	EndIf
+   7C:  	Wait     00000001 
+   88:  EndLoop
+   90:  Call     PlaySound   	( 0000000B )
+   A0:  Wait     00000028 
+   AC:  Call     UseSettingsFrom 	( .Cam:Default 00000145 00000000 00000000 )
+   C8:  Call     SetPanTarget 	( .Cam:Default 00000145 00000000 00000000 )
+   E4:  Call     SetCamSpeed 	( .Cam:Default *Fixed[90.0] )
+   F8:  Call     SetCamPitch 	( .Cam:Default *Fixed[12.0] *Fixed[-10.0] )
+  110:  Call     SetCamDistance ( .Cam:Default *Fixed[350.0] )
+  124:  Call     SetCamPosA  	( .Cam:Default *Fixed[323.30078] *Fixed[-66.5] )
+  13C:  Call     SetCamPosB  	( .Cam:Default *Fixed[500.0] *Fixed[296.80078] )
+  154:  Call     PanToTarget 	( .Cam:Default 00000000 00000001 )
+  16C:  Call     WaitForCam  	( .Cam:Default *Fixed[1.0] )
+  180:  Thread
+  188:  	Wait     0000002D 
+  194:  	Call     SetGroupEnabled ( 00000021 00000001 )
+  1A8:  	Call     SetGroupEnabled ( 00000023 00000001 )
+  1BC:  	Call     SetGroupEnabled ( 00000030 00000001 )
+  1D0:  	Call     SetGroupEnabled ( 00000032 00000001 )
+  1E4:  	Call     ModifyColliderFlags 	( 00000001 ~Collider:o1071 7FFFFE00 )
+  1FC:  EndThread
+  204:  Thread
+  20C:  	Wait     00000032 
+  218:  	Call     PlaySoundAtModel 	( ~Model:k1 00000030 00000000 )
+  230:  	Wait     00000019 
+  23C:  	Call     PlaySoundAtModel 	( ~Model:k2 000001EE 00000000 )
+  254:  	Wait     00000005 
+  260:  	Call     PlaySoundAtModel 	( ~Model:k3 000001EE 00000000 )
+  278:  	Wait     00000005 
+  284:  	Call     PlaySoundAtModel 	( ~Model:k3 000001EE 00000000 )
+  29C:  	Wait     00000005 
+  2A8:  	Call     PlaySoundAtModel 	( ~Model:k3 000001EE 00000000 )
+  2C0:  	Wait     00000005 
+  2CC:  	Call     PlaySoundAtModel 	( ~Model:k3 000001EE 00000000 )
+  2E4:  	Wait     00000005 
+  2F0:  	Call     PlaySoundAtModel 	( ~Model:k3 000001EE 00000000 )
+  308:  	Wait     00000005 
+  314:  	Call     PlaySoundAtModel 	( ~Model:k3 000001EE 00000000 )
+  32C:  	Wait     00000005 
+  338:  	Call     PlaySoundAtModel 	( ~Model:k3 000001EE 00000000 )
+  350:  	Wait     00000005 
+  35C:  	Call     PlaySoundAtModel 	( ~Model:k3 000001EE 00000000 )
+  374:  	Wait     00000005 
+  380:  	Call     PlaySoundAtModel 	( ~Model:k3 000001EE 00000000 )
+  398:  	Wait     00000005 
+  3A4:  	Call     PlaySoundAtModel 	( ~Model:k3 000001EE 00000000 )
+  3BC:  	Wait     00000005 
+  3C8:  	Call     PlaySoundAtModel 	( ~Model:k3 000001EE 00000000 )
+  3E0:  	Wait     00000005 
+  3EC:  	Call     PlaySoundAtModel 	( ~Model:k3 000001EE 00000000 )
+  404:  	Wait     00000005 
+  410:  	Call     PlaySoundAtModel 	( ~Model:k3 000001EE 00000000 )
+  428:  	Wait     00000005 
+  434:  	Call     PlaySoundAtModel 	( ~Model:k3 000001EE 00000000 )
+  44C:  EndThread
+  454:  Thread
+  45C:  	Wait     00000032 
+  468:  	Call     EnableModel 	( ~Model:n1 .False )
+  47C:  	Call     EnableModel 	( ~Model:k1 .True )
+  490:  	Wait     0000000A 
+  49C:  	Call     EnableModel 	( ~Model:n2 .False )
+  4B0:  	Call     EnableModel 	( ~Model:k2 .True )
+  4C4:  	Wait     0000001E 
+  4D0:  	Call     EnableModel 	( ~Model:n3 .False )
+  4E4:  	Call     EnableModel 	( ~Model:k3 .True )
+  4F8:  	Wait     00000016 
+  504:  	Call     EnableModel 	( ~Model:n4 .False )
+  518:  	Call     EnableModel 	( ~Model:k4 .True )
+  52C:  	Wait     00000012 
+  538:  	Call     EnableModel 	( ~Model:n5 .False )
+  54C:  	Call     EnableModel 	( ~Model:k5 .True )
+  560:  EndThread
+  568:  Call  PlayModelAnimation    ( 00000000 $ModelAnimation_80246130[428] )
+  57C:  Wait     000000C8 
+  588:  Set  *StoryProgress  00000055 
+  598:  Call     PanToTarget 	( .Cam:Default 00000000 00000000 )
+  5B0:  Set *MapFlag[0] .True
+  5C0:  Return
+  5C8:  End
+}

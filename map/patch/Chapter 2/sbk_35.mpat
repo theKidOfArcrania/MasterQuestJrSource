@@ -1,0 +1,61 @@
+
+@ $Script_Main_EnterWalk
+{
+    0:  Set      *WorldMapLocation 0000000A 
+   10:  Call     SetSpriteShading 	( FFFFFFFF )
+   20:  If       *StoryProgress ==  FFFFFFC1 
+   30:     Call     DisablePulseStone 	( .False )
+   40:  EndIf
+   48:  Call     SetCamPerspective 	( .Cam:Default 00000003 00000019 00000010 00001000 )
+   68:  Call     SetCamBGColor 	( .Cam:Default 00000000 00000000 00000000 )
+   84:  Call     SetCamEnabled 	( .Cam:Default .True )
+   98:  Call     SetCamLeadPlayer 	( .Cam:Default .False )
+   		Exec     $Script_SandFlow
+   AC:  Call     MakeNpcs    	( 00000000 $NpcGroupList_80240C60 )
+   C0:  Call     $Function_80240000 ( )
+   CC:  Call     SetMusicTrack 	( 00000000 .Song:DryDryDesert 00000000 00000008 )
+   E8:  Set      *Var[0] $Script_80240570 
+   F8:  Exec     EnterWalk 
+  104:  Exec     $Script_802416A0 
+  110:  Return
+  118:  End
+}
+
+#new:Script $Script_SandFlow
+{
+	Call     EnableTexPanning 	( ~Model:SandFlowA .True )
+	Call     EnableTexPanning 	( ~Model:SandFlowB .True )
+	Call     EnableTexPanning 	( ~Model:SandFlowC .True )
+	Call     EnableTexPanning 	( ~Model:SandFlowD .True )
+	Set      *Var[0] 00000000 
+	Loop     
+		Add      *Var[0] 100`  
+		Call     SetTexPanOffset ( 00000001 00000000 00000000 *Var[0] )
+		Wait     00000001 
+	EndLoop
+	Return
+	End
+}
+
+% Trees were moved, update scripted positions
+	
+@ $TreeDropList_Tree1
+{
+00000001 
+.Item:Coin ~Vec3d:Tree802415F4_Drop0 0000000F *GF_SBK35_Tree1_Coin 00000000 
+}
+
+@ $TriggerCoord_80241628
+{
+~BombPos:Bomb_80241628
+}
+
+@ $TriggerCoord_8024165C
+{
+~BombPos:Bomb_8024165C
+}
+
+@ $TriggerCoord_80241690
+{
+~BombPos:Bomb_80241690
+}

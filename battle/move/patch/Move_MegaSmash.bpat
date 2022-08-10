@@ -1,0 +1,5 @@
+@ $Script_UseMove0 {
+[70]  		Set  *Var[F]  0000000B   
+[B8]  		Set  *Var[F]  0000000D
+[100]  		Set  *Var[F]  0000000F
+}

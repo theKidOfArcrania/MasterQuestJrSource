@@ -1,0 +1,468 @@
+%% Pokey Changes
+
+@ $Pokey
+{
+% stats
+[MaxHP]         4`b 
+}
+
+@ $StatusTable_8021828C
+{
+.Status:Normal      0`
+.Status:Default    0`
+.Status:Sleep      50`
+.Status:Poison      0`
+.Status:Frozen      0`
+.Status:Dizzy      70`
+.Status:Fear    0`
+.Status:Static      0`
+.Status:Paralyze   70`
+.Status:Shrink     90`
+.Status:Stop      100`
+.Status:DefaultTurnMod   0`
+.Status:SleepTurnMod      0`
+.Status:PoisonTurnMod     0`
+.Status:FrozenTurnMod     0`
+.Status:DizzyTurnMod     -1`
+.Status:FearTurnMod   0`
+.Status:StaticTurnMod     0`
+.Status:ParalyzeTurnMod   0`
+.Status:ShrinkTurnMod     0`
+.Status:StopTurnMod      -1`
+.Status:End
+}
+
+% weak to fire
+@ $DefenseTable_80218280
+{
+.Element:Normal 00000000
+.Element:Fire   FFFFFFFE
+.Element:End
+}
+
+%increased damage
+@ $Script_TakeTurn_8021A018
+{
+  [90C]  Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 10000000 00000000 80020300 00000004 00000020 )
+}
+  
+@ $Script_8021B590
+{
+  [6D8]  Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 00000000 00000000 80020300 00000003 00000020 )
+}
+
+@ $Script_802193B8
+{
+  [7C4]  	Case  ==  00000000 
+  [7D0]  		Set  *Var[1]  00000004 
+  [7E0]  	Case  ==  00000001 
+  [7EC]  		Set  *Var[1]  00000003 
+  [7FC]  	Default
+  [804]  		Set  *Var[1]  00000002 
+}
+  
+% ====================================================
+% Bandits
+% + Steals 20 coins at a time (was 10)
+% increased Damage (2 > 4)
+% attack sped up slightly frame and speed-wise
+% ====================================================
+@ $BanditA
+{
+[MaxHP]         6`b 
+}
+
+@ $BanditB
+{
+[MaxHP]         6`b 
+}
+
+@ $Script_TakeTurn_8021E900
+{
+    0:  Call     UseIdleAnimation 	( .Actor:Self .False )
+   14:  Call     EnableIdleScript 	( .Actor:Self 00000000 )
+   28:  Call     SetTargetActor ( .Actor:Self .Actor:Player )
+   3C:  Call     GetActorVar 	( .Actor:Self 00000000 *Var[0] )
+   54:  If  *Var[0]  ==  00000001 
+   64:  	Call     SetActorYaw 	( .Actor:Self 000000B4 )
+   78:  	Call     SetAnimation 	( .Actor:Self 00000001 00320008 )
+   90:  	Wait     0000001E 
+   9C:  	Call     SetActorSpeed 	( .Actor:Self *Fixed[10.0] )
+   B0:  	Call     SetGoalPos 	( .Actor:Self 0000012C 00000000 00000000 )
+   CC:  	Call     RunToGoal   	( .Actor:Self 00000000 .False )
+   E4:  	Call     SetBattleFlagBits 	( 00040000 .True )
+   F8:  	Call     8027D32C ( FFFFFF81 )
+  108:  	Call     RemoveActor 	( .Actor:Self )
+  118:  	Return
+  120:  EndIf
+  128:  Call     UseBattleCamPreset 	( 0000003F )
+  138:  Call     BattleCamTargetActor ( .Actor:Self )
+  148:  Call     8024ECF8 ( FFFFFFFF 00000001 00000000 )
+  160:  Call     GetBattlePhase ( *Var[0] )
+  170:  If  *Var[0]  ==  .Phase:FirstStrike
+  180:  	Call     SetGoalToTarget 	( .Actor:Self )
+  190:  	Call     GetGoalPos  	( .Actor:Self *Var[0] *Var[1] *Var[2] )
+  1AC:  	Add  *Var[0]  00000032 
+  1BC:  	Set  *Var[1]  00000000 
+  1CC:  	Call     SetActorPos 	( .Actor:Self *Var[0] *Var[1] *Var[2] )
+  1E8:  Else
+  1F0:  	Call     SetAnimation 	( .Actor:Self 00000001 00320007 )
+  208:  	Call     SetGoalToTarget 	( .Actor:Self )
+  218:  	Call     AddGoalPos 	( .Actor:Self 00000032 00000000 00000000 )
+  234:  	Call     SetActorSpeed 	( .Actor:Self *Fixed[6.0] )
+  248:  	Call     RunToGoal   	( .Actor:Self 00000000 .False )
+  260:  	Call     SetAnimation 	( .Actor:Self 00000001 00320001 )
+  278:  	Wait     00000006 
+  284:  EndIf
+  28C:  Call     SetActorSpeed 	( .Actor:Self *Fixed[2.0] )
+  2A0:  Call     SetAnimation 	( .Actor:Self 00000001 00320005 )
+  2B8:  Call     SetGoalToTarget 	( .Actor:Self )
+  2C8:  Call     AddGoalPos 	( .Actor:Self 00000023 00000000 00000000 )
+  2E4:  Call     RunToGoal   	( .Actor:Self 00000000 .False )
+  2FC:  Call     PlaySoundAtActor 	( .Actor:Self 000020C2 )
+  310:  Call     SetActorSounds ( FFFFFF81 00000000 00000000 00000000 )
+  32C:  Call     EnemyTestTarget ( .Actor:Self *Var[0] 00000000 00000000 00000001 00000010 )
+  350:  Switch  *Var[0] 
+  35C:  	CaseOR  ==  00000006 
+  368:  	CaseOR  ==  00000005 
+  374:  		Set  *Var[A]  *Var[0] 
+  384:  		Call     SetAnimation 	( .Actor:Self 00000001 0032000D )
+  39C:  		Call     SetGoalToTarget 	( .Actor:Self )
+  3AC:  		Call     SetActorSpeed 	( .Actor:Self *Fixed[8.0] )
+  3C0:  		Call     RunToGoal   	( .Actor:Self 00000000 .False )
+  3D8:  		Call     ResetAllActorSounds ( FFFFFF81 )
+  3E8:  		Call     SetActorSpeed 	( .Actor:Self *Fixed[6.0] )
+  3FC:  		Call     SetActorJumpGravity 	( .Actor:Self *Fixed[0.5] )
+  410:  		Call     GetActorPos 	( .Actor:Self *Var[0] *Var[1] *Var[2] )
+  42C:  		Sub  *Var[0]  0000001E 
+  43C:  		Call     SetGoalPos 	( .Actor:Self *Var[0] *Var[1] *Var[2] )
+  458:  		Call     JumpToGoal  	( .Actor:Self 00000008 00000000 00000001 00000000 )
+  478:  		Sub  *Var[0]  00000014 
+  488:  		Call     SetGoalPos 	( .Actor:Self *Var[0] *Var[1] *Var[2] )
+  4A4:  		Call     JumpToGoal  	( .Actor:Self 00000008 00000000 00000001 00000000 )
+  4C4:  		Wait     00000002 
+  4D0:  		If  *Var[A]  ==  00000005 
+  4E0:  			Call     EnemyTestTarget ( .Actor:Self *Var[0] 80000000 00000000 00000000 00000000 )
+  504:  		EndIf
+  50C:  		Wait     00000003 
+  518:  		Call     UseBattleCamPreset 	( 00000002 )
+  528:  		Call     YieldTurn ( )
+  534:  		Call     SetActorYaw 	( .Actor:Self 000000B4 )
+  548:  		Call     AddActorDecoration 	( .Actor:Self 00000001 00000000 .Decoration:Sweat )
+  564:  		Call     SetAnimation 	( .Actor:Self 00000001 00320007 )
+  57C:  		Call     SetGoalToHome 	( .Actor:Self )
+  58C:  		Call     SetActorSpeed 	( .Actor:Self *Fixed[10.0] )
+  5A0:  		Call     RunToGoal   	( .Actor:Self 00000000 .False )
+  5B8:  		Call     SetAnimation 	( .Actor:Self 00000001 00320001 )
+  5D0:  		Call     RemoveActorDecoration 	( .Actor:Self 00000001 00000000 )
+  5E8:  		Call     SetActorYaw 	( .Actor:Self 00000000 )
+  5FC:  		Call     EnableIdleScript 	( .Actor:Self 00000001 )
+  610:  		Call     UseIdleAnimation 	( .Actor:Self .True )
+  624:  		Return
+  62C:  	EndCaseGroup
+  634:  EndSwitch
+  63C:  Call     SetAnimation 	( .Actor:Self 00000001 0032000D )
+  654:  Call     SetGoalToTarget 	( .Actor:Self )
+  664:  Call     SetActorSpeed 	( .Actor:Self *Fixed[10.0] )
+  678:  Call     RunToGoal   	( .Actor:Self 00000000 .False )
+  690:  Call     ResetAllActorSounds ( FFFFFF81 )
+  6A0:  Wait     00000001 
+  6AC:  Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 00000000 00000000 00000000 00000002 00000020 ) % 50% chance to dizzy for 1 turn
+  6D4:  Switch  *Var[0] 
+  6E0:  	CaseOR  ==  00000000 
+  6EC:  	CaseOR  ==  00000002 
+  6F8:  		Call     GetLastDamage 	( .Actor:Player *Var[0] )
+  70C:  		If  *Var[0]  <=  00000000 
+  71C:  			Set  *Var[0]  00000001 
+  72C:  			Goto     0000000A 
+  738:  		EndIf
+  740:  		Call     GetBattleFlags ( *Var[0] )
+  750:  		If  *Var[0]  &  80000000 
+  760:  			Set  *Var[0]  00000001 
+  770:  			Goto     0000000A 
+  77C:  		EndIf
+  784:  		Call     GetStatusFlags ( .Actor:Self *Var[0] )
+  798:  		If  *Var[0]  &  00080000 
+  7A8:  			Set  *Var[0]  00000000 
+  7B8:  			Goto     0000000A 
+  7C4:  		EndIf
+  7CC:  		Call     GetStatusFlags ( .Actor:Player *Var[0] )
+  7E0:  		If  *Var[0]  &  00100000 
+  7F0:  			Set  *Var[0]  00000000 
+  800:  			Goto     0000000A 
+  80C:  		EndIf
+  814:  		Call     AddCoin     	( 00000000 )
+  824:  		Switch  *Var[0] 
+  830:  			Case  ==  00000000 
+  83C:  				Set  *Var[0]  00000001 
+  84C:  			Case  <  0000000A 
+  858:  				Call     SetActorVar 	( .Actor:Self 00000001 *Var[0] )
+  870:  				Set  *Var[0]  00000002 
+  880:  			Case  >=  0000000A 
+  88C:  				Call     SetActorVar 	( .Actor:Self 00000001 00000014 )
+  8A4:  				Set  *Var[0]  00000002 
+  8B4:  		EndSwitch
+  8BC:  		Label    0000000A 
+  8C8:  		Switch  *Var[0] 
+  8D4:  			Case  ==  00000000 
+  8E0:  				Call     GetGoalPos  	( .Actor:Self *Var[0] *Var[1] *Var[2] )
+  8FC:  				Add  *Var[0]  0000001E 
+  90C:  				Set  *Var[1]  00000000 
+  91C:  				Call     SetActorJumpGravity 	( .Actor:Self *Fixed[1.8007812] )
+  930:  				Call     SetGoalPos 	( .Actor:Self *Var[0] *Var[1] *Var[2] )
+  94C:  				Call     JumpToGoal  	( .Actor:Self 0000000A 00000000 00000001 00000000 )
+  96C:  				Call     SetAnimation 	( .Actor:Self 00000001 00320001 )
+  984:  				Wait     00000014 
+  990:  				Call     SetAnimation 	( .Actor:Self 00000001 00320007 )
+  9A8:  			Case  ==  00000001 
+  9B4:  				Call     GetGoalPos  	( .Actor:Self *Var[0] *Var[1] *Var[2] )
+  9D0:  				Add  *Var[0]  0000001E 
+  9E0:  				Set  *Var[1]  00000000 
+  9F0:  				Call     SetActorJumpGravity 	( .Actor:Self *Fixed[1.8007812] )
+  A04:  				Call     SetGoalPos 	( .Actor:Self *Var[0] *Var[1] *Var[2] )
+  A20:  				Call     JumpToGoal  	( .Actor:Self 0000000A 00000000 00000001 00000000 )
+  A40:  				Call     SetAnimation 	( .Actor:Self 00000001 0032000E )
+  A58:  				Wait     00000014 
+  A64:  				Call     PlaySoundAtActor 	( .Actor:Self 000020C3 )
+  A78:  				Call     SetAnimation 	( .Actor:Self 00000001 00320010 )
+  A90:  				Wait     00000014 
+  A9C:  				Call     SetAnimation 	( .Actor:Self 00000001 00320007 )
+  AB4:  			Default
+  ABC:  				Call     SetGoalToTarget 	( .Actor:Self )
+  ACC:  				Call     GetGoalPos  	( .Actor:Self *Var[A] *Var[B] *Var[C] )
+  AE8:  				Add  *Var[A]  0000001E 
+  AF8:  				Set  *Var[B]  00000000 
+  B08:  				Call     GetActorVar 	( .Actor:Self 00000001 *Var[0] )
+  B20:  				Mul  *Var[0]  FFFFFFFF 
+  B30:  				Call     AddCoin     	( *Var[0] )
+  B40:  				Thread
+  B48:  					Call     SetPartFlagBits 	( .Actor:Self 00000002 00100000 .True )
+  B64:  					Call     SetPartFlagBits 	( .Actor:Self 00000002 00000001 .False )
+  B80:  					Call     GetActorPos 	( .Actor:Player *Var[0] *Var[1] *Var[2] )
+  B9C:  					Call     SetPartPos 	( .Actor:Self 00000002 *Var[0] *Var[1] *Var[2] )
+  BBC:  					Call     SetPartJumpGravity 	( .Actor:Self 00000002 *Fixed[1.0] )
+  BD4:  					Add  *Var[B]  0000001E 
+  BE4:  					Call     JumpPartTo 	( .Actor:Self 00000002 *Var[A] *Var[B] *Var[C] 00000016 .True )
+  C0C:  					Call     SetPartFlagBits 	( .Actor:Self 00000002 00100000 .False )
+  C28:  				EndThread
+  C30:  				Thread
+  C38:  					Call     GetActorVar 	( .Actor:Self 00000001 *Var[0] )
+  C50:  					Loop     *Var[0] 
+  C5C:  						Call     PlaySoundAtActor 	( .Actor:Self 00000212 )
+  C70:  						Wait     00000001 
+  C7C:  					EndLoop
+  C84:  				EndThread
+  C8C:  				Call     SetActorJumpGravity 	( .Actor:Self *Fixed[1.8007812] )
+  CA0:  				Call     SetGoalPos 	( .Actor:Self *Var[A] *Var[B] *Var[C] )
+  CBC:  				Call     JumpToGoal  	( .Actor:Self 0000000A 00000000 00000001 00000000 )
+  CDC:  				Call     SetIdleAnimations 	( .Actor:Self 00000001 $IdleAnimations_8021D55C )
+  CF4:  				Call     SetAnimation 	( .Actor:Self 00000001 0032000E )
+  D0C:  				Call     SetActorVar 	( .Actor:Self 00000000 00000001 )
+  D24:  				Wait     00000007 
+  D30:  				Call     SetAnimation 	( .Actor:Self 00000001 0032000F )
+  D48:  				Wait     00000014 
+  D54:  				Call     SetAnimation 	( .Actor:Self 00000001 00320008 )
+  D6C:  		EndSwitch
+  D74:  		Call     UseBattleCamPreset 	( 00000002 )
+  D84:  		Call     YieldTurn ( )
+  D90:  		Call     SetGoalToHome 	( .Actor:Self )
+  DA0:  		Call     SetActorSpeed 	( .Actor:Self *Fixed[8.0] )
+  DB4:  		Call     RunToGoal   	( .Actor:Self 00000000 .False )
+  DCC:  	EndCaseGroup
+  DD4:  EndSwitch
+  DDC:  Call     EnableIdleScript 	( .Actor:Self 00000001 )
+  DF0:  Call     UseIdleAnimation 	( .Actor:Self .True )
+  E04:  Return
+  E0C:  End
+}
+
+% ====================================================
+% Dry Bubbles
+% - weaker version of lava bubble
+% ====================================================
+
+#import DryBubble.bpat
+
+% ====================================================
+% Banditos
+% - faster bandit with less hp
+% ====================================================
+
+#import Bandito.bpat
+
+% ====================================================
+% Bandit Leader
+% - Stronger Bandit that drops tons of coins
+% ====================================================
+
+#import DarkBandit.bpat
+@ $DarkBandit
+{
+[Level]         11`b % low level to prevent grinding
+[Coins]         40`b % but big rich boi if you kill him
+}
+
+% ====================================================
+% Formation Changes
+% ====================================================
+
+@ $Formation_00
+{
+$Pokey 			00000001 0000000A 00000000 00000000 00000000 00000000
+$Bandito 		00000002 00000009 00000000 00000000 00000000 00000000 
+$DryBubble	    00000003 00000008 00000000 00000000 00000000 00000000
+}
+
+% add dry bubble to this very common formation
+@ $Formation_01
+{
+$Pokey 			00000001 0000000A 00000000 00000000 00000000 00000000 
+$Pokey 			00000002 00000009 00000000 00000000 00000000 00000000 
+$DryBubble	    00000007 00000008 00000000 00000000 00000000 00000000
+}
+
+@ $Formation_02
+{
+$Pokey 		00000000 0000000A 00000000 00000000 00000000 00000000 
+$Bandito 	00000001 00000009 00000000 00000000 00000000 00000000 
+$Pokey 		00000002 00000008 00000000 00000000 00000000 00000000 
+}
+
+@ $Formation_06
+{
+$Pokey 		00000000 0000000A 00000000 00000000 00000000 00000000 
+$DryBubble 	00000001 00000009 00000000 00000000 00000000 00000000 
+$BanditA 	00000002 00000008 00000000 00000000 00000000 00000000 
+$Bandito 	00000003 00000007 00000000 00000000 00000000 00000000
+}
+
+@ $Formation_07
+{
+$Pokey 		00000001 0000000A 00000000 00000000 00000000 00000000 
+$Bandito 	00000002 00000009 00000000 00000000 00000000 00000000 
+$DryBubble 	00000006 00000008 00000000 00000000 00000000 00000000
+}
+
+@ $Formation_08
+{
+$Pokey 		00000000 0000000A 00000000 00000000 00000000 00000000 
+$Pokey 		00000001 00000009 00000000 00000000 00000000 00000000 
+$BanditA 	00000002 00000008 00000000 00000000 00000000 00000000 
+$DryBubble 	00000006 00000007 00000000 00000000 00000000 00000000
+}
+
+@ $Formation_09
+{
+$BanditA 		00000001 0000000A 00000000 00000000 00000000 00000000 
+$Bandito 		00000002 00000009 00000000 00000000 00000000 00000000 
+$DryBubble	    00000007 00000008 00000000 00000000 00000000 00000000
+}
+
+% overwrite unused formation
+@ $Formation_10
+{
+$DryBubble	00000001 0000000A 00000000 00000000 00000000 00000000 
+$DryBubble	00000006 0000000B 00000000 00000000 00000000 00000000
+}
+
+@ $Formation_0B
+{
+$BanditA 00000000 0000000A 00000000 00000000 00000000 00000000 
+$Bandito 00000001 00000009 00000000 00000000 00000000 00000000 
+$BanditA 00000002 00000008 00000000 00000000 00000000 00000000 
+$Bandito 00000003 00000007 00000000 00000000 00000000 00000000
+}
+
+@ $Formation_0F
+{
+$BanditA 	00000000 0000000A 00000000 00000000 00000000 00000000 
+$BanditA 	00000001 00000009 00000000 00000000 00000000 00000000 
+$DryBubble 	00000006 00000008 00000000 00000000 00000000 00000000 
+$DryBubble 	00000007 00000007 00000000 00000000 00000000 00000000 
+}
+
+#new:Formation $10sFormation4_11
+{
+$BanditA    00000001 0000000A 00000000 00000000 00000000 00000000 
+$Bandito    00000002 00000009 00000000 00000000 00000000 00000000
+$DryBubble 	00000005 00000008 00000000 00000000 00000000 00000000 
+$DryBubble 	00000006 00000007 00000000 00000000 00000000 00000000
+}
+
+#new:Formation $10sFormation5_12
+{
+$Pokey 			00000001 0000000A 00000000 00000000 00000000 00000000 
+$BanditA 			00000002 00000009 00000000 00000000 00000000 00000000 
+$DryBubble 	00000009 00000008 00000000 00000000 00000000 00000000 
+$DryBubble 	0000000A 00000007 00000000 00000000 00000000 00000000
+}
+
+#new:Formation $10sFormation6_13
+{
+$Pokey    00000000 0000000A 00000000 00000000 00000000 00000000
+$Bandito  00000001 00000009 00000000 00000000 00000000 00000000
+$Bandito  00000002 00000008 00000000 00000000 00000000 00000000
+$Bandito  00000003 00000007 00000000 00000000 00000000 00000000
+}
+
+#new:Formation $Formation_14
+{
+$BanditA    00000000 0000000A 00000000 00000000 00000000 00000000 
+$DarkBandit 00000001 00000009 00000000 00000000 00000000 00000000 
+$Bandito 	00000002 00000008 00000000 00000000 00000000 00000000
+}
+
+@ $FormationTable
+{
+$SJIS_80220148 00000003 $Formation_00 $Stage_8021F90C 00000000 
+$SJIS_8022013C 00000003 $Formation_01 $Stage_8021F90C 00000000 
+$SJIS_80220130 00000003 $Formation_02 $Stage_8021F90C 00000000 
+$SJIS_80220120 00000004 $Formation_03 $Stage_8021F90C 00000000 
+$SJIS_80220110 00000002 $Formation_04 $Stage_8021F90C 00000000 
+$SJIS_802200FC 00000003 $Formation_05 $Stage_8021F90C 00000000 
+$SJIS_802200E8 00000004 $Formation_06 $Stage_8021F90C 00000000 
+$SJIS_802200D0 00000003 $Formation_07 $Stage_8021F90C 00000000 
+$SJIS_802200B4 00000004 $Formation_08 $Stage_8021F90C 00000000 
+$SJIS_802200A8 00000003 $Formation_09 $Stage_8021F90C 00000000 
+$SJIS_8022009C 00000002 $Formation_0A $Stage_8021F90C 00000000 
+$SJIS_80220090 00000004 $Formation_0B $Stage_8021F90C 00000000 
+$SJIS_80220084 00000004 $Formation_0C $Stage_8021F90C 00000000 
+$SJIS_80220074 00000002 $Formation_0D $Stage_8021F90C 00000000 
+$SJIS_80220060 00000003 $Formation_0E $Stage_8021F90C 00000000 
+$SJIS_8022004C 00000004 $Formation_0F $Stage_8021F90C 00000000 
+$SJIS_80220030 00000002 $Formation_10 $Stage_8021F90C 00000000
+00000000 00000004 $10sFormation4_11 $AncientStage 00000000 %These formations are
+00000000 00000004 $10sFormation5_12 $AncientStage 00000000 %for the pit of 100 trials
+00000000 00000004 $10sFormation6_13 $AncientStage 00000000 %hopefully this works okay
+$SJIS_80220030 00000003 $Formation_14 $Stage_8021F90C 00000000  
+00000000 00000000 00000000 00000000 00000000 
+}
+
+#new:Stage $AncientStage
+{
+"kpa_tex"
+"kmr_bt07_shape"
+"kmr_bt07_hit"
+$Script_BeforeBoss 
+$Script_AfterBoss
+00000000 
+00000000
+00000000 
+00000000 
+00000000 
+}
+
+#new:Script $Script_BeforeBoss
+{
+	Call	SetSpriteShading 	( FFFFFFFF )
+	Call	SetCamBGColor 	( 00000001 00000000 00000000 00000000 )
+	Return
+	End
+}
+
+#new:Script $Script_AfterBoss
+{
+	Return
+	End 
+}
+

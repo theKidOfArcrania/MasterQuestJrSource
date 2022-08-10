@@ -1,0 +1,5 @@
+% This file allows mod authors to override item names to accommodate custom items. 
+0F6 = GoldBar
+12D = LuckyStars
+131 = FlowerPower
+150 = MedicineMan

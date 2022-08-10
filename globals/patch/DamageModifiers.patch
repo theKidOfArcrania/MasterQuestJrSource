@@ -1,0 +1,101 @@
+
+% Contact Hazard: Fire
+@Function 1A04D0
+{
+ADDIU	A0, R0, 4 % changed from 1
+}
+
+% Contact Hazard: Explosion
+@Function 1A045C
+{
+ADDIU	A0, R0, 6 % changed from 1
+}
+
+% Contact Hazard: Spikes (Top)
+@Function 1A05A8
+{
+ADDIU	A0, R0, 4 % changed from 1
+}
+
+% Contact Hazard: Spikes (Front)
+@Function 1A01C4
+{
+ADDIU	A0, R0, 4 % changed from 1
+}
+
+% Double damage from environmental hazards: fire walls, spiky thwomps
+@Function 837E4 % 800EA334
+{
+SLL		A0, A0, 1
+LUI		V1, 8011
+LB		V0, F292 (V1)
+}
+
+@Function 8380C % 800EA35C
+{
+SB		V0, F292 (V1)
+}
+
+% Poison Damage
+/%@Function 170DE0
+{
+ADDIU	A0, R0, 3 % changed from 1
+}%/
+%...buuuut we check for the Jr badge too now
+#new:Data $PoisonDamageAdjust {
+	00000000
+}
+
+#new:Function $SetPoisonDamageModifier 
+{
+	PUSH 	RA
+	LW		A1, C (A0) %args
+	JAL		~Func:get_variable
+	LW		A1, 0 (A1) %first arg
+	%V0 has damage mod amount
+	SAW		V0, $PoisonDamageAdjust
+	POP		RA
+	JR		RA
+	ADDIU	V0, R0, 2
+}
+
+@Hook 170DE4
+{
+	JAL 	$IsBadgeEquiped
+	ADDIU	A0, R0, 35
+	LAW		A1, $PoisonDamageAdjust	%damage modifier
+	ADDIU	A1, A1, 3		%base poison damage
+	SUBU	A0, A1, A0 		%damage = 3 - (1 if jr)
+	LIA 	V1, 800DC070	%original code - overwritten by hook
+	J		8024250C
+	RESERVED
+}
+
+/% %this is a leftover of pro mode
+@Hook 1A641C
+{
+% double the damage value
+% ADDU	S0, S0, S0
+% check for invisibility and halve damage if necessary
+/%
+LB		V0, 218 (S3)
+ADDI	V0, V0, FFF2 % -E
+BEQL	V0, R0, 4
+SRA		S0, S0, 1
+%/
+/% deduct from HP
+LBU		V0, 1B8 (S3)
+SUBU	V0, V0, S0
+J		80277B4C
+SB		V0, 1B8 (S3)
+}%/
+
+@Function 1A5E04 % 80277524 make enemies that lack a "checkplayerhit" be able to hit through repel gel
+{
+ADDU    V1, R0, R0
+}
+
+@Function 1A0338 % 80271A58
+{
+ADDU    V1, R0, R0
+}

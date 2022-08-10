@@ -1,0 +1,152 @@
+
+% Peach gives Mario a little kiss after "The End" appears.
+% After completing this mod, he's earned it.
+@ $Script_80240C10
+{
+    0:  Call     DisablePlayerInput 	( .True )
+   10:  Call     InterpPlayerYaw 	( 0000010E 00000000 )
+   24:  Call     SetPlayerPos 	( 00000208 00000000 FFFFFF4C )
+   3C:  Call     SetNpcAnimation 	( 00000000 00D6000D )
+   50:  Call     SetNpcYaw   	( 00000000 0000010E )
+   64:  Call     SetNpcPos   	( 00000000 00000230 00000000 FFFFFF4C )
+   80:  Call     DisablePartnerAI 	( 00000000 )
+   90:  Call     SetNpcFlagBits ( .Npc:Partner 00000200 .False )
+   A8:  Call     SetNpcPos   	( .Npc:Partner 00000000 FFFFFE0C 00000000 )
+   C4:  Call     EnableGroup 	( ~Model:the_end .False )
+   D8:  Call     UseSettingsFrom 	( .Cam:Default 00000000 00000000 00000000 )
+   F4:  Call     SetPanTarget 	( .Cam:Default 00000000 00000000 00000000 )
+  110:  Call     SetCamPitch 	( .Cam:Default *Fixed[8.0] *Fixed[-11.5] )
+  128:  Call     SetCamSpeed 	( .Cam:Default *Fixed[90.0] )
+  13C:  Call     PanToTarget 	( .Cam:Default 00000000 00000001 )
+  154:  Thread
+  15C:  	Call     SetNpcSpeed 	( 00000000 *Fixed[2.0] )
+  170:  	Call     SetNpcFlagBits ( 00000000 00000200 .True )
+  188:  	Call     SetNpcFlagBits ( 00000000 00000008 .False )
+  1A0:  	Call     SetNpcAnimation 	( 00000000 00D6000F )
+  1B4:  	Call     NpcMoveTo   	( 00000000 000001C2 FFFFFFC4 00000000 )
+  1D0:  	Call     SetNpcAnimation 	( 00000000 00D60010 )
+  1E4:  	Call     NpcMoveTo   	( 00000000 0000015E FFFFFFA6 00000000 )
+  200:  	Call     NpcMoveTo   	( 00000000 0000014A FFFFFF7E 00000000 )
+  21C:  	Call     SetNpcAnimation 	( 00000000 00D6000E )
+  230:  EndThread
+  238:  Call     SetPlayerSpeed ( *Fixed[2.0] )
+  248:  Call     PlayerMoveTo 	( 000001C2 FFFFFFC4 00000000 )
+  260:  Call     PlayerMoveTo 	( 00000140 FFFFFFB0 00000000 )
+  278:  Call     PlayerMoveTo 	( 0000012C FFFFFF88 00000000 )
+  290:  Wait     0000001E 
+  29C:  Call     PlayEffect  	( 00000077 00000000 00000099 00000172 FFFFFEA2 FFFFFFFF 00000004 FFFFFFFF *Fixed[1.6005859] 00000046 00000000 00000000 00000000 00000000 )
+  2E0:  Call     $Function_80240310 ( *Var[F] )
+  2F0:  Wait     0000001E 
+  2FC:  Call     PlayEffect  	( 00000077 00000001 0000014D 000001A4 FFFFFEF2 FFFFFFFF 00000004 FFFFFFFF *Fixed[1.6005859] 00000046 00000000 00000000 00000000 00000000 )
+  340:  Call     $Function_80240310 ( *Var[F] )
+  350:  Wait     0000001E 
+  35C:  Call     PlayEffect  	( 00000077 00000000 FFFFFFE5 00000140 FFFFFE52 FFFFFFFF 00000004 FFFFFFFF *Fixed[1.6005859] 00000046 00000000 00000000 00000000 00000000 )
+  3A0:  Call     $Function_80240310 ( *Var[F] )
+  3B0:  Wait     00000050 
+  3BC:  Call     PlayEffect  	( 00000077 00000002 00000099 00000172 FFFFFEA2 FFFFFFFF 00000004 FFFFFFFF *Fixed[1.6005859] 00000046 00000000 00000000 00000000 00000000 )
+  400:  Call     $Function_80240310 ( *Var[F] )
+  410:  Wait     0000001E 
+  41C:  Thread
+  424:  	Wait     00000096 
+  430:  	Loop     
+  43C:  		Call     RandInt     	( 0000003C *Var[1] )
+  450:  		Add  *Var[1]  00000005 
+  460:  		Call     RandInt     	( 00000005 *Var[2] )
+  474:  		Add  *Var[2]  00000001 
+  484:  		Loop     *Var[2] 
+  490:  			Set  *Var[0]  00000000 
+  4A0:  			Exec     $Script_80240920 
+  4AC:  			Wait     *Var[1] 
+  4B8:  		EndLoop
+  4C0:  		Call     RandInt     	( 0000003C *Var[0] )
+  4D4:  		Add  *Var[0]  0000003C 
+  4E4:  		Wait     *Var[0] 
+  4F0:  		Set  *Var[0]  00000002 
+  500:  		Exec     $Script_80240920 
+  50C:  		Call     RandInt     	( 0000003C *Var[0] )
+  520:  		Add  *Var[0]  0000003C 
+  530:  		Wait     *Var[0] 
+  53C:  	EndLoop
+  544:  EndThread
+  54C:  Thread
+  554:  	Wait     000000F0 
+  560:  	Loop     
+  56C:  		Call     RandInt     	( 0000003C *Var[1] )
+  580:  		Add  *Var[1]  00000005 
+  590:  		Call     RandInt     	( 00000005 *Var[2] )
+  5A4:  		Add  *Var[2]  00000001 
+  5B4:  		Loop     *Var[2] 
+  5C0:  			Set  *Var[0]  00000001 
+  5D0:  			Exec     $Script_80240920 
+  5DC:  			Wait     *Var[1] 
+  5E8:  		EndLoop
+  5F0:  		Call     RandInt     	( 0000003C *Var[0] )
+  604:  		Add  *Var[0]  0000003C 
+  614:  		Wait     *Var[0] 
+  620:  		Set  *Var[0]  00000002 
+  630:  		Exec     $Script_80240920 
+  63C:  		Call     RandInt     	( 0000003C *Var[0] )
+  650:  		Add  *Var[0]  0000003C 
+  660:  		Wait     *Var[0] 
+  66C:  	EndLoop
+  674:  EndThread
+		Thread
+				Wait	240`
+				Call	SetNpcYaw   	( 00000000 270` )
+				Call	SetNpcAnimation ( 00000000 00D60018 )
+				Call	PlaySoundAtNpc 	( 00000000 00000214 00000000 )
+				Call	GetPlayerPos   	( *Var[0] *Var[1] *Var[2] )
+				Add		*Var[0]  25`
+				Add		*Var[1]  25`
+				Call	PlayEffect  	( 00000040 00000002 *Var[0] *Var[1] *Var[2] 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 )
+				Wait	10`
+				Call	SetNpcAnimation ( 00000000 00D60019 )
+				Wait	20`
+				Call	SetNpcYaw   	( 00000000 90` )
+				Call	SetNpcAnimation ( 00000000 00D6000E )
+		EndThread
+  67C:  Wait     0000001E 
+  688:  Call     EnableGroup 	( ~Model:the_end .True )
+  69C:  Call     SetModelCustomGfx ( 0000004F 00000001 FFFFFFFF )
+  6B4:  Call     SetModelCustomGfx ( 00000050 00000001 FFFFFFFF )
+  6CC:  Call     SetModelCustomGfx ( 00000051 00000001 FFFFFFFF )
+  6E4:  Call     SetModelCustomGfx ( 00000052 00000001 FFFFFFFF )
+  6FC:  Call     SetModelCustomGfx ( 00000053 00000001 FFFFFFFF )
+  714:  Call     SetCustomGfxBuilders ( 00000001 $Function_80240488 00000000 )
+  72C:  Call     MakeLerp    	( 00000000 000000FF 0000005A 00000000 )
+  748:  Loop     
+  754:  	Call     UpdateLerp  	( )
+  760:  	Call     $Function_8024045C ( *Var[0] )
+  770:  	Wait     00000001 
+  77C:  	If  *Var[1]  ==  00000000 
+  78C:  		BreakLoop
+  794:  	EndIf
+  79C:  EndLoop
+  7A4:  Wait     00000258 
+  7B0:  Thread
+  7B8:  	Call     PlayEffect  	( 00000077 00000000 00000136 00000118 FFFFFF06 FFFFFFFF 00000006 FFFFFFFF *Fixed[1.6005859] 00000046 00000000 00000000 00000000 00000000 )
+  7FC:  	Call     $Function_80240310 ( *Var[F] )
+  80C:  EndThread
+  814:  Wait     00000014 
+  820:  Call     MakeLerp    	( 00000000 00000064 0000001E 00000000 )
+  83C:  Loop     
+  848:  	Call     UpdateLerp  	( )
+  854:  	SetF  *Var[2]  *Fixed[3.600586] 
+  864:  	SetF  *Var[3]  *Fixed[-6.0] 
+  874:  	SetF  *Var[4]  *Fixed[0.60058594] 
+  884:  	SetF  *Var[5]  *Fixed[-0.0048828125] 
+  894:  	MulF  *Var[2]  *Var[0] 
+  8A4:  	MulF  *Var[3]  *Var[0] 
+  8B4:  	MulF  *Var[4]  *Var[0] 
+  8C4:  	MulF  *Var[5]  *Var[0] 
+  8D4:  	AddF  *Var[5]  *Fixed[1.0] 
+  8E4:  	Call     ScaleGroup  	( ~Model:the_end *Var[5] *Var[5] *Var[5] )
+  900:  	Call     TranslateGroup ( ~Model:the_end *Var[2] *Var[3] *Var[4] )
+  91C:  	Wait     00000001 
+  928:  	If  *Var[1]  ==  00000000 
+  938:  		BreakLoop
+  940:  	EndIf
+  948:  EndLoop
+  950:  Return
+  958:  End
+}

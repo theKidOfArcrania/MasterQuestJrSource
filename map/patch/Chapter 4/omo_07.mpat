@@ -1,0 +1,141 @@
+@ $EntryList
+{
+~Vec4f:Entry0 % -960.0    0.0   73.0   90.0
+}
+
+@ $Script_MakeEntities
+{
+     Call     MakeEntity  	( .Entity:Chest ~Vec4d:Entity802462C0 00000000 80000000 )
+     Call     AssignFlag  	( *GF_OMO07_Chest_FryingPan )
+     Call     AssignScript 	( $Script_80245F4C )
+     Call     MakeEntity  	( .Entity:Chest ~Vec4d:Entity80246308 00000000 80000000 )
+     Call     AssignFlag  	( *GF_OMO07_Chest_DefendPlusA )
+     Call     AssignScript 	( $Script_80245FA8 )
+     Call     MakeEntity  	( .Entity:Chest ~Vec4d:Entity80246350 00000000 80000000 )
+     Call     AssignFlag  	( *GF_OMO07_Chest_IcePower )
+     Call     AssignScript 	( $Script_80245FF4 )
+    Call     MakeEntity  	( .Entity:YellowBlock ~Vec4d:Entity80246398 .Item:Coin 80000000 )
+    Call     AssignBlockFlag 	( *GF_OMO07_ItemBlock_Coin )
+    Call     MakeEntity  	( .Entity:StarBoxLaucher ~Vec4d:Entity802463D0 80000000 )
+    Call     AssignScript 	( $Script_8024623C )
+   Call     MakeEntity  	( .Entity:StarBoxLaucher ~Vec4d:Entity80246404 80000000 )
+    Call     AssignScript 	( $Script_80246268 )
+    Call     MakeEntity  	( .Entity:StarBoxLaucher ~Vec4d:Entity80246438 80000000 )
+   Call     AssignScript 	( $Script_80246294 )
+  Call     MakeItemEntity ( .Item:Coin ~Vec3d:coin1 00000011 *Flag_OMO_62 )
+  Call     MakeItemEntity ( .Item:Coin ~Vec3d:coin2 00000011 *Flag_OMO_63 )
+  Call     MakeItemEntity ( .Item:Coin ~Vec3d:coin3 00000011 *Flag_OMO_64 )
+  	Call	MakeItemEntity	( .Item:SuperShroom ~Vec3d:shroom 00000011 *Flag_OMO_65 )
+		Call	MakeItemEntity	( .Item:StarPiece ~Vec3d:starpiece 00000011 *Flag_OMO_66 )
+    Return
+    End
+}
+	
+#new:NpcGroup $NpcGroup_New
+{
+0000000B $NpcSettings_80243ACC ~Vec3f:NPC_New % -550 60 70
+00000C00 00000000 00000000 00000000 0000010E 
+~Items:5:Mushroom:5:SuperShroom:5
+~HP:20:70:2:50 ~HP:30:60:2:50 ~HP:50:50:2:40 ~HP:80:40:2:40 ~HP:100:30:2:30 ~HP:None ~HP:None ~HP:None 
+~FP:20:50:2:40 ~FP:30:40:2:40 ~FP:50:40:2:40 ~FP:80:40:2:40 ~FP:100:30:2:40 ~FP:None ~FP:None ~FP:None 
+~CoinBonus:0:2
+~Movement:NPC_New
+003D0034 003D0034 003D0038 003D0038 003D0033 003D0033 003D0039 003D0039 
+003D0038 003D0038 003D0001 003D0001 003D0001 003D0001 003D0001 003D0001 
+00000001 00000000 00000000 00000000 % no tattle string
+}
+	
+#new:NpcGroup $ExtraEnemy
+{
+0000000A $NpcSettings_80243ACC 480.0 60.0 32.0
+00000C00 00000000 00000000 00000000 0000010E 
+8005s % item drop chance = 5%
+008As 0005s 0000s % ItemMushroom
+008Cs 0005s 0000s % ItemSuperShroom
+0000s 0000s 0000s % null
+0000s 0000s 0000s % null
+0000s 0000s 0000s % null
+0000s 0000s 0000s % null
+0000s 0000s 0000s % null
+0000s 0000s 0000s % null
+% hearts drop table (HP cutoff, chance to drop, drop attempts, chance per attempt)
+0.2s 0.7s 2s 0.5s
+0.3s 0.6s 2s 0.5s
+0.5s 0.5s 2s 0.4s
+0.8s 0.4s 2s 0.4s
+1.0s 0.3s 2s 0.3s
+0.0s 0.0s 0s 0.0s
+0.0s 0.0s 0s 0.0s
+0.0s 0.0s 0s 0.0s
+% flowers drop table (FP cutoff, chance to drop, drop attempts, chance per attempt)
+0.2s 0.5s 2s 0.4s
+0.3s 0.4s 2s 0.4s
+0.5s 0.4s 2s 0.4s
+0.8s 0.4s 2s 0.4s
+1.0s 0.3s 2s 0.4s
+0.0s 0.0s 0s 0.0s
+0.0s 0.0s 0s 0.0s
+0.0s 0.0s 0s 0.0s
+% coin drops
+0000s 0002s 0000s
+% unknown
+480` 60` 32` 90` 00000000 FFFF8001 00000000 
+480` 60` 32` 120` 110` 00000000 00000001 
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+00000000 00000000 003D0034 003D0034 003D0038 003D0038 003D0033 003D0033 
+003D0039 003D0039 003D0038 003D0038 003D0001 003D0001 003D0001 003D0001 
+003D0001 003D0001 00000001 00000000 00000000 
+00000000 % no tattle string
+}
+
+@ $NpcGroupList_80245CB8
+{
+00000001 $NpcGroup_80244B2C 100A0002 
+00000001 $NpcGroup_80244D1C 100B0002 
+00000001 $NpcGroup_80244F0C 10360002 
+00000001 $NpcGroup_802450FC 100D0002 
+00000001 $NpcGroup_802456CC 10140001 
+00000001 $NpcGroup_802458BC 10120001 
+00000001 $NpcGroup_802452EC 12050006 
+00000001 $ExtraEnemy 100E0002 % added
+00000001 $NpcGroup_New 10120001 %copy of 802458BC
+00000000 00000000 00000000 
+}
+
+@ $NpcGroupList_80245D18
+{
+00000001 $NpcGroup_80244B2C 100A0002 
+00000001 $NpcGroup_80244D1C 100B0002 
+00000001 $NpcGroup_80244F0C 10360002 
+00000001 $NpcGroup_802450FC 100D0002 
+00000001 $NpcGroup_802456CC 10140001 
+00000001 $NpcGroup_802458BC 10120001 
+00000001 $NpcGroup_802454DC 12070006 
+00000001 $ExtraEnemy 100E0002 % added
+00000001 $NpcGroup_New 10120001 %copy of 802458BC
+00000000 00000000 00000000 
+}
+
+@ $NpcGroupList_80245D78
+{
+00000001 $NpcGroup_80244B2C 100A0002 
+00000001 $NpcGroup_80244D1C 100B0002 
+00000001 $NpcGroup_80244F0C 10360002 
+00000001 $NpcGroup_802450FC 100D0002 
+00000001 $NpcGroup_802456CC 10140001 
+00000001 $NpcGroup_802458BC 10120001 
+00000001 $ExtraEnemy 100E0002 % added
+00000001 $NpcGroup_New 10120001 %copy of 802458BC
+00000000 00000000 00000000 
+}
+
+@ $NpcGroupList_80245DCC
+{
+00000001 $NpcGroup_80245AC8 00000000 
+00000001 $NpcGroup_802452EC 12050006 
+00000001 $NpcGroup_802454DC 12070006 
+00000000 00000000 00000000 
+}

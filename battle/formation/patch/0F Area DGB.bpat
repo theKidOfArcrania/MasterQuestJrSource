@@ -1,0 +1,177 @@
+
+@ $Clubba
+{
+[MaxHP]         8`b
+[Escape]       45`b
+}
+
+@ $Script_TakeTurn_802186BC
+{
+[440]  Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 10000000 00000000 00000000 00000004 00000020 )
+}
+
+@ $StatusTable_80218058
+{
+.Status:Normal      0`
+.Status:Default    0`
+.Status:Sleep      90`
+.Status:Poison     50`
+.Status:Frozen      0`
+.Status:Dizzy      25`
+.Status:Fear      100`
+.Status:Static     50`
+.Status:Paralyze   20`
+.Status:Shrink     55`
+.Status:Stop       20`
+.Status:DefaultTurnMod   0`
+.Status:SleepTurnMod     -1`
+.Status:PoisonTurnMod     0`
+.Status:FrozenTurnMod     0`
+.Status:DizzyTurnMod     -1`
+.Status:FearTurnMod   0`
+.Status:StaticTurnMod     0`
+.Status:ParalyzeTurnMod  -1`
+.Status:ShrinkTurnMod     0`
+.Status:StopTurnMod      -1`
+.Status:End
+}
+
+% ====================================================
+% New Enemies, see imported source file
+% ====================================================
+
+#import RedClubba.bpat
+#import Bristle.bpat
+
+% ====================================================
+% Formation Changes
+% ====================================================
+
+@ $Formation_00
+{
+$Clubba  00000001 0000000A 00000000 00000000 00000000 00000000  
+$Bristle 00000003 00000008 00000000 00000000 00000000 00000000
+}
+
+@ $Formation_01
+{
+$Clubba  00000001 0000000A 00000000 00000000 00000000 00000000 
+$Bristle 00000002 00000009 00000000 00000000 00000000 00000000 
+$Bristle 00000003 00000008 00000000 00000000 00000000 00000000  
+}
+
+@ $Formation_02
+{
+$Clubba  00000000 0000000A 00000000 00000000 00000000 00000000
+$Bristle 00000001 00000009 00000000 00000000 00000000 00000000 
+$Clubba  00000002 00000008 00000000 00000000 00000000 00000000 
+$Clubba  00000003 00000007 00000000 00000000 00000000 00000000
+}
+
+@ $Formation_03
+{
+$Clubba  00000000 0000000A 00000000 00000000 00000000 00000000 
+$Bristle   00000001 00000009 00000000 00000000 00000000 00000000   
+$Clubba  00000002 00000008 00000000 00000000 00000000 00000000 
+$Bristle 00000003 00000007 00000000 00000000 00000000 00000000 
+}
+
+#new:Formation $Formation_06
+{
+$RedClubba 00000002 0000000A 00000000 00000000 00000000 00000000 
+}
+
+#new:Formation $Formation_07
+{
+$Clubba 00000001 0000000A 00000000 00000000 00000000 00000000 
+$RedClubba 00000002 00000009 00000000 00000000 00000000 00000000 
+}
+
+#new:Formation $20sFormation7_08
+{
+$RedClubba    00000000 0000000A 00000000 00000000 00000000 00000000 
+$Bristle   00000001 00000009 00000000 00000000 00000000 00000000 
+$Clubba    00000002 00000007 00000000 00000000 00000000 00000000
+}
+
+#new:Formation $20sFormation8_09
+{
+$RedClubba 00000001 00000009 00000000 00000000 00000000 00000000 
+$Bristle   00000002 00000008 00000000 00000000 00000000 00000000
+$Bristle    00000003 00000007 00000000 00000000 00000000 00000000
+}
+
+#new:Formation $20sFormation9_10
+{
+$RedClubba 00000000 0000000A 00000000 00000000 00000000 00000000 
+$Bristle   00000001 00000009 00000000 00000000 00000000 00000000  
+$Clubba   00000002 00000008 00000000 00000000 00000000 00000000
+$RedClubba 00000003 00000007 00000000 00000000 00000000 00000000
+}
+
+#new:Formation $Formation_0B
+{
+$RedClubba 00000000 0000000A 00000000 00000000 00000000 00000000 
+$Bristle   00000001 00000009 00000000 00000000 00000000 00000000 
+$RedClubba 00000002 00000008 00000000 00000000 00000000 00000000
+$RedClubba 00000003 00000008 00000000 00000000 00000000 00000000
+}
+
+@ $FormationTable
+{
+$SJIS_8021B574 00000002 $Formation_00 $Stage_8021B080 00000000 
+$SJIS_8021B564 00000003 $Formation_01 $Stage_8021B080 00000000 
+$SJIS_8021B554 00000004 $Formation_02 $Stage_8021B080 00000000 
+$SJIS_8021B544 00000004 $Formation_03 $Stage_8021B080 00000000 
+$SJIS_8021B534 00000001 $Formation_04 $Stage_8021B080 00000000 
+$SJIS_8021B518 00000001 $Formation_05 $Stage_8021B080 00000000 
+00000000       00000001 $Formation_06 $Stage_8021B080 00000000 
+00000000       00000002 $Formation_07 $Stage_8021B080 00000000
+00000000 00000003 $20sFormation7_08 $AncientStage 00000000 %These formations are
+00000000 00000003 $20sFormation8_09 $AncientStage 00000000  
+00000000 00000004 $20sFormation9_10 $AncientStage 00000000 %dunno why this isnt OA
+00000000       00000004 $Formation_0B $DarkRoom 00000000 
+00000000 00000000 00000000 00000000 00000000 
+}
+
+#new:Stage $AncientStage
+{
+"kpa_tex"
+"kmr_bt07_shape"
+"kmr_bt07_hit"
+$Script_BeforeBoss 
+$Script_AfterBoss
+00000000 
+00000000
+00000000 
+00000000 
+00000000 
+}
+
+#new:Stage $DarkRoom
+{
+"dgb_tex"
+"dgb_bt06_shape"
+"dgb_bt06_hit"
+$Script_BeforeBoss 
+$Script_AfterBoss
+00000000 
+00000000
+00000000 
+00000000 
+00000000 
+}
+
+#new:Script $Script_BeforeBoss
+{
+	Call	SetSpriteShading 	( FFFFFFFF )
+	Call	SetCamBGColor 	( 00000001 00000000 00000000 00000000 )
+	Return
+	End
+}
+
+#new:Script $Script_AfterBoss
+{
+	Return
+	End 
+}

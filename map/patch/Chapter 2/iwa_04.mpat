@@ -1,0 +1,201 @@
+
+@ $Script_NpcAI_802418EC
+{
+	Loop     
+		Call     GetPlayerPos 	( *Var[0] *Var[1] *Var[2] )
+		Call     GetNpcPos   	( 00000001 *Var[3] *Var[4] *Var[5] )
+		If  *Var[0]  <  *Var[3] 
+			Call     InterpNpcYaw 	( 00000001 0000010E 00000000 )
+		Else
+			Call     InterpNpcYaw 	( 00000001 0000005A 00000000 )
+		EndIf
+		If  *Var[0]  >=  00000190 
+			If  *Var[0]  <  000001C2 
+				If  *Var[2]  <  00000064 
+					BreakLoop
+				EndIf
+			EndIf
+		EndIf
+		Wait     00000001 
+	EndLoop
+	Call     SetMusicTrack 	( 00000000 .Song:MinibossBattle 00000000 00000008 )
+	Call     DisablePlayerInput 	( .True )
+	Call     GetCurrentPartner ( *Var[0] )
+	If  *Var[0]  !=  00000000 
+		Call     802D2B6C ( )
+		Wait     00000005 
+	EndIf
+	Call     NpcFacePlayer 	( .Npc:Self 00000000 )
+	Call     ShowMessageAtScreenPos 	( 000D0030 000000A0 00000028 ) % Hey there! Hold up a sec, pardner!
+	Call     GetNpcPos   	( .Npc:Self *Var[0] *Var[1] *Var[2] )
+	Add  *Var[1]  0000000F 
+	Call     SetNpcPos   	( .Npc:Self *Var[0] *Var[1] *Var[2] )
+	Call     GetAngleToPlayer 	( .Npc:Self *Var[A] )
+	Wait     00000004 
+	Call     UseSettingsFrom 	( .Cam:Default 000001AE 00000000 FFFFFFE7 )
+	Call     GetPlayerPos 	( *Var[0] *Var[1] *Var[2] )
+	Call     SetPanTarget 	( .Cam:Default *Var[0] *Var[1] *Var[2] )
+	Call     PanToTarget 	( .Cam:Default 00000000 00000001 )
+	Wait     00000001 
+	Call     SetPanTarget 	( .Cam:Default 0000001E 000000B4 FFFFFDA8 )
+	Call     SetCamDistance ( .Cam:Default *Fixed[100.0] )
+	Call     SetCamSpeed 	( .Cam:Default *Fixed[4.0] )
+	Call     PanToTarget 	( .Cam:Default 00000000 00000001 )
+	Call     WaitForCam  	( .Cam:Default *Fixed[1.0] )
+	Call     SpeakToPlayer 	( .Npc:Self 00670005 00670005 00000005 000D0031 ) % Jest a dern minute... I've seen you somewhere...
+	Call     SetNpcAnimation 	( .Npc:Self 00670002 )
+	Call     GetNpcPos   	( .Npc:Self *Var[2] *Var[3] *Var[4] )
+	Set  *Var[5]  *Var[3] 
+	Add  *Var[5]  00000096 
+	Call     MakeLerp    	( *Var[3] *Var[5] 0000000F 00000000 )
+	Loop     
+		Call     UpdateLerp  	( )
+		Call     SetNpcPos   	( .Npc:Self *Var[2] *Var[0] *Var[4] )
+		Wait     00000005 
+		If  *Var[1]  ==  00000000 
+			BreakLoop
+		EndIf
+	EndLoop
+	Call     SetPlayerPos 	( 000001AE 00000000 FFFFFFE7 )
+	Call     802CF56C ( 00000002 )
+	Call     SetNpcPos   	( .Npc:Self 0000021A 000000C8 FFFFFFE7 )
+	Call     EnableNpcShadow 	( .Npc:Self .True )
+	Call     GetPlayerPos 	( *Var[0] *Var[1] *Var[2] )
+	Call     UseSettingsFrom 	( .Cam:Default *Var[0] *Var[1] *Var[2] )
+	Call     SetPanTarget 	( .Cam:Default *Var[0] *Var[1] *Var[2] )
+	Call     SetCamPosA  	( .Cam:Default 00000000 00000000 )
+	Call     SetCamPosB  	( .Cam:Default 00000064 FFFFFF9C )
+	Call     SetCamDistance ( .Cam:Default 00000258 )
+	Call     SetCamSpeed 	( .Cam:Default *Fixed[90.0] )
+	Call     PanToTarget 	( .Cam:Default 00000000 00000001 )
+	Call     WaitForCam  	( .Cam:Default *Fixed[1.0] )
+	Thread
+		Call     GetPlayerPos 	( *Var[0] *Var[1] *Var[2] )
+		Add  *Var[0]  00000028 
+		Call     UseSettingsFrom 	( .Cam:Default *Var[0] *Var[1] *Var[2] )
+		Call     SetPanTarget 	( .Cam:Default *Var[0] *Var[1] *Var[2] )
+		Call     SetCamDistance ( .Cam:Default 000001F4 )
+		Call     SetCamSpeed 	( .Cam:Default *Fixed[1.0] )
+		Call     PanToTarget 	( .Cam:Default *Fixed[0.5] 00000001 )
+		Call     WaitForCam  	( .Cam:Default *Fixed[1.0] )
+		Call     802CF56C ( 00000002 )
+	EndThread
+	Call     PlayerFaceNpc 	( .Npc:Self 00000000 )
+	Call     SetPlayerAnimation 	( 0001002A )
+	Call     NpcFacePlayer 	( .Npc:Self 00000000 )
+	Call     GetNpcPos   	( .Npc:Self *Var[2] *Var[3] *Var[4] )
+	Set  *Var[5]  *Var[3] 
+	Sub  *Var[5]  00000096 
+	Call     MakeLerp    	( *Var[3] *Var[5] 0000000F 00000000 )
+	Loop     
+		Call     UpdateLerp  	( )
+		Call     SetNpcPos   	( .Npc:Self *Var[2] *Var[0] *Var[4] )
+		Wait     00000005 
+		If  *Var[1]  ==  00000000 
+			BreakLoop
+		EndIf
+	EndLoop
+	Call     SetNpcAnimation 	( 00000001 00670001 )
+	Call     WaitForCam  	( .Cam:Default *Fixed[1.0] )
+	Wait     0000001E 
+	Call     SetNpcAnimation 	( 00000001 00670007 )
+	Wait     0000001E 
+	Call     SetNpcAnimation 	( 00000001 00670008 )
+	Wait     0000001E 
+	Call     SetNpcAnimation 	( 00000001 00670009 )
+	Wait     0000001E 
+	Call     SetNpcAnimation 	( 00000001 0067000A )
+	Wait     0000001E 
+	Call     SetNpcAnimation 	( 00000001 00670001 )
+	Wait     0000001E 
+	Call     GetNpcPos   	( .Npc:Self *Var[0] *Var[1] *Var[2] )
+	Call     UseSettingsFrom 	( .Cam:Default *Var[0] 00000000 *Var[2] )
+	Add  *Var[1]  00000014 
+	Call     SetPanTarget 	( .Cam:Default *Var[0] *Var[1] *Var[2] )
+	Call     SetCamDistance ( .Cam:Default 00000113 )
+	Call     SetCamSpeed 	( .Cam:Default *Fixed[90.0] )
+	Call     PanToTarget 	( .Cam:Default 00000000 00000001 )
+	Wait     0000000A 
+	Call     SpeakToPlayer 	( .Npc:Self 00670003 00670001 00000000 000D0032 ) % Yep, verrrry similar! You look a lot like this fel ...
+	Call     AdjustCam 	( .Cam:Default *Fixed[90.0] 00000032 0000015E *Fixed[15.0] *Fixed[-12.0] )
+	Call     ShowChoice  	( 001E0017 ) % Mario Luigi Princess Peach 
+	Call     EndSpeech 	( .Npc:Self 00670003 00670001 00000000 )
+	Set  *Var[A]  *Var[0] 
+	Switch  *Var[A] 
+		Case  ==  00000000 
+			Set  *Var[B]  000D0033 
+			Set  *Var[C]  00670004 
+		Case  ==  00000001 
+			Set  *Var[B]  000D0034 
+			Set  *Var[C]  00670003 
+		Case  ==  00000002 
+			Set  *Var[B]  000D0035 
+			Set  *Var[C]  00670004 
+	EndSwitch
+	Wait     0000000A 
+	Call     GetNpcPos   	( .Npc:Self *Var[0] *Var[1] *Var[2] )
+	Call     UseSettingsFrom 	( .Cam:Default *Var[0] 00000000 *Var[2] )
+	Add  *Var[1]  00000014 
+	Call     SetPanTarget 	( .Cam:Default *Var[0] *Var[1] *Var[2] )
+	Call     SetCamDistance ( .Cam:Default 00000113 )
+	Call     SetCamSpeed 	( .Cam:Default *Fixed[90.0] )
+	Call     PanToTarget 	( .Cam:Default 00000000 00000001 )
+	Call     WaitForCam  	( .Cam:Default *Fixed[1.0] )
+	Wait     0000000A 
+	Switch *StoryProgress
+		Case  <  FFFFFFC5
+			Call	SpeakToPlayer	( .Npc:Self *Var[C] 00670001 00000000 *Var[B] ) % variable string ID
+		Default
+			% now buzzar only says 'nice try' if you keep insisting you're weegee on the way back
+			If  *Var[A]  ==  00000001 
+				Call	SpeakToPlayer	( .Npc:Self 00670003 00670001 00000000 $NiceTry ) %nice try
+				Set  *Var[A]  0
+			Else
+				Call	SpeakToPlayer	( .Npc:Self *Var[C] 00670001 00000000 *Var[B] ) % variable string ID
+			EndIf
+	EndSwitch
+	If  *Var[A]  ==  00000001 
+		Exec     $Script_80241140 
+		Call     SetNpcAnimation 	( .Npc:Self 00670006 )
+		Wait     0000001E 
+		Call     SetNpcAnimation 	( .Npc:Self 00670002 )
+		Call     PanToTarget 	( .Cam:Default 00000000 00000000 )
+		Call     SetCamSpeed 	( .Cam:Default *Fixed[4.0] )
+		Call     GetNpcPos   	( .Npc:Self *Var[2] *Var[3] *Var[4] )
+		Set  *Var[5]  *Var[3] 
+		Add  *Var[5]  00000096 
+		Call     MakeLerp    	( *Var[3] *Var[5] 0000000F 00000000 )
+		Loop     
+			Call     UpdateLerp  	( )
+			Call     SetNpcPos   	( .Npc:Self *Var[2] *Var[0] *Var[4] )
+			Wait     00000005 
+			If  *Var[1]  ==  00000000 
+				BreakLoop
+			EndIf
+		EndLoop
+		Call     SetNpcPos   	( .Npc:Self 0000000A 00000060 FFFFFEA5 )
+		Call     EnableNpcShadow 	( .Npc:Self .False )
+		Call     SetNpcAnimation 	( .Npc:Self 00670005 )
+		Call     WaitForCam  	( .Cam:Default *Fixed[1.0] )
+		Call     SetCamSpeed 	( .Cam:Default *Fixed[1.0] )
+		Call     SetPlayerAnimation 	( 00010002 )
+		Call     DisablePlayerInput 	( .False )
+	Else
+		Call     PanToTarget 	( .Cam:Default 00000000 00000000 )
+		Call     SetCamSpeed 	( .Cam:Default *Fixed[4.0] )
+		Wait     00000005 
+		Call     DisablePlayerInput 	( .False )
+		Call     StartBossBattle 	( .Song:SpecialBattle )
+	EndIf
+	Return
+	End
+}
+	
+#string $NiceTry
+{
+[Style Right]
+H[Pause 10]m[Pause 10]m[Pause 10].[Pause 10].[Pause 10].[Pause 10][BR]
+Hold yer horses![Pause 32] Nice try, but[BR]
+yer not foolin' me agin![Wait][End]
+}
+	

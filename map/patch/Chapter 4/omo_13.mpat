@@ -1,0 +1,107 @@
+@ $Script_ExitWalk_80241580
+{
+     SetGroup 0000001B 
+     Call     UseExitHeading ( 0000003C 00000000 )
+     Exec     ExitWalk 
+     Call     GotoMap     	( "omo_18" 00000001 )
+     Wait     00000064 
+     Return
+     End
+}
+
+@ $Script_MakeEntities
+{
+      Call     MakeEntity  	( .Entity:Chest ~Vec4d:Entity80242E08 00000000 80000000 )
+     Call     AssignFlag  	( *GF_OMO13_Chest_PowerPlusB )
+     Call     AssignScript 	( $Script_80242DBC )
+     Call     MakeEntity  	( .Entity:YellowBlock ~Vec4d:Entity80242E50 .Item:Coin 80000000 )
+     Call     AssignBlockFlag 	( *GF_OMO13_ItemBlock_Coin )
+     Call     MakeEntity  	( .Entity:HiddenYellowBlock ~Vec4d:Entity80242E88 .Item:MapleSyrup 80000000 )
+     Call     AssignBlockFlag 	( *GF_OMO13_HiddenItem_MapleSyrup )
+	 Call	MakeItemEntity	( .Item:StarPiece ~Vec3d:starpiece 00000011 *Flag_OMO_67 )
+     Return
+     End
+}
+
+@  $NpcGroupList_80242C38
+{
+00000001 $NpcGroup_80242668 12060001 
+00000001 $NpcGroup_80242858 10030001 
+00000001 $NpcGroup_80242A48 10250001 
+00000000 00000000 00000000 
+}
+
+@ $Script_Interact_80241D98
+{
+    0:  If  *GF_OMO13_Defeated_AntiGuy  ==  00000001 
+   10:  	Call     SpeakToPlayer 	( .Npc:Self 003B0515 003B0515 00000005 000F004D ) % Oh...so good...tart... So yummy... 
+   30:  	Return
+   38:  EndIf
+   40:  Call     AdjustCam 	( .Cam:Default *Fixed[5.0] 0000000A *Fixed[300.0] *Fixed[15.0] *Fixed[-7.5] )
+ %  64:  Call     FindItem    	( .Item:LemonCandy *Var[0] )
+ %  78:  If  *Var[0]  ==  FFFFFFFF 
+   88:  	Thread
+   90:  		Wait     0000000A 
+   9C:  		Call     SetPlayerAnimation 	( 00080011 )
+   AC:  		Wait     00000014 
+   B8:  		Call     SetPlayerAnimation 	( 00010002 )
+   C8:  	EndThread
+   D0:  	Call     SpeakToPlayer 	( .Npc:Self 003B0511 003B0501 00000000 000F0046 ) % Hm? What do you want? Get away from that Treasure  ...
+   F0:  	Call     EndSpeech 	( .Npc:Self 003B0513 003B0501 00000000 )
+  10C:  	Call     ShowChoice  	( 001E0044 ) % Don't fight Fight 
+  11C:  	If  *Var[0]  ==  00000000 
+  12C:  		Call     ContinueSpeech 	( .Npc:Self 003B0511 003B0501 00000000 000F0048 ) % Good. You're a smart boy!
+  14C:  	Else
+  154:  		Wait     00000005 
+  160:  		Call     ContinueSpeech 	( .Npc:Self 003B0511 003B0501 00000000 000F0047 ) % You wanna fight? Are you nuts? You don't wanna mes ...
+  180:  		Call     ShowChoice  	( 001E0044 ) % Don't fight Fight 
+  190:  		If  *Var[0]  ==  00000000 
+  1A0:  			Call     ContinueSpeech 	( .Npc:Self 003B0511 003B0501 00000000 000F0048 ) % Good. You're a smart boy!
+  1C0:  		Else
+  1C8:  			Call     ContinueSpeech 	( .Npc:Self 003B0511 003B0501 00000000 000F0049 ) % What!! Well, all right... I do love a challenge! H ...
+  1E8:  			Call     SetNpcVar   	( .Npc:Self 00000000 00000001 )
+  200:  		EndIf
+  208:  	EndIf
+/%  210:  Else
+  218:  	Call     SpeakToPlayer 	( .Npc:Self 003B0511 003B0501 00000000 000F004A ) % Sniff sniff... Sniff? Do I smell Lemon Candy? Hey! ...
+  238:  	Call     PlaySoundAtNpc ( .Npc:Self 00000262 00000000 )
+  250:  	Call     ShowEmote   	( .Npc:Self .Emote:Exclamation 00000000 0000001E 00000001 00000000 00000000 00000000 00000000 )
+  280:  	Wait     0000001E 
+  28C:  	Call     EndSpeech 	( .Npc:Self 003B0511 003B0501 00000000 )
+  2A8:  	Wait     0000000F 
+  2B4:  	Call     SetPlayerAnimation 	( 0008001E )
+  2C4:  	Wait     0000000F 
+  2D0:  	Call     SetPlayerAnimation 	( .PlayerAnim:NodYes )
+  2E0:  	Wait     0000000F 
+  2EC:  	Call     EndSpeech 	( .Npc:Self 003B0511 003B0501 00000000 )
+  308:  	Set  *Var[0]  $???_80241D90 
+  318:  	Set  *Var[1]  FFFFFFFF 
+  328:  	ExecWait $Script_80241D40 
+  334:  	If  *Var[0]  ==  FFFFFFFF 
+  344:  		Call     SpeakToPlayer 	( .Npc:Self 003B0511 003B0501 00000000 000F004B ) % Grrrrr!!! You stingy, candy-hogging punk! Well, yo ...
+  364:  		Call     ShowChoice  	( 001E0044 ) % Don't fight Fight 
+  374:  		If  *Var[0]  ==  00000000 
+  384:  			Call     ContinueSpeech 	( .Npc:Self 003B0511 003B0501 00000000 000F0048 ) % Good. You're a smart boy!
+  3A4:  		Else
+  3AC:  			Wait     00000005 
+  3B8:  			Call     ContinueSpeech 	( .Npc:Self 003B0511 003B0501 00000000 000F0047 ) % You wanna fight? Are you nuts? You don't wanna mes ...
+  3D8:  			Call     ShowChoice  	( 001E0044 ) % Don't fight Fight 
+  3E8:  			If  *Var[0]  ==  00000000 
+  3F8:  				Call     ContinueSpeech 	( .Npc:Self 003B0511 003B0501 00000000 000F0048 ) % Good. You're a smart boy!
+  418:  			Else
+  420:  				Call     ContinueSpeech 	( .Npc:Self 003B0511 003B0501 00000000 000F0049 ) % What!! Well, all right... I do love a challenge! H ...
+  440:  				Call     SetNpcVar   	( .Npc:Self 00000000 00000001 )
+  458:  			EndIf
+  460:  		EndIf
+  468:  	Else
+  470:  		Call     SpeakToPlayer 	( .Npc:Self 003B0511 003B0501 00000000 000F004C ) % Yeeeaaaah! I got some Lemon Candy!
+  490:  		Wait     00000014 
+  49C:  		Set  *GF_OMO13_Defeated_AntiGuy  00000001 
+  4AC:  		Call     ModifyColliderFlags 	( 00000000 {Collider:he} 7FFFFE00 )
+  4C4:  		Call     SetNpcVar   	( .Npc:Self 00000000 00000002 )
+  4DC:  	EndIf
+  4E4:  EndIf %/
+  4EC:  Call     ResetCam    	( .Cam:Default *Fixed[5.0] )
+  500:  Return
+  508:  End
+}

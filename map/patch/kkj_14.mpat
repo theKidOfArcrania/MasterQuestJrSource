@@ -1,0 +1,5 @@
+
+@ $Script_80244E54 % change lucky stars to Speedy Spin
+{
+[15E4]  Call     MakeItemEntity ( .Item:SpeedySpin *Var[2] *Var[3] *Var[4] 00000001 00000000 )
+}

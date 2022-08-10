@@ -1,0 +1,1101 @@
+ 
+%% Buzzar, but remember you dont have to fight her the first time!
+
+@ $Buzzar
+{
+% stats
+[Level]        69`b %raised level slightly (65 -> 69) as slight compensation
+[MaxHP]        45`b 
+[PowerBounce]  3`b 
+}
+
+
+@ $StatusTable_8021B65C
+{
+.Status:Normal      0`
+.Status:Default    0`
+.Status:Sleep      30`
+.Status:Poison      0`
+.Status:Frozen      0`
+.Status:Dizzy      40`
+.Status:Fear    0`
+.Status:Static      0`
+.Status:Paralyze   10`
+.Status:Shrink     55`
+.Status:Stop       10`
+.Status:DefaultTurnMod   0`
+.Status:SleepTurnMod     -2`
+.Status:PoisonTurnMod     0`
+.Status:FrozenTurnMod     0`
+.Status:DizzyTurnMod     -1`
+.Status:FearTurnMod   0`
+.Status:StaticTurnMod     0`
+.Status:ParalyzeTurnMod  -1`
+.Status:ShrinkTurnMod    -1`
+.Status:StopTurnMod      -1`
+.Status:End
+}
+
+@ $Script_8021CCE8
+{
+  [B60]  Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 10000000 00000000 80010164 00000003 00000020 ) % Switched this from a 50% for 2 turns to 100% for 1 turn. much more fair while keeping the challenge.
+}
+  
+  
+@ $Script_8021DF2C
+{
+  [5BC] 		Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 00000000 00000000 00000000 00000006 00000020 )
+  [9CC]  	Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 00000000 00000000 00000000 00000006 00000020 )
+  [EC0]  Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 00000000 00000000 00000000 00000006 00000020 )
+}
+  
+@ $Script_8021F030 {
+  [578]  Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 00000000 00000000 80080264 00000005 00000020 )
+}
+  
+@ $Script_8021BEBC
+{
+  [6F4]  						Set  *Var[1]  00000005 
+  [734]  							Add  *Var[1]  00000003 
+  [B4C]  		Set  *Var[1]  00000005
+  [B8C] 			Add  *Var[1]  00000003 
+  [C24]  		Set  *Var[1]  00000005
+  [C64] 			Add  *Var[1]  00000003 
+  [CFC]  Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 22000000 0000FFFF 80010164 *Var[1] 00000020 )
+}
+ 
+@ $Script_8021F7EC {
+  Call     GetActorHP  	( .Actor:Self *Var[9] )
+  	If  *Var[9]  <  0000001F
+		If *Var[8] == 00000000
+			Set *Var[8] 00000001
+			ExecWait $Script_8021CCE8
+			Return
+		Else
+		    Set *Var[8] 00000000
+		EndIf
+	EndIf	
+   ExecWait $Script_8021F824 
+      Return
+      End
+}
+ 
+%=====================================================
+%Cleft
+
+@ $DefenseTable_80218710
+{
+.Element:Normal   00000003
+.Element:Fire     00000063
+.Element:End
+}
+
+@ $DefenseTable_8021872C
+{
+.Element:Normal 00000001
+.Element:Fire   00000063
+.Element:End
+}
+
+@ $Script_80219BA0
+{
+  [658]  Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 00000000 00000000 00000000 00000003 00000020 )
+}
+ 
+% ====================================================
+% Monty Mole
+% + Thrown rocks move twice as fast (to block, press A when they are mid-flight)
+% + Much more HP than before, they are now the tanky enemy of this area.
+% ====================================================
+
+@ $MontyMole
+{
+% stats
+[Index]        12b 
+[Level]         8`b 
+[MaxHP]         5`b %bulky
+}
+
+@ $Script_TakeTurn_8021AFAC
+{
+ [2D4]	Call     SetPartMoveSpeed	( FFFFFF81 00000003 *Fixed[24.000000] )
+ [42C]	Call     SetPartMoveSpeed	( FFFFFF81 00000003 *Fixed[24.000000] )
+ [4AC]  Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 10000000 00000000 00000000 00000002 00000020 )
+}
+ 
+% ====================================================
+% Whacka Miniboss
+% ====================================================
+ 
+@ $WhackaA
+{
+% stats
+[Index]        D0b 
+[Level]       15`b 
+[MaxHP]       30`b
+[Coins]       20`b 
+[Flags]       00000004 
+[StatusTable] $StatusTable_8021FCA8 
+% ai
+[PartsCount]   1`s 
+[PartsTable] $PartsTable_8021FD54 
+[Script]      $Script_Init_8021FDA0 
+% move effectiveness
+[Escape]        0`b 
+[Item]          0`b 
+[AirLift]       0`b 
+[Hurricane]     0`b % Bow's "Spook" as well
+[UpAndAway]     0`b 
+[PowerBounce]  50`b 
+[SpinSmash]     4`b % weight (0-4)
+% ui positions
+[Size]         47`b  32`b % width height
+[HealthBar]     0`b   0`b % dx dy
+[StatusTurn]  -20`b  40`b % dx dy
+[StatusIcon]   10`b  30`b % dx dy
+}
+
+#new:DefenseTable $DefenseTable_Whacka_1x
+{
+.Element:Normal 00000001
+.Element:End
+}
+
+#new:DefenseTable $DefenseTable_Whacka_2x
+{
+.Element:Normal 00000002
+.Element:End
+}
+
+#new:DefenseTable $DefenseTable_Whacka_4x
+{
+.Element:Normal 00000004
+.Element:End
+}
+ 
+@ $Script_Init_8021FDA0
+{
+	Call     BindTakeTurn 	( .Actor:Self $Script_TakeTurn_80220634 )
+	Call     BindIdle    	( .Actor:Self $Script_Idle_8021FE5C )
+	Call     BindHandleEvent 	( .Actor:Self $Script_HandleEvent_8021FE90 )
+	Switch	*WhackaHitCount
+		Case    <   2
+			Call	SetDefenseTable	( .Actor:Self 00000001 $DefenseTable_8021FC9C )
+		Case    <   4
+			Call	SetDefenseTable	( .Actor:Self 00000001 $DefenseTable_Whacka_1x )
+		Case    <   6
+			Call	SetDefenseTable	( .Actor:Self 00000001 $DefenseTable_Whacka_2x )
+		Default
+			Call	SetDefenseTable	( .Actor:Self 00000001 $DefenseTable_Whacka_4x )
+			Call     AddActorDecoration 	( .Actor:Self 00000001 00000000 .Decoration:GoldenFlames )
+			Wait     00000001 
+			Call     ModifyActorDecoration 	( .Actor:Self 00000001 00000000 00000032 00000032 00000000 00000000 )
+	EndSwitch
+	Set		*Var[0]		5`
+	Mul		*Var[0]		*WhackaHitCount
+	Add		*Var[0]		25`
+	Call	$Function_SetEnemyMaxHP	( .Actor:Self *Var[0] )
+	Call	SetEnemyHP ( .Actor:Self *Var[0] )
+	Return
+	End
+}
+
+#new:Function $Function_SetEnemyMaxHP
+{
+	ADDIU     SP, SP, FFE0
+	SW        S2, 18 (SP)
+	DADDU     S2, A0, R0
+	SW        RA, 1C (SP)
+	SW        S1, 14 (SP)
+	SW        S0, 10 (SP)
+	LW        S1, C (S2)
+	LW        A1, 0 (S1)
+	JAL       ~Func:get_variable
+	ADDIU     S1, S1, 4
+	DADDU     S0, V0, R0
+	ADDIU     V0, R0, FF81
+	BNE       S0, V0, 8
+	NOP
+	LW        S0, 148 (S2)
+	LW        A1, 0 (S1)
+	JAL       ~Func:get_variable
+	DADDU     A0, S2, R0
+	DADDU     A0, S0, R0
+	JAL       ~Func:get_actor
+	DADDU     S0, V0, R0
+	DADDU     A1, V0, R0
+	SB        S0, 1B9 (A1)
+	LBU       V0, 1B8 (A1)
+	SLT       V0, S0, V0
+	BNEL      V0, R0, 4
+	SB        S0, 1B8 (A1)
+	LBU       V0, 1B8 (A1)
+	LBU       A0, 1B9 (A1)
+	SLL       V1, V0, 1
+	ADDU      V1, V1, V0
+	SLL       V1, V1, 3
+	ADDU      V1, V1, V0
+	BNE       A0, R0, 8
+	DIV       V1, A0
+	BREAK     1C00
+	ADDIU     AT, R0, FFFF
+	BNE       A0, AT, 10
+	LUI       AT, 8000
+	BNE       V1, AT, 8
+	NOP
+	BREAK     1800
+	MFLO      V1
+	SB        V1, 1BC (A1)
+	LW        RA, 1C (SP)
+	LW        S2, 18 (SP)
+	LW        S1, 14 (SP)
+	LW        S0, 10 (SP)
+	ADDIU     V0, R0, 2
+	JR        RA
+	ADDIU     SP, SP, 20
+}
+
+#new:Function $Function_SetAttackBoost % ( actorID, amount )
+{
+	ADDIU     SP, SP, FFE0
+	SW        S2, 18 (SP)
+	DADDU     S2, A0, R0
+	SW        RA, 1C (SP)
+	SW        S1, 14 (SP)
+	SW        S0, 10 (SP)
+	LW        S1, C (S2)
+	LW        A1, 0 (S1)
+	JAL       ~Func:get_variable
+	ADDIU     S1, S1, 4
+	DADDU     S0, V0, R0
+	ADDIU     V0, R0, FF81
+	BNE       S0, V0, 8
+	NOP
+	LW        S0, 148 (S2)
+	LW        A1, 0 (S1)
+	JAL       ~Func:get_variable
+	DADDU     A0, S2, R0
+	DADDU     A0, S0, R0
+	JAL       ~Func:get_actor
+	DADDU     S0, V0, R0
+	SB        S0, 221 (V0)
+	% return
+	LW        RA, 1C (SP)
+	LW        S2, 18 (SP)
+	LW        S1, 14 (SP)
+	LW        S0, 10 (SP)
+	ADDIU     V0, R0, 2
+	JR        RA
+	ADDIU     SP, SP, 20
+}
+	
+@ $Script_TakeTurn_80220634
+{
+	% When partner is not disabled, 33% chace to attack them
+	If		*WhackaHitCount  >  4
+		Call     GetStatusFlags ( .Actor:Partner *Var[0] )
+		If       *Var[0]  !&  01000000 
+			Call	RandInt	( 100` *Var[0] )
+			If	*Var[0]  <  33`
+				ExecWait	$Script_ThrowPartnerRock
+				Return
+			EndIf
+		EndIf
+	EndIf
+	% If no cleft is present, 40% chance to dig one up
+	/%
+	Call	ActorExists	( .Actor:Enemy2 *Var[0] )
+	If		*Var[0]  ==  .False
+		Call	RandInt	( 100` *Var[0] )
+		If	*Var[0]  <  40`
+			ExecWait	$Script_SummonCleft
+			Return
+		EndIf
+	EndIf
+	%/
+	% do basic attacks
+	If		*WhackaHitCount  >  2
+		Call	RandInt	( 100` *Var[0] )
+		If	*Var[0]  <  50`
+			ExecWait	$Script_ThrowRocks
+			Return
+		EndIf
+	EndIf
+	ExecWait	$Script_BurrowAttack
+	Return
+	End
+}
+
+% This summoned enemy will crash if you use a star power when he is alive!
+% I think it hits the sprite limit. Too bad.
+/%
+#new:Vector3D $CleftSpawnPos
+0` -1000` 0` 
+
+#new:SpecialFormation $CleftSpawnFormation
+$Cleft	  $CleftSpawnPos 0000000B 00000000 00000000 00000000 00000000 
+
+#new:Script $Script_SummonCleft
+	Call	UseIdleAnimation	( .Actor:Self .False )
+	Call	EnableIdleScript	( .Actor:Self .False )
+	Call	PlaySoundAtActor	( .Actor:Self 00000322 )
+	Call	SetAnimation		( .Actor:Self 00000001 00920003 ) % burrow
+	Wait	14`
+	Call	ShakeCam    	( 00000001 00000000 00000002 *Fixed[0.25] )
+	Call	ShakeCam    	( 00000001 00000000 00000002 *Fixed[0.50] )
+	Call	ShakeCam    	( 00000001 00000000 00000002 *Fixed[0.75] )
+	Call	ShakeCam    	( 00000001 00000000 00000002 *Fixed[1.00] )
+	Call	ShakeCam    	( 00000001 00000000 00000002 *Fixed[0.50] )
+	Wait	10` 
+	Call	PlaySoundAtActor 	( .Actor:Self 00000321 )
+	Call	SetAnimation 		( .Actor:Self 00000001 00920002 ) % surface
+	Wait	00000008
+	Call	SummonEnemy      	( $CleftSpawnFormation 00000000 )
+	Switch	*WhackaHitCount
+		Case   >   6
+			Call	$Function_SetAttackBoost	( *Var[0]  4 )
+			Call	EnableActorGlow				( *Var[0]  .True )
+			Call	$Function_SetEnemyMaxHP		( *Var[0]  A )
+			Call	SetEnemyHP					( *Var[0]  A )
+		Case   >   4
+			Call	$Function_SetAttackBoost	( *Var[0]  2 )
+			Call	EnableActorGlow				( *Var[0]  .True )
+			Call	$Function_SetEnemyMaxHP		( *Var[0]  6 )
+			Call	SetEnemyHP					( *Var[0]  6 )
+		Case   >   2
+			Call	$Function_SetEnemyMaxHP		( *Var[0]  4 )
+			Call	SetEnemyHP					( *Var[0]  4 )
+	EndSwitch
+	Call	GetActorPos 		( .Actor:Self *Var[1] *Var[2] *Var[3] )
+	Call	SetActorPos       	( *Var[0] *Var[1] *Var[2] *Var[3] )
+	Thread
+		Call	SetActorRotationOffset 	( *Var[0] 00000000 0000000D 00000000 )
+		Set		*Var[B]  -600`
+		Loop		30`
+			Add		*Var[B]  20`
+			Call	SetActorRotation 	( *Var[0] 00000000 00000000 *Var[B] )
+			Wait	1
+		EndLoop
+		Call	SetActorRotationOffset 	( *Var[0] 00000000 00000000 00000000 )
+	EndThread
+	Call	SetAnimation 		( *Var[0] 00000001 00300004 )
+	Call	SetGoalToIndex  	( *Var[0] 1 )
+	Call	SetActorJumpGravity	( *Var[0] *Fixed[0.5] )
+	Call	JumpToGoal			( *Var[0] 30` 00000000 00000001 00000000 )
+	Call	SetAnimation 		( *Var[0] 00000001 00300002 )
+	Call	GetActorPos       	( *Var[0] *Var[1] *Var[2] *Var[3] )
+	Call	ForceHomePos 		( *Var[0] *Var[1] *Var[2] *Var[3] )
+	Call	HPBarToHome    		( *Var[0] )
+	Call	EnableIdleScript 	( .Actor:Self .True )
+	Call	UseIdleAnimation 	( .Actor:Self .True )
+	Return
+	End
+%/
+
+#new:Script $Script_ThrowRocks
+{
+	Call     UseIdleAnimation	( .Actor:Self .False )
+	Call     EnableIdleScript	( .Actor:Self 00000000 )
+	Call     SetTargetActor 	( .Actor:Self .Actor:Player )
+	Call     PlaySoundAtActor	( .Actor:Self 00000322 )
+	Call     SetAnimation		( .Actor:Self 00000001 00920003 ) % burrow
+	Wait     14`
+	Call     ShakeCam    	( 00000001 00000000 00000002 *Fixed[0.25] )
+	Call     ShakeCam    	( 00000001 00000000 00000002 *Fixed[0.50] )
+	Call     ShakeCam    	( 00000001 00000000 00000002 *Fixed[0.75] )
+	Call     ShakeCam    	( 00000001 00000000 00000002 *Fixed[1.00] )
+	Call     ShakeCam    	( 00000001 00000000 00000002 *Fixed[0.50] )
+	Wait     10` 
+	Call     PlaySoundAtActor 	( .Actor:Self 00000321 )
+	Call     SetAnimation 		( .Actor:Self 00000001 00920002 ) % surface
+	Wait     00000008
+	% damage based on hit counter
+	Switch	*WhackaHitCount
+		Case   <   2
+			Set   *Var[9] 2
+		Case   <   4
+			Set   *Var[9] 4
+		Case   <   6
+			Set   *Var[9] 7
+		Default
+			Set   *Var[9] A
+	EndSwitch
+	% begin throw
+	Call     EnemyTestTarget ( .Actor:Self *Var[0] 00000000 00000000 *Var[9] 00000010 )
+	Switch   *Var[0] 
+		CaseOR   ==  00000006 
+		CaseOR   ==  00000005 
+			Set      *Var[8] 00000001
+			Exec     $Script_ThrowRock_Miss 
+			Wait     00000008
+			Set      *Var[8] 00000002 
+			Exec     $Script_ThrowRock_Miss 
+			Wait     00000008 
+			Set      *Var[8] 00000003 
+			Exec     $Script_ThrowRock_Miss 
+			Wait     0000000C 
+			If       *Var[0] ==  00000005 
+				Call     EnemyTestTarget ( .Actor:Self *Var[0] 80000000 00000000 00000000 00000000 )
+			EndIf
+			Call     YieldTurn ( )
+			Wait     00000014 
+			Call     EnableIdleScript 	( .Actor:Self 00000001 )
+			Call     UseIdleAnimation 	( .Actor:Self .True )
+			Return
+		EndCaseGroup
+	EndSwitch
+	Thread
+		Set      *Var[8] 00000001
+		Exec     $Script_ThrowRock_Hit
+		Wait     00000008
+		Set      *Var[8] 00000002
+		Exec     $Script_ThrowRock_Hit
+		Wait     00000008
+		Set      *Var[8] 00000003
+		Exec     $Script_ThrowRock_Hit
+		Wait     0000000C
+	EndThread
+	Wait     0000000C
+	Wait     00000002 
+	Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 10000000 00000000 00000000 *Var[9] 00000010 )
+	Wait     00000008
+	Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 10000000 00000000 00000000 *Var[9] 00000040 )
+	Wait     00000006
+	Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 10000000 00000000 00000000 *Var[9] 00000040 )
+	Switch   *Var[0] 
+		CaseOR   ==  00000000 
+		CaseOR   ==  00000002 
+			Wait     00000014 
+			Call     YieldTurn ( )
+		EndCaseGroup
+	EndSwitch
+	Call	EnableIdleScript 	( .Actor:Self 00000001 )
+	Call	UseIdleAnimation 	( .Actor:Self .True )
+	Return
+	End
+}
+	
+#new:Script $Script_ThrowRock_Miss
+{
+	Call	GetActorPos 		( .Actor:Self *Var[0] *Var[1] *Var[2] )
+	Add		*Var[1] 00000014 
+	Call	SetPartPos 		( .Actor:Enemy1 *Var[8] *Var[0] *Var[1] *Var[2] )
+	Call	SetPartFlagBits 	( .Actor:Enemy1 *Var[8] 00000001 .False )
+	Call	PlaySoundAtPart 	( .Actor:Enemy1 *Var[8] 000003E8 )
+	%
+	Call	SetTargetActor 	( .Actor:Self .Actor:Player )
+	Call	SetGoalToTarget 	( .Actor:Self )
+	Call	GetGoalPos  		( .Actor:Self *Var[0] *Var[1] *Var[2] )
+	Sub      *Var[0] 00000064 
+	Set      *Var[1] FFFFFFFB 
+	Call     SetPartMoveSpeed 	( .Actor:Enemy1 *Var[8] *Fixed[12.0] )
+	Call     SetPartJumpGravity ( .Actor:Enemy1 *Var[8] *Fixed[0.1] )
+	Call     FlyPartTo 		( .Actor:Enemy1 *Var[8] *Var[0] *Var[1] *Var[2] 0000000C 00000024 00000000 )
+	Call     SetPartFlagBits 	( .Actor:Enemy1 *Var[8] 00000001 .True )
+	Return
+	End
+}
+	
+#new:Script $Script_ThrowRock_Hit
+{
+	Call	GetActorPos 		( .Actor:Self *Var[0] *Var[1] *Var[2] )
+	Add		*Var[1] 00000014 
+	Call	SetPartPos 		( .Actor:Enemy1 *Var[8] *Var[0] *Var[1] *Var[2] )
+	Call	SetPartFlagBits 	( .Actor:Enemy1 *Var[8] 00000001 .False )
+	Call	PlaySoundAtPart 	( .Actor:Enemy1 *Var[8] 000003E8 )
+	%
+	Call     SetTargetActor 	( .Actor:Self .Actor:Player )
+	Call     SetGoalToTarget 	( .Actor:Self )
+	Call     GetGoalPos  		( .Actor:Self *Var[0] *Var[1] *Var[2] )
+	Call     SetPartMoveSpeed 	( .Actor:Enemy1 *Var[8] *Fixed[12.0] )
+	Call     SetPartJumpGravity ( .Actor:Enemy1 *Var[8] *Fixed[0.1] )
+	Call     FlyPartTo 		( .Actor:Enemy1 *Var[8] *Var[0] *Var[1] *Var[2] 0000000C 00000024 00000000 )
+	Wait     00000002 
+	%
+	Call     GetActorPos 	( .Actor:Player *Var[0] *Var[1] *Var[2] )
+	Sub      *Var[0] 00000037 
+	Set      *Var[1] 00000000 
+	Call     SetPartMoveSpeed	 	( .Actor:Enemy1 *Var[8] *Fixed[6.0] )
+	Call     SetPartJumpGravity ( .Actor:Enemy1 *Var[8] *Fixed[0.1] )
+	Call     FlyPartTo 		( .Actor:Enemy1 *Var[8] *Var[0] *Var[1] *Var[2] 00000000 00000019 00000000 )
+	Call     SetPartMoveSpeed 	( .Actor:Enemy1 *Var[8] *Fixed[4.0] )
+	Sub      *Var[0] 00000014 
+	Call     FlyPartTo 		( .Actor:Enemy1 *Var[8] *Var[0] *Var[1] *Var[2] 00000000 00000015 00000000 )
+	Call     SetPartFlagBits 	( .Actor:Enemy1 *Var[8] 00000001 .True )
+	Return
+	End
+}
+	
+#new:Script $Script_ThrowPartnerRock
+{
+	Call     UseIdleAnimation	( .Actor:Self .False )
+	Call     EnableIdleScript	( .Actor:Self 00000000 )
+	Call     SetTargetActor 	( .Actor:Self .Actor:Partner )
+	Call     PlaySoundAtActor	( .Actor:Self 00000322 )
+	Call     SetAnimation		( .Actor:Self 00000001 00920003 ) % burrow
+	Wait     14`
+	Call     ShakeCam    	( 00000001 00000000 00000002 *Fixed[0.25] )
+	Call     ShakeCam    	( 00000001 00000000 00000002 *Fixed[0.50] )
+	Call     ShakeCam    	( 00000001 00000000 00000002 *Fixed[0.75] )
+	Call     ShakeCam    	( 00000001 00000000 00000002 *Fixed[1.00] )
+	Call     ShakeCam    	( 00000001 00000000 00000002 *Fixed[0.50] )
+	Wait     10` 
+	Call     PlaySoundAtActor 	( .Actor:Self 00000321 )
+	Call     SetAnimation 		( .Actor:Self 00000001 00920002 ) % surface
+	Wait     00000008
+	% damage based on hit counter
+	Switch	*WhackaHitCount
+		Case   <   5
+			Set   *Var[9] 1
+		Case   <   7
+			Set   *Var[9] 2
+		Default
+			Set   *Var[9] 3
+	EndSwitch
+	% begin throw
+	Call	PlaySoundAtPart 	( .Actor:Enemy1 00000001 000003E8 )
+	Wait	2
+	Call	GetActorPos 		( .Actor:Self *Var[0] *Var[1] *Var[2] )
+	Add		*Var[1] 00000014 
+	Call	SetPartPos 		( .Actor:Enemy1 00000001 *Var[0] *Var[1] *Var[2] )
+	Call	SetPartFlagBits 	( .Actor:Enemy1 00000001 00000001 .False )
+	%
+	Call     EnemyTestTarget ( .Actor:Self *Var[0] 00000000 00000000 *Var[9] 00000010 )
+	Switch   *Var[0] 
+		CaseOR   ==  00000006 
+		CaseOR   ==  00000005 
+			Set      *Var[A] *Var[0] 
+			Call	SetGoalToTarget 	( .Actor:Self )
+			Call	GetGoalPos  		( .Actor:Self *Var[0] *Var[1] *Var[2] )
+			Sub      *Var[0] 00000064 
+			Set      *Var[1] FFFFFFFB 
+			Call     SetPartMoveSpeed 	( .Actor:Enemy1 00000001 *Fixed[12.0] )
+			Call     SetPartJumpGravity ( .Actor:Enemy1 00000001 *Fixed[0.1] )
+			Call     FlyPartTo 		( .Actor:Enemy1 00000001 *Var[0] *Var[1] *Var[2] 0000000A 00000024 00000000 )
+			Call     SetPartFlagBits 	( .Actor:Enemy1 00000001 00000001 .True )
+			If       *Var[A] ==  00000005 
+				Call     EnemyTestTarget ( .Actor:Self *Var[0] 80000000 00000000 00000000 00000000 )
+			EndIf
+			Wait     00000014 
+			Call     EnableIdleScript 	( .Actor:Self 00000001 )
+			Call     UseIdleAnimation 	( .Actor:Self .True )
+			Return
+		EndCaseGroup
+	EndSwitch
+	Call     SetGoalToTarget 	( .Actor:Self )
+	Call     GetGoalPos  		( .Actor:Self *Var[0] *Var[1] *Var[2] )
+	Call     SetPartMoveSpeed 	( .Actor:Enemy1 00000001 *Fixed[12.0] )
+	Call     SetPartJumpGravity ( .Actor:Enemy1 00000001 *Fixed[0.1] )
+	Call     FlyPartTo 		( .Actor:Enemy1 00000001 *Var[0] *Var[1] *Var[2] 0000000A 00000024 00000000 )
+	Wait     00000002 
+	Call     EnemyDamageTarget 		( .Actor:Self *Var[0] 10000000 00000000 00000000 *Var[9] 00000020 )
+	Switch   *Var[0] 
+		CaseOR   ==  00000000 
+		CaseOR   ==  00000002 
+			Call     GetActorPos 		( .Actor:Partner *Var[0] *Var[1] *Var[2] )
+			Sub      *Var[0] 00000037 
+			Set      *Var[1] 00000000 
+			Call     SetPartMoveSpeed	 	( .Actor:Enemy1 00000001 *Fixed[6.0] )
+			Call     SetPartJumpGravity ( .Actor:Enemy1 00000001 *Fixed[0.1] )
+			Call     FlyPartTo 		( .Actor:Enemy1 00000001 *Var[0] *Var[1] *Var[2] 00000000 00000019 00000000 )
+			Call     SetPartMoveSpeed 	( .Actor:Enemy1 00000001 *Fixed[4.0] )
+			Sub      *Var[0] 00000014 
+			Call     FlyPartTo 		( .Actor:Enemy1 00000001 *Var[0] *Var[1] *Var[2] 00000000 00000015 00000000 )
+			Call     SetPartFlagBits 	( .Actor:Enemy1 00000001 00000001 .True )
+		EndCaseGroup
+	EndSwitch
+	Call     EnableIdleScript 	( .Actor:Self 00000001 )
+	Call     UseIdleAnimation 	( .Actor:Self .True )
+	Return
+	End
+}
+  
+#new:Script $Script_BurrowAttack
+{
+	Call     UseIdleAnimation	( .Actor:Self .False )
+	Call     EnableIdleScript	( .Actor:Self 00000000 )
+	Call     SetTargetActor 	( .Actor:Self .Actor:Player )
+	Call     PlaySoundAtActor	( .Actor:Self 00000322 )
+	Call     SetAnimation		( .Actor:Self 00000001 00920003 ) % burrow
+	Wait     0000001C
+	Call     UseBattleCamPreset 		( 00000013 )
+	Call     SetGoalToTarget	( .Actor:Self )
+	Call     GetGoalPos  		( .Actor:Self *Var[0] *Var[1] *Var[2] )
+	Add      *Var[0] 00000014 
+	Set      *Var[1] 00000000 
+	Call     SetBattleCamTarget 		( *Var[0] *Var[1] *Var[2] )
+	Call     SetBattleCamZoom  		( 0000015E )
+	Call     SetBattleCamOffsetZ 		( 0000002D )
+	Call     8024ECF8 			( FFFFFFFF 00000001 00000000 )
+	Call     MoveBattleCamOver 		( 00000014 )
+	Call     SetGoalToTarget 	( .Actor:Self )
+	Call     GetGoalPos  		( .Actor:Self *Var[0] *Var[1] *Var[2] )
+	Add		*Var[0] 00000010 
+	Set		*Var[1] 00000000 
+	Call     SetActorPos 	( .Actor:Self *Var[0] *Var[1] *Var[2] )
+	% randomized delay
+	Call	RandInt			( 00000030 *Var[0] )
+	Add		*Var[0] 00000018
+	Wait	*Var[0]
+	% damage based on hit counter
+	Switch	*WhackaHitCount
+		Case   <   2
+			Set   *Var[9] 3
+		Case   <   4
+			Set   *Var[9] 6
+		Case   <   6
+			Set   *Var[9] 9
+		Default
+			Set   *Var[9] C
+	EndSwitch
+	% attack x3
+	Set		*Var[5]	0
+	Loop	3
+		Call     PlaySoundAtActor	( .Actor:Self 00000321 )
+		Call     SetAnimation 	( .Actor:Self 00000001 00920002 ) % surface
+		Wait     10`
+		Call     EnemyTestTarget ( .Actor:Self *Var[0] 00000000 00000000 *Var[1] 00000010 )
+		Switch   *Var[0] 
+			CaseOR   ==  00000006 
+			CaseOR   ==  00000005 
+				If       *Var[0] ==  00000005 
+					Call     EnemyTestTarget ( .Actor:Self *Var[0] 80000000 00000000 00000000 00000000 )
+				EndIf
+				Goto	10
+			EndCaseGroup
+		EndSwitch
+		Call     EnemyDamageTarget 	( .Actor:Self *Var[1] 00000000 00000000 00000000 *Var[9] 00000020 )
+		% don't know what to do with return value...
+		Switch   *Var[0] 
+			CaseOR   ==  00000000 
+			CaseOR   ==  00000002 
+			EndCaseGroup
+		EndSwitch
+		Label	10
+		If	*Var[5] < 3
+			Add		*Var[5]	1
+			Call	SetAnimation	( .Actor:Self 00000001 00920003 ) % hide
+			Wait	12`
+		EndIf
+	EndLoop
+	Call     UseBattleCamPreset 		( 00000002 )
+	Call     MoveBattleCamOver 		( 00000014 )
+	Call     PlaySoundAtActor 	( .Actor:Self 00000322 )
+	Call     SetAnimation 		( .Actor:Self 00000001 00920003 )
+	Wait	 12`
+	Call     SetActorPos 		( .Actor:Self 0` -500` 0` )
+	Wait     18` 
+	Call     SetGoalToHome 		( .Actor:Self )
+	Call     GetGoalPos  		( .Actor:Self *Var[0] *Var[1] *Var[2] )
+	Call     SetActorPos 		( .Actor:Self *Var[0] *Var[1] *Var[2] )
+	Call     PlaySoundAtActor 	( .Actor:Self 00000321 )
+	Call     SetAnimation 		( .Actor:Self 00000001 00920002 )
+	Wait     10` 
+	Call     YieldTurn 			( )
+	Call     EnableIdleScript 	( .Actor:Self 00000001 )
+	Call     UseIdleAnimation 	( .Actor:Self .True )
+	Return
+	End
+}
+
+#define .WhackaHitAnimation 00920005 % -> 6
+#define .WhackaDeathAnimation 00920005
+
+@ $Script_HandleEvent_8021FE90
+{
+	Call     UseIdleAnimation 	( .Actor:Self .False )
+	Call     EnableIdleScript 	( .Actor:Self 00000000 )
+	Call     GetLastEvent 	( .Actor:Self *Var[0] )
+	Switch   *Var[0] 
+		CaseOR   ==  .Event:HitCombo
+		CaseOR   ==  .Event:Hit
+			SetConst *Var[0] 00000001 
+			SetConst *Var[1] .WhackaHitAnimation
+			ExecWait DoNormalHit 
+		EndCaseGroup
+		Case     ==  .Event:BurnHit
+			SetConst *Var[0] 00000001 
+			SetConst *Var[1] .WhackaHitAnimation 
+			SetConst *Var[2] .WhackaHitAnimation 
+			ExecWait DoNormalHit 
+		Case     ==  .Event:BurnDeath
+			SetConst *Var[0] 00000001 
+			SetConst *Var[1] .WhackaHitAnimation 
+			SetConst *Var[2] .WhackaHitAnimation 
+			ExecWait DoNormalHit 
+			Wait     0000000A
+			SetConst *Var[0] 00000001 
+			SetConst *Var[1] .WhackaDeathAnimation 
+			ExecWait DoDeath 
+			Return
+		Case     ==  0000000B
+			SetConst *Var[0] 00000001 
+			SetConst *Var[1] .WhackaHitAnimation 
+			ExecWait 8029B998 
+		Case     ==  00000021
+			SetConst *Var[0] 00000001 
+			SetConst *Var[1] .WhackaHitAnimation
+			ExecWait 8029B998 
+			Wait     0000000A 
+			SetConst *Var[0] 00000001 
+			SetConst *Var[1] .WhackaDeathAnimation 
+			ExecWait DoDeath 
+			Return
+		Case     ==  .Event:ShockHit
+			SetConst *Var[0] 00000001 
+			SetConst *Var[1] .WhackaHitAnimation 
+			ExecWait DoShockHit 
+			SetConst *Var[0] 00000001 
+			SetConst *Var[1] 00920001 
+			ExecWait 8029BD70 
+			SetConst *Var[0] 00000001 
+			SetConst *Var[1] 00920001 
+			ExecWait 8029BEB8 
+		Case     ==  .Event:ShockDeath
+			SetConst *Var[0] 00000001 
+			SetConst *Var[1] .WhackaHitAnimation 
+			ExecWait DoShockHit 
+			Wait     0000000A 
+			SetConst *Var[0] 00000001 
+			SetConst *Var[1] .WhackaDeathAnimation 
+			ExecWait DoDeath 
+			Return
+		CaseOR   ==  00000017
+		CaseOR   ==  .Event:Immune
+		CaseOR   ==  .Event:AirLiftFailed
+			SetConst *Var[0] 00000001 
+			SetConst *Var[1] 00920001 
+			ExecWait DoImmune 
+		EndCaseGroup
+		Case     ==  .Event:Death
+			SetConst *Var[0] 00000001 
+			SetConst *Var[1] .WhackaHitAnimation 
+			ExecWait DoNormalHit 
+			Wait     0000000A 
+			SetConst *Var[0] 00000001 
+			SetConst *Var[1] .WhackaDeathAnimation 
+			ExecWait DoDeath 
+			Return
+		Case     ==  .Event:RecoverStatus
+			SetConst *Var[0] 00000001
+			SetConst *Var[1] 00920001
+			ExecWait DoRecover 
+		Case     ==  .Event:ScareAway
+			SetConst *Var[0] 00000001
+			SetConst *Var[1] 00920005
+			SetConst *Var[2] 00920005
+			ExecWait DoScareAway 
+			Return
+		Case     ==  .Event:BeginAirLift
+			SetConst *Var[0] 00000001
+			SetConst *Var[1] 00920005
+			ExecWait DoAirLift 
+		Case     ==  .Event:BlowAway
+			SetConst *Var[0] 00000001
+			SetConst *Var[1] 00920005
+			ExecWait DoBlowAway 
+			Return
+		Default
+	EndSwitch
+	Call     EnableIdleScript 	( .Actor:Self 00000001 )
+	Call     UseIdleAnimation 	( .Actor:Self .True )
+	Return
+	End
+}
+
+#new:IdleAnimations $IdleAnimations_Large
+{
+.Status:Normal    00520010
+.Status:End
+}
+
+#new:IdleAnimations $IdleAnimations_Small
+{
+.Status:Normal    00520012
+.Status:End
+}
+
+#new:DefenseTable $DefenseTable_Rocks
+{
+.Element:Normal 00000063
+.Element:End
+}
+
+#new:StatusTable $StatusTable_Rocks
+{
+.Status:Normal      0`
+.Status:Default    0`
+.Status:Sleep       0`
+.Status:Poison      0`
+.Status:Frozen      0`
+.Status:Dizzy       0`
+.Status:Fear    0`
+.Status:Static      0`
+.Status:Paralyze    0`
+.Status:Shrink      0`
+.Status:Stop        0`
+.Status:DefaultTurnMod   0`
+.Status:SleepTurnMod      0`
+.Status:PoisonTurnMod     0`
+.Status:FrozenTurnMod     0`
+.Status:DizzyTurnMod      0`
+.Status:FearTurnMod   0`
+.Status:StaticTurnMod     0`
+.Status:ParalyzeTurnMod   0`
+.Status:ShrinkTurnMod     0`
+.Status:StopTurnMod       0`
+.Status:End
+}
+
+#new:PartsTable $PartsTable_Rocks
+{
+00120001 01000000 000E00FF $IdleAnimations_Small $DefenseTable_Rocks 00000000 00000000 00000000 00000000 
+00120001 02000000 000E00FF $IdleAnimations_Small $DefenseTable_Rocks 00000000 00000000 00000000 00000000 
+00120001 03000000 000E00FF $IdleAnimations_Small $DefenseTable_Rocks 00000000 00000000 00000000 00000000 
+}
+
+#new:Actor $WhackaRocks
+{
+% stats
+[Index]        37b 
+[Level]         0`b 
+[MaxHP]         1`b 
+[Coins]         0`b 
+[Flags]       00244004 
+[StatusTable] $StatusTable_Rocks 
+% ai
+[PartsCount]   3`s 
+[PartsTable] $PartsTable_Rocks 
+[Script]      $Script_Init_Rocks
+% move effectiveness
+[Escape]        0`b 
+[Item]          0`b 
+[AirLift]     100`b 
+[Hurricane]     0`b % Bow's "Spook" as well
+[UpAndAway]    95`b 
+[PowerBounce] 100`b 
+[SpinSmash]     0`b % weight (0-4)
+% ui positions
+[Size]         32`b  18`b % width height
+[HealthBar]     0`b   0`b % dx dy
+[StatusTurn]  -10`b  20`b % dx dy
+[StatusIcon]   10`b  20`b % dx dy
+}
+
+#new:Script $Script_Init_Rocks
+{
+	Call     BindTakeTurn 	( .Actor:Self $Script_TakeTurn_Rocks )
+	Call     BindIdle    	( .Actor:Self $Script_Idle_Rocks )
+	Call     BindHandleEvent 	( .Actor:Self $Script_HandleEvent_Rocks )
+	Return
+	End
+}
+
+#new:Script $Script_TakeTurn_Rocks
+{
+	Return
+	End
+}
+	
+#new:Script $Script_Idle_Rocks
+{
+	Call	RandInt	( 15` *Var[0] )
+	Call	RandInt	( 15` *Var[1] )
+	Call	RandInt	( 15` *Var[2] )
+	Add		*Var[0]  20`
+	Add		*Var[1]  20`
+	Add		*Var[2]  20`
+	Call	RandInt	( 360` *Var[3] )
+	Call	RandInt	( 360` *Var[4] )
+	Call	RandInt	( 360` *Var[5] )
+	Call	SetPartRotationOffset	( .Actor:Self 00000001 00000000 00000008 00000000 )
+	Call	SetPartRotationOffset	( .Actor:Self 00000002 00000000 00000008 00000000 )
+	Call	SetPartRotationOffset	( .Actor:Self 00000003 00000000 00000008 00000000 )
+	Loop
+		Call	SetPartRotation	( .Actor:Self 00000001 0 0 *Var[3] )
+		Call	SetPartRotation	( .Actor:Self 00000002 0 0 *Var[4] )
+		Call	SetPartRotation	( .Actor:Self 00000003 0 0 *Var[5] )
+		Add		*Var[3] *Var[0]
+		Add		*Var[4] *Var[1]
+		Add		*Var[5] *Var[2]
+		Wait	1
+	EndLoop
+	Return
+	End
+}
+	
+/%
+	Set		*Var[4]	0
+	Loop
+		Call	GetActorPos		( .Actor:Self *Var[0] *Var[1] *Var[2])
+		SetF	*Var[5]	360`
+		DivF	*Var[5] 3
+		Set		*Var[C] 0
+		Loop	3
+			Add		*Var[C] 1
+			% calculcate angle
+			SetF	*Var[D] *Var[5]
+			MulF	*Var[D] *Var[C]
+			AddF	*Var[D] *Var[4]
+			% convert polar -> cartesian coordinates
+			Set		*Var[A]	0
+			Set		*Var[B] 0
+			Call	AddVectorPolar  	( *Var[A] *Var[B] 30` *Var[D] )
+			Call	SetPartDispOffset		( .Actor:Self *Var[C] *Var[A] *Var[B] 0 )
+			Call	SetPartRotation	( .Actor:Self *Var[C] 0 0 *Var[D] )
+		EndLoop
+		Wait	1
+		Add		*Var[4] 1
+	EndLoop
+%/
+
+#new:Script $Script_HandleEvent_Rocks
+{
+	Return
+	End
+}
+	
+% Jeez this place has no diversity. Time for some affirmative action! This is at least a flying enemy to make quake not crazy OP	
+	
+#import RedParagoomba.bpat	
+	
+% ====================================================
+% Formation Changes
+% ====================================================
+
+@ $Formation_00
+{
+$Cleft 			00000001 0000000A 00000000 00000000 00000000 00000000
+$RedParagoomba  00000006 00000009 00000000 00000000 00000000 00000000
+$RedParagoomba  00000007 00000008 00000000 00000000 00000000 00000000
+}
+
+@ $Formation_01
+{
+$Cleft 00000000 0000000A 00000000 00000000 00000000 00000000
+$Cleft 00000001 00000009 00000000 00000000 00000000 00000000 
+$Cleft 00000002 00000008 00000000 00000000 00000000 00000000
+}
+
+@ $Formation_02
+{
+$RedParagoomba  00000005 0000000A 00000000 00000000 00000000 00000000
+$RedParagoomba  00000006 00000009 00000000 00000000 00000000 00000000
+$RedParagoomba  00000007 00000008 00000000 00000000 00000000 00000000
+}
+
+@ $Formation_03
+{
+$Cleft 			00000001 0000000A 00000000 00000000 00000000 00000000 
+$MontyMole 		00000002 00000009 00000000 00000000 00000000 00000000
+$RedParagoomba  00000007 00000008 00000000 00000000 00000000 00000000
+}
+
+@ $Formation_05
+{
+$MontyMole 		00000001 0000000A 00000000 00000000 00000000 00000000
+$RedParagoomba  00000006 00000009 00000000 00000000 00000000 00000000
+$RedParagoomba  00000007 00000008 00000000 00000000 00000000 00000000
+}
+
+@ $Formation_06
+{
+$MontyMole 00000001 0000000A 00000000 00000000 00000000 00000000 
+$MontyMole 00000002 00000009 00000000 00000000 00000000 00000000
+$RedParagoomba  00000007 00000008 00000000 00000000 00000000 00000000 
+}
+
+@ $Formation_07
+{
+$MontyMole 00000000 0000000A 00000000 00000000 00000000 00000000 
+$MontyMole 00000001 00000009 00000000 00000000 00000000 00000000 
+$MontyMole 00000002 00000008 00000000 00000000 00000000 00000000
+$Cleft 	   00000003 00000007 00000000 00000000 00000000 00000000 
+}
+
+@ $Formation_0B
+{
+$Cleft 			00000000 0000000A 00000000 00000000 00000000 00000000 
+$MontyMole 		00000001 00000009 00000000 00000000 00000000 00000000
+$MontyMole  	00000002 00000008 00000000 00000000 00000000 00000000
+$RedParagoomba  00000007 00000007 00000000 00000000 00000000 00000000 
+}
+
+@ $Formation_0D
+{
+$WhackaA 00000002 0000000A 00000000 00000000 00000000 00000000 
+$WhackaRocks 00000003 00000009 00000000 00000000 00000000 00000000 
+}
+
+#new:Formation $10sFormation1_0E
+{
+$Cleft 00000000 0000000A 00000000 00000000 00000000 00000000
+$Cleft 00000001 00000009 00000000 00000000 00000000 00000000 
+$Cleft 00000002 00000008 00000000 00000000 00000000 00000000
+}
+
+#new:Formation $10sFormation2_0F
+{
+$RedParagoomba  00000005 0000000A 00000000 00000000 00000000 00000000
+$RedParagoomba  00000006 00000009 00000000 00000000 00000000 00000000 
+$Cleft          00000003 00000008 00000000 00000000 00000000 00000000
+}
+
+#new:Formation $10sFormation3_10
+{
+$Cleft          00000000 0000000A 00000000 00000000 00000000 00000000
+$MontyMole 		00000001 00000009 00000000 00000000 00000000 00000000
+$MontyMole 		00000002 00000009 00000000 00000000 00000000 00000000
+$RedParagoomba  00000007 00000008 00000000 00000000 00000000 00000000
+}
+
+@ $FormationTable
+{
+$SJIS_80222330 00000003 $Formation_00 $Stage_802208B0 00000000 
+$SJIS_80222320 00000003 $Formation_01 $Stage_802208B0 00000000 
+$SJIS_80222310 00000003 $Formation_02 $Stage_802208B0 00000000 
+$SJIS_802222F8 00000003 $Formation_03 $Stage_802208B0 00000000 
+$SJIS_802222DC 00000003 $Formation_04 $Stage_802208B0 00000000 
+$SJIS_802222D0 00000003 $Formation_05 $Stage_802208B0 00000000 
+$SJIS_802222C0 00000003 $Formation_06 $Stage_802208B0 00000000 
+$SJIS_802222B0 00000004 $Formation_07 $Stage_802208B0 00000000 
+$SJIS_802222A0 00000004 $Formation_08 $Stage_802208B0 00000000 
+$SJIS_80222288 00000002 $Formation_09 $Stage_802208B0 00000000 
+$SJIS_8022226C 00000003 $Formation_0A $Stage_802208B0 00000000 
+$SJIS_80222248 00000004 $Formation_0B $Stage_802208B0 00000000 
+$SJIS_8022223C 00000001 $Formation_0C $Stage_802215CC 00000000 
+$SJIS_80222230 00000002 $Formation_0D $Stage_802215CC 00000000
+00000000 00000003 $10sFormation1_0E  $AncientStage 00000000 %These formations are
+00000000 00000003 $10sFormation2_0F  $AncientStage 00000000 %for the pit of 100 trials
+00000000 00000004 $10sFormation3_10  $AncientStage 00000000 %hopefully this works okay 
+00000000 00000000 00000000 00000000 00000000 
+}
+
+#new:Stage $AncientStage
+{
+"kpa_tex"
+"kmr_bt07_shape"
+"kmr_bt07_hit"
+$Script_BeforeBoss 
+$Script_AfterBoss
+00000000 
+00000000
+00000000 
+00000000 
+00000000 
+}
+
+#new:Script $Script_BeforeBoss
+{
+	Call	SetSpriteShading 	( FFFFFFFF )
+	Call	SetCamBGColor 	( 00000001 00000000 00000000 00000000 )
+	Return
+	End
+}
+
+#new:Script $Script_AfterBoss
+{
+	Return
+	End 
+}
+	

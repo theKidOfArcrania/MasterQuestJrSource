@@ -1,0 +1,25 @@
+@ $Script_MakeEntities
+{
+    0:  Call     MakeEntity  	( .Entity:HiddenYellowBlock ~Vec4d:Entity802411B0 .Item:LifeShroom 80000000 )
+   28:  Call     AssignBlockFlag 	( *GF_KZN06_HiddenItem_LifeShroom )
+   38:  If  *GF_KZN06_Hammer3Block  ==  00000000 
+   48:  	Call     MakeEntity  	( .Entity:Hammer3BlockThick ~Vec4d:Entity802411F8 80000000 )
+   6C:  	Call     AssignScript 	( $Script_80241190 )
+   7C:  EndIf
+   84:  If  *StoryProgress  <  0000001B 
+   94:  	Call     CreatePushBlockGrid 	( 00000000 ~PushGrid:Grid_80241244 00000000 )
+   BC:  	Call     SetPushBlockFallEffect 	( 00000000 $Function_80240310 )
+   D0:  	Call     SetPushBlock 	( 00000000 00000004 00000000 00000001 )
+   EC:  	Call     SetPushBlock 	( 00000000 00000006 00000000 00000001 )
+  108:  	Call     SetPushBlock 	( 00000000 00000008 00000000 00000001 )
+  124:  Else
+  12C:  	Call     CreatePushBlockGrid 	( 00000000 ~PushGrid:Grid_802412DC 00000000 )
+  154:  	Call     SetPushBlock 	( 00000000 00000009 00000000 00000001 )
+  170:  	Call     SetPushBlock 	( 00000000 0000000A 00000000 00000001 )
+  18C:  	Call     SetPushBlock 	( 00000000 0000000B 00000000 00000001 )
+  1A8:  EndIf
+  	Call	 MakeEntity       	( .Entity:YellowBlock ~Vec4d:yellowblock1 .Item:ThunderRage 80000000 )
+	Call     AssignBlockFlag 	( *Flag_KZN_22 )
+  1B0:  Return
+  1B8:  End
+}

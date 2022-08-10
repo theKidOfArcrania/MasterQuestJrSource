@@ -1,0 +1,19 @@
+
+
+@ $Script_MakeEntities
+{
+        Set *GF_Pit_Block_Left 00000000
+        Set *GF_Pit_Block_Right 00000000
+    0:  If  *GF_OBK05_BoardedFloor  ==  .False
+   10:  	Call  MakeEntity    ( .Entity:BoardedFloor ~Vec4d:Entity80241530 80000000 )
+   34:  	Call  AssignScript  ( $Script_80241500 )
+   44:  EndIf
+   4C:  Call  MakeEntity    ( .Entity:WoodenCrate ~Vec4d:Entity8024156C .Item:Apple 80000000 )
+        Call  AssignCrateFlag 	( *GF_Pit_Block_Left )
+   74:  Call  MakeEntity    ( .Entity:WoodenCrate ~Vec4d:Entity80241594 FFFFFFFF 80000000 )
+   9C:  Call  MakeEntity    ( .Entity:WoodenCrate ~Vec4d:Entity802415BC .Item:Apple 80000000 )
+        Call  AssignCrateFlag 	( *GF_Pit_Block_Right )
+   C4:  Call  MakeEntity    ( .Entity:WoodenCrate ~Vec4d:Entity802415E4 FFFFFFFF 80000000 )
+   EC:  Return
+   F4:  End
+}

@@ -1,0 +1,95 @@
+@ $Script_Interact_80240540
+{
+   If  *Flag_KKJ_21  ==  00000000 
+		Call     SpeakToPlayer	( .Npc:Self 00830004 00830001 00000000 $LuigiChallenge1 )
+		Call     ShowChoice		( 001E000D ) % Yes No 
+		If  *Var[0]  ==  00000000
+			Call     ContinueSpeech	( .Npc:Self 00830004 00830001 00000000 $LuigiChallenge2 )
+			Set *Flag_KKJ_21 00000001
+			Goto 00000001
+			Else
+			Call     ContinueSpeech	( .Npc:Self 00830004 00830001 00000000 $LuigiChallenge3 )
+			Goto 00000001
+	EndIf
+EndIf
+        Call     SpeakToPlayer 	( .Npc:Self 00830004 00830001 00000000 00000049 ) % It's nice and quiet here with no guests around. Ah ...
+   Label 00000001
+   20:  Return
+   28:  End
+}
+   
+@ $Script_ExitDoubleDoor_80240120
+{
+    0:  SetGroup 0000001B 
+    C:  Call     DisablePlayerInput 	( .True )
+   1C:  Set  *Var[0]  00000000 
+   2C:  Set  *Var[1]  00000001 
+   3C:  Set  *Var[2]  00000003 
+   4C:  Set  *Var[3]  00000005 
+   5C:  Exec     ExitDoubleDoor 
+   68:  Wait     00000011 
+   If *Flag_KKJ_21 == 00000001
+   Call     GotoMap     	( "kmr_00" 00000000 )
+   Goto 00000001
+   EndIf
+   74:  Call     GotoMap     	( $ASCII_802409E0 00000001 )
+   Label 00000001
+   88:  Wait     00000064 
+   94:  Return
+   9C:  End
+}
+
+@ $Script_ExitDoubleDoor_802401C4
+{
+    0:  SetGroup 0000001B 
+    C:  Call     DisablePlayerInput 	( .True )
+   1C:  Set  *Var[0]  00000001 
+   2C:  Set  *Var[1]  00000004 
+   3C:  Set  *Var[2]  0000000A 
+   4C:  Set  *Var[3]  00000008 
+   5C:  Exec     ExitDoubleDoor 
+   68:  Wait     00000011
+   If *Flag_KKJ_21 == 00000001
+   Call     GotoMap     	( "kmr_00" 00000000 )
+   Goto 00000001
+   EndIf  
+   74:  Call     GotoMap     	( $ASCII_802409E8 00000000 )
+   88:  Wait     00000064 
+    Label 00000001
+   94:  Return
+   9C:  End
+}
+   
+#string $LuigiChallenge1
+{
+[Style Right]
+Hey Mario, I'm giving away free,[BR]
+[Pause 16]uh... [Pause 21]cake. Yeah, cake.[BR]
+One bite, and you'll be going on[BR]
+a trip.[BR]
+[Wait][Next]
+You'll probably wake up in a field[BR]
+somewhere, having some crazy[BR]
+dreams. Want to try some?[BR]
+[Yield][End]
+}
+
+#string $LuigiChallenge2
+{
+[Next]
+You'll feel the effects soon,[BR]
+probably the next time you go[BR]
+through a door. Play it cool,[BR]
+though. We haven't met before.[BR]
+[Wait][End]
+}
+
+#string $LuigiChallenge3
+{
+[Next]
+I don't blame you-- this stuff[BR]
+is crazy. The offer is always[BR]
+open, though. Let me know if[BR]
+you change your mind.[BR]
+[Wait][End]
+}

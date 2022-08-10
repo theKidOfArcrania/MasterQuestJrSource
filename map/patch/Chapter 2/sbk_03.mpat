@@ -1,0 +1,56 @@
+
+@ $EntryList
+{
+~Vec4f:Entry0 % -475.0    0.0    0.0   90.0
+~Vec4f:Entry1 %  475.0    0.0    0.0  270.0
+~Vec4f:Entry2 %    0.0    0.0 -475.0  180.0
+~Vec4f:Entry3 %    0.0    0.0  475.0    0.0
+~Vec4f:entrynew %    0.0    0.0 -475.0  180.0
+}
+
+@ $Header
+{
+00000000 00000000 00000000 00000000 
+$Script_Main_EnterWalk $EntryList 00000005 00000000 
+00000000 00000000 00000000 00000000 
+00000000 00000000 80200000 00190064 
+}
+
+@ $NpcGroup_802409C8
+{
+[08] ~Vec3f:NPC_Pokey_03
+[E0] ~Vec3d:NPC_Pokey_03
+}
+
+@ $NpcGroup_802407D8
+{
+[08] ~Vec3f:NPC_Pokey_02
+[E0] ~Vec3d:NPC_Pokey_02
+}
+
+@ $NpcGroup_802405E8
+{
+[08] ~Vec3f:NPC_Pokey_01
+[E0] ~Vec3d:NPC_Pokey_01
+}
+
+@ $Script_802401F4
+{
+  Bind     $Script_ExitWalk_802400E0 .Trigger:FloorAbove ~Collider:deiliw 00000001 00000000 
+  Bind     $Script_ExitWalk_8024013C .Trigger:FloorAbove ~Collider:deilie 00000001 00000000 
+  Bind     $Script_ExitWalk_80240198 .Trigger:FloorAbove ~Collider:deilis 00000001 00000000
+  Bind     $Script_Entry4  .Trigger:FloorAbove ~Collider:exitnew 00000001 00000000     
+  Return
+  End
+}
+
+	#new:Script $Script_Entry4
+{
+	SetGroup 0000001B 
+	Call     UseExitHeading ( 0000003C 00000002 ) % direction opposing Entry#0
+	Exec     ExitWalk 
+	Call     GotoMap     	( "arn_22" 0 )
+	Wait     00000064 
+	Return
+	End
+}

@@ -1,0 +1,7 @@
+% Added Stop proc, renamed to Stop Smash
+
+@ $Script_802A3390
+{
+  [1EC]  		Call     PlayerDamageEnemy 	( *Var[0] 00020040 00000019 80200464 *Var[F] 00000070 )
+  [2A4]  		Call     PlayerDamageEnemy 	( *Var[0] 00020040 00000019 80200464 *Var[E] 00000030 )
+}

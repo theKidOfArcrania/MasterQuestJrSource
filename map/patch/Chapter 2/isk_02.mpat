@@ -1,0 +1,8 @@
+% ====================================================
+% Replace Spike Sheild with a Fright Jar
+% ====================================================
+
+@ $Script_80240A20
+{
+[68]  Call     MakeItemEntity         	( .Item:FrightJar ~Vec4d:Item80240A88 *GameFlag[0694] )
+}

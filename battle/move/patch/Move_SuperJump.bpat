@@ -1,0 +1,318 @@
+/%
+	#new:Function $Function_802A2468
+    0:  LAW       V0, $End[48]
+    8:  SW        V0, 84 (A0)
+    C:  JR        RA
+   10:  ADDIU     V0, R0, 2
+%/
+
+@ $Script_802A278C
+{
+    0:  ExecWait $Script_802A2184 
+     C:  Call     GetActionCommandMode ( *Var[0] )
+   1C:  If  *Var[0]  ==  00000002 
+   2C:  	Call     SetActionCommandMode ( 00000003 )
+   3C:  	Loop     
+   48:  		Call     GetActionCommandMode ( *Var[0] )
+   58:  		If  *Var[0]  <  00000002 
+   68:  			BreakLoop
+   70:  		EndIf
+   78:  		Wait     00000001 
+   84:  	EndLoop
+   8C:  EndIf
+   E4:  Call     GetActionCommandMode ( *Var[0] )
+   F4:  If  *Var[0]  >  00000000 
+  104:  	Wait     00000001 
+  110:  EndIf
+  118:  Call     DidActionSucceed ( *Var[0] )
+  128:  Switch  *Var[0] 
+  134:  	Case  >  00000000 
+  140:  		Call     SetActorSounds ( 00000000 00000003 0000015A 00000000 )
+  15C:  		Call     PlayerDamageEnemy 	( *Var[0] 00000080 00000000 00000000 00000001 00000050 )
+  180:  	Default
+  188:  		Call     SetActorSounds ( 00000000 00000003 0000015A 00000000 )
+  1A4:  		Call     PlayerDamageEnemy 	( *Var[0] 00000080 00000000 00000000 00000001 00000030 )
+  1C8:  EndSwitch
+  1D0:  Switch  *Var[0] 
+  1DC:  	CaseOR  ==  00000000 
+  1E8:  	CaseOR  ==  00000002 
+  1F4:  		ExecWait $Script_802A15D8
+  200:  		Return
+  208:  	EndCaseGroup
+  210:  	CaseOR  ==  00000001 
+  21C:  	CaseOR  ==  00000003 
+  228:  	EndCaseGroup
+  230:  EndSwitch
+  238:  ChildThread
+  240:  	Call     UseBattleCamPreset 	( 0000001B )
+  250:  	Wait     00000005 
+  25C:  	Call     SetGoalToTarget 	( .Actor:Player )
+  26C:  	Call     UseBattleCamPreset 	( 00000023 )
+  27C:  EndChildThread
+  284:  Call     80269524 ( *Var[F] )
+  294:  Call     CloseActionCommandInfo ( )
+  2A0:  Call     LoadActionCommand 	( 00000001 )
+  2B0:  Call     802A9000 ( )
+  2BC:  Call     802694A4 ( 00000000 )
+  2CC:  Call     802A9120 ( 00000018 00000003 )
+  2E0:  Call     SetGoalToTarget 	( .Actor:Player )
+  2F0:  Call     SetJumpAnimations 	( .Actor:Player 00000000 00010007 00010008 0001000C )
+  310:  Call     80274A18 ( 00000018 00000003 )
+  324:  Wait     00000001 
+  330:  Call     SetActorSounds ( 00000000 00000003 0000015A 00000000 )
+  34C:  Call     PlayerDamageEnemy 	( *Var[0] 00000080 00000000 00000000 00000002 000000E0 )
+  370:  Call     80269550 ( *Var[F] )
+  380:  ExecWait $Script_802A17C4
+  38C:  Return
+  394:  End
+}
+  
+  %80010364
+  %80010164
+
+@ $Script_802A2908
+{
+    0:  ExecWait $Script_802A2184 
+     C:  Call     GetActionCommandMode ( *Var[0] )
+   1C:  If  *Var[0]  ==  00000002 
+   2C:  	Call     SetActionCommandMode ( 00000003 )
+   3C:  	Loop     
+   48:  		Call     GetActionCommandMode ( *Var[0] )
+   58:  		If  *Var[0]  <  00000002 
+   68:  			BreakLoop
+   70:  		EndIf
+   78:  		Wait     00000001 
+   84:  	EndLoop
+   8C:  EndIf
+   E4:  Call     GetActionCommandMode ( *Var[0] )
+   F4:  If  *Var[0]  >  00000000 
+  104:  	Wait     00000001 
+  110:  EndIf
+  118:  Call     DidActionSucceed ( *Var[0] )
+  128:  Switch  *Var[0] 
+  134:  	Case  >  00000000 
+  140:  		Call     SetActorSounds ( 00000000 00000003 0000015A 00000000 )
+  15C:  		Call     PlayerDamageEnemy 	( *Var[0] 00000080 00000000 00000000 00000002 00000050 )
+  180:  	Default
+  188:  		Call     SetActorSounds ( 00000000 00000003 0000015A 00000000 )
+  1A4:  		Call     PlayerDamageEnemy 	( *Var[0] 00000080 00000000 00000000 00000002 00000030 )
+  1C8:  EndSwitch
+  1D0:  Switch  *Var[0] 
+  1DC:  	CaseOR  ==  00000000 
+  1E8:  	CaseOR  ==  00000002 
+  1F4:  		ExecWait $Script_802A15D8
+  200:  		Return
+  208:  	EndCaseGroup
+  210:  	CaseOR  ==  00000001 
+  21C:  	CaseOR  ==  00000003 
+  228:  	EndCaseGroup
+  230:  EndSwitch
+  238:  ChildThread
+  240:  	Call     UseBattleCamPreset 	( 0000001B )
+  250:  	Wait     00000005 
+  25C:  	Call     SetGoalToTarget 	( .Actor:Player )
+  26C:  	Call     UseBattleCamPreset 	( 00000023 )
+  27C:  EndChildThread
+  284:  Call     80269524 ( *Var[F] )
+  294:  Call     CloseActionCommandInfo ( )
+  2A0:  Call     LoadActionCommand 	( 00000001 )
+  2B0:  Call     802A9000 ( )
+  2BC:  Call     802694A4 ( 00000000 )
+  2CC:  Call     802A9120 ( 00000018 00000003 )
+  2E0:  Call     SetGoalToTarget 	( .Actor:Player )
+  2F0:  Call     SetJumpAnimations 	( .Actor:Player 00000000 00010007 00010008 0001000C )
+  310:  Call     80274A18 ( 00000018 00000003 )
+  324:  Wait     00000001 
+  330:  Call     SetActorSounds ( 00000000 00000003 0000015A 00000000 )
+  34C:  Call     PlayerDamageEnemy 	( *Var[0] 00000080 00000000 00000000 00000003 000000E0 )
+  370:  Call     80269550 ( *Var[F] )
+  380:  ExecWait $Script_802A17C4
+  38C:  Return
+  394:  End
+}
+  
+@ $Script_802A2A84 {
+     0:  ExecWait $Script_802A2184 
+     C:  Call     GetActionCommandMode ( *Var[0] )
+   1C:  If  *Var[0]  ==  00000002 
+   2C:  	Call     SetActionCommandMode ( 00000003 )
+   3C:  	Loop     
+   48:  		Call     GetActionCommandMode ( *Var[0] )
+   58:  		If  *Var[0]  <  00000002 
+   68:  			BreakLoop
+   70:  		EndIf
+   78:  		Wait     00000001 
+   84:  	EndLoop
+   8C:  EndIf
+   E4:  Call     GetActionCommandMode ( *Var[0] )
+   F4:  If  *Var[0]  >  00000000 
+  104:  	Wait     00000001 
+  110:  EndIf
+  118:  Call     DidActionSucceed ( *Var[0] )
+  128:  Switch  *Var[0] 
+  134:  	Case  >  00000000 
+  140:  		Call     SetActorSounds ( 00000000 00000003 0000015A 00000000 )
+  15C:  		Call     PlayerDamageEnemy 	( *Var[0] 00000080 00000000 00000000 00000003 00000050 )
+  180:  	Default
+  188:  		Call     SetActorSounds ( 00000000 00000003 0000015A 00000000 )
+  1A4:  		Call     PlayerDamageEnemy 	( *Var[0] 00000080 00000000 00000000 00000003 00000030 )
+  1C8:  EndSwitch
+  1D0:  Switch  *Var[0] 
+  1DC:  	CaseOR  ==  00000000 
+  1E8:  	CaseOR  ==  00000002 
+  1F4:  		ExecWait $Script_802A15D8
+  200:  		Return
+  208:  	EndCaseGroup
+  210:  	CaseOR  ==  00000001 
+  21C:  	CaseOR  ==  00000003 
+  228:  	EndCaseGroup
+  230:  EndSwitch
+  238:  ChildThread
+  240:  	Call     UseBattleCamPreset 	( 0000001B )
+  250:  	Wait     00000005 
+  25C:  	Call     SetGoalToTarget 	( .Actor:Player )
+  26C:  	Call     UseBattleCamPreset 	( 00000023 )
+  27C:  EndChildThread
+  284:  Call     80269524 ( *Var[F] )
+  294:  Call     CloseActionCommandInfo ( )
+  2A0:  Call     LoadActionCommand 	( 00000001 )
+  2B0:  Call     802A9000 ( )
+  2BC:  Call     802694A4 ( 00000000 )
+  2CC:  Call     802A9120 ( 00000018 00000003 )
+  2E0:  Call     SetGoalToTarget 	( .Actor:Player )
+  2F0:  Call     SetJumpAnimations 	( .Actor:Player 00000000 00010007 00010008 0001000C )
+  310:  Call     80274A18 ( 00000018 00000003 )
+  324:  Wait     00000001 
+  330:  Call     SetActorSounds ( 00000000 00000003 0000015A 00000000 )
+  34C:  Call     PlayerDamageEnemy 	( *Var[0] 00000080 00000000 00000000 00000004 000000E0 )
+  370:  Call     80269550 ( *Var[F] )
+  380:  ExecWait $Script_802A17C4
+  38C:  Return
+  394:  End
+}
+  
+  /%
+  
+  @ $Script_802A278C
+    0:  ExecWait $Script_802A2184 
+   % C:  Call     PlayerTestEnemy 	( *Var[0] 00000080 00000000 00000000 00000001 00000000 )
+   30:  If  *Var[0]  ==  00000006 
+   40:  	ExecWait $Script_802A1FEC 
+   4C:  	Return
+   54:  EndIf
+   5C:  ExecWait $Script_802A26B4 
+   68:  Wait     00000001 
+   74:  Call     DidActionSucceed ( *Var[0] )
+   84:  Switch  *Var[0] 
+   90:  	Case  >=  00000000 
+   9C:  		Call     SetActorSounds ( 00000000 00000003 0000015A 00000000 )
+   B8:  		Call     PlayerDamageEnemy 	( *Var[0] 00000000 00000000 00000000 00000002 00000070 )
+   DC:  	Default
+   E4:  		Call     SetActorSounds ( 00000000 00000003 0000015A 00000000 )
+  100:  		Call     PlayerDamageEnemy 	( *Var[0] 00000000 00000000 00000000 00000001 00000030 )
+  124:  EndSwitch
+  12C:  Switch  *Var[0] 
+  138:  	Case  >  00000000 
+  144:  		ExecWait $Script_802A15D8 
+  150:  	Default
+  158:  		ExecWait $Script_802A17C4 
+  164:  EndSwitch
+  16C:  Return
+  174:  End
+  
+  %80010364
+  %80010164
+
+@ $Script_802A2908
+    0:  ExecWait $Script_802A2184 
+   % C:  Call     PlayerTestEnemy 	( *Var[0] 00000080 00000000 00000000 00000001 00000000 )
+   30:  If  *Var[0]  ==  00000006 
+   40:  	ExecWait $Script_802A1FEC 
+   4C:  	Return
+   54:  EndIf
+   5C:  ExecWait $Script_802A26B4 
+   68:  Wait     00000001 
+   74:  Call     DidActionSucceed ( *Var[0] )
+   84:  Switch  *Var[0] 
+   90:  	Case  >=  00000000 
+   9C:  		Call     SetActorSounds ( 00000000 00000003 0000015A 00000000 )
+   B8:  		Call     PlayerDamageEnemy 	( *Var[0] 00000000 00000000 00000000 00000004 00000070 )
+   DC:  	Default
+   E4:  		Call     SetActorSounds ( 00000000 00000003 0000015A 00000000 )
+  100:  		Call     PlayerDamageEnemy 	( *Var[0] 00000000 00000000 00000000 00000001 00000030 )
+  124:  EndSwitch
+  12C:  Switch  *Var[0] 
+  138:  	Case  >  00000000 
+  144:  		ExecWait $Script_802A15D8 
+  150:  	Default
+  158:  		ExecWait $Script_802A17C4 
+  164:  EndSwitch
+  16C:  Return
+  174:  End
+  
+ @ $Script_802A2A84
+    0:  ExecWait $Script_802A2184 
+   % C:  Call     PlayerTestEnemy 	( *Var[0] 00000080 00000000 00000000 00000001 00000000 )
+   30:  If  *Var[0]  ==  00000006 
+   40:  	ExecWait $Script_802A1FEC 
+   4C:  	Return
+   54:  EndIf
+   5C:  Wait     00000001 
+   68:  Call     DidActionSucceed ( *Var[0] )
+      84:  Switch  *Var[0] 
+   90:  	Case  >=  00000000 
+   9C:  		Call     SetActorSounds ( 00000000 00000003 0000015A 00000000 )
+   B8:  		Call     PlayerDamageEnemy 	( *Var[0] 00000000 00000000 00000000 00000006 00000070 )
+   DC:  	Default
+   E4:  		Call     SetActorSounds ( 00000000 00000003 0000015A 00000000 )
+  100:  		Call     PlayerDamageEnemy 	( *Var[0] 00000000 00000000 00000000 00000001 00000030 )
+  124:  EndSwitch
+  120:  Switch  *Var[0] 
+  12C:  	Case  >  00000000 
+  138:  		ExecWait $Script_802A15D8 
+  144:  	Default
+  14C:  		ExecWait $Script_802A17C4 
+  158:  EndSwitch
+  160:  Return
+  168:  End%/
+  
+%Need to put this here as a backup, ignore this pls :)
+
+/%
+
+ActionState   % namespace
+actionStateID   % library name
+false     % reversed
+
+% Current player action state, stored at 8010F07C
+
+00 = Idle
+01 = Walk
+02 = Run
+
+03 = Jump
+04 = Bounce     % ?? used with kooper
+
+06 = Launch     % Jack-in-the-boxes in the Toybox
+
+08 = Falling
+0A = Land
+09 = StepDown
+
+0C = Conversation % Reading signs doesn't count
+0D = SpinJump
+0E = GroundPound
+
+0F = UltraJump
+10 = UltraPound
+
+12 = Hammer
+
+1A = Spin
+
+1D = SpinningFlower
+
+21 = Ride     % Parakarry, Sushie, Lakilester, Bow
+22 = StepUp
+
+26 = UseSpring

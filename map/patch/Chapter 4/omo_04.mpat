@@ -1,0 +1,176 @@
+@ $Script_MakeEntities
+{
+    0:  Call     MakeEntity  	( .Entity:Chest ~Vec4d:Entity80242B1C 00000000 80000000 )
+   28:  Call     AssignFlag  	( *GF_OMO04_Chest_StoreroomKey )
+   38:  Call     AssignScript 	( $Script_8024277C )
+   48:  Call     MakeEntity  	( .Entity:StarBoxLaucher ~Vec4d:Entity80242B64 80000000 )
+   6C:  Call     AssignScript 	( $Script_802429E8 )
+   7C:  Call     MakeEntity  	( .Entity:StarBoxLaucher ~Vec4d:Entity80242B98 80000000 )
+   A0:  Call     AssignScript 	( $Script_80242A14 )
+   B0:  Call     MakeEntity  	( .Entity:StarBoxLaucher ~Vec4d:Entity80242BCC 80000000 )
+   D4:  Call     AssignScript 	( $Script_80242A40 )
+   E4:  Call     MakeEntity  	( .Entity:StarBoxLaucher ~Vec4d:Entity80242C00 80000000 )
+  108:  Call     AssignScript 	( $Script_80242A6C )
+  118:  Call     MakeEntity  	( .Entity:StarBoxLaucher ~Vec4d:Entity80242C34 80000000 )
+  13C:  Call     AssignScript 	( $Script_80242A98 )
+  14C:  Call     MakeEntity  	( .Entity:StarBoxLaucher ~Vec4d:Entity80242C68 80000000 )
+  170:  Call     AssignScript 	( $Script_80242AC4 )
+  180:  Call     MakeEntity  	( .Entity:StarBoxLaucher ~Vec4d:Entity80242C9C 80000000 )
+  1A4:  Call     AssignScript 	( $Script_80242AF0 )
+  1B4:  Call     MakeEntity  	( .Entity:YellowBlock ~Vec4d:Entity80242CD0 .Item:VoltShroom 80000000 ) % was a coin, changed to Volt Shroom in case the player
+  1DC:  Call     AssignBlockFlag 	( *GF_OMO04_ItemBlock_CoinA )                                                      % doesnt have zaptap. These are valuable in CH4
+  1EC:  Call     MakeEntity  	( .Entity:YellowBlock ~Vec4d:Entity80242D08 .Item:Coin 80000000 )
+  214:  Call     AssignBlockFlag 	( *GF_OMO04_ItemBlock_CoinB )
+  224:  Call     MakeEntity  	( .Entity:YellowBlock ~Vec4d:Entity80242D40 .Item:ThunderBolt 80000000 )
+  24C:  Call     AssignBlockFlag 	( *GF_OMO04_ItemBlock_ThunderBolt )
+  25C:  Call     MakeItemEntity ( .Item:Coin ~Vec3d:Item80242D78 00000011 *GF_OMO04_Item_CoinA )
+  280:  Call     MakeItemEntity ( .Item:Coin ~Vec3d:Item80242D9C 00000011 *GF_OMO04_Item_CoinB )
+  2A4:  Call     MakeItemEntity ( .Item:Coin ~Vec3d:Item80242DC0 00000011 *GF_OMO04_Item_CoinC )
+  2C8:  Call     MakeItemEntity ( .Item:Coin ~Vec3d:Item80242DE4 00000011 *GF_OMO04_Item_CoinD )
+  2EC:  Call     MakeItemEntity ( .Item:Coin ~Vec3d:Item80242E08 00000011 *GF_OMO04_Item_CoinE )
+  310:  Call     MakeItemEntity ( .Item:Coin ~Vec3d:Item80242E2C 00000011 *GF_OMO04_Item_CoinF )
+  334:  Call     MakeItemEntity ( .Item:Coin ~Vec3d:Item80242E50 00000011 *GF_OMO04_Item_CoinG )
+  358:  Call     MakeItemEntity ( .Item:Coin ~Vec3d:Item80242E74 00000011 *GF_OMO04_Item_CoinH )
+  37C:  Call     MakeItemEntity ( .Item:StarPiece ~Vec3d:Item80242E98 00000011 *GF_OMO04_Item_StarPieceA )
+  3A0:  Call     MakeItemEntity ( .Item:StarPiece ~Vec3d:Item80242EBC 00000011 *GF_OMO04_Item_StarPieceB )
+  3C4:  Return
+  3CC:  End
+}
+
+#new:NpcGroup $ExtraEnemy
+{
+00000005 $NpcSettings_80243024 800.0 0.0 32.0
+00000800 00000000 00000000 00000000 0000010E 
+8005s % item drop chance = 5%
+009As 0002s 0000s % ItemDizzyDial
+008Cs 0002s 0000s % ItemSuperShroom
+0084s 0002s 0000s % ItemThunderBolt
+008Ds 0002s 0000s % ItemDriedShroom
+008Fs 0002s 0000s % ItemSleepySheep
+0090s 0002s 0000s % ItemPOWBlock
+0098s 0002s 0000s % ItemFrightJar
+0000s 0000s 0000s % null
+% hearts drop table (HP cutoff, chance to drop, drop attempts, chance per attempt)
+0.2s 0.7s 2s 0.5s
+0.3s 0.6s 2s 0.5s
+0.5s 0.5s 2s 0.4s
+0.8s 0.4s 2s 0.4s
+1.0s 0.3s 2s 0.3s
+0.0s 0.0s 0s 0.0s
+0.0s 0.0s 0s 0.0s
+0.0s 0.0s 0s 0.0s
+% flowers drop table (FP cutoff, chance to drop, drop attempts, chance per attempt)
+0.2s 0.5s 2s 0.4s
+0.3s 0.4s 2s 0.4s
+0.5s 0.4s 2s 0.4s
+0.8s 0.4s 2s 0.4s
+1.0s 0.3s 2s 0.4s
+0.0s 0.0s 0s 0.0s
+0.0s 0.0s 0s 0.0s
+0.0s 0.0s 0s 0.0s
+% coin drops
+0000s 0002s 0000s
+% unknown
+800` 0` 32` 0000001E 00000000 FFFF8001 00000000 
+800` 0` 32` 000000C8 00000000 00000000 00000001 
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+00000000 00000000 003B0301 003B0302 003B0303 003B0303 003B0301 003B0301 
+003B030C 003B030C 003B0315 003B0312 003B0311 003B0310 003B0305 003B0301 
+003B0301 003B0301 00000001 00000000 00000000 
+00000000 % no tattle string
+}
+
+#new:NpcGroup $AntiGuy
+{
+00000006 $NpcSettings_80243024 384.0 180.0 -86.0
+00000800 00000000 00000000 00000000 0000010E 
+8005s % item drop chance = 5%
+009As 0002s 0000s % ItemDizzyDial
+008Cs 0002s 0000s % ItemSuperShroom
+0084s 0002s 0000s % ItemThunderBolt
+008Ds 0002s 0000s % ItemDriedShroom
+008Fs 0002s 0000s % ItemSleepySheep
+0090s 0002s 0000s % ItemPOWBlock
+0098s 0002s 0000s % ItemFrightJar
+0000s 0000s 0000s % null
+% hearts drop table (HP cutoff, chance to drop, drop attempts, chance per attempt)
+0.2s 0.7s 2s 0.5s
+0.3s 0.6s 2s 0.5s
+0.5s 0.5s 2s 0.4s
+0.8s 0.4s 2s 0.4s
+1.0s 0.3s 2s 0.3s
+0.0s 0.0s 0s 0.0s
+0.0s 0.0s 0s 0.0s
+0.0s 0.0s 0s 0.0s
+% flowers drop table (FP cutoff, chance to drop, drop attempts, chance per attempt)
+0.2s 0.5s 2s 0.4s
+0.3s 0.4s 2s 0.4s
+0.5s 0.4s 2s 0.4s
+0.8s 0.4s 2s 0.4s
+1.0s 0.3s 2s 0.4s
+0.0s 0.0s 0s 0.0s
+0.0s 0.0s 0s 0.0s
+0.0s 0.0s 0s 0.0s
+% coin drops
+0000s 0002s 0000s
+% unknown
+384` 180` -86` 60` 00000000 FFFF8001 00000000 
+384` 180` -86` 75` 65` 00000000 00000001 
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+00000000 00000000 003B0501 003B0502 003B0503 003B0503 003B0501 003B0501 
+003B050C 003B050C 003B0515 003B0512 003B0511 003B0510 003B0505 003B0501 
+003B0501 003B0501 00000001 00000000 00000000 
+00000000 % no tattle string
+}
+
+@ $NpcGroupList_80243DAC
+{
+00000001 $NpcGroup_802433E0 12010001 
+00000001 $NpcGroup_802437C0 10040001 
+00000001 $ExtraEnemy 10040001 % added
+00000001 $AntiGuy 10290001 % added
+00000001 $NpcGroup_802439B0 100F0001 
+00000000 00000000 00000000 
+}
+
+@ $NpcGroupList_80243DDC
+{
+00000001 $NpcGroup_802435D0 12030001 
+00000001 $NpcGroup_802437C0 10040001 
+00000001 $ExtraEnemy 10040001 % added
+00000001 $AntiGuy 10290001 % added
+00000001 $NpcGroup_802439B0 100F0001 
+00000000 00000000 00000000 
+}
+
+@ $NpcGroupList_80243E0C
+{
+00000001 $NpcGroup_802437C0 10040001 
+00000001 $ExtraEnemy 10040001 % added
+00000001 $AntiGuy 10290001 % added
+00000001 $NpcGroup_802439B0 100F0001 
+00000000 00000000 00000000 
+}
+
+@ $NpcGroup_802435D0
+{
+00000001 $NpcSettings_8024307C ~Vec3f:NPC_WorldClubba_01 % 1100 0 0
+00440F00 $Script_Init_80243334 00000000 00000000 0000010E 
+~NoItems ~NoHP ~NoFP ~NoCoinBonus
+~Movement:NPC_WorldClubba_01
+003B0501 003B0501 003B0501 003B0501 003B0501 003B0501 003B0500 003B0500 
+003B0501 003B0501 003B0501 003B0501 003B0501 003B0501 003B0501 003B0501 
+00000000 00000000 00000000 00000000 % no tattle string
+}
+
+@ $Script_Idle_802430D4
+{
+   [F0]  	Call     SpeakToPlayer 	( 00000001 003B0501 003B0501 00000000 000F003B ) % turned this into an antiguy
+}
+

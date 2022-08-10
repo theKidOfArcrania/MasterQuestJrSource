@@ -1,0 +1,73 @@
+@ $Script_Main_EnterWalk
+{
+    0:  Set      *WorldMapLocation 0000000A 
+   10:  Call     SetSpriteShading   ( FFFFFFFF )
+   20:  If       *StoryProgress ==  FFFFFFC1 
+   30:     Call     DisablePulseStone   ( .False )
+   40:  EndIf
+   48:  Call     SetCamPerspective  ( .Cam:Default 00000003 00000019 00000010 00001000 )
+   68:  Call     SetCamBGColor  ( .Cam:Default 00000000 00000000 00000000 )
+   84:  Call     SetCamEnabled  ( .Cam:Default .True )
+   98:  Call     SetCamLeadPlayer   ( .Cam:Default .False )
+    Exec     $Script_SandFlow
+   AC:  ExecWait $Script_MakeEntities
+   B8:  Call     $Function_80240000 ( )
+   C4:  Call     SetMusicTrack  ( 00000000 .Song:DryDryDesert 00000000 00000008 )
+   E0:  Set      *Var[0] $Script_802401D4 
+   F0:  Exec     EnterWalk 
+   FC:  Return
+  104:  End
+}
+  
+#new:Script $Script_SandFlow
+{
+  Call     EnableTexPanning   ( ~Model:SandFlowA .True )
+  Call     EnableTexPanning   ( ~Model:SandFlowB .True )
+  Set      *Var[0] 00000000 
+  Loop     
+    Add      *Var[0] 100`  
+    Call     SetTexPanOffset ( 00000001 00000000 00000000 *Var[0] )
+    Wait     00000001 
+  EndLoop
+  Return
+  End
+}
+
+#import NPC_Ember.mpat
+
+@ $Script_MakeEntities
+{
+    Call     MakeNpcs           ( 00000000 $GroupList )
+    0:  Call     MakeEntity         ( .Entity:YellowBlock ~Vec3d:Entity80240350 ~Angle:Entity80240350 .Item:Coin 80000000 )
+   28:  Call     AssignBlockFlag  ( *GameFlag[032F] )
+   38:  Return
+   40:  End
+}
+
+#new:NpcGroupList $GroupList
+{
+00000001 $NPC_Ember   0A100001 %yikes!
+00000000 00000000 00000000 
+}
+
+@ $NPC_Ember
+{
+[00] 0          % npc ID
+[08] 160.0 10.0 0.0   % spawn position
+[14] 00000400     % flags
+[E0] 160` 10` 0 250`  % wander origin and radius
+[FC] 80` 10` 0 420` 500`  % detection bounds
+}
+
+@ $AISettings_80244918_kzn_02
+{
+ 0.8    % wander speed  (3F4CCCCD)
+00000064  % wander step distance
+00000000  % wander step delay
+140.0   % alert radius -- originally 90.0 (42B40000)
+00000000 00000004
+ 3.2    % chase speed  (404CCCCD)
+0000000A 00000001
+160.0   % chase radius -- originally 100.0 (42C80000)
+00000000 00000001 
+}

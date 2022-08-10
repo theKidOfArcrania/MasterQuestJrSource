@@ -1,0 +1,16 @@
+# Build artifacts
+temp
+build
+cache
+/out
+
+# Editor files
+/logs
+/editor
+
+# Original game data
+src
+raw
+
+# vim swap files
+*.sw?

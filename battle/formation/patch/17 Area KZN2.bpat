@@ -1,0 +1,899 @@
+
+% Relative to the others, this battle section is very complex!
+% This is for two reasons:
+% - the boss' body is an animated model instead of a sprite
+% - the fight is separated into two distinct phases
+
+% The original version of boss could be simply stun-locked with water
+% and ice attacks. Not anymore. The new Lava Piranha gains +2 defense
+% for each living Lava Bud. Additionally, cold/water attacks do not
+% always stun them. When stunned, they recover twice as quickly.
+
+% He also attacks as soon as he is done being stunned, and will
+% immediately burn up all your items in phase 2. He also strikes
+% your partner in phase 2.
+
+% ====================================================
+% Lava Piranha
+% + Gains +2 defense for each living Lava Bud
+% + Water/ice stuns only 25% of the time
+% + Faster recovery from stun (2 turns -> 1)
+% + Phase 2 attack now clears inventory
+% ====================================================
+
+% Actor variables:
+% 0 = revived flag (0 = normal phase, 1 = fiery phase)
+% B = disabled turn counter
+
+@ $LavaPiranha
+{
+[MaxHP] 40`b
+[PowerBounce]  3`b 
+}
+
+#define .TextBox *GameByte[032] 
+
+@ $StatusTable_8021D148
+{
+.Status:Normal      0`
+.Status:Default    0`
+.Status:Sleep      0`
+.Status:Poison      0`
+.Status:Frozen      0`
+.Status:Dizzy      0`
+.Status:Fear    0`
+.Status:Static      0`
+.Status:Paralyze   0`
+.Status:Shrink      0`
+.Status:Stop        0`
+.Status:DefaultTurnMod   0`
+.Status:SleepTurnMod     -1`
+.Status:PoisonTurnMod     0`
+.Status:FrozenTurnMod     0`
+.Status:DizzyTurnMod     -1`
+.Status:FearTurnMod   0`
+.Status:StaticTurnMod     0`
+.Status:ParalyzeTurnMod  -1`
+.Status:ShrinkTurnMod    -1`
+.Status:StopTurnMod      -2`
+.Status:End
+}
+
+
+@ $Script_8021FF3C
+{
+  [43C]  Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 00000002 0000FFFF 00000000 00000008 00000020 ) %weak attack, wear Fire Shield to not die horribly
+}
+  
+@ $Script_802204B0
+{
+     Call     UseIdleAnimation 	( .Actor:Self .False )
+    Call     SetTargetActor ( .Actor:Self .Actor:Player )
+     Thread
+    	Wait     00000008 
+   	Call     UseBattleCamPreset 	( 00000013 )
+    	Call     SetBattleCamTarget 	( 00000050 00000046 00000000 )
+    	Call     SetBattleCamZoom  	( 0000012C )
+     	Call     SetBattleCamOffsetZ 	( 0000001E )
+   	Call     MoveBattleCamOver 	( 0000002D )
+    	Wait     00000036 
+     	Call     UseBattleCamPreset 	( 00000002 )
+     	Call     MoveBattleCamOver 	( 0000000F )
+     EndThread
+     Call     OverrideBattleDmaDest 	( $End[9230] )
+     Call     LoadBattleDmaData 	( 00000002 )
+     Call     PlayModelAnimation 	( 00000000 $End[9230] )
+    Wait     0000000E 
+    Call     SetAnimation 	( .Actor:Self 00000001 0079000E )
+    Wait     0000000A 
+    Call     PlaySoundAtActor 	( .Actor:Self 000003C1 )
+   Wait     0000002D 
+    Call     SetAnimation 	( .Actor:Self 00000001 00790008 )
+    Call     GetPartOffset 	( .Actor:Self 00000001 *Var[0] *Var[1] *Var[2] )
+    Sub  *Var[0]  00000028 
+    Set  *Var[1]  FFFFFFF6 
+    Call     SetGoalToTarget 	( .Actor:Self )
+    Call     GetGoalPos  	( .Actor:Self *Var[3] *Var[4] *Var[5] )
+    Call     PlayEffect  	( 00000063 00000000 *Var[0] *Var[1] *Var[2] *Var[3] *Var[4] *Var[5] *Fixed[1.0] 00000010 00000028 00000000 00000000 00000000 )
+   Call     PlaySoundAtActor 	( .Actor:Self 000003C4 )
+    Wait     0000000F 
+    Thread
+    	Wait     00000018 
+    	Call     PlayEffect  	( ~FX:EmitterVolume:Embers *Var[3] 00000000 *Var[5] 00000032 00000032 *Fixed[1.0] 00000028 00000037 *Fixed[1.0] *Fixed[1.0] 00000000 00000000 )
+    EndThread
+    Call     EnemyTestTarget ( .Actor:Self *Var[A] 00000002 00000000 00000001 00000010 )
+    Switch  *Var[A] 
+    	CaseOR  ==  00000006 
+    	CaseOR  ==  00000005 
+    		Wait     00000014 
+   		Call     OverrideBattleDmaDest 	( $End[9230] )
+    		Call     LoadBattleDmaData 	( 00000003 )
+    		Call     PlayModelAnimation 	( 00000000 $End[9230] )
+    		Call     SetAnimation 	( .Actor:Self 00000001 00790007 )
+    		Wait     00000013 
+    		Call     SetAnimation 	( .Actor:Self 00000001 00790004 )
+    		Call     OverrideBattleDmaDest 	( $End[9230] )
+    		Call     LoadBattleDmaData 	( 00000000 )
+    		Call     PlayModelAnimation 	( 00000000 $End[9230] )
+   		If  *Var[A]  ==  00000005 
+    			Call     EnemyTestTarget ( .Actor:Self *Var[0] 80000000 00000000 00000000 00000000 )
+    		EndIf
+    		Wait     0000000F 
+    		Call     UseBattleCamPreset 	( 00000002 )
+			 % Call     GetActorVar 	( .Actor:Self 0000000F *Var[E] )
+			% If *Var[E] == 00000000
+				Call    $Clear_Inventory
+				If .TextBox == 00000000
+					Call	$ShowCustomMessage	( 002F002C 90` )
+					Set .TextBox 00000001
+				EndIf
+				Wait	90`
+				Call     SetActorVar 	( .Actor:Self 0000000F 00000001 )
+			%EndIf
+    		Call     EnableIdleScript 	( .Actor:Self 00000001 )
+    		Call     UseIdleAnimation 	( .Actor:Self .True )
+    		Return
+    	EndCaseGroup
+   EndSwitch
+   Wait     00000002 
+  % Call $Clear_Rand_Item
+			 %Call     GetActorVar 	( .Actor:Self 0000000F *Var[F] )
+			 %If *Var[F] == 00000000
+				Call    $Clear_Inventory
+			%EndIf
+    Call     SetGoalToTarget 	( .Actor:Self )
+   Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 00000002 0000FFFF 00000000 0000000A 00000020 ) %seriously wear Fire Shield
+  %============================
+  % NEW CODE ADDED - RIP SUSHI
+  %============================
+    				Wait     0000000B 
+  				Call     SetTargetActor ( .Actor:Self .Actor:Partner )
+   				Call     SetGoalToTarget 	( .Actor:Self )
+   				Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 20000110 0000FFFF 00000000 00000001 00000020 )
+   %============================
+   % END NEW CODE WOW IT WORKS
+   %============================
+      Wait     00000014 
+    Call     OverrideBattleDmaDest 	( $End[9230] )
+    Call     LoadBattleDmaData 	( 00000003 )
+    Call     PlayModelAnimation 	( 00000000 $End[9230] )
+    Call     SetAnimation 	( .Actor:Self 00000001 00790007 )
+			%Call     GetActorVar 	( .Actor:Self 0000000F *Var[E] )
+			 %If *Var[E] == 00000000
+				%Call    $Clear_Inventory
+				If .TextBox == 00000000
+					Call	$ShowCustomMessage	( 002F002C 90` )
+					Set .TextBox 00000001
+				EndIf
+				Wait	90`
+				Call     SetActorVar 	( .Actor:Self 0000000F 00000001 )
+			%EndIf
+    Wait     00000013 
+    Call     SetAnimation 	( .Actor:Self 00000001 00790004 )
+   Call     OverrideBattleDmaDest 	( $End[9230] )
+    Call     LoadBattleDmaData 	( 00000000 )
+    Call     PlayModelAnimation 	( 00000000 $End[9230] )
+    If  *Var[F]  ==  0000000A 
+  	Return
+    EndIf
+    Call     UseBattleCamPreset 	( 00000002 )
+    Call     EnableIdleScript 	( .Actor:Self 00000001 )
+    Call     UseIdleAnimation 	( .Actor:Self .True )
+    Return
+    End  
+}
+ 
+% Burn up mario's entire inventory! 
+ 
+#new:Function $Clear_Inventory
+{
+PUSH t0, ra
+LIO t0, 8010F456
+SH  r0, 0000 (t0)
+SH  r0, FFFE (t0)
+SH  r0, FFFC (t0)
+SH  r0, FFFA (t0)
+SH  r0, FFF8 (t0)
+SH  r0, FFF6 (t0)
+SH  r0, FFF4 (t0)
+SH  r0, FFF2 (t0)
+SH  r0, FFF0 (t0)
+SH  r0, FFEE (t0)
+POP t0, ra
+JR RA
+NOP
+}
+
+
+% ====================================================
+% Custom Battle Popups
+% These work, but could be implemented better.
+% ====================================================
+
+#new:Function $ShowCustomMessage % ( stringID from Custom section, message display time )
+{
+	PUSH	RA, S0, S1
+	DADDU	S0, A0, R0
+	LW		S1, C (A0)
+	JAL		~Func:get_variable
+	LW		A1, 0 (S1)
+	ADDIU	S1, S1, 4
+	DADDU	A0, S0, R0
+	DADDU	S0, V0, R0
+	JAL		~Func:get_variable
+	LW		A1, 0 (S1)
+	DADDU	S1, V0, R0
+	DADDU	A0, R0, R0
+	JAL		8024EF68	% CreateMessageBox? (usually at 8029F2C0)
+	DADDU	A1, S1, R0
+	DADDU	V1, V0, R0
+	BEQ		V1, R0, .Done
+	NOP
+	SW		R0, 0 (V1)
+	LIA		V0, $Custom_8024FB3C
+	SW		V0, 4 (V1)
+	SW		R0, 8 (V1)
+	LIA		V0, $Custom_80250EA4
+	SW		V0, C (V1)
+	SH		S0, 12 (V1)	% message ID
+	SH		S1, 14 (V1) % message time
+	SB		R0, 16 (V1)
+	ADDIU	V0, R0, 1
+	SB		V0, 17 (V1)
+	SW		R0, 18 (V1)
+	SAW		V1, 802838F8
+	SAH		R0, 8029F640
+	SAH		R0, 8029F64A
+	SAH		R0, 8029F64C
+	SAH		R0, 8029F64E
+	SAH		R0, 8029F650
+	.Done
+	POP		RA, S0, S1
+	JR		RA
+	ADDIU	V0, R0, 2
+}
+	
+#new:Function $Custom_80250EA4 % [17F784]
+{
+	ADDIU	SP, SP, FFC0
+	SW		S3, 34 (SP)
+	DADDU	S3, A0, R0
+	SW		RA, 3C (SP)
+	SW		S4, 38 (SP)
+	SW		S2, 30 (SP)
+	SW		S1, 2C (SP)
+	SW		S0, 28 (SP)
+	%
+	LH		V0, 12 (S3)
+	LUI		S0, 002F
+	OR		S0, S0, V0
+	%
+	LB		V0, 17 (S3)
+	BEQ		V0, R0, .Done
+	NOP
+	SB		R0, 17 (S3)
+	%
+	DADDU	A1, R0, R0
+	JAL		80126474		% GetTextWidth  (9D)
+	DADDU	A0, S0, R0
+	%
+	ADDIU	A3, V0, 1E
+	SRL		V0, A3, 1F
+	ADDU	V0, A3, V0
+	SRA		V0, V0, 1
+	ADDIU	V1, R0, A0 % 160`
+	SUBU	S1, V1, V0 % S1 = 160 - (V0 + 30) / 2	(start pos)
+	DADDU	S2, A3, R0 % S1 = V0 + 30 				(box width)
+	JAL		801264B0		% GetTextLines? (2)
+	DADDU	A0, S0, R0
+	%
+	ADDIU	V0, V0, FFFF
+	ADDIU	A0, R0, 9
+	DADDU	A1, S1, R0	% text hpos
+	ADDIU	A2, R0, 50	% text vpos
+	DADDU	A3, S2, R0	% box width
+	SLL		V0, V0, 1
+	LTH		T0, V0 (802835D0) % (1C/28)
+	SW		T0, 10 (SP) % box height
+	SW		R0, 14 (SP)
+	LIA		V0, $Custom_80250818
+	SW		V0, 18 (SP)
+	SW		S3, 1C (SP)
+	ADDIU	V0, R0, FFFF
+	SW		V0, 20 (SP)
+	JAL		80147CC8
+	NOP
+	%
+	ADDIU	A0, R0, 9
+	ADDIU	A1, R0, 1
+	JAL		80147E7C
+	NOP
+	.Done
+	LW		RA, 3C (SP)
+	LW		S4, 38 (SP)
+	LW		S3, 34 (SP)
+	LW		S2, 30 (SP)
+	LW		S1, 2C (SP)
+	LW		S0, 28 (SP)
+	JR		RA
+	ADDIU	SP, SP, 40
+}
+	
+#new:Function $Custom_8024FB3C		% 17E41C
+{
+	ADDIU	SP, SP, FFE0
+	SW		S1, 14 (SP)
+	DADDU	S1, A0, R0
+	SW		S2, 18 (SP)
+	SW		RA, 1C (SP)
+	SW		S0, 10 (SP)
+	LIA		A0, 800DC070
+	DADDU	S2, R0, R0
+	LIO		V0, 8024FB84
+	JR		V0
+	NOP
+}
+	
+#new:Function $Custom_80250818	% [17F0F8]
+{
+	ADDIU     SP, SP, FFC8
+	SW        S2, 20 (SP)
+	ADDIU     S2, A1, F
+	SW        S3, 24 (SP)
+	DADDU     S3, A0, R0
+	SW        RA, 2C (SP)
+	SW        S4, 28 (SP)
+	SW        S1, 1C (SP)
+	SW        S0, 18 (SP)
+	SDC1      F20, 30 (SP)
+	ADDIU     S1, A2, 6
+	LH		V0, 12 (S3)
+	LUI		S0, 002F
+	OR		S0, S0, V0
+	JAL       801264B0
+	DADDU     A0, S0, R0
+	ADDIU     V1, V0, FFFF
+	DADDU     A0, S0, R0
+	DADDU     A1, S2, R0
+	ADDIU     A3, R0, FF
+	SLL       V0, V1, 1
+	LTH       A2, V0 (802835D4)
+	ADDIU     V0, R0, F
+	SW        V0, 10 (SP)
+	SW        R0, 14 (SP)
+	JAL       801264EC		% DrawString
+	ADDU      A2, S1, A2
+	LW        RA, 2C (SP)
+	LW        S4, 28 (SP)
+	LW        S3, 24 (SP)
+	LW        S2, 20 (SP)
+	LW        S1, 1C (SP)
+	LW        S0, 18 (SP)
+	LDC1      F20, 30 (SP)
+	JR        RA
+	ADDIU     SP, SP, 38
+}
+ 
+/%
+ 
+#new:Function $GetRand_0_Through_9
+%A0 is the range I believe, and it returns on v0 if i had to guess
+PUSH a0, v0, ra
+ORI a0, r0, 0009
+JAL {Func:rand_int}
+NOP
+POP a0, v0, ra
+JR RA
+NOP
+
+#new:Function $Clear_Rand_Item
+PUSH t0, v0, v1, a0, ra
+JAL $GetRand_0_Through_9
+NOP
+%now V0 holds a value 0-9
+ORI t0, r0, 0000
+BEQ v0, r0, .item1
+NOP
+ORI t0, r0, 0001
+BEQ v0, t0, .item2
+NOP
+ORI t0, r0, 0002
+BEQ v0, t0, .item3
+NOP
+ORI t0, r0, 0003
+BEQ v0, t0, .item4
+NOP
+ORI t0, r0, 0004
+BEQ v0, t0, .item5
+NOP
+ORI t0, r0, 0005
+BEQ v0, t0, .item6
+NOP
+ORI t0, r0, 0006
+BEQ v0, t0, .item7
+NOP
+ORI t0, r0, 0007
+BEQ v0, t0, .item8
+NOP
+ORI t0, r0, 0008
+BEQ v0, t0, .item9
+NOP
+ORI t0, r0, 0009
+BEQ v0, t0, .item10
+NOP
+%
+LIO t1, 8010F456
+.item1
+BEQ r0, r0, .end
+SH  r0, 0000 (t1)
+.item2
+BEQ r0, r0, .end
+SH  r0, FFFE (t1)
+.item3
+BEQ r0, r0, .end
+SH  r0, FFFC (t1)
+.item4
+BEQ r0, r0, .end
+SH  r0, FFFA (t1)
+.item5
+BEQ r0, r0, .end
+SH  r0, FFF8 (t1)
+.item6
+BEQ r0, r0, .end
+SH  r0, FFF6 (t1)
+.item7
+BEQ r0, r0, .end
+SH  r0, FFF4 (t1)
+.item8
+BEQ r0, r0, .end
+SH  r0, FFF2 (t1)
+.item9
+BEQ r0, r0, .end
+SH  r0, FFF0 (t1)
+.item10
+BEQ r0, r0, .end
+SH  r0, FFEE (t1)
+%%%
+.end
+POP t0, v0, v1, a0, ra
+JR RA
+NOP
+ 
+%/ 
+ 
+% Recover from stun twice as fast, attacks after wakeup
+@ $Script_TakeTurn_8021FC10
+{
+     Call     GetActorFlags 	( .Actor:Self *Var[0] )
+     If  *Var[0]  &  00400000 
+     	Return
+     EndIf
+     Call     GetActorVar 	( .Actor:Self 00000000 *Var[0] )
+     Switch  *Var[0] 
+     	Case  ==  00000000 
+     		ExecWait $Script_8021FF3C 
+     	Default
+     		Call     GetActorVar 	( .Actor:Self 00000005 *Var[0] )
+     		If  *Var[0]  ==  00000001 
+     			ExecWait $Script_802204B0 
+     		Else
+  			Call     GetActorVar 	( .Actor:Self 0000000B *Var[0] )
+	 Sub      *Var[0] 00000002
+     			Call     SetActorVar 	( .Actor:Self 0000000B *Var[0] )
+   			If  *Var[0]  <=  00000000 
+    				Call     EnableIdleScript 	( .Actor:Self 00000000 )
+    				Call     UseBattleCamPreset 	( 00000013 )
+    				Call     SetBattleCamTarget 	( 00000050 00000046 00000000 )
+   				Call     SetBattleCamZoom  	( 0000012C )
+   				Call     SetBattleCamOffsetZ 	( 0000001E )
+    				Call     MoveBattleCamOver 	( 0000001E )
+    				Wait     0000001E 
+    				Loop     0000000A 
+    					Call     OverrideBattleDmaDest 	( $End[9230] )
+    					Call     LoadBattleDmaData 	( 00000001 )
+   					Call     PlayModelAnimation 	( 00000000 $End[9230] )
+    					Wait     00000004 
+    				EndLoop
+    				Call     UseBattleCamPreset 	( 00000002 )
+    				Call     MoveBattleCamOver 	( 0000000F )
+   				Call     PlaySoundAtActor 	( .Actor:Self 000003BB )
+    				Set  *Var[0]  00000200 
+   				ExecWait $Script_80222EF0 
+   				Call     SetAnimation 	( .Actor:Self 00000001 00790004 )
+   				Call     OverrideBattleDmaDest 	( $End[9230] )
+   				Call     LoadBattleDmaData 	( 0000000E )
+   				Call     PlayModelAnimation 	( 00000000 $End[9230] )
+   				Wait     0000000E 
+   				Call     OverrideBattleDmaDest 	( $End[9230] )
+   				Call     LoadBattleDmaData 	( 00000000 )
+   				Call     PlayModelAnimation 	( 00000000 $End[9230] )
+   				Call     EnableIdleScript 	( .Actor:Self 00000001 )
+%====================================
+% NEW CODE - ATTACK AFTER WAKE UP
+%====================================
+				ExecWait $Script_802204B0
+%====================================
+% END NEW CODE - THAT WAS EASY
+%====================================
+   			EndIf
+   		EndIf
+   EndSwitch
+   Return
+   End
+}
+
+@ $Script_80223764
+{
+	Call	RandInt ( 100` *Var[0] )
+	If	*Var[0] > 25`
+		ConstAND	*Var[E] 	FFFFFFF4
+	EndIf
+	ExecWait $Script_80223780 
+	Return
+	End
+}
+
+% ====================================================
+% Lava Bud
+% + Extra HP (8 -> 14) to avoid the double power jump but still dies to double hammer throw/squirt
+% + Water/ice stuns only 50% of the time
+% + Bombs move faster (phase 1)
+% ====================================================
+
+% Actor variables:
+% B = Disabled turn counter
+
+
+@ $PetitPiranha
+{
+% stats
+[Index]        B7b 
+[Level]         0`b 
+[MaxHP]         5`b %water still ohkos
+[Coins]         0`b 
+}
+
+@ $PetitPiranhaBomb
+{
+	% stats
+	[Index]        B8b
+	[Level]         0`b
+	[MaxHP]         5`b
+	[Coins]         0`b
+}
+
+@ $Script_Init_80224048
+{
+    0:  Call  BindTakeTurn  ( .Actor:Self $Script_TakeTurn_802246F4 )
+   14:  Call  BindIdle      ( .Actor:Self $Script_Idle_802240A8 )
+   28:  Call  BindHandleEvent   ( .Actor:Self $Script_HandleEvent_802240DC )
+   %3C:  Call  SetEnemyHP    ( .Actor:Self  1` ) % die
+   50:  Return
+   58:  End
+}
+
+@ $Script_TakeTurn_802246F4
+{
+[75C]  Set  *Var[8]  0000000A
+}
+
+@ $LavaBud
+{
+[MaxHP] 9`b 
+}
+
+@ $StatusTable_80225180
+{
+.Status:Normal      0`
+.Status:Default    0`
+.Status:Sleep      0`
+.Status:Poison      0`
+.Status:Frozen      0`
+.Status:Dizzy      0`
+.Status:Fear    0`
+.Status:Static      0`
+.Status:Paralyze   0`
+.Status:Shrink      0`
+.Status:Stop        0`
+.Status:DefaultTurnMod   0`
+.Status:SleepTurnMod     -1`
+.Status:PoisonTurnMod     0`
+.Status:FrozenTurnMod     0`
+.Status:DizzyTurnMod     -1`
+.Status:FearTurnMod   0`
+.Status:StaticTurnMod     0`
+.Status:ParalyzeTurnMod  -1`
+.Status:ShrinkTurnMod    -1`
+.Status:StopTurnMod      -2`
+.Status:End
+}
+
+@ $Script_ShootBombs
+{
+[4E8]  Call     SetActorSpeed 	( *Var[5] *Fixed[18.0] )	% 13.0 -> 18.0
+[56C]  Call     EnemyDamageTarget 	( .Actor:Self *Var[9] 00000002 0000FFFF 00000000 00000006 00000020 )
+}
+
+@ $Script_HandleEvent_80225738
+{
+	Call     UseIdleAnimation 	( .Actor:Self .False )
+	Call     EnableIdleScript 	( .Actor:Self 00000000 )
+	Call     GetActorVar 	( .Actor:Self 00000000 *Var[0] )
+	Call     SetAnimatorFlags ( *Var[0] 00040000 00000000 )
+	Call     GetLastElement ( *Var[E] )
+	 %NEW: add a 50% chance to ignore ice element
+	%Call	RandInt ( 100` *Var[0] )
+	%If	*Var[0] > 50`
+	%	ConstAND	*Var[E] 	FFFFFFF4
+	%EndIf
+	% /NEW
+	Call     GetLastEvent 	( .Actor:Self *Var[0] )
+	Switch   *Var[0] 
+		Case     ==  00000038 
+		Case     ==  00000009 
+			ExecWait $Script_802270B4 
+		Case     ==  0000000A 
+			ExecWait $Script_802275E4 
+		Case     ==  0000000E 
+			If       *Var[E]  &  00000002 
+				ExecWait $Script_80225AA8 
+			Else
+				ExecWait $Script_802275E4 
+			EndIf
+		Case     ==  00000024 
+			ExecWait $Script_80226B58 
+		Case     ==  0000000B 
+			ExecWait $Script_802275E4 
+		Case     ==  00000021 
+			ExecWait $Script_80226B58 
+		Case     ==  0000002F 
+			SetConst *Var[0] 00000001 
+			Call     GetActorVar 	( .Actor:Self 00000008 *Var[1] )
+			ExecWait 8029A6FC 
+		Case     ==  00000026 
+			ExecWait 8029A6FC 
+		Case     ==  00000017 
+			If       *Var[E] !&  00000002 
+				ExecWait $Script_802270B4 
+			EndIf
+		Case     ==  00000019 
+			If       *Var[E] !&  00000002 
+				ExecWait $Script_802275E4 
+			EndIf
+		Case     ==  0000001F 
+		Case     ==  0000001B 
+		Case     ==  00000020 
+			ExecWait $Script_80226B58 
+		Case     ==  00000035 
+		Case     ==  00000031 
+			Call     GetActorVar 	( .Actor:Self 00000000 *Var[0] )
+			Call     SetAnimatorFlags ( *Var[0] 00040000 00000000 )
+		Case     ==  00000030 
+			SetConst *Var[0] 00000001 
+			Call     GetActorVar 	( .Actor:Self 00000008 *Var[1] )
+			ExecWait 80299044 
+			Wait     000003E8 
+		Default
+	EndSwitch
+	Call     GetStatusFlags ( .Actor:Self *Var[0] )
+	If       *Var[0]  &  00200000 
+		Call     GetActorVar 	( .Actor:Self 00000000 *Var[0] )
+		Call     SetAnimatorFlags ( *Var[0] 00040000 00000001 )
+	EndIf
+	% NEW: update defense table
+	ExecWait	$Script_UpdateDefenseTable
+	% /NEW
+	Call     EnableIdleScript 	( .Actor:Self 00000001 )
+	Call     UseIdleAnimation 	( .Actor:Self .True )
+	Return
+	End
+}
+
+@ $Script_80222EF0
+{
+	Switch   *Var[0] 
+		Case     ==  00000201 
+			Call     SetActorVar 	( .Actor:Enemy1 0000000A 00000023 )
+			Call     GetAnimatedPositionByTreeIndex ( 00000001 00000008 *Var[1] *Var[2] *Var[3] )
+			Call     GetAnimatedRotationByTreeIndex ( 00000001 00000008 *Var[4] *Var[5] *Var[6] )
+			Set      *Var[7] 0000000A 
+			Set      *Var[8] FFFFFFF1 
+			Call     $Function_80218BE8 ( *Var[1] *Var[2] *Var[6] *Var[7] *Var[8] *Var[3] *Var[4] )
+			Call     GetPartOffset 	( .Actor:Enemy1 00000001 *Var[0] *Var[1] *Var[2] )
+			Sub      *Var[2] 00000003 
+			Call     PlayEffect  	( 00000020 00000001 *Var[3] *Var[4] *Var[2] *Fixed[0.30078125] *Var[A] 00000000 00000000 00000000 00000000 00000000 00000000 00000000 )
+			Call     SetActorVar 	( .Actor:Enemy1 00000006 *Var[A] )
+			Call     SetIdleAnimations 	( .Actor:Enemy1 00000001 $IdleAnimations_802250D4 )
+			Call     SetDefenseTable 	( .Actor:Enemy1 00000001 $DefenseTable_80225128 )
+			Call     SetDefenseTable 	( .Actor:Enemy1 00000002 $DefenseTable_80225128 )
+			Call     SetPartEventBits 	( .Actor:Enemy1 00000001 00000002 .True )
+			Call     SetPartEventBits 	( .Actor:Enemy1 00000002 00000002 .True )
+			Call     SetActorVar 	( .Actor:Enemy1 00000007 007B0004 )
+			Call     SetActorVar 	( .Actor:Enemy1 00000008 007B000B )
+			Call     SetActorVar 	( .Actor:Enemy1 00000005 00000001 )
+			Call     SetPartFlagBits 	( .Actor:Enemy1 00000002 00020000 .False )
+			Call     SetActorFlagBits 	( .Actor:Enemy1 00040000 .False )
+		Case     ==  00000202 
+			Call     SetActorVar 	( .Actor:Enemy2 0000000A 00000023 )
+			Call     GetAnimatedPositionByTreeIndex ( 00000002 00000008 *Var[1] *Var[2] *Var[3] )
+			Call     GetAnimatedRotationByTreeIndex ( 00000002 00000008 *Var[4] *Var[5] *Var[6] )
+			Set      *Var[7] 0000000A 
+			Set      *Var[8] FFFFFFF1 
+			Call     $Function_80218BE8 ( *Var[1] *Var[2] *Var[6] *Var[7] *Var[8] *Var[3] *Var[4] )
+			Call     GetPartOffset 	( .Actor:Enemy2 00000001 *Var[0] *Var[1] *Var[2] )
+			Sub      *Var[2] 00000003 
+			Call     PlayEffect  	( 00000020 00000001 *Var[3] *Var[4] *Var[2] *Fixed[0.30078125] *Var[A] 00000000 00000000 00000000 00000000 00000000 00000000 00000000 )
+			Call     SetActorVar 	( .Actor:Enemy2 00000006 *Var[A] )
+			Call     SetIdleAnimations 	( .Actor:Enemy2 00000001 $IdleAnimations_802250D4 )
+			Call     SetDefenseTable 	( .Actor:Enemy2 00000001 $DefenseTable_80225128 )
+			Call     SetDefenseTable 	( .Actor:Enemy2 00000002 $DefenseTable_80225128 )
+			Call     SetPartEventBits 	( .Actor:Enemy2 00000001 00000002 .True )
+			Call     SetPartEventBits 	( .Actor:Enemy2 00000002 00000002 .True )
+			Call     SetActorVar 	( .Actor:Enemy2 00000007 007B0004 )
+			Call     SetActorVar 	( .Actor:Enemy2 00000008 007B000B )
+			Call     SetActorVar 	( .Actor:Enemy2 00000005 00000001 )
+			Call     SetPartFlagBits 	( .Actor:Enemy2 00000002 00020000 .False )
+			Call     SetActorFlagBits 	( .Actor:Enemy2 00040000 .False )
+		Default
+			Call     SetActorVar 	( .Actor:Enemy0 0000000A 00000046 )
+			Call     GetAnimatedPositionByTreeIndex ( 00000000 0000000A *Var[1] *Var[2] *Var[3] )
+			Call     GetAnimatedRotationByTreeIndex ( 00000000 0000000A *Var[4] *Var[5] *Var[6] )
+			Set      *Var[7] 0000001E 
+			Set      *Var[8] FFFFFFE2 
+			Call     $Function_80218BE8 ( *Var[1] *Var[2] *Var[6] *Var[7] *Var[8] *Var[3] *Var[4] )
+			Call     GetPartOffset 	( .Actor:Enemy0 00000001 *Var[0] *Var[1] *Var[2] )
+			Sub      *Var[2] 00000003 
+			Call     PlayEffect  	( 00000020 00000001 *Var[3] *Var[4] *Var[2] *Fixed[0.7001953] *Var[A] 00000000 00000000 00000000 00000000 00000000 00000000 00000000 )
+			Call     SetActorVar 	( .Actor:Enemy0 00000006 *Var[A] )
+			Call     SetIdleAnimations 	( .Actor:Enemy0 00000001 $IdleAnimations_8021D064 )
+			Call     SetDefenseTable 	( .Actor:Enemy0 00000001 $DefenseTable_8021D0F0 )
+			Call     SetDefenseTable 	( .Actor:Enemy0 00000002 $DefenseTable_8021D0F0 )
+			Call     SetPartEventBits 	( .Actor:Enemy0 00000001 00000002 .True )
+			Call     SetPartEventBits 	( .Actor:Enemy0 00000002 00000002 .True )
+			Call     SetActorVar 	( .Actor:Enemy0 00000007 00790004 )
+			Call     SetActorVar 	( .Actor:Enemy0 00000008 0079000A )
+			Call     SetActorVar 	( .Actor:Enemy0 00000005 00000001 )
+			Call     ForceHomePos 	( .Actor:Self 0000003D 0000003D 00000000 )
+			Call     SetActorFlagBits 	( .Actor:Self 00040000 .False )
+	EndSwitch
+	% NEW: update defense table
+	ExecWait	$Script_UpdateDefenseTable
+	% /NEW
+	Return
+	End
+}
+	
+	
+	
+% LavaBud checks damage element in Script_802275E4
+
+@ $DefenseTable_8021D0C4 % default
+{
+.Element:Normal 00000004
+.Element:Water  00000004
+.Element:Ice    00000004
+.Element:Fire   00000063
+.Element:Blast  00000004
+.Element:End
+}
+
+#alias $DefenseTable_8021D0F0	$DefenseTable_FieryHigh
+
+@ $DefenseTable_FieryHigh
+{
+.Element:Normal 00000004
+.Element:Water  00000002
+.Element:Ice    00000002
+.Element:Fire   00000063
+.Element:Blast  00000004
+.Element:End
+}
+
+#new:DefenseTable $DefenseTable_FieryMedium
+{
+.Element:Normal 00000002
+.Element:Water  00000000
+.Element:Ice    00000000
+.Element:Fire   00000063
+.Element:Blast  00000002
+.Element:End
+}
+
+#new:DefenseTable $DefenseTable_FieryLow
+{
+.Element:Normal 00000000
+.Element:Water  FFFFFFFE
+.Element:Ice    FFFFFFFE
+.Element:Fire   00000063
+.Element:Blast  00000000
+.Element:End
+}
+
+#alias $DefenseTable_8021D11C	$DefenseTable_High
+
+@ $DefenseTable_High
+{
+.Element:Normal 00000004
+.Element:Water  00000004
+.Element:Ice    00000004
+.Element:Fire   00000063
+.Element:Blast  00000004
+.Element:End
+}
+
+#new:DefenseTable $DefenseTable_Medium
+{
+.Element:Normal 00000002
+.Element:Water  00000002
+.Element:Ice    00000002
+.Element:Fire   00000063
+.Element:Blast  00000002
+.Element:End
+}
+
+#new:DefenseTable $DefenseTable_Low
+{
+.Element:Normal 00000000
+.Element:Water  00000000
+.Element:Ice    00000000
+.Element:Fire   00000063
+.Element:Blast  00000000
+.Element:End
+}
+
+#new:Script	$Script_UpdateDefenseTable
+{
+	Call	GetActorVar ( .Actor:Enemy0 00000000 *Var[0] )
+	If *Var[0] == 0
+		% Check Lava Buds
+		Set  *Var[1]	0	% count number alive
+		Call	GetActorHP 	( .Actor:Enemy1 *Var[0] )
+		If	*Var[0] > 0
+			Add  *Var[1]	1
+		EndIf
+		Call	GetActorHP 	( .Actor:Enemy2 *Var[0] )
+		If	*Var[0] > 0
+			Add  *Var[1]	1
+		EndIf
+		% Set Lava Piranha's defense tables
+		Switch	*Var[1]
+			Case  ==  2
+				Call     SetDefenseTable 	( .Actor:Enemy0 00000001 $DefenseTable_High )
+				Call     SetDefenseTable 	( .Actor:Enemy0 00000002 $DefenseTable_High )
+			Case  ==  1
+				Call     SetDefenseTable 	( .Actor:Enemy0 00000001 $DefenseTable_Medium )
+				Call     SetDefenseTable 	( .Actor:Enemy0 00000002 $DefenseTable_Medium )
+			Case  ==  0
+				Call     SetDefenseTable 	( .Actor:Enemy0 00000001 $DefenseTable_Low )
+				Call     SetDefenseTable 	( .Actor:Enemy0 00000002 $DefenseTable_Low )
+			Default
+		EndSwitch
+	Else
+		% Check Lava Buds
+		Set  *Var[1]	0	% count number stunned
+		Call	GetActorVar 	( .Actor:Enemy1 0000000B *Var[0] )
+		If	*Var[0] > 0
+			Add  *Var[1]	1
+		EndIf
+		Call	GetActorVar 	( .Actor:Enemy2 0000000B *Var[0] )
+		If	*Var[0] > 0
+			Add  *Var[1]	1
+		EndIf
+		% Set Lava Piranha's defense tables
+		Switch	*Var[1]
+			Case  ==  0
+				Call     SetDefenseTable 	( .Actor:Enemy0 00000001 $DefenseTable_FieryHigh )
+				Call     SetDefenseTable 	( .Actor:Enemy0 00000002 $DefenseTable_FieryHigh )
+			Case  ==  1
+				Call     SetDefenseTable 	( .Actor:Enemy0 00000001 $DefenseTable_FieryMedium )
+				Call     SetDefenseTable 	( .Actor:Enemy0 00000002 $DefenseTable_FieryMedium )
+			Case  ==  2
+				Call     SetDefenseTable 	( .Actor:Enemy0 00000001 $DefenseTable_FieryLow )
+				Call     SetDefenseTable 	( .Actor:Enemy0 00000002 $DefenseTable_FieryLow )
+			Default
+		EndSwitch
+	EndIf
+	Return
+	End
+}
+

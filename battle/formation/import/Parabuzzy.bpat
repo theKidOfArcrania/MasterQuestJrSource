@@ -1,0 +1,397 @@
+% A Parabuzzy enemy you can use to make your own.
+% It has the bare minimum stuff to make it work.
+% Sprites by Ukulele
+% BPAT by JaThePlayer & Thamz
+
+% Define your graphics here
+% Change EC to whatever you have Parabuzzy sprites set as.
+#define .AnimPBStop	00EC0000
+#define .AnimPBIdle	00EC0001
+#define .AnimPBPain	00EC0004
+#define .AnimPBPain2	00EC0005
+#define .AnimPBDizzy	00EC000B
+#define .AnimPBDead	00EC0006
+#define .AnimPBSleep  00EC000C
+#define .AnimPBFlyIn  00EC0002
+#define .AnimPBFlyInFast  00EC0003
+#define .AnimPBShellShot 00EC0007
+#define .AnimPBIntoShell 00EC0008
+#define .AnimPBOuttaShell 00EC000A
+#define .AnimPBTurnedSS 00EC0009
+
+#new:Actor $Parabuzzy
+{
+% stats
+[Index]         51b % index from ActorTable.xml was EB
+[Level]         10`b 
+[MaxHP]         5`b 
+[Coins]         1`b 
+[Flags]       00000200 % Quake can't hit  
+[StatusTable] $StatusTable_Parabuzzy 
+% ai
+[PartsCount]   1`s 
+[PartsTable] $PartsTable_Parabuzzy 
+[Script]      $Script_Init_Parabuzzy 
+% move effectiveness
+[Escape]       80`b 
+[Item]        90`b 
+[AirLift]     90`b 
+[Hurricane]    90`b % Bow's "Spook" as well
+[UpAndAway]    95`b 
+[PowerBounce] 70`b 
+[SpinSmash]     0`b % weight (0-4)
+% ui positions
+[Size]         24`b  24`b % width height
+[HealthBar]     0`b   0`b % dx dy
+[StatusTurn]  -10`b  20`b % dx dy
+[StatusIcon]   10`b  20`b % dx dy
+}
+
+#new:DefenseTable $DefenseTable_Parabuzzy
+{
+.Element:Normal 00000002
+.Element:Throw  FFFFFFFF %weak to Hammer Throw
+.Element:Blast  00000063
+.Element:Jump   00000063
+.Element:Fire   00000063
+.Element:End
+}
+
+#new:StatusTable $StatusTable_Parabuzzy
+{
+.Status:Normal      0`
+.Status:Default     0`
+.Status:Sleep     90`
+.Status:Poison     0`
+.Status:Frozen    100`
+.Status:Dizzy     80`
+.Status:Fear      70`
+.Status:Static     70`
+.Status:Paralyze  70`
+.Status:Shrink    70`
+.Status:Stop      70`
+.Status:DefaultTurnMod    0`
+.Status:SleepTurnMod      -1`
+.Status:PoisonTurnMod     0`
+.Status:FrozenTurnMod     0`
+.Status:DizzyTurnMod      -1`
+.Status:FearTurnMod       0`
+.Status:StaticTurnMod     0`
+.Status:ParalyzeTurnMod   -1`
+.Status:ShrinkTurnMod     -1`
+.Status:StopTurnMod       -1`
+.Status:End
+}
+
+#new:PartsTable $PartsTable_Parabuzzy
+{
+00800000 01000000 001400FF $IdleAnimations_Parabuzzy $DefenseTable_Parabuzzy 00000000 00000000 00F60000 00000000 
+}
+
+#new:IdleAnimations $IdleAnimations_Parabuzzy
+{
+.Status:Normal    .AnimPBIdle
+.Status:Stone     .AnimPBStop
+.Status:Sleep     .AnimPBSleep
+.Status:Poison    .AnimPBIdle
+.Status:Stop      .AnimPBStop
+.Status:Static    .AnimPBIdle
+.Status:Paralyze  .AnimPBStop
+.Status:Dizzy     .AnimPBDizzy
+.Status:Fear      .AnimPBDizzy
+.Status:End
+}
+
+#new:Script $Script_Init_Parabuzzy
+{
+	Call     BindTakeTurn 	( .Actor:Self $Script_TakeTurn_Parabuzzy )
+	Call     BindIdle    	( .Actor:Self $Script_Idle_Parabuzzy )
+    Call     BindHandleEvent 	( .Actor:Self $Script_HandleEvent_Parabuzzy )
+    Return
+    End
+}
+
+#new:Script $Script_Idle_Parabuzzy
+{
+  Return
+  End
+}
+
+#new:Script $Script_HandleEvent_Parabuzzy
+{
+    0:  Call     UseIdleAnimation 	( .Actor:Self .False )
+   14:  Call     EnableIdleScript 	( .Actor:Self 00000000 )
+   28:  Call     SetActorScale 	( .Actor:Self *Fixed[1.0] *Fixed[1.0] *Fixed[1.0] )
+   44:  Call     GetLastEvent 	( .Actor:Self *Var[0] )
+   58:  Switch  *Var[0] 
+   64:  	CaseOR  ==  .Event:HitCombo
+   70:  	CaseOR  ==  .Event:Hit
+   7C:  		SetConst  *Var[0]  00000001 
+   8C:  		SetConst  *Var[1]  .AnimPBPain 
+   9C:  		ExecWait DoNormalHit 
+   A8:  	EndCaseGroup
+   B0:  	Case  ==  .Event:BurnHit
+   BC:  		SetConst  *Var[0]  00000001 
+   CC:  		SetConst  *Var[1]  .AnimPBPain 
+   DC:  		SetConst  *Var[2]  .AnimPBPain2 
+   EC:  		ExecWait DoBurnHit 
+   F8:  	Case  ==  .Event:BurnDeath
+  104:  		SetConst  *Var[0]  00000001 
+  114:  		SetConst  *Var[1]  .AnimPBPain 
+  124:  		SetConst  *Var[2]  .AnimPBPain2 
+  134:  		ExecWait DoBurnHit 
+  140:  		SetConst  *Var[0]  00000001 
+  150:  		SetConst  *Var[1]  .AnimPBPain2 
+  160:  		ExecWait DoDeath 
+  16C:  		Return
+  174:  	Case  ==  .Event:SpinSmashHit
+  180:  		SetConst  *Var[0]  00000001 
+  190:  		SetConst  *Var[1]  .AnimPBPain 
+  1A0:  		ExecWait 8029B998 
+  1AC:  	Case  ==  .Event:SpinSmashDeath
+  1B8:  		SetConst  *Var[0]  00000001 
+  1C8:  		SetConst  *Var[1]  .AnimPBPain 
+  1D8:  		ExecWait 8029B998 
+  1E4:  		SetConst  *Var[0]  00000001 
+  1F4:  		SetConst  *Var[1]  .AnimPBDead 
+  204:  		ExecWait DoDeath 
+  210:  		Return
+  218:  	Case  ==  .Event:ShockHit
+  224:  		SetConst  *Var[0]  00000001 
+  234:  		SetConst  *Var[1]  .AnimPBPain 
+  244:  		ExecWait DoShockHit 
+  250:  		SetConst  *Var[0]  00000001 
+  260:  		SetConst  *Var[1]  .AnimPBPain 
+  270:  		ExecWait 8029BD70 
+  27C:  		Call     JumpToGoal  	( .Actor:Self 00000005 00000000 00000001 00000000 )
+  29C:  		Call     SetAnimationRate 	( .Actor:Self 00000001 *Fixed[2.0] )
+  2B4:  		Call     SetAnimation 	( .Actor:Self 00000001 .AnimPBDizzy )
+  2CC:  		Call     SetGoalToHome 	( .Actor:Self )
+  2DC:  		Call     SetActorSpeed 	( .Actor:Self *Fixed[8.0] )
+  2F0:  		Call     RunToGoal   	( .Actor:Self 00000000 .False )
+  308:  		Call     SetAnimationRate 	( .Actor:Self 00000001 *Fixed[1.0] )
+  320:  		Wait     00000005 
+  32C:  		Call     SetAnimation 	( .Actor:Self 00000001 .AnimPBIdle )
+  344:  		Call     SetActorJumpGravity 	( .Actor:Self *Fixed[1.6005859] )
+  358:  		Call     JumpToGoal  	( .Actor:Self 00000005 00000000 00000001 00000000 )
+  378:  	Case  ==  .Event:ShockDeath
+  384:  		SetConst  *Var[0]  00000001 
+  394:  		SetConst  *Var[1]  .AnimPBPain 
+  3A4:  		ExecWait DoShockHit 
+  3B0:  		SetConst  *Var[0]  00000001 
+  3C0:  		SetConst  *Var[1]  .AnimPBDead 
+  3D0:  		ExecWait DoDeath 
+  3DC:  		Return
+  3E4:  	Case  ==  .Event:StarBeam
+  3F0:  	CaseOR  ==  00000017
+  3FC:  	CaseOR  ==  .Event:Immune
+  408:  	CaseOR  ==  .Event:AirLiftFailed
+  414:  		SetConst  *Var[0]  00000001 
+  424:  		SetConst  *Var[1]  .AnimPBIdle 
+  434:  		ExecWait DoImmune 
+  440:  	EndCaseGroup
+  448:  	Case  ==  .Event:Death
+  454:  		SetConst  *Var[0]  00000001 
+  464:  		SetConst  *Var[1]  .AnimPBPain 
+  474:  		ExecWait DoNormalHit 
+  480:  		Wait     0000000A 
+  48C:  		SetConst  *Var[0]  00000001 
+  49C:  		SetConst  *Var[1]  .AnimPBDead 
+  4AC:  		ExecWait DoDeath 
+  4B8:  		Return
+  4C0:  	Case  ==  .Event:EndFirstStrike
+  4CC:  		Call     SetAnimationRate 	( .Actor:Self 00000001 *Fixed[2.0] )
+  4E4:  		Call     SetAnimation 	( .Actor:Self 00000001 .AnimPBFlyInFast )
+  4FC:  		Call     SetGoalToHome 	( .Actor:Self )
+  50C:  		Call     SetActorSpeed 	( .Actor:Self *Fixed[4.0] )
+  520:  		Call     RunToGoal   	( .Actor:Self 00000000 .False )
+  538:  		Call     SetAnimationRate 	( .Actor:Self 00000001 *Fixed[1.0] )
+  550:  		Call     HPBarToHome 	( .Actor:Self )
+  560:  	Case  ==  .Event:RecoverStatus
+  56C:  		SetConst  *Var[0]  00000001 
+  57C:  		SetConst  *Var[1]  .AnimPBIdle 
+  58C:  		ExecWait DoRecover 
+  598:  	Case  ==  .Event:ScareAway
+  5A4:  		SetConst  *Var[0]  00000001 
+  5B4:  		SetConst  *Var[1]  .AnimPBFlyInFast 
+  5C4:  		SetConst  *Var[2]  .AnimPBPain 
+  5D4:  		ExecWait DoScareAway 
+  5E0:  		Return
+  5E8:  	Case  ==  .Event:BeginAirLift
+  5F4:  		SetConst  *Var[0]  00000001 
+  604:  		SetConst  *Var[1]  .AnimPBFlyInFast 
+  614:  		ExecWait DoAirLift 
+  620:  	Case  ==  .Event:BlowAway
+  62C:  		SetConst  *Var[0]  00000001 
+  63C:  		SetConst  *Var[1]  .AnimPBPain 
+  64C:  		ExecWait DoBlowAway 
+  658:  		Return
+  660:  	Default
+  668:  EndSwitch
+  670:  Call     SetAnimation 	( .Actor:Self 00000001 .AnimPBIdle )
+  688:  Call     EnableIdleScript 	( .Actor:Self 00000001 )
+  69C:  Call     UseIdleAnimation 	( .Actor:Self .True )
+  6B0:  Return
+  6B8:  End
+}
+
+#new:Script $Script_TakeTurn_Parabuzzy
+{
+	ExecWait $Script_Parabuzzy_ShellShot
+    Return
+    End
+}
+	
+#new:Script $Script_Parabuzzy_ShellShot
+{
+	0:  Call     UseIdleAnimation 	( .Actor:Self .False )
+   14:  Call     EnableIdleScript 	( .Actor:Self 00000000 )
+   28:  Call     SetTargetActor ( .Actor:Self .Actor:Player )
+   3C:  Call     SetGoalToTarget 	( .Actor:Self )
+   4C:  Call     UseBattleCamPreset 	( 00000005 )
+   5C:  Call     BattleCamTargetActor ( .Actor:Self )
+   6C:  Call     SetTargetActor ( .Actor:Self .Actor:Player )
+   80:  Call     SetAnimation 	( .Actor:Self 00000001 .AnimPBFlyInFast )
+   98:  Call     SetGoalToTarget 	( .Actor:Self )
+   A8:  Call     AddGoalPos 	( .Actor:Self 00000028 0000001E 00000000 )
+   C4:  Call     SetActorSpeed 	( .Actor:Self *Fixed[7.0] )
+   D8:  Call     FlyToGoal  	( .Actor:Self 00000000 FFFFFFF0 .Easing:Linear )
+   F4:  Call     8024E664 ( 00000001 )
+  104:  Wait     00000005 
+  110:  Call     EnemyTestTarget ( .Actor:Self *Var[0] 00000000 00000000 00000001 00000010 )
+  134:  Switch  *Var[0] 
+  140:  	CaseOR  ==  00000006 
+  14C:  	CaseOR  ==  00000005 
+  158:  		Set  *Var[A]  *Var[0] 
+  168:  		Call     PlaySoundAtActor 	( .Actor:Self 000020E0 )
+  17C:  		Call     SetActorSounds ( FFFFFF81 00000001 00000000 00000000 )
+  198:  		Call     SetAnimation 	( .Actor:Self 00000001 .AnimPBTurnedSS )
+  1B0:  		Call     GetActorPos 	( .Actor:Self *Var[0] *Var[1] *Var[2] )
+  1CC:  		Call     SetGoalPos 	( .Actor:Self *Var[0] *Var[1] *Var[2] )
+  1E8:  		Call     AddGoalPos 	( .Actor:Self 00000006 00000006 00000000 )
+  204:  		Call     SetActorSpeed 	( .Actor:Self *Fixed[2.0] )
+  218:  		Call     FlyToGoal  	( .Actor:Self 00000000 00000000 .Easing:Linear )
+  234:  		Wait     00000006 
+  240:  		Call     PlaySoundAtActor 	( .Actor:Self 000002C1 )
+  254:  		Call     SetActorSounds ( FFFFFF81 00000001 00000000 00000000 )
+  270:  		Call     GetActorPos 	( .Actor:Player *Var[0] *Var[1] *Var[2] )
+  28C:  		Sub  *Var[0]  00000019 
+  29C:  		Set  *Var[1]  00000000 
+  2AC:  		Call     SetGoalPos 	( .Actor:Self *Var[0] *Var[1] *Var[2] )
+  2C8:  		Call     SetActorSpeed 	( .Actor:Self *Fixed[10.0] )
+  2DC:  		Call     SetAnimation 	( .Actor:Self 00000001 .AnimPBShellShot )
+  2F4:  		Call     FlyToGoal  	( .Actor:Self 00000000 00000000 .Easing:Linear )
+  310:  		Call     GetActorPos 	( .Actor:Self *Var[0] *Var[1] *Var[2] )
+  32C:  		Sub  *Var[0]  0000001E 
+  33C:  		Call     SetGoalPos 	( .Actor:Self *Var[0] *Var[1] *Var[2] )
+  358:  		Call     SetActorJumpGravity 	( .Actor:Self *Fixed[4.0] )
+  36C:  		Thread
+  374:  			Call     SetActorRotationOffset 	( .Actor:Self 00000000 0000000A 00000000 )
+  390:  			Set  *Var[0]  00000000 
+  3A0:  			Loop     00000008 
+  3AC:  				Add  *Var[0]  0000005A 
+  3BC:  				If  *Var[0]  >=  00000168 
+  3CC:  					Sub  *Var[0]  00000168 
+  3DC:  				EndIf
+  3E4:  				Call     SetActorRotation 	( .Actor:Self 00000000 00000000 *Var[0] )
+  400:  				Wait     00000001 
+  40C:  			EndLoop
+  414:  			Call     SetActorRotation 	( .Actor:Self 00000000 00000000 00000000 )
+  430:  			Call     SetActorRotationOffset 	( .Actor:Self 00000000 FFFFFFF6 00000000 )
+  44C:  		EndThread
+  454:  		Call     JumpToGoal  	( .Actor:Self 00000006 00000000 00000001 00000000 )
+  474:  		Call     GetActorPos 	( .Actor:Self *Var[0] *Var[1] *Var[2] )
+  490:  		Sub  *Var[0]  0000001E 
+  4A0:  		Call     SetGoalPos 	( .Actor:Self *Var[0] *Var[1] *Var[2] )
+  4BC:  		Call     SetActorJumpGravity 	( .Actor:Self *Fixed[4.0] )
+  4D0:  		Call     SetAnimation 	( .Actor:Self 00000001 .AnimPBPain )
+  4E8:  		Call     JumpToGoal  	( .Actor:Self 00000006 00000000 00000001 00000000 )
+  508:  		Call     GetActorPos 	( .Actor:Self *Var[0] *Var[1] *Var[2] )
+  524:  		Sub  *Var[0]  0000001E 
+  534:  		Call     SetGoalPos 	( .Actor:Self *Var[0] *Var[1] *Var[2] )
+  550:  		Call     SetActorJumpGravity 	( .Actor:Self *Fixed[4.0] )
+  564:  		Call     SetAnimation 	( .Actor:Self 00000001 .AnimPBPain )
+  57C:  		Call     JumpToGoal  	( .Actor:Self 00000006 00000000 00000001 00000000 )
+  59C:  		If  *Var[A]  ==  00000005 
+  5AC:  			Call     EnemyTestTarget ( .Actor:Self *Var[0] 80000000 00000000 00000000 00000000 )
+  5D0:  		EndIf
+  5D8:  		Call     GetActorPos 	( .Actor:Self *Var[0] *Var[1] *Var[2] )
+  5F4:  		Add  *Var[1]  0000001E 
+  604:  		Call     SetActorPos 	( .Actor:Self *Var[0] *Var[1] *Var[2] )
+  620:  		Wait     00000014 
+  62C:  		Call     UseBattleCamPreset 	( 00000002 )
+  63C:  		Call     YieldTurn ( )
+  648:  		Call     ResetAllActorSounds ( FFFFFF81 )
+  658:  		Call     AddActorDecoration 	( .Actor:Self 00000001 00000000 .Decoration:Sweat )
+  674:  		Call     SetActorYaw 	( .Actor:Self 000000B4 )
+  688:  		ExecWait $Script_PB_GotoHome 
+  694:  		Call     SetActorYaw 	( .Actor:Self 00000000 )
+  6A8:  		Call     RemoveActorDecoration 	( .Actor:Self 00000001 00000000 )
+  6C0:  		Call     EnableIdleScript 	( .Actor:Self FFFFFFFF )
+  6D4:  		Call     UseIdleAnimation 	( .Actor:Self .True )
+  6E8:  		Return
+  6F0:  	EndCaseGroup
+  6F8:  EndSwitch
+  700:  Call     PlaySoundAtActor 	( .Actor:Self 000020E0 )
+  714:  Call     SetActorSounds ( FFFFFF81 00000001 00000000 00000000 )
+  730:  Call     SetAnimation 	( .Actor:Self 00000001 .AnimPBTurnedSS )
+  748:  Call     GetActorPos 	( .Actor:Self *Var[0] *Var[1] *Var[2] )
+  764:  Call     SetGoalPos 	( .Actor:Self *Var[0] *Var[1] *Var[2] )
+  780:  Call     AddGoalPos 	( .Actor:Self 00000006 00000006 00000000 )
+  79C:  Call     SetActorSpeed 	( .Actor:Self *Fixed[2.0] )
+  7B0:  Call     FlyToGoal  	( .Actor:Self 00000000 00000000 .Easing:Linear )
+  7CC:  Wait     00000006 
+  7D8:  Call     PlaySoundAtActor 	( .Actor:Self 000002C1 )
+  7EC:  Call     SetActorSounds ( FFFFFF81 00000001 00000000 00000000 )
+  808:  Call     SetGoalToTarget 	( .Actor:Self )
+  818:  Call     SetActorSpeed 	( .Actor:Self *Fixed[12.0] )
+  82C:  Call     SetAnimation 	( .Actor:Self 00000001 .AnimPBShellShot )
+  844:  Call     FlyToGoal  	( .Actor:Self 00000000 00000000 .Easing:Linear )
+  860:  Wait     00000002 
+  86C:  Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 00000000 00000000 00000000 00000004 00000020 )
+  894:  Switch  *Var[0] 
+  8A0:  	CaseOR  ==  00000000 
+  8AC:  	CaseOR  ==  00000002 
+  8B8:  		Call     UseBattleCamPreset 	( 00000002 )
+  8C8:  		Call     SetGoalToTarget 	( .Actor:Self )
+  8D8:  		Call     AddGoalPos 	( .Actor:Self 00000028 0000001E 00000000 )
+  8F4:  		Call     SetActorSpeed 	( .Actor:Self *Fixed[6.0] )
+%   908:  		Call     SetAnimation 	( .Actor:Self 00000001 002A010D )
+  920:  		Thread
+  928:  			Call     SetActorRotationOffset 	( .Actor:Self 00000000 0000000A 00000000 )
+  944:  			Set  *Var[0]  00000000 
+  954:  			Loop     0000000C 
+  960:  				Sub  *Var[0]  0000005A 
+  970:  				If  *Var[0]  <  00000000 
+  980:  					Add  *Var[0]  00000168 
+  990:  				EndIf
+  998:  				Call     SetActorRotation 	( .Actor:Self 00000000 00000000 *Var[0] )
+  9B4:  				Wait     00000001 
+  9C0:  			EndLoop
+  9C8:  			Call     SetActorRotation 	( .Actor:Self 00000000 00000000 00000000 )
+  9E4:  			Call     SetActorRotationOffset 	( .Actor:Self 00000000 FFFFFFF6 00000000 )
+  A00:  			Call     SetAnimation 	( .Actor:Self 00000001 .AnimPBIdle )
+  A18:  		EndThread
+  A20:  		Call     FlyToGoal  	( .Actor:Self 00000000 0000001E .Easing:Linear )
+  A3C:  		Wait     0000000A 
+  A48:  		Call     YieldTurn ( )
+  A54:  		Call     ResetAllActorSounds ( FFFFFF81 )
+  A64:  		ExecWait $Script_PB_GotoHome 
+  A70:  	EndCaseGroup
+  A78:  EndSwitch
+  A80:  Call     EnableIdleScript     ( .Actor:Self 00000001 ) 
+  A94:  Call     UseIdleAnimation 	( .Actor:Self .True )
+  AA8:  Return
+  AB0:  End
+}
+
+#new:Script $Script_PB_GotoHome
+{
+    0:  Call     SetAnimation 	( .Actor:Self 00000001 .AnimPBFlyInFast )
+   18:  Call     SetGoalToHome 	( .Actor:Self )
+   28:  Call     SetActorSpeed 	( .Actor:Self *Fixed[8.0] )
+   3C:  Call     FlyToGoal  	( .Actor:Self 00000000 00000001 .Easing:SinOut )
+   58:  Call     SetAnimation 	( .Actor:Self 00000001 .AnimPBIdle )
+   70:  Return
+   78:  End
+}

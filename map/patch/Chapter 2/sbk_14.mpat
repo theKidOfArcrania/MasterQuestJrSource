@@ -1,0 +1,31 @@
+
+% Force recalculation of entrances -- since we moved the Tweester exit point.
+@ $EntryList
+{
+~Vec4f:Entry0 ~Vec4f:Entry1 ~Vec4f:Entry2 ~Vec4f:Entry3 ~Vec4f:Entry4
+}
+
+% Overwrite Tweester path points since we've modified them in the editor.
+@ $TweesterPath_80240440
+{
+~Vec3d:TweesterPath_80240440_1
+~Vec3d:TweesterPath_80240440_2
+~Vec3d:TweesterPath_80240440_3
+~Vec3d:TweesterPath_80240440_4
+80000001
+}
+
+% Overwrite positions for entities that have been moved.
+@ $Script_MakeEntities
+{
+    0:  Call     MakeEntity       	( .Entity:Tweester ~Vec3d:Entity802404CC ~Angle:Entity802404CC $TweesterPathList_80240474 80000000 )
+   28:  Call     AssignScript     	( $Script_8024047C )
+   38:  Call     MakeEntity       	( .Entity:MultiCoinBrick ~Vec3d:Entity80240504 ~Angle:Entity80240504 80000000 )
+   5C:  Call     AssignBlockFlag 	( *GameFlag[0331] )
+   6C:  Call     MakeEntity       	( .Entity:YellowBlock ~Vec3d:Entity80240538 ~Angle:Entity80240538 .Item:Coin 80000000 )
+   94:  Call     AssignBlockFlag 	( *GameFlag[0320] )
+   A4:  Call     MakeEntity       	( .Entity:YellowBlock ~Vec3d:Entity80240570 ~Angle:Entity80240570 .Item:HoneySyrup 80000000 )
+   CC:  Call     AssignBlockFlag 	( *GameFlag[0321] )
+   DC:  Return
+   E4:  End
+}

@@ -1,0 +1,9 @@
+@ $Script_MakeEntities
+{
+    0:  Call     MakeItemEntity ( .Item:PowerQuake ~Vec3d:Item80240A84 00000011 *GF_DGB11_Item_DDownJump )
+   24:  Call     MakeEntity  	( .Entity:ScriptSpring ~Vec4d:Entity80240AA8 80000000 )
+   48:  Call     AssignScript 	( $Script_8024062C )
+   58:  Set  *MapVar[0]  *Var[0] 
+   68:  Return
+   70:  End
+}

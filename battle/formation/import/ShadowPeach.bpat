@@ -1,0 +1,371 @@
+% Shadow Version of peach
+% For MQ
+% Pit of 100 Trials boss
+
+% Define your graphics here
+#define .AnimPStop	00D60600
+#define .AnimPIdle	00D60604
+% #define .AnimPPoison	00260001
+#define .AnimPPain	00D60606
+#define .AnimPDizzy	00D60606
+#define .AnimPDead	00D60607
+% #define .AnimPSleep  00260008 She ain't gonna sleep
+% #define .AnimPBurn   00260009
+% #define .AnimPBurn2  0026000A
+#define .AnimPWalk 00D6060F
+#define .AnimPRun 00D60609
+#define .AnimPKissStart 00D60617 %17
+#define .AnimPKiss 00D60618
+#define .AnimPKissEnd 00D60619
+#define .AnimPFocus 00D6060A
+
+#new:Actor $ShadowPeach
+{
+% stats
+[Index]         FBb % index from ActorTable.xml
+[Level]         1`b 
+[MaxHP]         150`b % 150`b 
+[Coins]         1`b 
+[Flags]       00000000 
+[StatusTable] $StatusTable_ShadowPeach 
+% ai
+[PartsCount]   1`s 
+[PartsTable] $PartsTable_ShadowPeach 
+[Script]      $Script_Init_ShadowPeach 
+% move effectiveness
+[Escape]        0`b 
+[Item]          0`b 
+[AirLift]       0`b 
+[Hurricane]     0`b % Bow's "Spook" as well
+[UpAndAway]     0`b 
+[PowerBounce]  3`b 
+[SpinSmash]     4`b % weight (0-4)
+% ui positions
+[Size]         48`b  72`b % width height
+[HealthBar]     0`b   0`b % dx dy
+[StatusTurn]  -10`b  20`b % dx dy
+[StatusIcon]   30`b  30`b % dx dy
+}
+
+#new:DefenseTable $DefenseTable_ShadowPeach
+{
+.Element:Normal 00000002
+.Element:End
+}
+
+#new:StatusTable $StatusTable_ShadowPeach
+{
+.Status:Normal      0`
+.Status:Default     0`
+.Status:Sleep       0`
+.Status:Poison    0`
+.Status:Frozen    0`
+.Status:Dizzy     0`
+.Status:Fear      0`
+.Status:Static    0`
+.Status:Paralyze  0`
+.Status:Shrink    0`
+.Status:Stop      50`
+.Status:DefaultTurnMod    0`
+.Status:SleepTurnMod      0`
+.Status:PoisonTurnMod     0`
+.Status:FrozenTurnMod     0`
+.Status:DizzyTurnMod      0`
+.Status:FearTurnMod       0`
+.Status:StaticTurnMod     0`
+.Status:ParalyzeTurnMod   0`
+.Status:ShrinkTurnMod     0`
+.Status:StopTurnMod       -4`
+.Status:End
+}
+
+#new:PartsTable $PartsTable_ShadowPeach
+{
+00800000 01000000 003000FF $IdleAnimations_ShadowPeach $DefenseTable_ShadowPeach 00000000 00000000 00F60000 00000000 
+}
+
+#new:IdleAnimations $IdleAnimations_ShadowPeach
+{
+.Status:Normal    .AnimPIdle
+.Status:Stone     .AnimPStop
+.Status:Sleep     .AnimPIdle
+.Status:Poison    .AnimPIdle
+.Status:Stop      .AnimPStop
+.Status:Static    .AnimPIdle
+.Status:Paralyze  .AnimPStop
+.Status:Dizzy     .AnimPDizzy
+.Status:Fear      .AnimPDizzy
+.Status:End
+}
+
+#new:Script $Script_Init_ShadowPeach
+{
+	Call     BindTakeTurn 	( .Actor:Self $Script_TakeTurn_ShadowPeach )
+	Call     BindIdle    	( .Actor:Self $Script_Idle_ShadowPeach )
+    Call     BindHandleEvent 	( .Actor:Self $Script_HandleEvent_ShadowPeach )
+    Return
+    End
+}
+
+#new:Script $Script_Idle_ShadowPeach
+{
+  Return
+  End
+}
+
+#new:Script $Script_HandleEvent_ShadowPeach
+{
+    0:  Call     UseIdleAnimation 	( .Actor:Self .False )
+   14:  Call     EnableIdleScript 	( .Actor:Self 00000000 )
+   28:  Call     SetActorScale 	( .Actor:Self *Fixed[1.0] *Fixed[1.0] *Fixed[1.0] )
+   44:  Call     GetLastEvent 	( .Actor:Self *Var[0] )
+   58:  Switch  *Var[0] 
+   64:  	CaseOR  ==  .Event:HitCombo
+   70:  	CaseOR  ==  .Event:Hit
+   7C:  		SetConst  *Var[0]  00000001 
+   8C:  		SetConst  *Var[1]  .AnimPPain 
+   9C:  		ExecWait DoNormalHit 
+   A8:  	EndCaseGroup
+   B0:  	Case  ==  .Event:BurnHit
+   BC:  		SetConst  *Var[0]  00000001 
+   CC:  		SetConst  *Var[1]  .AnimPPain 
+   DC:  		SetConst  *Var[2]  .AnimPPain 
+   EC:  		ExecWait DoBurnHit 
+   F8:  	Case  ==  .Event:BurnDeath
+  104:  		SetConst  *Var[0]  00000001 
+  114:  		SetConst  *Var[1]  .AnimPPain 
+  124:  		SetConst  *Var[2]  .AnimPPain 
+  134:  		ExecWait DoBurnHit 
+  140:  		SetConst  *Var[0]  00000001 
+  150:  		SetConst  *Var[1]  .AnimPPain 
+  160:  		ExecWait DoDeath 
+  16C:  		Return
+  174:  	Case  ==  .Event:SpinSmashHit
+  180:  		SetConst  *Var[0]  00000001 
+  190:  		SetConst  *Var[1]  .AnimPPain 
+  1A0:  		ExecWait 8029B998 
+  1AC:  	Case  ==  .Event:SpinSmashDeath
+  1B8:  		SetConst  *Var[0]  00000001 
+  1C8:  		SetConst  *Var[1]  .AnimPPain 
+  1D8:  		ExecWait 8029B998 
+  1E4:  		SetConst  *Var[0]  00000001 
+  1F4:  		SetConst  *Var[1]  .AnimPDead 
+  204:  		ExecWait DoDeath 
+  210:  		Return
+  218:  	Case  ==  .Event:ShockHit
+  224:  		SetConst  *Var[0]  00000001 
+  234:  		SetConst  *Var[1]  .AnimPPain 
+  244:  		ExecWait DoShockHit 
+  250:  		SetConst  *Var[0]  00000001 
+  260:  		SetConst  *Var[1]  .AnimPPain 
+  270:  		ExecWait 8029BD70 
+  27C:  		Call     JumpToGoal  	( .Actor:Self 00000005 00000000 00000001 00000000 )
+  29C:  		Call     SetAnimationRate 	( .Actor:Self 00000001 *Fixed[2.0] )
+  2B4:  		Call     SetAnimation 	( .Actor:Self 00000001 .AnimPDizzy )
+  2CC:  		Call     SetGoalToHome 	( .Actor:Self )
+  2DC:  		Call     SetActorSpeed 	( .Actor:Self *Fixed[8.0] )
+  2F0:  		Call     RunToGoal   	( .Actor:Self 00000000 .False )
+  308:  		Call     SetAnimationRate 	( .Actor:Self 00000001 *Fixed[1.0] )
+  320:  		Wait     00000005 
+  32C:  		Call     SetAnimation 	( .Actor:Self 00000001 .AnimPIdle )
+  344:  		Call     SetActorJumpGravity 	( .Actor:Self *Fixed[1.6005859] )
+  358:  		Call     JumpToGoal  	( .Actor:Self 00000005 00000000 00000001 00000000 )
+  378:  	Case  ==  .Event:ShockDeath
+  384:  		SetConst  *Var[0]  00000001 
+  394:  		SetConst  *Var[1]  .AnimPPain 
+  3A4:  		ExecWait DoShockHit 
+  3B0:  		SetConst  *Var[0]  00000001 
+  3C0:  		SetConst  *Var[1]  .AnimPDead 
+  3D0:  		ExecWait DoDeath 
+  3DC:  		Return
+  3E4:  	Case  ==  .Event:StarBeam
+  3F0:  	CaseOR  ==  00000017
+  3FC:  	CaseOR  ==  .Event:Immune
+  408:  	CaseOR  ==  .Event:AirLiftFailed
+  414:  		SetConst  *Var[0]  00000001 
+  424:  		SetConst  *Var[1]  .AnimPIdle 
+  434:  		ExecWait DoImmune 
+  440:  	EndCaseGroup
+  448:  	Case  ==  .Event:Death
+  454:  		SetConst  *Var[0]  00000001 
+  464:  		SetConst  *Var[1]  .AnimPPain 
+  474:  		ExecWait DoNormalHit 
+  480:  		Wait     0000000A 
+  48C:  		SetConst  *Var[0]  00000001 
+  49C:  		SetConst  *Var[1]  .AnimPDead 
+  4AC:  		ExecWait DoDeath 
+  4B8:  		Return
+  4C0:  	Case  ==  .Event:EndFirstStrike
+  4CC:  		Call     SetAnimationRate 	( .Actor:Self 00000001 *Fixed[2.0] )
+  4E4:  		Call     SetAnimation 	( .Actor:Self 00000001 .AnimPIdle )
+  4FC:  		Call     SetGoalToHome 	( .Actor:Self )
+  50C:  		Call     SetActorSpeed 	( .Actor:Self *Fixed[4.0] )
+  520:  		Call     RunToGoal   	( .Actor:Self 00000000 .False )
+  538:  		Call     SetAnimationRate 	( .Actor:Self 00000001 *Fixed[1.0] )
+  550:  		Call     HPBarToHome 	( .Actor:Self )
+  560:  	Case  ==  .Event:RecoverStatus
+  56C:  		SetConst  *Var[0]  00000001 
+  57C:  		SetConst  *Var[1]  .AnimPIdle 
+  58C:  		ExecWait DoRecover 
+  598:  	Case  ==  .Event:ScareAway
+  5A4:  		SetConst  *Var[0]  00000001 
+  5B4:  		SetConst  *Var[1]  .AnimPIdle 
+  5C4:  		SetConst  *Var[2]  .AnimPIdle 
+  5D4:  		ExecWait DoScareAway 
+  5E0:  		Return
+  5E8:  	Case  ==  .Event:BeginAirLift
+  5F4:  		SetConst  *Var[0]  00000001 
+  604:  		SetConst  *Var[1]  .AnimPIdle 
+  614:  		ExecWait DoAirLift 
+  620:  	Case  ==  .Event:BlowAway
+  62C:  		SetConst  *Var[0]  00000001 
+  63C:  		SetConst  *Var[1]  .AnimPPain 
+  64C:  		ExecWait DoBlowAway 
+  658:  		Return
+  660:  	Default
+  668:  EndSwitch
+  670:  Call     SetAnimation 	( .Actor:Self 00000001 .AnimPIdle )
+  688:  Call     EnableIdleScript 	( .Actor:Self 00000001 )
+  69C:  Call     UseIdleAnimation 	( .Actor:Self .True )
+  6B0:  Return
+  6B8:  End
+}
+
+#new:Script $Script_TakeTurn_ShadowPeach
+{
+	% I trust thamz to make a good AI
+	% ExecWait $Script_KissSP
+	ExecWait $Script_KissSP
+	Call	ActorExists	( .Actor:Enemy1 *Var[0] ) % enemy 1 -> twink
+	If  *Var[0]  ==  .True
+		Call	GetActorDefenseBoost	( .Actor:Enemy1 *Var[0] )
+		If  *Var[0]  <  00000005 % max defense boost
+			Set  *Var[0]  .Actor:Enemy1
+			ExecWait	$Script_FocusSP
+			Call     GetActorHP  	( .Actor:Self *Var[5] ) % current hp - var[5]
+		EndIf
+	EndIf
+	Wait 20`
+	Call	ActorExists	( .Actor:Enemy1 *Var[0] ) % enemy 1 -> twink
+	If  *Var[0]  ==  .False
+	ExecWait $Script_KissSP
+	EndIf
+    Return
+    End
+}
+	
+#new:Script $Script_FocusSP
+{
+	Call	UseIdleAnimation 	( .Actor:Self .False )
+	Call	EnableIdleScript 	( .Actor:Self 00000000 )
+	Set		*Var[8]  *Var[0] % *Var[8] -> twink
+	Call	SetTargetActor	( .Actor:Self .Actor:Player ) % idk why this is here but ok
+	Call	UseBattleCamPreset	( 0000000E )
+	Call	BattleCamTargetActor	( .Actor:Self )
+	Call	MoveBattleCamOver		( 0000000F )
+	Wait	0000000F 
+	Call	SetAnimation	( .Actor:Self 00000001 .AnimPFocus )
+	Wait	00000005 
+	Call	PlaySoundAtActor	( .Actor:Self 000020D4 )
+	Call	GetActorPos		( .Actor:Self *Var[0] *Var[1] *Var[2] )
+	Call	GetStatusFlags	( .Actor:Self *Var[A] )
+	If  *Var[A]  &  00080000 
+		Add		*Var[1] 0000000C 
+		Sub		*Var[2] 00000002 
+		Call	PlayEffect	( 00000033 00000005 *Var[0] *Var[1] *Var[2] *Fixed[0.12011719] 0000001E 00000000 00000000 00000000 00000000 00000000 00000000 00000000 )
+	Else
+		Add		*Var[1] 0000001F 
+		Sub		*Var[2] 00000002 
+		Call	PlayEffect	( 00000033 00000005 *Var[0] *Var[1] *Var[2] *Fixed[0.30078125] 0000001E 00000000 00000000 00000000 00000000 00000000 00000000 00000000 )
+	EndIf
+	Wait	0000001E 
+	Call	SetAnimation	( .Actor:Self 00000001 .AnimPIdle )
+	Wait	00000005 
+	Thread
+		Wait	0000000A 
+		Call	PlaySoundAtActor	( *Var[8] 000002DD )
+	EndThread
+	Thread
+		Call	8026BF48	( 00000001 )
+		Call	BoostDefense	( *Var[8] 00000001 )
+		Call	8026BF48	( 00000000 )
+	EndThread
+	Call	WaitForBuffDone ( )
+	Call	UseBattleCamPreset	( 00000002 )
+	Wait	0000000A 
+	%Call	YieldTurn ( )
+	Call    AddActorVar 	( .Actor:Enemy1 00000003 00000001 )
+	Call	EnableIdleScript	( .Actor:Self 00000001 )
+	Call	UseIdleAnimation	( .Actor:Self .True )
+	Return
+	End
+}
+	
+#new:Script $Script_KissSP
+{
+	Call     UseIdleAnimation 	( .Actor:Self .False ) 
+    Call     EnableIdleScript 	( .Actor:Self 00000000 )
+    Call     SetTargetActor ( .Actor:Self .Actor:Player )
+    Call     UseBattleCamPreset 	( 0000003F )
+    Call     BattleCamTargetActor ( .Actor:Self )
+    Call     8024ECF8 ( FFFFFFFF 00000001 00000000 )
+    Call     SetAnimation 	( .Actor:Self 00000001 .AnimPRun ) % run to player
+    Call     SetGoalToTarget 	( .Actor:Self )
+    Call     AddGoalPos 	( .Actor:Self 00000010 00000000 00000000 ) % was 32
+    Call     SetActorSpeed 	( .Actor:Self *Fixed[6.0] )
+    Call     RunToGoal   	( .Actor:Self 00000000 .False )
+	Call     SetAnimation 	( .Actor:Self 00000001 .AnimPIdle )
+    Call     SetActorDispOffset ( FFFFFF81 00000000 FFFFFFFF 00000000 )
+    Wait     00000001 
+    Call     SetActorDispOffset ( FFFFFF81 00000000 FFFFFFFE 00000000 )
+    Wait     00000005 
+    Call     SetActorDispOffset ( FFFFFF81 00000000 00000000 00000000 )
+    Call     SetAnimation 	( .Actor:Self 00000001 .AnimPIdle )
+    Call     EnemyTestTarget ( .Actor:Self *Var[0] 00000000 00000000 00000001 00000010 )
+	Switch  *Var[0] 
+    	CaseOR  ==  00000006 
+    	CaseOR  ==  00000005 % lucky, transparent
+			Call     SetAnimation 	( .Actor:Self 00000001 .AnimPKissStart )
+			Wait 6`
+			Call     AddActorDecoration 	( .Actor:Self 00000001 00000000 .Decoration:Sweat )
+			Call     SetAnimation 	( .Actor:Self 00000001 .AnimPKissEnd )
+			Wait 14`
+			Call     RemoveActorDecoration 	( .Actor:Self 00000001 00000000 )
+			Call     SetAnimation 	( .Actor:Self 00000001 .AnimPDizzy )
+			Wait 7`
+			Goto 00000001
+	EndSwitch
+	Call     SetAnimation 	( .Actor:Self 00000001 .AnimPKissStart )
+	Wait 5`
+	Call     SetAnimation 	( .Actor:Self 00000001 .AnimPKiss )
+	Wait 4`
+	Call     SetGoalToTarget 	( .Actor:Self )
+	Call	RandInt	( 00000002 *Var[A] )
+	Wait	*Var[A]
+	Call     GetPlayerHP 	( *Var[0] )
+	Switch *Var[0]
+		Case < 16` % poison
+		Call	EnemyDamageTarget 	( .Actor:Self *Var[0] 10000000 00000000 80020264 0000000C 00000020 )
+		Case < 31` % shrink
+		Call	EnemyDamageTarget 	( .Actor:Self *Var[0] 10000000 00000000 80080364 0000000C 00000020 )
+		Default % dizzy
+		Call	EnemyDamageTarget 	( .Actor:Self *Var[0] 10000000 00000000 80040164 0000000C 00000020 )
+	EndSwitch
+	Wait 10`
+	Call     SetAnimation 	( .Actor:Self 00000001 .AnimPKissEnd )
+	Wait 10`
+	Label 00000001 % attack done, go back to home
+	Call     SetAnimation 	( .Actor:Self 00000001 .AnimPRun )
+	Call     UseBattleCamPreset 	( 00000002 )
+	Call	MoveBattleCamOver 	( 00000014 )
+	Call	SetGoalToHome 	( .Actor:Self )
+	Call	SetActorSpeed 	( .Actor:Self *Fixed[10.0] )
+	Call	RunToGoal   	( .Actor:Self 00000000 .False )	
+	Wait	20` 
+	Call	EnableIdleScript 	( .Actor:Self 00000001 )
+	Call	UseIdleAnimation 	( .Actor:Self .True )
+	Return
+    End
+}
+
+

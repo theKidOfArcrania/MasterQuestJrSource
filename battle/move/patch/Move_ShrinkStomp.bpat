@@ -1,0 +1,17 @@
+@ $Script_802A2694
+{
+   [AC]  		Call     PlayerDamageEnemy 	( *Var[0] 00000080 00000000 80080364 00000001 00000050 )
+   [F4]  		Call     PlayerDamageEnemy 	( *Var[0] 00000080 00000000 80080364 00000001 00000030 )
+}
+   
+@ $Script_802A2978
+{
+   [A4]  		Call     PlayerDamageEnemy 	( *Var[0] 00000080 00000000 80080364 00000002 00000050 )
+   [E4]  		Call     PlayerDamageEnemy 	( *Var[0] 00000080 00000000 80080364 00000002 00000030 )
+}
+   
+@ $Script_802A2C8C
+{
+   [A4]  		Call     PlayerDamageEnemy 	( *Var[0] 00000080 00000000 80080364 00000003 00000050 )
+   [E4]  		Call     PlayerDamageEnemy 	( *Var[0] 00000080 00000000 80080364 00000003 00000030 )	
+}

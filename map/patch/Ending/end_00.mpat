@@ -1,0 +1,107 @@
+
+/%
+Add the following lines to mac_01.mpat to jump immediately to the ending sequence
+when exiting via the gate to Princess Peach's castle.
+
+@ $ASCII_802626D0
+hos_10
+
+@ $Script_80246A88
+[A0]	Call	GotoMap	( $ASCII_802626D0 00000002 )
+%/
+
+% Add mention for "Star Rod Modding Tools"
+@ $Script_ShowCredits
+{
+	Exec	 $Script_8024462C 
+	Exec	 $ShowStarRodCredits
+	Wait	 000000F0
+	Exec     $ShowMasterQuestCredits
+	Wait	 000000F0
+	Wait	 00000078 % Total 360 Frames	
+	Exec	 $Script_ShowStart 
+	Exec	 $Script_ShowTitles 
+	Exec	 $Script_ShowNames 
+	Return
+	End
+}
+
+#new:Script $ShowStarRodCredits
+{
+	Call	$Function_ShowCreditList ( $CreditList_StarRod )
+	Return
+	End
+}
+   
+#new:IntTable $CreditList_StarRod
+{
+002E0088 000000A0 000000AD 00000001 00000000 00000028 00000000 00000000 % Star Rod Modding Tools
+00000078 00000000 00000028 00000000 00000028 00010000 
+002E0089 000000A0 000000BF 00000000 00000000 00000028 00000000 00000000 % Clover
+00000050 00000000 00000028 00000000 FFFFFFFF 00010000 
+}
+
+#new:Script $ShowMasterQuestCredits
+{
+	Call	$Function_ShowCreditList ( $CreditList_MQ )
+	Return
+	End
+}
+   
+#new:IntTable $CreditList_MQ
+{
+$Title 000000A0 000000AD 00000001 00000000 00000028 00000000 00000000 % 40 Frames to start up
+000000F0 00000000 00000028 00000000 00000028 00010000 % Hold 240 Frames, Wait 40 to send out names, 40 Frames to go away
+$Thamz 000000A0 000000BA 00000001 00000000 00000028 00000000 00000000 
+00000050 00000000 00000028 00000001 00000000 00010000 
+$Rain 000000A0 000000CB 00000001 00000000 00000028 00000000 00000000 
+00000050 00000000 00000028 00000001 00000078 00010000 
+$JaThePlayer 000000A0 000000BA 00000001 00000000 00000028 00000000 00000000 
+00000050 00000000 00000028 00000001 00000000 00010000 
+$Brotenko 000000A0 000000CB 00000001 00000000 00000028 00000000 00000000 
+00000050 00000000 00000028 00000001 00000000 00010000 
+}
+
+#string $Title 
+{
+[Font Title]MASTER QUEST DEVELOPERS[End]
+}
+
+#string $Thamz
+{
+[Font Subtitle]EMPEROR THAMZ[End]
+}
+ 
+#string $Rain
+{
+[Font Subtitle]RAINCHUS[End]
+}
+
+#string $JaThePlayer
+{
+[Font Subtitle]JATHEPLAYER[End]
+}
+
+#string $Brotenko
+{
+[Font Subtitle]BROTENKO[End]
+}
+
+/%
+Credit List Format:
+
+002E0000 % string ID = "Paper Mario"
+000000A0 % posX center (A0 = screen center)
+000000AD % posY
+00000001 % highlight flag
+00000000 
+00000028 % fade in time
+00000000 
+00000000 
+00000078 % hold time
+00000000 
+00000028 % fade out time
+00000000 
+00000028 % delay time for next line
+00010000 
+%/

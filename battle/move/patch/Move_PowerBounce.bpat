@@ -1,0 +1,71 @@
+@ $Script_UseMove0
+{
+    0:  Set  *Flag[0A]  00000000 
+   10:  Call     802694A4 ( 00000001 )
+   20:  Call     $Function_InitializeHitCounter ( )
+   2C:  Call     GetMenuSelection 	( *Var[0] *Var[1] *Var[2] )
+   44:  Switch  *Var[1] 
+   50:  	Case  ==  00000000 
+   5C:  		Set  *Var[C]  00000002 % added + 1 to it so it wont be useless t1 with 0 floor
+   6C:  		ExecWait $Script_802A2820 
+   78:  	Case  ==  00000001 
+   84:  		Set  *Var[C]  00000003 % added + 1 to it so it wont be useless t1 with 0 floor 
+   94:  		ExecWait $Script_802A3024 
+   A0:  	Case  ==  00000002 
+   AC:  		Set  *Var[C]  00000004 % added + 1 to it so it wont be useless t1 with 0 floor 
+   BC:  		ExecWait $Script_802A383C 
+   C8:  EndSwitch
+   D0:  Call     $Function_StoreHitCountRecord ( )
+   DC:  Return
+   E4:  End
+}
+   
+   % Caps at 5 now
+
+@ $Function_GetHitChance
+{
+ 0:  ADDIU     SP, SP, FFE0
+ 4:  SW        S2, 18 (SP)
+ 8:  DADDU     S2, A0, R0
+ C:  SW        RA, 1C (SP)
+10:  SW        S1, 14 (SP)
+14:  SW        S0, 10 (SP)
+18:  JAL       80269D6C %~Func:get_actor
+1C:  LW        A0, 148 (S2)
+20:  JAL       80269D6C %~Func:get_actor
+24:  LH        A0, 428 (V0)
+28:  ADDIU     V1, R0, 63
+2C:  SW        V1, 84 (S2)
+30:  LW        V0, 8 (V0)
+34:  LBU       S1, 1E (V0)  % load enemy PB param (cap mult, in vanilla)
+38:  JAL       800E9D48
+3C:  DADDU     A0, R0, R0
+40:  ADDIU     V1, R0, 5    % load desired global max cap
+44:  SUB       V1, S1, V1   % if enemy cap is less than global max, don't change
+48:  BLEZ      V1, .DoNotChangeCap
+4C:  NOP
+50:  ADDIU     S1, R0, 5    % else, set to global max cap
+     .DoNotChangeCap
+54:  LIA       S0, $IntTable_StartingJumpCount
+5C:  LW        V1, 0 (S0)   % load current jump counter (1 initially)
+60:  ADDIU     V1, V1, 1    % add one to jump counter
+64:  SLT       V0, V1, S1   % if jump counter < max, don't cap
+68:  BNEL      V0, R0, .DoNotCap
+6C:  NOP
+70:  ADDIU     V1, R0, 1    % else, set jump counter to 1 for next time just in case
+74:  SW        R0, 84 (S2)  % and set jumps before cap to 0
+     .DoNotCap
+78:  SW        V1, 0 (S0)   % store new jump count
+7C:  LW        RA, 1C (SP)
+80:  LW        S2, 18 (SP)
+84:  LW        S1, 14 (SP)
+88:  LW        S0, 10 (SP)
+8C:  ADDIU     V0, R0, 2
+90:  JR        RA
+94:  ADDIU     SP, SP, 20
+}
+
+#new:IntTable $IntTable_StartingJumpCount
+{
+00000001
+}

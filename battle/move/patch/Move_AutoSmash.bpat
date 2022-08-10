@@ -1,0 +1,362 @@
+@ $Script_UseMove0
+{
+    %0:  Call     SetBattleFlagBits  ( 00001000 .True )
+   14:  Call     802694A4 ( 00000001 )
+   24:  Call     GetMenuSelection   ( *Var[0] *Var[1] *Var[2] )
+   3C:  Switch  *Var[1] 
+   48:    Case  ==  00000000 
+            Call  RandInt ( 00000003 *Var[B] )
+              Switch *Var[B]
+                Case == 00000000
+                  Set *Var[F] 00000002
+                Case == 00000001
+                  Set *Var[F] 00000006
+                Case == 00000002
+                  Set *Var[F] 00000002
+                Case == 00000003
+                  Set *Var[F] 00000006
+                Default
+                  Set *Var[F] 00000000
+              EndSwitch
+   54:      Set  *Var[D]  0000002D 
+            Set  *Var[E]  *Var[F]
+   64:      Sub  *Var[E]  00000001
+   84:      ExecWait $Script_802A317C 
+   90:    Case  ==  00000001 
+            Call  RandInt ( 00000002 *Var[B] )
+              Switch *Var[B]
+                Case == 00000000
+                  Set *Var[F] 00000002
+                Case == 00000001
+                  Set *Var[F] 00000006
+                Case == 00000002
+                  Set *Var[F] 0000000A
+                Default
+                  Set *Var[F] 00000000
+              EndSwitch
+   9C:      Set  *Var[D]  0000002D 
+   AC:      Set  *Var[E]  *Var[F] 
+   BC:      Sub  *Var[E]  00000002 
+   CC:      ExecWait $Script_802A317C 
+   D8:    Case  ==  00000002 
+            Call  RandInt ( 00000003 *Var[B] )
+              Switch *Var[B]
+                Case == 00000000
+                  Set *Var[F] 00000002
+                Case == 00000001
+                  Set *Var[F] 00000006
+                Case == 00000002
+                  Set *Var[F] 0000000A
+                Case == 00000003
+                  Set *Var[F] 0000000E
+                Default
+                  Set *Var[F] 00000000
+              EndSwitch
+   E4:      Set  *Var[D]  0000002D 
+   F4:      Set  *Var[E]  *Var[F] 
+  104:      Sub  *Var[E]  00000003 
+  114:      ExecWait $Script_802A317C 
+  120:  EndSwitch
+  128:  Return
+  130:  End
+}
+
+@ $Script_802A317C
+{
+    0:  Call     GetMenuSelection   ( *Var[0] *Var[1] *Var[2] )
+   18:  Switch  *Var[1] 
+   24:    Case  ==  00000000 
+   30:      ExecWait $Script_802A1B40 
+   3C:    Case  ==  00000001 
+   48:      ExecWait $Script_802A2000 
+   54:    Case  ==  00000002 
+   60:      ExecWait $Script_802A23E8 
+   6C:  EndSwitch
+   74:  Call     PlayerTestEnemy  ( *Var[0] 00000040 00000019 00000000 00000000 00000010 )
+   98:  Call     UseBattleCamPreset   ( 0000002C )
+   A8:  Wait     00000001 
+   B4:  ExecWait $Script_802A3188 
+   C0:  Call     PlayerTestEnemy  ( *Var[0] 00000040 00000019 00000000 00000000 00000010 )
+   E4:  If  *Var[0]  ==  00000006 
+   F4:    Call     EnablePlayerBlur   ( 00000000 )
+  104:    ExecWait $Script_802A1A64 
+  110:    Return
+  118:  EndIf
+  120:  Call     DidActionSucceed ( *Var[0] )
+  130:  Switch  *Var[0] 
+  13C:    Case  >  00000000 
+  148:      Call     GetMenuSelection   ( *Var[0] *Var[1] *Var[2] )
+  160:      Switch  *Var[1] 
+  16C:        Case  ==  00000000 
+  178:          Call     PlaySoundAtActor   ( .Actor:Player 000000E9 )
+  18C:        Case  ==  00000001 
+  198:          Call     PlaySoundAtActor   ( .Actor:Player 0000010E )
+  1AC:        Case  ==  00000002 
+  1B8:          Call     PlaySoundAtActor   ( .Actor:Player 0000010E )
+  1CC:      EndSwitch
+  1D4:      Call     PlayerDamageEnemy  ( *Var[0] 00000040 00000019 00000000 *Var[F] 00000070 )
+  1F8:    Default
+  200:      Call     GetMenuSelection   ( *Var[0] *Var[1] *Var[2] )
+  218:      Switch  *Var[1] 
+  224:        Case  ==  00000000 
+  230:          Call     PlaySoundAtActor   ( .Actor:Player 000000E9 )
+  244:        Case  ==  00000001 
+  250:          Call     PlaySoundAtActor   ( .Actor:Player 0000010E )
+  264:        Case  ==  00000002 
+  270:          Call     PlaySoundAtActor   ( .Actor:Player 0000010E )
+  284:      EndSwitch
+  28C:      Call     PlayerDamageEnemy  ( *Var[0] 00000040 00000019 00000000 *Var[E] 00000030 )
+  2B0:  EndSwitch
+  2B8:  Switch  *Var[0] 
+  2C4:    CaseOR  ==  00000001 
+  2D0:    CaseOR  ==  00000003 
+  2DC:      ExecWait $Script_802A18AC 
+  2E8:    EndCaseGroup
+  2F0:    CaseOR  ==  00000000 
+  2FC:    CaseOR  ==  00000002 
+  308:      ExecWait $Script_802A1A64 
+  314:    EndCaseGroup
+  31C:  EndSwitch
+  324:  Return
+  32C:  End
+}
+
+#new:Script $Script_802A3188
+{
+    0:  Call     StartRumble ( 00000009 )
+   10:  Thread
+   18:    Call     ShakeCam     ( 00000001 00000000 00000002 *Fixed[0.5] )
+   34:    Call     ShakeCam     ( 00000001 00000000 00000002 *Fixed[1.5] )
+   50:    Call     ShakeCam     ( 00000001 00000000 00000002 *Fixed[0.5] )
+   6C:    Call     ShakeCam     ( 00000001 00000000 00000002 *Fixed[0.20019531] )
+   88:  EndThread
+   90:  Return
+   98:  End
+}
+
+@ $Script_802A1B40
+{
+    0:  Call     LoadActionCommand  ( 00000002 )
+   10:  Call     802A9000 ( )
+   1C:  ExecWait $Script_802A10B0 
+   28:  Call     SetGoalToTarget  ( .Actor:Player )
+   38:  Call     AddGoalPos   ( .Actor:Player 00000000 00000000 00000000 )
+   54:  ExecWait $Script_802A1204 
+   60:  Call     PlayerTestEnemy  ( *Var[0] 00000040 00000000 00000000 00000000 00000010 )
+   84:  Call     UseBattleCamPreset   ( 0000002B )
+   94:  Call     SetBattleCamOffsetZ  ( 00000008 )
+   A4:  Call     InitTargetIterator   ( )
+   B0:  Call     PlaySoundAtActor   ( .Actor:Player 0000010B )
+   C4:  Call     SetAnimation   ( .Actor:Player 00000000 0003000E )
+   DC:  Wait     00000004 
+   E8:  Call     $Function_802A1000 ( )
+   F4:  If  *Var[0]  !=  00000000 
+  104:    Call     SetAnimation   ( .Actor:Player 00000000 0003000F )
+  11C:    Call     GetActionCommandMode ( *Var[0] )
+  12C:    If  *Var[0]  <  00000002 
+  13C:      Call     $Function_802A1050 ( )
+  148:      If  *Var[0]  ==  00000000 
+  158:        Loop     0000002D 
+  164:          Wait     00000001 
+  170:          Call     CheckButtonDown ( 00040000 *Var[0] )
+  184:          If  *Var[0]  !=  00000000 
+  194:            BreakLoop
+  19C:          EndIf
+  1A4:        EndLoop
+  1AC:      EndIf
+  1B4:    EndIf
+  1BC:    Add  *Var[D]  00000006 
+  1CC:    Call     802A9258 ( 00000000 *Var[D] 00000003 )
+  1E4:    Call     SetActionResult ( 00000000 )
+  1F4:    Set  *Var[1]  00000000 
+  204:    Loop     0000001E 
+  210:      Wait     00000001 
+  21C:      Call     GetActionResult ( *Var[0] )
+  22C:      If  *Var[0]  !=  00000000 
+  23C:        If  *Var[1]  !=  00000001 
+  24C:          Call     SetAnimation   ( .Actor:Player 00000000 00030010 )
+  264:          Set  *Var[1]  00000001 
+  274:        EndIf
+  27C:      EndIf
+  284:      Call     CheckButtonDown ( 00040000 *Var[0] )
+  298:      If  *Var[0]  ==  00000000 
+  2A8:        BreakLoop
+  2B0:      EndIf
+  2B8:    EndLoop
+  2C0:    Label    00000000 
+  2CC:    Call     GetActionCommandMode ( *Var[0] )
+  2DC:    If  *Var[0]  <  00000002 
+  2EC:      Wait     00000001 
+  2F8:      Call     GetActionSuccess ( *Var[0] )
+  308:      If  *Var[0]  ==  00000000 
+  318:        Goto     00000000 
+  324:      EndIf
+  32C:    EndIf
+  334:  Else
+  33C:    Call     802A9258 ( 00000000 *Var[1] 00000003 )
+  354:    Call     SetActionResult ( 00000000 )
+  364:    Call     SetAnimation   ( .Actor:Player 00000000 0003000F )
+  37C:    Sub  *Var[1]  0000000A 
+  38C:    Wait     *Var[1] 
+  398:    Call     SetAnimation   ( .Actor:Player 00000000 00030010 )
+  3B0:    Wait     00000005 
+  3BC:  EndIf
+  3C4:  Call     GetActionCommandMode ( *Var[0] )
+  3D4:  If  *Var[0]  ==  00000002 
+  3E4:    Call     SetActionCommandMode ( 00000003 )
+  3F4:    Loop     
+  400:      Call     GetActionCommandMode ( *Var[0] )
+  410:      If  *Var[0]  <  00000002 
+  420:        BreakLoop
+  428:      EndIf
+  430:      Wait     00000001 
+  43C:    EndLoop
+  444:  EndIf
+  44C:  Call     SetAnimation   ( .Actor:Player 00000000 00030011 )
+  464:  Call     PlaySoundAtActor   ( .Actor:Player 00002115 )
+  478:  Wait     00000003 
+  484:  Call     SetAnimation   ( .Actor:Player 00000000 00030012 )
+  49C:  Call     PlaySoundAtActor   ( .Actor:Player 00002118 )
+  4B0:  Return
+  4B8:  End
+}
+
+@ $Script_802A2000
+{
+    0:  Call     LoadActionCommand  ( 00000002 )
+   10:  Call     802A9000 ( )
+   1C:  ExecWait $Script_802A10B0 
+   28:  Call     SetGoalToTarget  ( .Actor:Player )
+   38:  Call     AddGoalPos   ( .Actor:Player 00000000 00000000 00000000 )
+   54:  ExecWait $Script_802A1388 
+   60:  Call     PlayerTestEnemy  ( *Var[0] 00000040 00000000 00000000 00000000 00000010 )
+   84:  Call     UseBattleCamPreset   ( 0000002B )
+   94:  Call     SetBattleCamOffsetZ  ( 00000008 )
+   A4:  Call     InitTargetIterator   ( )
+   B0:  Call     PlaySoundAtActor   ( .Actor:Player 0000010B )
+   C4:  Call     SetAnimation   ( .Actor:Player 00000000 00030015 )
+   DC:  Wait     00000004 
+   E8:  Call     $Function_802A1000 ( )
+   F4:  If  *Var[0]  ==  00000001 
+  104:    Call     SetAnimation   ( .Actor:Player 00000000 00030016 )
+  11C:    Call     $Function_802A1050 ( )
+  128:    If  *Var[0]  ==  00000000 
+  138:      Loop     0000002D 
+  144:        Wait     00000001 
+  150:        Call     CheckButtonDown ( 00040000 *Var[0] )
+  164:        If  *Var[0]  !=  00000000 
+  174:          BreakLoop
+  17C:        EndIf
+  184:      EndLoop
+  18C:    EndIf
+  194:    Add  *Var[D]  00000006 
+  1A4:    Call     802A9258 ( 00000000 *Var[D] 00000003 )
+  1BC:    Call     SetActionResult ( 00000000 )
+  1CC:    Set  *Var[1]  00000000 
+  1DC:    Loop     0000001E 
+  1E8:      Wait     00000001 
+  1F4:      Call     GetActionResult ( *Var[0] )
+  204:      If  *Var[0]  !=  00000000 
+  214:        If  *Var[1]  !=  00000001 
+  224:          Call     SetAnimation   ( .Actor:Player 00000000 00030017 )
+  23C:          Set  *Var[1]  00000001 
+  24C:        EndIf
+  254:      EndIf
+  25C:      Call     CheckButtonDown ( 00040000 *Var[0] )
+  270:      If  *Var[0]  ==  00000000 
+  280:        BreakLoop
+  288:      EndIf
+  290:    EndLoop
+  298:    Label    00000000 
+  2A4:    Wait     00000001 
+  2B0:    Call     GetActionSuccess ( *Var[0] )
+  2C0:    If  *Var[0]  ==  00000000 
+  2D0:      Goto     00000000 
+  2DC:    EndIf
+  2E4:  Else
+  2EC:    Call     802A9258 ( 00000000 *Var[1] 00000003 )
+  304:    Call     SetActionResult ( 00000000 )
+  314:    Call     SetAnimation   ( .Actor:Player 00000000 00030016 )
+  32C:    Sub  *Var[1]  0000000A 
+  33C:    Wait     *Var[1] 
+  348:    Call     SetAnimation   ( .Actor:Player 00000000 00030017 )
+  360:    Wait     00000005 
+  36C:  EndIf
+  374:  Call     SetAnimation   ( .Actor:Player 00000000 00030018 )
+  38C:  Call     PlaySoundAtActor   ( .Actor:Player 00002116 )
+  3A0:  Wait     00000003 
+  3AC:  Call     SetAnimation   ( .Actor:Player 00000000 00030019 )
+  3C4:  Call     PlaySoundAtActor   ( .Actor:Player 00002119 )
+  3D8:  Return
+  3E0:  End
+}
+
+@ $Script_802A23E8
+{
+    0:  Call     LoadActionCommand  ( 00000002 )
+   10:  Call     802A9000 ( )
+   1C:  ExecWait $Script_802A10B0 
+   28:  Call     SetGoalToTarget  ( .Actor:Player )
+   38:  Call     AddGoalPos   ( .Actor:Player 00000000 00000000 00000000 )
+   54:  ExecWait $Script_802A150C 
+   60:  Call     PlayerTestEnemy  ( *Var[0] 00000040 00000000 00000000 00000000 00000010 )
+   84:  Call     UseBattleCamPreset   ( 0000002B )
+   94:  Call     SetBattleCamOffsetZ  ( 00000008 )
+   A4:  Call     InitTargetIterator   ( )
+   B0:  Call     PlaySoundAtActor   ( .Actor:Player 0000010B )
+   C4:  Call     SetAnimation   ( .Actor:Player 00000000 0003001C )
+   DC:  Wait     00000004 
+   E8:  Call     $Function_802A1000 ( )
+   F4:  If  *Var[0]  ==  00000001 
+  104:    Call     SetAnimation   ( .Actor:Player 00000000 0003001D )
+  11C:    Call     $Function_802A1050 ( )
+  128:    If  *Var[0]  ==  00000000 
+  138:      Loop     0000002D 
+  144:        Wait     00000001 
+  150:        Call     CheckButtonDown ( 00040000 *Var[0] )
+  164:        If  *Var[0]  !=  00000000 
+  174:          BreakLoop
+  17C:        EndIf
+  184:      EndLoop
+  18C:    EndIf
+  194:    Add  *Var[D]  00000006 
+  1A4:    Call     802A9258 ( 00000000 *Var[D] 00000003 )
+  1BC:    Call     SetActionResult ( 00000000 )
+  1CC:    Set  *Var[1]  00000000 
+  1DC:    Loop     0000001E 
+  1E8:      Wait     00000001 
+  1F4:      Call     GetActionResult ( *Var[0] )
+  204:      If  *Var[0]  !=  00000000 
+  214:        If  *Var[1]  !=  00000001 
+  224:          Call     SetAnimation   ( .Actor:Player 00000000 0003001E )
+  23C:          Set  *Var[1]  00000001 
+  24C:        EndIf
+  254:      EndIf
+  25C:      Call     CheckButtonDown ( 00040000 *Var[0] )
+  270:      If  *Var[0]  ==  00000000 
+  280:        BreakLoop
+  288:      EndIf
+  290:    EndLoop
+  298:    Label    00000000 
+  2A4:    Wait     00000001 
+  2B0:    Call     GetActionSuccess ( *Var[0] )
+  2C0:    If  *Var[0]  ==  00000000 
+  2D0:      Goto     00000000 
+  2DC:    EndIf
+  2E4:  Else
+  2EC:    Call     802A9258 ( 00000000 *Var[1] 00000003 )
+  304:    Call     SetActionResult ( 00000000 )
+  314:    Call     SetAnimation   ( .Actor:Player 00000000 0003001D )
+  32C:    Sub  *Var[1]  0000000A 
+  33C:    Wait     *Var[1] 
+  348:    Call     SetAnimation   ( .Actor:Player 00000000 0003001E )
+  360:    Wait     00000005 
+  36C:  EndIf
+  374:  Call     SetAnimation   ( .Actor:Player 00000000 0003001F )
+  38C:  Call     PlaySoundAtActor   ( .Actor:Player 00002117 )
+  3A0:  Wait     00000003 
+  3AC:  Call     SetAnimation   ( .Actor:Player 00000000 00030020 )
+  3C4:  Call     PlaySoundAtActor   ( .Actor:Player 0000211A )
+  3D8:  Return
+  3E0:  End
+}

@@ -1,0 +1,440 @@
+
+% Immediately vanishes owner of calling script.
+#new:Function $Function_Vanish % ( duration )
+{
+	ADDIU	SP, SP, FFE0
+	SW		RA, 10 (SP)
+	SW		S1, 14 (SP)
+	SW		S2, 18 (SP)
+	% get turn count
+	LW		A1, 0 (S0)
+	JAL		~Func:get_variable
+	DADDU	S1, A0, R0
+	ANDI	V0, V0, 00FF
+	% add electify status
+	LW		A0, 148 (S1)
+	JAL		~Func:get_actor
+	DADDU	S2, V0, R0
+	ORI		S2, S2, 0E00
+	SH		S2, 218 (V0)
+	% return
+	LW		RA, 10 (SP)
+	LW		S1, 14 (SP)
+	LW		S2, 18 (SP)
+	ADDIU	V0, R0, 2
+	JR		RA
+	ADDIU	SP, SP, 20
+}
+
+% ====================================================
+% Piranha Plant
+% + Increased length of poison (3 -> 5 turns)
+% + Faster bite (10 -> 6 frame delay)
+% ====================================================
+
+@ $PutridPiranha
+{
+% stats
+[Index]        2Db 
+[Level]        17`b 
+[MaxHP]        12`b 
+}
+
+@ $StatusTable_80218720
+{
+.Status:Normal      0`
+.Status:Default    0`
+.Status:Sleep      15`
+.Status:Poison      0`
+.Status:Frozen      0`
+.Status:Dizzy      40`
+.Status:Fear    0`
+.Status:Static      0`
+.Status:Paralyze    0`
+.Status:Shrink     75`
+.Status:Stop       65`
+.Status:DefaultTurnMod   0`
+.Status:SleepTurnMod     -1`
+.Status:PoisonTurnMod     0`
+.Status:FrozenTurnMod     0`
+.Status:DizzyTurnMod     -2`
+.Status:FearTurnMod   0`
+.Status:StaticTurnMod     0`
+.Status:ParalyzeTurnMod   0`
+.Status:ShrinkTurnMod    -1`
+.Status:StopTurnMod       0`
+.Status:End
+}
+
+@ $Script_Breath
+{
+[4B0]	Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 00000000 0000FFFF 80020364 00000004 00000020 )
+}
+
+@ $Script_Bite
+{
+[720]	Wait     00000006
+[76C]  Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 00000000 00000000 00000000 00000007 00000020 )
+}
+
+% ====================================================
+% WMagikoopa
+% + Heals an ally by 8 HP or all allies by 5 HP
+% ====================================================
+
+@ $Script_Init_8021C308
+{
+	Call     BindIdle    	( .Actor:Self $Script_Idle_8021A1C4 )
+	Call     BindTakeTurn 	( .Actor:Self $Script_TakeTurn_8021D894 )
+	Call     BindHandleEvent 	( .Actor:Self $Script_HandleEvent_8021A1D4 )
+	Call     SetActorVar 	( .Actor:Self 00000000 00000000 )
+	Call     $Function_Vanish ( 2 )
+	Return
+	End
+}
+	
+@ $Script_TakeTurn_8021D894
+{
+	% if alone, flee
+	Call     CountPlayerTargets ( FFFFFF81 00008002 *Var[0] )
+	If       *Var[0] ==  00000001 
+		ExecWait $Script_RunAway 
+		Return
+	EndIf
+	% 30% chance to go invisible
+	Call     GetStatusFlags ( .Actor:Self *Var[0] )
+	If       *Var[0] !&  04002000 
+		Call	RandInt	( 100` *Var[0] )
+		If	*Var[0] > 70`
+			ExecWait $Script_VanishSelf
+			Return
+		EndIf
+	EndIf
+   % else, decide what to do based on allies' HP
+	Set      *Var[A] 00000000 % num hurt
+	Set      *Var[B] 00000000 % heal all amount
+	Set      *Var[C] 00000000 % best heal amount
+	Set      *Var[D] 00000000 % best npc
+	Set      *Var[E] 7FFFFFFF % best npc HP
+	Call     EnemyCreateTargetList 	( 00008002 )
+	Call     InitTargetIterator 	( )
+		Label    0` 
+		Call     GetOwnerTarget 	( *Var[0] *Var[1] )
+		Call     GetActorHP      ( *Var[0] *Var[2] )
+		Call     GetEnemyMaxHP   ( *Var[0] *Var[3] )
+		If       *Var[2]  !=  *Var[3]
+			Call     GetOwnerTarget 	( *Var[0] *Var[1] )
+			Add      *Var[A] 00000001 
+			% get heal amount
+			Set     *Var[F] *Var[3]
+			Sub     *Var[F] *Var[2]
+			Add     *Var[B] *Var[F]
+			% check against most injured ally
+			If	*Var[F] >= *Var[C]
+				If *Var[F] == *Var[C]
+					% heal amount == best heal, prioritize ally with lowest HP
+					If *Var[2] < *Var[E]
+						Set    *Var[C] *Var[F]
+						Set    *Var[D] *Var[0]
+						Set    *Var[E] *Var[2]
+					EndIf
+				Else
+					% heal amount > best heal, found new best heal
+					Set    *Var[C] *Var[F]
+					Set    *Var[D] *Var[0]
+					Set    *Var[E] *Var[2]
+				EndIf
+			EndIf
+		EndIf
+		Call     ChooseNextTarget 	( 00000000 *Var[0] )
+		If       *Var[0]  !=  FFFFFFFF
+			Goto     0` 
+		EndIf
+	% choose an action
+	If  *Var[A] == 0
+		% attack if noone is hurt
+		ExecWait $Script_DoAttack
+	Else
+		% noone is badly hurt, attack with P = 0.4
+		If *Var[B] < 5
+			Call     RandInt ( 100` *Var[9] )
+			If       *Var[9]  <=  40`
+				ExecWait $Script_DoAttack 
+			Else
+				ExecWait $Script_DoHeal 
+			EndIf
+		% need to heal someone
+		Else
+			ExecWait $Script_DoHeal
+		EndIf
+	EndIf
+	Return
+	End
+}
+
+% Assume numHurt > 0 when this script is executed
+#new:Script $Script_DoHeal
+{
+	If *Var[A] == 1
+		% heal the only hurt ally
+		ExecWait $Script_HealOne
+	Else
+		% choose the option that restores the most HP
+		If *Var[B] > *Var[C]
+			ExecWait $Script_HealAll 
+		Else
+			ExecWait $Script_HealOne 
+		EndIf
+	EndIf
+	Return
+	End
+}
+
+#new:Script $Script_DoAttack
+{
+	% 70% chance to go invisible
+	Call     GetStatusFlags ( .Actor:Self *Var[0] )
+	If       *Var[0] !&  04002000 
+		Call	RandInt	( 100` *Var[0] )
+		If	*Var[0] > 30`
+			ExecWait $Script_VanishSelf
+			Return
+		EndIf
+	EndIf
+	Call     GetActorFlags 	( .Actor:Self *Var[0] )
+	If       *Var[0]  &  00000200 
+		ExecWait $Script_ShapeSpell 
+	Else
+		ExecWait $Script_RandomAttack 
+	EndIf
+	Return
+	End
+}
+
+#new:Script $Script_RandomAttack
+{
+	Call	RandInt	( 100` *Var[0] )
+	If	*Var[0] > 50`
+		ExecWait $Script_WandStrike 
+	Else
+		ExecWait $Script_ShapeSpell
+	EndIf
+	Return
+	End
+}
+
+#define .SpellStartX  -300`
+#define .SpellStartY   300`
+
+% Shape spell now rains down from the top left corner of the screen.
+@ $Script_ShapeSpell
+{
+[288]	Set      *Var[0] .SpellStartX
+		Set      *Var[1] .SpellStartY
+[2B0]	Set      *Var[0] .SpellStartX
+		Set      *Var[1] .SpellStartY
+[4A4]	Set      *Var[0] .SpellStartX
+		Set      *Var[1] .SpellStartY
+[4CC]	Set      *Var[0] .SpellStartX
+		Set      *Var[1] .SpellStartY
+}
+
+@ $Script_HealAll
+{
+[5E0]	Call     HealActor     	( *Var[0] 00000005 00000001 )	% was 3
+}
+
+@ $Script_HealOne
+{
+	Call     UseIdleAnimation 	( .Actor:Self .False )
+	Call     EnableIdleScript 	( .Actor:Self 00000000 )
+	Call     SetTargetActor ( FFFFFF81 00000000 )
+	Call     UseBattleCamPreset 	( 0000000E )
+	Call     BattleCamTargetActor ( FFFFFF81 )
+	Call     MoveBattleCamOver 	( 0000000F )
+	Wait     0000000F 
+	Call     GetActorFlags 	( .Actor:Self *Var[0] )
+	If       *Var[0] !&  00000200 
+		Call     SetAnimation 	( .Actor:Self 00000001 00560302 )
+	Else
+		Call     SetAnimation 	( .Actor:Self 00000002 00570302 )
+	EndIf
+	Wait     00000005 
+	Call     PlaySoundAtActor 	( .Actor:Self 000020D4 )
+	Call     GetActorFlags 	( .Actor:Self *Var[0] )
+	If       *Var[0] !&  00000200 
+		Call     GetActorPos 	( .Actor:Self *Var[0] *Var[1] *Var[2] )
+		Call     GetStatusFlags ( .Actor:Self *Var[A] )
+		If       *Var[A]  &  00080000 
+			Sub      *Var[0] 00000006 
+			Add      *Var[1] 0000000C 
+			Sub      *Var[2] 00000002 
+			Call     PlayEffect  	( 00000033 00000007 *Var[0] *Var[1] *Var[2] *Fixed[0.12011719] 0000001E 00000000 00000000 00000000 00000000 00000000 00000000 00000000 )
+		Else
+			Sub      *Var[0] 00000010 
+			Add      *Var[1] 0000001F 
+			Sub      *Var[2] 00000002 
+			Call     PlayEffect  	( 00000033 00000007 *Var[0] *Var[1] *Var[2] *Fixed[0.30078125] 0000001E 00000000 00000000 00000000 00000000 00000000 00000000 00000000 )
+		EndIf
+	Else
+		Call     GetActorPos 	( .Actor:Self *Var[0] *Var[1] *Var[2] )
+		Call     GetStatusFlags ( .Actor:Self *Var[A] )
+		If       *Var[A]  &  00080000 
+			Sub      *Var[0] 0000000C 
+			Add      *Var[1] 0000000E 
+			Sub      *Var[2] 00000002 
+			Call     PlayEffect  	( 00000033 00000007 *Var[0] *Var[1] *Var[2] *Fixed[0.12011719] 0000001E 00000000 00000000 00000000 00000000 00000000 00000000 00000000 )
+		Else
+			Sub      *Var[0] 0000001E 
+			Add      *Var[1] 00000024 
+			Sub      *Var[2] 00000002 
+			Call     PlayEffect  	( 00000033 00000007 *Var[0] *Var[1] *Var[2] *Fixed[0.30078125] 0000001E 00000000 00000000 00000000 00000000 00000000 00000000 00000000 )
+		EndIf
+	EndIf
+	Wait     0000001E 
+	Call     GetActorFlags 	( .Actor:Self *Var[0] )
+	If       *Var[0] !&  00000200 
+		Call     SetAnimation 	( .Actor:Self 00000001 00560301 )
+	Else
+		Call     SetAnimation 	( .Actor:Self 00000002 00570301 )
+	EndIf
+	Wait     00000005 
+	Thread
+		Wait     00000005 
+		Call     PlaySoundAtActor 	( *Var[D] 0000206D )
+		Call     PlaySoundAtActor 	( *Var[D] 00000214 )
+		Wait     0000001E 
+		Call     PlaySoundAtActor 	( *Var[D] 0000025C )
+	EndThread
+	Thread
+		Call     8026BF48 ( 00000001 )
+		Call     HealActor  ( *Var[D] 00000008 00000000 ) % was 5
+		Call     8026BF48 ( 00000000 )
+	EndThread
+	Call     WaitForBuffDone ( )
+	Call     UseBattleCamPreset 	( 00000002 )
+	Wait     0000000A 
+	Call     YieldTurn ( )
+	Call     EnableIdleScript 	( .Actor:Self 00000001 )
+	Call     UseIdleAnimation 	( .Actor:Self .True )
+	Return
+	End
+}
+
+#new:Script $Script_VanishSelf
+{
+	Call     UseIdleAnimation 	( .Actor:Self .False )
+	Call     EnableIdleScript 	( .Actor:Self 00000000 )
+	Call     SetTargetActor ( FFFFFF81 00000000 )
+	Call     UseBattleCamPreset 	( 0000000E )
+	Call     BattleCamTargetActor ( FFFFFF81 )
+	Call     MoveBattleCamOver 	( 0000000F )
+	Wait     0000000F 
+	Call     GetActorFlags 	( .Actor:Self *Var[0] )
+	If       *Var[0] !&  00000200 
+		Call     SetAnimation 	( .Actor:Self 00000001 00560302 )
+	Else
+		Call     SetAnimation 	( .Actor:Self 00000002 00570302 )
+	EndIf
+	Wait     00000005 
+	Call     PlaySoundAtActor 	( .Actor:Self 000020D4 )
+	Call     GetActorFlags 		( .Actor:Self *Var[0] )
+	If       *Var[0] !&  00000200 
+		Call     GetActorPos 	( .Actor:Self *Var[0] *Var[1] *Var[2] )
+		Call     GetStatusFlags ( .Actor:Self *Var[A] )
+		If       *Var[A]  &  00080000 
+			Sub      *Var[0] 00000006 
+			Add      *Var[1] 0000000C 
+			Sub      *Var[2] 00000002 
+			Call     PlayEffect  	( 00000033 00000006 *Var[0] *Var[1] *Var[2] *Fixed[0.12011719] 0000001E 00000000 00000000 00000000 00000000 00000000 00000000 00000000 )
+		Else
+			Sub      *Var[0] 00000010 
+			Add      *Var[1] 0000001F 
+			Sub      *Var[2] 00000002 
+			Call     PlayEffect  	( 00000033 00000006 *Var[0] *Var[1] *Var[2] *Fixed[0.30078125] 0000001E 00000000 00000000 00000000 00000000 00000000 00000000 00000000 )
+		EndIf
+	Else
+		Call     GetActorPos 	( .Actor:Self *Var[0] *Var[1] *Var[2] )
+		Call     GetStatusFlags ( .Actor:Self *Var[A] )
+		If       *Var[A]  &  00080000 
+			Sub      *Var[0] 0000000C 
+			Add      *Var[1] 0000000E 
+			Sub      *Var[2] 00000002 
+			Call     PlayEffect  	( 00000033 00000006 *Var[0] *Var[1] *Var[2] *Fixed[0.12011719] 0000001E 00000000 00000000 00000000 00000000 00000000 00000000 00000000 )
+		Else
+			Sub      *Var[0] 0000001E 
+			Add      *Var[1] 00000024 
+			Sub      *Var[2] 00000002 
+			Call     PlayEffect  	( 00000033 00000006 *Var[0] *Var[1] *Var[2] *Fixed[0.30078125] 0000001E 00000000 00000000 00000000 00000000 00000000 00000000 00000000 )
+		EndIf
+	EndIf
+	Wait     0000001E 
+	Call     GetActorFlags 	( .Actor:Self *Var[0] )
+	If       *Var[0] !&  00000200 
+		Call     SetAnimation 	( .Actor:Self 00000001 00560301 )
+	Else
+		Call     SetAnimation 	( .Actor:Self 00000002 00570301 )
+	EndIf
+	Wait     00000005 
+	Thread
+		Wait     0000000A 
+		Call     PlaySoundAtActor 	( .Actor:Self 000002DB )
+	EndThread
+	Thread
+		Call     8026BF48 ( 00000001 )
+		Call     VanishActor ( .Actor:Self 00000002 )
+		Call     8026BF48 ( 00000000 )
+	EndThread
+	Call     WaitForBuffDone ( )
+	Call     UseBattleCamPreset 	( 00000002 )
+	Wait     0000000A 
+	Call     YieldTurn ( )
+	Call     EnableIdleScript 	( .Actor:Self 00000001 )
+	Call     UseIdleAnimation 	( .Actor:Self .True )
+	Return
+	End
+}
+
+% ====================================================
+% Formation Change
+% + Added a Bzzrk (stronger bzzap variant) to the 'miniboss' guarding a Yoshi
+% ====================================================
+
+#import Bzzrk.bpat
+#import DarkBristle.bpat
+#import RemedyGuy.bpat
+#import Raphael.bpat
+
+@ $Bzzrk
+{
+[Level] 17`b 
+}
+
+@ $Formation_00
+{
+$Raphael 00000002 0000000A 00000000 00000000 00000000 00000000
+}
+
+@ $Formation_01
+{
+$PutridPiranha 00000001 0000000A 00000000 00000000 00000000 00000000 
+$PutridPiranha 00000002 00000009 00000000 00000000 00000000 00000000 
+$Bzzrk         00000007 00000008 00000000 00000000 00000000 00000000 
+}
+
+@ $Formation_03
+{
+$DarkBristle  	00000000 0000000A 00000000 00000000 00000000 00000000 
+$DarkBristle 	00000001 00000009 00000000 00000000 00000000 00000000 
+$DarkBristle  	00000002 00000008 00000000 00000000 00000000 00000000
+$RemedyGuy   	00000007 00000007 00000000 00000000 00000000 00000000
+}
+
+@ $FormationTable
+{
+$SJIS_8021F950 00000001 $Formation_00 $Stage_8021EAB4 00000000 % new miniboss
+$SJIS_8021F93C 00000003 $Formation_01 $Stage_8021EAB4 00000000 
+$SJIS_8021F928 00000003 $Formation_02 $Stage_8021EAB4 00000000 % unused
+$SJIS_8021F900 00000004 $Formation_03 $Stage_8021EAB4 00000000 
+00000000 00000000 00000000 00000000 00000000
+}

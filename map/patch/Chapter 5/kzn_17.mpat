@@ -1,0 +1,19 @@
+
+% Increase the damage taken when crushed.
+@ $Function_80242D00
+{
+	ADDIU     SP, SP, FFE8
+	SW        RA, 10 (SP)
+	JAL       800EA334
+	ADDIU     A0, R0, 5		% was 1
+	LW        RA, 10 (SP)
+	ADDIU     V0, R0, 2
+	JR        RA
+	ADDIU     SP, SP, 18
+}
+
+% Spiky thwomp rolls much faster.
+@ $Script_80245CE8
+{
+[1C4]  Call     MakeLerp ( FFFFFDB9 000002EE 128` 00000001 ) % was 270`
+}

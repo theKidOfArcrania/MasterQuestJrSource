@@ -1,0 +1,98 @@
+% ====================================================
+% Blue Goomba - Goomba King boss battle.
+% + Starts at full HP
+% ====================================================
+@ $BlueGoomba1
+{
+[Level]        25`b 
+[MaxHP]        6`b
+}
+
+@ $Script_Init_8021EDB8
+{
+[C]		Call     SetEnemyHP	( .Actor:Self  00000008 )
+}
+
+@ $DefenseTable_8021D400
+{
+.Element:Normal 	00000000
+.Element:End
+}
+
+@ $DefenseTable_802198B0
+{
+.Element:Normal 	00000000
+.Element:End
+}
+
+@ $Script_TakeTurn_8021A5A0
+{
+[9AC]  Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 00000000 00000000 00000000 00000002 00000020 ) %crazy dmg
+}
+
+@ $Script_TakeTurn_8021E0F0
+{
+[9AC]  Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 00000000 00000000 00000000 00000002 00000020 )
+}
+
+% ====================================================
+% Red Goomba - Goomba King boss battle.
+% + Starts at full HP
+% ====================================================
+
+@ $RedGoomba1
+{
+[Level]        25`b 
+[MaxHP]        7`b
+}
+
+@ $Script_Init_802207B8
+{
+[C]		Call     SetEnemyHP	( .Actor:Self  00000009 )
+}
+
+@ $DefenseTable_8021B6C0
+{
+.Element:Normal		00000000
+.Element:End
+}
+
+@ $DefenseTable_8021EE00
+{
+.Element:Normal		00000000
+.Element:End
+}
+
+@ $Script_TakeTurn_8021C3B0
+{
+[9AC]  Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 00000000 00000000 00000000 00000002 00000020 )
+}
+
+@ $Script_TakeTurn_8021FAF0
+{
+[9AC]  Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 00000000 00000000 00000000 00000002 00000020 )
+}
+
+% ====================================================
+% Goomnut Tree - Goomba King boss battle.
+% + Returned Damage to normal (3)
+% ====================================================
+
+@ $GoombaKing
+{
+[Level]        49`b 
+[MaxHP]        10`b 
+}
+
+@ $Script_80223DBC
+{
+[354]	Call     EnemyDamageTarget ( .Actor:Self  *Var[0]  08000000  00000000  00000000  00000003  00000020 )
+[5A0]	Call     EnemyDamageTarget ( .Actor:Self  *Var[0]  08000000  00000000  00000000  00000003  00000020 )
+[7EC]	Call     EnemyDamageTarget ( .Actor:Self  *Var[0]  08000000  00000000  00000000  00000003  00000020 )
+}
+
+% Goombaking Damage
+@ $Script_80221680
+{
+[4E4]  Call     EnemyDamageTarget 	( .Actor:Self *Var[A] 00000000 00000000 00000000 00000002 00000020 )
+}

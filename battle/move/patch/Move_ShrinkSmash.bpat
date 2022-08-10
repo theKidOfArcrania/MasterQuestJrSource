@@ -1,0 +1,5 @@
+@ $Script_802A3168
+{
+  [3F8] 		Call     PlayerDamageEnemy 	( *Var[0] 00000040 00000019 80080564 *Var[F] 00000070 )
+}
+

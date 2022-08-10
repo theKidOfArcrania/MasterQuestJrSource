@@ -1,0 +1,93 @@
+
+@ $Script_UseItem
+{
+    0:  Call     GetMenuSelection 	( *Var[0] *Var[1] *Var[2] )
+   18:  If  *Var[1]  ==  000000D3 
+   28:  	SetConst  *Var[A]  000000D3 
+   38:  	Set  *Var[1]  00000000 
+   48:  	ExecWait $Script_802A1BB0 
+   54:  	ExecWait $Script_802A207C 
+   60:  	Call     $Function_802A1A8C ( )
+   6C:  	Call     GetActorPos 	( .Actor:Player *Var[0] *Var[1] *Var[2] )
+   88:  	Add  *Var[0]  00000014 
+   98:  	Add  *Var[1]  00000019 
+   A8:  	Call     $Function_802A18D8 ( *Var[0] *Var[1] *Var[2] *Var[3] )
+   C4:  	Call     GetActorPos 	( .Actor:Player *Var[0] *Var[1] *Var[2] )
+   E0:  	Add  *Var[1]  00000019 
+   F0:  	Call     802D7520 ( *Var[0] *Var[1] *Var[2] *Var[3] )
+  10C:  	Call     $Function_802A19EC ( *Var[3] )
+  11C:  	Wait     0000000A 
+  128:  	Call     SetAnimation 	( .Actor:Player 00000000 00010032 )
+  140:  	Wait     0000001E 
+  14C:  	Call     GetActorPos 	( .Actor:Player *Var[0] *Var[1] *Var[2] )
+  168:  	Call     802D75D8 ( *Var[0] *Var[1] *Var[2] *Var[3] )
+  184:  	Call     SetAnimation 	( .Actor:Player 00000000 00010002 )
+  19C:  	Wait     00000014 
+  1A8:  	Call     SetAnimation 	( .Actor:Player 00000000 00010002 )
+  1C0:  Else
+  1C8:  	SetConst  *Var[A]  000000D2 
+  1D8:  	Set  *Var[1]  00000000 
+  1E8:  	ExecWait $Script_802A1BB0 
+  1F4:  	ExecWait $Script_802A207C 
+  200:  	Call     SetAnimation 	( .Actor:Player 00000000 00010002 )
+  218:  EndIf
+  220:  Wait     0000000A 
+		If *Var[A] == 000000D2
+			Call     $SPSubtractMainFunction ( 00000000 FFFFFF80 ) % no matter what I do this only
+			Call     $SPSubtractMainFunction ( 00000000 FFFFFF80 ) % drains half a bar of SP so whatever
+		Else
+			Call     $SPSubtractMainFunction ( 00000000 FFFFFF80 )
+		EndIf
+  2E4:  ExecWait $Script_802A1FE0 
+  2F0:  Return
+  2F8:  End
+}
+
+@ $Function_802A1A8C {
+	LABU      v0, 8008935C
+	SW        v0, 0090 (A0)
+	JR        RA
+	ADDIU     V0, R0, 2
+}
+  
+/%
+
+#new:Function $Function_802Arepelgel
+    0:  ADDIU     SP, SP, FFE0
+    4:  DADDU     V0, A0, R0
+    8:  SW        S0, 10 (SP)
+    C:  LAW       S0, 800DC148
+   14:  ADDIU     A1, R0, E
+   18:  SW        RA, 18 (SP)
+   1C:  SW        S1, 14 (SP)
+   20:  LW        A2, 84 (V0)
+   24:  LW        S1, 1F4 (S0)
+   28:  JAL       80265F40
+   2C:  DADDU     A0, S0, R0
+   30:  SB        R0, 21C (S0)
+   34:  LW        V1, 0 (S1)
+   38:  ORI       V1, V1, 100
+   3C:  SW        V1, 0 (S1)
+   40:  LW        RA, 18 (SP)
+   44:  LW        S1, 14 (SP)
+   48:  LW        S0, 10 (SP)
+   4C:  ADDIU     V0, R0, 2
+   50:  JR        RA
+   54:  ADDIU     SP, SP, 20
+   
+   @ $Script_802A2C40
+    0:  Call     SetAnimation 	( .Actor:Player 00000000 00010002 )
+   18:  Call     GetActorPos 	( .Actor:Player *Var[0] *Var[1] *Var[2] )
+   34:  Add  *Var[1]  00000014 
+   44:  Call     PlayEffect  	( {FX:RadialFlowOut:WhiteWaves} *Var[0] *Var[1] *Var[2] *Fixed[1.0] 0000001E 00000000 00000000 00000000 00000000 00000000 00000000 00000000 )
+	Call     GetItemPower 	( .Item:RepelGel *Var[0] *Var[1] )
+	88:  Call     $Function_802Arepelgel ( )
+   94:  Wait     00000014 
+   A0:  Call     ShowMessageBox ( 00000011 0000003C )
+   B4:  Call     WaitForMessageBoxDone ( )
+   C0:  Return
+   C8:  End%/
+  
+  
+  
+  

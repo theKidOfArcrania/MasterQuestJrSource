@@ -1,0 +1,908 @@
+% ==================================
+% THIS MPAT IS FOR THE REST FLOORS
+% OF THE PIT. 10, 20, ETC 
+% ==================================
+#import EnterWarpPipe.mpat
+#import Pit_AI.mpat
+
+#define .Floor *GameByte[003]
+#define .PipeBool *GameFlag00C
+#define .PipeRaiseSound 0000208E
+
+
+#new:Header $Header
+{
+00000000 00000000 00000000 00000000 
+$Script_Main $EntryList 00000003 00000000 
+00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 $Function_GetTattle
+}
+
+#new:Function $Function_GetTattle
+{
+	ADDIU     SP, SP, FFE8
+	LIO       V0, $MapTattle
+	JR        RA
+	ADDIU     SP, SP, 18
+}
+
+#string $MapTattle
+{
+[Style Tattle]
+[EnableCDownNext]This seems to be a rest[BR]
+floor. There aren't any[BR]
+enemies here.[BR]
+[Wait][Next]
+We might need to go back up[BR]
+if your HP and items are[BR]
+depleted.[BR]
+[Wait][Next]
+If we do that, we'll have to[BR]
+start all over again from[BR]
+the first floor. That's[BR]
+not fair![BR]
+[Wait][End]
+}
+
+#new:Script_Main $Script_Main
+{
+	Set *WarpLock 00000000 %clear warp lock out of pit
+	Set *Flag_KMR_61 00000001
+	Set 	.PipeBool 00000000
+	Bind     $Script_WallTalk .Trigger:WallPressA ~Collider:eyetalk 00000001 00000000
+		Switch 	.Floor
+		Case == 0000000A
+			ExecWait $Script_MakeEntities10
+		Case == 00000014
+			ExecWait $Script_MakeEntities20
+		Case == 0000001E
+			ExecWait $Script_MakeEntities30 
+		Case == 00000028
+			ExecWait $Script_MakeEntities40
+		Case == 00000032
+			ExecWait $Script_MakeEntities50
+		Case == 0000003C
+			ExecWait $Script_MakeEntities60
+		Case == 00000046
+			ExecWait $Script_MakeEntities70 
+		Case == 00000050
+			ExecWait $Script_MakeEntities80
+		Case == 0000005A
+			ExecWait $Script_MakeEntities90
+	EndSwitch
+	%Exec	$Script_GetPipeWorking
+	Call     SetSpriteShading 	( 00080000 )
+	Call     SetCamPerspective 	( .Cam:Default 00000003 00000019 00000010 00001000 )
+	Call     SetCamBGColor 	( .Cam:Default 00000000 00000000 00000000 )
+	Call     SetCamEnabled 	( .Cam:Default .True )
+	Call     SetCamLeadPlayer 	( .Cam:Default .False )
+	Call     SetMusicTrack    	( 00000000 .Song:DryDryRuins 00000000 00000008 )
+	Return
+	End
+}
+
+	#new:Script $Script_MakeEntities10
+{
+	Call	MakeEntity		( .Entity:RedSwitch ~Vec4d:switch 80000000 )
+	Call	AssignScript	( $Script_PipeChange )
+	% Peekaboo
+	Call	MakeEntity  	( .Entity:Chest ~Vec4d:chest10 00000000 80000000 )
+	Call	AssignFlag  	( *GameFlag[38C])
+	Call	AssignScript 	( $Script_UseChest )
+	Call    MakeEntity      ( .Entity:YellowBlock ~Vec4d:salesman .Item:Mushroom 80000000 ) % the original plan was to have a shopkeep here, but big lazy
+	Call    MakeEntity      ( .Entity:YellowBlock ~Vec4d:invblock .Item:POWBlock 80000000 ) % you can blame me (thamz) if you have a problem with it
+	Call	MakeItemEntity	( .Item:StarPiece 	  ~Vec3d:sp10 00000011 *Flag_KZN_26 )
+	Call     MakeEntity  	( .Entity:Signpost ~Vec4d:signpost 80000000 )
+	Call     AssignScript 	( $Script_SignPost1 )
+	Return
+	End
+}
+	
+	#new:Script $Script_MakeEntities20
+{
+	Call	MakeEntity		( .Entity:RedSwitch ~Vec4d:switch 80000000 )
+	Call	AssignScript	( $Script_PipeChange )
+	% Shrink Smash
+	Call	MakeEntity  	( .Entity:Chest ~Vec4d:chest20 00000000 80000000 )
+	Call	AssignFlag  	( *GameFlag[38D])
+	Call	AssignScript 	( $Script_UseChest )
+	Call    MakeEntity      ( .Entity:YellowBlock ~Vec4d:salesman .Item:HoneySyrup 80000000 ) % the original plan was to have a shopkeep here, but big lazy
+	Call    MakeEntity      ( .Entity:YellowBlock ~Vec4d:invblock .Item:FireFlower 80000000 )
+	Call	MakeItemEntity	( .Item:StarPiece 	  ~Vec3d:sp20 00000011 *Flag_KZN_27 )
+	Call     MakeEntity  	( .Entity:Signpost ~Vec4d:signpost 80000000 )
+	Call     AssignScript 	( $Script_SignPost2 )
+	Return
+	End
+}
+	
+	#new:Script $Script_MakeEntities30
+{
+	Call	MakeEntity		( .Entity:RedSwitch ~Vec4d:switch 80000000 )
+	Call	AssignScript	( $Script_PipeChange )
+	% Dizzy Dance
+	Call	MakeEntity  	( .Entity:Chest ~Vec4d:chest30 00000000 80000000 )
+	Call	AssignFlag  	( *GameFlag[38E])
+	Call	AssignScript 	( $Script_UseChest )
+	Call     MakeEntity     ( .Entity:YellowBlock ~Vec4d:salesman .Item:SuperShroom 80000000 ) % the original plan was to have a shopkeep here, but big lazy
+	Call     MakeEntity     ( .Entity:YellowBlock ~Vec4d:invblock .Item:SnowmanDoll 80000000 )
+	Call	MakeItemEntity	( .Item:StarPiece 	  ~Vec3d:sp30 00000011 *Flag_KZN_28 )
+	Call     MakeEntity  	( .Entity:Signpost ~Vec4d:signpost 80000000 )
+	Call     AssignScript 	( $Script_SignPost3 )
+	Return
+	End
+}
+	
+	#new:Script $Script_MakeEntities40
+{
+	Call	MakeEntity		( .Entity:RedSwitch ~Vec4d:switch 80000000 )
+	Call	AssignScript	( $Script_PipeChange )
+	% HP Plus
+	Call	MakeEntity  	( .Entity:Chest ~Vec4d:chest40 00000000 80000000 )
+	Call	AssignFlag  	( *GameFlag[38F])
+	Call	AssignScript 	( $Script_UseChest )
+	Call     MakeEntity     ( .Entity:YellowBlock ~Vec4d:salesman .Item:MapleSyrup 80000000 ) % the original plan was to have a shopkeep here, but big lazy
+	Call     MakeEntity     ( .Entity:YellowBlock ~Vec4d:invblock .Item:ThunderRage 80000000 )
+	Call	MakeItemEntity	( .Item:StarPiece 	  ~Vec3d:sp40 00000011 *Flag_KZN_29 )
+	Call     MakeEntity  	( .Entity:Signpost ~Vec4d:signpost 80000000 )
+	Call     AssignScript 	( $Script_SignPost4 )
+	Return
+	End
+}
+	
+	#new:Script $Script_MakeEntities50
+{
+	Call	MakeEntity		( .Entity:RedSwitch ~Vec4d:switch 80000000 )
+	Call	AssignScript	( $Script_PipeChange )
+	% Stop Smash
+	Call	MakeEntity  	( .Entity:Chest ~Vec4d:chest50 00000000 80000000 )
+	Call	AssignFlag  	( *GameFlag[390])
+	Call	AssignScript 	( $Script_UseChest )
+	Call     MakeEntity     ( .Entity:YellowBlock ~Vec4d:salesman .Item:SleepySheep 80000000 ) % the original plan was to have a shopkeep here, but big lazy
+	Call     MakeEntity     ( .Entity:YellowBlock ~Vec4d:invblock .Item:DizzyDial 80000000 )
+	Call	MakeItemEntity	( .Item:StarPiece 	  ~Vec3d:sp50 00000011 *Flag_KZN_2A )
+	Call     MakeEntity  	( .Entity:Signpost ~Vec4d:signpost 80000000 )
+	Call     AssignScript 	( $Script_SignPost5 )
+	Return
+	End
+}
+	
+	#new:Script $Script_MakeEntities60
+{
+	Call	MakeEntity		( .Entity:RedSwitch ~Vec4d:switch 80000000 )
+	Call	AssignScript	( $Script_PipeChange )
+	% FP Plus
+	Call	MakeEntity  	( .Entity:Chest ~Vec4d:chest60 00000000 80000000 )
+	Call	AssignFlag  	( *GameFlag[391])
+	Call	AssignScript 	( $Script_UseChest )
+	Call     MakeEntity     ( .Entity:YellowBlock ~Vec4d:salesman .Item:ShootingStar 80000000 ) % the original plan was to have a shopkeep here, but big lazy
+	Call     MakeEntity     ( .Entity:YellowBlock ~Vec4d:invblock .Item:StopWatch 80000000 )
+	Call	MakeItemEntity	( .Item:StarPiece 	  ~Vec3d:sp60 00000011 *Flag_KZN_2B )
+	Call     MakeEntity  	( .Entity:Signpost ~Vec4d:signpost 80000000 )
+	Call     AssignScript 	( $Script_SignPost6 )
+	Return
+	End
+}
+	
+	#new:Script $Script_MakeEntities70
+{
+	Call	MakeEntity		( .Entity:RedSwitch ~Vec4d:switch 80000000 )
+	Call	AssignScript	( $Script_PipeChange )
+	% Feeling Fine
+	Call	MakeEntity  	( .Entity:Chest ~Vec4d:chest70 00000000 80000000 )
+	Call	AssignFlag  	( *GameFlag[392])
+	Call	AssignScript 	( $Script_UseChest )
+	Call     MakeEntity     ( .Entity:YellowBlock ~Vec4d:salesman .Item:UltraShroom 80000000 ) % the original plan was to have a shopkeep here, but big lazy
+	Call     MakeEntity     ( .Entity:YellowBlock ~Vec4d:invblock .Item:HustleDrink 80000000 )
+	Call	MakeItemEntity	( .Item:StarPiece 	  ~Vec3d:sp70 00000011 *Flag_KZN_2C )
+	Call     MakeEntity  	( .Entity:Signpost ~Vec4d:signpost 80000000 )
+	Call     AssignScript 	( $Script_SignPost7 )
+	Return
+	End
+}
+	
+	#new:Script $Script_MakeEntities80
+{
+	Call	MakeEntity		( .Entity:RedSwitch ~Vec4d:switch 80000000 )
+	Call	AssignScript	( $Script_PipeChange )
+	% Defend Plus
+	Call	MakeEntity  	( .Entity:Chest ~Vec4d:chest80 00000000 80000000 )
+	Call	AssignFlag  	( *GameFlag[393])
+	Call	AssignScript 	( $Script_UseChest )
+	Call     MakeEntity     ( .Entity:YellowBlock ~Vec4d:salesman .Item:JamminJelly 80000000 ) % the original plan was to have a shopkeep here, but big lazy
+	Call     MakeEntity     ( .Entity:YellowBlock ~Vec4d:invblock .Item:StoneCap 80000000 )
+	Call	MakeItemEntity	( .Item:StarPiece 	  ~Vec3d:sp80 00000011 *Flag_KZN_2D )
+	Call     MakeEntity  	( .Entity:Signpost ~Vec4d:signpost 80000000 )
+	Call     AssignScript 	( $Script_SignPost8 )
+	Return
+	End
+}
+	
+	#new:Script $Script_MakeEntities90
+{
+	Call	MakeEntity		( .Entity:RedSwitch ~Vec4d:switch 80000000 )
+	Call	AssignScript	( $Script_PipeChange )
+	% Power Plus
+	Call	MakeEntity  	( .Entity:Chest ~Vec4d:chest90 00000000 80000000 )
+	Call	AssignFlag  	( *GameFlag[394])
+	Call	AssignScript 	( $Script_UseChest )
+	Call     MakeEntity     ( .Entity:YellowBlock ~Vec4d:salesman .Item:LifeShroom 80000000 ) % the original plan was to have a shopkeep here, but big lazy
+	Call     MakeEntity     ( .Entity:YellowBlock ~Vec4d:invblock .Item:RepelGel 80000000 )
+	Call	MakeItemEntity	( .Item:StarPiece 	  ~Vec3d:sp90 00000011 *Flag_KZN_2E )
+	Call     MakeEntity  	( .Entity:Signpost ~Vec4d:signpost 80000000 )
+	Call     AssignScript 	( $Script_SignPost9 )
+	Return
+	End
+}
+	
+	
+#new:Script $Script_SignPost1
+{
+    0:  Call     DisablePlayerInput 	( .True )
+   10:  Call     ShowMessageAtScreenPos 	( $Floor1 000000A0 00000028 ) % Private  
+   28:  Call     DisablePlayerInput 	( .False )
+   38:  Return
+   40:  End
+}
+   
+#new:Script $Script_SignPost2
+{
+    0:  Call     DisablePlayerInput 	( .True )
+   10:  Call     ShowMessageAtScreenPos 	( $Floor2 000000A0 00000028 ) % Private  
+   28:  Call     DisablePlayerInput 	( .False )
+   38:  Return
+   40:  End
+}
+   
+#new:Script $Script_SignPost3
+{
+    0:  Call     DisablePlayerInput 	( .True )
+   10:  Call     ShowMessageAtScreenPos 	( $Floor3 000000A0 00000028 ) % Private  
+   28:  Call     DisablePlayerInput 	( .False )
+   38:  Return
+   40:  End
+}
+   
+#new:Script $Script_SignPost4
+{
+    0:  Call     DisablePlayerInput 	( .True )
+   10:  Call     ShowMessageAtScreenPos 	( $Floor4 000000A0 00000028 ) % Private  
+   28:  Call     DisablePlayerInput 	( .False )
+   38:  Return
+   40:  End
+}
+   
+#new:Script $Script_SignPost5
+{
+    0:  Call     DisablePlayerInput 	( .True )
+   10:  Call     ShowMessageAtScreenPos 	( $Floor5 000000A0 00000028 ) % Private  
+   28:  Call     DisablePlayerInput 	( .False )
+   38:  Return
+   40:  End
+}
+   
+#new:Script $Script_SignPost6
+{
+    0:  Call     DisablePlayerInput 	( .True )
+   10:  Call     ShowMessageAtScreenPos 	( $Floor6 000000A0 00000028 ) % Private  
+   28:  Call     DisablePlayerInput 	( .False )
+   38:  Return
+   40:  End
+}
+   
+#new:Script $Script_SignPost7
+{
+    0:  Call     DisablePlayerInput 	( .True )
+   10:  Call     ShowMessageAtScreenPos 	( $Floor7 000000A0 00000028 ) % Private  
+   28:  Call     DisablePlayerInput 	( .False )
+   38:  Return
+   40:  End
+}
+   
+#new:Script $Script_SignPost8
+{
+    0:  Call     DisablePlayerInput 	( .True )
+   10:  Call     ShowMessageAtScreenPos 	( $Floor8 000000A0 00000028 ) % Private  
+   28:  Call     DisablePlayerInput 	( .False )
+   38:  Return
+   40:  End
+}
+   
+#new:Script $Script_SignPost9
+{
+    0:  Call     DisablePlayerInput 	( .True )
+   10:  Call     ShowMessageAtScreenPos 	( $Floor9 000000A0 00000028 ) % Private  
+   28:  Call     DisablePlayerInput 	( .False )
+   38:  Return
+   40:  End
+}
+   
+#string $Floor1
+{
+[DelayOff][Style Sign]
+[CenterX 255][Down 15]Floor 10[BR]
+[DelayOn][Wait][End]
+}
+
+#string $Floor2
+{
+[DelayOff][Style Sign]
+[CenterX 255][Down 15]Floor 20[BR]
+[DelayOn][Wait][End]
+}
+
+#string $Floor3
+{
+[DelayOff][Style Sign]
+[CenterX 255][Down 15]Floor 30[BR]
+[DelayOn][Wait][End]
+}
+
+#string $Floor4
+{
+[DelayOff][Style Sign]
+[CenterX 255][Down 15]Floor 40[BR]
+[DelayOn][Wait][End]
+}
+
+#string $Floor5
+{
+[DelayOff][Style Sign]
+[CenterX 255][Down 15]Floor 50[BR]
+[DelayOn][Wait][End]
+}
+
+#string $Floor6
+{
+[DelayOff][Style Sign]
+[CenterX 255][Down 15]Floor 60[BR]
+[DelayOn][Wait][End]
+}
+
+#string $Floor7
+{
+[DelayOff][Style Sign]
+[CenterX 255][Down 15]Floor 70[BR]
+[DelayOn][Wait][End]
+}
+
+#string $Floor8
+{
+[DelayOff][Style Sign]
+[CenterX 255][Down 15]Floor 80[BR]
+[DelayOn][Wait][End]
+}
+
+#string $Floor9
+{
+[DelayOff][Style Sign]
+[CenterX 255][Down 15]Floor 90[BR]
+[DelayOn][Wait][End]
+}
+	
+	#new:Script $Script_UseChest
+{
+	Switch 	.Floor
+		Case == 0000000A
+			Set  *Var[A]  .Item:Peekaboo
+			Set  *Var[B]  00000002 
+			Set  *GameFlag[38C]  .True 
+		Case == 00000014
+			Set  *Var[A]  .Item:ShrinkSmash
+			Set  *Var[B]  00000002 
+			Set  *GameFlag[38D]  .True 
+		Case == 0000001E
+			Set  *Var[A]  .Item:AutoMultibounce % Actually is Dizzy Dance
+			Set  *Var[B]  00000002 
+			Set  *GameFlag[38E]  .True 			
+		Case == 00000028
+			Set  *Var[A]  .Item:HPPlusX
+			Set  *Var[B]  00000002 
+			Set  *GameFlag[38F]  .True 
+		Case == 00000032
+			Set  *Var[A]  .Item:ShellCrack % Actually is Stop Smash
+			Set  *Var[B]  00000002 
+			Set  *GameFlag[390]  .True 
+		Case == 0000003C
+			Set  *Var[A]  .Item:FPPlusX
+			Set  *Var[B]  00000002 
+			Set  *GameFlag[391]  .True 
+		Case == 00000046
+			Set  *Var[A]  .Item:FeelingFine
+			Set  *Var[B]  00000002
+			Set  *GameFlag[392]  .True 
+		Case == 00000050
+			Set  *Var[A]  .Item:DefendPlusX 
+			Set  *Var[B]  00000002
+			Set  *GameFlag[393]  .True 
+		Case == 0000005A
+			Set  *Var[A]  .Item:PowerPlusX
+			Set  *Var[B]  00000002 
+			Set  *GameFlag[394]  .True 
+	EndSwitch
+	ExecWait $Script_OpenChest 
+	Return
+	End
+}
+
+	#new:Script $Script_OpenChest
+{
+	Call     DisablePlayerInput 	( .True )
+	Set  *Var[0]  *Var[A] 
+	If  *Var[A]  !=  00000000 
+		ExecWait $Script_GetItem 
+	EndIf
+	Switch  *Var[B] 
+		Case  ==  00000000 
+			Call     AddItem     	( *Var[A] *Var[0] )
+		Case  ==  00000001 
+			Call     AddKeyItem  	( *Var[A] )
+		Case  ==  00000002 
+			Call     AddBadge    	( *Var[A] *Var[0] )
+	EndSwitch
+	Wait     0000000F 
+	Call     DisablePlayerInput 	( .False )
+	Return
+	End
+}
+	
+	#new:Script $Script_GetItem
+{
+	SetGroup 00000000 
+	Call     SetTimeFreezeMode ( 00000002 )
+	Wait     00000028 
+	Call     ShowGotItem 	( *Var[0] 00000000 00000000 )
+	Call     SetTimeFreezeMode ( 00000000 )
+	Return
+	End
+}
+	
+	
+
+	/%
+	#new:Script $Script_PipeChange
+	If .PipeBool == 00000000
+	ExecWait $Script_GetPipeWorking
+	Set .PipeBool 00000001
+	EndIf
+	If .FirstUse != 00000001
+		Call     ShowMessage     	( $FirstUse 000000A0 00000028 )
+		Set .FirstUse 00000001
+	EndIf
+	Call	PlaySound		( 0000000C )
+	If  *Flag_KMR_61 == 00000000
+		Set *Flag_KMR_61 00000001
+		 Call     DisablePlayerInput 	( .True )
+         Call     ShowMessage     	( $GoingUp 000000A0 00000028 )
+	     Call     DisablePlayerInput 	( .False )
+		 If *GameFlag00C == 00000000
+		 	Set 	.PipeBool 00000001
+		EndIf
+	Else
+		Set *Flag_KMR_61 00000000
+		 Call     DisablePlayerInput 	( .True )
+         Call     ShowMessage     	( $GoingDown 000000A0 00000028 )
+	     Call     DisablePlayerInput 	( .False )
+		 If *GameFlag00C == 00000000
+		 Set 	.PipeBool 00000001
+		 EndIf
+	EndIf
+ 	Return
+	End	
+	%/
+
+#define .FirstUse *GameByte[1B3]
+	
+#new:Script $Script_PipeChange
+{
+	If .PipeBool == 00000000
+	ExecWait $Script_GetPipeWorking
+	Set .PipeBool 00000001
+	EndIf
+	If .FirstUse != 00000001
+		Call	PlaySound		( 0000000C )
+		Call     DisablePlayerInput 	( .True )
+		Call     ShowMessageAtScreenPos     	( $FirstUse 000000A0 00000028 )
+		Call     DisablePlayerInput 	( .False )
+		Set .FirstUse 00000001
+	EndIf
+	Call	PlaySound		( 0000000C )
+	If  *Flag_KMR_61 == 00000000
+		Set *Flag_KMR_61 00000001
+		 Call     DisablePlayerInput 	( .True )
+         Call     ShowMessageAtScreenPos     	( $GoingUp 000000A0 00000028 )
+	     Call     DisablePlayerInput 	( .False )
+		 If *GameFlag00C == 00000000
+		 	Set 	.PipeBool 00000001
+		EndIf
+	Else
+		Set *Flag_KMR_61 00000000
+		 Call     DisablePlayerInput 	( .True )
+         Call     ShowMessageAtScreenPos     	( $GoingDown 000000A0 00000028 )
+	     Call     DisablePlayerInput 	( .False )
+		 If *GameFlag00C == 00000000
+		 Set 	.PipeBool 00000001
+		 EndIf
+	EndIf
+ 	Return
+	End
+}
+	
+/% #string $GoingUp
+{
+[DelayOff][STYLE:INSPECT][...]
+The pipe is heading up.
+[DelayOn][WAIT][END]
+}
+
+#string $GoingDown
+{
+[DelayOff][STYLE:INSPECT][...]
+The pipe is heading down.
+[DelayOn][WAIT][END]
+}%/
+
+#string $GoingUp
+{
+[DelayOff][Style Inspect]
+USE THE PIPE AND YOU WILL[BR]
+ASCEND TO THE TOP.[BR]
+[DelayOn][Wait][End]
+}
+
+#string $GoingDown
+{
+[DelayOff][Style Inspect]
+USE THE PIPE AND YOU WILL[BR]
+DESCEND ONE FLOOR.[BR]
+[DelayOn][Wait][End]
+}
+
+#string $FirstUse
+{
+[DelayOff][Style Inspect]
+STRIKING THIS SWITCH WILL[BR]
+OPEN THE WAY. STRIKING AGAIN[BR]
+WILL REVERSE THE DIRECTION.[BR]
+[DelayOn][Wait][End]
+}
+	
+	#new:Script $Script_WallTalk
+{
+	Switch 	.Floor
+		Case == 0000000A
+	     Call     DisablePlayerInput 	( .True )
+         Call     ShowMessageAtScreenPos     	( $StoryPart1 000000A0 00000028 )
+	     Call     DisablePlayerInput 	( .False )
+		Case == 00000014
+	     Call     DisablePlayerInput 	( .True )
+         Call     ShowMessageAtScreenPos     	( $StoryPart2 000000A0 00000028 )
+	     Call     DisablePlayerInput 	( .False )
+		Case == 0000001E
+	     Call     DisablePlayerInput 	( .True )
+         Call     ShowMessageAtScreenPos     	( $StoryPart3 000000A0 00000028 )
+	     Call     DisablePlayerInput 	( .False )
+		Case == 00000028
+		 Call     DisablePlayerInput 	( .True )
+         Call     ShowMessageAtScreenPos     	( $StoryPart4 000000A0 00000028 )
+	     Call     DisablePlayerInput 	( .False )
+		Case == 00000032
+		 Call     DisablePlayerInput 	( .True )
+         Call     ShowMessageAtScreenPos     	( $StoryPart5 000000A0 00000028 )
+	     Call     DisablePlayerInput 	( .False )
+		Case == 0000003C
+		 Call     DisablePlayerInput 	( .True )
+         Call     ShowMessageAtScreenPos     	( $StoryPart6 000000A0 00000028 )
+	     Call     DisablePlayerInput 	( .False )
+		Case == 00000046
+		 Call     DisablePlayerInput 	( .True )
+         Call     ShowMessageAtScreenPos     	( $StoryPart7 000000A0 00000028 )
+	     Call     DisablePlayerInput 	( .False )
+		Case == 00000050
+		 Call     DisablePlayerInput 	( .True )
+         Call     ShowMessageAtScreenPos     	( $StoryPart8 000000A0 00000028 )
+	     Call     DisablePlayerInput 	( .False )
+		Case == 0000005A
+		 Call     DisablePlayerInput 	( .True )
+         Call     ShowMessageAtScreenPos     	( $StoryPart9 000000A0 00000028 )
+	     Call     DisablePlayerInput 	( .False )
+	EndSwitch
+Return
+End
+}
+
+#string $StoryPart1
+{
+[DelayOff][Style Inspect]
+AS YOU TRAVEL DOWN[BR]
+IN THIS VOYAGE BELOW[BR]
+[Wait][Next]
+YOU WILL FIND DANGER[BR]
+AND GIFTS WE BESTOW[BR]
+[Wait][Next]
+EACH REST GIVES THE TALE[BR]
+OF ONE WHO HELPED BUILD[BR]
+[Wait][Next]
+THEY HAVE ALL DONE A PART[BR]
+THIS WORLD THEY HAVE FILLED[BR]
+[DelayOn][Wait][End]
+}
+
+#string $StoryPart2
+{
+[DelayOff][Style Inspect]
+A SHY FELLOW ONCE SAID[BR]
+HE WANTED HIS NAME KNOWN[BR]
+[Wait][Next]
+HIS TIMING WAS TERRIBLE[BR]
+BUT HE WAITED LIKE A STONE[BR]
+[Wait][Next]
+THOUGH YEARS PAST[BR]
+AND PROMISES WERE BROKEN[BR]
+[Wait][Next]
+HIS NAME CAN BE FOUND[BR]
+BY A NEW POWER AWOKEN[BR]
+[DelayOn][Wait][End]
+}
+
+#string $StoryPart3
+{
+[DelayOff][Style Inspect]
+AN IMPATIENT YOUNG STAR[BR]
+IS BEGGING FOR RELEASE[BR]
+[Wait][Next]
+THE ONE FUN GUY[BR]
+WHO'S CRIES NEVER CEASE[BR]
+[Wait][Next]
+HIS TAUNTING RELENTLESS[BR]
+OF DECEMBERS LONG PAST[BR]
+[Wait][Next]
+HIS PATIENCE REWARDED[BR]
+WITH THE QUEST AT LAST[BR]
+[DelayOn][Wait][End]
+}
+
+#string $StoryPart4
+{
+[DelayOff][Style Inspect]
+AN ARMY OF ONE[BR]
+BRINGS MONSTERS FROM AFAR[BR]
+[Wait][Next]
+YOU WOULD NOT FARE WELL[BR]
+SHOULD YOU HAVE TO SPAR[BR]
+[Wait][Next]
+WITH BRISTLES AND BONES[BR]
+SHE ASSEMBLES YOUR DOOM[BR]
+[Wait][Next]
+YOU KNOW HER AS MIH[BR]
+A CLASSY NOM DE PLUME[BR]
+[DelayOn][Wait][End]
+}
+
+#string $StoryPart5
+{
+[DelayOff][Style Inspect]
+A SINNER DEFEATS[BR]
+AN EVIL ARMY OF THREE[BR]
+[Wait][Next]
+DESPITE THE NEXT FOUR[BR]
+HE WOULD NOT TAKE A KNEE[BR]
+[Wait][Next]
+NOW THE EVIL IS FIVE[BR]
+AND THE SINNER TO BLAME[BR]
+[Wait][Next]
+BUT STILL THEM HE CONQUERED[BR]
+AVOIDING THE SHAME[BR]
+[DelayOn][Wait][End]
+}
+
+#string $StoryPart6
+{
+[DelayOff][Style Inspect]
+A BOLD ADVENTURER[BR]
+WITH A RADIAN OF TWO[BR]
+[Wait][Next]
+CALLS ONLOOKERS APLENTY[BR]
+TO SEE SOMETHING NEW[BR]
+[Wait][Next]
+THROUGH TRIALS AND PAIN[BR]
+HE NEVER WAS BENT[BR]
+[Wait][Next]
+UNTIL HE WAS STRUCK[BR]
+BY TWENTY-FIVE PERCENT[BR]
+[Wait][Next]
+HIS LUCK HAD RUN OUT[BR]
+THOUGH HE GAVE IT HIS BEST[BR]
+[Wait][Next]
+BUT TO DEFEAT THE OLD MAN[BR]
+HE CONTINUES HIS QUEST[BR]
+[DelayOn][Wait][End]
+}
+
+#string $StoryPart7
+{
+[DelayOff][Style Inspect]
+THE FACELESS PLAYER[BR]
+CREATES MANY A TERROR[BR]
+[Wait][Next]
+LIKE A COWARD SO LARGE[BR]
+WITH AN ATTACK SO CLEVER[BR]
+[Wait][Next]
+A RAVEN QUITE GENEROUS[BR]
+WHO TESTS YOUR POWER[BR]
+[Wait][Next]
+A STINGY OLD MAN[BR]
+WHO MAKES THE STRONG COWER[BR]
+[Wait][Next]
+THE PLAYER BRINGS LIFE[BR]
+TO THESE AND YET MORE[BR]
+[Wait][Next]
+IF YOU'VE GUTS TO TRY[BR]
+YOU COULD SETTLE THE SCORE[BR]
+[DelayOn][Wait][End]
+}
+
+#string $StoryPart8
+{
+[DelayOff][Style Inspect]
+THE DOWNPOURING RAIN[BR]
+BROUGHT GOOD FORTUNE TO ALL[BR]
+[Wait][Next]
+ANY FOOL WHO SHOULD SELL HIM[BR]
+SOON AFTER WOULD FALL[BR]
+[Wait][Next]
+KEPT HIDDEN IN DARKNESS[BR]
+AND DELAYED MANY TIMES[BR]
+[Wait][Next]
+BUT ONCE IT WAS FINISHED[BR]
+HE HAD PAID FOR HIS CRIMES[BR]
+[Wait][Next]
+THE RAIN IS A MYSTERY[BR]
+HIDDEN WONDERS ABOUND[BR]
+[Wait][Next]
+SHOULD YOU REACH THE BOTTOM[BR]
+HIS POWER SHALL BE FOUND[BR]
+[DelayOn][Wait][End]
+}
+
+#string $StoryPart9
+{
+[DelayOff][Style Inspect]
+AN EMPEROR SO EVIL[BR]
+HIS LAND BROUGHT BUT DEATH[BR]
+[Wait][Next]
+MONSTERS SO VILE[BR]
+THEY STOLE EVERY BREATH[BR]
+[Wait][Next]
+INVINCIBLE CANNONS[BR]
+AND CHOMPS THAT CAN FAKE[BR]
+[Wait][Next]
+A FIERY-TONGUED PLANT[BR]
+THAT LEAVES RUIN IN ITS WAKE[BR]
+[Wait][Next]
+A ONCE LAUGHABLE FOE[BR]
+THAT BLOCKS A FROSTED PATH[BR]
+[Wait][Next]
+BUT ONLY TEN FLOORS MORE[BR]
+AND YOU HAVE THE LAST LAUGH[BR]
+[DelayOn][Wait][End]
+}
+
+/%
+Your poetry's terrible.
+Your scansion is stale
+At least I'm in here
+To fix it without fail
+I won't take the credit
+I know what I've done
+With the exception of Jr.
+this game's not that fun
+But still, here I am working
+I don't know what to say
+I guess at least now
+there's no commas astray
+So what's left is this poem
+just a few folks will see.
+If you're reading this, well...
+
+Remember me.
+
+--Quackles, Feb. 2020
+%/
+
+	
+#new:Function_Init $Function_Init
+{
+	PUSH	RA
+	/% Override map geometry
+	LIA       A0, 800D9230
+	LIA       A1, "XXX_shape"
+	JAL       {Func:StringPrintf}
+	RESERVED
+	% Override map collision
+	LIA       A0, 800D91E0
+	LIA       A1, "XXX_hit"
+	JAL       {Func:StringPrintf}
+	RESERVED
+	%/
+	 %Override texture package
+	LIA		A0, 800B0CF0
+	LIA		A1, "kpa_tex"
+	JAL		~Func:sprintf
+	RESERVED
+	% Done
+	DADDU	V0, R0, R0
+	JPOP	RA
+}
+
+#new:EntryList $EntryList
+{
+%{Vec4f:Entry0} % 0, 50, 0
+00000000 42480000 00000000 00000000
+%{Vec4f:Entry1} % 0, 700, 0
+00000000 442f0000 00000000 00000000
+0` c2b40000 0` 0` %that's -90
+}
+
+
+#new:Script $Script_RaisePipe
+{
+	Wait     0000000A 
+	Call     PlaySound  ( .PipeRaiseSound )
+	Set      .PipeBool 	00000001
+	Unbind
+	Return
+	End
+}
+
+#new:Script $Script_UseBluePipe
+{
+	If *Flag_KMR_61 == 00000001
+	Call     GotoMap    ( "kmr_38" 1 )
+	Return
+	EndIf
+	Set *WarpLock FFFFFFFF %no warp on pit floors
+	Switch 	.Floor
+		Case == 0000000A
+			Call     GotoMap    ( "pit_06" 0 )
+		Case == 00000014
+			Call     GotoMap    ( "pit_07" 0 )
+		Case == 0000001E
+			Call     GotoMap    ( "pit_08" 0 )
+		Case == 00000028
+			Call     GotoMap    ( "pit_09" 0 )
+		Case == 00000032
+			Call     GotoMap    ( "pit_10" 0 )
+		Case == 0000003C
+			Call     GotoMap    ( "pit_11" 0 )
+		Case == 00000046
+			Call     GotoMap    ( "pit_12" 0 )
+		Case == 00000050
+			Call     GotoMap    ( "pit_13" 0 )
+		Case == 0000005A
+			Call     GotoMap    ( "pit_14" 0 )
+	EndSwitch
+	Wait     00000064 
+	Return
+	End
+}
+
+#new:Script $Script_GetPipeWorking
+{
+	Bind     $Script_RaisePipe .Trigger:GameFlagSet .PipeBool 00000001 00000000
+	Call     MakeEntity  ( .Entity:BlueWarpPipe ~Vec4d:pipe 00000002 $Script_UseBluePipe ~Index:*GameFlag00C 80000000 )
+Return
+End
+}
+
+/%
+Rest Floors
+0B = 10 = Peekaboo (simple first reward) - No One
+16 = 20 = Shrink Smash (unused badge) - Funghi
+21 = 30 = Dizzy Dance (auto multibounce) - Balmz
+2C = 40 = HP Plus (an extra) - Mihdoko
+37 = 50 = Stop Stomp (shell crack) - Sin Biscuit - now Traveler's Parasol
+42 = 60 = FP Plus (an extra) - TwoPieRadian
+4D = 70 = Feeling Fine (you know what this is) - JaThePlayer
+58 = 80 = Defend Plus (an extra) - Rain
+63 = 90 = Power Plus (told you I wouldnt remove it) - Thamz
+%/

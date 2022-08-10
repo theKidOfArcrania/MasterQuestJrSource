@@ -1,0 +1,20 @@
+% Why was this even a thing?
+
+/%
+@ $Script_Main_EnterWalk
+{
+    0:  Set  *WorldMapLocation  00000016 
+   10:  Call     SetSpriteShading 	( FFFFFFFF )
+   20:  Call     SetCamPerspective 	( .Cam:Default 00000003 00000019 00000010 00001000 )
+   40:  Call     SetCamBGColor 	( .Cam:Default 00000000 00000000 00000000 )
+   5C:  Call     SetCamLeadPlayer 	( .Cam:Default .False )
+   70:  Call     SetCamEnabled 	( .Cam:Default .True )
+   84:  ExecWait $Script_802400C0 
+   90:  Call     ModifyColliderFlags 	( 00000000 ~Collider:deiliwtt 7FFFFE00 )
+   A8:  Set  *Var[0]  $Script_8024015C 
+   B8:  Exec     EnterWalk 
+   C4:  Wait     00000001 
+   D0:  Exec     $Script_80240050 
+   DC:  Return
+   E4:  End
+}

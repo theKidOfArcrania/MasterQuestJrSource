@@ -1,0 +1,356 @@
+% ====================================================
+% Bill Blaster
+% ====================================================
+
+@ $BillBlaster
+{
+[MaxHP]  5`b	% changed from 4
+}
+
+@ $DefenseTable_80219D20
+{
+.Element:Normal 00000002
+.Element:Fire   00000063
+.Element:End
+}
+
+@ $StatusTable_80219D2C
+{
+.Status:Normal      0`
+.Status:Default    0`
+.Status:Sleep       0`
+.Status:Poison      0`
+.Status:Frozen     0`
+.Status:Dizzy       0`
+.Status:Fear    0`
+.Status:Static      0`
+.Status:Paralyze    0`
+.Status:Shrink      0`
+.Status:Stop        0`
+.Status:DefaultTurnMod   0`
+.Status:SleepTurnMod      0`
+.Status:PoisonTurnMod     0`
+.Status:FrozenTurnMod     0`
+.Status:DizzyTurnMod      0`
+.Status:FearTurnMod   0`
+.Status:StaticTurnMod     0`
+.Status:ParalyzeTurnMod   0`
+.Status:ShrinkTurnMod     0`
+.Status:StopTurnMod       0`
+.Status:End
+}
+
+% ====================================================
+% Bullet Bill
+% ====================================================
+
+
+@ $BulletBill
+{
+[MaxHP]  2`b
+[Level]	6`b
+}
+
+@ $DefenseTable_80218F60
+{
+.Element:Normal		00000000    %heh heh
+.Element:Fire		00000063	% added fire immunity
+.Element:End
+}
+
+@ $Script_TakeTurn_802197C0
+{
+  [390]  Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 08000000 00000000 00000000 00000004 00000020 )
+}
+
+% ====================================================
+% Bomb-ombs
+% + Capable of spontaneous ignition
+% + Blast does 5 damage
+% ====================================================
+
+% bomb-ombs have a 50% chance to spontaneously ignite at the end of their turn	
+@ $Script_TakeTurn_8021C89C
+{
+	Call     UseIdleAnimation 	( .Actor:Self .False )
+	Call     EnableIdleScript 	( .Actor:Self .False )
+	Call     GetActorVar 		( .Actor:Self 00000008 *Var[0] )
+	If       *Var[0] ==  00000000 
+		ExecWait $Script_TackleAttack 
+		% new code begins
+		Call	RandInt	( 100` *Var[0] )
+		If		*Var[0]    <=    50` 
+			ExecWait   $Script_Ignite
+		EndIf
+		% new code ends
+	Else
+		ExecWait $Script_BlastAttack 
+		Return
+	EndIf
+	Call     EnableIdleScript 	( .Actor:Self .True )
+	Call     UseIdleAnimation 	( .Actor:Self .True )
+	Return
+	End
+}
+
+% increase bomb-omb blast damage to electrified player
+@ $Script_TackleAttack
+{
+[5F0]  Call   EnemyDamageTarget	( .Actor:Self *Var[0] 00000200 00000000 00000000 00000004 00000020 )
+}
+	
+% bomb-omb blast does 5 damage (was 2)
+@ $Script_BlastAttack
+{
+[418]  Call   EnemyDamageTarget	( .Actor:Self *Var[0] 10000200 00000000 00000000 00000004 00000020 )
+}
+
+@ $Bobomb
+{
+[MaxHP]         3`b 
+}
+
+@ $DefenseTable_8021A5A8
+{
+.Element:Normal     00000001
+.Element:Fire		00000063	% added fire immunity
+.Element:End
+}
+
+ % Koopa Troopa
+ 
+@ $KoopaTroopa
+{
+% stats
+[MaxHP]         4`b 
+}
+  
+@ $Script_TakeTurn_8021DD9C {
+  [AF8]  Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 00000000 0000FFFF 00000000 00000002 00000020 )
+}
+  
+  % Paratroopa
+  
+@ $Paratroopa
+{
+% stats
+[MaxHP]         4`b 
+}
+  
+@ $Script_TakeTurn_8021FA24 {
+  [86C]  Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 00000000 0000FFFF 00000000 00000003 00000020 )
+}
+  
+@ $Script_TakeTurn_80221DAC {
+  [AF8]  Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 00000000 0000FFFF 00000000 00000002 00000020 )     
+}
+
+% ====================================================
+% Clubba Miniboss
+% ====================================================
+
+% REMOVED BECAUSE MADE NO SENSE
+
+% ====================================================
+% Formation Changes
+% ====================================================
+
+#import SpikedParagoomba.bpat
+#import Bob-omb.bpat
+#import BlueNinjaKoopa.bpat
+
+/%
+@ $Bob-omb
+{
+% stats
+[Index]         DAb 
+[Level]         11`b
+}
+%/
+
+@ $Formation_00
+{
+$KoopaTroopa	 00000000 0000000A 00000000 00000000 00000000 00000000 
+$WNinjaKoopa     00000001 00000009 00000000 00000000 00000000 00000000 % imported
+$Paratroopa		 00000006 00000009 00000000 00000000 00000000 00000000 % added
+$Paratroopa		 00000007 00000008 00000000 00000000 00000000 00000000 % added
+}
+
+@ $Formation_01
+{
+$KoopaTroopa	00000001 0000000A 00000000 00000000 00000000 00000000 
+$KoopaTroopa	00000002 00000009 00000000 00000000 00000000 00000000 
+$WNinjaKoopa	00000003 00000008 00000000 00000000 00000000 00000000 % added
+}
+
+@ $Formation_03
+{
+$KoopaTroopa	    00000000 0000000A 00000000 00000000 00000000 00000000 
+$Bobomb			    00000001 00000009 00000000 00000000 00000000 00000000 
+$Bobomb			    00000002 00000008 00000000 00000000 00000000 00000000 % added
+$WNinjaKoopa     	00000003 00000007 00000000 00000000 00000000 00000000 % imported
+}
+
+@ $Formation_04
+{
+$KoopaTroopa	00000000 0000000A 00000000 00000000 00000000 00000000
+$Bobomb			00000001 00000009 00000000 00000000 00000000 00000000 
+$Bobomb			00000002 00000008 00000000 00000000 00000000 00000000 
+$Paratroopa     00000007 00000007 00000000 00000000 00000000 00000000
+}
+
+%was unused formation, now is the miniboss at the jail
+@ $Formation_19
+{
+$KoopaTroopa	00000000 0000000A 00000000 00000000 00000000 00000000
+$Bob-omb		00000001 00000009 00000000 00000000 00000000 00000000 
+$Bob-omb		00000002 00000008 00000000 00000000 00000000 00000000
+}
+
+@ $Formation_08
+{
+$Paratroopa		  00000004 0000000A 00000000 00000000 00000000 00000000
+$Bobomb		      00000001 00000009 00000000 00000000 00000000 00000000
+$Bobomb			  00000002 00000008 00000000 00000000 00000000 00000000 % added
+$SpikedParagoomba 00000006 00000007 00000000 00000000 00000000 00000000 
+}
+
+@ $Formation_0A
+{
+$Paratroopa		  00000004 0000000A 00000000 00000000 00000000 00000000  
+$WNinjaKoopa      00000001 00000009 00000000 00000000 00000000 00000000 % imported
+$WNinjaKoopa      00000002 00000008 00000000 00000000 00000000 00000000 % imported
+}
+
+@ $Formation_10
+{
+$Bobomb			  00000000 0000000A 00000000 00000000 00000000 00000000 
+$Paratroopa		  00000005 00000009 00000000 00000000 00000000 00000000 
+$SpikedParagoomba 00000006 00000008 00000000 00000000 00000000 00000000 % added
+$Bobomb		      00000002 00000007 00000000 00000000 00000000 00000000 % added
+}
+
+@ $Formation_16
+{
+$KoopaTroopa	00000000 0000000A 00000000 00000000 00000000 00000000 
+$Bobomb			00000001 00000009 00000000 00000000 00000000 00000000
+$BulletBill		00000002 00000008 00000000 00000000 00000000 00000000 
+}
+
+#new:Formation $0sFormation6_1B
+{
+$KoopaTroopa	  00000001 0000000A 00000000 00000000 00000000 00000000 
+$SpikedParagoomba 00000006 00000009 00000000 00000000 00000000 00000000 
+$WNinjaKoopa	  00000003 00000008 00000000 00000000 00000000 00000000 % added
+}
+
+#new:Formation $0sFormation7_1C
+{
+$KoopaTroopa 00000000 0000000A 00000000 00000000 00000000 00000000 
+$BulletBill	 00000001 00000009 00000000 00000000 00000000 00000000 
+$BulletBill	 00000002 00000008 00000000 00000000 00000000 00000000
+$Paratroopa	 00000007 00000007 00000000 00000000 00000000 00000000
+}
+
+#new:Formation $0sFormation8_1D
+{
+$Bobomb     00000000 0000000A 00000000 00000000 00000000 00000000
+$BulletBill 00000001 00000009 00000000 00000000 00000000 00000000 % added
+$Bobomb     00000002 00000008 00000000 00000000 00000000 00000000 
+$BulletBill 00000003 00000007 00000000 00000000 00000000 00000000
+}
+
+#new:Formation $0sFormation9_1E
+{
+$Bobomb		      00000000 0000000A 00000000 00000000 00000000 00000000
+$WNinjaKoopa	  00000001 00000009 00000000 00000000 00000000 00000000 % added
+$WNinjaKoopa	  00000002 00000008 00000000 00000000 00000000 00000000 % added
+$WNinjaKoopa	  00000003 00000007 00000000 00000000 00000000 00000000 % added
+}
+
+@ $Vector3D_80218B90
+{
+30` 0` -25`
+}
+
+@ $Vector3D_80218B9C
+{
+60` 0` -5`
+}
+
+@ $Vector3D_80218BA8
+{
+90` 0` 15`
+}
+
+@ $Formation_17
+{
+$BillBlaster $Vector3D_80218B90 0000000A 00000000 00000000 00000000 00000000 
+$BillBlaster $Vector3D_80218B9C 00000009 00000000 00000000 00000000 00000000 
+$BillBlaster $Vector3D_80218BA8 00000008 00000000 00000000 00000000 00000000 
+}
+
+@ $FormationTable
+{
+$SJIS_80227E8C 00000004 $Formation_00 $Stage_80222B2C 00000000 
+$SJIS_80227E80 00000003 $Formation_01 $Stage_80222B2C 00000000 
+$SJIS_80227E74 00000003 $Formation_02 $Stage_80222B2C 00000000 
+$SJIS_80227E60 00000004 $Formation_03 $Stage_80222B2C 00000000 
+$SJIS_80227E4C 00000004 $Formation_04 $Stage_80222B2C 00000000 
+$SJIS_80227E38 00000004 $Formation_05 $Stage_80222B2C 00000000 
+$SJIS_80227E24 00000003 $Formation_06 $Stage_80222B2C 00000000 
+$SJIS_80227E0C 00000004 $Formation_07 $Stage_80222B2C 00000000 
+$SJIS_80227E00 00000004 $Formation_08 $Stage_80222B2C 00000000 
+$SJIS_80227DF4 00000003 $Formation_09 $Stage_80222B2C 00000000 
+$SJIS_80227DE0 00000003 $Formation_0A $Stage_80222B2C 00000000 
+$SJIS_80227DC4 00000003 $Formation_0B $Stage_80222B2C 00000000 
+$SJIS_80227DA0 00000004 $Formation_0C $Stage_80222B2C 00000000 
+$SJIS_80227D88 00000003 $Formation_0D $Stage_80222B2C 00000000 
+$SJIS_80227D70 00000004 $Formation_0E $Stage_80222B2C 00000000 
+$SJIS_80227D64 00000001 $Formation_0F $Stage_80222B2C 00000000 
+$SJIS_80227D58 00000004 $Formation_10 $Stage_80222B2C 00000000 
+$SJIS_80227D4C 00000003 $Formation_11 $Stage_80222B2C 00000000 
+$SJIS_80227D40 00000004 $Formation_12 $Stage_80222B2C 00000000 
+$SJIS_80227D2C 00000002 $Formation_13 $Stage_80222B2C 00000000 
+$SJIS_80227D18 00000003 $Formation_14 $Stage_80222B2C 00000000 
+$SJIS_80227D04 00000003 $Formation_15 $Stage_80222B2C 00000000 
+$SJIS_80227E4C 00000003 $Formation_16 $Stage_80222B2C 00000000 
+$SJIS_80227CF0 00000004 $Formation_17 $Stage_80222B2C 00000000 
+$SJIS_80227CE4 00000002 $Formation_18 $Stage_80222B2C 00000000 
+$SJIS_80227CDC 00000003 $Formation_19 $Stage_80222B2C 00000000 % repurposed for miniboss
+$SJIS_80227CD0 00000003 $Formation_1A $Stage_80222B2C 00000000 
+00000000 00000003 $0sFormation6_1B $AncientStage 00000000 %These formations are
+00000000 00000004 $0sFormation7_1C $AncientStage 00000000 %for the pit of 100 trials
+00000000 00000004 $0sFormation8_1D $AncientStage 00000000 %hopefully this works okay
+00000000 00000004 $0sFormation9_1E $AncientStage 00000000 
+00000000 00000000 00000000 00000000 00000000
+00000000 00000000 00000000 00000000 00000000 
+}
+
+#new:Stage $AncientStage
+{
+"kpa_tex"
+"kmr_bt07_shape"
+"kmr_bt07_hit"
+$Script_BeforeBoss 
+$Script_AfterBoss
+00000000 
+00000000
+00000000 
+00000000 
+00000000 
+}
+
+#new:Script $Script_BeforeBoss
+{
+	Call	SetSpriteShading 	( FFFFFFFF )
+	Call	SetCamBGColor 	( 00000001 00000000 00000000 00000000 )
+	Return
+	End
+}
+
+#new:Script $Script_AfterBoss
+{
+	Return
+	End 
+}

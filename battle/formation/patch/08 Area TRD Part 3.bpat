@@ -1,0 +1,51 @@
+#import Disastar.bpat
+#import ShadowPeach.bpat
+#import ShadowTwink.bpat
+
+@ $FormationTable
+{
+$SJIS_80218FF0 00000001 $Formation_00 $Stage_80218FC0 00000000 
+00000000 00000001 $Formation_01 $Stage_AncientCave 00000000 
+00000000 00000002 $Formation_02 $Stage_AncientCave 00000000 
+00000000 00000000 00000000 00000000 00000000 % unused
+}
+
+#new:Formation $Formation_01
+{
+$Disastar 00000002 0000000A 00000000 00000000 00000000 00000000 
+}
+
+#new:Formation $Formation_02
+{
+$ShadowPeach     00000002 0000000A 00000000 00000000 00000000 00000000 
+$ShadowTwink     00000007 0000000A 00000000 00000000 00000000 00000000
+}
+
+#new:Stage $Stage_AncientCave
+{
+$ASCII_koopatex  % kmr_tex
+$ASCII_bt08shape  % kmr_bt07_shape
+$ASCII_bt08hit  % kmr_bt07_hit
+00000000 %$Script_BeforeBattle_80220E28 
+00000000 %$Script_AfterBattle_80220EAC 
+00000000
+00000000 %$ForegroundModelList_80220EBC 
+00000000 
+00000000 
+00000000 
+}
+
+#new:ASCII $ASCII_bt08hit
+{
+"kmr_bt10_hit"
+}
+
+#new:ASCII $ASCII_bt08shape
+{
+"kmr_bt10_shape"
+}
+
+#new:ASCII $ASCII_koopatex
+{
+"kpa_tex"
+}

@@ -1,0 +1,189 @@
+% CLOSE CALL GIVING 1 DEFENSE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    
+
+/% %guess what? this is the old version, where we had to check for close call and last stand at once. Now, instead, we check for close call only. Neo Last Stand is in DoublePain.patch
+@Hook 1A6220
+%Close Call
+    JAL         $IsBadgeEquiped
+    ADDIU       A0, R0, 112             % id of badge (Close Call = 112)
+    BEQ         A0, R0, .NoCloseCall    % Branch if Close Call is not equipped
+    NOP
+%Close Call is equipped
+    ADDIU       S0, S0, FFFFFFFF        % Reduces damage by 1
+.NoCloseCall
+%we kinda overwrote the ‘check for last stand’ code to hook this, so we check for last stand ourselves
+%Last Stand
+    JAL         $IsBadgeEquiped
+    ADDIU       A0, R0, 111             % Id of badge (Last Stand = 111)
+    J           80277948    % the game’s own code expects the result of the check to be in V0
+    COPY    V0, A0      % so we return there, but we copy the result we got (in A0) over to V0 first
+%/
+    
+/% we have exactly six lines to do the new version in:
+  514:  JAL     $Function_802672AC                    
+  518:  ADDIU   A1, R0, 20     %testing ability '20'
+  51C:  BEQ     V0, R0, .o52C  %if last stand inactive, we jump down 
+  520:  SRL     V0, S0, 1F
+  524:  ADDU    V0, S0, V0    %last stand procs here
+  528:  SRA     S0, V0, 1
+  %/
+  
+@Function 1A6220 %inline close call
+{
+  JAL         $IsBadgeEquiped
+    ADDIU       A0, R0, 112  
+    BEQ     A0, R0, .NoCloseCall
+    NOP 
+    %actually do close call
+    ADDIU   S0, S0, FFFF %damage -1
+    .NoCloseCall
+    NOP     %overwrite sixth Last Stand line
+}
+
+% double Pain, neo last stand
+@Hook 1A641C %800D1720+1A641C = 80277B3C
+{
+BNE   S6, R0, .flush  %S6 has the target actor ID. If they're not Mario (0000), bail out! This isn't supposed to run in that case. (this check is spin smash's fault)
+NOP
+JAL     $IsBadgeEquiped
+ADDIU   A0, R0, 12D % id of badge (Double Pain)
+BEQ     A0, R0, .laststand    % break if badge not equipped
+NOP
+% badge is equipped
+% double the damage value
+ADDU    S0, S0, S0
+.laststand
+LBU   V0, 1B8 (S3)  %check Mario's HP
+SLTI  A0, V0, 6
+BEQL  A0, R0, .flush % If Mario's not in danger, don't check for Last Stand
+NOP
+JAL   $IsBadgeEquiped
+ADDIU   A0, R0, 111 % id of last stand
+BEQ   A0, R0, .flush  % If badge isn't equipped, don't _apply_ Last Stand
+NOP
+%last stand
+ADDIU S0, S0, 1 % +1 to round damage up (only relevant if double pain doesn't proc)
+SRA   S0, S0, 1 % divide damage by 2
+.flush %write HP
+% we shouldn't have to write a check for if damage is <= 0 - I think it's checked in DamageTargetCalc +674
+% deduct from HP
+LBU     V0, 1B8 (S3)
+SUBU    V0, V0, S0
+J       80277B4C
+SB      V0, 1B8 (S3)
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+% REMOVING LUCK FROM [PRETTY LUCKY, LUCKY DAY, CLOSE CALL] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+@Hook 1A5C28        % Removing Lucky Badges     
+{
+J           80277410     
+NOP
+}
+
+/%
+@Hook 1A5C28        % Removing Lucky Badges
+    J           802773A8
+    NOP
+%/
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+% PRETTY LUCKY GIVING SOME EXTRA SP %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+#new:Function $FixSPOverflow
+{
+	PUSH t0, t1, t2
+	LAB t0, 8010F520 %current sp as int
+	LAB t1, 8010F51E %starspirits saved (max SP)
+	SLT t2, t0, t1 %if current sp is less than max, store 01 into t2
+	BNE t2, r0, .end %if t2 = 1 (not 0)
+	NOP
+	SAB t1, 8010F520
+	SAB r0, 8010F521
+    .end
+	POP t0, t1, t2
+	JR RA
+	NOP
+}
+
+@Hook 1726F0                                % Hooking into the SP Regen Function
+{
+  PUSH        V0                            % Putting the registers onto the stack to work with them
+  JAL         $IsBadgeEquiped               % Check for Pretty Lucky
+  ADDIU       A0, R0, F1                    % id of badge (Pretty Lucky - F1) - HAS TO BE LOADED INTO A0 FOR $IsBadgeEquiped
+  BEQ         A0, R0, .NotEquipped          % Branch on the badge NOT being equipped (GoTo .NotEquipped)
+  NOP                                       % Nullpointer below the BEQ, because a BEQ ALWAYS reads the next line too
+  ORI 		  v0, r0, 0001
+  SAB 		  v0, 8010EFAF 					% If 01, star appears
+  LIO         S0, $SPSubtractArguments3      % Load the Arguments for SPSubtractMainFunction
+  JAL         $SPSubtractMainFunction       % Execute SPSubtractMainFunction
+  NOP                                       % Nullpointer below the JAL, because a JAL ALWAYS reads the next line too
+  JAL         $FixSPOverflow                
+  NOP
+  ADDIU       V0, R0, 2                     % Set V0 to == 2 so the Function can return
+  POP         V0                            % Clearing/Emptying the registers by removing them from the stack
+  ADDIU       V0, R0, 2                     % Set V0 to == 2 so the Function can return
+  J           80243E14                      % Return to the Script
+  NOP                                       % Nullpointer below the J, because a J ALWAYS reads the next line too
+  .NotEquipped
+  ORI 		  v0, r0, 0000
+  SAB 		  v0, 8010EFAF 					% If 00, no star appears
+  LIO         S0, $SPSubtractArgument2      % Load the Arguments for SPSubtractMainFunction
+  JAL         $SPSubtractMainFunction       % Execute SPSubtractMainFunction
+  NOP                                       % Nullpointer below the JAL, because a JAL ALWAYS reads the next line too
+  JAL         $FixSPOverflow                
+  NOP
+  ADDIU       V0, R0, 2                     % Set V0 to == 2 so the Function can return
+  POP         V0                            % Clearing/Emptying the registers by removing them from the stack
+  ADDIU       V0, R0, 2                     % Set V0 to == 2 so the Function can return
+  J           80243E14                      % Return to the Script
+  NOP                                       % Nullpointer below the J, because a J ALWAYS reads the next line too
+}
+
+#new:Data $SPSubtractArguments3
+{
+FFFFFFFF 000000C0                           % DO NOT CHANGE - It doubles the regen!
+}
+
+#new:Data $SPSubtractArgument2
+{
+FFFFFFFF 000000E0
+}
+
+@Hook 173550 % % 00173330 --> 80244A50 + 220
+{
+%so what I thought was an end-of-battle hook was really every frame... D:
+%this hooks the actual end battle fn
+    JAL     $SetGamebyte034_to_07
+        NOP
+    LB      V1, 8A (S2) %in original code
+    J        80244C78    %80244A50 + 228
+    LI      V0, 4        %in original code
+}
+
+#export:Function $GiveMarioInvisibiltyToEnemies
+{
+PUSH t0, ra
+ORI t0, r0, 0009
+SAW t0, 8010EBB0
+POP t0, ra
+JR RA
+NOP
+}
+
+
+#export:Function $RemoveMarioInvisibilityToEnemies
+{
+SAW r0, 8010EBB0
+JR RA
+NOP
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

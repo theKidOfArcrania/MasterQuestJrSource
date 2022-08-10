@@ -1,0 +1,39 @@
+@ $EntryList
+{
+~Vec4f:Entry0 % -730.0    0.0    0.0   90.0
+~Vec4f:Entry1 %  730.0    0.0    0.0  270.0
+~Vec4f:EntryNew %  730.0    0.0    0.0  270.0
+}
+
+@ $Header
+{
+00000000 00000000 00000000 00000000 
+$Script_Main_EnterWalk $EntryList 00000003 00000000 
+00000000 00000000 00000000 00000000 
+00000000 00000000 80200000 0019012D 
+}
+
+@ $Script_80240A68
+{
+    0:  Bind     $Script_ExitWalk_802409B0 .Trigger:FloorAbove ~Collider:deiliw 00000001 00000000 
+   1C:  Bind     $Script_ExitWalk_80240A0C .Trigger:FloorAbove ~Collider:deilie 00000001 00000000
+        Bind     $Script_exitnew1 .Trigger:FloorAbove ~Collider:exitnew 00000001 00000000   
+   38:  Return
+   40:  End
+}
+   
+   #new:Script $Script_exitnew1
+{
+    0:  SetGroup 0000001B 
+    C:  Call     UseExitHeading ( 0000003C 00000002 )
+   20:  Exec     ExitWalk 
+   2C:  Call     GotoMap     	( "sam_16" 00000001 )
+   40:  Wait     00000064 
+   4C:  Return
+   54:  End
+}
+   
+@ $ASCII_80242368
+{
+"sam_14"
+}

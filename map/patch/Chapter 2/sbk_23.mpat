@@ -1,0 +1,10 @@
+
+% Overwrite Tweester path points since we've modified them in the editor.
+@ $TweesterPath_802403C0
+{
+~Vec3d:TweesterPath_802403C0_1
+~Vec3d:TweesterPath_802403C0_2
+~Vec3d:TweesterPath_802403C0_3
+~Vec3d:TweesterPath_802403C0_4
+80000001
+}

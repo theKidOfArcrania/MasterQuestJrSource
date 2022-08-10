@@ -1,0 +1,169 @@
+
+%% SwooperChanges
+
+@ $Swooper
+{
+% stats
+[MaxHP]         5`b %tbh i forget if i changed this
+}
+
+@ $Script_8021AB84 {
+  [A0]  	Call     SetActorSpeed 	( .Actor:Self *Fixed[16.0] )
+  [170]  	Call     SetActorSpeed 	( .Actor:Self *Fixed[16.0] )
+  [4EC]  Call     SetActorSpeed 	( .Actor:Self *Fixed[16.0] )
+  [594]  Call     SetActorSpeed 	( .Actor:Self *Fixed[25.0] )
+  [5E8]  Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 00000000 00000000 00000000 00000003 00000020 )
+}
+  
+@ $Script_TakeTurn_8021B274 {
+  [194]  Call     SetActorSpeed 	( .Actor:Self *Fixed[10.0] )
+  [40C]  Call     SetActorSpeed 	( .Actor:Self *Fixed[8.0] )
+  [45C]  Call     SetActorSpeed 	( .Actor:Self *Fixed[10.0] )
+  [4B0]  Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 00000000 00000000 00000000 00000002 00000020 )
+}
+
+% ====================================================
+% Swoopula
+% + Much faster blood sucking (92 -> 50 frames)
+% ====================================================
+
+@ $Swoopula
+{
+% stats
+[Index]        3Ab 
+[Level]        22`b 
+[MaxHP]        9`b 
+}
+
+@ $Script_8021CB94
+{
+[954]  		Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 08000000 00000000 00000000 00000005 00000040 )
+}
+
+@ $Script_TakeTurn_8021E7B4
+{
+[55C]	Wait     2	% was 21`
+[830]  	Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 18000000 00000000 00000000 00000005 00000040 ) 
+[858]	Wait     3	% was 30` 
+[954]	Loop     2	% was 21`
+[F7C]   Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 1A000000 00000000 00000000 00000005 00000040 )  
+[11B8]	Loop     4	% was 30` 
+}
+
+@ $Script_8021CB94
+{
+[694]	Wait     3	% was 21`
+[954]  	Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 18000000 00000000 00000000 00000005 00000040 )
+[97C]	Wait     6	% was 30`
+[A78]	Loop     3	% was 21`
+[184C]  Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 1A000000 00000000 00000000 00000005 00000040 ) 
+[1A88]	Loop     6	% was 30`
+}
+
+% ====================================================
+% Formation Changes
+% ====================================================
+
+#import Boo.bpat
+#import AntiBlooper.bpat
+#import 10_AntiGuy.bpat
+
+@ $10_AntiGuy
+{
+[Level] 0`b
+}
+
+@ $Script_Init_80221A60_10
+{
+    0:  Call     BindTakeTurn 	( .Actor:Self $Script_TakeTurn_802233AC_10 )
+   80:  Call     GetActorPos 	( .Actor:Enemy0 *Var[0] *Var[1] *Var[2] )
+   9C:  Add  *Var[1]  0000000A 
+   AC:  Sub  *Var[2]  0000000A 
+   BC:  Call     SetActorPos 	( .Actor:Self *Var[0] *Var[1] *Var[2] )
+   D8:  Set  *Var[1]  00000014 
+   E8:  Call     SetActorJumpGravity 	( .Actor:Self *Fixed[0.30078125] )
+   FC:  Call     SetActorSpeed 	( .Actor:Self *Fixed[0.30078125] )
+  110:  Call     SetGoalPos 	( .Actor:Self *Var[0] 0 *Var[2] )
+  12C:  Call     FlyToGoal  	( .Actor:Self 00000008 00000000 .Easing:Linear )
+  148:  Call     PlaySoundAtActor 	( .Actor:Self 0000035F )
+  170:  Call     GetActorVar 	( .Actor:Self 00000000 *Var[0] )
+  188:  Call     GetActorVar 	( .Actor:Self 00000001 *Var[1] )
+  1A0:  Call     GetActorVar 	( .Actor:Self 00000002 *Var[2] )
+  1B8:  Call     SetGoalPos 	( .Actor:Self *Var[0] 0 *Var[2] )
+  1D4:  Call     SetActorSpeed 	( .Actor:Self *Fixed[3.0] )
+  1E8:  Call     SetGoalPos 	( .Actor:Self *Var[0] 0 *Var[2] )
+  204:  Call     FlyToGoal  	( .Actor:Self 0000000C FFFFFFFE .Easing:CubicOut )
+  220:  Call     ForceHomePos 	( .Actor:Self *Var[0] 0 *Var[2] )
+   14:  Call     BindIdle    	( .Actor:Self $Script_Idle_80221AAC_10 )
+   28:  Call     BindHandleEvent 	( .Actor:Self $Script_HandleEvent_80221C20_10 )
+  250:  Call     HPBarToHome 	( .Actor:Self )
+   3C:  Return
+   44:  End
+}
+
+#new:Formation $Formation_04
+{
+$Boo 00000001 0000000A 00000000 00000000 00000000 00000000 
+$Boo 00000002 00000009 00000000 00000000 00000000 00000000 
+}
+
+#new:Formation $Formation_05
+{
+$Boo 00000000 0000000A 00000000 00000000 00000000 00000000 
+$Boo 00000001 00000009 00000000 00000000 00000000 00000000 
+$Boo 00000002 00000008 00000000 00000000 00000000 00000000 
+}
+
+#new:Formation $Formation_06
+{
+$Boo 00000000 0000000A 00000000 00000000 00000000 00000000 
+$Swooper 0000000D 00000009 00000000 00000000 00000000 00000000 
+$Swooper 0000000E 00000008 00000000 00000000 00000000 00000000 
+}
+
+#new:Formation $Formation_07
+{
+$Boo 00000000 0000000A 00000000 00000000 00000000 00000000 
+$Boo 00000001 00000009 00000000 00000000 00000000 00000000 
+$Swooper 0000000E 00000008 00000000 00000000 00000000 00000000 
+}
+
+#new:Formation $Formation_08
+{
+$Boo 00000000 0000000A 00000000 00000000 00000000 00000000 
+$Swoopula 0000000D 00000009 00000000 00000000 00000000 00000000 
+$Swoopula 0000000E 00000008 00000000 00000000 00000000 00000000 
+}
+
+#new:Formation $Formation_09
+{
+$Boo 00000000 0000000A 00000000 00000000 00000000 00000000 
+$Boo 00000001 00000009 00000000 00000000 00000000 00000000 
+$Swoopula 0000000E 00000008 00000000 00000000 00000000 00000000
+}
+
+#new:Vector3D $Vector3D_80227A30
+{
+80` 45` -10`
+}
+
+#new:Formation $Formation_0A
+{
+$AntiBlooper $Vector3D_80227A30 0000000A 00000000 00000000 00000000 00000000 
+}
+
+@ $FormationTable
+{
+00000000 00000002 $Formation_00 $Stage_80220714 00000000
+00000000 00000003 $Formation_01 $Stage_80220714 00000000
+00000000 00000002 $Formation_02 $Stage_80220714 00000000
+00000000 00000003 $Formation_03 $Stage_80220714 00000000
+00000000 00000002 $Formation_04 $Stage_80220714 00000000
+00000000 00000003 $Formation_05 $Stage_80220714 00000000
+00000000 00000003 $Formation_06 $Stage_80220714 00000000
+00000000 00000003 $Formation_07 $Stage_80220714 00000000
+00000000 00000003 $Formation_08 $Stage_80220714 00000000
+00000000 00000003 $Formation_09 $Stage_80220714 00000000
+00000000 00000001 $Formation_0A $Stage_80220714 00000000
+00000000 00000000 00000000 00000000 00000000
+}

@@ -1,0 +1,38 @@
+
+@ $Function_802A15A0
+{
+    0:  ADDIU     SP, SP, FFE8
+    4:  SW        S0, 10 (SP)
+    8:  DADDU     S0, A0, R0
+    C:  SW        RA, 14 (SP)
+   10:  LW        V0, C (S0)
+   14:  JAL       ~Func:get_variable
+   18:  LW        A1, 0 (V0)
+   1C:  LIA       V1, 800878E0
+   24:  SLL       V0, V0, 5
+   28:  ADDU      V0, V0, V1
+   2C:  LB        V1, 1B (V0)
+	%
+		JAL        $IsBadgeEquiped
+        ADDIU      A0, R0, .Item:MedicineMan
+        BEQ        A0, R0, .NotEquipped
+        NOP
+        BLTZ       V1, .NotEquipped
+        NOP
+        SRL        A0, V1, 1
+        ADDU       V1, V1, A0
+        .NotEquipped
+	%
+   30:  SW        V1, B0 (S0)
+   34:  LB        V1, 1C (V0)
+   38:  SW        V1, B4 (S0)
+   3C:  LB        V1, 1B (V0)
+   40:  XORI      V1, V1, 1
+   44:  SLTIU     V1, V1, 1
+   48:  SW        V1, C0 (S0)
+   4C:  LW        RA, 14 (SP)
+   50:  LW        S0, 10 (SP)
+   54:  ADDIU     V0, R0, 2
+   58:  JR        RA
+   5C:  ADDIU     SP, SP, 18
+}

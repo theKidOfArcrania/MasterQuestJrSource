@@ -1,0 +1,24 @@
+@ $Function_802A149C
+{
+	ADDIU     SP, SP, FFE8
+	SW        RA, 14 (SP)
+	SW        S0, 10 (SP)
+	LW        V0, C (A0)
+	JAL       ~Func:get_variable
+	LW        A1, 0 (V0)
+	LIA       V1, 8010F290
+	LB        A0, 5 (V1) %was LB a0, 2 (v1), vanilla bug. changing to offset to 5 fixes it
+	LB        A1, 6 (V1)
+	ADDU      A0, A0, V0
+	SLT       V0, A1, A0
+	BEQ       V0, R0, .o3C
+	DADDU     S0, V1, R0
+	DADDU     A0, A1, R0
+	.o3C
+	SB        A0, 5 (S0)
+	LW        RA, 14 (SP)
+	LW        S0, 10 (SP)
+	ADDIU     V0, R0, 2
+	JR        RA
+	ADDIU     SP, SP, 18
+}

@@ -1,0 +1,127 @@
+
+% This script is used when entering a map via a warp pipe.
+% (not for entering a warp pipe)
+
+#new:Script $Script_EnterWarpPipe
+{
+	Call     DisablePlayerInput 	( .True )
+	Call     DisablePlayerPhysics 	( .True )
+	Call     DisablePartnerAI		( 00000000 )
+	Call     HidePlayerShadow		( .True )
+	Call     SetPlayerAnimation		( 00010000 )
+	Call     GetCurrentPartnerID 		( *Var[0] )
+	If       *Var[0] !=  00000000 
+		Call     EnableNpcShadow	( .Npc:Partner .False )
+		Call     SetNpcPos   		( .Npc:Partner 00000000 FFFFFC18 00000000 )
+	EndIf
+	Call     GetEntryID  		( *Var[0] )
+	Call     $Function_WarpPipeEntry_802400F0 ( )
+	Sub      *Var[2] 00000028 
+	Call     SetPlayerPos 		( *Var[1] *Var[2] *Var[3] )
+	Call     InterpPlayerYaw 	( *Var[4] 00000000 )
+	Call     PlaySound   		( 00000163 )
+	Call     802D286C 			( 00000100 )
+	Call     802D2520			( 00010000 00000005 00000002 00000001 00000001 00000000 )
+	Call     GetPlayerPos		( *Var[0] *Var[1] *Var[2] )
+	Loop     00000028 
+		Add      *Var[1] 00000001 
+		Call     SetPlayerPos	( *Var[0] *Var[1] *Var[2] )
+		Wait     00000001 
+	EndLoop
+	Wait     00000003 
+	Call     GetCurrentPartnerID 	( *Var[0] )
+	If       *Var[0] !=  00000000 
+		Thread
+			Call     DisablePartnerAI 	( 00000000 )
+			Call     GetPlayerPos		( *Var[0] *Var[1] *Var[2] )
+			Sub      *Var[2] 00000003 
+			Call     SetNpcPos			( .Npc:Partner *Var[0] *Var[1] *Var[2] )
+			Call     SetNpcFlagBits		( .Npc:Partner 00000002 .False )
+			Call     EnablePartnerAI 	( )
+			Call     EnableNpcShadow 	( .Npc:Partner .True )
+		EndThread
+	EndIf
+	Wait     00000002 
+	Call     802D2520 ( 00010000 00000000 00000000 00000000 00000000 00000000 )
+	Wait     00000001 
+	Call     SetPlayerAnimation 	( 00010002 )
+	Call     DisablePlayerPhysics 	( .False )
+	Call     DisablePlayerInput 	( .False )
+	Call     HidePlayerShadow 		( .False )
+	Label    00000000 
+	Call     $Function_WarpPipeEntry_80240020 ( )
+	Wait     00000001 
+	If       *Var[0] !=  FFFFFFFF 
+		Goto     00000000 
+	EndIf
+	Exec     *Var[A] 
+	Return
+	End
+}
+
+#new:Function $Function_WarpPipeEntry_80240020
+{
+	LAH       V0, 8015A552
+	SW        V0, 84 (A0)
+	JR        RA
+	ADDIU     V0, R0, 2
+}
+
+#new:Function $Function_WarpPipeEntry_802400F0
+{
+	ADDIU     SP, SP, FFE0
+	SW        S1, 14 (SP)
+	DADDU     S1, A0, R0
+	SW        RA, 1C (SP)
+	SW        S2, 18 (SP)
+	JAL       8005ABE8
+	SW        S0, 10 (SP)
+	DADDU     A0, S1, R0
+	LIO       A1, FE363C80
+	JAL       ~Func:get_variable
+	DADDU     S2, V0, R0
+	DADDU     A0, S1, R0
+	LUI       A1, FE36
+	LW        V1, 14 (S2)
+	SLL       S0, V0, 4
+	ADDU      V1, S0, V1
+	LWC1      F0, 0 (V1)
+	TRUNC.W.S F2, F0
+	MFC1      A2, F2
+	JAL       ~Func:set_variable
+	ORI       A1, A1, 3C81
+	DADDU     A0, S1, R0
+	LW        V0, 14 (S2)
+	LUI       A1, FE36
+	ADDU      V0, S0, V0
+	LWC1      F0, 4 (V0)
+	TRUNC.W.S F2, F0
+	MFC1      A2, F2
+	JAL       ~Func:set_variable
+	ORI       A1, A1, 3C82
+	DADDU     A0, S1, R0
+	LW        V0, 14 (S2)
+	LUI       A1, FE36
+	ADDU      V0, S0, V0
+	LWC1      F0, 8 (V0)
+	TRUNC.W.S F2, F0
+	MFC1      A2, F2
+	JAL       ~Func:set_variable
+	ORI       A1, A1, 3C83
+	DADDU     A0, S1, R0
+	LW        V0, 14 (S2)
+	LUI       A1, FE36
+	ADDU      S0, S0, V0
+	LWC1      F0, C (S0)
+	TRUNC.W.S F2, F0
+	MFC1      A2, F2
+	JAL       ~Func:set_variable
+	ORI       A1, A1, 3C84
+	LW        RA, 1C (SP)
+	LW        S2, 18 (SP)
+	LW        S1, 14 (SP)
+	LW        S0, 10 (SP)
+	ADDIU     V0, R0, 2
+	JR        RA
+	ADDIU     SP, SP, 20
+}

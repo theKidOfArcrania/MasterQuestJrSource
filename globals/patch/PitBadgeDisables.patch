@@ -1,0 +1,136 @@
+/%0120 - Bump Attack
+011D - Dizzy Attack
+011C - Spin Attack
+00E6 - First Attack
+
+loop through equipped badges
+check for 00E6, 011C, 011D, 0120 %001D (Dizzy Attack) has been removed from this patch so it will work in the pit
+%/
+
+%Bump Attack Disable
+%800415C0: BNEZ 	v1, 0x800415E4 %Original code
+%Change to BEQ		r0, r0, 0x800415E4
+%Hex of working bump attack: 14600008
+%Disabled bump attack: 10000008
+
+
+%Spin Attack Disable
+%80040730: BNEZ		V1, 0x80040740 %Original
+%Change to BEQ		r0, r0, 0x80040740
+%Hex of working spin attack: 14600003
+%Disabled spin attack: 10000003
+
+
+%First Attack Disable
+%80041558: BNEZ		v1, 0x8004159C
+%Change to BEQ		r0, r0, 0x8004159C
+%Hex of working first attack: 14600010
+%Disabled first attack hex: 10000010
+
+
+
+
+/%Badges, 2 bytes each
+8010F498 - beginning of equipped badges
+8010F516 - end of equipped badges%/
+
+/%
+
+#new:Function $Disable_Pit_Badges
+PUSH 	t0, t1, t2, t3, t4, t5, t6, t7, t8, t9
+LAB		t0, 800740AB
+ORI		t4, r0, 001C
+BEQ		t0, t4, .gamestatecheck %if group is 1C
+NOP
+BEQ		r0, r0, .notinpit
+NOP
+.gamestatecheck
+LUI     t0, 800A
+LW      t0, A600 (t0)
+ORI     t9, R0, 0002
+BEQ     t0, t9, .execute
+NOP
+BEQ		r0, r0, .end
+NOP
+.execute
+LIO		t1, 8010F498
+LH		t2, 0000 (t1)
+ORI		t3, r0, 0120 %Bump Attack
+%ORI		t4, r0, 011D %Dizzy Attack
+ORI		t5, r0, 011C %Spin Attack
+ORI		t6, r0, 00E6 %First Attack
+ORI		t7, r0, 0002 %add +2 to address after each loop
+.Loop
+BEQ		t2, t3, .DisableBump
+NOP
+BNE		t2, t3, .restoreBump
+NOP
+%.DizzyCheck
+%BEQ		t2, t4, .DisableDizzy
+%NOP
+.SpinAttackCheck
+BEQ		t2, t5, .DisableSpinAttack
+NOP
+BNE		t2, t5, .restoreSpinAttack
+NOP
+.FirstAttackCheck
+BEQ		t2, t6, .DisableFirst
+NOP
+BNE		t2, t6, .restoreFirstAttack
+NOP
+.ChecksFinished
+ADD		t1, t1, t7
+LH		t2, 0000 (t1)
+BEQ		t2, r0, .end
+NOP
+BEQ		r0, r0, .Loop
+NOP
+.restoreBump
+LIO		t8, 14600008 %Make bump attack work normally
+SAW		t8, 800415C0
+BEQ		r0, r0, .SpinAttackCheck
+NOP
+.restoreSpinAttack
+LIO		t8, 14600003 %Make spin attack work normally
+SAW		t8, 80040730
+BEQ		r0, r0, .FirstAttackCheck
+NOP
+.restoreFirstAttack
+LIO		t8, 14600010 %Make first attack work normally
+SAW		t8, 80041558
+BEQ		r0, r0, .ChecksFinished
+NOP
+.notinpit %restores everything
+LIO		t8, 14600008 %Make bump attack work normally
+SAW		t8, 800415C0
+LIO		t8, 14600003 %Make spin attack work normally
+SAW		t8, 80040730
+LIO		t8, 14600010 %Make first attack work normally
+SAW		t8, 80041558
+NOP
+.end
+POP 	t0, t1, t2, t3, t4, t5, t6, t7, t8, t9
+JR 		RA
+NOP
+.DisableBump
+LIO		t8, 10000008
+SAW		t8, 800415C0 %Make Bump Attack not work
+BEQ		r0, r0, .SpinAttackCheck
+NOP
+.DisableSpinAttack
+LIO        t8, 00000000
+SAW        t8, 8004070C %Make Spin Attack not work
+BEQ        r0, r0, .FirstAttackCheck
+NOP
+.DisableFirst
+LIO		t8, 10000010
+SAW		t8, 80041558 %Make First Attack not work
+BEQ		r0, r0, .ChecksFinished
+NOP
+
+@Hook 82758
+JAL		$Disable_Pit_Badges
+NOP
+LW		RA, 008C (SP)
+J		800E92B0
+NOP%/

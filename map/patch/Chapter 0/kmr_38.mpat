@@ -1,0 +1,206 @@
+#new:Header $Header
+{
+00000000 00000000 00000000 00000000 
+$Script_Main $EntryList 00000002 00000000 
+00000000 00000000 00000000 00000000 
+00000000 00000000 80200000 $Function_GetTattle 
+}
+
+#new:Function $Function_GetTattle
+{
+	ADDIU     SP, SP, FFE8
+	LIO       V0, $MapTattle
+	JR        RA
+	ADDIU     SP, SP, 18
+}
+
+#string $MapTattle
+{
+[Style Tattle]
+[EnableCDownNext]Is that...[Pause 10]light?[BR]
+How did they even get that[BR]
+big of a beam this far down?[BR]
+[Wait][Next]
+I'm not complaining, but[BR]
+it does make you wonder.[BR]
+Whatever the case, it[BR]
+had to take a lot of work.[BR]
+[Wait][Next]
+Whoever built this place[BR]
+really wanted this room[BR]
+to stand out.[BR]
+[Wait][End]
+}
+
+#new:Function_Init $Function_Init
+{
+	PUSH	RA
+	/%
+	% Override map geometry
+	LIA       A0, 800D9230
+	LIA       A1, "XXX_shape"
+	JAL       {Func:StringPrintf}
+	RESERVED
+	% Override map collision
+	LIA       A0, 800D91E0
+	LIA       A1, "XXX_hit"
+	JAL       {Func:StringPrintf}
+	RESERVED
+	%/
+	% Override texture package
+	LIA		A0, 800B0CF0
+	LIA		A1, "kpa_tex"
+	JAL		~Func:sprintf
+	RESERVED
+	% Done
+	DADDU	V0, R0, R0
+	JPOP	RA
+}
+
+#import EnterWarpPipe.mpat
+
+#define .PipeTrig *GameFlag00D
+#define .PipeRaiseSound 0000208E
+
+#new:Script_Main $Script_Main
+{
+	%Set      *WorldMapLocation 0000000A % sets the location on the pause screen map
+	Call     SetSpriteShading 	( FFFFFFFF )
+	Call     SetCamPerspective	( .Cam:Default  3  25` 16` 4096` ) % default type, half vertical FOV, near clip, and far clip
+	Call     SetCamBGColor   	( .Cam:Default  0  0  0 ) % color values are RGB bytes; (0,0,0) is black, (255`,255`,255`) is white, etc.
+	Call     SetCamEnabled 	 	( .Cam:Default  .True )   % Enabled?
+	Call     SetCamLeadPlayer 	 	( .Cam:Default  .False )  % Lead player motion?
+	Call     SetMusicTrack    	( 00000000 .Song:DryDryRuins 00000000 00000008 )
+		If .PipeTrig == 00000000
+			ExecWait $Script_CreateEntities
+		Else
+			ExecWait $Script_CreateEntitiesPipe
+		EndIf
+	Bind     $Script_TalkLeft  .Trigger:WallPressA ~Collider:talkeye  00000001 00000000
+		Call	GetLoadType 	( *Var[1] )
+	If		*Var[1] ==  00000001 
+		Exec	EnterSavePoint 
+		Exec	$Script_MakeExits
+		ExecWait $Script_GetPipeWorking
+	Else
+		Set		*Var[0] $Script_MakeExits 
+		Exec	EnterWalk 
+		ExecWait $Script_GetPipeWorking
+	EndIf
+	Return
+	End
+}
+
+	#new:Script $Script_CreateEntities
+{
+		Call	MakeEntity		( .Entity:BlueSwitch ~Vec4d:switch 80000000 )
+	    Call	AssignScript	( $Script_RaisePipeSwitch )
+		Call    MakeEntity  	( .Entity:SavePoint ~Vec4d:saveblock 80000000 )
+		Call    MakeEntity      ( .Entity:HealingBlock ~Vec4d:heartblock 80000000 )
+	Return
+	End	
+}
+	
+	#new:Script $Script_CreateEntitiesPipe
+{
+	    Call    MakeEntity      ( .Entity:BlueWarpPipe ~Vec4d:pipe 00000003 $Script_UseBluePipe ~Index:*GameFlag00D 80000000 ) 
+		Call    MakeEntity  	( .Entity:SavePoint ~Vec4d:saveblock 80000000 )
+		Call    MakeEntity      ( .Entity:HealingBlock ~Vec4d:heartblock 80000000 )
+	Return
+	End
+}
+
+	#define .Floor *GameByte[003]
+	
+	#new:Script $Script_UseBluePipe
+{
+	%Set *WarpLock FFFFFFFF %no warp in pit 2.0 nonsense :3
+	Set *GameByte[1B3] 00000000 %reset pipe switch info message
+	Set .Floor 00000000 % 5A is floor 90 for testing, 64 is for floor 100, 44 is 69, 16 is 23, 00 is to start normally
+	%Call     GotoMap    ( "kmr_67" 0 ) % This is floor 100 for testing
+	%Call      GotoMap    ( "pit_15" 0 ) % rest floor
+	%Call      GotoMap    ( "pit_07" 0 ) % the 20s
+	%Call      GotoMap    ( "pit_12" 0 ) % the 70s
+	Call     GotoMap    ( "pit_05" 0 ) % normal starting position
+	Wait     00000064 
+	Return
+	End
+}
+	
+	#new:Script $Script_RaisePipeSwitch
+{
+	Wait     0000000A 
+	Call     PlaySound  ( .PipeRaiseSound )
+	Set .PipeTrig 00000001
+	Unbind
+	Return
+	End
+}
+	
+	#new:Script $Script_RaisePipe
+{
+	Wait     0000000A 
+	Set .PipeTrig 00000001
+	Unbind
+	Return
+	End
+}
+	
+	#new:Script $Script_GetPipeWorking
+{
+	Bind     $Script_RaisePipe .Trigger:GameFlagSet .PipeTrig 00000001 00000000
+	Call     MakeEntity  ( .Entity:BlueWarpPipe ~Vec4d:pipe 00000002 $Script_UseBluePipe ~Index:*GameFlag00D 80000000 )
+Return
+End
+}
+
+#new:Script $Script_TalkLeft
+{
+    Call     DisablePlayerInput 	( .True )
+    Call     ShowMessageAtScreenPos     	( $LeftString 000000A0 00000028 )
+	  Call     DisablePlayerInput 	( .False )
+Return
+End
+}
+
+#new:Script $Script_MakeExits
+{
+	Bind     $Script_Entry0  .Trigger:FloorAbove ~Collider:Exit0 00000001 00000000
+Return
+End
+}
+	
+	#new:Script $Script_Entry0
+{
+	SetGroup 0000001B 
+	Call     UseExitHeading ( 0000003C 00000000 ) % direction opposing Entry#0
+	Exec     ExitWalk 
+	Call     GotoMap     	( "kmr_37" 00000001 )
+	Wait     00000064 
+	Return
+	End	
+}
+
+#string $LeftString
+{
+[DelayOff][Style Inspect]
+A TALE TOLD IN THE DEEP[BR]
+LEGEND WHISPERED IN THE DARK[BR]
+[Wait][Next]
+ONE HUNDRED FLOORS TO DELVE[BR]
+IN A PLACE TO LEAVE THEIR MARK[BR]
+[Wait][Next]
+THIS PIT OF TRIALS[BR]
+IS A CENTURY LONG QUEST[BR]
+[Wait][Next]
+OF ALL IN THIS WORLD[BR]
+THIS IS THE ULTIMATE TEST[BR]
+[Pause 5][DelayOn][Wait][End]
+}
+
+#new:EntryList $EntryList
+{
+~Vec4f:Entry0 %  coordinates
+~Vec4f:Entry1 %  coordinates
+0` 15` 0` 270` % for pipe
+}

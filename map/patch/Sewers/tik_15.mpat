@@ -1,0 +1,70 @@
+@ $Script_Interact_80242824
+{
+    0:  If  *AreaFlag[002]  ==  00000000 
+   10:  	If  *GF_TIK15_Met_RipCheato  ==  00000000 
+   20:  		Set  *Var[0]  00080001 
+   30:  		Set  *GF_TIK15_Met_RipCheato  00000001 
+   40:  	Else
+   48:  		Set  *Var[0]  00080002 
+   58:  	EndIf
+   60:  	Set  *AreaFlag[002]  00000001 
+   70:  Else
+   78:  	Set  *Var[0]  00080003 
+   88:  EndIf
+   90:  Call     SpeakToPlayer 	( 00000001 00AE0004 00AE0001 00000000 *Var[0] ) % variable string ID
+   B0:  Label    00000000 
+   BC:  Call     ShowCoinCounter 	( .True )
+   CC:  Call     ShowChoice  	( 001E0001 ) % Buy Don't buy 
+   DC:  If  *Var[0]  !=  00000000 
+   EC:  	Call     ShowCoinCounter 	( .False )
+   FC:  	Call     ContinueSpeech 	( 00000001 00AE0004 00AE0001 00000000 00080005 ) % Okay...pinch your pennies. It's a shame, really. T ...
+  11C:  	Return
+  124:  EndIf
+  12C:  Call     $Function_80240AD0 ( *Var[0] )
+  13C:  If  *Var[0]  ==  00000000 
+  14C:  	Call     ShowCoinCounter 	( .False )
+  15C:  	Call     ContinueSpeech 	( 00000001 00AE0004 00AE0001 00000000 00080006 ) % Oh, this is no good... I'm afraid I can't sell any ...
+  17C:  	Return
+  184:  EndIf
+  18C:  Set  *Var[0]  *RipCheatoSaleCount 
+  19C:  Call     $Function_80240A78 ( )
+  1A8:  Switch  *Var[A] 
+  1B4:  	Case  ==  00000000 
+  1C0:  		Call     AddCoin     	( FFFFFFC0 )
+  1D0:  		Call     ShowCoinCounter 	( .False )
+  1E0:  		Call     EndSpeech 	( 00000001 00AE0004 00AE0001 00000000 )
+  1FC:  		Set  *Var[0]  0000015C 
+  20C:  		Set  *Var[1]  00000003 
+  21C:  		ExecWait $Script_8024275C 
+  228:  		Call     AddStarPieces 	( 00000001 )
+  238:  	Case  ==  00000001 
+  244:  		Call     AddCoin     	( FFFFFFC0 )
+  254:  		Call     ShowCoinCounter 	( .False )
+  264:  		Call     EndSpeech 	( 00000001 00AE0004 00AE0001 00000000 )
+  280:  		Set  *Var[0]  000000FD
+  290:  		Set  *Var[1]  00000002 
+  2A0:  		ExecWait $Script_8024275C 
+  2AC:  		Call     AddBadge    	( .Item:MoneyMoney *Var[0] )
+  2C0:  	Case  ==  00000002 
+  2CC:  		Call     $Function_80240AA4 ( )
+  2D8:  		If  *Var[0]  <=  00000000 
+  2E8:  			Call     ShowCoinCounter 	( .False )
+  2F8:  			Call     ContinueSpeech 	( 00000001 00AE0004 00AE0001 00000000 00080007 ) % Oh, this is unfortunate... You have too much stuff ...
+  318:  			Return
+  320:  		EndIf
+  328:  		Call     AddCoin     	( FFFFFFC0 )
+  338:  		Call     ShowCoinCounter 	( .False )
+  348:  		Call     EndSpeech 	( 00000001 00AE0004 00AE0001 00000000 )
+  364:  		Set  *Var[0]  *Var[B] 
+  374:  		Set  *Var[1]  00000000 
+  384:  		ExecWait $Script_8024275C 
+  390:  		Call     AddItem     	( *Var[B] *Var[0] )
+  3A4:  EndSwitch
+  3AC:  If  *RipCheatoSaleCount  <  0000000A 
+  3BC:  	Add  *RipCheatoSaleCount  00000001 
+  3CC:  EndIf
+  3D4:  Call     SpeakToPlayer 	( 00000001 00AE0004 00AE0001 00000000 00080004 ) % Well done, my good man! I thank you deeply. Now, i ...
+  3F4:  Goto     00000000 
+  400:  Return
+  408:  End
+}

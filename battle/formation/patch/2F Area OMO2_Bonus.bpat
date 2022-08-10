@@ -1,0 +1,10 @@
+
+#import 10_SpyGuy.bpat
+#import 10_PyroGuy.bpat
+%#import 10_Mediguy.bpat
+
+@ $Script_SlingshotAttack_10
+{
+[340]	Call     SetPartMoveSpeed    	( FFFFFF81 00000002 *Fixed[17.500000] )
+[480]	Call     SetPartMoveSpeed    	( FFFFFF81 00000002 *Fixed[17.500000] )
+}

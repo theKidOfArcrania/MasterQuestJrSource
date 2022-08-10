@@ -1,0 +1,26 @@
+  % FIRST STRIKE
+@ $Script_8023C754 {
+  [3F4]  		Set  *Var[F]  00000003 
+  [410]  		Set  *Var[F]  00000004 
+  [42C]  		Set  *Var[F]  00000005
+}
+  
+  % SHELL TOSS
+@ $Script_80238B7C {
+   [BC]  		Set  *Var[F]  00000003 
+   [CC]  		Set  *Var[E]  00000001 
+  [104]  			Set  *Var[F]  00000004 
+  [114]  			Set  *Var[E]  00000002  
+  [14C]  				Set  *Var[F]  00000005 
+  [15C]  				Set  *Var[E]  00000003 
+}
+
+  % POWER SHELL
+@ $Script_80239E7C {
+   [48]  		Set  *Var[E]  00000001 
+   [58]  		Set  *Var[F]  00000002 
+   [74]  			Set  *Var[E]  00000001 
+   [84]  			Set  *Var[F]  00000003  
+   [A0]  				Set  *Var[E]  00000001 
+   [B0]  				Set  *Var[F]  00000005
+}

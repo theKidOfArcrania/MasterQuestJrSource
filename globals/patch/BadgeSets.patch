@@ -1,0 +1,125 @@
+/%00E8 - Quake Hammer
+0117 - Power Quake
+0108 - Mega Quake
+
+loop through equipped badges, look for 00E8, 0117, and 0108
+if all 3 are found, add +3 to all quake badge attacks
+
+
+
+
+
+
+/%Badges, 2 bytes each
+8010F498 - beginning of equipped badges
+8010F516 - end of equipped badges%/
+#new:Function $Quake_Set
+{
+PUSH 	t0, t1, t2, t3, t4, t5, t6, t7, t8, ra
+LIO		t0, 8010F498 %equipped badges
+LH		t1, 0000 (t0)
+ORI		t2, r0, 0108 %Mega Quake
+ORI		t3, r0, 0117 %Power Quake
+ORI		t4, r0, 00E8 %Quake Hammer
+LIO 	t5, 8010F518 %where to stop loop
+ORI 	t6, r0, 0001
+BEQ 	t1, r0, .end
+NOP
+ADD 	t8, r0, t0 %move t0 to t8
+.megaloop
+LH 		t1, 0000 (t8)
+BEQ 	t1, t2, .setmegaflag
+NOP
+ADDIU 	t8, t8, 0002
+BEQ 	t8, t5, .aftermega
+NOP
+BEQ 	r0, r0, .megaloop
+NOP
+.megareturn
+.aftermega
+ADD 	t8, r0, t0 %move t0 to t8
+.powerloop
+LH 		t1, 0000 (t8)
+BEQ 	t1, t3, .setpowerflag
+NOP
+ADDIU 	t8, t8, 0002
+BEQ		t8, t5, .afterpower
+NOP
+BEQ 	r0, r0, .powerloop
+NOP
+.afterpower
+.powerreturn
+ADD 	t8, r0, t0 %move t0 to t8
+.quakeloop
+LH 		t1, 0000 (t8)
+BEQ 	t1, t4, .setquakeflag
+NOP
+ADDIU 	t8, t8, 0002
+BEQ 	t8, t5, .afterquake
+NOP
+BEQ 	r0, r0, .quakeloop
+NOP
+.afterquake
+.quakereturn
+%check all 3 flags and set Var 5 to 1 if they are all true (if they are 01)
+LAW 	t7, $MegaQuakeFlag
+BEQ 	t7, t6, .powerquakecheck %branches if current badge checked is megaquake
+NOP
+BEQ 	r0, r0, .end
+NOP
+.powerquakecheck
+LAW 	t7, $PowerQuakeFlag
+BEQ 	t7, t6, .quakehammercheck
+NOP
+BEQ 	r0, r0, .end
+NOP
+.quakehammercheck
+LAW 	t7, $QuakeHammerFlag
+BEQ 	t7, t6, .setbonusdamage
+NOP
+BEQ		r0, r0, .end
+NOP
+.setbonusdamage
+LIO		A1, FE363C85 %Var 5
+LIO		A2, 00000001 %Value to set Var 5 to
+JAL		~Func:set_variable
+NOP
+SAW 	r0, $MegaQuakeFlag
+SAW 	r0, $PowerQuakeFlag
+SAW 	r0, $QuakeHammerFlag
+.end
+POP 	t0, t1, t2, t3, t4, t5, t6, t7, t8, ra
+JR 		RA
+NOP
+.setmegaflag
+SAW t6, $MegaQuakeFlag
+BEQ r0, r0, .megareturn
+NOP
+.setpowerflag
+SAW t6, $PowerQuakeFlag
+BEQ r0, r0, .powerreturn
+NOP
+.setquakeflag
+SAW t6, $QuakeHammerFlag
+BEQ r0, r0, .quakereturn
+NOP
+}
+
+
+
+#new:Data $QuakeHammerFlag
+{
+00000000
+}
+
+#new:Data $PowerQuakeFlag
+{
+00000000
+}
+
+#new:Data $MegaQuakeFlag
+{
+00000000
+}
+
+#export $Quake_Set

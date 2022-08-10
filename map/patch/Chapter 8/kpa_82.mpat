@@ -1,0 +1,235 @@
+@ $Script_Idle_Door
+{
+    0:  Label    00000001 
+    C:  Wait     00000001 
+   18:  If  *GF_KPA82_PassedThroughDoor  ==  00000000 
+   28:  	Goto     00000001 
+   34:  EndIf
+   3C:  Set  *GF_KPA82_PassedThroughDoor  00000000 
+   4C:  Call     DisablePlayerInput 	( .True )
+   5C:  ExecWait $Script_CamFocusDoor 
+   68:  Set  *MapFlag[00]  00000000 
+   78:  Thread
+   80:  	Call     SetMusicTrack 	( 00000000 .Song:FinalBowserBattle 00000001 00000008 )
+   9C:  	Wait     00000096 
+   A8:  	If  *MapFlag[00]  !=  00000000 
+   B8:  		Goto     00000005 
+   C4:  	EndIf
+   CC:  	Call     FadeOutMusic 	( 00000000 000000FA )
+   E0:  	Wait     0000000F 
+   EC:  	If  *MapFlag[00]  !=  00000000 
+   FC:  		Goto     00000005 
+  108:  	EndIf
+  110:  	Exec     $Script_SetMusic 
+  11C:  	Label    00000005 
+  128:  EndThread
+  130:  If  *GF_KPA82_SpokeToDoor  ==  00000000 
+  140:  	Call     SpeakToPlayer 	( .Npc:Self 003B0501 003B0501 00000000 0013002E ) % Grooaaahhhhh!!! Who would've thought you could mak ...
+  160:  	Set  *GF_KPA82_SpokeToDoor  00000001 
+  170:  Else
+  178:  	Call     SpeakToPlayer 	( .Npc:Self 003B0501 003B0501 00000000 0013002F ) % Huh? Why're you still here? Did you change your mi ...
+  198:  EndIf
+  1A0:  Call     ShowChoice  	( 001E0013 ) % Yes No 
+  1B0:  If  *Var[0]  ==  00000000 
+  1C0:  	Call     ContinueSpeech 	( .Npc:Self 003B0501 003B0501 00000000 00130031 ) % Grrooaaa ha ha ha ha ha!! This is completely point ...
+  1E0:  Else
+  1E8:  	Call     ContinueSpeech 	( .Npc:Self 003B0501 003B0501 00000000 00130030 ) % I see... Not up to it... That's a smart choice, be ...
+  208:  	Call     ResetCam    	( .Cam:Default *Fixed[4.0] )
+  21C:  	Call     PanToTarget 	( .Cam:Default 00000000 00000000 )
+  234:  	Set  *GF_KPA82_PassedThroughDoor  00000000 
+  244:  	Call     DisablePlayerInput 	( .False )
+  254:  	Goto     00000001 
+  260:  EndIf
+  268:  Call     ShowChoice  	( 001E0013 ) % Yes No 
+  278:  If  *Var[0]  ==  00000000 
+  288:  	Call     ContinueSpeech 	( .Npc:Self 003B0501 003B0501 00000000 00130032 ) % Now for a little quiz. Several of my followers wil ...
+  2A8:  Else
+  2B0:  	Call     ContinueSpeech 	( .Npc:Self 003B0501 003B0501 00000000 00130033 ) % OK, smart guy, let's get going!
+  2D0:  EndIf
+  2D8:  Call     DisablePartnerAI 	( 00000000 )
+  2E8:  Thread
+  2F0:  	Call     ModifyColliderFlags 	( 00000000 00000010 7FFFFE00 )
+  308:  	Call     DisablePlayerPhysics 	( .True )
+  318:  	Call     SetPlayerSpeed ( *Fixed[2.0] )
+  328:  	Call     PlayerMoveTo 	( 000000AF 000000EC 00000014 )
+  340:  	Call     InterpPlayerYaw 	( 0000010E 00000000 )
+  354:  	Call     DisablePlayerPhysics 	( .False )
+  364:  	Call     ModifyColliderFlags 	( 00000001 00000010 7FFFFE00 )
+  37C:  EndThread
+  384:  Thread
+  38C:  	Call     SetNpcAnimation 	( .Npc:Partner 00000102 )
+  3A0:  	Call     SetNpcSpeed 	( .Npc:Partner *Fixed[2.5] )
+  3B4:  	Call     InterpNpcYaw 	( .Npc:Partner 0000010E 00000000 )
+  3CC:  	Call     NpcMoveTo   	( .Npc:Partner 000000CD 000000EC 00000014 )
+  3E8:  	Call     SetNpcAnimation 	( .Npc:Partner 00000106 )
+  3FC:  	Call     NpcFaceNpc  	( .Npc:Partner .Npc:Self 00000000 )
+  414:  EndThread
+  41C:  Set  *AreaByte[C]  00000000 
+  42C:  Set  *AreaByte[D]  00000000 
+  43C:  Set  *AreaByte[E]  00000000 
+  44C:  Label    0000000A 
+  458:  Set  *Var[6]  *Fixed[2.0] 
+  468:  ExecWait $Script_CamShowRoom 
+  474:  Set  *MapFlag[00]  00000001 
+  484:  Wait     00000002 
+  490:  Call     SetMusicTrack 	( 00000000 .Song:NormalBattle 00000000 00000008 )
+  4AC:  ExecWait $Script_OpenDoors 
+  4B8:  ExecWait $Script_Release_Wave 
+  4C4:  Wait     000000C8 
+  4D0:  Thread
+  4D8:  	Call     ShowMessageAtScreenPos 	( 00130034 0000012C 000000C8 ) % Time's up! 
+  4F0:  	Set  *MapVar[1]  00000001 
+  500:  EndThread
+  508:  Wait     0000003C 
+  514:  ExecWait $Script_Withdraw_Wave 
+  520:  Wait     00000023 
+  52C:  ExecWait $Script_CloseDoors 
+  538:  Exec     $Script_SetMusic 
+  544:  Wait     0000001E 
+  550:  Label    0000000C 
+  55C:  Wait     00000001 
+  568:  If  *MapVar[1]  ==  00000000 
+  578:  	Goto     0000000C 
+  584:  EndIf
+  58C:  Set  *MapVar[1]  00000000 
+  59C:  ExecWait $Script_AskQuestion 
+  5A8:  ExecWait $Script_ShowResultCard 
+  5B4:  If  *MapVar[0]  ==  00000000 
+  5C4:  	Add  *AreaByte[D]  00000001 
+  5D4:  	If  *AreaByte[D]  ==  00000005 
+  5E4:  		Goto     0000001E 
+  5F0:  	EndIf
+  5F8:  	If  *AreaByte[D]  ==  00000004 
+  608:  		Call     SpeakToPlayer 	( .Npc:Self 003B0501 003B0501 00000000 0013003D ) % Grrrrr...... Right answer! Aaaarghhhhhhh!!!!!!! I  ...
+  628:  	Else
+  630:  		Call     SpeakToPlayer 	( .Npc:Self 003B0501 003B0501 00000000 0013003C ) % Grrrr...... You're right! That question must've be ...
+  650:  	EndIf
+  658:  Else
+  660:  	Add  *AreaByte[E]  00000001 
+  670:  	If  *AreaByte[E]  ==  00000003 
+  680:  		Goto     00000014 
+  68C:  	EndIf
+  694:  	If  *AreaByte[E]  ==  00000001 
+  6A4:  		Call     SpeakToPlayer 	( .Npc:Self 003B0501 003B0501 00000000 0013003E ) % Groooaaa ha ha ha ha!! Bzzzz! Wrong! What an idiot ...
+  6C4:  	EndIf
+  6CC:  	If  *AreaByte[E]  ==  00000002 
+  6DC:  		Call     SpeakToPlayer 	( .Npc:Self 003B0501 003B0501 00000000 00130040 ) % Bzzzzz! Pinhead! Wrong again, worm!! Something hor ...
+  6FC:  	EndIf
+  704:  EndIf
+  70C:  Add  *AreaByte[C]  00000001 
+  71C:  Goto     0000000A 
+  728:  Label    00000014 
+  734:  Call     SpeakToPlayer 	( .Npc:Self 003B0501 003B0501 00000000 00130041 ) % Gah ha ha ha ha ha ha ha!!!! Nope, that's wrong, i ...
+        Label    00000037 % idk something unused
+  754:  Set  *Var[6]  *Fixed[2.0] 
+  764:  ExecWait $Script_CamShowRoom 
+  770:  Call     SetNpcPos   	( 00000001 FFFFFF9C 00000000 00000000 )
+  78C:  Call     SetNpcPos   	( 00000002 00000000 00000000 00000000 )
+  7A8:  Call     SetNpcPos   	( 00000003 00000064 00000000 00000000 )
+  7C4:  Call     InterpPlayerYaw 	( 0000013B 00000000 )
+  7D8:  Call     InterpNpcYaw 	( .Npc:Partner 0000013B 00000000 )
+  7F0:  ExecWait $Script_OpenDoors 
+  7FC:  Call     SpeakToPlayer 	( .Npc:Self 003B0501 003B0501 00000000 00130042 ) % I'll let you go through if you manage to beat them ...
+  81C:  Call     PlayerFaceNpc 	( 00000002 00000005 )
+  830:  Call     GetPlayerPos 	( *Var[3] *Var[4] *Var[5] )
+  848:  Set  *Var[6]  *Fixed[3.0] 
+  858:  ExecWait $Script_80241378 
+  864:  Call     GetPlayerPos 	( *Var[0] *Var[1] *Var[2] )
+  87C:  Thread
+  884:  	Call     SetNpcAnimation 	( 00000001 00F10007 )
+			Wait 14`
+			Call     SetNpcAnimation 	( 00000001 00F10006 )
+  898:  	Call     NpcMoveTo   	( 00000001 *Var[0] *Var[2] 0000001E )
+  8B4:  EndThread
+  8BC:  Thread
+  8C4:  	Call     SetNpcAnimation 	( 00000001 00F10007 )
+			Wait 14`
+			Call     SetNpcAnimation 	( 00000001 00F10006 )
+  8D8:  	Call     NpcMoveTo   	( 00000002 *Var[0] *Var[2] 0000001E )
+  8F4:  EndThread
+  8FC:  Thread
+  904:  	Call     SetNpcAnimation 	( 00000001 00F10007 )
+			Wait 14`
+			Call     SetNpcAnimation 	( 00000001 00F10006 )
+  918:  	Call     NpcMoveTo   	( 00000003 *Var[0] *Var[2] 0000001E )
+  934:  EndThread
+  93C:  Call     GetPlayerPos 	( *Var[0] *Var[1] *Var[2] )
+  954:  Call     SetNpcPos   	( .Npc:Self *Var[0] *Var[1] *Var[2] )
+  970:  Call     StartBossBattle 	( .Song:SpecialBattle )
+  980:  ExecWait $Script_8024101C 
+  98C:  Call     SpeakToPlayer 	( .Npc:Self 003B0501 003B0501 00000000 00130043 ) % Oh, but...no! NO!! You beat the Anti Guys Unit?!!  ...
+  9AC:  Goto     00000028 
+  9B8:  Label    0000001E 
+  9C4:  Thread
+  9CC:  	Call     ModifyColliderFlags 	( 00000000 00000010 7FFFFE00 )
+  9E4:  	Call     DisablePlayerPhysics 	( .True )
+  9F4:  	Call     SetPlayerSpeed ( *Fixed[3.0] )
+  A04:  	Call     PlayerMoveTo 	( 00000078 00000091 00000000 )
+  A1C:  	Call     InterpPlayerYaw 	( 0000005A 00000000 )
+  A30:  	Call     DisablePlayerPhysics 	( .False )
+  A40:  	Call     ModifyColliderFlags 	( 00000001 00000010 7FFFFE00 )
+  A58:  EndThread
+  A60:  Thread
+  A68:  	Call     DisablePartnerAI 	( 00000000 )
+  A78:  	Call     SetNpcSpeed 	( .Npc:Partner *Fixed[3.5] )
+  A8C:  	Call     InterpNpcYaw 	( .Npc:Partner 0000005A 00000000 )
+  AA4:  	Call     NpcMoveTo   	( .Npc:Partner 00000050 00000091 00000000 )
+  AC0:  	Call     EnablePartnerAI 	( )
+  ACC:  EndThread
+  AD4:  Call     SpeakToPlayer 	( .Npc:Self 003B0501 003B0501 00000000 0013003F ) % Grrrraaaaaaaaghhhhhhh!!!! Cor.... Correct!!! I can ...
+        Goto     00000037
+  AF4:  Label    00000028 
+  B00:  Call     EnablePartnerAI 	( )
+  B0C:  Call     PanToTarget 	( .Cam:Default 00000000 00000000 )
+  B24:  Set  *GB_KPA82_BowserDoorState  00000001 
+  B34:  Call     DisablePlayerInput 	( .False )
+  B44:  Bind     $Script_ExitDoubleDoor_Face .Trigger:WallPressA 00000010 00000001 00000000 
+  B60:  Return
+  B68:  End
+}
+  
+@ $NpcGroup_Antiguys {
+00000000 $NpcSettings_AntiGuy ~Vec3f:NPC_ShyGuy_00 % 0 -1000 0
+03F44F0C $Script_Init_Door 00000000 00000000 00000000 
+~NoItems ~NoHP ~NoFP ~NoCoinBonus
+~Movement:NPC_ShyGuy_00
+00F00001 00F00004 00F00006 00F00006 00F00001 00F00001 00F00010 00F00010 
+00F0000C 00F0000B 00F0000D 00F00001 00F00001 00F00001 00F00001 00F00001
+%00F10001 00F10004 00F10006 00F10006 00F10001 00F10001 00F10010 00F10010 
+%00F1000C 00F1000B 00F1000D 00F10001 00F10001 00F10001 00F10001 00F10001 
+00000000 00000000 00000000 00000000 % no tattle string
+% 
+% $NpcGroup_Antiguys[1F0]
+00000001 $NpcSettings_AntiGuy ~Vec3f:NPC_ShyGuy_01 % 0 -1000 0
+03D40F08 $Script_Init_AntiGuy 00000000 00000000 00000000 
+~NoItems ~NoHP ~NoFP ~NoCoinBonus
+~Movement:NPC_ShyGuy_01
+00F00001 00F00004 00F00006 00F00006 00F00001 00F00001 00F00010 00F00010 
+00F0000C 00F0000B 00F0000D 00F00001 00F00001 00F00001 00F00001 00F00001
+%00F10001 00F10004 00F10006 00F10006 00F10001 00F10001 00F10010 00F10010 
+%00F1000C 00F1000B 00F1000D 00F10001 00F10001 00F10001 00F10001 00F10001 
+00000000 00000000 00000000 00000000 % no tattle string
+% 
+% $NpcGroup_Antiguys[3E0]
+00000002 $NpcSettings_AntiGuy ~Vec3f:NPC_ShyGuy_02 % 0 -1000 0
+03D40F08 $Script_Init_AntiGuy 00000000 00000000 00000000 
+~NoItems ~NoHP ~NoFP ~NoCoinBonus
+~Movement:NPC_ShyGuy_02
+00F00001 00F00004 00F00006 00F00006 00F00001 00F00001 00F00010 00F00010 
+00F0000C 00F0000B 00F0000D 00F00001 00F00001 00F00001 00F00001 00F00001
+%00F10001 00F10004 00F10006 00F10006 00F10001 00F10001 00F10010 00F10010 
+%00F1000C 00F1000B 00F1000D 00F10001 00F10001 00F10001 00F10001 00F10001 
+00000000 00000000 00000000 00000000 % no tattle string
+% 
+% $NpcGroup_Antiguys[5D0]
+00000003 $NpcSettings_AntiGuy ~Vec3f:NPC_ShyGuy_03 % 0 -1000 0
+03D40F08 $Script_Init_AntiGuy 00000000 00000000 00000000 
+~NoItems ~NoHP ~NoFP ~NoCoinBonus
+~Movement:NPC_ShyGuy_03
+00F00001 00F00004 00F00006 00F00006 00F00001 00F00001 00F00010 00F00010 
+00F0000C 00F0000B 00F0000D 00F00001 00F00001 00F00001 00F00001 00F00001
+%00F10001 00F10004 00F10006 00F10006 00F10001 00F10001 00F10010 00F10010 
+%00F1000C 00F1000B 00F1000D 00F10001 00F10001 00F10001 00F10001 00F10001  
+00000000 00000000 00000000 00000000 % no tattle string
+}
+

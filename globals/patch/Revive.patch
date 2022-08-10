@@ -1,0 +1,25 @@
+% This code, written by Brotenko, will set the players FP to 0 when using a LS.
+% While on paper that hurts LS spam, it hurts normal LS usage in things like
+% Luigi's Challenge far worse.
+
+/%
+
+@Hook 18FB20
+% FP code
+    SB 		R0, 5 (A0)
+    LBU        V0, 5 (A0)
+    ADDU    V0, V0, V1
+    SB        V0, 5 (A0)
+    SLL        V0, V0, 18
+    LB        V1, 6 (A0)
+    SRA        V0, V0, 18
+    SLT        V1, V1, V0
+    LBU        V0, 6 (A0)
+    BNEL    V1, R0, 4
+    SB        V0, 5 (A0)
+% end FP code
+    JAL        800E7644
+    ADDIU    A0, R0, 95
+    J        80261248
+    NOP
+    %/

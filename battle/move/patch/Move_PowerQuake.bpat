@@ -1,0 +1,36 @@
+ 
+@ $Script_UseMove0 {
+  Call     802694A4 ( 00000001 )
+  Call     GetMenuSelection 	( *Var[0] *Var[1] *Var[2] )
+  Switch  *Var[1] 
+  	Case  ==  00000000 
+  		Set  *Var[D]  00000050 
+  		Set  *Var[E]  00000002 
+  		Set  *Var[F]  00000003 
+		Call	$Quake_Set
+		If	 *Var[5] == 00000001
+			Set *Var[F] 00000006
+		EndIf
+  		ExecWait $Script_802A3168 
+  	Case  ==  00000001 
+  		Set  *Var[D]  00000050 
+  		Set  *Var[E]  00000002 
+  		Set  *Var[F]  00000003 
+		Call	$Quake_Set
+		If	 *Var[5] == 00000001
+			Set *Var[F] 00000006
+		EndIf
+  		ExecWait $Script_802A3168 
+  	Case  ==  00000002 
+  		Set  *Var[D]  00000050 
+  		Set  *Var[E]  00000002 
+  		Set  *Var[F]  00000003 
+		Call	$Quake_Set
+		If	 *Var[5] == 00000001
+			Set *Var[F] 00000006
+		EndIf
+  		ExecWait $Script_802A3168 
+  EndSwitch
+  Return
+  End
+}

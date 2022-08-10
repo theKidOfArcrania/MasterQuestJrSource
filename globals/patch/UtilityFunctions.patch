@@ -1,0 +1,53 @@
+
+% A0 = badge ID, returns boolean on A0
+% Doesn't follow calling convention, deal with it.
+#new:Function $IsBadgeEquiped
+{
+PUSH	S1, S2, S3
+.Init
+LIO		S2, 8010F498	% position in list
+ADDIU	S3, S2, 78		% end of list
+.Loop
+LH		S1, 0 (S2)
+BEQL	A0, S1, .End
+ADDIU	A0, R0, 1 % return true
+BNE		S2, S3, .Loop
+ADDIU	S2, S2, 2
+ADDIU	A0, R0, 0 % return false
+.End
+POP		S1, S2, S3
+JR		RA
+NOP
+}
+
+% Last Stand now rounds up
+%orig:
+%80277950: ADDU           V0, S0, V0
+%80277954: SRA            S0, V0, 1
+% 80277950 - 800D1720 = 1A6230
+
+
+% Refresh heal number resets when out of battle
+% This is hooked in FinalParasolVersion.patch
+% under "82758"
+
+#new:Function $SetGamebyte034_to_07
+{
+PUSH t0, t1
+LAW t0, 8009A600
+ORI t1, r0, 0005
+BNE t0, t1, .notinbattle
+NOP
+BEQ r0, r0, .end
+NOP
+.notinbattle
+ORI t1, r0, 0007
+SAB t1, 800DBDA4
+.end
+POP t0, t1
+JR RA
+NOP
+}
+
+#export $SetGamebyte034_to_07
+#export $IsBadgeEquiped

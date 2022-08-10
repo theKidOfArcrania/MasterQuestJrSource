@@ -1,0 +1,11 @@
+
+% Triple Dip has been moved.
+@ $Script_80243F2C
+{
+	Set      *Var[A] .Item:UltraShroom % was .Item:TripleDip
+	Set      *Var[B] 00000002 
+	Set      *GameFlag[5ED] 00000001 
+	ExecWait $Script_80243E4C 
+	Return
+	End
+}

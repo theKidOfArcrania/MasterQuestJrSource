@@ -1,0 +1,4003 @@
+#string:0A:033
+{
+[Style Right]
+[Shake][PrintRising]...ooooh, my aching...[/fx][/fx][BR]
+[Wait][Next]
+Eh, nevermind that! I, the[BR]
+great Kamek, will end this[BR]
+right here and now![BR]
+[Wait][Next]
+Today hasn't been going well,[BR]
+but I must say that it is[BR]
+starting to look up![BR]
+[Wait][Next]
+First I'll take you down, and[BR]
+then Lord Bowser will give me[BR]
+my old job back from Kammy![BR]
+[Wait][Next]
+[Down 6][Size 32][PrintRising][Shake]Here I come!![Wait][End]
+}
+
+#string:0C:12A
+{
+[Style Right]
+Yeeowch!![BR]
+[Pause 5]Who knew that Mario had such[BR]
+battle skills?[BR]
+[Wait][Next]
+[Yield]Grrr... it's not over yet.[BR]
+[Pause 10]This time, I brought backup![Wait][End]
+}
+
+#string:0D:056
+{
+[Style Right]
+Hello, fellow travelers.[BR]
+[Pause 10]I'm in the middle of a journey,[BR]
+just as you appear to be.[BR]
+[Wait][Next]
+Other travelers I meet are like[BR]
+brothers and sisters to me.[BR]
+[Wait][Next]
+If you seek Dry Dry Outpost,[BR]
+you must pass the Pokey army.[BR]
+[Pause 20]Somewhere to the north.[Wait][End]
+}
+
+#string:0D:057
+{
+[Style Right]
+Dry Dry Outpost lies due east,[BR]
+but the road is blocked by dunes.[BR]
+You must find another way, past[BR]
+the Pokey army in the north.[BR]
+[Wait][Next]
+I'm having a rest in the shade.[BR]
+[Pause 10]Rule #1 when traveling through a[BR]
+desert: never hurry.[BR]
+[Wait][Next]
+Deserts, especially this desert,[BR]
+are vast and confusing, and if[BR]
+you wander too far afield you'll[BR]
+definitely get lost. [Wait][End]
+}
+
+#string:0D:058
+{
+[Style Right]
+Hello, fellow travelers.[BR]
+[Pause 10]I'm in the middle of a journey,[BR]
+just as you appear to be.[BR]
+[Wait][Next]
+Somewhere southeast from here,[BR]
+you'll reach a beautiful desert[BR]
+oasis where lemon and lime trees[BR]
+grow.[BR]
+[Wait][Next]
+It's nice and cool.[BR]
+[Pause 10]It's really the best place to[BR]
+have a rest, but many enemies[BR]
+plague the surrounding area.[BR]
+[Wait][Next]
+If you plan on reaching the oasis[BR]
+in one piece, be careful.[Wait][End]
+}
+
+#string:0D:059
+{
+[Style Right]
+Somewhere southeast from here,[BR]
+you'll reach a beautiful desert[BR]
+oasis where lemon and lime trees[BR]
+grow.[BR]
+[Wait][Next]
+It's nice and cool.[BR]
+[Pause 10]It's really the best place to[BR]
+have a rest, but many enemies[BR]
+plague the surrounding area.[BR]
+[Wait][Next]
+If you plan on reaching the oasis[BR]
+in one piece, be careful.[Wait][End]
+}
+
+#string:0E:020
+{
+[Style Right]
+Don't think I'm as vulnerable as[BR]
+I was before.[BR]
+[Wait][Next]
+I've hired some of Bowser's[BR]
+goons. Do you know what that[BR]
+means? It means you're in big[BR]
+trouble![BR]
+[Wait][Next]
+I'm not done yet![Pause 14] Check this out:[BR]
+[Pause 10][Size 32][PrintRising]More power!![Wait][End]
+}
+
+#string:1A:008
+{
+[Style Tattle]
+[EnableCDownNext]She's a gorgeous lady named[BR]
+Donluvlee. I can't believe I'm in[BR]
+the same room with her![BR]
+[Wait][Next]
+She has shady connections[BR]
+and uses them to find what[BR]
+you're looking for.[BR]
+[Pause 10]She's very powerful.[BR]
+[Wait][Next]
+I think I'm in love... She's[BR]
+incredible![BR]
+[Pause 5]Pinch me, will you, Mario?[Wait][End]
+}
+
+#string:1A:009
+{
+[Style Tattle]
+[EnableCDownNext]He's Donlow.[BR]
+[Pause 10]He's about the same age as[BR]
+I am.[BR]
+[Wait][Next]
+I wanna play with him when we[BR]
+finish our adventure.[BR]
+[Wait][Next]
+I guess he trades Star Pieces[BR]
+for Badges.[BR]
+[Wait][Next]
+Donluvlee, who's downstairs, is[BR]
+his sister. He's so lucky![Wait][End]
+}
+
+#string:1A:021
+{
+[Style Tattle]
+[EnableCDownNext]He's a stubborn and mysterious[BR]
+old man.[BR]
+[Pause 10]His name is Donlon.[BR]
+[Wait][Next]
+He uses his sketchy connections[BR]
+to influence the future.[BR]
+[Wait][Next]
+I've heard he is a mobster.[BR]
+With a name like Donlon,[BR]
+I would say he probably is.[BR]
+[Pause 10]Should I have said that?[BR]
+[Wait][Next]
+Still, his information is[BR]
+supposedly right on.[BR]
+[Pause 15]I don't know personally, but my[BR]
+Goompa told me.[Wait][End]
+}
+
+#string:1A:035
+{
+[Style Tattle]
+[EnableCDownNext]This Toad is diligent and very[BR]
+hard working.[BR]
+[Pause 10]He has a great work ethic.[BR]
+[Wait][Next]
+I heard he has a bit of a crush[BR]
+on Donluvlee, who lives on[BR]
+Shooting Star Summit.[Wait][End]
+}
+
+#string:1A:097
+{
+[Style Tattle]
+[EnableCDownNext]This Dryite has been seen in[BR]
+Toad Town.[BR]
+[Wait][Next]
+Why does he look like he's[BR]
+worried about something?[BR]
+[Pause 5]Whenever I worried, my Goompa[BR]
+always told me...[BR]
+[Wait][Next]
+"When you're feeling worried,[BR]
+remember to take a deep breath."[BR]
+[Pause 10]I hope I never get[BR]
+worried underwater![Wait][End]
+}
+
+#string:1A:098
+{
+[Style Tattle]
+[EnableCDownNext]This is Sheek.[BR]
+[Pause 5]You'd think the guy could shake[BR]
+the dust from his clothes![BR]
+[Wait][Next]
+If I didn't know any[BR]
+better I would swear he looks[BR]
+a lot like someone...[BR]
+[Wait][Next]
+Zeldah, the Nomadimouse[BR]
+princess! That's who![BR]
+But that's just silly.[Wait][End]
+}
+
+#string:1A:099
+{
+[Style Tattle]
+[EnableCDownNext][Wave]Da Da Da Duuum![BR]
+[/fx][Wait][Next]
+Sheek revealed his true self![BR]
+[Pause 15]...I guess that means he's the[BR]
+boss everyone talks about.[BR]
+[Wait][Next]
+Oh... [Pause 10]I was expecting Zeldah,[BR]
+though, to be honest.[Wait][End]
+}
+
+#string:1A:09B
+{
+[Style Tattle]
+[EnableCDownNext]She's a mobster, Donlee. She[BR]
+has connections.[BR]
+[Wait][Next]
+If you pay her enough, they[BR]
+might help you in battle.[BR]
+[Wait][Next]
+She's one of a pair of twins. The[BR]
+other one is Donluvlee, from[BR]
+Shooting Star Summit.[BR]
+[Wait][Next]
+When I look at a woman as[BR]
+beautiful as this,[BR]
+[Pause 3]it makes [Pause 3]me [Pause 3]feel [Pause 3]all [Pause 3]strange! [Pause 3][HEART][Wait][End]
+}
+
+#string:1A:09E
+{
+[Style Tattle]
+[EnableCDownNext]He's a Nomadimouse who never[BR]
+strays from the back street in[BR]
+Dry Dry Outpost. He loves to[BR]
+stay near the lovely mobster.[BR]
+[Wait][Next]
+[PrintRising]Ah, a rival for her affections![BR]
+[/fx][Wait][Next]
+Just joking.[BR]
+[Pause 5]He's obviously fond of Donlee.[BR]
+[Wait][Next]
+Maybe he just doesn't have[BR]
+anywhere better to go. He's[BR]
+always just sitting here.[BR]
+[Wait][Next]
+There's no reason to move... His[BR]
+beloved is here.[Wait][End]
+}
+
+#string:1A:0A6
+{
+[Style Tattle]
+[EnableCDownNext]That's a Boo who works at Boo's[BR]
+Mansion.[BR]
+[Pause 10]Do you think he would be mad[BR]
+if I called him "Boo Diddly"?[Wait][End]
+}
+
+#string:1A:0A5
+{
+[Style Tattle]
+[EnableCDownNext]This Boo runs the shop.[BR]
+[Wait][Next]
+Nice selection, huh? I'm sure[BR]
+he's cornered the Boo market[BR]
+around here.[BR]
+[Wait][Next]
+Come to think of it, this shop[BR]
+doesn't make sense.[BR]
+[Wait][Next]
+Who comes out here to buy[BR]
+groceries, anyway?[Wait][End]
+}
+
+#string:1A:0AD
+{
+[Style Tattle]
+[EnableCDownNext]That's a Boo who lives here in[BR]
+Gusty Gulch.[BR]
+[Wait][Next]
+This land is totally barren. I[BR]
+wonder what Boos find to eat[BR]
+around these parts.[BR]
+[Pause 10][Wait][Next]
+Do Boos eat? Are they ghosts?[BR]
+How come we can KO them?[BR]
+None of this makes sense.[Wait][End]
+}
+
+#string:1A:0E1
+{
+[Style Tattle]
+[EnableCDownNext]It's the sun.[BR]
+[Pause 5]For some reason I expected[BR]
+him to be more angry.[BR]
+[Wait][Next]
+It's the source of life for[BR]
+flowers and trees. If it doesn't[BR]
+come out, eventually all plants[BR]
+wither away.[BR]
+[Wait][Next]
+Sunshine makes me happy, too.[Wait][End]
+}
+
+#string:1A:0FB
+{
+[Style Tattle]
+[EnableCDownNext]He's Donle, the person who[BR]
+controls this valley.[BR]
+[Pause 10]He's the one who called you.[BR]
+[Pause 10]He's the son of Donlon.[BR]
+[Wait][Next]
+That means...[BR]
+[Wait][Next]
+Yep. This family's definitely the Mob.[BR]
+Are they Italian? Does that[BR]
+make them the Mafia?[Wait][End]
+}
+
+#string:1A:0FF
+{
+[Style Tattle]
+[EnableCDownNext]He's one of the Ninjis.[BR]
+[Wait][Next]
+The Ninjis are taking care of[BR]
+the Star Kids.[BR]
+[Pause 5]Donle is in charge. He seems[BR]
+really busy, though.[Wait][End]
+}
+
+#string:1A:100
+{
+[Style Tattle]
+[EnableCDownNext]He's one of the Ninjis.[BR]
+[Wait][Next]
+If the "Dons" are gangsters,[BR]
+do you think the Ninjis are too?[BR]
+Lets not find out.[Wait][End]
+}
+
+#string:1A:101
+{
+[Style Tattle]
+[EnableCDownNext]He's one of the Ninjis.[BR]
+[Wait][Next]
+It's odd that the Mob would be[BR]
+baby-sitters for the Star Kids.[BR]
+Maybe they're all connected[BR]
+somehow...[BR]
+[Wait][Next]
+Maybe we just shouldn't ask.[Wait][End]
+}
+
+#string:1A:11D
+{
+[Style Tattle]
+[EnableCDownNext]He's a soldier from Peach's[BR]
+Castle. He says he's ashamed[BR]
+that he failed.[BR]
+[Wait][Next]
+He and the others tried their[BR]
+best, but they were overcome by[BR]
+Bowser's troops.[BR]
+[Wait][Next]
+Isn't it odd that they let him[BR]
+keep his spear?[Wait][End]
+}
+
+#string:20:057
+{
+[Style Inspect]
+I heard a rumor that I actually[BR]
+have lots of fans. Wow![BR]
+[Wait][Next]
+What great news! To live up to[BR]
+their expectations, I want to[BR]
+play the lead in an adventure![BR]
+[Wait][Next]
+Of course, my name would have[BR]
+to be in the title.[BR]
+[Pause 10]That'd be sweet...[HEART][BR]
+[Wait][Next]
+I hope there aren't any ghosts...[Wait][End]
+}
+
+#string:1D:1A6
+{
+[Style Epilogue]
+[Color 0x0A]Thus Mario and party[BR]
+unearthed the legendary[BR]
+Dry Dry Ruins, deep within[BR]
+Dry Dry Desert.[BR]
+[Wait][Next]
+They smashed Tutankoopa[BR]
+the Pharaoh and freed[BR]
+Mamar, the second of the[BR]
+wish-granting Star Spirits.[BR]
+[Wait][Next]
+But the enemies awaiting[BR]
+Mario grow ever stronger...[BR]
+and the challenges [BR]
+more difficult.[BR]
+[Wait][Next]
+What's in store for[BR]
+Mario and friends...[BR]
+Where will their adventure[BR]
+take them next?[Wait][End]
+}
+
+#string:1E:018
+{
+[Style Choice pos=50,70 size=230,60]
+[StartChoice]
+[Option 0]Special Connections    50 coins[BR]
+[Option 1]Ordinary Connections  20 coins[BR]
+[Option 2]Basic Connections        5 coins[BR]
+[EndChoice cancel=3][End]
+}
+
+#string:02:0D5
+{
+[Style Right]
+Hey, have you heard?[BR]
+[Wait][Next]
+Those weird Toads who were[BR]
+blocking the road were actually[BR]
+disguised Koopa Bros.[BR]
+[Wait][Next]
+Donlon saw right through them.[BR]
+He figured it out instantly.[Wait][End]
+}
+
+#string:02:0D6
+{
+[Style Right]
+Wow![HEART] That's super![BR]
+[Pause 10]Donlon is so super. Really![BR]
+[Pause 10]He's one cool dude.[Wait][End]
+}
+
+#string:02:0D7
+{
+[Style Right]
+He knows everything?[BR]
+[Wait][Next]
+So... You think Donlon can[BR]
+find out about the secret place[BR]
+where I hide candy?[BR]
+[Wait][Next]
+Oh, no![BR]
+What should I do?![Wait][End]
+}
+
+#string:15:015
+{
+[Next]
+[Shake]Well then, young fella! I don't[BR]
+usually ask for favors, but...[BR]
+[Wait][Next]
+I've been in connections with the[BR]
+Don family for years but never got[BR]
+up the nerve to get Donluvlee's[BR]
+Autograph.[BR]
+[Wait][Next]
+So... [Pause 5]if you would,[BR]
+[Wait][Next]
+I want you to hike up there[BR]
+and ask her for an autograph.[BR]
+I'm too shy...[BR]
+[Wait][Next]
+Run along for me, now.[BR]
+I can barely wait![BR]
+[Pause 10]You promise to hurry?[Wait][End]
+}
+
+#string:15:016
+{
+[Style Right]
+[Shake]Leaping Lava Buds![BR]
+[Pause 10]How do you do it, Mario!?[BR]
+[Wait][Next]
+Ohhh... Oh my...[BR]
+[Pause 10]What beautiful handwriting...[HEART][BR]
+[Wait][Next]
+If I were a younger Koopa![BR]
+[Pause 10]Uh... I mean... I sure like[BR]
+this autograph![BR]
+[Wait][Next]
+Here, take this as a token[BR]
+of my thanks.[BR]
+[Wait][Yield][End]
+}
+
+#string:15:030
+{
+[Next]
+[Shake]Well then, young fella! I don't[BR]
+usually ask for favors, but...[BR]
+[Wait][Next]
+I recently heard about a snack[BR]
+called a Kooky Cookie. It's[BR]
+supposedly delicious.[BR]
+[Wait][Next]
+I must confess that I have a[BR]
+sweet tooth. So... do you think[BR]
+you could track one down?[BR]
+[Wait][Next]
+I could have my "Don" associates[BR]
+do it, but they're too busy for[BR]
+an old Koopa these days.[BR]
+[Wait][Next]
+Hurry up, if you can.[BR]
+I need sweets, posthaste![BR]
+[Pause 10]Do I have your word, young man?[Wait][End]
+}
+
+#string:16:000
+{
+[Next]
+So it is told that far away,[BR]
+at the very top of the sky,[BR]
+there exists a Star Haven,[BR]
+where Stars make their home.[BR]
+[Wait][Next]
+In Star Haven, there's a[BR]
+treasure called a Star Rod.[BR]
+According to legend, it was made[BR]
+by the Mafia.[BR]
+[Wait][Next]
+There are said to be Stars that[BR]
+are particulary strong and[BR]
+good-hearted. They are called[BR]
+Star Spirits.[BR]
+[Wait][Next]
+Using the Star Rod,[BR]
+these Star Spirits grant the[BR]
+wishes of everyone in this world.[BR]
+[Wait][Next]
+That's why, when we make a wish[BR]
+to the night sky and it comes[BR]
+true, it's all thanks to the Star[BR]
+Spirits and their Star Rod.[BR]
+[Wait][Yield][End]
+}
+
+#string:16:002
+{
+[Next]
+If you go east from the place[BR]
+where Princess Peach's Castle[BR]
+used to be, you'll find a place[BR]
+called Shooting Star Summit.[BR]
+[Wait][Next]
+At the foot of the summit lives[BR]
+Donluvlee, and her brother[BR]
+Donlow.[BR]
+[Wait][Next]
+The older sister, Donluvlee, can[BR]
+find things you're looking for[BR]
+with her connections.[BR]
+[Wait][Next]
+The hobby of the younger[BR]
+brother, Donlow, is collecting[BR]
+Star Pieces.[BR]
+[Wait][Next]
+If you take him Star Pieces,[BR]
+he'll swap them for Badges.[BR]
+[Wait][Next]
+In point of fact, these two[BR]
+are the granddaughter and[BR]
+grandson of Donlon, who sells[BR]
+information in Toad Town.[BR]
+[Wait][Yield][End]
+}
+
+#string:16:003
+{
+[Next]
+There is a message board on[BR]
+the side of Donlon's house that[BR]
+posts news.[BR]
+[Wait][Next]
+It would appear that many[BR]
+people enjoy scribbling on the[BR]
+back of the message board.[BR]
+[Wait][Next]
+Indeed, various things are[BR]
+always written on it.[BR]
+[Wait][Next]
+You may want to take a quick[BR]
+look occasionally. Sometimes[BR]
+you'll read interesting news.[BR]
+[Wait][Yield][End]
+}
+
+#string:16:00B
+{
+[Next]
+At the edge of Dry Dry Desert,[BR]
+there's a dusty old town called[BR]
+Dry Dry Outpost.[BR]
+[Wait][Next]
+Somewhere in this Dry Dry[BR]
+Outpost, there's supposedly[BR]
+Mob connections.[BR]
+[Wait][Next]
+If you can get in touch,[BR]
+something good may happen[BR]
+during battles.[BR]
+[Pause 10]Why don't you give it a try?[BR]
+[Wait][Next]
+This mobster is said to be the[BR]
+twin sister of Donluvlee, the[BR]
+one with connections at[BR]
+Shooting Star Summit.[BR]
+[Wait][Yield][End]
+}
+
+#string:17:00A
+{
+[DelayOff][Style Sign]
+[CenterX 135][Color 0x18][BR]
+[Down 6][STAR]  Toad Town News  [STAR][BR]
+[Down 6][BR]
+[Down 6]Ghost Story, Part Two[BR]
+[Down 6]  Mario's Coup de Boo[BR]
+[Color 0x18][CenterX 0]Breaking news on our continuing[BR]
+ghost coverage:[BR]
+It seems that a single Boo was[BR]
+responsible for all of the[BR]
+sightings in town.[BR]
+This Boo was merely looking for[BR]
+a brave soul to help vanquish[BR]
+a Boo-eating monster.[BR]
+Mario, of course, took the[BR]
+challenge and punished the[BR]
+great beast, freeing another[BR]
+Star Spirit in the process.[BR]
+Life has returned to normal[BR]
+for the Boos, so the town[BR]
+hauntings should cease.[BR]
+Next week's editorial:[BR]
+Mario, or Jumpman?[BR]
+[DelayOn][Wait][Scroll 4][Wait][Scroll 4][Wait][Scroll 4][Wait][Scroll 4][Wait][Scroll 4][Wait][Scroll 4][Wait][Scroll 4][DelayOn][Wait][End]
+}
+
+#string:19:001
+{
+[Style Tattle]
+[EnableCDownNext]This is the central area of Toad[BR]
+Town, a plaza in front of[BR]
+Princess Peach's Castle.[BR]
+[Wait][Next]
+Pleasant Path begins to the[BR]
+east of here.[BR]
+[Wait][Next]
+This used to be a bustling area[BR]
+before Bowser's attack. Guests[BR]
+at the castle were always in[BR]
+and out.[BR]
+[Wait][Next]
+And tourists came from all over[BR]
+to see the castle.[BR]
+[Wait][Next]
+Donlon also lives nearby. If[BR]
+you need help, he has good info,[BR]
+being a mobster and all.[BR]
+Don't tell him I said that.[BR]
+[Wait][Next]
+There's also a Toad House where[BR]
+you can take a short rest, and[BR]
+a post office where you can pick[BR]
+up mail for your party members.[BR]
+[Wait][Next]
+Also, over by the flower garden,[BR]
+there's a guy named Rowf who's[BR]
+opening his own specialty shop.[Wait][End]
+}
+
+#string:19:022
+{
+[Style Tattle]
+[EnableCDownNext]This is the house of an amazingly[BR]
+gorgeous woman, the beautiful[BR]
+mobster Donluvlee.[BR]
+[Wait][Next]
+Donlow, who collects Star Pieces,[BR]
+also lives here.[BR]
+[Wait][Next]
+It's weird. I know they're in[BR]
+the mob. I just don't have proof.[BR]
+[Wait][Next]
+But it's safe to say they are.[BR]
+They're not dangerous, are they?[BR]
+[Wait][Next]
+[Shake]What if I'm not supposed to know?![/fx][Wait][End]
+}
+
+#string:19:049
+{
+[Style Tattle]
+[EnableCDownNext]The house with the yellowish[BR]
+roof is the home of the famous[BR]
+archaeologist and explorer,[BR]
+Kolorado.[BR]
+[Wait][Next]
+Kolorado's always running from[BR]
+one mysterious place to another[BR]
+in order to do research.[BR]
+[Wait][Next]
+His dad was a warrior, y'know.[BR]
+I think he went to fight a[BR]
+dragon or something. I wonder[BR]
+how he's doing.[Wait][End]
+}
+
+#string:19:062
+{
+[Style Tattle]
+[EnableCDownNext]I think... [Pause 3]this is it... [Pause 3]I'm...[Pause 3][BR]
+[Pause 10]No, nope, I'm good. Lets continue.[Wait][End]
+}
+
+#string:19:06A
+{
+[Style Tattle]
+[EnableCDownNext]Hey, Mario?[BR]
+[Pause 5]Do u kno da wae?[BR]
+[Wait][Next]
+[Pause 5]Great... now my speech is slurring.[BR]
+[Pause 5]I need to get some water before[BR]
+I become a dried shroom.[Wait][End]
+}
+
+#string:19:0A7
+{
+[Style Tattle]
+[EnableCDownNext]Boy... this forest is really dark[BR]
+and spooky.[BR]
+[Wait][Next]
+People say that if you don't[BR]
+choose exactly the right paths,[BR]
+you'll get totally lost.[BR]
+[Wait][Next]
+Y'know, I really like the name[BR]
+"Forever Forest". It's way better[BR]
+than the name Goombaria came up[BR]
+with.[BR]
+[Wait][Next]
+She was actually going to call it[BR]
+"The Forest of Perpetual Night and[BR]
+Terrible Dangers". What kind of a[BR]
+name is that?[BR]
+[Wait][Next]
+Hey![BR]
+[Pause 8][Shake]Did you notice that grass over[BR]
+there rustling? I swear I saw[BR]
+it move![Wait][End]
+}
+
+#string:19:130
+{
+[Style Tattle]
+[EnableCDownNext]This is Starborn Valley.[BR]
+[Pause 5]Donle makes his home here, along[BR]
+with Ninjis and Toads.[BR]
+[Wait][Next]
+They look after Star Kids until[BR]
+they go up to the sky.[BR]
+[Pause 10]It must be hard work.[Wait][End]
+}
+
+#string:19:135
+{
+[Style Tattle]
+[EnableCDownNext]What a strange place this is![BR]
+[Pause 5]It's bright even in the cave...[BR]
+[Pause 10][Wait][Next]
+This must be the small cave that[BR]
+Donle told us about.[BR]
+[Wait][Next]
+There's something strange about[BR]
+this place...[BR]
+[Pause 10]Even the walls seem suspicious[BR]
+to me for some reason.[Wait][End]
+}
+
+#string:19:146
+{
+[Style Tattle]
+[EnableCDownNext]It's easy to believe that this[BR]
+place was originally built as[BR]
+a palace to honor the Stars of[BR]
+the sky.[BR]
+[Wait][Next]
+I'll bet the Mob had a part.[BR]
+[Pause 5]It's terrible that people have[BR]
+forgotten it and don't come[BR]
+here anymore. What a waste.[BR]
+[Wait][Next]
+Maybe after we clear it, the[BR]
+tourist trade will start anew.[Wait][End]
+}
+
+#string:04:045
+{
+[Style Right]
+If you're looking for any[BR]
+particular objects, you should[BR]
+ask Donluvlee of Shooting Star[BR]
+Summit for help.[BR]
+[Wait][Next]
+Her... connections are[BR]
+legendary for their accuracy.[Wait][End]
+}
+
+#string:04:046
+{
+[Style Right]
+If you're looking for any[BR]
+particular objects, you should[BR]
+ask Donluvlee of Shooting Star[BR]
+Summit for help.[BR]
+[Wait][Next]
+Her... connections are[BR]
+legendary for their accuracy.[Wait][End]
+}
+
+#string:04:047
+{
+[Style Right]
+If you're looking for any[BR]
+particular objects, you should[BR]
+ask Donluvlee of Shooting Star[BR]
+Summit for help.[BR]
+[Wait][Next]
+Her... connections are[BR]
+legendary for their accuracy.[Wait][End]
+}
+
+#string:04:048
+{
+[Style Right]
+If you're looking for any[BR]
+particular objects, you should[BR]
+ask Donluvlee of Shooting Star[BR]
+Summit for help.[BR]
+[Wait][Next]
+Her... connections are[BR]
+legendary for their accuracy.[Wait][End]
+}
+
+#string:04:049
+{
+[Style Right]
+If you're looking for any[BR]
+particular objects, you should[BR]
+ask Donluvlee of Shooting Star[BR]
+Summit for help.[BR]
+[Wait][Next]
+Her... connections are[BR]
+legendary for their accuracy.[Wait][End]
+}
+
+#string:04:04E
+{
+[Style Right]
+Ooh... Oh, my! Smells like[BR]
+Tayce T.'s baking a Cake![BR]
+What a tantalizing aroma![BR]
+[Wait][Next]
+The Cakes Tayce T. makes[BR]
+[Pause 5]are beyond belief.[BR]
+[Pause 10]I'd love to make one sometime.[BR]
+[Wait][Next]
+But you need Cake Mix to[BR]
+make a Cake, and I don't have[BR]
+any coins![Wait][End]
+}
+
+#string:04:057
+{
+[Style Right]
+Mario, Mario, Mario.[BR]
+[Pause 10]Have you ever met Donluvlee[BR]
+of Shooting Star Summit?[BR]
+[Wait][Next]
+That lady... She's so lovely...[BR]
+and mysterious...[BR]
+[Pause 10]Oh, I'm crazy for her![HEART][BR]
+[Wait][Next]
+I heard that her hobby is[BR]
+cultivating bonsai trees.[BR]
+[Pause 10]Maybe I should try that, too...[BR]
+[Wait][Next]
+[Pause 5]By the way, did you know that[BR]
+Donluvlee has a twin sister?[BR]
+[Pause 10]Her sister must be really[BR]
+gorgeous and charming, too.[Wait][End]
+}
+
+#string:04:058
+{
+[Style Right]
+Mario, Mario, Mario.[BR]
+[Pause 10]Have you ever met Donluvlee[BR]
+of Shooting Star Summit?[BR]
+[Wait][Next]
+That lady... She's so lovely...[BR]
+and mysterious...[BR]
+[Pause 10]Oh, I'm crazy for her![HEART][BR]
+[Wait][Next]
+I heard that her hobby is[BR]
+cultivating bonsai trees.[BR]
+[Pause 10]Maybe I should try that, too...[BR]
+[Wait][Next]
+[Pause 5]By the way, did you know that[BR]
+Donluvlee has a twin sister?[BR]
+[Pause 10]Her sister must be really[BR]
+gorgeous and charming, too.[Wait][End]
+}
+
+#string:04:061
+{
+[Style Right]
+Mario, Mario, Mario.[BR]
+[Pause 10]Have you ever met Donlon?[BR]
+[Wait][Next]
+I went to him to ask what I[BR]
+could do to "cultivate myself."[BR]
+[Wait][Next]
+And Donluvlee was there![BR]
+Donlon's her grandpa, of course.[BR]
+[Wait][Next]
+I was so lucky... and happy...[BR]
+My heart started beating a[BR]
+mile a minute...[BR]
+[Wait][Next]
+She said "hello" to me.[BR]
+[Pause 10]...Tee hee![HEART][Wait][End]
+}
+
+#string:04:062
+{
+[Style Right]
+Mario, Mario, Mario.[BR]
+[Pause 10]Have you ever met Donlon?[BR]
+[Wait][Next]
+I went to him to ask what I[BR]
+could do to "cultivate myself."[BR]
+[Wait][Next]
+And Donluvlee was there![BR]
+Donlon's her grandpa, of course.[BR]
+[Wait][Next]
+I was so lucky... and happy...[BR]
+My heart started beating a[BR]
+mile a minute...[BR]
+[Wait][Next]
+She said "hello" to me.[BR]
+[Pause 10]...Tee hee![HEART][Wait][End]
+}
+
+#string:0A:038
+{
+[Style Right]
+Ah... My, my...[HEART][BR]
+[Pause 20]I know a shady guy when I see one, Mario.[BR]
+[Wait][Next]
+My name is Donluvlee.[BR]
+I deal in information.[BR]
+[Wait][Next]
+You look like someone who will[BR]
+uncover a lot of information that[BR]
+I can sell. Maybe after you save[BR]
+the Princess.[BR]
+[Wait][Next]
+In the meantime, I will gladly[BR]
+sell you information if you ever[BR]
+need it. My connections are accurate.[BR]
+[Pause 10]My, my...[HEART][BR]
+[Wait][Next]
+Tell me...[BR]
+[Pause 10]Shall I gather up some info?[BR]
+[Yield][End]
+}
+
+#string:0A:038
+{
+[Style Right]
+Ah... My, my...[HEART][BR]
+[Pause 20]I know a shady guy when I see one, Mario.[BR]
+[Wait][Next]
+My name is Donluvlee.[BR]
+I deal in information.[BR]
+[Wait][Next]
+You look like someone who will[BR]
+uncover a lot of information that[BR]
+I can sell. Maybe after you save[BR]
+the Princess.[BR]
+[Wait][Next]
+In the meantime, I will gladly[BR]
+sell you information if you ever[BR]
+need it. My connections are accurate.[BR]
+[Pause 10]My, my...[HEART][BR]
+[Wait][Next]
+Tell me...[BR]
+[Pause 10]Shall I gather up some info?[BR]
+[Yield][End]
+}
+
+#string:0A:039
+{
+[Style Right]
+Ah... My, my...[HEART][BR]
+[Pause 10]We meet again, Mario![BR]
+[Wait][Next]
+My job is information.[BR]
+Information, and looking simply[BR]
+ravishing. I can help you find[BR]
+what you need.[BR]
+[Wait][Next]
+Tell me...[BR]
+[Pause 10]Shall I gather up some info?[BR]
+[Yield][End]
+}
+
+#string:0A:03A
+{
+[Style Right]
+Ah... My, my...[HEART][BR]
+[Wait][Next]
+Shall I gather up more?[BR]
+[Yield][End]
+}
+
+#string:0A:03B
+{
+[Style Right]
+It appears you have found all[BR]
+that I know of.[BR]
+[Wait][Next]
+Don't be a stranger.[Wait][End]
+}
+
+#string:0A:03C
+{
+[Next]
+My, my...[HEART] Are you sure?[BR]
+[Pause 10]If ever you need information,[BR]
+don't hesitate to ask again.[Wait][End]
+}
+
+#string:0A:03D
+{
+[Next]
+My, my...[HEART][BR]
+[Pause 5]How unfortunate![BR]
+[Pause 10]You don't have enough coins.[BR]
+[Wait][Next]
+Alas, my information isn't free.[BR]
+[Pause 10]Connections aren't cheap, and[BR]
+this isn't a charity.[Wait][End]
+}
+
+#string:0A:03E
+{
+[Next]
+Star Piece, is it?[BR]
+[Pause 10]My, my...[HEART] [Pause 5]OK[HEART][BR]
+[Pause 10]I'll see what my good looks[BR]
+can dig up for us.[HEART][Wait][End]
+}
+
+#string:0A:03F
+{
+[Next]
+Badge, is it?[BR]
+[Pause 10]My, my...[HEART] [Pause 5]OK[HEART][BR]
+[Pause 10]I'll see what my good looks[BR]
+can dig up for us.[HEART][Wait][End]
+}
+
+#string:0A:040
+{
+[Next]
+Super Block, is it?[BR]
+[Pause 10]My, my...[HEART] [Pause 5]OK[HEART][BR]
+[Pause 10]I'll see what my good looks[BR]
+can dig up for us.[HEART][Wait][End]
+}
+
+#string:0A:041
+{
+[Style Right]
+[PrintRising]Hey Vinnie![BR]
+[/fx][Wait][Next]
+Call Carlos![BR]
+Call Donnie![BR]
+[Wait][Next]
+Call everyone![BR]
+I need information![BR]
+Tell them I need it now![BR]
+[Wait][Next]
+[PrintRising]Uh huh...![BR]
+[Pause 10]Oh yeah...! [HEART] [/fx][Pause 10]Amazing![BR]
+To be in the know is power and[BR]
+my information is limitless![Wait][End]
+}
+
+#string:0A:042
+{
+[Style Right]
+Alas...[BR]
+[Pause 10]At the moment, there are no[BR]
+Star Pieces within your reach.[BR]
+[Wait][Next]
+My connections failed, but[BR]
+I promise I won't let it go.[BR]
+[Wait][Next]
+There are people out there with[BR]
+Star Pieces, my lazy connections[BR]
+just don't know who.[BR]
+[Wait][Next]
+I should give you a refund[BR]
+for such poor information...[BR]
+[Pause 10]I'll have Vinnie's head...[Wait][End]
+}
+
+#string:0A:043
+{
+[Style Right]
+Alas...[BR]
+[Pause 10]At the moment, there are no[BR]
+Badges within your reach.[BR]
+[Wait][Next]
+I should give you a refund[BR]
+for such poor information...[BR]
+[Pause 10]I'll have Carlos' head...[Wait][End]
+}
+
+#string:0A:044
+{
+[Style Right]
+Alas...[BR]
+[Pause 10]At the moment, there are no[BR]
+Super Blocks within reach.[BR]
+[Wait][Next]
+I should give you a refund[BR]
+for such poor information...[BR]
+[Pause 10]I'll have Donnie's head...[Wait][End]
+}
+
+#string:0A:046
+{
+[Style Right]
+...Excuse me?[BR]
+[Pause 10]You want... [Pause 5]...my autograph?[BR]
+[Wait][Next]
+My, my... Mercy![HEART][BR]
+[Pause 10]Are you sure it's mine you want?[BR]
+[Wait][Yield][End]
+}
+
+#string:0A:047
+{
+[Next]
+You really do? Well![BR]
+This is a first![BR]
+[Pause 15]What shall I do[Pause 3].[Pause 3].[Pause 3].?[BR]
+[Wait][Next]
+Ah... of course![HEART][BR]
+[Wait][Next]
+I don't mean to be a[BR]
+stick-in-the-mud... but I'll give[BR]
+you the autograph on one[BR]
+condition.[BR]
+[Wait][Next]
+A small favor...[BR]
+[Pause 10]I want you to visit my twin[BR]
+sister and fetch a rare stone[BR]
+from her.[BR]
+[Wait][Next]
+She lives in a back alley in[BR]
+Dry Dry Outpost.[BR]
+Her name is Donlee.[BR]
+[Wait][Next]
+Well, Mario...[BR]
+[Pause 10]Would you[HEART]?[Wait][End]
+}
+
+#string:0A:048
+{
+[Style Right]
+Have you seen my sister yet?[BR]
+[Pause 10]I'm sorry... but I simply can't[BR]
+give you an autograph until you[BR]
+fulfill your promise.[Wait][End]
+}
+
+#string:0A:049
+{
+[Style Right]
+Oh! Mercy![HEART] Thank you![BR]
+[Pause 10]This will sell very well.[BR]
+[Wait][Next]
+And for you... here is my[BR]
+autograph, as promised.[BR]
+[Pause 10]It'll be valuable someday![Wait][End]
+}
+
+#string:0A:04A
+{
+[Style Right]
+I'm the famous Donlow of[BR]
+Shooting Star Summit.[BR]
+[Pause 10]I collect Star Pieces.[BR]
+[Pause 10]I have the biggest collection![BR]
+[Wait][Next]
+Mister![BR]
+[Pause 10]You have any Star Pieces?[BR]
+If you do, I'll swap some cool[BR]
+Badges for them![BR]
+[Wait][Next]
+How 'bout it? Let's swap![BR]
+[Yield][End]
+}
+
+#string:0A:04B
+{
+[Style Right]
+I'm the famous Donlow of[BR]
+Shooting Star Summit.[BR]
+[Wait][Next]
+Got any Star Pieces?[BR]
+I'll swap my Badges for them.[BR]
+[Yield][End]
+}
+
+#string:0A:058
+{
+[Style Right]
+You are Donlow, correct?[BR]
+[Wait][Next]
+The name's Parakarry.[BR]
+I deliver letters.[BR]
+[Wait][Next]
+I believe I have one for you.[BR]
+[Pause 10]Hang on a moment.[Wait][End]
+}
+
+#string:0A:05B
+{
+[Style Right]
+A letter for me?[BR]
+[Pause 10]From Donle in Starborn Valley?[BR]
+Wow! News from my dad![BR]
+[Pause 15][Wait][Next]
+Thanks, Mr. Postman![BR]
+[Pause 10]My dad writes all the time[BR]
+because he worries about me.[BR]
+[Wait][Next]
+My sisters and I are totally bad[BR]
+about writing back, though.[BR]
+[Wait][Next]
+Maybe I oughta write him a little[BR]
+more often, huh?[BR]
+[Pause 15][Wait][Next]
+This is [Pause 15]a treasure that I've[BR]
+kept for a long time. I'm gonna[BR]
+give it to you as thanks.[BR]
+[Wait][Next]
+You could always come back and[BR]
+swap me something for it...[Wait][End]
+}
+
+#string:0D:09F
+{
+[Style Right]
+Have you seen the old guy,[BR]
+Donlon, in Toad Town?[BR]
+[Wait][Next]
+His shady sources are always[BR]
+spot-on, so he's quite famous.[BR]
+[Wait][Next]
+If you hit trouble in the middle[BR]
+of your adventure, it'd be a[BR]
+good idea to see him.[Wait][End]
+}
+
+#string:0D:0A0
+{
+[Style Right]
+A brother and sister who are[BR]
+very close live atop Shooting[BR]
+Star Summit.[BR]
+[Wait][Next]
+The brother, Donlow, collects[BR]
+Star Pieces and will trade[BR]
+Badges for them.[BR]
+[Wait][Next]
+The sister, Donluvee, is an[BR]
+information dealer who will[BR]
+tell you where to find Badges.[Wait][End]
+}
+
+#string:0D:0A5
+{
+[Style Right]
+[PrintGrowing]Keep this quiet...[BR]
+[/fx][Wait][Next]
+If you ask this lady for[BR]
+help, and have the dough,[BR]
+her associates will help you.[BR]
+[Wait][Next]
+For instance, your attack power[BR]
+might get stronger or you might[BR]
+get more coins for winning.[BR]
+[Wait][Next]
+Other shady things may[BR]
+happen as well.[BR]
+[Wait][Next]
+But do not rely on these guys.[BR]
+By no means will they help you[BR]
+in every battle.[BR]
+[Wait][Next]
+They can be beneficial, but[BR]
+also unpredictable.[Wait][End]
+}
+
+#string:0D:0A6
+{
+[Style Right]
+[PrintGrowing]Keep this quiet...[BR]
+[/fx][Wait][Next]
+If you ask this lady for[BR]
+help, and have the dough,[BR]
+her associates will help you.[BR]
+[Wait][Next]
+For instance, your attack power[BR]
+might get stronger or you might[BR]
+get more coins for winning.[BR]
+[Wait][Next]
+Other shady things may[BR]
+happen as well.[BR]
+[Wait][Next]
+But do not rely on these guys. By[BR]
+no means will they help you in[BR]
+every battle.[BR]
+[Wait][Next]
+They can be beneficial, but[BR]
+also unpredictable.[Wait][End]
+}
+
+#string:0D:0A7
+{
+[Style Right]
+[PrintGrowing]Keep this quiet...[BR]
+[/fx][Wait][Next]
+If you ask this lady for[BR]
+help, and have the dough,[BR]
+her associates will help you.[BR]
+[Wait][Next]
+For instance, your attack power[BR]
+might get stronger or you might[BR]
+get more coins for winning.[BR]
+[Wait][Next]
+Other shady things may[BR]
+happen as well.[BR]
+[Wait][Next]
+But do not rely on these guys. By[BR]
+no means will they help you in[BR]
+every battle.[BR]
+[Wait][Next]
+They can be beneficial, but[BR]
+also unpredictable.[Wait][End]
+}
+
+#string:0D:0A8
+{
+[Style Right]
+[PrintGrowing]Keep this quiet...[BR]
+[/fx][Wait][Next]
+If you ask this lady for[BR]
+help, and have the dough,[BR]
+her associates will help you.[BR]
+[Wait][Next]
+For instance, your attack power[BR]
+might get stronger or you might[BR]
+get more coins for winning.[BR]
+[Wait][Next]
+Other shady things may[BR]
+happen as well.[BR]
+[Wait][Next]
+But do not rely on these guys. By[BR]
+no means will they help you in[BR]
+every battle.[BR]
+[Wait][Next]
+They can be beneficial, but[BR]
+also unpredictable.[Wait][End]
+}
+
+#string:0D:0A9
+{
+[Style Right]
+[PrintGrowing]Keep this quiet...[BR]
+[/fx][Wait][Next]
+If you ask this lady for[BR]
+help, and have the dough,[BR]
+her associates will help you.[BR]
+[Wait][Next]
+For instance, your attack power[BR]
+might get stronger or you might[BR]
+get more coins for winning.[BR]
+[Wait][Next]
+Other shady things may[BR]
+happen as well.[BR]
+[Wait][Next]
+But do not rely on these guys. By[BR]
+no means will they help you in[BR]
+every battle.[BR]
+[Wait][Next]
+They can be beneficial, but[BR]
+also unpredictable.[Wait][End]
+}
+
+#string:0D:0AA
+{
+[Style Right]
+[PrintGrowing]Keep this quiet...[BR]
+[/fx][Wait][Next]
+If you ask this lady for[BR]
+help, and have the dough,[BR]
+her associates will help you.[BR]
+[Wait][Next]
+For instance, your attack power[BR]
+might get stronger or you might[BR]
+get more coins for winning.[BR]
+[Wait][Next]
+Other shady things may[BR]
+happen as well.[BR]
+[Wait][Next]
+But do not rely on these guys. By[BR]
+no means will they help you in[BR]
+every battle.[BR]
+[Wait][Next]
+They can be beneficial, but[BR]
+also unpredictable.[Wait][End]
+}
+
+#string:0D:0D6
+{
+[Style Right]
+Hello, welcome, how are you?[BR]
+Feeling jolly? Feeling blue?[BR]
+[Wait][Next]
+I'm Donlee, you see? That's me![BR]
+[Pause 5]A cuter gal you'll never see. I[BR]
+have connections,[BR]
+but not for free.[BR]
+[Wait][Next]
+You come for assistance, right?[BR]
+[Pause 10]My boys and I will help you fight.[BR]
+[Wait][Next]
+I got damage, defense,[BR]
+and all the rest![BR]
+Shady connections are the best![BR]
+[Wait][Next]
+A hand of poker so we're friends,[BR]
+[Pause 5]and we go show those goons[BR]
+their untimely ends.[BR]
+[Yield][End]
+}
+
+#string:0D:0DB
+{
+[Style Right]
+These guys may be fickle, but[BR]
+they'll get you out of a pickle.[BR]
+[Wait][Next]
+Even should you meet a beast...[BR]
+Do not fear! Not in the least![HEART][BR]
+My guys make a famine feast.[BR]
+[Wait][Next]
+See you, then.[BR]
+[Pause 5]Please come again. Good-bye, my[BR]
+friend![HEART][Wait][End]
+}
+
+#string:0D:0DC
+{
+[Style Right]
+My older sister? Donluvlee?[BR]
+What's she want? Oh, I see...[BR]
+[Pause 10]Is that so...?[BR]
+[Wait][Next]
+I bet I know...... [Pause 4]oh...[Pause 4]ho...[Pause 4].[BR]
+[Pause 20]OK, OK.[BR]
+[Wait][Next]
+Please give this to Donluvlee,[BR]
+with love, from her sis Donlee.[Wait][End]
+}
+
+#string:0D:0E5
+{
+[Style Right]
+Bleah [Pause 3]heh [Pause 3]heh [Pause 3]heh[Pause 3]...[BR]
+[Wait][Next]
+I'm a musical genius![BR]
+[Pause 10]Watch, and be amazed![Wait][End]
+}
+
+#string:01:03F
+{
+[DelayOff][Style Sign]
+[Down 6][Right 10]Donlon isn't here now! Go away![BR]
+[DelayOn][Wait][End]
+}
+
+#string:03:01C
+{
+[Style Right]
+[PrintRising]Donlon is out![Wait][End]
+}
+
+#string:03:01D
+{
+[Style Right]
+[PrintRising]I said Donlon is out, so he[BR]
+must be out![Wait][End]
+}
+
+#string:03:01E
+{
+[Style Right]
+[PrintRising]I'm telling you,[BR]
+Donlon is out!!! Ouuut!!![Wait][End]
+}
+
+#string:03:01F
+{
+[Style Right]
+[PrintRising]Donlon is out!![Wait][End]
+}
+
+#string:03:023
+{
+[Style Right]
+Where to begin...?[BR]
+[Pause 20]My name... is Donlon.[BR]
+[Pause 10]My profession isn't important.[BR]
+[Wait][Next]
+I was discussing some[BR]
+delicate matters with my[BR]
+associates the other day.[BR]
+[Wait][Next]
+What I discovered is very[BR]
+important, and it concerns you.[BR]
+[Wait][Next]
+But, before I tell you about it,[BR]
+there are other things of which[BR]
+I must speak.[BR]
+[Wait][Next]
+It is a very long story, but[BR]
+I'll try to shorten it.[BR]
+[Pause 5]Where should I start...?[BR]
+[Wait][Next]
+It was in the golden age.[BR]
+I was shaking down a rat up[BR]
+on Shooting Star Summit[BR]
+and as usual.....[BR]
+[Wait][Next]
+......but the crew...[BR]
+...suddenly...a few G's...[BR]
+...and I...[BR]
+...standing face to face...[BR]
+[Wait][Next]
+Then, the goomah....[BR]
+the rat...[BR]
+was....getting shot up...[BR]
+.....was amazing..[BR]
+[Wait][Next]
+..I was still so young then...[BR]
+I did a mock .........[BR]
+But....got away.....[BR]
+[Wait][Next]
+...........[BR]
+and...........[BR]
+.....then....[BR]
+...........so......[BR]
+[Wait][Next]
+........[BR]
+...................[BR]
+.....  ..........[BR]
+...  ..........[BR]
+[Yield][End]
+}
+
+#string:03:024
+{
+[Next]
+...........................[BR]
+.................[BR]
+.........................[BR]
+...................[BR]
+[Wait][Next]
+......................[BR]
+.............[BR]
+.........................[BR]
+..and then everybody died.[BR]
+[Wait][Next]
+[PrintRising]Huh?! Hey, [/fx][Pause 10][Wait][Next]
+Mario![BR]
+[Pause 10]Were you listening to me?[Wait][End]
+}
+
+#string:03:025
+{
+[Style Right]
+Oh... all right.[BR]
+[Wait][Next]
+...So, anyway, that is why[BR]
+[Pause 10]I am able to help you.[BR]
+[Wait][Next]
+If you get lost during[BR]
+your adventure, you[BR]
+can come to me.[BR]
+[Wait][Next]
+I can get you good information[BR]
+should you want it, for[BR]
+a small price.[BR]
+[Pause 10][Wait][Next]
+[Pause 10]Right now, your main goal[BR]
+must be to save Princess Peach[BR]
+as quickly as is humanly[BR]
+possible, but...[BR]
+[Wait][Next]
+according to my associates,[BR]
+you must first head to the[BR]
+great fortress of the[BR]
+Koopa Bros.[BR]
+[Wait][Next]
+To reach the Koopa Bros.[BR]
+Fortress, head east on the road[BR]
+in front of the Toad House.[Wait][End]
+}
+
+#string:03:034
+{
+[Style Right]
+Oh, Mario,[BR]
+[Pause 10]there's one more thing that[BR]
+I haven't told you.[BR]
+[Wait][Next]
+To get to the Koopa Bros.[BR]
+Fortress, you'll need help from[BR]
+[Color 0x20]a blue-shelled Koopa[Color 0x0A].[BR]
+[Wait][Next]
+One of my associates knows him.[BR]
+In [Color 0x20]Koopa Village[Color 0x0A], you might run[BR]
+into the old geezer.[BR]
+[Wait][Next]
+I gotta get back to work.[Wait][End]
+}
+
+#string:03:035
+{
+[Style Right]
+To get to Koopa Bros.[BR]
+Fortress, you first need to[BR]
+find a blue-shelled Koopa.[BR]
+[Wait][Next]
+My associates never lie,[BR]
+Mario, so heed my words.[BR]
+[Pause 10]Trust me.[Wait][End]
+}
+
+#string:03:033
+{
+[Style Right]
+Mario, those impostors were[BR]
+none other than the Koopa Bros.![BR]
+[Wait][Next]
+You should find them at[BR]
+their hideout, the Koopa[BR]
+Bros. Fortress.[Wait][End]
+}
+
+#string:03:034
+{
+[Style Right]
+Oh, Mario,[BR]
+[Pause 10]there's one more thing that[BR]
+I haven't told you.[BR]
+[Wait][Next]
+To get to the Koopa Bros.[BR]
+Fortress, you'll need help from[BR]
+[Color 0x20]a blue-shelled Koopa[Color 0x0A].[BR]
+[Wait][Next]
+One of my associates knows him.[BR]
+In [Color 0x20]Koopa Village[Color 0x0A], you might run[BR]
+into the old geezer.[BR]
+[Wait][Next]
+I gotta get back to work.[Wait][End]
+}
+
+#string:03:035
+{
+[Style Right]
+To get to Koopa Bros.[BR]
+Fortress, you first need to[BR]
+find a blue-shelled Koopa.[BR]
+[Wait][Next]
+My associates never lie,[BR]
+Mario, so heed my words.[BR]
+[Pause 10]Trust me.[Wait][End]
+}
+
+#string:03:036
+{
+[Style Right]
+Ah, Mario.[BR]
+[Pause 10]Do you want some information[BR]
+about where to go next?[BR]
+[Wait][Next]
+It will cost 5 coins.[BR]
+[Pause 10]Is that acceptable?[BR]
+[Yield][End]
+}
+
+#string:03:037
+{
+[Next]
+Excellent.[BR]
+[Pause 10]Now relax while get what I need.[Wait][End]
+}
+
+#string:03:038
+{
+[Style Right]
+[PrintRising]Yo Frankie![BR]
+[/fx][Wait]Salvadore![BR]
+Information time![BR]
+[Wait][Next]
+Hmmmmm... yes![BR]
+Fuggedaboutit![BR]
+There we go![BR]
+[Wait][Next]
+[PrintRising][Size 48]Ah haaaa![Wait][End]
+}
+
+#string:03:039
+{
+[Next]
+You don't want me to get[BR]
+some information?[BR]
+[Pause 10]All right. Whenever you need[BR]
+some assistance, come to me.[BR]
+[Wait][Next]
+If you require something other[BR]
+than information, stand[BR]
+beside me to talk to me.[Wait][End]
+}
+
+#string:03:03A
+{
+[Next]
+How tragic.[BR]
+You do not have enough coins.[BR]
+[Wait][Next]
+As the family rule,[BR]
+I can't just give away info[BR]
+if you lack the funds.[BR]
+Try doing a shakedown or two.[Wait][End]
+}
+
+#string:03:03B
+{
+[Style Right]
+If you want information, talk to[BR]
+me from across the table.[Wait][End]
+}
+
+#string:03:03C
+{
+[Style Right]
+Donlon is here![Wait][End]
+}
+
+#string:03:03F
+{
+[Style Right]
+I did a shakedown last night[BR]
+and got some good information.[BR]
+[Wait][Next]
+I got what I wanted,[BR]
+but he also said...[BR]
+[Wait][Next]
+"If you keep going around[BR]
+and around the red palm tree[BR]
+in the distant desert town[BR]
+-- Dry Dry Outpost --[BR]
+[Wait][Next]
+something good will happen."[BR]
+So he said.[BR]
+[Wait][Next]
+It doesn't concern a man[BR]
+such as myself.[BR]
+[Wait][Next]
+But I appreciate the work[BR]
+you're doing for me so I thought[BR]
+you would like to hear about it.[BR]
+[Wait][Next]
+If you ever go check it out,[BR]
+let me know.[Wait][End]
+}
+
+#string:03:040
+{
+[Style Right]
+That guy said...[BR]
+[Wait][Next]
+"Desert town, red palm tree,[BR]
+go around and around,[BR]
+something good will happen."[BR]
+[Wait][Next]
+Anyway, if you want me to[BR]
+get you some useful info, talk to[BR]
+me from across the table.[Wait][End]
+}
+
+#string:03:043
+{
+[Style Right]
+You are Donlon, correct?[BR]
+[Wait][Next]
+The name's Parakarry.[BR]
+I deliver letters.[BR]
+[Wait][Next]
+I believe I have one for you.[BR]
+[Pause 10]Hang on a moment.[Wait][End]
+}
+
+#string:03:046
+{
+[Style Right]
+Hm? Who's it from?[BR]
+[Wait][Next]
+Hmmmmm...[BR]
+[Pause 10]Oh, my granddaughter, Donlee![BR]
+She recently entered the[BR]
+family business.[BR]
+[Wait][Next]
+Umph... [Pause 8]Is that so?[BR]
+[Pause 10]Oh, I see. Interesting...[BR]
+[Pause 10][Wait][Next]
+She opened up her business[BR]
+at Dry Dry Outpost, deep in[BR]
+the desert.[BR]
+[Wait][Next]
+It's located somewhere[BR]
+quiet, off the main drag.[BR]
+[Wait][Next]
+She seems to be keeping busy.[BR]
+[Pause 5]That's good to hear.[BR]
+[Wait][Next]
+Thanks so much for bringing[BR]
+this letter.[BR]
+[Pause 10]I'll give you this.[Wait][End]
+}
+
+#string:03:048
+{
+[Style Right]
+Nice to meet you.[BR]
+[Pause 10]I come from [Color 0x20]Starborn Valley[Color 0x0A].[BR]
+[Wait][Next]
+Starborn Valley is in the[BR]
+Shiver region, a chill place[BR]
+far to the north, at the very[BR]
+end of the earth.[BR]
+[Wait][Next]
+Donle, who hails from there,[BR]
+said that he had something[BR]
+important to tell you, Mario.[Wait][End]
+}
+
+#string:03:049
+{
+[Style Right]
+Donle of Starborn Valley is[BR]
+my son, Mario.[BR]
+[Wait][Next]
+It seems he's calling for you.[BR]
+[Wait][Next]
+If he is searching for you,[BR]
+you can be sure something[BR]
+important is going down.[BR]
+[Wait][Next]
+You must go to Starborn Valley![BR]
+Shake a leg![Wait][End]
+}
+
+#string:03:04A
+{
+[Style Right]
+Yes, please hurry![BR]
+[Wait][Next]
+I will run ahead and take[BR]
+tidings of you to Donle.[Wait][End]
+}
+
+#string:03:054
+{
+[Style Right]
+Most of all, though, you shouldn't[BR]
+go ask the Mafia for help.[BR]
+[Wait][Next]
+That would be really bad news[BR]
+for us... I mean, for you![BR]
+[Pause 10]Don't even think about it![Wait][End]
+}
+
+#string:03:07C
+{
+[Style Right]
+The building with the spinning[BR]
+roof is Donlon's house.[BR]
+[Wait][Next]
+He's scary. He also happens[BR]
+to be as stubborn as a mule.[BR]
+[Pause 5]He rarely comes out.[BR]
+[Wait][Next]
+As scary as he is, though,[BR]
+his connections are no joke.[BR]
+He knows just about everything.[BR]
+[Wait][Next]
+He did a shakedown just the[BR]
+other day! I'm glad I'm not[BR]
+that guy![Wait][End]
+}
+
+#string:03:07D
+{
+[Style Right]
+Oh... Mario![BR]
+[Pause 10][Wait][Next]
+[Pause 5]Donlon was looking for you.[BR]
+He lives in that house with[BR]
+the spinning roof.[BR]
+[Wait][Next]
+He asked me to tell you to go[BR]
+meet him at his house.[BR]
+[Wait][Next]
+I was just about to go look[BR]
+for you, but here you are![BR]
+[Wait][Next]
+It's rare for Donlon to call[BR]
+somebody over to his house...[BR]
+[Wait][Next]
+He's a bit shady.[BR]
+Even when he has visitors,[BR]
+it's rare for him to come out[BR]
+of the house at all.[Wait][End]
+}
+
+#string:03:089
+{
+[Style Right]
+Mario![BR]
+[Pause 10]Great timing.[BR]
+[Wait][Next]
+Somebody was looking for you.[BR]
+He's over at Donlon's house.[Wait][End]
+}
+
+#string:03:08C
+{
+[Style Right]
+Up on Shooting Star Summit,[BR]
+there are these two siblings[BR]
+named Donluvlee and Donlow.[BR]
+[Wait][Next]
+Donluvlee sells information.[BR]
+Her contacts are good at finding[BR]
+Badges or Star Pieces.[BR]
+[Wait][Next]
+When you take Star Pieces[BR]
+to Donlow, he'll trade them[BR]
+for Badges.[BR]
+[Wait][Next]
+These two could help you, no?[BR]
+[Pause 5]You ought to go meet them.[Wait][End]
+}
+
+#string:03:08D
+{
+[Style Right]
+Up on Shooting Star Summit,[BR]
+there are these two siblings[BR]
+named Donluvlee and Donlow.[BR]
+[Wait][Next]
+Donluvlee sells information.[BR]
+Her contacts are good at finding[BR]
+Badges or Star Pieces.[BR]
+[Wait][Next]
+When you take Star Pieces[BR]
+to Donlow, he'll trade them[BR]
+for Badges.[BR]
+[Wait][Next]
+These two could help you, no?[BR]
+[Pause 5]You ought to go meet them.[Wait][End]
+}
+
+#string:03:097
+{
+[Style Right]
+Up on Shooting Star Summit,[BR]
+there are these two siblings[BR]
+named Donluvlee and Donlow.[BR]
+[Wait][Next]
+Donluvlee sells information.[BR]
+Her contacts are good at finding[BR]
+Badges or Star Pieces.[BR]
+[Wait][Next]
+When you take Star Pieces[BR]
+to Donlow, he'll trade them[BR]
+for Badges.[BR]
+[Wait][Next]
+These two could help you, no?[BR]
+[Pause 5]You ought to go meet them.[Wait][End]
+}
+
+#string:03:098
+{
+[Style Right]
+Up on Shooting Star Summit,[BR]
+there are these two siblings[BR]
+named Donluvlee and Donlow.[BR]
+[Wait][Next]
+Donluvlee sells information.[BR]
+Her contacts are good at finding[BR]
+Badges or Star Pieces.[BR]
+[Wait][Next]
+When you take Star Pieces[BR]
+to Donlow, he'll trade them[BR]
+for Badges.[BR]
+[Wait][Next]
+These two could help you, no?[BR]
+[Pause 5]You ought to go meet them.[Wait][End]
+}
+
+#string:03:09B
+{
+[Style Right]
+Up on Shooting Star Summit,[BR]
+there are these two siblings[BR]
+named Donluvlee and Donlow.[BR]
+[Wait][Next]
+Donluvlee sells information.[BR]
+Her contacts are good at finding[BR]
+Badges or Star Pieces.[BR]
+[Wait][Next]
+When you take Star Pieces[BR]
+to Donlow, he'll trade them[BR]
+for Badges.[BR]
+[Wait][Next]
+These two could help you, no?[BR]
+[Pause 5]You ought to go meet them.[Wait][End]
+}
+
+#string:03:0B1
+{
+[Style Right]
+Hey, you've been to Shooting[BR]
+Star Summit, right? Did you[BR]
+meet Donluvlee and Donlow?[BR]
+[Wait][Next]
+I hear that Donluvlee uses[BR]
+some shady connections to find[BR]
+Star Pieces and Badges.[BR]
+[Wait][Next]
+Her little brother, Donlow?[BR]
+He's crazy about Star Pieces.[BR]
+Trades Badges for 'em.[Wait][End]
+}
+
+#string:03:074
+{
+[Style Right]
+Bub-ulbs come from a[BR]
+flower-filled land called[BR]
+[Color 0x20]Flower Fields[Color 0x0A].[BR]
+[Wait][Next]
+They say the flowers in[BR]
+Flower Fields are in trouble![BR]
+[Wait][Next]
+To get to Flower Fields, you[BR]
+need four kinds of seeds that[BR]
+only Bub-ulbs possess.[BR]
+But where are the Bub-ulbs?[BR]
+[Wait][Next]
+Please, Mario,[BR]
+[Pause 10]you must look for Bub-ulbs[BR]
+and get the seeds from them![BR]
+[Wait][End]
+}
+
+#string:06:067
+{
+[Style Right]
+Whenever I have problems, I take[BR]
+a brief journey across town to[BR]
+see Donlon. He sells information.[BR]
+[Wait][Next]
+He's an old mobster, you know. A[BR]
+bit unusual, perhaps, but[BR]
+most people think he's in the[BR]
+"Waste Management" business.[Wait][End]
+}
+
+#string:06:06B
+{
+[Style Right]
+Whenever I have problems, I take[BR]
+a brief journey across town to[BR]
+see Donlon. He sells information.[BR]
+[Wait][Next]
+He's an old mobster, you know. A[BR]
+bit unusual, perhaps, but[BR]
+most people think he's in the[BR]
+"Waste Management" business.[Wait][End]
+}
+
+#string:06:06C
+{
+[Style Right]
+Whenever I have problems, I take[BR]
+a brief journey across town to[BR]
+see Donlon. He sells information.[BR]
+[Wait][Next]
+He's an old mobster, you know. A[BR]
+bit unusual, perhaps, but[BR]
+most people think he's in the[BR]
+"Waste Management" business.[Wait][End]
+}
+
+#string:12:03A
+{
+[Style Right]
+Oh, Mario![BR]
+[Pause 10]Did you reach Starborn Valley?[BR]
+[Pause 10]Did you see Donle?[BR]
+[Pause 20][Wait][Next]
+... Oh, excellent. He said what?[BR]
+[Pause 10]An item that has been passed[BR]
+down in this city?[BR]
+[Wait][Next]
+Um... Oh, right! There was[BR]
+something like that.[BR]
+[Wait][Next]
+Just a minute,[BR]
+[Pause 5]I think I've got it somewhere.[Wait][End]
+}
+
+#string:12:03C
+{
+[Style Right]
+This Bucket has been passed[BR]
+down through the years in[BR]
+Shiver City.[BR]
+[Wait][Next]
+As Donle must have told you,[BR]
+there's a legend associated with[BR]
+it.[BR]
+[Wait][Next]
+If you use this and the Scarf[BR]
+together, the way to the Crystal[BR]
+Palace will open.[BR]
+[Wait][Next]
+Who knows what all that means,[BR]
+though! Ha ha ha![BR]
+[Pause 10]I don't have the slightest clue[BR]
+as to how to use them together.[Wait][End]
+}
+
+#string:12:0EA
+{
+[Style Right]
+How do you do?[BR]
+[Pause 10]I'm called Donle.[BR]
+[Wait][Next]
+I care for the Star Kids born[BR]
+here in Starborn Valley.[BR]
+[Wait][Next]
+There are many things I must[BR]
+tell you...[BR]
+[Wait][Next]
+...but not here. Come, let's go to[BR]
+my house.[BR]
+[Wait][Next]
+I cannot concentrate out here in[BR]
+the cold.[Wait][End]
+}
+
+#string:12:0F0
+{
+[Style Right]
+I sent a Ninji to my father,[BR]
+Donlon, hoping that I could coax[BR]
+you to come here...[BR]
+[Wait][Next]
+Because I have found out where[BR]
+the last Star Spirit is.[BR]
+[Wait][Next]
+I shook down a very cold child[BR]
+wearing what looked like an egg.[BR]
+He heard about it from some of[BR]
+Bowser's goons.[BR]
+[Wait][Next]
+If he's as much a rat as he[BR]
+seems, the last Star Spirit is[BR]
+held atop Shiver Mountain,[BR]
+which lies to the north.[BR]
+[Wait][Next]
+Up top sits the [Color 0x20]Crystal Palace[Color 0x0A].[BR]
+The Star Spirit waits there.[BR]
+[Wait][Next]
+The Crystal Palace was originally[BR]
+built to honor the Stars...[BR]
+[Wait][Next]
+But as time passed, it slowly[BR]
+faded from the memories of local[BR]
+people...[BR]
+[Wait][Next]
+...and now, no one can remember[BR]
+how to reach the palace.[BR]
+[Wait][Next]
+There is a way, though, and it[BR]
+involves items that have been[BR]
+passed down in these lands.[BR]
+[Wait][Next]
+Here, take this.[Wait][End]
+}
+
+#string:12:0F5
+{
+[Style Right]
+That egg-wearing rat told me[BR]
+that a Star Spirit waits in[BR]
+Crystal Palace.[BR]
+[Wait][Next]
+[Pause 10]Please, you must save him![Wait][End]
+}
+
+#string:12:0F6
+{
+[Style Right]
+Mario![BR]
+[Pause 10]You have saved the last[BR]
+imprisoned Star Spirit![BR]
+[Wait][Next]
+I heard all about your triumph.[BR]
+[Wait][Next]
+Now, finally, it is time to take[BR]
+back the Star Rod.[BR]
+[Wait][Next]
+Mario...[BR]
+[Pause 5]...the fate of the Stars rests[BR]
+squarely on your shoulders.[BR]
+[Wait][Next]
+Shake down Bowser for us all![Wait][End]
+}
+
+#string:12:0FA
+{
+[Style Right]
+Along with the Ninjis, we're[BR]
+taking care of the Star Kids[BR]
+[Pause 5]under the instruction of the[BR]
+waste management guru, Donle.[BR]
+[Wait][Next]
+It's very rewarding to think[BR]
+that one of these kids might[BR]
+grow up to be a Star Spirit![BR]
+[Wait][Next]
+Oh, can you imagine it? What a[BR]
+happy day that'd be...[BR]
+[Wait][Next]
+But unless things get better[BR]
+around here, it'll just be a[BR]
+fantasy that never comes true.[Wait][End]
+}
+
+#string:12:134
+{
+[Style Right]
+[DitherFade 217]My name is Donlar.[BR]
+[Pause 10]I am the true "Don".[BR]
+[Wait][Next]
+I'm not really here. This is a[BR]
+vision. That last shroom you ate[BR]
+was rigged with a drug.[BR]
+[Wait][Next]
+Right now you should be seeing[BR]
+-and hearing- just what the[BR]
+Mushroom Mafia wants.[BR]
+[Wait][Next]
+[Pause 10]Crystal Palace is the home[BR]
+base of the "Don" family Mafia.[Wait][End]
+}
+
+#string:12:135
+{
+[Style Right]
+[DitherFade 217]We have little time to waste, so[BR]
+listen carefully.[BR]
+[Wait][Next]
+You may not know this, but the[BR]
+followers of Bowser have invaded[BR]
+Crystal Palace, where stars are[BR]
+honored.[BR]
+[Wait][Next]
+Now, what I have to tell you is[BR]
+very important.[BR]
+[Pause 10]Listen to every word I say![BR]
+[Wait][Next]
+I can't tell you the whole tale.[BR]
+[Pause 10]In the interest of time I'll be[BR]
+brief, so pay attention to the[BR]
+key points.[BR]
+[Wait][Next]
+The story begins a long, long[BR]
+time ago...[BR]
+[Wait][Next]
+I was just a goomah back[BR]
+then...[BR]
+[Wait][Next]
+The Boss was so sick...[BR]
+and one day...[BR]
+[Wait][Next]
+...ate a Mistake...[BR]
+...but it was actually...[BR]
+....[BR]
+[Wait][Next]
+So I took over!...[BR]
+[Pause 10]...was...gunfire...it was so...[BR]
+....[BR]
+[Wait][Yield][Next]
+It was.....shakedown......[BR]
+........so.......than....[BR]
+.............then I....[BR]
+.....................[BR]
+[Wait][Next]
+...........   ......[BR]
+.........[BR]
+... .....[BR]
+................[BR]
+............   ......[BR]
+........[BR]
+[Pause 40][Yield][End]
+}
+
+#string:12:136
+{
+[Style Right]
+[Next]
+[DitherFade 217]..................................[BR]
+..................................[BR]
+..................................[BR]
+[Wait][Next]
+.................so that's why you[BR]
+must get Bowser's men out of[BR]
+the Crystal Palace. [Pause 8]But...[BR]
+[InputOn][Wait][Next]
+[PrintRising]Hey! [/fx]You! [Pause 10]Were you even[BR]
+listening to my story?[BR]
+[Pause 15][Wait][End]
+}
+
+#string:12:140
+{
+[Style Right]
+I... I'm the real Bombette...[BR]
+[Pause 10]Wuh... We... Beat up those[BR]
+"Koopa Rangers"...[BR]
+[Pause 10]Rem... Remember?[Wait][End]
+}
+
+#string:12:0DC
+{
+[Style Right]
+Look at that piece of work![BR]
+[Pause 10]I've got myself a new trick![BR]
+[PrintGrowing]SHAPES![/fx][BR]
+[Wait][Next]
+And now, you're gonna be my[BR]
+guinea pig! Yeah![BR]
+[Pause 10][PrintRising]I've gotta win this time![Wait][End]
+}
+
+#string:12:0DD
+{
+[Style Right]
+Mario! You like geometry?[BR]
+[Pause 10]You won't after this![Wait][End]
+}
+
+#string:13:074
+{
+[Style Right]
+[Voice Bowser]All right, enough of that![BR]
+[Pause 10]Now witness the power of this[BR]
+fully armed and operational[Pause 10][BR]
+Star Rod![Wait][End]
+}
+
+#string:14:117
+{
+[Style Right]
+C'mon, that one was easy![BR]
+[Pause 40][Next]
+The answer was "King Bowser."[Wait][End]
+}
+
+#string:21:001
+{
+[Style Right]
+The bridge to Koopa Village[BR]
+is out? My associates know[BR]
+of a switch in a nearby tree.[Wait][End]
+}
+
+#string:21:002
+{
+[Style Right]
+I see... Koopas are in trouble.[BR]
+[Pause 10]You need to find and help the[BR]
+Koopa with a Blue Shell.[Wait][End]
+}
+
+#string:21:003
+{
+[Style Right]
+Head over to the east. To the[BR]
+stone fortress at the end of[BR]
+Pleasant Path, to the east[BR]
+of Toad Town.[BR]
+[Wait][Next]
+It is a long journey east, even[BR]
+from Koopa Village, and the road[BR]
+is full of enemies.[Wait][End]
+}
+
+#string:21:004
+{
+[Style Right]
+The stone fortress is locked,[BR]
+and it's guarded by Koopas.[BR]
+[Wait][Next]
+My inside guy tells me there's[BR]
+A pink tomboy with an explosive[BR]
+personality locked up there.[BR]
+[Wait][Next]
+You help her escape.[BR]
+[Pause 10]She will help you, too.[Wait][End]
+}
+
+#string:21:005
+{
+[Style Right]
+The noble Star Spirit is[BR]
+imprisoned on the top floor of[BR]
+the stone fortress.[BR]
+[Wait][Next]
+Your blue-shelled Koopa and[BR]
+explosive Bob-omb are the keys[BR]
+to cutting the Koopa Bros.[BR]
+down to size.[BR]
+[Wait][Next]
+Move with haste now.[BR]
+[Pause 10]The Star Spirit has many[BR]
+important things to tell you.[Wait][End]
+}
+
+#string:21:006
+{
+[Style Right]
+You go to the south of Toad Town[BR]
+and you'll find a station that is[BR]
+the departure point to where you[BR]
+need to go.[Wait][End]
+}
+
+#string:21:007
+{
+[Style Right]
+The bridge is out, eh? Maybe[BR]
+you should try getting help from[BR]
+that nearby Paratroopa.[Wait][End]
+}
+
+#string:21:008
+{
+[Style Right]
+Now, make your way through the[BR]
+desert at the end of the[BR]
+mountain path.[Wait][End]
+}
+
+#string:21:009
+{
+[Style Right]
+At the end of the path in the[BR]
+desert, there is a dusty town[BR]
+where travelers rest.[BR]
+[Wait][Next]
+It is there where you will find[BR]
+some answers you seek.[Wait][End]
+}
+
+#string:21:00A
+{
+[Style Right]
+You should talk to one of my[BR]
+associates, a Nomadimouse that[BR]
+lives in Dry Dry Outpost.[Wait][End]
+}
+
+#string:21:00B
+{
+[Style Right]
+My associate is pretty picky[BR]
+and only likes lemons. Give him[BR]
+one of those. He should tell you[BR]
+everything you need to know.[Wait][End]
+}
+
+#string:21:00C
+{
+[Style Right]
+My associate is not who you think[BR]
+he is. Head up to the rooftops by[BR]
+going around back, starting at [BR]
+the far east.[Wait][End]
+}
+
+#string:21:00D
+{
+[Style Right]
+C'mon, the stone pulses![BR]
+I think the pedestal is in[BR]
+the north part of the desert.[BR]
+Just look for it![Wait][End]
+}
+
+#string:21:00E
+{
+[Style Right]
+Look I know those are ancient[BR]
+ruins, but seriously, it isn't that[BR]
+hard. 3 stones. Put them in the[BR]
+correct slots.[Wait][End]
+}
+
+#string:21:00F
+{
+[Style Right]
+Beat up that no-good who[BR]
+lives at the bottom of the ruins![Wait][End]
+}
+
+#string:21:010
+{
+[Style Right]
+Deep inside a strange forest,[BR]
+someone waits in the darkness[BR]
+for you to arrive.[Wait][End]
+}
+
+#string:21:011
+{
+[Style Right]
+In the dangerous gloom of[BR]
+Forever Forest, [Pause 5]you'll find a[BR]
+guy who will tell you what to do.[Wait][End]
+}
+
+#string:21:012
+{
+[Style Right]
+In the shadowy Forever Forest,[BR]
+[Pause 5]you must take the right path to[BR]
+get out.[BR]
+[Wait][Next]
+One path always looks different[BR]
+from the others, [Pause 5]and that path[BR]
+is the one you always take.[BR]
+[Wait][Next]
+Look carefully at the[BR]
+scenery to find your way.[Wait][End]
+}
+
+#string:21:013
+{
+[Style Right]
+When you escape Forever Forest,[BR]
+you'll find a spooky mansion[BR]
+hidden in the trees.[Wait][End]
+}
+
+#string:21:014
+{
+[Style Right]
+After a few puzzles,[BR]
+try using music to distract[BR]
+the guard.[Wait][End]
+}
+
+#string:21:015
+{
+[Style Right]
+You climb onto the sofa on the[BR]
+first floor of Boo's mansion.[BR]
+[Wait][Next]
+You launch into the air and[BR]
+pull down the chandelier, which[BR]
+moves a glass case.[BR]
+[Wait][Next]
+In order to enter the door[BR]
+hidden by the glass case,[BR]
+you hang a heavy weight from[BR]
+the chandelier.[BR]
+[Wait][Next]
+Yeah, that's how you gotta do it.[BR]
+It's simple, really.[Wait][End]
+}
+
+#string:21:016
+{
+[Style Right]
+In Boo's Mansion in Forever[BR]
+Forest, there's a staircase[BR]
+leading downstairs.[Wait][End]
+}
+
+#string:21:017
+{
+[Style Right]
+If you return a Boo to his empty[BR]
+picture frame, he will help you[BR]
+go upstairs.[Wait][End]
+}
+
+#string:21:018
+{
+[Style Right]
+Seriously, just walk east[BR]
+from the mansion.[Wait][End]
+}
+
+#string:21:019
+{
+[Style Right]
+Make your way through the[BR]
+castle, gathering the keys.[Wait][End]
+}
+
+#string:21:01A
+{
+[Style Right]
+Make your way through the[BR]
+castle, gathering the keys.[Wait][End]
+}
+
+#string:21:01B
+{
+[Style Right]
+Make your way through the[BR]
+castle, gathering the keys.[Wait][End]
+}
+
+#string:21:01C
+{
+[Style Right]
+Grab the last key, and head[BR]
+back out as fast as you can.[Wait][End]
+}
+
+#string:21:01D
+{
+[Style Right]
+Defeat Tubba, and save the[BR]
+Star Spirit he once held.[Wait][End]
+}
+
+#string:21:01E
+{
+[Style Right]
+So, some mischievous folks[BR]
+are playing tricks and bothering[BR]
+the citizens of Toad Town?[BR]
+[Wait][Next]
+Walk west from the southern[BR]
+shop and enter the second[BR]
+house from the shop.[BR]
+[Wait][Next]
+You should turn invisible to[BR]
+trick them.[Wait][End]
+}
+
+#string:21:01F
+{
+[Style Right]
+You need to go into the house[BR]
+you were literally just in.[BR]
+[Wait][Next]
+Find a key and return to[BR]
+Toad Town.[Wait][End]
+}
+
+#string:21:020
+{
+[Style Right]
+The owner of the shop in the[BR]
+south of Toad Town is sick with[BR]
+worry about a stolen key.[Wait][End]
+}
+
+#string:21:021
+{
+[Style Right]
+Try putting the train you got[BR]
+into the toybox, without going[BR]
+in it yourself.[Wait][End]
+}
+
+#string:21:022
+{
+[Style Right]
+Find your way through the[BR]
+block puzzles in the Toy Box.[Wait][End]
+}
+
+#string:21:023
+{
+[Style Right]
+You gotta give that frying pan[BR]
+to Tayce. T, pronto.[Wait][End]
+}
+
+#string:21:024
+{
+[Style Right]
+Give Gourmet Guy some cake.[BR]
+Ain't nothin' sweeter than cake.[BR]
+[Wait][Next]
+Tayce. T makes some good cake[BR]
+if you give her the right[BR]
+ingredients to make it with.[BR]
+[Wait][Next]
+I'm sure you know what item[BR]
+to give her. It's painfully[BR]
+obvious.[BR]
+[Wait][End]
+}
+
+#string:21:025
+{
+[Style Right]
+You'll hit a dead end on the[BR]
+moving walkways of the Toy Box.[BR]
+[Wait][Next]
+Instead of trying to jump over,[BR]
+turn invisible and slip[BR]
+through the net.[BR]
+[Wait][Next]
+Soon enough you'll reach some[BR]
+blocks that move up and down[BR]
+but you cannot jump over.[BR]
+[Wait][Next]
+Jump to a high spot near[BR]
+the platform and hitch a ride[BR]
+with a Paratroopa.[BR]
+[Wait][Next]
+You should give the dictionary[BR]
+back to the scholarly Toad.[BR]
+With it, he can decipher[BR]
+the Shy Guys' language.[Wait][End]
+}
+
+#string:21:026
+{
+[Style Right]
+The path you choose might[BR]
+be completely dark, so try both[BR]
+available paths.[Wait][End]
+}
+
+#string:21:027
+{
+[Style Right]
+When in doubt, smash it[BR]
+with your hammer.[Wait][End]
+}
+
+#string:21:028
+{
+[Style Right]
+Shy Guys hate the light when[BR]
+they want to hide. Scare them[BR]
+into the room that you[BR]
+want to enter.[Wait][End]
+}
+
+#string:21:029
+{
+[Style Right]
+There is a whale[BR]
+floating by the port docks.[BR]
+Jump on it and smash down[BR]
+to get a rise out of it.[BR]
+[Wait][Next]
+...You do know where the port is,[BR]
+don't you?[BR]
+[Wait][Next]
+I suppose I'll tell you, just[BR]
+in case. Go straight in the[BR]
+direction opposite Forever[BR]
+Forest.[Wait][End]
+}
+
+#string:21:02A
+{
+[Style Right]
+Your new whale pal[BR]
+should take you where you need.[Wait][End]
+}
+
+#string:21:02B
+{
+[Style Right]
+The Yoshis know something, so[BR]
+talk to them to learn[BR]
+the answers you seek.[Wait][End]
+}
+
+#string:21:02C
+{
+[Style Right]
+The baby Yoshis are at a[BR]
+mischievous age, and they[BR]
+play hide-and-seek on the[BR]
+jungle islands.[BR]
+[Wait][Next]
+You help the fish baby-sitter[BR]
+when she loses them and asks[BR]
+for help, [Pause 10]then you are helped,[BR]
+as well.[Wait][End]
+}
+
+#string:21:02D
+{
+[Style Right]
+Underground... on top of a tree...[BR]
+behind a bush... on a distant[BR]
+island... deep in the jungle...[BR]
+[Wait][Next]
+...that's where all the baby[BR]
+Yoshis are hiding.[Wait][End]
+}
+
+#string:21:02E
+{
+[Style Right]
+Go deeper into the jungle.[Wait][End]
+}
+
+#string:21:02F
+{
+[Style Right]
+Go deeper into the jungle.[Wait][End]
+}
+
+#string:21:030
+{
+[Style Right]
+Go into the Volcano.[Wait][End]
+}
+
+#string:21:031
+{
+[Style Right]
+Get the Ultra Hammer.[Wait][End]
+}
+
+#string:21:032
+{
+[Style Right]
+Water beats fire, you know.[Wait][End]
+}
+
+#string:21:033
+{
+[Style Right]
+Kolorado beat you to the seed[BR]
+you need. Try trading for it.[Wait][End]
+}
+
+#string:21:034
+{
+[Style Right]
+There is a lot of empty space[BR]
+in the Toad Town flower garden.[BR]
+You need seeds.[BR]
+[Wait][Next]
+You'll find the special seeds in[BR]
+Toad Town, Forever Forest,[BR]
+Jade Jungle and on Mt. Rugged.[Wait][End]
+}
+
+#string:21:035
+{
+[Style Right]
+Gather the Bean, Water, and[BR]
+Soil that you need.[Wait][End]
+}
+
+#string:21:036
+{
+[Style Right]
+Gather the Bean, Water, and[BR]
+Soil that you need.[Wait][End]
+}
+
+#string:21:037
+{
+[Style Right]
+Gather the Bean, Water, and[BR]
+Soil that you need.[Wait][End]
+}
+
+#string:21:038
+{
+[Style Right]
+Gather the Bean, Water, and[BR]
+Soil that you need.[Wait][End]
+}
+
+#string:21:039
+{
+[Style Right]
+Gather the Bean, Water, and[BR]
+Soil that you need.[Wait][End]
+}
+
+#string:21:03A
+{
+[Style Right]
+Gather the Bean, Water, and[BR]
+Soil that you need.[Wait][End]
+}
+
+#string:21:03B
+{
+[Style Right]
+Use the Bean, Water, and[BR]
+Soil near the Big Tree.[Wait][End]
+}
+
+#string:21:03C
+{
+[Style Right]
+The Star Spirit is waiting for[BR]
+you on a cloud in the sky.[Wait][End]
+}
+
+#string:21:03D
+{
+[Style Right]
+Some boots you need are in the[BR]
+sewers. Watt will do the rest.[Wait][End]
+}
+
+#string:21:03E
+{
+[Style Right]
+You need to find your way to[BR]
+the Crystal Palace.[Wait][End]
+}
+
+#string:21:03F
+{
+[Style Right]
+You need to find your way to[BR]
+the Crystal Palace.[Wait][End]
+}
+
+#string:21:040
+{
+[Style Right]
+You need to find your way to[BR]
+the Crystal Palace.[Wait][End]
+}
+
+#string:21:041
+{
+[Style Right]
+You need to find your way to[BR]
+the Crystal Palace.[Wait][End]
+}
+
+#string:21:042
+{
+[Style Right]
+You need to find your way to[BR]
+the Crystal Palace.[Wait][End]
+}
+
+#string:21:043
+{
+[Style Right]
+You need to find your way to[BR]
+the Crystal Palace.[Wait][End]
+}
+
+#string:21:044
+{
+[Style Right]
+You need to find your way[BR]
+through the Crystal Palace.[Wait][End]
+}
+
+#string:21:045
+{
+[Style Right]
+You need to find your way[BR]
+through the Crystal Palace.[Wait][End]
+}
+
+#string:21:046
+{
+[Style Right]
+You need to find your way[BR]
+through the Crystal Palace.[Wait][End]
+}
+
+#string:21:047
+{
+[Style Right]
+You need to find your way[BR]
+through the Crystal Palace.[Wait][End]
+}
+
+#string:21:048
+{
+[Style Right]
+A frozen king rules in the[BR]
+palace on the snowy mountain.[BR]
+[Wait][Next]
+He seems to split into three[BR]
+kings, but two of them are[BR]
+fakes. To be sure, you can[BR]
+attack all of them at once.[Wait][End]
+}
+
+#string:21:049
+{
+[Style Right]
+Go to Shooting Star Summit, man.[Wait][End]
+}
+
+#string:21:04A
+{
+[Style Right]
+The Star Spirits will help[BR]
+you get to Bowser.[Wait][End]
+}
+
+#string:21:04B
+{
+[Style Right]
+Make your way through Bowser's[BR]
+Castle.[Wait][End]
+}
+
+#string:21:04C
+{
+[Style Right]
+Make your way through Bowser's[BR]
+Castle.[Wait][End]
+}
+
+#string:21:04D
+{
+[Style Right]
+Make your way through Bowser's[BR]
+Castle.[Wait][End]
+}
+
+#string:21:04E
+{
+[Style Right]
+Take the fight to Bowser[BR]
+when you're ready! You can't[BR]
+lose now![Wait][End]
+}
+
+#string:0D:07A
+{
+[Style Right]
+What? You're joking.[BR]
+[Pause 10]You believe some crazy guy?[BR]
+[Wait][Next]
+Well, OK... I guess...[BR]
+[Wait][Next]
+If you Spin Jump three times[BR]
+inside Donlon's house, something[BR]
+good should happen to you...[BR]
+[Wait][Next]
+Ha ha ha...[BR]
+[Pause 10]I just made that up! You'll[BR]
+probably go try it, though, since[BR]
+you believe anything.[BR]
+[Wait][Next]
+It would be funny, though...[Wait][End]
+}
+
+#string:0D:07B
+{
+[Style Right]
+Well, OK... I guess...[BR]
+[Wait][Next]
+If you Spin Jump three times[BR]
+inside Donlon's house, something[BR]
+good should happen to you...[BR]
+[Wait][Next]
+Ha ha ha...[BR]
+[Pause 10]I just made that up! You'll[BR]
+probably go try it, though, since[BR]
+you believe anything.[BR]
+[Wait][Next]
+It would be funny, though...[Wait][End]
+}
+
+#string:0A:045
+{
+[Style Right]
+Ah... My, my...[HEART][BR]
+[Pause 10]Hello there, Mario![BR]
+[Wait][Next]
+My information selling business[BR]
+is shut down. All my leads have[BR]
+run off, so I can't help you.[BR]
+I'm sorry.[Wait][End]
+}
+
+#string:0B:0EF
+{
+[Style Right]
+Huff [Pause 5]Huff...[BR]
+[Pause 5]I'm a great jumper, but my[BR]
+running really needs some work.[BR]
+[Wait][Next]
+Still, Shy Guys are nothing[BR]
+compared to that Clog Monster...[BR]
+[Wait][Next]
+Don't tell me you forgot about[BR]
+the Clog Monster![Pause 16] Remember, with[BR]
+the Clog Cleaner?[BR]
+[Wait][Next]
+Sheesh, I guess not even you[BR]
+watched our Super Show.[BR]
+Never mind.[BR]
+[Wait][Next]
+I know that it's up to you to[BR]
+save Princess Peach, so hurry[BR]
+up for my sake![Wait][End]
+}
+
+#string:20:059
+{
+[Style Inspect]
+Somebody said to me that[BR]
+if you equip all three of a[BR]
+certain type of attack badge,[BR]
+their power increases.[BR]
+[Wait][Next]
+But I can't remember which[BR]
+badges you have to equip![BR]
+Why do I do this to myself?[BR]
+[Wait][Next]
+All I remember is, the guy[BR]
+who told me said he lost[BR]
+one of them on Mt. Rugged.[BR]
+[Wait][Next]
+Fat lot of good that does[BR]
+me though, since I'm stuck[BR]
+watching the house still.[BR]
+[Wait][End]
+}
+
+#string:29:00D
+{
+Dennis Hopper???[End]
+}
+
+#string:0F:046
+{
+[Style Right]
+[Wave]Hm? What do you want?[BR]
+[Wait][Next]
+Get away from that Treasure[BR]
+Chest, pal![BR]
+[/fx][Wait][Yield][Next]
+It's ours, see?[BR]
+[Pause 10]Don't mess with us![HEART][BR]
+[Yield][End]
+}
+
+#string:0F:047
+{
+[Next]
+You wanna fight? Are you nuts?[BR]
+[Pause 10]You don't wanna mess with us![HEART][BR]
+[Pause 10]Are you sure ya wanna fight?[BR]
+[Yield][End]
+}
+
+#string:0F:049
+{
+[Next]
+What!! Well, all right...[BR]
+[Pause 10]I do love a challenge![HEART][BR]
+[Wait][Next]
+[Wave]Here it comes, pal![BR]
+[Pause 10]You can blame Sin Biscuit for[BR]
+what happens next![Wait][End]
+}
+
+#string:0C:0F0
+{
+[Style Right]
+Will you all pipe down!?[BR]
+[Wait][Next]
+I have enough to do, trying to[BR]
+convince Red to let me be a[BR]
+Koopa Bro. I don't need[BR]
+Bob-ombs causing trouble![Wait][End]
+}
+
+#string:0C:0F1
+{
+[Style Right]
+[PrintRising]What in the... Mario!?[BR]
+[/fx][Pause 10]Grrr... I thought you'd escape![BR]
+[Wait][Next]
+That's why I brought heavy[BR]
+Bob-omb troops![BR]
+[Pause 5]Everybody, get him![Wait][End]
+}
+
+#string:10:0DB
+{
+[Style Right]
+Ah. Oh, so you're Mario.[BR]
+[Pause 10]I see. Roger that.[BR]
+[Wait][Next]
+You can't find a way to reach[BR]
+the volcano, is that it?[BR]
+[Pause 5]Yeah, that's a problem.[BR]
+[Pause 5]Not for me, though. I'll help.[BR]
+[Wait][Next]
+Before I help you, I need to know[BR]
+that you're ready to go into[BR]
+the volcano, so let's have a[BR]
+quick fight to see.[BR]
+[Wait][Next]
+I've got something exceptional[BR]
+to give you that ought to help[BR]
+you on your way...[BR]
+[Wait][Next]
+But that's for later![BR]
+[Wait][Next]
+Right now, let's see if you're[BR]
+ready for the volcano, OK?[Wait][End]
+}
+
+#string:14:14A
+{
+[Style Right]
+[Wave]Uh...nnnn...[BR]
+[Pause 10]...Samantha Mathis...???[BR]
+nope... wrong princess...[BR]
+[Wait][Next]
+Zzz... mumble... mumble...[Wait][End]
+}
+
+#string:20:051
+{
+[Style Inspect]
+Once again, my brother went on[BR]
+an exciting journey.[BR]
+[Wait][Next]
+Once again, he went alone.[BR]
+It's so unfair![BR]
+[Wait][Next]
+I remember the carefree days[BR]
+when we played Golf and[BR]
+Tennis and had Parties.[BR]
+[Wait][Next]
+I remodeled the house and[BR]
+made a secret basement.[BR]
+My brother has no idea![BR]
+[Wait][Next]
+It's the perfect place to[BR]
+write in you, my secret diary.[BR]
+[Wait][Next]
+I think I'll do some reading[BR]
+while I have the extra time.[BR]
+[Wait][Next]
+Maybe I can learn some neat[BR]
+stuff to impress my brother[BR]
+when he gets back![BR]
+[Wait][End]
+}
+
+#string:20:052
+{
+[Style Inspect]
+I read in a book I borrowed[BR]
+from Russ T. that to the far[BR]
+west of Toad Town lies an[BR]
+ancient tomb.[BR]
+[Wait][Next]
+The book said a powerful[BR]
+ruler was buried there, after[BR]
+being tortured by the many[BR]
+traps and monsters.[BR]
+[Wait][Next]
+Legend has it, the ultimate[BR]
+treasure is buried there[BR]
+with him.[BR]
+[Wait][Next]
+That sounds nice, but to tell[BR]
+you the truth it sounds too[BR]
+scary for me![BR]
+[Wait][Next]
+Maybe when Mario gets back[BR]
+I'll see if he wants to check[BR]
+it out. Alone.[BR]
+[Wait][End]
+}
+
+#string:20:053
+{
+[Style Inspect]
+I got some junk mail today[BR]
+from a medical company.[BR]
+[Wait][Next]
+They wanted 30 coins a month[BR]
+for an insurance plan. What a[BR]
+total rip off![BR]
+[Wait][Next]
+I even had to use the doctor[BR]
+from the plan. It was a[BR]
+"Malpractice Guy".[BR]
+[Wait][Next]
+I'm not sure who that is, but[BR]
+I'd rather not leave my medical[BR]
+care to someone called[BR]
+"Malpractice".[BR]
+[Wait][Next]
+Either way, my brother is a[BR]
+doctor, so why do I need to[BR]
+pay for healthcare?[Wait][End]
+}
+
+#string:20:054
+{
+[Style Inspect]
+The whole Goomba family visited[BR]
+me today.[BR]
+[Wait][Next]
+They said that Goombario is in[BR]
+the care of my brother, then[BR]
+they gave me a souvenir![BR]
+[Wait][Next]
+They also told me my invitation[BR]
+to their special club with the[BR]
+Don family was rejected.[BR]
+[Wait][Next]
+I was kinda bummed out. I[BR]
+really wanna join! I'll try[BR]
+again one day, but for now[BR]
+I'm just gonna wait.[BR]
+[Wait][Next]
+Just imagine the great Luigi[BR]
+being a part of a club like[BR]
+that with all those important[BR]
+people.[BR]
+[Wait][Next]
+Maybe I need to get stronger.[BR]
+I think I'll try the Dojo in[BR]
+town when Mario gets back.[BR]
+[Wait][End]
+}
+
+#string:20:056
+{
+[Style Inspect]
+There was a weird page in[BR]
+that book about the ancient[BR]
+tomb.[BR]
+[Wait][Next]
+I couldn't read the language,[BR]
+but I could distinctly count[BR]
+100 rooms, one atop the other.[BR]
+[Wait][Next]
+There must be some amazing[BR]
+treasure in those rooms.[BR]
+Every 10th floor seemed to[BR]
+be especially important.[BR]
+[Wait][Next]
+There was another floor that[BR]
+seemed special, but I didn't[BR]
+bother counting which floor[BR]
+it was.[BR]
+[Wait][Next]
+Even just reading about that[BR]
+place gives me the creeps![BR]
+[Wait][End]
+}
+
+#string:20:057
+{
+[Style Inspect]
+I heard a rumor that the Dojo[BR]
+Master trained all around the[BR]
+world, even with the Star[BR]
+Spirits themselves![BR]
+[Wait][Next]
+That guy must be really tough[BR]
+if he can train all the[BR]
+way in Star Haven.[BR]
+[Wait][Next]
+Of course, it could be just[BR]
+a rumor. I mean, how would he[BR]
+even get up there?[BR]
+[Wait][Next]
+I can't wait to battle him[BR]
+one day. Mario, hurry up![Wait][End]
+}
+
+#string:20:058
+{
+[Style Inspect]
+At the party Princess Peach[BR]
+held before being taken into[BR]
+the sky, a shady guy came up[BR]
+to me.[BR]
+[Wait][Next]
+He offered me some tasty[BR]
+cake, but I didn't wanna[BR]
+ruin my appetite.[BR]
+[Wait][Next]
+I wonder where he got that[BR]
+cake from. Maybe I should[BR]
+have taken a bite...[Wait][End]
+}
+
+#string:20:05A
+{
+[Style Inspect]
+Yesterday, someone mistook me[BR]
+for John Leguizamo. I don't[BR]
+look anything like him...[BR]
+[Wait][Next]
+Was he blind? Or terrible[BR]
+at casting? Who knows...[BR]
+[Wait][Next]
+I'd better not think too[BR]
+much about it.[Wait][End]
+}
+
+#string:20:05B
+{
+[Style Inspect]
+When I looked up at the sky[BR]
+tonight, I saw a shooting star[BR]
+arcing across the sky toward[BR]
+Princess Peach's Castle.[BR]
+[Wait][Next]
+I made a wish to the Stars[BR]
+right away, but I wonder if[BR]
+it will really be granted...[BR]
+[Wait][Next]
+What I wished was.............[BR]
+..............................[BR]
+[Wait][Next]
+I can't write it even though[BR]
+this is a secret diary.[BR]
+[Wait][Next]
+Aargh! You can see it even[BR]
+though I erased it![BR]
+[Wait][Next]
+[Color 0x17]My wish is to be S tier in[BR]
+Smash Ultimate.[Wait][End]
+}
+
+#string:20:05C
+{
+[Style Inspect]
+I heard that my brother finally[BR]
+saved Princess Peach![BR]
+[Wait][Next]
+Bowser increased his power with[BR]
+the Star Rod, but my brilliant[BR]
+brother beat him anyway![BR]
+[Wait][Next]
+I guess he'll be coming back home[BR]
+pretty soon.[BR]
+[Wait][Next]
+I'm looking forward to listening[BR]
+to the story of his adventure.[BR]
+[Wait][Next]
+Anyway, I'm going to finish this[BR]
+diary for now.[BR]
+[Wait][Next]
+There's one last thing I have[BR]
+to say. I actually did get to[BR]
+join that secret club.[BR]
+[Wait][Next]
+I want to say more, but I'm[BR]
+afraid I won't have fingers[BR]
+to write with if I do.[BR]
+[Wait][Next]
+Maybe one day I'll get to[BR]
+brag to Mario about it, but[BR]
+for now I have to wait.[BR]
+[Wait][Next]
+Now I'm going to go prepare a[BR]
+dinner to celebrate Mario's[BR]
+return![BR]
+                         Luigi[Wait][End]
+}
+
+#string:11:0B6
+{
+[Style Right]
+Let's go!! C'mon![BR]
+[Pause 10]We need more clouds! I wanna[BR]
+see this land covered![BR]
+[Wait][Next]
+[Wave]We'll make them fear the power[BR]
+of my Puff Puff Machine![HEART][Wait][End]
+}
+
+#string:05:024
+{
+[Style Right]
+Ever been to Dry Dry Desert?[BR]
+It's a really scary place.[BR]
+[Wait][Next]
+I've seen packs of cactus[BR]
+monsters, thieves who prey on[BR]
+travelers' coins, and even[BR]
+whirlwinds![BR]
+[Wait][Next]
+The path is blocked now[BR]
+by sand dunes from the last[BR]
+big storm.[BR]
+[Wait][Next]
+I'm a desert expert, so I[BR]
+found the way through no[BR]
+problem.[BR]
+[Wait][Next]
+First I went east, then[BR]
+north, east, north, north,[BR]
+east, south, east, south,[BR]
+east, north, north.[BR]
+[Wait][Next]
+Then I went east, and[BR]
+south until I reached[BR]
+the path. Further south[BR]
+is the Oasis.[BR]
+[Wait][Next]
+I heard sometimes, bandit[BR]
+leaders show up in a[BR]
+couple places as well.[BR]
+You should avoid them.[BR]
+[Wait][End]
+}
+
+#string:05:025
+{
+[Style Right]
+Ever been to Dry Dry Desert?[BR]
+It's a really scary place.[BR]
+[Wait][Next]
+I've seen packs of cactus[BR]
+monsters, thieves who prey on[BR]
+travelers' coins, and even[BR]
+whirlwinds![BR]
+[Wait][Next]
+The path is blocked now[BR]
+by sand dunes from the last[BR]
+big storm.[BR]
+[Wait][Next]
+I'm a desert expert, so I[BR]
+found the way through no[BR]
+problem.[BR]
+[Wait][Next]
+First I went east, then[BR]
+north, east, north, north,[BR]
+east, south, east, south,[BR]
+east, north, north.[BR]
+[Wait][Next]
+Then I went east, and[BR]
+south until I reached[BR]
+the path. Further south[BR]
+is the Oasis.[BR]
+[Wait][Next]
+I heard sometimes, bandit[BR]
+leaders show up in a[BR]
+couple places as well.[BR]
+You should avoid them.[BR]
+[Wait][End]
+}
+
+#string:05:026
+{
+[Style Right]
+Ever been to Dry Dry Desert?[BR]
+It's a really scary place.[BR]
+[Wait][Next]
+I've seen packs of cactus[BR]
+monsters, thieves who prey on[BR]
+travelers' coins, and even[BR]
+whirlwinds![BR]
+[Wait][Next]
+The path is blocked now[BR]
+by sand dunes from the last[BR]
+big storm.[BR]
+[Wait][Next]
+I'm a desert expert, so I[BR]
+found the way through no[BR]
+problem.[BR]
+[Wait][Next]
+First I went east, then[BR]
+north, east, north, north,[BR]
+east, south, east, south,[BR]
+east, north, north.[BR]
+[Wait][Next]
+Then I went east, and[BR]
+south until I reached[BR]
+the path. Further south[BR]
+is the Oasis.[BR]
+[Wait][Next]
+I heard sometimes, bandit[BR]
+leaders show up in a[BR]
+couple places as well.[BR]
+You should avoid them.[BR]
+[Wait][End]
+}
+
+#string:20:055
+{
+[Style Inspect]
+I heard that my brother went[BR]
+to Lavalava Island on a tuna.[BR]
+[Wait][Next]
+Unbelievable! So unfair!![BR]
+I... I... I wanna ride on[BR]
+a tuna, too![BR]
+[Wait][Next]
+I left the house for a[BR]
+moment and went to the[BR]
+docks to try and find[BR]
+this tuna.[BR]
+[Wait][Next]
+I asked a local whale if[BR]
+he'd seen a tuna nearby,[BR]
+but he just got mad![BR]
+[Wait][Next]
+I guess I'll have to[BR]
+look again after Mario[BR]
+gets back.[BR]
+[Wait][End]
+}
+
+#string:1A:125
+{
+[Style Tattle]
+[EnableCDownNext]How did this Toad get[BR]
+all the way down here?[BR]
+Are we hallucinating?[BR]
+[Wait][Next]
+He doesn't have anything[BR]
+important to say. We should[BR]
+just keep moving.[BR]
+[Wait][End]
+}
+
+#string:11:0A5
+{
+[Style Right]
+You got some nerve![BR]
+[Pause 10]Picking on my poor, sweet[BR]
+Lakilester![BR]
+[Wait][Next]
+[Down 10][Size 32][PrintRising]I'll end you![Wait][End]
+}
+
+#string:11:0A7
+{
+[Style Right]
+Mario, please forgive us![BR]
+[Wait][Next]
+My Lakilester was just following[BR]
+Huff N. Puff's orders![BR]
+[Yield][End]
+}
+
+#string:11:0A6
+{
+[Style Right]
+Hey, wait a minute![BR]
+[Wait][Next]
+It's Spike, remember?[BR]
+[Pause 10]I told you I changed my name[BR]
+last month! C'mon now![BR]
+[Wait][Yield][Next]
+Man... I mean, gee whiz...[BR]
+You're always embarrassing me[BR]
+like this...[BR]
+[Wait][Next]
+Although... for some reason it[BR]
+makes me like you even more...[BR]
+[Wait][Next]
+I mean, what? No!![BR]
+[Pause 10]Did I say that out loud? Forget[BR]
+that I said that![BR]
+[Wait][Next]
+...Anyway![BR]
+[Pause 10]I lost a challenge man-to-man,[BR]
+so we have to settle this.[BR]
+[Wait][Next]
+I have to face the music.[Wait][End]
+}
+
+#string:0F:03B
+{
+[Style Right]
+Hm?[Pause 10] You picked me?[BR]
+[Pause 10]You could have had a[BR]
+free pass and you chose[BR]
+to fight me?[HEART][BR]
+[Wait][Next]
+[Wave]Well I suppose I shouldn't[BR]
+disappoint you! I hope you're[BR]
+ready for a beating![BR]
+[Wait][End]
+}
+
+#string:13:03F
+{
+[Style Right]
+[Shake]Grrrraaaaaaaaghhhhhhh!!!![BR]
+[/fx][Pause 10]Cor.... [Pause 3]Correct!!![BR]
+[Wait][Next]
+[PrintRising]I can't believe it![BR]
+[Pause 10]You got five of my super duper[BR]
+brain-busters right![BR]
+[/fx][Wait][Next]
+[Down 8][Size 32][Shake]Greaaaghhh!!!!![BR]
+[Pause 10][SizeReset][BR]
+[Wait][Scroll 4]I've been defeated...!![BR]
+[Pause 21]Naaah! Get him, boys![Wait][End]
+}
+
+#string:13:041
+{
+[Style Right]
+[PrintRising]Gah ha ha ha ha ha ha ha!!!![BR]
+[/fx]Nope, that's wrong, idiot![BR]
+[Wait][Next]
+You made three mistakes![BR]
+[Pause 10]Too bad for you, Mario![BR]
+[Wait][Next]
+As promised, here's your horrible[BR]
+reward![BR]
+[Wait][Next]
+[PrintRising]Prepare for battle![BR]
+[Pause 10]Koopinator Unit! Attack![Wait][End]
+}
+
+#string:13:043
+{
+[Style Right]
+Oh, but... no! NO!![BR]
+[Pause 10]You beat the Koopinator Unit?!![BR]
+[Wait][Next]
+My last line of defense![BR]
+[Pause 10]The elite soldiers didn't[BR]
+stand up... to Mario![BR]
+[Wait][Next]
+[Down 8][Size 32][Shake]Groahhhhhhh!!!![BR]
+[Pause 10][SizeReset][BR]
+[Wait][Scroll 4]I concede defeat.[BR]
+[Pause 10]I've been defeated by Mario!!![BR]
+Why? Why? Whyyyyy?[Wait][End]
+}
+
+#string:07:094
+{
+[Style Right]
+Ugh...[BR]
+I told you I'm not a tuna...[BR]
+I'm not even a fish...[BR]
+[Wait][Next]
+And I have a headache from your[BR]
+jumping around on me, too! Do[BR]
+you think you could check my[BR]
+belly?[BR]
+[Wait][Next]
+I can't promise it will be the[BR]
+safest place. I imagine bad[BR]
+things will happen to you[BR]
+and your partner.[BR]
+[Wait][Next]
+You should be prepared for the[BR]
+worst. Whatever you have to do,[BR]
+make sure you do it fast.[BR]
+That won't stop you, right?[BR]
+[Wait][Next]
+I'm begging you, please...[Wait][End]
+}
+
+#string:10:02B
+{
+[Next]
+It's VERY hot and VERY[BR]
+dangerous in the volcano![BR]
+[Wait][Next]
+If you aren't extremely careful[BR]
+AND lucky, you'll be roasted to[BR]
+a golden brown.[BR]
+[Wait][Next]
+The last guy who went in there[BR]
+spoke of a fiery beast that[BR]
+[Color 0x20]incinerated all of his gear.[Color 0x0A][BR]
+[Wait][Next]
+He barely made it out alive.[BR]
+All of the things he brought in[BR]
+with him were [Color 0x20]lost in the[BR]
+monster's flame[Color 0x0A].[BR]
+[Wait][Next]
+But you don't care. You guys are[BR]
+going there anyway![BR]
+[Pause 5]I do NOT approve of this![Wait][End]
+}
+
+#string:10:0D1
+{
+[Style Right]
+That's an Ultra Stone. I found[BR]
+it a long time ago in the depths[BR]
+of this jungle.[BR]
+[Wait][Next]
+Now that you have this stone,[BR]
+when you find a Super Block,[BR]
+[Wait][Next]
+you can upgrade one of your[BR]
+party members from Super Rank[BR]
+to Ultra Rank.[BR]
+[Wait][Next]
+Oh, and I almost forgot to[BR]
+warn you. The creature deep in[BR]
+the volcano has been known to[BR]
+[Color 0x20]burn up travelers' gear.[Color 0x0A][BR]
+[Wait][Next]
+[Pause 5]You should only bring what[BR]
+you need into the volcano.[BR]
+[Wait][Next]
+That's all I have to say![BR]
+[Pause 10]I've got to go now.[BR]
+[Pause 10]Over and out.[Wait][End]
+}
+
+#string:04:039
+{
+[Style Right]
+I wonder who "Bootler" is.[BR]
+.[Pause 3].[Pause 3].[BR]
+[Pause 20][Wait][Yield][Next]
+[Static 50]Ugh... Oh, no...[BR]
+[Pause 8][PrintRising][Shake]No--------!![BR]
+[/fx][/fx][Wait][Next]
+This is from that ghost![BR]
+[Pause 10]It says, "I'll creep up on you[BR]
+while you're sleeping... Boo!"[BR]
+[Wait][Next]
+[Shake][/Static]He loves scaring me![BR]
+[Pause 20][Wait][Next]
+You think... he'll really...?[BR]
+Creeping... darkness...[BR]
+[Pause 10]Oh, woe is me! I'll never sleep...[BR]
+[Wait][Next]
+[/Shake]Get a hold of yourself, Fice T.![BR]
+Stand tall! Fear not![BR]
+[Pause 10]I'll be OK. Here, take this.[Wait][End]
+}
+
+#string:0E:021
+{
+[Style Right]
+[PrintRising]Ha ha! Yeah, that's right![BR]
+[Pause 10]Let's see how you like the new,[BR]
+improved Jr. Troopa![Wait][End]
+}
+
+#string:02:040
+{
+[Style Right]
+Hmmm![BR]
+[Pause 10]Noble Mario![BR]
+[Wait][Next]
+You have bested me, The Master,[BR]
+the strongest of fighters![BR]
+[Wait][Next]
+The pride of my Dojo has been[BR]
+soiled. I could not defeat you[BR]
+without endangering the life[BR]
+of my students.[BR]
+[Wait][Next]
+I challenge you to one final[BR]
+battle! One where we do not[BR]
+hold back![BR]
+[Wait][Next]
+I don't expect you to accept[BR]
+my challenge. You have already[BR]
+proven your strength.[BR]
+[Wait][Next]
+Nevertheless, take this[BR]
+with respect.[BR]
+[Wait][End]
+}
+
+#string:02:043
+{
+[Next]
+[PrintRising][Shake]Cough cough...[BR]
+[/PrintRising][/Shake][Pause 10]Mario, you have already proven[BR]
+yourself stronger than me.[BR]
+[Wait][Next]
+Unless you intend to challenge[BR]
+the results of my forbidden[BR]
+training?[BR]
+[Wait][Next]
+I'm afraid I cannot allow my[BR]
+students to witness our final[BR]
+battle.[BR]
+[Wait][Next]
+I lack experience with it, so[BR]
+there is a good chance they[BR]
+may get hurt in the fight.[BR]
+[Wait][Next]
+If you wish to try, please[BR]
+meet me at the bottom of[BR]
+Shooting Star Summit,[BR]
+east of the Star Temple.[BR]
+[Wait][Next]
+I must warn you that when I[BR]
+go into that form I lose all[BR]
+control.[BR]
+[Wait][Next]
+You should assume it will be[BR]
+a fight to the death. You may[BR]
+wish to...[Pause 10] keep on training[BR]
+instead. Wheeze...[BR]
+[Wait][End]
+}
+

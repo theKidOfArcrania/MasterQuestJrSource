@@ -1,0 +1,36 @@
+@ $Script_UseItem
+{
+    0:  Set  *Var[F]  *Var[1] 
+   10:  Call     GetMenuSelection 	( *Var[0] *Var[1] *Var[2] )
+   28:  Set  *Var[A]  *Var[1] 
+   38:  Call     $Function_802A1484 ( *Var[A] )
+   48:  Call     InitTargetIterator 	( )
+   54:  Call     GetOwnerTarget ( *Var[0] *Var[1] )
+   68:  If  *Var[0]  ==  00000100 
+   78:  	ExecWait $Script_802A1ABC 
+   84:  	Return
+   8C:  EndIf
+   94:  SetConst  *Var[A]  00000095 
+   A4:  Set  *Var[1]  *Var[F] 
+   B4:  ExecWait $Script_802A1500 
+   C0:  ExecWait $Script_802A19CC 
+   CC:  Call     $Function_802A1438 ( )
+   D8:  Call     GetActorPos 	( .Actor:Player *Var[0] *Var[1] *Var[2] )
+   F4:  Add  *Var[0]  00000000 
+  104:  Add  *Var[1]  00000023 
+  114:  Call     $Function_802A1378 ( *Var[0] *Var[1] *Var[2] *Var[3] )
+  130:  Call     GetActorPos 	( .Actor:Player *Var[0] *Var[1] *Var[2] )
+  14C:  Add  *Var[1]  00000019 
+  15C:  Call     802D7520 ( *Var[0] *Var[1] *Var[2] *Var[3] )
+  178:  Wait     0000000A 
+  184:  Call     SetAnimation 	( .Actor:Player 00000000 00010032 )
+  19C:  Wait     0000001E 
+  1A8:  Call     GetActorPos 	( .Actor:Player *Var[0] *Var[1] *Var[2] )
+  1C4:  Call     802D75D8 ( *Var[0] *Var[1] *Var[2] *Var[3] )
+  1E0:  Call     SetAnimation 	( .Actor:Player 00000000 00010002 )
+  1F8:  Wait     00000014 
+  204:  ExecWait $Script_802A1930 
+  210:  Return
+  218:  End
+}
+ 

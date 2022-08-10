@@ -1,0 +1,98 @@
+@ $Script_Main
+{
+    Set  *WorldMapLocation  00000012 
+    Call     SetSpriteShading 	( 000A0001 )
+    Call     SetCamPerspective 	( .Cam:Default 00000003 00000019 00000010 00001000 )
+    Call     SetCamBGColor 	( .Cam:Default 00000000 00000000 00000000 )
+    Call     SetCamEnabled 	( .Cam:Default .True )
+    Call     MakeNpcs    	( 00000001 $NpcGroupList_80246254 )
+    Call     ModifyColliderFlags 	( 00000003 ~Collider:o112 00000003 )
+    Call     ModifyColliderFlags 	( 00000003 ~Collider:o217 00000003 )
+    Call     ModifyColliderFlags 	( 00000003 ~Collider:o218 00000003 )
+    Call     ModifyColliderFlags 	( 00000003 ~Collider:o219 00000003 )
+    Call     ModifyColliderFlags 	( 00000003 ~Collider:o220 00000003 )
+    Call     ModifyColliderFlags 	( 00000003 ~Collider:o221 00000003 )
+    Call     ModifyColliderFlags 	( 00000003 ~Collider:o222 00000003 )
+    Call     ModifyColliderFlags 	( 00000003 ~Collider:pp1 00000003 )
+    Call     ModifyColliderFlags 	( 00000003 ~Collider:pp2 00000003 )
+    Thread
+    	Call     ResetFromLava 	( $LavaResetList_80242F7C )
+    EndThread
+    Exec     $Script_80242CCC 
+    Set  *Var[0]  00000049 
+    Exec     $Script_8024292C 
+    Set  *Var[0]  0000004A 
+    Exec     $Script_80242A48 
+    ExecWait $Script_802444A4 
+    Call     GetDemoState 	( *Var[0] )
+    If  *Var[0]  !=  00000000 
+    	ExecWait $Script_802464A8 
+    	Return
+    EndIf
+    Exec     $Script_EnterWalk_80242C64 
+    Wait     00000001 
+    Call     SetMusicTrack 	( 00000000 .Song:MtLavalava 00000000 00000008 )
+    Call     PlayAmbientSounds ( 00000004 )
+	ExecWait $Script_MakeEntities
+    Return
+    End
+}
+
+#new:Script $Script_MakeEntities
+{
+	Call	MakeItemEntity	( .Item:StarPiece ~Vec3d:starpiece 00000011 *Flag_KZN_21 )
+	Return
+	End
+}
+
+@ $NpcGroupList_80246254
+{
+00000001 $NpcGroup_80245E74 00000000 
+00000001 $NpcGroup_80246064 16000003 
+00000001 $NpcGroup_NewSmuff 16010000
+00000000 00000000 00000000
+}
+
+#new:NpcGroup $NpcGroup_NewSmuff
+{
+00000003 $NpcSettings_802429D4 ~Vec3f:newnpc % -200 45 0
+00000400 00000000 00000000 00000000 0000005A 
+~Items:10:ThunderRage:A
+~HP:20:70:2:50 ~HP:30:60:2:50 ~HP:50:50:2:40 ~HP:80:40:2:40 ~HP:100:30:2:30 ~HP:None ~HP:None ~HP:None 
+~FP:20:50:2:40 ~FP:30:40:2:40 ~FP:50:40:2:40 ~FP:80:40:2:40 ~FP:100:30:2:40 ~FP:None ~FP:None ~FP:None 
+~CoinBonus:0:2
+~Movement:newnpc
+007D0200 007D0200 007D0205 007D0205 007D0200 007D0200 007D0206 007D0206 
+007D0205 007D0201 007D0201 007D0201 007D0201 007D0201 007D0201 007D0201 
+00000000 00000000 00000000 00000000 % no tattle string
+}
+
+
+#new:Script $Script_NpcAI_80242964
+{
+   Call     DoBasicAI    ( $AISettings_80242934 )
+     Return
+     End
+}
+
+#new:NpcSettings $NpcSettings_802429D4
+{
+00000000 0018001C 00000000 00000000 $Script_NpcAI_80242964 80077F70 00000000 8007809C 
+00000000 00000000 00130000
+}
+
+#new:AISettings $AISettings_80242934
+{
+    1.0 % move speed
+    45` % move time
+    60` % wait time
+  100.0 % alert radius
+    0.0
+    3`
+    3.8 % chase speed
+    10`
+    1`
+  120.0 % chase radius
+    0.0
+    1`
+}

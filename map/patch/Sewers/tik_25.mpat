@@ -1,0 +1,201 @@
+% Getting the ultra boots is too trivial
+% lets make it...a bit trickier...
+% with a good 'ol boss fight!
+
+@ $Script_Main_EnterWalk
+{
+    0:  Set  *WorldMapLocation  00000002 
+   10:  Call     SetSpriteShading 	( 00000013 )
+   20:  Call     SetCamPerspective 	( .Cam:Default 00000003 00000019 00000010 00001000 )
+   40:  Call     SetCamBGColor 	( .Cam:Default 00000000 00000000 00000000 )
+   5C:  Call     SetCamEnabled 	( .Cam:Default .True )
+   70:  Call     SetCamLeadPlayer 	( .Cam:Default .False )
+   84:  ExecWait $Script_MakeEntities
+   90:  Exec     $Script_80240810 
+   9C:  Exec     $Script_8024123C 
+   A8:  Call     SetTexPanner 	( ~Model:mizu 00000000 )
+   BC:  Thread
+   C4:  	Set  *Var[0]  00000000 
+   D4:  	Set  *Var[1]  00000000 
+   E4:  	Set  *Var[2]  FFFFFF38 
+   F4:  	Set  *Var[3]  FFFFFF9C 
+  104:  	Set  *Var[4]  FFFFFE0C 
+  114:  	Set  *Var[5]  00000000 
+  124:  	Set  *Var[6]  00000001 
+  134:  	Set  *Var[7]  00000001 
+  144:  	Set  *Var[8]  00000001 
+  154:  	Set  *Var[9]  00000000 
+  164:  	Set  *Var[A]  00000000 
+  174:  	Set  *Var[B]  00000000 
+  184:  	Set  *Var[C]  00000000 
+  194:  	Exec     $Script_UpdateTexturePan_80240880 
+  1A0:  EndThread
+  1A8:  Set  *Var[0]  $Script_80240978 
+  1B8:  Exec     EnterWalk 
+  1C4:  Wait     00000001 
+  1D0:  Return
+  1D8:  End
+}
+  
+#new:Script $Script_BossFight
+{
+Call     DisablePlayerInput 	( .True )
+Call     SetMusicTrack 	( 00000000 .Song:BlooperTheme 00000000 00000008 )
+Wait 10`
+Call     ShowMessageAtScreenPos 	( 00080000 000000A0 00000028 ) % BLOOPER!
+Call     MakeNpcs       ( 00000001 $NpcGroups_Blooper )
+Return
+End
+}
+
+@ $Script_80241450
+{
+    0:  If  *GF_TIK25_GiantChest  ==  00000000 
+   10:  	Label    0000000A 
+   1C:  	If  *GF_TIK25_GiantChest  ==  00000000 
+   2C:  		Wait     00000001 
+   38:  		Goto     0000000A 
+   44:  	EndIf
+   4C:  	Wait     0000003C 
+   58:  	Exec     $Script_8024083C 
+   64:  	Call     ShowMessageAtScreenPos 	( 001D0187 000000A0 00000028 ) % You got the Ultra Boots! The attack power of Mario ...
+   7C:  	Call     $Function_80240680 ( )
+		    ExecWait $Script_BossFight	
+   88:  EndIf
+   90:  Return
+   98:  End
+}
+   
+#new:Script $Script_Init_80243078
+{
+   10:  	Call     BindNpcIdle 	( .Npc:Self $Script_Idle )
+   24:  	Call     BindNpcDefeat 	( .Npc:Self $Script_Defeat )
+  11C:  Return
+  124:  End  
+}
+  
+#new:Script $Script_Defeat
+{
+  Call     SetNpcAnimation  ( .Npc:Self 00500004 )
+  Call     PlaySoundAtNpc ( .Npc:Self 000003DD 00000000 )
+  Call     PlaySoundAtNpc ( .Npc:Self 000003E7 00000000 )
+  Call     SetNpcAnimation  ( .Npc:Self 00500301 )
+  Call     SetNpcJumpscale  ( .Npc:Self *Fixed[1.1] )
+  Call     ShakeCam     ( .Cam:Default 00000000 00000005 *Fixed[1.0] )
+  Call     NpcFlyTo      ( .Npc:Self *Var[0] 00000096 00000000 0000000F 00000000 00000001 )
+  Wait     00000005
+  Call     SetNpcPos     ( .Npc:Self 00000000 00000100 00000000 )
+  Call     SetMusicTrack		( 00000000 .Song:ToadTownTunnels 00000000 00000008 )
+	Call     DisablePlayerInput	( .False )
+  Call     PanToTarget     ( .Cam:Default 00000000 00000000 )
+	Call     EnablePartnerAI 	( )	
+	Return
+	End
+}
+
+@ $Script_802416D8
+{
+    0:  If  *GF_TIK25_SpringBrickB  ==  00000001 
+   10:    Return
+   18:  EndIf
+   20:  Set  *GF_TIK25_SpringBrickB  00000001 
+   30:  Call     DisablePlayerInput   ( .True )
+   40:  Set  *Var[5]  FFFFFF88 
+   50:  Call     MakeLerp     ( FFFFFFEC 0000000A 00000008 00000004 )
+   6C:  Loop     
+   78:    Call     UpdateLerp   ( )
+   84:    Call     $Function_802406AC ( *MapVar[1] *Var[5] *Var[0] 00000000 )
+   A0:    Wait     00000001 
+   AC:    Add  *Var[5]  00000002 
+   BC:    If  *Var[1]  ==  00000000 
+   CC:      BreakLoop
+   D4:    EndIf
+   DC:  EndLoop
+   E4:  Call     MakeLerp     ( *Var[0] FFFFFF79 00000016 00000001 )
+  100:  Loop     
+  10C:    Call     UpdateLerp   ( )
+  118:    Call     $Function_802406AC ( *MapVar[1] *Var[5] *Var[0] 00000000 )
+  134:    Wait     00000001 
+  140:    Add  *Var[5]  00000002 
+  150:    If  *Var[1]  ==  00000000 
+  160:      BreakLoop
+  168:    EndIf
+  170:  EndLoop
+  178:  Call     PlaySoundAt  ( 00000048 00000000 *Var[5] *Var[0] 00000000 )
+  198:  Call     PlaySoundAt  ( 00002086 00000000 *Var[5] *Var[0] 00000000 )
+  1B8:  Call     $Function_80240770 ( *MapVar[1] )
+        %ExecWait $Script_BossFight  
+        Call     ResetCam   ( .Cam:Default 00000020 )
+  1C8:  Call     DisablePlayerInput   ( .False )
+  1D8:  Return
+  1E0:  End
+}
+	
+  #new:Script $Script_Idle
+{
+  Call     SetNpcScale 	( .Npc:Self *Fixed[2.0] *Fixed[2.0] *Fixed[2.0] )
+	%Wait 15`
+	%Call     GetPlayerPos 	( *Var[0] *Var[1] *Var[2] )
+	%Add *Var[1] 10`
+	%Call     SetNpcSpeed 	( .Npc:Self *Fixed[12.0] )
+	%Call     NpcMoveTo   	( .Npc:Self *Var[0] *Var[1] *Var[2] )
+	%Wait 10`
+	Call     GetPlayerPos 	( *Var[0] *Var[1] *Var[2] )
+	8C:  Thread
+   94:  	Call     InterpPlayerYaw 	( 0000013B 00000000 )
+   A8:  	Wait     00000032 
+   B4:  	Call     InterpPlayerYaw 	( 0000002D 00000000 )
+   C8:  EndThread
+   D0:  Call     UseSettingsFrom 	( .Cam:Default *Var[0] 00000015 *Var[2] )
+   EC:  Call     SetPanTarget 	( .Cam:Default *Var[0] 00000015 *Var[2] )
+  108:  Call     SetCamSpeed 	( .Cam:Default *Fixed[1.0] )
+  11C:  Call     PanToTarget 	( .Cam:Default 00000000 00000001 )
+  134:  Call     WaitForCam  	( .Cam:Default *Fixed[1.0] )
+  148:  Wait     00000014 
+  154:  Thread
+  15C:  	Wait     0000000A 
+  168:  	Call     SetPanTarget 	( .Cam:Default *Var[0] FFFFFFF0 *Var[2] )
+  184:  	Call     WaitForCam  	( .Cam:Default *Fixed[1.0] )
+  198:  EndThread
+  1A0:  Call     PlaySoundAtNpc ( .Npc:Self 000003DC 00000000 )
+  1B8:  Call     PlaySoundAtNpc ( .Npc:Self 000003E7 00000000 )
+ % 1D0:  Call     SetNpcPos   	( .Npc:Self FFFFFF9C FFFFFED4 FFFFFF88 )
+  1EC:  Call     SetNpcAnimation 	( .Npc:Self 00500301 )
+  %200:  Call     SetNpcJumpscale 	( .Npc:Self *Fixed[1.0] )
+  %214:  Call     NpcJump0    	( .Npc:Self 000000AF 00000000 00000000 00000028 )
+	%Call     SetNpcSpeed 	( .Npc:Self *Fixed[12.0] )
+  %Call     NpcMoveTo   	( .Npc:Self -250` -10` 0` )
+  Call     SetNpcJumpscale 	( .Npc:Self *Fixed[1.1] )
+  214:  Call     NpcJump0    	( .Npc:Self FFFFFF20 FFFFFFC0 00000000 00000028 )
+  234:  Call     SetNpcAnimation 	( .Npc:Self 0050030C )
+  248:  Call     ShakeCam    	( .Cam:Default 00000000 00000005 *Fixed[1.0] )
+        Call     SetPlayerAnimation     ( 00000004 )
+  264:  Wait     00000007
+	Call     StartBossBattle 	( .Song:SpecialBattle )
+	Return
+	End
+}
+   
+#new:NpcGroup $NpcGroup_802431A4
+{
+00000000 $NpcSettings_80242BE0 ~Vec3f:Blooper % 0 -1000 0
+00840D0D $Script_Init_80243078 00000000 00000000 0000005A 
+~NoItems ~NoHP ~NoFP ~NoCoinBonus
+~Movement:Blooper
+0050030C 0050030C 0050030C 0050030C 0050030C 0050030C 0050030C 0050030C 
+0050030C 0050030C 0050030C 0050030C 0050030C 0050030C 0050030C 0050030C 
+00000000 00000000 00000000 00000000 % no tattle string
+}
+
+#new:NpcGroupList $NpcGroups_Blooper
+{
+00000001 $NpcGroup_802431A4 1C0A0000 
+00000000 00000000 00000000 
+}
+ 
+ #new:NpcSettings $NpcSettings_80242BE0
+{
+00000000 00180018 00000000 00000000 00000000 00000000 00000000 00000000 
+00000000 00000000 00630000 
+}
+   

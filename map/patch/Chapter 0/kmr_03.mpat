@@ -1,0 +1,4 @@
+@ $Script_MakeEntities
+{
+[B8]  Call     MakeEntity  	( .Entity:HiddenYellowBlock ~Vec4d:Entity802415E8 .Item:UltraShroom 80000000 )
+}

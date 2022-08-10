@@ -1,0 +1,14 @@
+@ $Script_MakeEntities
+{
+     Call     MakeEntity  	( .Entity:Chest ~Vec4d:Entity80241524 00000000 80000000 )
+     Call     AssignFlag  	( *GF_TRD00_Chest_Refund )
+     Call     AssignScript 	( $Script_8024148C )
+     Call     MakeEntity  	( .Entity:Chest ~Vec4d:Entity8024156C 00000000 80000000 )
+     Call     AssignFlag  	( *GF_TRD00_Chest_FPPlusB )
+     Call     AssignScript 	( $Script_802414D8 )
+     Call     MakeEntity  	( .Entity:SavePoint ~Vec4d:Entity802415B4 80000000 )
+     Call     MakeEntity  	( .Entity:SavePoint ~Vec4d:Entity802415D8 80000000 )
+	 Call	  AssignBlockFlag	( *Flag_TRD_1E )
+     Return
+     End
+}

@@ -1,0 +1,17 @@
+@ $Script_MakeEntities
+{
+		Call     MakeEntity      ( .Entity:HealingBlock ~Vec4d:heartblock 80000000 )
+    0:  Call     MakeEntity  	( .Entity:SuperBlock ~Vec4d:Entity802418E0 80000000 )
+   24:  Set  *MapVar[0]  *Var[0] 
+   34:  Call     AssignBlockFlag 	( *GF_ISK10_SuperBlock )
+   44:  Call     AssignScript 	( $Script_802412C8 )
+   54:  Thread
+   5C:  	Call     $Function_80240D38 ( )
+   68:  EndThread
+   70:  Call     MakeEntity  	( .Entity:ScriptSpring ~Vec4d:Entity80241950 80000000 )
+   94:  Call     AssignScript 	( $Script_80241748 )
+   A4:  Call     PlayEffect  	( ~FX:Fire:LargeRed FFFFFE02 FFFFFE3B 0000002B *Fixed[0.30078125] *Var[0] 00000000 00000000 00000000 00000000 00000000 00000000 00000000 )
+   E8:  Call     PlayEffect  	( ~FX:Fire:LargeRed FFFFFE02 FFFFFD37 0000002B *Fixed[0.30078125] *Var[0] 00000000 00000000 00000000 00000000 00000000 00000000 00000000 )
+  12C:  Return
+  134:  End
+}

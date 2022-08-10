@@ -1,0 +1,75 @@
+@ $Header
+{
+[MainScript]  $Script_Main_EnterWalk 
+[EntryList]   $EntryList 
+[EntryCount]  00000002 
+[Background]  80200000 
+[MapTattle]   00190039
+}
+
+@ $EntryList
+{
+~Vec4f:Entry0
+~Vec4f:Entry1
+}
+
+@ $Script_Main_EnterWalk
+{
+Set  *WorldMapLocation  0000001E 
+Call     SetSpriteShading 	( FFFFFFFF )
+Call     SetCamPerspective	( .Cam:Default  3  25` 16` 4096` ) % default type, half vertical FOV, near clip, and far clip
+Call     SetCamBGColor 	( .Cam:Default 00000000 00000000 00000000 )
+Call     SetCamEnabled 	( .Cam:Default .True )
+Call     SetCamLeadPlayer 	( .Cam:Default .False )
+Set  *GF_Map_GoombaVillage  00000001 
+If  *StoryProgress  <  FFFFFF82 
+  Call     MakeNpcs    	( 00000000 $NpcGroupList_80244054 )
+  Call     ClearDefeatedEnemies ( )
+EndIf
+If  *Flag_NOK_35  ==  .False 
+	Call     MakeEntity  	( .Entity:Hammer1BlockThick ~Vec4d:MetalBlock 80000000 ) %this used to be a metal block but its now a yellow block, thus opening the area earlier
+	Call     AssignScript 	( $Script_SmashBlock )
+EndIf
+ExecWait $Script_MakeEntities
+Exec     $Script_80240DC0 
+Exec     $Script_80241050 
+Switch  *StoryProgress 
+Case  ==  FFFFFF80 
+Call     EnableModel 	( ~Model:ji_3 .False )
+Exec     $Script_80240E7C 
+Case  >=  FFFFFF81 
+Call     EnableModel 	( ~Model:ji_1 .False )
+Call     EnableModel 	( ~Model:ji_2 .False )
+Set  *Var[0]  $Script_80240E7C 
+Exec     EnterWalk 
+EndSwitch
+Wait     00000001 
+Return
+End
+}
+	
+#new:Script $Script_SmashBlock
+{
+Set  *Flag_NOK_35  .True
+Return
+End
+}
+	
+@ $Script_80240E7C
+{
+Bind     $Script_Entry1  .Trigger:FloorAbove ~Collider:Entry1 00000001 00000000 
+Bind     $Script_ExitWalk_80240E20 .Trigger:FloorAbove ~Collider:deili1 00000001 00000000 
+Return
+End
+}
+	
+#new:Script $Script_Entry1
+{
+SetGroup 0000001B 
+Call     UseExitHeading ( 0000003C 1 ) % direction opposing Entry#0
+Exec     ExitWalk 
+Call     GotoMap     	( "kmr_31" 0 )
+Wait     00000064 
+Return
+End
+}

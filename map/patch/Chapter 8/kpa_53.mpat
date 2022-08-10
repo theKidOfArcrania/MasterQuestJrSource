@@ -1,0 +1,35 @@
+
+@ $Script_MakeEntities
+{
+	Call     MakeEntity  	( .Entity:HealingBlock ~Vec4d:Entity80241DE0 80000000 )
+	Call     MakeEntity  	( .Entity:SavePoint -280` 60` -75` 0 80000000 )
+	Return
+	End
+}
+   
+@ $Script_EnterDoubleDoor_802403E8
+{
+	Call     GetLoadType 	( *Var[0] )
+	If       *Var[0] ==  00000001 
+		Exec     EnterSavePoint
+		Exec     $Script_80240388 
+		Return
+	EndIf
+	Call     GetEntryID  	( *Var[0] )
+	Switch   *Var[0] 
+		Case     ==  00000000 
+			Set      *Var[0] 00000000 
+			Set      *Var[2] 00000081 
+			Set      *Var[3] 00000083 
+			Exec     80285E74 
+			Exec     $Script_80240388 
+		Case     ==  00000001 
+			Set      *Var[0] 00000001 
+			Set      *Var[2] 00000087 
+			Set      *Var[3] 00000085 
+			Exec     80285E74 
+			Exec     $Script_80240388 
+	EndSwitch
+	Return
+	End
+}

@@ -1,0 +1,166 @@
+
+% add one Hustle Drink early in the game
+@ $Script_MakeEntities
+{
+[B8]	Call	MakeEntity	( .Entity:YellowBlock ~Vec4d:Entity802406F8 .Item:HustleDrink 80000000 )
+}
+
+% ====================================================
+% Modify Whacka to trigger a miniboss battle
+% ====================================================
+
+% Add a battle group for the Whacka NPC
+@ $NpcGroupList_80242780
+{
+00000002 $NpcGroup_8024105C 09060002 
+00000002 $NpcGroup_8024143C 09070002 
+00000002 $NpcGroup_802423A0 090D0001 
+00000000 00000000 00000000 
+}
+
+@ $NpcGroup_802423A0
+{
+00000004 $NpcSettings_80240FCC ~Vec3f:NPC_Whacka_04 % 725 -30 225
+00400D05 $Script_Init_8024228C 00000000 00000000 0000005A 
+~NoItems ~NoHP ~NoFP ~NoCoinBonus
+~Movement:NPC_Whacka_04
+00920001 00920001 00920001 00920001 00920001 00920001 00920001 00920001 
+00920001 00920001 00920001 00920001 00920001 00920001 00920001 00920001 
+00000000 00000000 00000000 001A0089 % He's a Whacka. When you hit Whackas, they get Bump ...
+% 
+% $NpcGroup_802423A0[1F0]
+00000005 $NpcSettings_80240FCC ~Vec3f:NPC_Whacka_05 % 725 -30 225
+03F04F0C $Script_Init_80242338 00000000 00000000 0000005A % flags were 03704F0C
+~NoItems ~NoHP ~NoFP ~NoCoinBonus
+~Movement:NPC_Whacka_05
+00920001 00920001 00920001 00920001 00920001 00920001 00920001 00920001 
+00920001 00920001 00920001 00920001 00920001 00920001 00920001 00920001 
+00000000 00000000 00000000 001A0089 % He's a Whacka. When you hit Whackas, they get Bump ...
+}
+   
+@ $Script_Init_8024228C % Init script from first NPC
+{
+    0:	Call	SetNpcVar	( 00000004 00000008 00000000 )
+   18:	If  *WhackaHitCount  <  00000008 
+   28:		Call	BindNpcInteract	( .Npc:Self $Script_Interact_8024181C )
+   3C:		Call	BindNpcIdle 	( .Npc:Self $Script_Idle_802419EC )
+			Call	BindNpcDefeat	( .Npc:Self $Script_PostBattle )
+   50:		Call	EnableNpcShadow	( .Npc:Self .False )
+   64:		Call	SetNpcFlagBits	( .Npc:Self 00200000 .True )
+   7C:  Else
+   84:		Call	RemoveNpc		( .Npc:Self )
+   94:  EndIf
+   9C:  Return
+   A4:  End
+}
+   
+@ $Script_Init_80242338 % Init script from second NPC
+{
+    0:  If  *WhackaHitCount  <  00000008 
+   10:		Call	EnableNpcShadow	( .Npc:Self .False )
+   24:		Call	BindNpcHit		( .Npc:Self $Script_Hit_80241C6C )
+			Call	BindNpcDefeat	( .Npc:Self $Script_DummyPostBattle )
+   38:  Else
+   40:		Call	RemoveNpc		( .Npc:Self )
+   50:  EndIf
+   58:  Return
+   60:  End
+}
+
+@ $Script_Hit_80241C6C % OnHit script from second NPC
+{
+	Call     GetOwnerEncounterTrigger ( *Var[0] )
+	Switch   *Var[0] 
+		Case     ==  00000004 % hammer
+			Set      *Var[A] 00000001 
+		Case     ==  00000002 
+			Set      *Var[A] 00000001 
+		Case     ==  00000006 % partner
+			Call     GetCurrentPartnerID 	( *Var[2] )
+			If       *Var[2] ==  00000002 
+				Set      *Var[A] 00000002 
+			Else
+				Set      *Var[A] 00000003 
+			EndIf
+		Default
+			Set      *Var[A] 00000000 
+	EndSwitch
+	If       *Var[A] ==  00000000 
+		Return
+	EndIf
+	Add      *WhackaHitCount 00000001 
+	Call     DisablePlayerInput 	( .True )
+	Call     BindNpcInteract 	( 00000004 00000000 )
+	Call     EnableNpcAI 	( 00000004 .False )
+	Call     GetPlayerPos 	( *Var[0] *Var[1] *Var[2] )
+	Call     GetNpcPos   	( .Npc:Self *Var[3] *Var[4] *Var[5] )
+	If       *Var[0]  <  *Var[3] 
+		Call     InterpNpcYaw 	( .Npc:Self 0000010E 00000000 )
+		Set      *Var[B] 00000000 
+	Else
+		Call     InterpNpcYaw 	( .Npc:Self 0000005A 00000000 )
+		Set      *Var[B] 00000001 
+	EndIf
+	Switch   *Var[A] 
+		CaseOR   ==  00000002 
+		CaseOR   ==  00000003 
+			Call     PlaySoundAtNpc ( 00000004 000000E1 00000000 )
+		EndCaseGroup
+	EndSwitch
+		Call     SpeakToPlayer 	( 00000004 00920005 00920001 00000000 $WhackaAngryString )
+		Call     StartBossBattle ( .Song:SpecialBattle )
+	Return
+	End
+}
+  
+#string $WhackaAngryString
+{
+[Style Right]
+Whack-OWW![BR]
+[Wait][Pause 8]What's wrong with you...[BR]
+[Pause 14]You...[Pause 8] you lunatic![BR]
+[Pause 16]I'll teach you to pick on me![Wait][End]
+}
+
+#new:Script $Script_DummyPostBattle
+{
+	Return
+	End
+}
+
+#new:Script $Script_PostBattle
+{
+	Call     GetBattleOutcome ( *Var[0] )
+	Switch   *Var[0] 
+		Case     ==  00000000 	% player won
+			Wait     00000001
+			Call     SetNpcAnimation 	( 00000004 00920004 )
+			Wait     0000000F 
+			Call     GetPlayerPos 	( *Var[0] *Var[1] *Var[2] )
+			Call     GetNpcPos   	( 00000004 *Var[3] *Var[4] *Var[5] )
+			If       *Var[0]  <  *Var[3] 
+				Add      *Var[3] 0000000E 
+			Else
+				Sub      *Var[3] 0000000E 
+			EndIf
+			Add      *Var[4] 0000001E 
+			Add      *Var[5] 00000002 
+			Call     MakeItemEntity		( .Item:WhackasBump *Var[3] *Var[4] *Var[5] 0000000D 00000000 )
+			Call     SetNpcAnimation	( 00000004 00920001 )
+			Wait     00000005 
+			Call     SpeakToPlayer 		( 00000004 00920005 00920001 00000000 000D002F ) % Whack-a-waaaaaaaaa.... I can't take this abuse!
+			Call     SetNpcAnimation 	( 00000004 00920003 )
+			Wait     0000000F 
+			If       *WhackaHitCount >=  00000008 
+				Call     $Function_80240118 ( )
+			Else
+			EndIf
+			Call	SetNpcPos   	( 00000004 00000000 FFFFFC18 00000000 )
+			Call	SetNpcPos   	( 00000005 00000000 FFFFFC18 00000000 )
+			Call	DisablePlayerInput 	( .False )
+			Call	RemoveNpc   	( 00000004 )
+			Call	RemoveNpc   	( 00000005 )
+		EndSwitch
+	Return
+	End
+}

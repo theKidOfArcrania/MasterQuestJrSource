@@ -1,0 +1,41 @@
+@ $ShyStack
+{
+% stats
+[Index]        A7b 
+[Level]         0`b 
+[MaxHP]        14`b %1.5x normal hp, makes knocking down the stack very important!
+}
+
+@ $Script_TakeTurn_802357B4
+{
+  [3B8]  		Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 10000000 00000000 80080564 00000004 00000020 ) % damage starts low but goes up very quickly
+  [3F8]  		Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 10000000 00000000 80080664 00000005 00000020 ) % this can be reduced greatly by using
+  [438]  		Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 10000000 00000000 80080764 00000006 00000020 ) % kooper or spin smash (preferably both!)
+  [478]  		Call     EnemyDamageTarget 	( .Actor:Self *Var[0] 10000000 00000000 80080864 00000007 00000020 ) % to knock down the stack
+}
+  
+@ $StatusTable_8023103C
+{
+.Status:Normal      0`
+.Status:Default    0`
+.Status:Sleep      25`
+.Status:Poison      0`
+.Status:Frozen      0`
+.Status:Dizzy      20`
+.Status:Fear    0`
+.Status:Static      0`
+.Status:Paralyze   70`
+.Status:Shrink     25`
+.Status:Stop       60`
+.Status:DefaultTurnMod   0`
+.Status:SleepTurnMod      -2`
+.Status:PoisonTurnMod     0`
+.Status:FrozenTurnMod     0`
+.Status:DizzyTurnMod      -2`
+.Status:FearTurnMod   0`
+.Status:StaticTurnMod     0`
+.Status:ParalyzeTurnMod   -1`
+.Status:ShrinkTurnMod     -2`
+.Status:StopTurnMod       0`
+.Status:End
+}

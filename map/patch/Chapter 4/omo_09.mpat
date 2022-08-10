@@ -1,0 +1,136 @@
+
+% SpyGuy settings
+@ $AISettings_80247710
+{
+    1.5 	% move speed
+    60` 	% move time
+    15` 	% wait time
+	180.0	% alert radius (was 90.0)
+	50.0	
+    3`
+    3.8		% chase speed
+    8`
+    1`
+	300.0	% chase radius (was 140.0)
+	60.0
+    1`
+}
+
+% SpyGuy projectile settings
+@ $AISettings_802477E8
+{
+    16.0 	% move speed (was 8.0)
+    0` 		% move time
+    0` 		% wait time
+    4.0 	% alert radius
+    0.5
+    -1`
+    0.0 	% chase speed
+    0`
+    0`
+    0.0 	% chase radius
+    0.0
+    0`
+}
+
+@ $NpcGroupList_80249E44
+{
+00000001 $NpcGroup_80248570 12090005 
+00000001 $NpcGroup_80248760 120A0005 
+00000001 $NpcGroup_80248950 120A0005 
+00000001 $NpcGroup_80248B40 120A0005 
+00000001 $NpcGroup_80248D30 120A0005 
+00000001 $NpcGroup_80248F20 120A0005 
+00000001 $NpcGroup_802493BC 10090001 
+00000004 $NpcGroup_802495AC 10190001 
+00000000 00000000 00000000 
+}
+
+	
+@ $Script_Init_802480CC
+{
+	Switch *Peach_Item_3
+		Case == 00000001 % Koopatrol
+			Call     BindNpcIdle 	( .Npc:Self $Script_Idle_80247E48 )
+			Call     BindNpcDefeat 	( .Npc:Self $Script_Defeat_80247FE4 )
+		Case == 00000002 % Super Soda
+			Call	SetNpcPos   	( .Npc:Self 0` -1000` 0` )
+			Exec	$Script_Ambush 
+		Default
+			Call     SetNpcPos   	( .Npc:Self 0` -1000` 0` )
+	EndSwitch
+	Return
+	End
+}
+
+#new:Script $Script_Ambush
+{
+	% monitor whether chest has been opened
+	Label 0
+	Wait	1`
+	If	*GF_OMO09_Chest_Dictionary == .False
+		Goto 0
+	EndIf
+	% monitor player position
+	Label 1
+	Wait	1` 
+	Call	GetPlayerPos    ( *Var[0] *Var[1] *Var[2] )
+	If		*Var[0]  >  -875`
+		Goto 1
+	EndIf
+	% ambush
+	Call	DisablePlayerInput	( .True )
+	Call	GetPlayerPos    ( *Var[0] *Var[1] *Var[2] )
+	Thread
+		Call	DisablePartnerAI 	( 00000000 )
+		Add		*Var[0]  10`
+		If	*Var[2] < -100
+			Add		*Var[2]  40`
+		Else
+			Sub		*Var[2]  40`
+		EndIf
+		Call	SetNpcSpeed		( .Npc:Partner *Fixed[2.0] )
+		Call	NpcMoveTo		( .Npc:Partner *Var[0] *Var[2] 0 )
+		Call	EnablePartnerAI ( )
+	EndThread
+	Add		*Var[0]  200`
+	Call	SetNpcPos   	( FFFFFFFF *Var[0] *Var[1] *Var[2] )
+	Call	SpeakToPlayer		( FFFFFFFF 00580008 00580001 00000002 $AmbushString )
+	Thread
+		Wait	5`
+		Call	SetPlayerAnimation	( 0001002A )
+		Call	PlaySoundAtPlayer	( 00000263 00000000 )
+		Call	ShowEmote        	( 00000000 .Emote:Question 00000000 0000001E 00000000 00000000 00000000 00000000 00000000 )
+	EndThread
+	Call	SetNpcSpeed		( FFFFFFFF *Fixed[4.0] )
+	Call	SetNpcAnimation ( FFFFFFFF 00580006 )
+	Sub		*Var[0]  150`
+	Call	NpcMoveTo   	( FFFFFFFF *Var[0] *Var[2] 0 )
+	Call	SetNpcAnimation ( FFFFFFFF 00580001 )
+	Wait	10`
+	Call	PlaySoundAtPlayer	( 00000262 00000000 )
+	Call	ShowEmote   		( 00000000 .Emote:Exclamation 00000000 0000001E 00000000 00000000 00000000 00000000 00000000 )
+	Call	PlayerFaceNpc	( FFFFFFFF 00000000 )
+	Call	SpeakToPlayer		( FFFFFFFF 00580008 00580001 00000000 $ChallengeString )
+	Wait 	10`
+	Set  *GF_OMO09_Item_SuperSoda  00000001 % This isnt triggering for reasons?
+	Call	DisablePlayerInput 	( .False )
+	Call	StartBossBattle		( .Song:SpecialBattle )
+	Return
+	End
+}
+
+#string $AmbushString
+{
+[Style Right]
+[Down 10][Size 24][SizeJitter]STOP RIGHT THERE![Pause 28][End]
+}
+
+#string $ChallengeString
+{
+[Style Right]
+Thought you could avoid me, huh?[BR]
+[Pause 16]Well I hope you enjoyed that[BR]
+Super Soda, because it's the[BR]
+last one you'll ever have![Wait][End]
+}

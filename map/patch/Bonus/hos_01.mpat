@@ -1,0 +1,43 @@
+/%@ $EntryList
+{Vec4f:Entry0} % -400.0    0.0  410.0   45.0
+{Vec4f:Entry1} %   22.0  285.0 -190.0    0.0
+{Vec4f:Entry2} %   22.0  285.0 -190.0    0.0
+
+@ $Header
+00000000 00000000 00000000 00000000 
+$Script_Main_EnterWalk $EntryList 00000003 00000000 
+00000000 00000000 00000000 00000000 
+00000000 00000000 80200000 0019001D 
+
+%/
+
+@ $ASCII_80245990
+{
+"hos_07"
+}
+
+@ $Script_ExitWalk_80241384
+{
+[64]	Call	GotoMap	( $ASCII_80245990 00000001 )
+}
+
+/%
+
+@ $Script_80241540
+     Bind     $Script_ExitWalk_80241384 .Trigger:FloorAbove {Collider:deilisw} 00000001 00000000 
+     Call     GetEntryID  	( *Var[0] )
+     If  *Var[0]  !=  00000001 
+     Bind     $Script_80241418 .Trigger:FloorTouch {Collider:deilin} 00000001 00000000 
+     EndIf
+     Bind     $Script_EntryNew  .Trigger:FloorAbove {Collider:ExitNew} 00000001 00000000
+     Return
+     End
+   
+   #new:Script $Script_EntryNew
+	SetGroup 0000001B 
+	Call     UseExitHeading ( 0000003C 00000002 ) % direction opposing Entry#2
+	Exec     ExitWalk 
+	Call     GotoMap     	( "hos_12" 00000000 )
+	Wait     00000064 
+	Return
+	End	%/

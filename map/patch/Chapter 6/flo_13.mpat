@@ -1,0 +1,313 @@
+@ $Script_MakeEntities
+{
+    0:  Call     MakeItemEntity ( .Item:SuperSmash ~Vec3d:Item80243978 00000011 *Flag_SAM_2B )
+  % 24:  Call     MakeItemEntity ( .Item:CakeMix {Vec3d:Item8024399C} 00000011 *GF_FLO13_Item_ShootingStar ) removed this since it caused some issues with lakilulu
+   48:  If  *GF_FLO13_Item_MegaSmash  ==  00000000 
+   58:  	Call     MakeEntity  	( .Entity:BombableRock1 ~Vec4d:Entity802439D0 80000000 )
+   7C:  	Call     AssignScript 	( $Script_80243950 )
+   8C:  Else
+   94:  	Call     ModifyColliderFlags 	( 00000000 ~Collider:o85 7FFFFE00 )
+   AC:  EndIf
+   B4:  Return
+   BC:  End
+}
+   
+#new:Script $Script_Init_Lakilulu
+{
+     Call     BindNpcIdle 	( .Npc:Self $Script_IdleAILakilulu )
+  Call     BindNpcInteract	( .Npc:Self $Script_Interact )
+  % 1C:  Call     SetNpcAnimation 	( 00000002 00CC000B )
+   Call     BindNpcDefeat 	( .Npc:Self $Script_802421A8 )
+   30:  Return
+   38:  End 
+}
+   
+#new:Script $Script_IdleAILakilulu
+{
+  Loop
+		If  *MapFlag[1]  ==  .True 
+		 	Call     StartBossBattle 	( .Song:SpecialBattle )
+		EndIf
+	Wait     00000001 
+	EndLoop
+	Return
+	End
+}
+   
+#new:Script $Script_802421A8
+{
+		%Call     DisablePlayerInput	( .False )
+		%Call     EnablePartnerAI 	( )
+   18:  Set  *Flag_EVT_1D  00000001
+   		Call     SetMusicTrack		( 00000000 .Song:LakilesterTheme 00000000 00000008 )
+		Set  *MapFlag[1] .False 	
+		  24C:  	ExecWait $Script_80245444
+		 % Call     DoNpcDefeat 	( )
+   34:  Return
+   3C:  End
+}
+   
+@ $NpcGroupList_80247984 {
+00000001 $NpcGroup_80246A04 18060005 
+00000001 $NpcGroup_80246BF4 18040005 
+00000001 $NpcGroup_80246DE4 180C0003 
+00000001 $NpcGroup_80246FD4 180C0003 
+00000001 $NpcGroup_802471C4 180C0003 
+00000001 $NpcGroup_802473B4 180C0003 
+00000001 $NpcGroup_802475A4 180C0003 
+00000001 $NpcGroup_80247794 180C0003 
+00000001 $NpcGroup_80246434 19050002 
+00000001 $NpcGroup_80246624 00000000 
+00000001 $NpcGroup_80246814 00000000
+00000001 $GroupLakilulu 19060000
+00000000 00000000 00000000
+}
+  
+#new:NpcGroup $GroupLakilulu
+{
+0000000F $BlankSettings ~Vec3f:lakilulu % 0 -1000 0
+00000F01 $Script_Init_Lakilulu 00000000 00000000 0000005A 
+~NoItems ~NoHP ~NoFP ~NoCoinBonus
+~Movement:lakilulu
+00CC0001 00CC0001 00CC0001 00CC0001 00CC0001 00CC0001 00CC0001 00CC0001 
+00CC0001 00CC0001 00CC0001 00CC0001 00CC0001 00CC0001 00CC0001 00CC0001 
+00000000 00000000 00000000 00000000 % no tattle string
+}
+  
+#new:NpcSettings $BlankSettings
+{
+00000000 00200018 00000000 00000000 00000000 00000000 00000000 00000000 
+00000000 00000000 00630000  
+}
+  
+@ $Script_80245444
+{
+If *Flag_EVT_1D == 00000001
+Goto 0000000F
+EndIf
+    0:  Call     DisablePlayerInput 	( .True )
+   10:  Wait     0000001E 
+   1C:  Call     SpeakToPlayer 	( 00000000 0008000A 00080004 00000000 001100A2 ) % Uuurgh!! Man, you're tough as nails! I give up, ma ...
+   3C:  Call     SetNpcPos   	( 00000001 FFFFFEDE 00000078 0000002D )
+   58:  Thread
+   60:  	Wait     0000000A 
+   6C:  	Call     SetNpcAnimation 	( .Npc:Self 00080001 )
+   80:  	Call     SetPlayerAnimation 	( 0001002A )
+   90:  	Wait     00000014 
+   9C:  	Call     InterpPlayerYaw 	( 0000010E 00000001 )
+   B0:  EndThread
+   B8:  Call     SpeakToPlayer 	( 00000001 00CC0004 00CC0001 00000005 001100A3 ) % Wait!!!!!
+   D8:  Call     SetNpcAnimation 	( 00000001 00CC0007 )
+   EC:  Call     UseSettingsFrom 	( .Cam:Default 00000000 00000000 00000000 )
+  108:  Call     SetPanTarget 	( .Cam:Default 00000000 00000000 00000000 )
+  124:  Call     SetCamDistance ( .Cam:Default 000001F4 )
+  138:  Call     SetCamPitch 	( .Cam:Default *Fixed[5.5] *Fixed[-6.0] )
+  150:  Call     SetCamPosA  	( .Cam:Default 00000000 00000000 )
+  168:  Call     SetCamPosB  	( .Cam:Default 00000082 FFFFFF38 )
+  180:  Call     SetCamPosC  	( .Cam:Default 00000000 00000000 )
+  198:  Call     SetCamSpeed 	( .Cam:Default *Fixed[90.0] )
+  1AC:  Call     PanToTarget 	( .Cam:Default 00000000 00000001 )
+  1C4:  Wait     00000001 
+  1D0:  Thread
+  1D8:  	Call     SetCamDistance ( .Cam:Default 00000190 )
+  1EC:  	Call     SetCamPosB  	( .Cam:Default 00000082 0000003C )
+  204:  	Call     SetCamSpeed 	( .Cam:Default *Fixed[1.0] )
+  218:  	Call     PanToTarget 	( .Cam:Default 00000000 00000001 )
+  230:  	Call     WaitForCam  	( .Cam:Default *Fixed[1.0] )
+  244:  EndThread
+  24C:  Thread
+  254:  	Call     $Function_802433C0 ( 00000050 )
+  264:  EndThread
+  26C:  Exec     $Script_80244560 *Var[9] 
+  27C:  Call     LoadPath    	( 00000050 $VectorList_802443E4 00000005 00000000 )
+  298:  Label    00000000 
+  2A4:  Call     GetNextPathPos ( )
+  2B0:  Call     SetNpcPos   	( 00000001 *Var[1] *Var[2] *Var[3] )
+  2CC:  Wait     00000001 
+  2D8:  If  *Var[0]  ==  00000001 
+  2E8:  	Goto     00000000 
+  2F4:  EndIf
+  2FC:  Kill     *Var[9] 
+  308:  Call     SetNpcAnimation 	( 00000001 00CC0009 )
+  31C:  Call     SetPlayerAnimation 	( .PlayerAnim:StandStill )
+  32C:  Wait     00000014 
+  338:  Call     GetNpcPos   	( 00000001 *Var[0] *Var[1] *Var[2] )
+  354:  Add  *Var[0]  00000014 
+  364:  Call     UseSettingsFrom 	( .Cam:Default *Var[0] *Var[1] *Var[2] )
+  380:  Call     SetPanTarget 	( .Cam:Default *Var[0] *Var[1] *Var[2] )
+  39C:  Call     SetCamDistance ( .Cam:Default 000000FA )
+  3B0:  Call     SetCamPitch 	( .Cam:Default *Fixed[5.5] *Fixed[-7.5] )
+  3C8:  Call     SetCamSpeed 	( .Cam:Default *Fixed[90.0] )
+  3DC:  Call     PanToTarget 	( .Cam:Default 00000000 00000001 )
+  3F4:  Call     WaitForCam  	( .Cam:Default *Fixed[1.0] )
+  408:  Call     SpeakToPlayer 	( 00000000 00080009 00080001 00000000 001100A4 ) % Aw no, Lakilulu!!
+  428:  Call     GetPlayerPos 	( *Var[0] *Var[1] *Var[2] )
+  440:  Add  *Var[0]  00000028 
+  450:  Call     SetPanTarget 	( .Cam:Default *Var[0] *Var[1] *Var[2] )
+  46C:  Call     SetCamDistance ( .Cam:Default 0000012C )
+  480:  Call     SetCamSpeed 	( .Cam:Default *Fixed[4.0] )
+  494:  Call     PanToTarget 	( .Cam:Default 00000000 00000001 )
+  4AC:  Call     WaitForCam  	( .Cam:Default *Fixed[1.0] )
+  4C0:  Call     SpeakToPlayer 	( 00000001 00CC0008 00CC0008 00000000 001100A5 ) % No! Please! Please have mercy on my poor, sweet La ...
+		Set  *MapFlag[1] .True
+		Return
+  Label 0000000F
+  4E0:  Call     GetNpcPos   	( 00000001 *Var[0] *Var[1] *Var[2] )
+  4FC:  Add  *Var[0]  00000014 
+  50C:  Call     SetPanTarget 	( .Cam:Default *Var[0] *Var[1] *Var[2] )
+  528:  Call     SetCamDistance ( .Cam:Default 000000FA )
+  53C:  Call     SetCamSpeed 	( .Cam:Default *Fixed[4.0] )
+  550:  Call     PanToTarget 	( .Cam:Default 00000000 00000001 )
+  568:  Call     WaitForCam  	( .Cam:Default *Fixed[1.0] )
+  57C:  Call     SpeakToPlayer 	( 00000000 0008000B 00080003 00000000 001100A6 ) % Aw, don't call me Lakilester! It's Spike, remember ...
+  59C:  Call     SetNpcAnimation 	( 00000000 00080001 )
+  5B0:  Call     EndSpeech 	( 00000000 00080009 00080001 00000000 )
+  5CC:  Call     GetPlayerPos 	( *Var[0] *Var[1] *Var[2] )
+  5E4:  Add  *Var[0]  00000028 
+  5F4:  Call     SetPanTarget 	( .Cam:Default *Var[0] *Var[1] *Var[2] )
+  610:  Call     SetCamDistance ( .Cam:Default 0000015E )
+  624:  Call     SetCamSpeed 	( .Cam:Default *Fixed[10.0] )
+  638:  Call     PanToTarget 	( .Cam:Default 00000000 00000001 )
+  650:  Call     WaitForCam  	( .Cam:Default *Fixed[1.0] )
+  664:  Label    0000000A 
+  670:  Call     SpeakToPlayer 	( 00000001 00CC000A 00CC0009 00000000 001100A7 ) % Mario, please forgive him! My Lakilester was just  ...
+  690:  Call     ShowChoice  	( 001E0020 ) % Forgive Don't forgive 
+  6A0:  If  *Var[0]  !=  00000000 
+  6B0:  	ExecWait $Script_80244888 
+  6BC:  	Wait     0000000A 
+  6C8:  	Goto     0000000A 
+  6D4:  Else
+  6DC:  	Call     ContinueSpeech 	( 00000001 00CC0004 00CC0001 00000000 001100A9 ) % Really!? Oh, for real? You'll forgive him? Oh, tha ...
+  6FC:  	Call     SetNpcAnimation 	( 00000001 00CC0001 )
+  710:  	Call     SetPlayerAnimation 	( .PlayerAnim:NodYes )
+  720:  	Wait     0000000A 
+  72C:  	Call     SetPlayerAnimation 	( .PlayerAnim:StandStill )
+  73C:  	Wait     00000014 
+  748:  	Call     GetNpcPos   	( 00000001 *Var[0] *Var[1] *Var[2] )
+  764:  	Add  *Var[0]  00000014 
+  774:  	Call     SetPanTarget 	( .Cam:Default *Var[0] *Var[1] *Var[2] )
+  790:  	Call     SetCamDistance ( .Cam:Default 000000FA )
+  7A4:  	Call     SetCamSpeed 	( .Cam:Default *Fixed[90.0] )
+  7B8:  	Call     PanToTarget 	( .Cam:Default 00000000 00000001 )
+  7D0:  	Call     WaitForCam  	( .Cam:Default *Fixed[1.0] )
+  7E4:  	Call     SpeakToPlayer 	( 00000000 0008000B 00080003 00000000 001100AA ) % Stop calling me Lakilester! It's such a stupid nam ...
+  804:  	Call     SetNpcAnimation 	( 00000000 00080001 )
+  818:  	Call     EndSpeech 	( 00000000 00080009 00080001 00000000 )
+  834:  	Call     GetPlayerPos 	( *Var[0] *Var[1] *Var[2] )
+  84C:  	Add  *Var[0]  00000028 
+  85C:  	Call     SetPanTarget 	( .Cam:Default *Var[0] *Var[1] *Var[2] )
+  878:  	Call     SetCamDistance ( .Cam:Default 0000015E )
+  88C:  	Call     SetCamSpeed 	( .Cam:Default *Fixed[5.0] )
+  8A0:  	Call     PanToTarget 	( .Cam:Default 00000000 00000001 )
+  8B8:  	Call     WaitForCam  	( .Cam:Default *Fixed[1.0] )
+  8CC:  	Wait     0000000A 
+  8D8:  	Call     SpeakToPlayer 	( 00000000 0008000B 00080003 00000000 001100AB ) % Hey, man. I've got a question. What in the world a ...
+  8F8:  	Wait     0000000A 
+  904:  	Call     ShowChoice  	( 001E0021 ) % For myself For world peace No reason Why Spike? 
+  914:  	Switch  *Var[0] 
+  920:  		Case  ==  FFFFFFFF 
+  92C:  		Case  ==  00000000 
+  938:  			Call     ContinueSpeech 	( 00000000 00080009 00080001 00000000 001100AC ) % ....Huh. Yeah...fighting for yourself... That's th ...
+  958:  		Case  ==  00000001 
+  964:  			Call     ContinueSpeech 	( 00000000 00080009 00080001 00000000 001100AD ) % World peace, huh? Isn't that a bit melodramatic? S ...
+  984:  		Case  ==  00000002 
+  990:  			Call     ContinueSpeech 	( 00000000 00080009 00080001 00000000 001100AE ) % Man, you're a cool customer. You're out there ever ...
+  9B0:  		Case  ==  00000003 
+  9BC:  			Call     ContinueSpeech 	( 00000000 00080009 00080001 00000000 001100AF ) % Why? Because Spike is a million times cooler! Laki ...
+  9DC:  	EndSwitch
+  9E4:  EndIf
+  9EC:  Call     InterpNpcYaw 	( 00000001 0000005A 00000001 )
+  A04:  Call     SetNpcAnimation 	( 00000001 00CC0009 )
+  A18:  Call     SpeakToPlayer 	( 00000001 00CC000A 00CC0009 00000005 001100B0 ) % Oh, no! Lakilester! You can't leave me! Please tak ...
+  A38:  Call     SpeakToPlayer 	( 00000000 00080009 00080001 00000000 001100B1 ) % Aw, Lakilulu, chill out. You've gotta understand.. ...
+  A58:  Wait     0000000F 
+  A64:  Call     SpeakToPlayer 	( 00000001 00CC000A 00CC0009 00000005 001100B2 ) % ...Oh...OK. I'll wait for you, Lakilester. But you ...
+  A84:  Call     SpeakToPlayer 	( 00000000 00080009 00080001 00000000 001100B3 ) % OK! Enough of that! Heh heh... I guess I'd better  ...
+  AA4:  Wait     0000000A 
+  AB0:  Thread
+  AB8:  	Call     ResetCam    	( .Cam:Default *Fixed[90.0] )
+  ACC:  EndThread
+  AD4:  Call     GetPlayerPos 	( *Var[0] *Var[1] *Var[2] )
+  AEC:  Add  *Var[0]  0000001E 
+  AFC:  Call     SetNpcSpeed 	( 00000000 *Fixed[3.5] )
+  B10:  Call     NpcMoveTo   	( 00000000 *Var[0] 0000003C 00000000 )
+  B2C:  Call     $Function_80240040 ( 00000000 00000008 )
+  B40:  Call     $Function_802435D0 ( )
+  B4C:  Exec     $Script_802438CC 
+  B58:  Wait     0000000F 
+  B64:  Call     ShowMessageAtScreenPos 	( 001D0190 000000A0 00000028 ) % Lakilester joined your party!! Press  to ride Laki ...
+  B7C:  Exec     $Script_802438F8 
+  B88:  Wait     0000000A 
+  B94:  Call     PanToTarget 	( .Cam:Default 00000000 00000000 )
+  BAC:  Set  *StoryProgress  00000033 
+  BBC:  Call     EnablePartnerAI 	( )
+  BC8:  Call     DisablePlayerInput 	( .False )
+  BD8:  ExecWait $Script_80245014 
+  BE4:  Return
+  BEC:  End
+}
+
+@ $Script_80245014 {
+    0:  Call     GetNpcPos   	( 00000001 *Var[0] *Var[1] *Var[2] )
+  % 1C:  Call     AwaitPlayerLeave 	( *Var[0] *Var[2] 00000078 )
+   34:  Call     DisablePlayerInput 	( .True )
+   44:  Call     GetNpcPos   	( 00000001 *Var[0] *Var[1] *Var[2] )
+   60:  Call     UseSettingsFrom 	( .Cam:Default *Var[0] 00000000 *Var[2] )
+   7C:  Call     SetPanTarget 	( .Cam:Default *Var[0] *Var[1] *Var[2] )
+   98:  Call     SetCamDistance ( .Cam:Default 000000FA )
+   AC:  Call     SetCamPitch 	( .Cam:Default *Fixed[5.5] *Fixed[-7.5] )
+   C4:  Call     SetCamSpeed 	( .Cam:Default *Fixed[90.0] )
+   D8:  Call     PanToTarget 	( .Cam:Default 00000000 00000001 )
+   F0:  Call     WaitForCam  	( .Cam:Default *Fixed[1.0] )
+  104:  Call     NpcFaceNpc  	( 00000001 00000000 00000001 )
+  11C:  Call     SpeakToPlayer 	( 00000001 00CC0004 00CC0001 00000000 001100B4 ) % Oh, my Lakilester!!  Come back to me soon!! I'll b ...
+  13C:  Call     NpcFaceNpc  	( .Npc:Partner 00000001 00000001 )
+  154:  Call     SetCamDistance ( .Cam:Default 00000258 )
+  168:  Call     SetCamPitch 	( .Cam:Default *Fixed[10.0] *Fixed[-8.0] )
+  180:  Call     SetCamPosA  	( .Cam:Default 00000000 00000000 )
+  198:  Call     SetCamPosB  	( .Cam:Default 00000082 FFFFFF38 )
+  1B0:  Call     SetCamPosC  	( .Cam:Default 00000000 00000000 )
+  1C8:  Call     SetCamSpeed 	( .Cam:Default *Fixed[90.0] )
+  1DC:  Call     PanToTarget 	( .Cam:Default 00000000 00000001 )
+  1F4:  Call     WaitForCam  	( .Cam:Default *Fixed[1.0] )
+  208:  Thread
+  210:  	Call     $Function_802433C0 ( 00000037 )
+  220:  EndThread
+  228:  Call     SetNpcFlagBits ( 00000001 00000100 .True )
+  240:  Exec     $Script_80244560 *Var[9] 
+  250:  Call     LoadPath    	( 00000037 $VectorList_80244420 00000005 00000000 )
+  26C:  Label    00000014 
+  278:  Call     GetNextPathPos ( )
+  284:  Call     SetNpcPos   	( 00000001 *Var[1] *Var[2] *Var[3] )
+  2A0:  Wait     00000001 
+  2AC:  If  *Var[0]  ==  00000001 
+  2BC:  	Goto     00000014 
+  2C8:  EndIf
+  2D0:  Kill     *Var[9] 
+  2DC:  Call     GetCurrentPartnerID 	( *Var[0] )
+  2EC:  Call     BringPartnerOut 	( .Partner:Lakilester )
+  2FC:  If  *Var[0]  !=  00000008 
+  30C:  	Call     SetNpcJumpscale 	( .Npc:Partner *Fixed[0.0] )
+  320:  	Call     GetPlayerPos 	( *Var[1] *Var[2] *Var[3] )
+  338:  	Add  *Var[1]  00000014 
+  348:  	Add  *Var[2]  00000014 
+  358:  	Add  *Var[3]  00000014 
+  368:  	Call     NpcJump0    	( .Npc:Partner *Var[1] *Var[2] *Var[3] 0000001E )
+  388:  EndIf
+  390:  Call     DisablePartnerAI 	( 00000000 )
+  3A0:  Call     InterpNpcYaw 	( .Npc:Partner 0000010E 00000000 )
+  3B8:  Wait     00000005 
+  3C4:  Call     SpeakToPlayer 	( .Npc:Partner 00080009 00080001 00000005 001100B5 ) % Aghhhhhh!! Come ON! Call me Spike!!!
+  3E4:  Call     EnablePartnerAI 	( )
+  3F0: % Call     PutPartnerAway ( )
+  3FC:  Call     ResetCam    	( .Cam:Default *Fixed[90.0] )
+  410:  Call     DisablePlayerInput 	( .False )
+  420:  Return
+  428:  End
+}
+  
+#new:Script $Script_Interact
+{
+	Return
+	End
+}

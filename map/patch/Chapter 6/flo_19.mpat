@@ -1,0 +1,6 @@
+@ $Script_80240AC0
+{
+    0:  Call     MakeItemEntity ( .Item:UltraShroom ~Vec3d:Item80240AC0 00000011 *GF_FLO19_Item_SJumpChg )
+   24:  Return
+   2C:  End
+}

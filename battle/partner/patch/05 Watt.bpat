@@ -1,0 +1,213 @@
+
+% Reduced duration of paralysis (3 -> 2)<- This was pro mode but I reverted it because of status being on a per enemy basis now
+@ $Script_8023A684
+{
+[684] Call	PartnerAfflictEnemy ( *Var[0] 50000020 00000000 C0010300 000000FE 00000000 00000070 )
+[6B4] Call	PartnerAfflictEnemy ( *Var[0] 50000020 00000000 C0010300 000000FF 00000000 00000030 )
+}
+
+% Reduced duration of paralysis (3 -> 2)
+@ $Script_8023B970
+{
+[704] Call	PartnerAfflictEnemy ( *Var[0] 70000020 00000000 C0010300 000000FE 00000002 00000070 )
+[734] Call	PartnerAfflictEnemy ( *Var[0] 70000020 00000000 C0010300 *Var[F] 00000002 00000070 )
+}
+
+%[704] Call     PartnerDamageEnemy 	( *Var[0] 08000020 0000008D C00103FE 00000003 00000070 ) so this doesnt work :\
+%[734] Call     PartnerDamageEnemy 	( *Var[0] 08000020 0000008D C0010348 00000002 00000070 )
+
+
+@ $Script_80239BC8
+{
+    0:  Call     LoadActionCommand 	( 0000000C )
+   10:  Call     802A9000 ( )
+   1C:  Call     SetupMashMeter ( 00000001 00000064 00000000 00000000 00000000 00000000 )
+   40:  Wait     0000000A 
+   4C:  Call     UseBattleCamPreset 	( 00000030 )
+   5C:  Call     InitTargetIterator 	( )
+   68:  Call     SetGoalToTarget 	( .Actor:Partner )
+   78:  Call     AddGoalPos 	( .Actor:Partner FFFFFFEC 00000000 00000000 )
+   94:  Set  *Flag[02]  00000000 
+   A4:  Loop     0000003C 
+   B0:  	Call     CheckButtonDown ( 00008000 *Var[0] )
+   C4:  	If  *Var[0]  !=  00000000 
+   D4:  		Set  *Flag[02]  00000001 
+   E4:  		BreakLoop
+   EC:  	EndIf
+   F4:  	Wait     00000001 
+  100:  EndLoop
+  108:  Call     MoveBattleCamOver 	( 0000004B )
+  118:  If  *Flag[02]  ==  00000001 
+  128:  	Call     802A91B8 ( 00000000 00000066 00000003 00000001 )
+  144:  	Set  *Flag[00]  00000000 
+  154:  	Exec     $Script_80239A10 *Var[A] 
+  164:  	Loop     00000014 
+  170:  		Call     CheckButtonDown ( 00008000 *Var[0] )
+  184:  		If  *Var[0]  ==  00000000 
+  194:  			Set  *Flag[00]  00000001 
+  1A4:  			BreakLoop
+  1AC:  		EndIf
+  1B4:  		Wait     00000001 
+  1C0:  	EndLoop
+  1C8:  	If  *Flag[00]  ==  00000001 
+  1D8:  		Kill     *Var[A] 
+  1E4:  		Goto     0000000A 
+  1F0:  	EndIf
+  1F8:  	Call     PartnerTestEnemy 	( *Var[0] 00000000 00000004 00000000 00000001 00000010 )
+  21C:  	Set  *Flag[00]  00000000 
+  22C:  	Exec     $Script_80239A54 *Var[A] 
+  23C:  	Loop     00000037 
+  248:  		Call     CheckButtonDown ( 00008000 *Var[0] )
+  25C:  		If  *Var[0]  ==  00000000 
+  26C:  			Set  *Flag[00]  00000001 
+  27C:  			BreakLoop
+  284:  		EndIf
+  28C:  		Wait     00000001 
+  298:  	EndLoop
+  2A0:  	If  *Flag[00]  ==  00000001 
+  2B0:  		Kill     *Var[A] 
+  2BC:  		Goto     0000000A 
+  2C8:  	EndIf
+  2D0:  	If  *Flag[00]  ==  00000000 
+  2E0:  		Exec     $Script_80239B98 *Var[A] 
+  2F0:  		Loop     0000001E 
+  2FC:  			Call     CheckButtonDown ( 00008000 *Var[0] )
+  310:  			If  *Var[0]  ==  00000000 
+  320:  				Set  *Flag[00]  00000001 
+  330:  				BreakLoop
+  338:  			EndIf
+  340:  			Wait     00000001 
+  34C:  		EndLoop
+  354:  		If  *Flag[00]  ==  00000001 
+  364:  			Kill     *Var[A] 
+  370:  			Goto     0000000A 
+  37C:  		EndIf
+  384:  	EndIf
+  38C:  Else
+  394:  	Set  *Flag[00]  00000000 
+  3A4:  	Exec     $Script_80239A10 *Var[A] 
+  3B4:  	Loop     00000014 
+  3C0:  		Call     CheckButtonDown ( 00008000 *Var[0] )
+  3D4:  		If  *Var[0]  !=  00000000 
+  3E4:  			If  *Flag[02]  ==  00000000 
+  3F4:  				Call     802A91B8 ( 00000000 0000005C 00000003 00000001 )
+  410:  				Set  *Flag[02]  00000001 
+  420:  			EndIf
+  428:  		EndIf
+  430:  		If  *Flag[02]  ==  00000001 
+  440:  			If  *Var[0]  ==  00000000 
+  450:  				Set  *Flag[00]  00000001 
+  460:  				BreakLoop
+  468:  			EndIf
+  470:  		EndIf
+  478:  		Wait     00000001 
+  484:  	EndLoop
+  48C:  	If  *Flag[00]  ==  00000001 
+  49C:  		Kill     *Var[A] 
+  4A8:  		Goto     0000000A 
+  4B4:  	EndIf
+  4BC:  	Call     PartnerTestEnemy 	( *Var[0] 00000000 00000004 00000000 00000001 00000010 )
+  4E0:  	Set  *Flag[00]  00000000 
+  4F0:  	Exec     $Script_80239A54 *Var[A] 
+  500:  	Loop     00000037 
+  50C:  		Call     CheckButtonDown ( 00008000 *Var[0] )
+  520:  		If  *Var[0]  !=  00000000 
+  530:  			If  *Flag[02]  ==  00000000 
+  540:  				Call     802A91B8 ( 00000000 0000005C 00000003 00000001 )
+  55C:  				Set  *Flag[02]  00000001 
+  56C:  			EndIf
+  574:  		EndIf
+  57C:  		If  *Flag[02]  ==  00000001 
+  58C:  			If  *Var[0]  ==  00000000 
+  59C:  				Set  *Flag[00]  00000001 
+  5AC:  				BreakLoop
+  5B4:  			EndIf
+  5BC:  		EndIf
+  5C4:  		Wait     00000001 
+  5D0:  	EndLoop
+  5D8:  	If  *Flag[00]  ==  00000001 
+  5E8:  		Kill     *Var[A] 
+  5F4:  		Goto     0000000A 
+  600:  	EndIf
+  608:  	If  *Flag[00]  ==  00000000 
+  618:  		Exec     $Script_80239B98 *Var[A] 
+  628:  		Loop     0000001E 
+  634:  			Call     CheckButtonDown ( 00008000 *Var[0] )
+  648:  			If  *Var[0]  ==  00000000 
+  658:  				Set  *Flag[00]  00000001 
+  668:  				BreakLoop
+  670:  			EndIf
+  678:  			Wait     00000001 
+  684:  		EndLoop
+  68C:  		If  *Flag[00]  ==  00000001 
+  69C:  			Kill     *Var[A] 
+  6A8:  			Goto     0000000A 
+  6B4:  		EndIf
+  6BC:  	EndIf
+  6C4:  EndIf
+  6CC:  Label    0000000A 
+  6D8:  Wait     00000002 
+  6E4:  Call     CloseActionCommandInfo ( )
+  6F0:  Call     $Function_80238570 ( )
+  6FC:  Call     StopLoopingSoundAtActor ( 00000100 00000000 )
+  710:  Call     80269EAC ( 00000013 )
+  720:  Call     SetAnimation 	( .Actor:Partner FFFFFFFF 000E0005 )
+  738:  Call     8026EA7C ( FFFFFF81 00000001 0000000A )
+  750:  Call     SetGoalToTarget 	( .Actor:Partner )
+  760:  Call     AddGoalPos 	( .Actor:Partner FFFFFFFB 00000000 00000000 )
+  77C:  Call     FlyToGoal  	( .Actor:Partner 00000005 00000000 .Easing:Linear )
+  798:  Thread
+  7A0:  	Wait     00000002 
+  7AC:  	Call     $Function_80238478 ( 00000000 )
+  7BC:  EndThread
+  7C4:  Call     PartnerTestEnemy 	( *Var[0] 00000000 00000004 00000000 00000001 00000010 )
+  7E8:  If  *Var[0]  ==  00000006 
+  7F8:  	Thread
+  800:  		Wait     00000005 
+  80C:  		Call     SetAnimation 	( .Actor:Partner FFFFFFFF 000E0001 )
+  824:  	EndThread
+  82C:  	Call     SetGoalToTarget 	( .Actor:Partner )
+  83C:  	Call     AddGoalPos 	( .Actor:Partner 00000028 0000000A 00000000 )
+  858:  	Call     FlyToGoal  	( .Actor:Partner 0000000A FFFFFFEC .Easing:QuadraticOut )
+  874:  	Wait     00000014 
+  880:  	Call     SetGoalToHome 	( .Actor:Partner )
+  890:  	Call     SetAnimation 	( .Actor:Partner FFFFFFFF 000E0003 )
+  8A8:  	Call     FlyToGoal  	( .Actor:Partner 0000001E 00000000 .Easing:CosInOut )
+  8C4:  	Call     SetAnimation 	( .Actor:Partner FFFFFFFF 000E0001 )
+  8DC:  	Return
+  8E4:  EndIf
+  8EC:  Call     $Function_802383E4 ( )
+  8F8:  Call     $Function_802383C0 ( )
+  904:  Call     GetMenuSelection 	( *Var[0] *Var[1] *Var[2] )
+  91C:  Switch  *Var[2] 
+  928:  	Case  ==  000000A1 
+  934:  		Set  *Var[E]  00000001 
+  944:  		Set  *Var[F]  00000002 
+  954:  	Case  ==  000000A2 
+  960:  		Set  *Var[E]  00000001 
+  970:  		Set  *Var[F]  00000003 
+  980:  	Case  ==  000000A3 
+  98C:  		Set  *Var[E]  00000001 
+  99C:  		Set  *Var[F]  00000004 
+  9AC:  EndSwitch
+  9B4:  Call     GetActionCommandResult ( *Var[0] )
+  9C4:  Switch  *Var[0] 
+  9D0:  	Case  >  00000000 
+  9DC:  		Call     PartnerDamageEnemy 	( *Var[0] 08000020 0000008D 00000000 *Var[F] 00000070 )
+  A00:  	Default
+  A08:  		Call     PartnerDamageEnemy 	( *Var[0] 08000020 0000008D 00000000 *Var[E] 00000030 )
+  A2C:  EndSwitch
+  A34:  Call     80280818 ( )
+  A40:  Switch  *Var[0] 
+  A4C:  	CaseOR  ==  00000001 
+  A58:  	CaseOR  ==  00000003 
+  A64:  		ExecWait $Script_80239914 
+  A70:  	EndCaseGroup
+  A78:  	CaseOR  ==  00000000 
+  A84:  	CaseOR  ==  00000002 
+  A90:  		ExecWait $Script_80239990 
+  A9C:  	EndCaseGroup
+  AA4:  EndSwitch
+  AAC:  Return
+  AB4:  End
+}

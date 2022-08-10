@@ -1,0 +1,31 @@
+
+% This is just one of the stone chomps reskinned. The real chain chomp
+% actor has some tricky dependencies on Tutankoopa being in the battle.
+
+#new:Actor $CheepCheep
+{
+% stats
+[Index]        A2b 
+[Level]        12`b 
+[MaxHP]         7`b 
+[Coins]         2`b 
+[Flags]       00000000 
+[StatusTable] $StatusTable_ChainChomp 
+% ai
+[PartsCount]  10`s 
+[PartsTable] $PartsTable_ChainChomp 
+[Script]      $Script_StartAI_ChainChomp 
+% move effectiveness
+[Escape]        0`b 
+[Item]          0`b 
+[AirLift]      15`b 
+[Hurricane]    15`b % Bow's "Spook" as well
+[UpAndAway]    50`b 
+[PowerBounce]  85`b 
+[SpinSmash]     0`b % weight (0-4)
+% ui positions
+[Size]         56`b  40`b % width height
+[HealthBar]     0`b   0`b % dx dy
+[StatusTurn]  -10`b  20`b % dx dy
+[StatusIcon]   10`b  20`b % dx dy
+}

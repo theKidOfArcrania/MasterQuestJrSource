@@ -1,0 +1,8 @@
+
+% Change this battle, but leave 21-02 alone.
+@ $NpcGroupList_802436EC
+{
+00000001 $NpcGroup_80242F2C 21050001 
+00000003 $NpcGroup_8024311C 21050001 
+00000000 00000000 00000000 
+}
