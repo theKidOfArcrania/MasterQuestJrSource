@@ -354,8 +354,8 @@
 	</ZoneTree>
 	<MarkerTree>
 		<Node name="Root" id="3">
-			<Node name="NPC_Merluvlee_00" id="FFFFFFFF"/>
-			<Node name="NPC_Merlow_01" id="0"/>
+			<Node name="Merluvlee_00" id="FFFFFFFF"/>
+			<Node name="Merlow_01" id="0"/>
 			<Node name="Entry0" id="1"/>
 			<Node name="Entity802425B0" id="2"/>
 		</Node>
@@ -13079,12 +13079,12 @@
 			<MapObject ver="1" name="Entry0" id="1"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-150,160,-25" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Merlow_01" id="0"/>
+			<MapObject ver="1" name="Merlow_01" id="0"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="62,20,7" yaw="270.000000">
-			<MapObject ver="1" name="NPC_Merluvlee_00" id="FFFFFFFF"/>
+			<MapObject ver="1" name="Merluvlee_00" id="FFFFFFFF"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>

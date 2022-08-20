@@ -154,10 +154,10 @@
 			<Node name="Bomb_80243734" id="3"/>
 			<Node name="Entity802437F0" id="4"/>
 			<Node name="Entity80243814" id="5"/>
-			<Node name="NPC_Fuzzy1" id="6"/>
-			<Node name="NPC_Fuzzy2" id="7"/>
-			<Node name="NPC_Fuzzy3" id="8"/>
-			<Node name="NPC_Fuzzy4" id="9"/>
+			<Node name="Fuzzy1" id="6"/>
+			<Node name="Fuzzy2" id="7"/>
+			<Node name="Fuzzy3" id="8"/>
+			<Node name="Fuzzy4" id="9"/>
 		</Node>
 	</MarkerTree>
 	<LightSets>
@@ -3970,22 +3970,22 @@
 			<MapObject ver="1" name="Root" id="A"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-260,24,0" yaw="270.000000">
-			<MapObject ver="1" name="NPC_Fuzzy4" id="9"/>
+			<MapObject ver="1" name="Fuzzy4" id="9"/>
 			<Movement type="Wander" data="FFFFFEFC,0,A,78,0,FFFF8001,0,0,0,0,190,96,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-60,24,20" yaw="270.000000">
-			<MapObject ver="1" name="NPC_Fuzzy3" id="8"/>
+			<MapObject ver="1" name="Fuzzy3" id="8"/>
 			<Movement type="Wander" data="FFFFFFBA,0,A,78,0,FFFF8001,0,0,0,0,190,96,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="60,24,30" yaw="270.000000">
-			<MapObject ver="1" name="NPC_Fuzzy2" id="7"/>
+			<MapObject ver="1" name="Fuzzy2" id="7"/>
 			<Movement type="Wander" data="32,0,1E,78,0,FFFF8001,0,0,0,0,190,96,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="210,24,20" yaw="270.000000">
-			<MapObject ver="1" name="NPC_Fuzzy1" id="6"/>
+			<MapObject ver="1" name="Fuzzy1" id="6"/>
 			<Movement type="Wander" data="D2,0,14,78,0,FFFF8001,0,0,0,0,190,96,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>

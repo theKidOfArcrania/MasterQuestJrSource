@@ -252,12 +252,12 @@
 	</ZoneTree>
 	<MarkerTree>
 		<Node name="Root" id="E">
-			<Node name="NPC_Gulpit_00" id="FFFFFFFF"/>
-			<Node name="NPC_Gulpit_01" id="0"/>
-			<Node name="NPC_PutridPiranha_02" id="1"/>
-			<Node name="NPC_PutridPiranha_03" id="2"/>
-			<Node name="NPC_PutridPiranha_04" id="3"/>
-			<Node name="NPC_PutridPiranha_05" id="4"/>
+			<Node name="Gulpit_00" id="FFFFFFFF"/>
+			<Node name="Gulpit_01" id="0"/>
+			<Node name="PutridPiranha_02" id="1"/>
+			<Node name="PutridPiranha_03" id="2"/>
+			<Node name="PutridPiranha_04" id="3"/>
+			<Node name="PutridPiranha_05" id="4"/>
 			<Node name="Entry0" id="5"/>
 			<Node name="Entry1" id="6"/>
 			<Node name="Entity80242390" id="7"/>
@@ -5451,32 +5451,32 @@
 			<MapObject ver="1" name="Entry0" id="5"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_PutridPiranha_05" id="4"/>
+			<MapObject ver="1" name="PutridPiranha_05" id="4"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="520,120,-75" yaw="270.000000">
-			<MapObject ver="1" name="NPC_PutridPiranha_04" id="3"/>
+			<MapObject ver="1" name="PutridPiranha_04" id="3"/>
 			<Movement type="Wander" data="208,78,FFFFFFB5,1E,0,FFFF8001,0,14A,78,FFFFFFBF,104,41,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_PutridPiranha_03" id="2"/>
+			<MapObject ver="1" name="PutridPiranha_03" id="2"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="200,120,-75" yaw="270.000000">
-			<MapObject ver="1" name="NPC_PutridPiranha_02" id="1"/>
+			<MapObject ver="1" name="PutridPiranha_02" id="1"/>
 			<Movement type="Wander" data="C8,78,FFFFFFB5,1E,0,FFFF8001,0,14A,78,FFFFFFBF,104,41,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Gulpit_01" id="0"/>
+			<MapObject ver="1" name="Gulpit_01" id="0"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-500,-150,-75" yaw="270.000000">
-			<MapObject ver="1" name="NPC_Gulpit_00" id="FFFFFFFF"/>
+			<MapObject ver="1" name="Gulpit_00" id="FFFFFFFF"/>
 			<Movement type="Wander" data="FFFFFE0C,FFFFFF6A,FFFFFFB5,1E,0,FFFF8001,0,FFFFFE0C,FFFFFF6A,FFFFFFB5,C8,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>

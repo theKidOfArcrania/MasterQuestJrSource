@@ -211,10 +211,10 @@
 	</ZoneTree>
 	<MarkerTree>
 		<Node name="Root" id="A">
-			<Node name="NPC_Dayzee_00" id="FFFFFFFF"/>
-			<Node name="NPC_Dayzee_01" id="0"/>
-			<Node name="NPC_Bzzap_02" id="1"/>
-			<Node name="NPC_Bzzap_03" id="2"/>
+			<Node name="Dayzee_00" id="FFFFFFFF"/>
+			<Node name="Dayzee_01" id="0"/>
+			<Node name="Bzzap_02" id="1"/>
+			<Node name="Bzzap_03" id="2"/>
 			<Node name="Entry0" id="3"/>
 			<Node name="Entry1" id="4"/>
 			<Node name="Item80243284" id="5"/>
@@ -5810,22 +5810,22 @@
 			<MapObject ver="1" name="Entry0" id="3"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="90.000000">
-			<MapObject ver="1" name="NPC_Bzzap_03" id="2"/>
+			<MapObject ver="1" name="Bzzap_03" id="2"/>
 			<Movement type="Wander" data="FFFFFFCE,37,5A,64,0,FFFF8001,0,FFFFFFCE,32,5A,FA,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="50,55,90" yaw="90.000000">
-			<MapObject ver="1" name="NPC_Bzzap_02" id="1"/>
+			<MapObject ver="1" name="Bzzap_02" id="1"/>
 			<Movement type="Wander" data="32,37,5A,1E,0,FFFF8001,0,32,32,5A,FA,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="260,0,75" yaw="270.000000">
-			<MapObject ver="1" name="NPC_Dayzee_01" id="0"/>
+			<MapObject ver="1" name="Dayzee_01" id="0"/>
 			<Movement type="Wander" data="104,0,4B,1E,0,FFFF8001,0,104,0,4B,C8,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-350,0,40" yaw="90.000000">
-			<MapObject ver="1" name="NPC_Dayzee_00" id="FFFFFFFF"/>
+			<MapObject ver="1" name="Dayzee_00" id="FFFFFFFF"/>
 			<Movement type="Wander" data="FFFFFEA2,0,28,1E,0,FFFF8001,0,FFFFFEA2,0,28,C8,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>

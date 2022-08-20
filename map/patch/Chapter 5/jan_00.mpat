@@ -4,28 +4,28 @@
 % This does not occur in jan_05, where this code is taken from.
 
 /%
-#import NPC_HurtPlant.mpat
+#import HurtPlant.mpat
 
 @ $NpcGroup_8024504C % converted to Hurt Plant
-00000004 $NpcSettings_HurtPlant {Vec3f:NPC_HeartPlant_04} % 375 0 260
+00000004 $NpcSettings_HurtPlant {Vec3f:HeartPlant_04} % 375 0 260
 00408D01 00000000 00000000 00000000 0000010E 
 {Items:10:TastyTonic:5:SuperSoda:5}
 {HP:20:70:3:50} {HP:30:60:3:50} {HP:50:50:3:40} {HP:80:40:3:40} {HP:100:30:3:30} {HP:None} {HP:None} {HP:None} 
 {FP:20:50:2:40} {FP:30:40:2:40} {FP:50:40:2:40} {FP:80:40:2:40} {FP:100:30:2:40} {FP:None} {FP:None} {FP:None} 
 {CoinBonus:0:2}
-{Movement:NPC_HeartPlant_04}
+{Movement:HeartPlant_04}
 00440001 00440001 00440001 00440001 00440001 00440001 0044000E 0044000E 
 00440001 00440001 00440001 00440001 00440001 00440001 00440001 00440001 
 00000000 00000000 $ExtraAnimationList_HurtPlant 001A00D3
 
 @ $NpcGroup_8024561C % converted to Hurt Plant
-00000007 $NpcSettings_HurtPlant {Vec3f:NPC_HeartPlant_07} % 375 0 260
+00000007 $NpcSettings_HurtPlant {Vec3f:HeartPlant_07} % 375 0 260
 00408D01 00000000 00000000 00000000 0000010E 
 {Items:10:TastyTonic:5:SuperSoda:5}
 {HP:20:70:3:50} {HP:30:60:3:50} {HP:50:50:3:40} {HP:80:40:3:40} {HP:100:30:3:30} {HP:None} {HP:None} {HP:None} 
 {FP:20:50:2:40} {FP:30:40:2:40} {FP:50:40:2:40} {FP:80:40:2:40} {FP:100:30:2:40} {FP:None} {FP:None} {FP:None} 
 {CoinBonus:0:2}
-{Movement:NPC_HeartPlant_07}
+{Movement:HeartPlant_07}
 00440001 00440001 00440001 00440001 00440001 00440001 0044000E 0044000E 
 00440001 00440001 00440001 00440001 00440001 00440001 00440001 00440001 
 00000000 00000000 $ExtraAnimationList_HurtPlant 001A00D3

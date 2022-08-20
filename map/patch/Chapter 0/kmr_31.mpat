@@ -72,12 +72,12 @@ be nice being an adult.[BR]
 	 
 #new:NpcGroupList $NpcGroups_KMR_33
 {
-00000001 $NPC_Chomp  00010000 %not actually a chomp just a leftover name from the original idea
-00000001 $NPC_Chomp2 00000000 %not actually a chomp just a leftover name from the original idea
+00000001 $Chomp  00010000 %not actually a chomp just a leftover name from the original idea
+00000001 $Chomp2 00000000 %not actually a chomp just a leftover name from the original idea
 00000000 00000000 00000000
 }
 
-#new:NpcGroup $NPC_Chomp
+#new:NpcGroup $Chomp
 {
 00000001 $NpcSettings_Chomp ~Vec3f:chomp
 00002C00 00000000 00000000 00000000 0000005A 
@@ -91,7 +91,7 @@ be nice being an adult.[BR]
 00000000 00000000 00000000 00000000 % no tattle string
 }
 
-#new:NpcGroup $NPC_Chomp2
+#new:NpcGroup $Chomp2
 {
 00000002 $NpcSettings_Chomp ~Vec3f:chomp2
 00002C00 00000000 00000000 00000000 0000005A 

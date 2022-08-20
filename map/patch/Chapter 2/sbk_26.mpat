@@ -62,12 +62,12 @@
 
 @ $NpcGroup_80240AA8
 {
-[08] ~Vec3f:NPC_Bandit_00
-[E0] ~Vec3d:NPC_Bandit_00
+[08] ~Vec3f:Bandit_00
+[E0] ~Vec3d:Bandit_00
 }
 
 @ $NpcGroup_80240C98
 {
-[08] ~Vec3f:NPC_Pokey_01
-[E0] ~Vec3d:NPC_Pokey_01
+[08] ~Vec3f:Pokey_01
+[E0] ~Vec3d:Pokey_01
 }

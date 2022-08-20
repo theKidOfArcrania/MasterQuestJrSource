@@ -1,15 +1,15 @@
 
-#import NPC_Ember.mpat
+#import Ember.mpat
 
 @ $NpcGroupList_80240CB8
 {
 00000001 $NpcGroup_802408D8 0A040001 
 00000001 $NpcGroup_80240AC8 0A0D0001 
-00000001 $NPC_Ember   0A100001
+00000001 $Ember   0A100001
 00000000 00000000 00000000 
 }
 
-@ $NPC_Ember
+@ $Ember
 {
 [00] 2					% npc ID
 [08] 0.0 10.0 0.0		% spawn position

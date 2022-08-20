@@ -264,17 +264,17 @@
 	</ZoneTree>
 	<MarkerTree>
 		<Node name="Root" id="1C">
-			<Node name="NPC_80246264" id="FFFFFFFF"/>
-			<Node name="NPC_80246454" id="0"/>
-			<Node name="NPC_80246644" id="1"/>
-			<Node name="NPC_80244E64" id="2"/>
-			<Node name="NPC_80245054" id="3"/>
-			<Node name="NPC_80245244" id="4"/>
-			<Node name="NPC_Bubulb_03" id="5"/>
-			<Node name="NPC_Bubulb_04" id="6"/>
-			<Node name="NPC_Tolielup_05" id="7"/>
-			<Node name="NPC_WorldKlevar_06" id="8"/>
-			<Node name="NPC_Lakilulu_07" id="9"/>
+			<Node name="80246264" id="FFFFFFFF"/>
+			<Node name="80246454" id="0"/>
+			<Node name="80246644" id="1"/>
+			<Node name="80244E64" id="2"/>
+			<Node name="80245054" id="3"/>
+			<Node name="80245244" id="4"/>
+			<Node name="Bubulb_03" id="5"/>
+			<Node name="Bubulb_04" id="6"/>
+			<Node name="Tolielup_05" id="7"/>
+			<Node name="WorldKlevar_06" id="8"/>
+			<Node name="Lakilulu_07" id="9"/>
 			<Node name="Entry0" id="A"/>
 			<Node name="Entry1" id="B"/>
 			<Node name="Entry2" id="C"/>
@@ -8155,57 +8155,57 @@
 			<MapObject ver="1" name="Entry0" id="A"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="198,0,363" yaw="270.000000">
-			<MapObject ver="1" name="NPC_Lakilulu_07" id="9"/>
+			<MapObject ver="1" name="Lakilulu_07" id="9"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_WorldKlevar_06" id="8"/>
+			<MapObject ver="1" name="WorldKlevar_06" id="8"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-400,0,190" yaw="90.000000">
-			<MapObject ver="1" name="NPC_Tolielup_05" id="7"/>
+			<MapObject ver="1" name="Tolielup_05" id="7"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="200,0,430" yaw="270.000000">
-			<MapObject ver="1" name="NPC_Bubulb_04" id="6"/>
+			<MapObject ver="1" name="Bubulb_04" id="6"/>
 			<Movement type="Patrol" data="2,C8,0,1AE,F0,0,1AE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,FFFF8001,FFFFFFC5,0,FFFFFFD8,64,0,0,1,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="90,0,410" yaw="90.000000">
-			<MapObject ver="1" name="NPC_Bubulb_03" id="5"/>
+			<MapObject ver="1" name="Bubulb_03" id="5"/>
 			<Movement type="Patrol" data="2,5A,0,19A,78,0,19A,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,FFFF8001,FFFFFFC5,0,FFFFFFD8,64,0,0,1,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="67,0,85" yaw="270.000000">
-			<MapObject ver="1" name="NPC_80245244" id="4"/>
+			<MapObject ver="1" name="80245244" id="4"/>
 			<Movement type="Patrol" data="2,43,0,55,61,0,55,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,FFFF8001,FFFFFFC5,0,FFFFFFD8,64,0,0,1,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-59,0,-40" yaw="90.000000">
-			<MapObject ver="1" name="NPC_80245054" id="3"/>
+			<MapObject ver="1" name="80245054" id="3"/>
 			<Movement type="Patrol" data="2,FFFFFFC5,0,FFFFFFD8,FFFFFFB0,0,FFFFFFD8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,FFFF8001,FFFFFFC5,0,FFFFFFD8,64,0,0,1,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-72,60,-100" yaw="270.000000">
-			<MapObject ver="1" name="NPC_80244E64" id="2"/>
+			<MapObject ver="1" name="80244E64" id="2"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="266,0,322" yaw="0.000000">
-			<MapObject ver="1" name="NPC_80246644" id="1"/>
+			<MapObject ver="1" name="80246644" id="1"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="198,0,363" yaw="270.000000">
-			<MapObject ver="1" name="NPC_80246454" id="0"/>
+			<MapObject ver="1" name="80246454" id="0"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="144,0,374" yaw="90.000000">
-			<MapObject ver="1" name="NPC_80246264" id="FFFFFFFF"/>
+			<MapObject ver="1" name="80246264" id="FFFFFFFF"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>

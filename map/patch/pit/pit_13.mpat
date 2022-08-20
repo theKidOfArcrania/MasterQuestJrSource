@@ -274,7 +274,7 @@ $Script_Main $EntryList 00000003 00000000
 00000002 00000000 00000000 00000000
 }
 
-#import NPC_EnemyBooData.mpat
+#import EnemyBooData.mpat
 
 #new:NpcGroup $Floor_02_Floor_04_Floor_08
 {

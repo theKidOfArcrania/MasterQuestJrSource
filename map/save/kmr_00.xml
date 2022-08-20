@@ -167,14 +167,14 @@
 	</ZoneTree>
 	<MarkerTree>
 		<Node name="Root" id="B">
-			<Node name="NPC_Goombaria_00" id="FFFFFFFF"/>
-			<Node name="NPC_WorldEldstar_01" id="0"/>
-			<Node name="NPC_WorldMamar_02" id="1"/>
-			<Node name="NPC_WorldSkolar_03" id="2"/>
-			<Node name="NPC_WorldMuskular_04" id="3"/>
-			<Node name="NPC_WorldMisstar_05" id="4"/>
-			<Node name="NPC_WorldKlevar_06" id="5"/>
-			<Node name="NPC_WorldKalmar_07" id="6"/>
+			<Node name="Goombaria_00" id="FFFFFFFF"/>
+			<Node name="WorldEldstar_01" id="0"/>
+			<Node name="WorldMamar_02" id="1"/>
+			<Node name="WorldSkolar_03" id="2"/>
+			<Node name="WorldMuskular_04" id="3"/>
+			<Node name="WorldMisstar_05" id="4"/>
+			<Node name="WorldKlevar_06" id="5"/>
+			<Node name="WorldKalmar_07" id="6"/>
 			<Node name="Entry0" id="7"/>
 			<Node name="Entity80244080" id="8"/>
 			<Node name="Entry1" id="9"/>
@@ -3548,42 +3548,42 @@
 			<MapObject ver="1" name="Entry0" id="7"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_WorldKalmar_07" id="6"/>
+			<MapObject ver="1" name="WorldKalmar_07" id="6"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_WorldKlevar_06" id="5"/>
+			<MapObject ver="1" name="WorldKlevar_06" id="5"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_WorldMisstar_05" id="4"/>
+			<MapObject ver="1" name="WorldMisstar_05" id="4"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_WorldMuskular_04" id="3"/>
+			<MapObject ver="1" name="WorldMuskular_04" id="3"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_WorldSkolar_03" id="2"/>
+			<MapObject ver="1" name="WorldSkolar_03" id="2"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_WorldMamar_02" id="1"/>
+			<MapObject ver="1" name="WorldMamar_02" id="1"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_WorldEldstar_01" id="0"/>
+			<MapObject ver="1" name="WorldEldstar_01" id="0"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Goombaria_00" id="FFFFFFFF"/>
+			<MapObject ver="1" name="Goombaria_00" id="FFFFFFFF"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>

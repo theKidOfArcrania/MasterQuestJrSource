@@ -358,15 +358,15 @@
 	<MarkerTree>
 		<Node name="Root" id="14">
 			<Node name="EntryS" id="FFFFFFFF"/>
-			<Node name="NPC_0" id="0"/>
-			<Node name="NPC_1" id="1"/>
-			<Node name="NPC_2" id="2"/>
-			<Node name="NPC_3" id="3"/>
-			<Node name="NPC_4" id="4"/>
-			<Node name="NPC_5" id="5"/>
-			<Node name="NPC_6" id="6"/>
-			<Node name="NPC_7" id="7"/>
-			<Node name="NPC_8" id="8"/>
+			<Node name="0" id="0"/>
+			<Node name="1" id="1"/>
+			<Node name="2" id="2"/>
+			<Node name="3" id="3"/>
+			<Node name="4" id="4"/>
+			<Node name="5" id="5"/>
+			<Node name="6" id="6"/>
+			<Node name="7" id="7"/>
+			<Node name="8" id="8"/>
 			<Node name="SavePoint" id="9"/>
 			<Node name="HealBlock" id="A"/>
 			<Node name="CompletionEffect0" id="B"/>
@@ -23559,47 +23559,47 @@
 			<MapObject ver="1" name="SavePoint" id="9"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,300,-1925" yaw="0.000000">
-			<MapObject ver="1" name="NPC_8" id="8"/>
+			<MapObject ver="1" name="8" id="8"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="580,215,-1230" yaw="-135.000000">
-			<MapObject ver="1" name="NPC_7" id="7"/>
+			<MapObject ver="1" name="7" id="7"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-580,215,-1230" yaw="135.000000">
-			<MapObject ver="1" name="NPC_6" id="6"/>
+			<MapObject ver="1" name="6" id="6"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,65,-840" yaw="180.000000">
-			<MapObject ver="1" name="NPC_5" id="5"/>
+			<MapObject ver="1" name="5" id="5"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="575,65,-200" yaw="-90.000000">
-			<MapObject ver="1" name="NPC_4" id="4"/>
+			<MapObject ver="1" name="4" id="4"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="575,65,150" yaw="-90.000000">
-			<MapObject ver="1" name="NPC_3" id="3"/>
+			<MapObject ver="1" name="3" id="3"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-575,65,-200" yaw="90.000000">
-			<MapObject ver="1" name="NPC_2" id="2"/>
+			<MapObject ver="1" name="2" id="2"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-575,65,150" yaw="90.000000">
-			<MapObject ver="1" name="NPC_1" id="1"/>
+			<MapObject ver="1" name="1" id="1"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,20,300" yaw="-180.000000">
-			<MapObject ver="1" name="NPC_0" id="0"/>
+			<MapObject ver="1" name="0" id="0"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>

@@ -105,12 +105,12 @@ cleaned up in a jiffy, though![BR]
 	
 /%	
 #new:NpcGroupList $NpcGroups_KMR_33
-00000001 $NPC_Pokey1 00050000
-00000001 $NPC_Pokey2 00050000
-00000001 $NPC_Pokey3 00050000
+00000001 $Pokey1 00050000
+00000001 $Pokey2 00050000
+00000001 $Pokey3 00050000
 00000000 00000000 00000000
 
-#new:NpcGroup $NPC_Pokey1
+#new:NpcGroup $Pokey1
 00000001 $NpcSettings_Chomp {Vec3f:pokey1}
 00002C00 00000000 00000000 00000000 0000005A 
 {Items:15:DriedFruit:9:TastyTonic:1}
@@ -122,7 +122,7 @@ cleaned up in a jiffy, though![BR]
 00310208 00310208 00310208 00310208 00310208 00310208 00310208 00310208 
 00000001 00000000 00000000 00000000 % no tattle string
 
-#new:NpcGroup $NPC_Pokey2
+#new:NpcGroup $Pokey2
 00000001 $NpcSettings_Chomp {Vec3f:pokey2}
 00002C00 00000000 00000000 00000000 0000005A 
 {Items:15:DriedFruit:9:TastyTonic:1}
@@ -134,7 +134,7 @@ cleaned up in a jiffy, though![BR]
 00310208 00310208 00310208 00310208 00310208 00310208 00310208 00310208 
 00000001 00000000 00000000 00000000 % no tattle string
 
-#new:NpcGroup $NPC_Pokey3
+#new:NpcGroup $Pokey3
 00000001 $NpcSettings_Chomp {Vec3f:pokey3}
 00002C00 00000000 00000000 00000000 0000005A 
 {Items:15:DriedFruit:9:TastyTonic:1}

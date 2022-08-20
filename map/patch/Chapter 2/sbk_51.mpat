@@ -1,16 +1,16 @@
 
-#import NPC_Ember.mpat
+#import Ember.mpat
 
 @ $NpcGroupList_80240CB8
 {
 00000001 $NpcGroup_802408D8 0A050001 
 00000001 $NpcGroup_80240AC8 0A0E0001 
-00000001 $NPC_Ember         0A100001
+00000001 $Ember         0A100001
 00000000 00000000 00000000 
 }
 
 % desired detection bounds: -512 to 196 x -512 to 512
-@ $NPC_Ember
+@ $Ember
 {
 [00] 2						% npc ID
 [08] -64.0 10.0 0.0			% spawn position

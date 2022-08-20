@@ -33,7 +33,7 @@
   End
 }
 
-#import NPC_Ember.mpat
+#import Ember.mpat
 
 @ $Script_MakeEntities
 {
@@ -46,11 +46,11 @@
 
 #new:NpcGroupList $GroupList
 {
-00000001 $NPC_Ember   0A100001 %yikes!
+00000001 $Ember   0A100001 %yikes!
 00000000 00000000 00000000 
 }
 
-@ $NPC_Ember
+@ $Ember
 {
 [00] 0          % npc ID
 [08] 160.0 10.0 0.0   % spawn position

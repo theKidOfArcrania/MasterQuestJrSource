@@ -131,17 +131,17 @@
 	</ZoneTree>
 	<MarkerTree>
 		<Node name="Root" id="13">
-			<Node name="NPC_80243EF8" id="FFFFFFFF"/>
-			<Node name="NPC_80242850" id="0"/>
-			<Node name="NPC_Twink_01" id="1"/>
-			<Node name="NPC_WorldEldstar_02" id="2"/>
-			<Node name="NPC_WorldMamar_03" id="3"/>
-			<Node name="NPC_WorldSkolar_04" id="4"/>
-			<Node name="NPC_WorldMuskular_05" id="5"/>
-			<Node name="NPC_WorldMisstar_06" id="6"/>
-			<Node name="NPC_WorldKlevar_07" id="7"/>
-			<Node name="NPC_WorldKalmar_08" id="8"/>
-			<Node name="NPC_StarRod_09" id="9"/>
+			<Node name="80243EF8" id="FFFFFFFF"/>
+			<Node name="80242850" id="0"/>
+			<Node name="Twink_01" id="1"/>
+			<Node name="WorldEldstar_02" id="2"/>
+			<Node name="WorldMamar_03" id="3"/>
+			<Node name="WorldSkolar_04" id="4"/>
+			<Node name="WorldMuskular_05" id="5"/>
+			<Node name="WorldMisstar_06" id="6"/>
+			<Node name="WorldKlevar_07" id="7"/>
+			<Node name="WorldKalmar_08" id="8"/>
+			<Node name="StarRod_09" id="9"/>
 			<Node name="Path_80240B58" id="A"/>
 			<Node name="Path_80240B7C" id="B"/>
 			<Node name="Entry0" id="C"/>
@@ -5237,57 +5237,57 @@
 			</Path>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="270.000000">
-			<MapObject ver="1" name="NPC_StarRod_09" id="9"/>
+			<MapObject ver="1" name="StarRod_09" id="9"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="90.000000">
-			<MapObject ver="1" name="NPC_WorldKalmar_08" id="8"/>
+			<MapObject ver="1" name="WorldKalmar_08" id="8"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="270.000000">
-			<MapObject ver="1" name="NPC_WorldKlevar_07" id="7"/>
+			<MapObject ver="1" name="WorldKlevar_07" id="7"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="90.000000">
-			<MapObject ver="1" name="NPC_WorldMisstar_06" id="6"/>
+			<MapObject ver="1" name="WorldMisstar_06" id="6"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="270.000000">
-			<MapObject ver="1" name="NPC_WorldMuskular_05" id="5"/>
+			<MapObject ver="1" name="WorldMuskular_05" id="5"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="90.000000">
-			<MapObject ver="1" name="NPC_WorldSkolar_04" id="4"/>
+			<MapObject ver="1" name="WorldSkolar_04" id="4"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="270.000000">
-			<MapObject ver="1" name="NPC_WorldMamar_03" id="3"/>
+			<MapObject ver="1" name="WorldMamar_03" id="3"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="270.000000">
-			<MapObject ver="1" name="NPC_WorldEldstar_02" id="2"/>
+			<MapObject ver="1" name="WorldEldstar_02" id="2"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="270.000000">
-			<MapObject ver="1" name="NPC_Twink_01" id="1"/>
+			<MapObject ver="1" name="Twink_01" id="1"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="270.000000">
-			<MapObject ver="1" name="NPC_80242850" id="0"/>
+			<MapObject ver="1" name="80242850" id="0"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-70,0,-100" yaw="270.000000">
-			<MapObject ver="1" name="NPC_80243EF8" id="FFFFFFFF"/>
+			<MapObject ver="1" name="80243EF8" id="FFFFFFFF"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>

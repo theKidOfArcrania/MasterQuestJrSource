@@ -285,8 +285,8 @@
 	</ZoneTree>
 	<MarkerTree>
 		<Node name="Root" id="D">
-			<Node name="NPC_WorldClubba_00" id="FFFFFFFF"/>
-			<Node name="NPC_WorldClubba_01" id="0"/>
+			<Node name="WorldClubba_00" id="FFFFFFFF"/>
+			<Node name="WorldClubba_01" id="0"/>
 			<Node name="Entry0" id="1"/>
 			<Node name="Entry1" id="2"/>
 			<Node name="Entry2" id="3"/>
@@ -7067,12 +7067,12 @@
 			<MapObject ver="1" name="Entry0" id="1"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_WorldClubba_01" id="0"/>
+			<MapObject ver="1" name="WorldClubba_01" id="0"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="575,480,-50" yaw="270.000000">
-			<MapObject ver="1" name="NPC_WorldClubba_00" id="FFFFFFFF"/>
+			<MapObject ver="1" name="WorldClubba_00" id="FFFFFFFF"/>
 			<Movement type="Wander" data="23F,1E0,FFFFFFCE,1E,0,FFFF8001,0,23F,1E0,FFFFFFCE,C8,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>

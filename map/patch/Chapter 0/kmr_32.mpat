@@ -80,11 +80,11 @@ pants off Goombaria, though.[BR]
 /%
 	 
 #new:NpcGroupList $NpcGroups_KMR_33
-00000001 $NPC_Ember  00040000
-00000002 $NPC_Ember2 00040000
+00000001 $Ember  00040000
+00000002 $Ember2 00040000
 00000000 00000000 00000000
 
-#new:NpcGroup $NPC_Ember
+#new:NpcGroup $Ember
 00000001 $NpcSettings_Chomp {Vec3f:ember1}
 00000D00 00000000 00000000 00000000 0000005A 
 {Items:5:ShootingStar:A}
@@ -96,7 +96,7 @@ pants off Goombaria, though.[BR]
 00460C04 00460C01 00460C01 00460C01 00460C01 00460C01 00460C01 00460C01 
 00000002 00000000 00000000 00000000 % no tattle string
 
-#new:NpcGroup $NPC_Ember2
+#new:NpcGroup $Ember2
 00000002 $NpcSettings_Chomp {Vec3f:ember2}
 00000D00 00000000 00000000 00000000 0000005A 
 {Items:5:ShootingStar:A}

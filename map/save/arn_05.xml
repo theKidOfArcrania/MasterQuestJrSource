@@ -116,16 +116,16 @@
 	</ZoneTree>
 	<MarkerTree>
 		<Node name="Root" id="D">
-			<Node name="NPC_WorldTubba_05" id="FFFFFFFF"/>
-			<Node name="NPC_Boo_00" id="0"/>
-			<Node name="NPC_Boo_01" id="1"/>
-			<Node name="NPC_Boo_02" id="2"/>
-			<Node name="NPC_Boo_03" id="3"/>
-			<Node name="NPC_Boo_04" id="4"/>
-			<Node name="NPC_Boo_06" id="5"/>
-			<Node name="NPC_Boo_07" id="6"/>
-			<Node name="NPC_Boo_08" id="7"/>
-			<Node name="NPC_Boo_09" id="8"/>
+			<Node name="WorldTubba_05" id="FFFFFFFF"/>
+			<Node name="Boo_00" id="0"/>
+			<Node name="Boo_01" id="1"/>
+			<Node name="Boo_02" id="2"/>
+			<Node name="Boo_03" id="3"/>
+			<Node name="Boo_04" id="4"/>
+			<Node name="Boo_06" id="5"/>
+			<Node name="Boo_07" id="6"/>
+			<Node name="Boo_08" id="7"/>
+			<Node name="Boo_09" id="8"/>
 			<Node name="Entry0" id="9"/>
 			<Node name="Entry1" id="A"/>
 			<Node name="Entity80245000" id="B"/>
@@ -4960,52 +4960,52 @@
 			<MapObject ver="1" name="Entry0" id="9"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="525,286,178" yaw="90.000000">
-			<MapObject ver="1" name="NPC_Boo_09" id="8"/>
+			<MapObject ver="1" name="Boo_09" id="8"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="379,300,192" yaw="90.000000">
-			<MapObject ver="1" name="NPC_Boo_08" id="7"/>
+			<MapObject ver="1" name="Boo_08" id="7"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="200,275,182" yaw="90.000000">
-			<MapObject ver="1" name="NPC_Boo_07" id="6"/>
+			<MapObject ver="1" name="Boo_07" id="6"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="36,277,140" yaw="90.000000">
-			<MapObject ver="1" name="NPC_Boo_06" id="5"/>
+			<MapObject ver="1" name="Boo_06" id="5"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="350,185,197" yaw="270.000000">
-			<MapObject ver="1" name="NPC_Boo_04" id="4"/>
+			<MapObject ver="1" name="Boo_04" id="4"/>
 			<Movement type="Patrol" data="2,15E,A,C5,14A,A,C5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,FFFF8001,15E,B9,C5,32,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="503,206,210" yaw="270.000000">
-			<MapObject ver="1" name="NPC_Boo_03" id="3"/>
+			<MapObject ver="1" name="Boo_03" id="3"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="390,190,255" yaw="270.000000">
-			<MapObject ver="1" name="NPC_Boo_02" id="2"/>
+			<MapObject ver="1" name="Boo_02" id="2"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="200,210,250" yaw="270.000000">
-			<MapObject ver="1" name="NPC_Boo_01" id="1"/>
+			<MapObject ver="1" name="Boo_01" id="1"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="55,210,160" yaw="270.000000">
-			<MapObject ver="1" name="NPC_Boo_00" id="0"/>
+			<MapObject ver="1" name="Boo_00" id="0"/>
 			<Movement type="Patrol" data="2,37,A,A0,4B,A,A0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,FFFF8001,37,C3,A0,32,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="270.000000">
-			<MapObject ver="1" name="NPC_WorldTubba_05" id="FFFFFFFF"/>
+			<MapObject ver="1" name="WorldTubba_05" id="FFFFFFFF"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>

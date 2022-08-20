@@ -131,11 +131,11 @@
 	</ZoneTree>
 	<MarkerTree>
 		<Node name="Root" id="15">
-			<Node name="NPC_Cleft_00" id="FFFFFFFF"/>
-			<Node name="NPC_Cleft_01" id="0"/>
-			<Node name="NPC_Cleft_02" id="1"/>
-			<Node name="NPC_MontyMole_03" id="2"/>
-			<Node name="NPC_MontyMole_04" id="3"/>
+			<Node name="Cleft_00" id="FFFFFFFF"/>
+			<Node name="Cleft_01" id="0"/>
+			<Node name="Cleft_02" id="1"/>
+			<Node name="MontyMole_03" id="2"/>
+			<Node name="MontyMole_04" id="3"/>
 			<Node name="Entry0" id="4"/>
 			<Node name="Entity80241858" id="5"/>
 			<Node name="Entity8024188C" id="6"/>
@@ -5961,27 +5961,27 @@
 			<MapObject ver="1" name="Entry0" id="4"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-1000,23,60" yaw="0.000000">
-			<MapObject ver="1" name="NPC_MontyMole_04" id="3"/>
+			<MapObject ver="1" name="MontyMole_04" id="3"/>
 			<Movement type="Wander" data="0,0,0,0,0,FFFF8001,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-1000,23,60" yaw="0.000000">
-			<MapObject ver="1" name="NPC_MontyMole_03" id="2"/>
+			<MapObject ver="1" name="MontyMole_03" id="2"/>
 			<Movement type="Wander" data="FFFFFC18,17,3C,28,0,FFFF8001,0,FFFFFC18,17,3C,FA,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-1300,408,-125" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Cleft_02" id="1"/>
+			<MapObject ver="1" name="Cleft_02" id="1"/>
 			<Movement type="Wander" data="FFFFFAEC,198,FFFFFF83,1E,0,FFFF8001,0,FFFFFAF6,198,FFFFFF83,8C,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-1686,-60,180" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Cleft_01" id="0"/>
+			<MapObject ver="1" name="Cleft_01" id="0"/>
 			<Movement type="Wander" data="FFFFF96A,FFFFFFC4,B4,1E,0,FFFF8001,0,FFFFF96A,FFFFFFC4,B4,FA,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-525,-75,60" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Cleft_00" id="FFFFFFFF"/>
+			<MapObject ver="1" name="Cleft_00" id="FFFFFFFF"/>
 			<Movement type="Wander" data="FFFFFDF3,FFFFFFB5,3C,1E,0,FFFF8001,0,FFFFFDF3,FFFFFFB5,3C,FA,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>

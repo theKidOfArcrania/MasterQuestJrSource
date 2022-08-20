@@ -152,7 +152,7 @@
 	</ZoneTree>
 	<MarkerTree>
 		<Node name="Root" id="6">
-			<Node name="NPC_Toad_00" id="FFFFFFFF"/>
+			<Node name="Toad_00" id="FFFFFFFF"/>
 			<Node name="Entry0" id="0"/>
 			<Node name="Entry1" id="1"/>
 			<Node name="Entry2" id="2"/>
@@ -4406,7 +4406,7 @@
 			<MapObject ver="1" name="Entry0" id="0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="25,0,130" yaw="270.000000">
-			<MapObject ver="1" name="NPC_Toad_00" id="FFFFFFFF"/>
+			<MapObject ver="1" name="Toad_00" id="FFFFFFFF"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>

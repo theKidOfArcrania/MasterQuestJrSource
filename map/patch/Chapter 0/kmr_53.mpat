@@ -125,14 +125,14 @@ End
 	
 	#new:NpcGroupList $NpcGroups_KMR_33
 {
-00000001 $NPC_Pokey1 001A0000
-00000001 $NPC_Pokey2 001B0000
-00000001 $NPC_Pokey3 001C0000
-00000001 $NPC_Pokey4 001A0000
-00000001 $NPC_Pokey5 001B0000
-00000001 $NPC_Pokey6 001C0000
-00000001 $NPC_Pokey7 001A0000
-00000001 $NPC_Pokey8 001B0000
+00000001 $Pokey1 001A0000
+00000001 $Pokey2 001B0000
+00000001 $Pokey3 001C0000
+00000001 $Pokey4 001A0000
+00000001 $Pokey5 001B0000
+00000001 $Pokey6 001C0000
+00000001 $Pokey7 001A0000
+00000001 $Pokey8 001B0000
 00000000 00000000 00000000
 }
 	
@@ -154,7 +154,7 @@ End
 	End	
 }
 	
-#new:NpcGroup $NPC_Pokey1
+#new:NpcGroup $Pokey1
 {
 00000001 $NpcSettings_Chomp ~Vec3f:pokey1
 00002C00 00000000 00000000 00000000 0000005A 
@@ -168,7 +168,7 @@ End
 00000001 00000000 00000000 00000000 % no tattle string	
 }
 
-#new:NpcGroup $NPC_Pokey2
+#new:NpcGroup $Pokey2
 {
 00000002 $NpcSettings_Chomp ~Vec3f:pokey2
 00002C00 00000000 00000000 00000000 0000005A 
@@ -182,7 +182,7 @@ End
 00000001 00000000 00000000 00000000 % no tattle string	
 }
 
-#new:NpcGroup $NPC_Pokey3
+#new:NpcGroup $Pokey3
 {
 00000003 $NpcSettings_Chomp ~Vec3f:pokey3
 00002C00 00000000 00000000 00000000 0000005A 
@@ -196,7 +196,7 @@ End
 00000001 00000000 00000000 00000000 % no tattle string
 }
 	
-#new:NpcGroup $NPC_Pokey4
+#new:NpcGroup $Pokey4
 {
 00000004 $NpcSettings_Chomp ~Vec3f:pokey4
 00002C00 00000000 00000000 00000000 0000005A 
@@ -210,7 +210,7 @@ End
 00000001 00000000 00000000 00000000 % no tattle string	
 }
 
-#new:NpcGroup $NPC_Pokey5
+#new:NpcGroup $Pokey5
 {
 00000005 $NpcSettings_Chomp ~Vec3f:pokey5
 00002C00 00000000 00000000 00000000 0000005A 
@@ -224,7 +224,7 @@ End
 00000001 00000000 00000000 00000000 % no tattle string	
 }
 
-#new:NpcGroup $NPC_Pokey6
+#new:NpcGroup $Pokey6
 {
 00000006 $NpcSettings_Chomp ~Vec3f:pokey6
 00002C00 00000000 00000000 00000000 0000005A 
@@ -238,7 +238,7 @@ End
 00000001 00000000 00000000 00000000 % no tattle string	
 }
 
-#new:NpcGroup $NPC_Pokey7
+#new:NpcGroup $Pokey7
 {
 00000007 $NpcSettings_Chomp ~Vec3f:pokey7
 00002C00 00000000 00000000 00000000 0000005A 
@@ -252,7 +252,7 @@ End
 00000001 00000000 00000000 00000000 % no tattle string
 }
 	
-#new:NpcGroup $NPC_Pokey8
+#new:NpcGroup $Pokey8
 {
 00000008 $NpcSettings_Chomp ~Vec3f:pokey8
 00002C00 00000000 00000000 00000000 0000005A 

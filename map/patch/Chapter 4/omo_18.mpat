@@ -66,13 +66,13 @@ take this seriously at all.[BR]
 	 
 #new:NpcGroupList $NpcGroups_OMO_18
 {
-00000001 $NPC_YellowSHY 10030000
-00000001 $NPC_BlueSHY   10010000
-00000001 $NPC_GreenSHY  10050000
+00000001 $YellowSHY 10030000
+00000001 $BlueSHY   10010000
+00000001 $GreenSHY  10050000
 00000000 00000000 00000000
 }
 
-#new:NpcGroup $NPC_YellowSHY
+#new:NpcGroup $YellowSHY
 {
 00000001 $NpcSettings_SHY ~Vec3f:shyguys1
 00002C00 00000000 00000000 00000000 0000005A 
@@ -86,7 +86,7 @@ take this seriously at all.[BR]
 00000000 00000000 00000000 00000000 % no tattle string
 }
 
-#new:NpcGroup $NPC_BlueSHY
+#new:NpcGroup $BlueSHY
 {
 00000002 $NpcSettings_SHYFAST ~Vec3f:shyguys2
 00002C00 00000000 00000000 00000000 0000005A 
@@ -100,7 +100,7 @@ take this seriously at all.[BR]
 00000000 00000000 00000000 00000000 % no tattle string
 }
 
-#new:NpcGroup $NPC_GreenSHY
+#new:NpcGroup $GreenSHY
 {
 00000003 $NpcSettings_SHY ~Vec3f:shyguys3
 00002C00 00000000 00000000 00000000 0000005A 

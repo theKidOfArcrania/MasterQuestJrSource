@@ -172,20 +172,20 @@
 	</ZoneTree>
 	<MarkerTree>
 		<Node name="Root" id="10">
-			<Node name="NPC_80243CD8" id="FFFFFFFF"/>
-			<Node name="NPC_80243E12" id="0"/>
-			<Node name="NPC_80243F4C" id="1"/>
-			<Node name="NPC_80244086" id="2"/>
-			<Node name="NPC_80244498" id="3"/>
-			<Node name="NPC_802445D2" id="4"/>
-			<Node name="NPC_8024470C" id="5"/>
-			<Node name="NPC_80244846" id="6"/>
-			<Node name="NPC_80244C58" id="7"/>
-			<Node name="NPC_80244D92" id="8"/>
-			<Node name="NPC_80244ECC" id="9"/>
-			<Node name="NPC_80245006" id="A"/>
-			<Node name="NPC_Bubble_100" id="B"/>
-			<Node name="NPC_Bubble_101" id="C"/>
+			<Node name="80243CD8" id="FFFFFFFF"/>
+			<Node name="80243E12" id="0"/>
+			<Node name="80243F4C" id="1"/>
+			<Node name="80244086" id="2"/>
+			<Node name="80244498" id="3"/>
+			<Node name="802445D2" id="4"/>
+			<Node name="8024470C" id="5"/>
+			<Node name="80244846" id="6"/>
+			<Node name="80244C58" id="7"/>
+			<Node name="80244D92" id="8"/>
+			<Node name="80244ECC" id="9"/>
+			<Node name="80245006" id="A"/>
+			<Node name="Bubble_100" id="B"/>
+			<Node name="Bubble_101" id="C"/>
 			<Node name="Entry0" id="D"/>
 			<Node name="Entry1" id="E"/>
 			<Node name="newnpc" id="F"/>
@@ -5084,72 +5084,72 @@
 			<MapObject ver="1" name="Entry0" id="D"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="250,50,10" yaw="270.000000">
-			<MapObject ver="1" name="NPC_Bubble_101" id="C"/>
+			<MapObject ver="1" name="Bubble_101" id="C"/>
 			<Movement type="Wander" data="FA,32,A,1E,0,FFFF8001,0,FA,32,A,A5,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-150,50,10" yaw="90.000000">
-			<MapObject ver="1" name="NPC_Bubble_100" id="B"/>
+			<MapObject ver="1" name="Bubble_100" id="B"/>
 			<Movement type="Wander" data="FFFFFF6A,32,A,1E,0,FFFF8001,0,FFFFFF6A,32,A,15E,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,0,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_80245006" id="A"/>
+			<MapObject ver="1" name="80245006" id="A"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,0,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_80244ECC" id="9"/>
+			<MapObject ver="1" name="80244ECC" id="9"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,0,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_80244D92" id="8"/>
+			<MapObject ver="1" name="80244D92" id="8"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,0,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_80244C58" id="7"/>
+			<MapObject ver="1" name="80244C58" id="7"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,0,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_80244846" id="6"/>
+			<MapObject ver="1" name="80244846" id="6"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,0,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_8024470C" id="5"/>
+			<MapObject ver="1" name="8024470C" id="5"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,0,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_802445D2" id="4"/>
+			<MapObject ver="1" name="802445D2" id="4"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,0,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_80244498" id="3"/>
+			<MapObject ver="1" name="80244498" id="3"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,0,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_80244086" id="2"/>
+			<MapObject ver="1" name="80244086" id="2"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,0,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_80243F4C" id="1"/>
+			<MapObject ver="1" name="80243F4C" id="1"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,0,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_80243E12" id="0"/>
+			<MapObject ver="1" name="80243E12" id="0"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,0,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_80243CD8" id="FFFFFFFF"/>
+			<MapObject ver="1" name="80243CD8" id="FFFFFFFF"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>

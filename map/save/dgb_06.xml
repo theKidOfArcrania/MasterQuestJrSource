@@ -87,8 +87,8 @@
 			<Node name="Entry1" id="0"/>
 			<Node name="Entity802407B8" id="1"/>
 			<Node name="Entity80240800" id="2"/>
-			<Node name="NPC_Boo_00" id="3"/>
-			<Node name="NPC_Boo_00" id="4"/>
+			<Node name="Boo_00" id="3"/>
+			<Node name="Boo_00" id="4"/>
 			<Node name="RedClubba" id="5"/>
 		</Node>
 	</MarkerTree>
@@ -2904,12 +2904,12 @@
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-300,10,150" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Boo_00" id="4"/>
+			<MapObject ver="1" name="Boo_00" id="4"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-300,10,150" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Boo_00" id="3"/>
+			<MapObject ver="1" name="Boo_00" id="3"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>

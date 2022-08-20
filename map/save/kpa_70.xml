@@ -299,8 +299,8 @@
 	</ZoneTree>
 	<MarkerTree>
 		<Node name="Root" id="5">
-			<Node name="NPC_WorldKoopatrol_00" id="FFFFFFFF"/>
-			<Node name="NPC_WorldKoopatrol_01" id="0"/>
+			<Node name="WorldKoopatrol_00" id="FFFFFFFF"/>
+			<Node name="WorldKoopatrol_01" id="0"/>
 			<Node name="Entry0" id="1"/>
 			<Node name="Entry1" id="2"/>
 			<Node name="newkoop1" id="3"/>
@@ -11225,12 +11225,12 @@
 			<MapObject ver="1" name="Entry0" id="1"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="815,10,100" yaw="270.000000">
-			<MapObject ver="1" name="NPC_WorldKoopatrol_01" id="0"/>
+			<MapObject ver="1" name="WorldKoopatrol_01" id="0"/>
 			<Movement type="Wander" data="32F,A,64,32,0,FFFF8001,0,32F,A,64,C8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="435,10,100" yaw="270.000000">
-			<MapObject ver="1" name="NPC_WorldKoopatrol_00" id="FFFFFFFF"/>
+			<MapObject ver="1" name="WorldKoopatrol_00" id="FFFFFFFF"/>
 			<Movement type="Wander" data="1B3,A,64,32,0,FFFF8001,0,1B3,A,64,C8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>

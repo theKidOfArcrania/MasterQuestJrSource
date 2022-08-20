@@ -286,16 +286,16 @@
 			<Node name="Item80242E74" id="13"/>
 			<Node name="Item80242E98" id="14"/>
 			<Node name="Item80242EBC" id="15"/>
-			<Node name="NPC_Goomba_00" id="16"/>
-			<Node name="NPC_WorldClubba_01" id="17"/>
-			<Node name="NPC_ShyGuy_03" id="18"/>
-			<Node name="NPC_SkyGuy_04" id="19"/>
-			<Node name="NPC_WorldKammy_02" id="1A"/>
-			<Node name="NPC_WorldKammy_02" id="1B"/>
-			<Node name="NPC_Goomba_00" id="1C"/>
-			<Node name="NPC_WorldClubba_01" id="1D"/>
-			<Node name="NPC_ShyGuy_03" id="1E"/>
-			<Node name="NPC_SkyGuy_04" id="1F"/>
+			<Node name="Goomba_00" id="16"/>
+			<Node name="WorldClubba_01" id="17"/>
+			<Node name="ShyGuy_03" id="18"/>
+			<Node name="SkyGuy_04" id="19"/>
+			<Node name="WorldKammy_02" id="1A"/>
+			<Node name="WorldKammy_02" id="1B"/>
+			<Node name="Goomba_00" id="1C"/>
+			<Node name="WorldClubba_01" id="1D"/>
+			<Node name="ShyGuy_03" id="1E"/>
+			<Node name="SkyGuy_04" id="1F"/>
 		</Node>
 	</MarkerTree>
 	<LightSets>
@@ -7076,52 +7076,52 @@
 			<MapObject ver="1" name="Root" id="20"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-170,60,30" yaw="0.000000">
-			<MapObject ver="1" name="NPC_SkyGuy_04" id="1F"/>
+			<MapObject ver="1" name="SkyGuy_04" id="1F"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-770,0,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_ShyGuy_03" id="1E"/>
+			<MapObject ver="1" name="ShyGuy_03" id="1E"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="1100,0,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_WorldClubba_01" id="1D"/>
+			<MapObject ver="1" name="WorldClubba_01" id="1D"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="1100,0,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Goomba_00" id="1C"/>
+			<MapObject ver="1" name="Goomba_00" id="1C"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_WorldKammy_02" id="1B"/>
+			<MapObject ver="1" name="WorldKammy_02" id="1B"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_WorldKammy_02" id="1A"/>
+			<MapObject ver="1" name="WorldKammy_02" id="1A"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-170,60,30" yaw="0.000000">
-			<MapObject ver="1" name="NPC_SkyGuy_04" id="19"/>
+			<MapObject ver="1" name="SkyGuy_04" id="19"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-770,0,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_ShyGuy_03" id="18"/>
+			<MapObject ver="1" name="ShyGuy_03" id="18"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="1100,0,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_WorldClubba_01" id="17"/>
+			<MapObject ver="1" name="WorldClubba_01" id="17"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="1100,0,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Goomba_00" id="16"/>
+			<MapObject ver="1" name="Goomba_00" id="16"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>

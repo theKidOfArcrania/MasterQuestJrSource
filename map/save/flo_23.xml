@@ -133,9 +133,9 @@
 	</ZoneTree>
 	<MarkerTree>
 		<Node name="Root" id="C">
-			<Node name="NPC_Spiny_00" id="FFFFFFFF"/>
-			<Node name="NPC_Spiny_01" id="0"/>
-			<Node name="NPC_GateFlower_02" id="1"/>
+			<Node name="Spiny_00" id="FFFFFFFF"/>
+			<Node name="Spiny_01" id="0"/>
+			<Node name="GateFlower_02" id="1"/>
 			<Node name="Entry0" id="2"/>
 			<Node name="Entry1" id="3"/>
 			<Node name="Item8024171C" id="4"/>
@@ -3898,17 +3898,17 @@
 			<MapObject ver="1" name="Entry0" id="2"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="385,0,-35" yaw="90.000000">
-			<MapObject ver="1" name="NPC_GateFlower_02" id="1"/>
+			<MapObject ver="1" name="GateFlower_02" id="1"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-320,0,0" yaw="270.000000">
-			<MapObject ver="1" name="NPC_Spiny_01" id="0"/>
+			<MapObject ver="1" name="Spiny_01" id="0"/>
 			<Movement type="Wander" data="FFFFFEC0,0,0,1E,0,FFFF8001,0,FFFFFEC0,0,0,C8,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="80,0,0" yaw="90.000000">
-			<MapObject ver="1" name="NPC_Spiny_00" id="FFFFFFFF"/>
+			<MapObject ver="1" name="Spiny_00" id="FFFFFFFF"/>
 			<Movement type="Wander" data="50,0,0,1E,0,FFFF8001,0,50,0,0,C8,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>

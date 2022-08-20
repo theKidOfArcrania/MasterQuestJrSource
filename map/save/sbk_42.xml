@@ -96,8 +96,8 @@
 			<Node name="Entry1" id="0"/>
 			<Node name="Entry2" id="1"/>
 			<Node name="Entry3" id="2"/>
-			<Node name="NPC_Bandit_00" id="3"/>
-			<Node name="NPC_Bandit_01" id="4"/>
+			<Node name="Bandit_00" id="3"/>
+			<Node name="Bandit_01" id="4"/>
 		</Node>
 	</MarkerTree>
 	<LightSets>
@@ -2443,12 +2443,12 @@
 			<MapObject ver="1" name="Root" id="5"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="60,0,30" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Bandit_01" id="4"/>
+			<MapObject ver="1" name="Bandit_01" id="4"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-40,0,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Bandit_00" id="3"/>
+			<MapObject ver="1" name="Bandit_00" id="3"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>

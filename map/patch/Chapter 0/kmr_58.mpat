@@ -356,7 +356,7 @@ across.[BR]
 00000002 00000000 00000000 00000000
 }
 
-#import NPC_EnemyBooData.mpat
+#import EnemyBooData.mpat
 	
 #new:Script $Script_MakeExits
 {

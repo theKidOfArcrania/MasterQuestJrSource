@@ -282,29 +282,29 @@
 	</ZoneTree>
 	<MarkerTree>
 		<Node name="Root" id="20">
-			<Node name="NPC_TrainStationToad_00" id="FFFFFFFF"/>
-			<Node name="NPC_TrainStationToad_01" id="0"/>
-			<Node name="NPC_Toad_02" id="1"/>
-			<Node name="NPC_ThreeSisters_03" id="2"/>
-			<Node name="NPC_Toad_04" id="3"/>
-			<Node name="NPC_ToadKid_05" id="4"/>
-			<Node name="NPC_ToadKid_06" id="5"/>
-			<Node name="NPC_Toad_10" id="6"/>
-			<Node name="NPC_ThreeSisters_07" id="7"/>
-			<Node name="NPC_ThreeSisters_08" id="8"/>
-			<Node name="NPC_ThreeSisters_09" id="9"/>
-			<Node name="NPC_ShyGuy_11" id="A"/>
-			<Node name="NPC_Toad_12" id="B"/>
-			<Node name="NPC_Toad_13" id="C"/>
-			<Node name="NPC_Toad_14" id="D"/>
-			<Node name="NPC_Toad_15" id="E"/>
-			<Node name="NPC_Toad_16" id="F"/>
-			<Node name="NPC_Toad_17" id="10"/>
-			<Node name="NPC_Toad_18" id="11"/>
-			<Node name="NPC_Toad_19" id="12"/>
-			<Node name="NPC_Toad_20" id="13"/>
-			<Node name="NPC_Toad_21" id="14"/>
-			<Node name="NPC_Toad_22" id="15"/>
+			<Node name="TrainStationToad_00" id="FFFFFFFF"/>
+			<Node name="TrainStationToad_01" id="0"/>
+			<Node name="Toad_02" id="1"/>
+			<Node name="ThreeSisters_03" id="2"/>
+			<Node name="Toad_04" id="3"/>
+			<Node name="ToadKid_05" id="4"/>
+			<Node name="ToadKid_06" id="5"/>
+			<Node name="Toad_10" id="6"/>
+			<Node name="ThreeSisters_07" id="7"/>
+			<Node name="ThreeSisters_08" id="8"/>
+			<Node name="ThreeSisters_09" id="9"/>
+			<Node name="ShyGuy_11" id="A"/>
+			<Node name="Toad_12" id="B"/>
+			<Node name="Toad_13" id="C"/>
+			<Node name="Toad_14" id="D"/>
+			<Node name="Toad_15" id="E"/>
+			<Node name="Toad_16" id="F"/>
+			<Node name="Toad_17" id="10"/>
+			<Node name="Toad_18" id="11"/>
+			<Node name="Toad_19" id="12"/>
+			<Node name="Toad_20" id="13"/>
+			<Node name="Toad_21" id="14"/>
+			<Node name="Toad_22" id="15"/>
 			<Node name="Entry0" id="16"/>
 			<Node name="Entry1" id="17"/>
 			<Node name="Entry2" id="18"/>
@@ -9182,117 +9182,117 @@
 			<MapObject ver="1" name="Entry0" id="16"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Toad_22" id="15"/>
+			<MapObject ver="1" name="Toad_22" id="15"/>
 			<Movement type="Wander" data="1AE,14,FFFFFF4C,96,46,FFFF8001,1,1AE,14,FFFFFF4C,96,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Toad_21" id="14"/>
+			<MapObject ver="1" name="Toad_21" id="14"/>
 			<Movement type="Wander" data="1AE,14,FFFFFF4C,96,46,FFFF8001,1,1AE,14,FFFFFF4C,96,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Toad_20" id="13"/>
+			<MapObject ver="1" name="Toad_20" id="13"/>
 			<Movement type="Wander" data="1AE,14,FFFFFF4C,96,46,FFFF8001,1,1AE,14,FFFFFF4C,96,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Toad_19" id="12"/>
+			<MapObject ver="1" name="Toad_19" id="12"/>
 			<Movement type="Wander" data="1AE,14,FFFFFF4C,96,46,FFFF8001,1,1AE,14,FFFFFF4C,96,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Toad_18" id="11"/>
+			<MapObject ver="1" name="Toad_18" id="11"/>
 			<Movement type="Wander" data="1AE,14,FFFFFF4C,96,46,FFFF8001,1,1AE,14,FFFFFF4C,96,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Toad_17" id="10"/>
+			<MapObject ver="1" name="Toad_17" id="10"/>
 			<Movement type="Wander" data="1AE,14,FFFFFF4C,96,46,FFFF8001,1,1AE,14,FFFFFF4C,96,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Toad_16" id="F"/>
+			<MapObject ver="1" name="Toad_16" id="F"/>
 			<Movement type="Wander" data="1AE,14,FFFFFF4C,96,46,FFFF8001,1,1AE,14,FFFFFF4C,96,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Toad_15" id="E"/>
+			<MapObject ver="1" name="Toad_15" id="E"/>
 			<Movement type="Wander" data="1AE,14,FFFFFF4C,96,46,FFFF8001,1,1AE,14,FFFFFF4C,96,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Toad_14" id="D"/>
+			<MapObject ver="1" name="Toad_14" id="D"/>
 			<Movement type="Wander" data="1AE,14,FFFFFF4C,96,46,FFFF8001,1,1AE,14,FFFFFF4C,96,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Toad_13" id="C"/>
+			<MapObject ver="1" name="Toad_13" id="C"/>
 			<Movement type="Wander" data="1AE,14,FFFFFF4C,96,46,FFFF8001,1,1AE,14,FFFFFF4C,96,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Toad_12" id="B"/>
+			<MapObject ver="1" name="Toad_12" id="B"/>
 			<Movement type="Wander" data="1AE,14,FFFFFF4C,96,46,FFFF8001,1,1AE,14,FFFFFF4C,96,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="270.000000">
-			<MapObject ver="1" name="NPC_ShyGuy_11" id="A"/>
+			<MapObject ver="1" name="ShyGuy_11" id="A"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-70,0,220" yaw="180.000000">
-			<MapObject ver="1" name="NPC_ThreeSisters_09" id="9"/>
+			<MapObject ver="1" name="ThreeSisters_09" id="9"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-100,0,220" yaw="90.000000">
-			<MapObject ver="1" name="NPC_ThreeSisters_08" id="8"/>
+			<MapObject ver="1" name="ThreeSisters_08" id="8"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-130,0,220" yaw="0.000000">
-			<MapObject ver="1" name="NPC_ThreeSisters_07" id="7"/>
+			<MapObject ver="1" name="ThreeSisters_07" id="7"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="220,20,-160" yaw="90.000000">
-			<MapObject ver="1" name="NPC_Toad_10" id="6"/>
+			<MapObject ver="1" name="Toad_10" id="6"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="320,20,410" yaw="270.000000">
-			<MapObject ver="1" name="NPC_ToadKid_06" id="5"/>
+			<MapObject ver="1" name="ToadKid_06" id="5"/>
 			<Movement type="Wander" data="140,14,19A,28,14,FFFF8001,1,140,14,19A,A,A,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="260,20,410" yaw="90.000000">
-			<MapObject ver="1" name="NPC_ToadKid_05" id="4"/>
+			<MapObject ver="1" name="ToadKid_05" id="4"/>
 			<Movement type="Wander" data="104,14,19A,28,14,FFFF8001,1,104,14,19A,A,A,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-255,20,400" yaw="90.000000">
-			<MapObject ver="1" name="NPC_Toad_04" id="3"/>
+			<MapObject ver="1" name="Toad_04" id="3"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="85,0,235" yaw="270.000000">
-			<MapObject ver="1" name="NPC_ThreeSisters_03" id="2"/>
+			<MapObject ver="1" name="ThreeSisters_03" id="2"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-232,10,74" yaw="75.000000">
-			<MapObject ver="1" name="NPC_Toad_02" id="1"/>
+			<MapObject ver="1" name="Toad_02" id="1"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-424,74,2" yaw="90.000000">
-			<MapObject ver="1" name="NPC_TrainStationToad_01" id="0"/>
+			<MapObject ver="1" name="TrainStationToad_01" id="0"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-370,20,90" yaw="90.000000">
-			<MapObject ver="1" name="NPC_TrainStationToad_00" id="FFFFFFFF"/>
+			<MapObject ver="1" name="TrainStationToad_00" id="FFFFFFFF"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>

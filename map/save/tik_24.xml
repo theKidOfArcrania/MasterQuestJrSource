@@ -11,8 +11,8 @@
 	</ZoneTree>
 	<MarkerTree>
 		<Node name="Root" id="D">
-			<Node name="NPC_KoopaTroopa_00" id="FFFFFFFF"/>
-			<Node name="NPC_KoopaTroopa_01" id="0"/>
+			<Node name="KoopaTroopa_00" id="FFFFFFFF"/>
+			<Node name="KoopaTroopa_01" id="0"/>
 			<Node name="Entry0" id="1"/>
 			<Node name="Entry1" id="2"/>
 			<Node name="Entity80241DD8" id="3"/>
@@ -23,8 +23,8 @@
 			<Node name="Entity80241F18" id="8"/>
 			<Node name="Entity80241F3C" id="9"/>
 			<Node name="Entity80241F60" id="A"/>
-			<Node name="NPC_Boo1" id="B"/>
-			<Node name="NPC_Boo2" id="C"/>
+			<Node name="Boo1" id="B"/>
+			<Node name="Boo2" id="C"/>
 		</Node>
 	</MarkerTree>
 	<LightSets>
@@ -56,12 +56,12 @@
 			<MapObject ver="1" name="Root" id="D"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="170,20,-20" yaw="90.000000">
-			<MapObject ver="1" name="NPC_Boo2" id="C"/>
+			<MapObject ver="1" name="Boo2" id="C"/>
 			<Movement type="Wander" data="A0,FFFFFFF6,FFFFFFEC,50,0,FFFF8001,0,32,FFFFFFF6,A,12C,8C,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-60,20,-20" yaw="90.000000">
-			<MapObject ver="1" name="NPC_Boo1" id="B"/>
+			<MapObject ver="1" name="Boo1" id="B"/>
 			<Movement type="Wander" data="FFFFFFC4,FFFFFFF6,FFFFFFEC,50,0,FFFF8001,0,32,FFFFFFF6,A,12C,8C,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
@@ -96,12 +96,12 @@
 			<MapObject ver="1" name="Entry0" id="1"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="175,-10,-50" yaw="270.000000">
-			<MapObject ver="1" name="NPC_KoopaTroopa_01" id="0"/>
+			<MapObject ver="1" name="KoopaTroopa_01" id="0"/>
 			<Movement type="Wander" data="AF,FFFFFFF6,FFFFFFCE,1E,0,FFFF8001,0,AF,FFFFFFF6,FFFFFFCE,FA,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-75,-10,50" yaw="90.000000">
-			<MapObject ver="1" name="NPC_KoopaTroopa_00" id="FFFFFFFF"/>
+			<MapObject ver="1" name="KoopaTroopa_00" id="FFFFFFFF"/>
 			<Movement type="Wander" data="FFFFFFB5,FFFFFFF6,32,1E,0,FFFF8001,0,FFFFFFB5,FFFFFFF6,32,FA,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>

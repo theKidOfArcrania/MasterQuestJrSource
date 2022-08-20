@@ -63,8 +63,8 @@
 			<Node name="Entity80242710" id="1"/>
 			<Node name="Entity80242758" id="2"/>
 			<Node name="Entity802427A0" id="3"/>
-			<Node name="NPC_Boo1" id="4"/>
-			<Node name="NPC_Boo2" id="5"/>
+			<Node name="Boo1" id="4"/>
+			<Node name="Boo2" id="5"/>
 		</Node>
 	</MarkerTree>
 	<LightSets>
@@ -1940,12 +1940,12 @@
 			<MapObject ver="1" name="Root" id="6"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="70,10,5" yaw="90.000000">
-			<MapObject ver="1" name="NPC_Boo2" id="5"/>
+			<MapObject ver="1" name="Boo2" id="5"/>
 			<Movement type="Wander" data="41,FFFFFFF6,FFFFFFFB,4A,0,FFFF8001,0,14,FFFFFFF6,FFFFFFEC,96,6E,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-20,10,-40" yaw="90.000000">
-			<MapObject ver="1" name="NPC_Boo1" id="4"/>
+			<MapObject ver="1" name="Boo1" id="4"/>
 			<Movement type="Wander" data="FFFFFFEC,FFFFFFF6,FFFFFFD8,4A,0,FFFF8001,0,14,FFFFFFF6,FFFFFFEC,96,6E,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>

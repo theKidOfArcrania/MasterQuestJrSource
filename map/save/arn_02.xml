@@ -104,12 +104,12 @@
 			<Node name="Entity80241318" id="3"/>
 			<Node name="Entity80241350" id="4"/>
 			<Node name="Entity80241388" id="5"/>
-			<Node name="NPC_Cleft_00" id="6"/>
-			<Node name="NPC_Cleft_01" id="7"/>
-			<Node name="NPC_Goomba_02" id="8"/>
-			<Node name="NPC_Cleft_00" id="9"/>
-			<Node name="NPC_Cleft_01" id="A"/>
-			<Node name="NPC_Goomba_02" id="B"/>
+			<Node name="Cleft_00" id="6"/>
+			<Node name="Cleft_01" id="7"/>
+			<Node name="Goomba_02" id="8"/>
+			<Node name="Cleft_00" id="9"/>
+			<Node name="Cleft_01" id="A"/>
+			<Node name="Goomba_02" id="B"/>
 			<Node name="Rock1" id="C"/>
 			<Node name="Rock2" id="D"/>
 			<Node name="Rock3" id="E"/>
@@ -5525,32 +5525,32 @@
 			<MapObject ver="1" name="Rock1" id="C"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="333,215,85" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Goomba_02" id="B"/>
+			<MapObject ver="1" name="Goomba_02" id="B"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="641,268,202" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Cleft_01" id="A"/>
+			<MapObject ver="1" name="Cleft_01" id="A"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-196,130,104" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Cleft_00" id="9"/>
+			<MapObject ver="1" name="Cleft_00" id="9"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="333,215,85" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Goomba_02" id="8"/>
+			<MapObject ver="1" name="Goomba_02" id="8"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="641,268,202" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Cleft_01" id="7"/>
+			<MapObject ver="1" name="Cleft_01" id="7"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-196,130,104" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Cleft_00" id="6"/>
+			<MapObject ver="1" name="Cleft_00" id="6"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>

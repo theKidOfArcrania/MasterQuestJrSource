@@ -99,8 +99,8 @@
 			<Node name="Entry1" id="0"/>
 			<Node name="Entry2" id="1"/>
 			<Node name="Entry3" id="2"/>
-			<Node name="NPC_Bandit_00" id="3"/>
-			<Node name="NPC_Pokey_01" id="4"/>
+			<Node name="Bandit_00" id="3"/>
+			<Node name="Pokey_01" id="4"/>
 			<Node name="80241858" id="5"/>
 			<Node name="Tree80241824_Drop0" id="6"/>
 			<Node name="ShortcutBlock" id="7"/>
@@ -2001,12 +2001,12 @@
 			<MapObject ver="1" name="80241858" id="5"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="194,0,-168" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Pokey_01" id="4"/>
+			<MapObject ver="1" name="Pokey_01" id="4"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="112,0,101" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Bandit_00" id="3"/>
+			<MapObject ver="1" name="Bandit_00" id="3"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>

@@ -146,14 +146,14 @@
 			<Node name="Entry1" id="0"/>
 			<Node name="Entry2" id="1"/>
 			<Node name="Entry3" id="2"/>
-			<Node name="NPC_WorldClubba_10" id="3"/>
-			<Node name="NPC_WorldClubba_11" id="4"/>
-			<Node name="NPC_WorldClubba_30" id="5"/>
-			<Node name="NPC_WorldClubba_31" id="6"/>
-			<Node name="NPC_WorldClubba_10" id="7"/>
-			<Node name="NPC_WorldClubba_11" id="8"/>
-			<Node name="NPC_WorldClubba_30" id="9"/>
-			<Node name="NPC_WorldClubba_31" id="A"/>
+			<Node name="WorldClubba_10" id="3"/>
+			<Node name="WorldClubba_11" id="4"/>
+			<Node name="WorldClubba_30" id="5"/>
+			<Node name="WorldClubba_31" id="6"/>
+			<Node name="WorldClubba_10" id="7"/>
+			<Node name="WorldClubba_11" id="8"/>
+			<Node name="WorldClubba_30" id="9"/>
+			<Node name="WorldClubba_31" id="A"/>
 			<Node name="RedClubba" id="B"/>
 		</Node>
 	</MarkerTree>
@@ -3996,42 +3996,42 @@
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_WorldClubba_31" id="A"/>
+			<MapObject ver="1" name="WorldClubba_31" id="A"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="375,0,100" yaw="0.000000">
-			<MapObject ver="1" name="NPC_WorldClubba_30" id="9"/>
+			<MapObject ver="1" name="WorldClubba_30" id="9"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_WorldClubba_11" id="8"/>
+			<MapObject ver="1" name="WorldClubba_11" id="8"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-200,0,180" yaw="0.000000">
-			<MapObject ver="1" name="NPC_WorldClubba_10" id="7"/>
+			<MapObject ver="1" name="WorldClubba_10" id="7"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_WorldClubba_31" id="6"/>
+			<MapObject ver="1" name="WorldClubba_31" id="6"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="375,0,100" yaw="0.000000">
-			<MapObject ver="1" name="NPC_WorldClubba_30" id="5"/>
+			<MapObject ver="1" name="WorldClubba_30" id="5"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_WorldClubba_11" id="4"/>
+			<MapObject ver="1" name="WorldClubba_11" id="4"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-200,0,180" yaw="0.000000">
-			<MapObject ver="1" name="NPC_WorldClubba_10" id="3"/>
+			<MapObject ver="1" name="WorldClubba_10" id="3"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>

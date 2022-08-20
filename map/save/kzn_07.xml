@@ -130,8 +130,8 @@
 	</ZoneTree>
 	<MarkerTree>
 		<Node name="Root" id="5">
-			<Node name="NPC_Bubble_00" id="FFFFFFFF"/>
-			<Node name="NPC_Bubble_01" id="0"/>
+			<Node name="Bubble_00" id="FFFFFFFF"/>
+			<Node name="Bubble_01" id="0"/>
 			<Node name="Entry0" id="1"/>
 			<Node name="Entity80242A70" id="2"/>
 			<Node name="Entity80242AC4" id="3"/>
@@ -3753,12 +3753,12 @@
 			<MapObject ver="1" name="Entry0" id="1"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-300,130,50" yaw="90.000000">
-			<MapObject ver="1" name="NPC_Bubble_01" id="0"/>
+			<MapObject ver="1" name="Bubble_01" id="0"/>
 			<Movement type="Wander" data="FFFFFED4,82,32,1E,0,FFFF8001,0,FFFFFED4,82,32,12C,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-200,50,150" yaw="90.000000">
-			<MapObject ver="1" name="NPC_Bubble_00" id="FFFFFFFF"/>
+			<MapObject ver="1" name="Bubble_00" id="FFFFFFFF"/>
 			<Movement type="Wander" data="FFFFFF38,32,96,1E,0,FFFF8001,0,FFFFFF38,32,96,12C,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>

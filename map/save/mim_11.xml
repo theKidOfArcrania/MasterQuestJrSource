@@ -217,8 +217,8 @@
 	</ZoneTree>
 	<MarkerTree>
 		<Node name="Root" id="D">
-			<Node name="NPC_Bootler_00" id="FFFFFFFF"/>
-			<Node name="NPC_WorldSkolar_02" id="0"/>
+			<Node name="Bootler_00" id="FFFFFFFF"/>
+			<Node name="WorldSkolar_02" id="0"/>
 			<Node name="Entry0" id="1"/>
 			<Node name="Entry1" id="2"/>
 			<Node name="Entry2" id="3"/>
@@ -8279,12 +8279,12 @@
 			<MapObject ver="1" name="Entry0" id="1"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="68,60,-145" yaw="135.000000">
-			<MapObject ver="1" name="NPC_WorldSkolar_02" id="0"/>
+			<MapObject ver="1" name="WorldSkolar_02" id="0"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="68,60,-145" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Bootler_00" id="FFFFFFFF"/>
+			<MapObject ver="1" name="Bootler_00" id="FFFFFFFF"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>

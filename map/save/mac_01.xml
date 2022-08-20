@@ -411,52 +411,52 @@
 	</ZoneTree>
 	<MarkerTree>
 		<Node name="Root" id="3A">
-			<Node name="NPC_8025F26C" id="FFFFFFFF"/>
-			<Node name="NPC_8025F45C" id="0"/>
-			<Node name="NPC_8025F64C" id="1"/>
-			<Node name="NPC_8025F83C" id="2"/>
-			<Node name="NPC_802600AC" id="3"/>
-			<Node name="NPC_KoloradoWife_30" id="4"/>
-			<Node name="NPC_KoopaKoot_31" id="5"/>
-			<Node name="NPC_Koopa_32" id="6"/>
-			<Node name="NPC_WorldBombomb_33" id="7"/>
-			<Node name="NPC_80260A6C" id="8"/>
-			<Node name="NPC_80260C5C" id="9"/>
-			<Node name="NPC_Dryite_34" id="A"/>
-			<Node name="NPC_Dryite_35" id="B"/>
-			<Node name="NPC_Chanterelle_36" id="C"/>
-			<Node name="NPC_ArtistToad_37" id="D"/>
-			<Node name="NPC_ArtistToad_38" id="E"/>
-			<Node name="NPC_Toad_10" id="F"/>
-			<Node name="NPC_Toad_11" id="10"/>
-			<Node name="NPC_Toad_12" id="11"/>
-			<Node name="NPC_Toad_13" id="12"/>
-			<Node name="NPC_Toad_14" id="13"/>
-			<Node name="NPC_Toad_15" id="14"/>
-			<Node name="NPC_Toad_16" id="15"/>
-			<Node name="NPC_Bubulb_17" id="16"/>
-			<Node name="NPC_MinhT_18" id="17"/>
-			<Node name="NPC_8025DE18" id="18"/>
-			<Node name="NPC_WorldParakarry_04" id="19"/>
-			<Node name="NPC_KoopaBros_24" id="1A"/>
-			<Node name="NPC_KoopaBros_25" id="1B"/>
-			<Node name="NPC_KoopaBros_26" id="1C"/>
-			<Node name="NPC_KoopaBros_27" id="1D"/>
-			<Node name="NPC_DarkToad_20" id="1E"/>
-			<Node name="NPC_DarkToad_21" id="1F"/>
-			<Node name="NPC_DarkToad_22" id="20"/>
-			<Node name="NPC_DarkToad_23" id="21"/>
-			<Node name="NPC_80253298" id="22"/>
-			<Node name="NPC_802566FC" id="23"/>
-			<Node name="NPC_802568EC" id="24"/>
-			<Node name="NPC_Twink_28" id="25"/>
-			<Node name="NPC_ShyGuy_06" id="26"/>
-			<Node name="NPC_ShyGuy_07" id="27"/>
-			<Node name="NPC_ShyGuy_08" id="28"/>
-			<Node name="NPC_ShyGuy_09" id="29"/>
-			<Node name="NPC_Ninji_29" id="2A"/>
-			<Node name="NPC_8025EBC8" id="2B"/>
-			<Node name="NPC_ChuckQuizmo_05" id="2C"/>
+			<Node name="8025F26C" id="FFFFFFFF"/>
+			<Node name="8025F45C" id="0"/>
+			<Node name="8025F64C" id="1"/>
+			<Node name="8025F83C" id="2"/>
+			<Node name="802600AC" id="3"/>
+			<Node name="KoloradoWife_30" id="4"/>
+			<Node name="KoopaKoot_31" id="5"/>
+			<Node name="Koopa_32" id="6"/>
+			<Node name="WorldBombomb_33" id="7"/>
+			<Node name="80260A6C" id="8"/>
+			<Node name="80260C5C" id="9"/>
+			<Node name="Dryite_34" id="A"/>
+			<Node name="Dryite_35" id="B"/>
+			<Node name="Chanterelle_36" id="C"/>
+			<Node name="ArtistToad_37" id="D"/>
+			<Node name="ArtistToad_38" id="E"/>
+			<Node name="Toad_10" id="F"/>
+			<Node name="Toad_11" id="10"/>
+			<Node name="Toad_12" id="11"/>
+			<Node name="Toad_13" id="12"/>
+			<Node name="Toad_14" id="13"/>
+			<Node name="Toad_15" id="14"/>
+			<Node name="Toad_16" id="15"/>
+			<Node name="Bubulb_17" id="16"/>
+			<Node name="MinhT_18" id="17"/>
+			<Node name="8025DE18" id="18"/>
+			<Node name="WorldParakarry_04" id="19"/>
+			<Node name="KoopaBros_24" id="1A"/>
+			<Node name="KoopaBros_25" id="1B"/>
+			<Node name="KoopaBros_26" id="1C"/>
+			<Node name="KoopaBros_27" id="1D"/>
+			<Node name="DarkToad_20" id="1E"/>
+			<Node name="DarkToad_21" id="1F"/>
+			<Node name="DarkToad_22" id="20"/>
+			<Node name="DarkToad_23" id="21"/>
+			<Node name="80253298" id="22"/>
+			<Node name="802566FC" id="23"/>
+			<Node name="802568EC" id="24"/>
+			<Node name="Twink_28" id="25"/>
+			<Node name="ShyGuy_06" id="26"/>
+			<Node name="ShyGuy_07" id="27"/>
+			<Node name="ShyGuy_08" id="28"/>
+			<Node name="ShyGuy_09" id="29"/>
+			<Node name="Ninji_29" id="2A"/>
+			<Node name="8025EBC8" id="2B"/>
+			<Node name="ChuckQuizmo_05" id="2C"/>
 			<Node name="Path_8025C5B0" id="2D"/>
 			<Node name="Path_8025C5D4" id="2E"/>
 			<Node name="Entry0" id="2F"/>
@@ -12871,232 +12871,232 @@
 			</Path>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-440,20,-140" yaw="30.000000">
-			<MapObject ver="1" name="NPC_ChuckQuizmo_05" id="2C"/>
+			<MapObject ver="1" name="ChuckQuizmo_05" id="2C"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="520,0,-25" yaw="270.000000">
-			<MapObject ver="1" name="NPC_8025EBC8" id="2B"/>
+			<MapObject ver="1" name="8025EBC8" id="2B"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Ninji_29" id="2A"/>
+			<MapObject ver="1" name="Ninji_29" id="2A"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="270.000000">
-			<MapObject ver="1" name="NPC_ShyGuy_09" id="29"/>
+			<MapObject ver="1" name="ShyGuy_09" id="29"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="270.000000">
-			<MapObject ver="1" name="NPC_ShyGuy_08" id="28"/>
+			<MapObject ver="1" name="ShyGuy_08" id="28"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="270.000000">
-			<MapObject ver="1" name="NPC_ShyGuy_07" id="27"/>
+			<MapObject ver="1" name="ShyGuy_07" id="27"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="270.000000">
-			<MapObject ver="1" name="NPC_ShyGuy_06" id="26"/>
+			<MapObject ver="1" name="ShyGuy_06" id="26"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-350,20,-100" yaw="274.000000">
-			<MapObject ver="1" name="NPC_Twink_28" id="25"/>
+			<MapObject ver="1" name="Twink_28" id="25"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-250,0,263" yaw="90.000000">
-			<MapObject ver="1" name="NPC_802568EC" id="24"/>
+			<MapObject ver="1" name="802568EC" id="24"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-213,-54,256" yaw="90.000000">
-			<MapObject ver="1" name="NPC_802566FC" id="23"/>
+			<MapObject ver="1" name="802566FC" id="23"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-337,20,-360" yaw="30.000000">
-			<MapObject ver="1" name="NPC_80253298" id="22"/>
+			<MapObject ver="1" name="80253298" id="22"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="550,0,35" yaw="270.000000">
-			<MapObject ver="1" name="NPC_DarkToad_23" id="21"/>
+			<MapObject ver="1" name="DarkToad_23" id="21"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="540,0,0" yaw="270.000000">
-			<MapObject ver="1" name="NPC_DarkToad_22" id="20"/>
+			<MapObject ver="1" name="DarkToad_22" id="20"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="530,0,-35" yaw="270.000000">
-			<MapObject ver="1" name="NPC_DarkToad_21" id="1F"/>
+			<MapObject ver="1" name="DarkToad_21" id="1F"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="505,0,5" yaw="270.000000">
-			<MapObject ver="1" name="NPC_DarkToad_20" id="1E"/>
+			<MapObject ver="1" name="DarkToad_20" id="1E"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="270.000000">
-			<MapObject ver="1" name="NPC_KoopaBros_27" id="1D"/>
+			<MapObject ver="1" name="KoopaBros_27" id="1D"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="270.000000">
-			<MapObject ver="1" name="NPC_KoopaBros_26" id="1C"/>
+			<MapObject ver="1" name="KoopaBros_26" id="1C"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="270.000000">
-			<MapObject ver="1" name="NPC_KoopaBros_25" id="1B"/>
+			<MapObject ver="1" name="KoopaBros_25" id="1B"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="270.000000">
-			<MapObject ver="1" name="NPC_KoopaBros_24" id="1A"/>
+			<MapObject ver="1" name="KoopaBros_24" id="1A"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="145,20,-472" yaw="120.000000">
-			<MapObject ver="1" name="NPC_WorldParakarry_04" id="19"/>
+			<MapObject ver="1" name="WorldParakarry_04" id="19"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="312,30,-438" yaw="300.000000">
-			<MapObject ver="1" name="NPC_8025DE18" id="18"/>
+			<MapObject ver="1" name="8025DE18" id="18"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="150,20,485" yaw="270.000000">
-			<MapObject ver="1" name="NPC_MinhT_18" id="17"/>
+			<MapObject ver="1" name="MinhT_18" id="17"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Bubulb_17" id="16"/>
+			<MapObject ver="1" name="Bubulb_17" id="16"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="488,20,-174" yaw="30.000000">
-			<MapObject ver="1" name="NPC_Toad_16" id="15"/>
+			<MapObject ver="1" name="Toad_16" id="15"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-380,20,-100" yaw="270.000000">
-			<MapObject ver="1" name="NPC_Toad_15" id="14"/>
+			<MapObject ver="1" name="Toad_15" id="14"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="400,20,260" yaw="90.000000">
-			<MapObject ver="1" name="NPC_Toad_14" id="13"/>
+			<MapObject ver="1" name="Toad_14" id="13"/>
 			<Movement type="Patrol" data="2,190,14,104,1EA,14,104,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,FFFF8001,0,0,0,A,0,0,1,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-440,0,-20" yaw="90.000000">
-			<MapObject ver="1" name="NPC_Toad_13" id="12"/>
+			<MapObject ver="1" name="Toad_13" id="12"/>
 			<Movement type="Patrol" data="2,FFFFFE48,0,FFFFFFEC,15E,0,FFFFFFEC,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,FFFF8001,0,0,0,A,0,0,1,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="40,0,-300" yaw="270.000000">
-			<MapObject ver="1" name="NPC_Toad_12" id="11"/>
+			<MapObject ver="1" name="Toad_12" id="11"/>
 			<Movement type="Patrol" data="2,28,0,FFFFFED4,FFFFFFD8,0,FFFFFED4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,FFFF8001,0,0,0,A,0,0,1,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-145,0,-25" yaw="270.000000">
-			<MapObject ver="1" name="NPC_Toad_11" id="10"/>
+			<MapObject ver="1" name="Toad_11" id="10"/>
 			<Movement type="Wander" data="0,0,0,64,0,FFFF8001,0,0,0,0,A,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-94,0,-117" yaw="90.000000">
-			<MapObject ver="1" name="NPC_Toad_10" id="F"/>
+			<MapObject ver="1" name="Toad_10" id="F"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="300,20,500" yaw="270.000000">
-			<MapObject ver="1" name="NPC_ArtistToad_38" id="E"/>
+			<MapObject ver="1" name="ArtistToad_38" id="E"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="230,20,500" yaw="90.000000">
-			<MapObject ver="1" name="NPC_ArtistToad_37" id="D"/>
+			<MapObject ver="1" name="ArtistToad_37" id="D"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="260,20,560" yaw="270.000000">
-			<MapObject ver="1" name="NPC_Chanterelle_36" id="C"/>
+			<MapObject ver="1" name="Chanterelle_36" id="C"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="25,0,300" yaw="270.000000">
-			<MapObject ver="1" name="NPC_Dryite_35" id="B"/>
+			<MapObject ver="1" name="Dryite_35" id="B"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-10,0,360" yaw="90.000000">
-			<MapObject ver="1" name="NPC_Dryite_34" id="A"/>
+			<MapObject ver="1" name="Dryite_34" id="A"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-250,0,263" yaw="90.000000">
-			<MapObject ver="1" name="NPC_80260C5C" id="9"/>
+			<MapObject ver="1" name="80260C5C" id="9"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-213,-54,256" yaw="90.000000">
-			<MapObject ver="1" name="NPC_80260A6C" id="8"/>
+			<MapObject ver="1" name="80260A6C" id="8"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="252,20,-100" yaw="90.000000">
-			<MapObject ver="1" name="NPC_WorldBombomb_33" id="7"/>
+			<MapObject ver="1" name="WorldBombomb_33" id="7"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="300,20,-100" yaw="270.000000">
-			<MapObject ver="1" name="NPC_Koopa_32" id="6"/>
+			<MapObject ver="1" name="Koopa_32" id="6"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-330,0,330" yaw="90.000000">
-			<MapObject ver="1" name="NPC_KoopaKoot_31" id="5"/>
+			<MapObject ver="1" name="KoopaKoot_31" id="5"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="100,0,-110" yaw="270.000000">
-			<MapObject ver="1" name="NPC_KoloradoWife_30" id="4"/>
+			<MapObject ver="1" name="KoloradoWife_30" id="4"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="60,0,-120" yaw="90.000000">
-			<MapObject ver="1" name="NPC_802600AC" id="3"/>
+			<MapObject ver="1" name="802600AC" id="3"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-380,20,-100" yaw="270.000000">
-			<MapObject ver="1" name="NPC_8025F83C" id="2"/>
+			<MapObject ver="1" name="8025F83C" id="2"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="40,0,-300" yaw="270.000000">
-			<MapObject ver="1" name="NPC_8025F64C" id="1"/>
+			<MapObject ver="1" name="8025F64C" id="1"/>
 			<Movement type="Patrol" data="2,28,0,FFFFFED4,FFFFFFD8,0,FFFFFED4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,FFFF8001,0,0,0,A,0,0,1,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-94,0,-117" yaw="90.000000">
-			<MapObject ver="1" name="NPC_8025F45C" id="0"/>
+			<MapObject ver="1" name="8025F45C" id="0"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="90.000000">
-			<MapObject ver="1" name="NPC_8025F26C" id="FFFFFFFF"/>
+			<MapObject ver="1" name="8025F26C" id="FFFFFFFF"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>

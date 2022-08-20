@@ -82,11 +82,11 @@ show up.[BR]
 
 #new:NpcGroupList $NpcGroups_FinalMaster
 {
-00000001 $NPC_TheMaster 040D0000
+00000001 $TheMaster 040D0000
 00000000 00000000 00000000
 }
 	
-#new:NpcGroup $NPC_TheMaster
+#new:NpcGroup $TheMaster
 {
 00000003 $BlankSettings ~Vec3f:FurtherBeyond % 375 115 -440
 00852D0D $Script_Init_Master 00000000 00000000 000000E1 

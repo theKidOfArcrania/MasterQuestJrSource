@@ -76,28 +76,28 @@
 			<Node name="Entity8024078C" id="3"/>
 			<Node name="Entity802407B0" id="4"/>
 			<Node name="Entity802407D4" id="5"/>
-			<Node name="NPC_BillBlaster_10" id="6"/>
-			<Node name="NPC_BillBlaster_12" id="7"/>
-			<Node name="NPC_BillBlaster_11" id="8"/>
-			<Node name="NPC_BulletBill_20" id="9"/>
-			<Node name="NPC_BulletBill_21" id="A"/>
-			<Node name="NPC_BulletBill_22" id="B"/>
-			<Node name="NPC_BulletBill_23" id="C"/>
-			<Node name="NPC_BulletBill_24" id="D"/>
-			<Node name="NPC_BulletBill_25" id="E"/>
-			<Node name="NPC_BulletBill_26" id="F"/>
-			<Node name="NPC_BulletBill_27" id="10"/>
-			<Node name="NPC_BulletBill_28" id="11"/>
-			<Node name="NPC_BulletBill_29" id="12"/>
-			<Node name="NPC_80243B70" id="13"/>
-			<Node name="NPC_80243D60" id="14"/>
-			<Node name="NPC_80243F50" id="15"/>
-			<Node name="NPC_80244140" id="16"/>
-			<Node name="NPC_BulletBill_40" id="17"/>
-			<Node name="NPC_BulletBill_41" id="18"/>
-			<Node name="NPC_BulletBill_42" id="19"/>
-			<Node name="NPC_BulletBill_43" id="1A"/>
-			<Node name="NPC_BulletBill_44" id="1B"/>
+			<Node name="BillBlaster_10" id="6"/>
+			<Node name="BillBlaster_12" id="7"/>
+			<Node name="BillBlaster_11" id="8"/>
+			<Node name="BulletBill_20" id="9"/>
+			<Node name="BulletBill_21" id="A"/>
+			<Node name="BulletBill_22" id="B"/>
+			<Node name="BulletBill_23" id="C"/>
+			<Node name="BulletBill_24" id="D"/>
+			<Node name="BulletBill_25" id="E"/>
+			<Node name="BulletBill_26" id="F"/>
+			<Node name="BulletBill_27" id="10"/>
+			<Node name="BulletBill_28" id="11"/>
+			<Node name="BulletBill_29" id="12"/>
+			<Node name="80243B70" id="13"/>
+			<Node name="80243D60" id="14"/>
+			<Node name="80243F50" id="15"/>
+			<Node name="80244140" id="16"/>
+			<Node name="BulletBill_40" id="17"/>
+			<Node name="BulletBill_41" id="18"/>
+			<Node name="BulletBill_42" id="19"/>
+			<Node name="BulletBill_43" id="1A"/>
+			<Node name="BulletBill_44" id="1B"/>
 			<Node name="NewSave" id="1C"/>
 			<Node name="jaspow" id="1D"/>
 		</Node>
@@ -4738,112 +4738,112 @@
 			<MapObject ver="1" name="NewSave" id="1C"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="380,11,-40" yaw="0.000000">
-			<MapObject ver="1" name="NPC_BulletBill_44" id="1B"/>
+			<MapObject ver="1" name="BulletBill_44" id="1B"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="330,11,5" yaw="0.000000">
-			<MapObject ver="1" name="NPC_BulletBill_43" id="1A"/>
+			<MapObject ver="1" name="BulletBill_43" id="1A"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="120,11,50" yaw="0.000000">
-			<MapObject ver="1" name="NPC_BulletBill_42" id="19"/>
+			<MapObject ver="1" name="BulletBill_42" id="19"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-150,11,5" yaw="0.000000">
-			<MapObject ver="1" name="NPC_BulletBill_41" id="18"/>
+			<MapObject ver="1" name="BulletBill_41" id="18"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-100,11,50" yaw="0.000000">
-			<MapObject ver="1" name="NPC_BulletBill_40" id="17"/>
+			<MapObject ver="1" name="BulletBill_40" id="17"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="1620,60,20" yaw="0.000000">
-			<MapObject ver="1" name="NPC_80244140" id="16"/>
+			<MapObject ver="1" name="80244140" id="16"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="1605,60,5" yaw="0.000000">
-			<MapObject ver="1" name="NPC_80243F50" id="15"/>
+			<MapObject ver="1" name="80243F50" id="15"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="1590,60,-10" yaw="0.000000">
-			<MapObject ver="1" name="NPC_80243D60" id="14"/>
+			<MapObject ver="1" name="80243D60" id="14"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="1590,60,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_80243B70" id="13"/>
+			<MapObject ver="1" name="80243B70" id="13"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_BulletBill_29" id="12"/>
+			<MapObject ver="1" name="BulletBill_29" id="12"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_BulletBill_28" id="11"/>
+			<MapObject ver="1" name="BulletBill_28" id="11"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_BulletBill_27" id="10"/>
+			<MapObject ver="1" name="BulletBill_27" id="10"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_BulletBill_26" id="F"/>
+			<MapObject ver="1" name="BulletBill_26" id="F"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_BulletBill_25" id="E"/>
+			<MapObject ver="1" name="BulletBill_25" id="E"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_BulletBill_24" id="D"/>
+			<MapObject ver="1" name="BulletBill_24" id="D"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_BulletBill_23" id="C"/>
+			<MapObject ver="1" name="BulletBill_23" id="C"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_BulletBill_22" id="B"/>
+			<MapObject ver="1" name="BulletBill_22" id="B"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_BulletBill_21" id="A"/>
+			<MapObject ver="1" name="BulletBill_21" id="A"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_BulletBill_20" id="9"/>
+			<MapObject ver="1" name="BulletBill_20" id="9"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="1290,0,50" yaw="0.000000">
-			<MapObject ver="1" name="NPC_BillBlaster_11" id="8"/>
+			<MapObject ver="1" name="BillBlaster_11" id="8"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="1275,0,5" yaw="0.000000">
-			<MapObject ver="1" name="NPC_BillBlaster_12" id="7"/>
+			<MapObject ver="1" name="BillBlaster_12" id="7"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="1260,0,-40" yaw="0.000000">
-			<MapObject ver="1" name="NPC_BillBlaster_10" id="6"/>
+			<MapObject ver="1" name="BillBlaster_10" id="6"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>

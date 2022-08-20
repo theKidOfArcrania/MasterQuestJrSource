@@ -116,9 +116,9 @@
 			<Node name="Entry1" id="0"/>
 			<Node name="Entry2" id="1"/>
 			<Node name="Entry3" id="2"/>
-			<Node name="NPC_Pokey_00" id="3"/>
-			<Node name="NPC_Bandit_01" id="4"/>
-			<Node name="NPC_Bandit_02" id="5"/>
+			<Node name="Pokey_00" id="3"/>
+			<Node name="Bandit_01" id="4"/>
+			<Node name="Bandit_02" id="5"/>
 			<Node name="80241A48" id="6"/>
 			<Node name="80241A9C" id="7"/>
 			<Node name="80241AD0" id="8"/>
@@ -3345,17 +3345,17 @@
 			<MapObject ver="1" name="80241A48" id="6"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-200,0,115" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Bandit_02" id="5"/>
+			<MapObject ver="1" name="Bandit_02" id="5"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-190,0,-318" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Bandit_01" id="4"/>
+			<MapObject ver="1" name="Bandit_01" id="4"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="310,0,-100" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Pokey_00" id="3"/>
+			<MapObject ver="1" name="Pokey_00" id="3"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>

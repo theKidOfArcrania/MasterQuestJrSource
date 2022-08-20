@@ -278,7 +278,7 @@ $Script_Main $EntryList 00000003 00000000
 00000001 00000000 00000000 00000000 % no tattle string	
 }
 	
-#import NPC_EnemyBooData.mpat
+#import EnemyBooData.mpat
 
 #new:NpcGroup $NpcGroup_Boo1 % for floors 23 + 24
 {

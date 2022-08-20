@@ -224,12 +224,12 @@
 	</ZoneTree>
 	<MarkerTree>
 		<Node name="Root" id="9">
-			<Node name="NPC_Lakitu_00" id="FFFFFFFF"/>
-			<Node name="NPC_Lakitu_01" id="0"/>
-			<Node name="NPC_Spiny_50" id="1"/>
-			<Node name="NPC_Spiny_51" id="2"/>
-			<Node name="NPC_Spiny_52" id="3"/>
-			<Node name="NPC_Spiny_53" id="4"/>
+			<Node name="Lakitu_00" id="FFFFFFFF"/>
+			<Node name="Lakitu_01" id="0"/>
+			<Node name="Spiny_50" id="1"/>
+			<Node name="Spiny_51" id="2"/>
+			<Node name="Spiny_52" id="3"/>
+			<Node name="Spiny_53" id="4"/>
 			<Node name="Entry0" id="5"/>
 			<Node name="Entry1" id="6"/>
 			<Node name="Entity80245280" id="7"/>
@@ -7483,32 +7483,32 @@
 			<MapObject ver="1" name="Entry0" id="5"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Spiny_53" id="4"/>
+			<MapObject ver="1" name="Spiny_53" id="4"/>
 			<Movement type="Wander" data="0,0,0,0,0,FFFF8001,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Spiny_52" id="3"/>
+			<MapObject ver="1" name="Spiny_52" id="3"/>
 			<Movement type="Wander" data="0,0,0,0,0,FFFF8001,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Spiny_51" id="2"/>
+			<MapObject ver="1" name="Spiny_51" id="2"/>
 			<Movement type="Wander" data="0,0,0,0,0,FFFF8001,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Spiny_50" id="1"/>
+			<MapObject ver="1" name="Spiny_50" id="1"/>
 			<Movement type="Wander" data="0,0,0,0,0,FFFF8001,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="200,90,-25" yaw="90.000000">
-			<MapObject ver="1" name="NPC_Lakitu_01" id="0"/>
+			<MapObject ver="1" name="Lakitu_01" id="0"/>
 			<Movement type="Wander" data="C8,5A,FFFFFFE7,1E,0,FFFF8001,0,C8,5A,0,55,78,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-185,90,10" yaw="270.000000">
-			<MapObject ver="1" name="NPC_Lakitu_00" id="FFFFFFFF"/>
+			<MapObject ver="1" name="Lakitu_00" id="FFFFFFFF"/>
 			<Movement type="Wander" data="FFFFFF47,5A,A,1E,0,FFFF8001,0,FFFFFF47,5A,0,55,78,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>

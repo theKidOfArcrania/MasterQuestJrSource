@@ -98,8 +98,8 @@
 	</ZoneTree>
 	<MarkerTree>
 		<Node name="Root" id="3">
-			<Node name="NPC_80241DE0" id="FFFFFFFF"/>
-			<Node name="NPC_80241FD0" id="0"/>
+			<Node name="80241DE0" id="FFFFFFFF"/>
+			<Node name="80241FD0" id="0"/>
 			<Node name="Entry0" id="1"/>
 			<Node name="Entry1" id="2"/>
 		</Node>
@@ -1731,12 +1731,12 @@
 			<MapObject ver="1" name="Entry0" id="1"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="358,130,75" yaw="270.000000">
-			<MapObject ver="1" name="NPC_80241FD0" id="0"/>
+			<MapObject ver="1" name="80241FD0" id="0"/>
 			<Movement type="Wander" data="166,82,4B,0,0,FFFF8001,0,166,82,4B,FA,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="166,130,90" yaw="270.000000">
-			<MapObject ver="1" name="NPC_80241DE0" id="FFFFFFFF"/>
+			<MapObject ver="1" name="80241DE0" id="FFFFFFFF"/>
 			<Movement type="Wander" data="A6,82,5A,0,0,FFFF8001,0,A6,82,5A,FA,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>

@@ -102,17 +102,17 @@
 	</ZoneTree>
 	<MarkerTree>
 		<Node name="Root" id="A">
-			<Node name="NPC_Paragoomba_00" id="FFFFFFFF"/>
-			<Node name="NPC_Paragoomba_01" id="0"/>
+			<Node name="Paragoomba_00" id="FFFFFFFF"/>
+			<Node name="Paragoomba_01" id="0"/>
 			<Node name="Entry0" id="1"/>
 			<Node name="Entry1" id="2"/>
 			<Node name="Entry2" id="3"/>
 			<Node name="Item80244038" id="4"/>
 			<Node name="Entity8024405C" id="5"/>
-			<Node name="NPC_Boo1" id="6"/>
-			<Node name="NPC_Boo2" id="7"/>
-			<Node name="NPC_Boo3" id="8"/>
-			<Node name="NPC_Boo4" id="9"/>
+			<Node name="Boo1" id="6"/>
+			<Node name="Boo2" id="7"/>
+			<Node name="Boo3" id="8"/>
+			<Node name="Boo4" id="9"/>
 		</Node>
 	</MarkerTree>
 	<LightSets>
@@ -3706,22 +3706,22 @@
 			<MapObject ver="1" name="Root" id="A"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="410,290,60" yaw="90.000000">
-			<MapObject ver="1" name="NPC_Boo4" id="9"/>
+			<MapObject ver="1" name="Boo4" id="9"/>
 			<Movement type="Wander" data="19A,104,3C,64,0,FFFF8001,0,12C,104,0,258,96,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="370,290,-80" yaw="90.000000">
-			<MapObject ver="1" name="NPC_Boo3" id="8"/>
+			<MapObject ver="1" name="Boo3" id="8"/>
 			<Movement type="Wander" data="172,104,FFFFFFB0,64,0,FFFF8001,0,12C,104,0,258,96,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="220,290,50" yaw="90.000000">
-			<MapObject ver="1" name="NPC_Boo2" id="7"/>
+			<MapObject ver="1" name="Boo2" id="7"/>
 			<Movement type="Wander" data="D2,104,32,64,0,FFFF8001,0,12C,104,0,258,96,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="150,290,-100" yaw="90.000000">
-			<MapObject ver="1" name="NPC_Boo1" id="6"/>
+			<MapObject ver="1" name="Boo1" id="6"/>
 			<Movement type="Wander" data="96,104,FFFFFFA6,64,0,FFFF8001,0,12C,104,0,258,96,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
@@ -3741,12 +3741,12 @@
 			<MapObject ver="1" name="Entry0" id="1"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="535,50,20" yaw="90.000000">
-			<MapObject ver="1" name="NPC_Paragoomba_01" id="0"/>
+			<MapObject ver="1" name="Paragoomba_01" id="0"/>
 			<Movement type="Wander" data="217,32,14,14,0,FFFF8001,0,217,32,14,96,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="230,50,50" yaw="90.000000">
-			<MapObject ver="1" name="NPC_Paragoomba_00" id="FFFFFFFF"/>
+			<MapObject ver="1" name="Paragoomba_00" id="FFFFFFFF"/>
 			<Movement type="Wander" data="E6,32,32,14,0,FFFF8001,0,E6,32,32,96,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>

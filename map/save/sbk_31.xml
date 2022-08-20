@@ -130,7 +130,7 @@
 			<Node name="Entry1" id="0"/>
 			<Node name="Entry2" id="1"/>
 			<Node name="Entry3" id="2"/>
-			<Node name="NPC_Traveler" id="3"/>
+			<Node name="Traveler" id="3"/>
 		</Node>
 	</MarkerTree>
 	<LightSets>
@@ -3912,7 +3912,7 @@
 			<MapObject ver="1" name="Root" id="4"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-10,0,-70" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Traveler" id="3"/>
+			<MapObject ver="1" name="Traveler" id="3"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>

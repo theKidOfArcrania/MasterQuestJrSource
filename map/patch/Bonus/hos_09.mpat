@@ -363,7 +363,7 @@ upon and honor the Star Spirits.[BR]
 
 #new:NpcGroup $NpcGroup_Ch0
 {
-00000000 $NpcSettings_Twink ~Vec3f:NPC_0
+00000000 $NpcSettings_Twink ~Vec3f:0
 00850D0D $Script_Init_RematchSpirit 00000000 00000000 00000000 
 ~NoItems ~NoHP ~NoFP ~NoCoinBonus ~NoMovement
 00200001 00200001 00200001 00200001 00200001 00200001 00200001 00200001 
@@ -373,7 +373,7 @@ upon and honor the Star Spirits.[BR]
 	
 #new:NpcGroup $NpcGroup_Ch1
 {
-00000001 $NpcSettings_StarSpirit ~Vec3f:NPC_1
+00000001 $NpcSettings_StarSpirit ~Vec3f:1
 00850D0D $Script_Init_RematchSpirit 00000000 00000000 00000000 
 ~NoItems ~NoHP ~NoFP ~NoCoinBonus ~NoMovement
 00190001 00190001 00190001 00190001 00190001 00190001 00190001 00190001 
@@ -383,7 +383,7 @@ upon and honor the Star Spirits.[BR]
 
 #new:NpcGroup $NpcGroup_Ch2
 {
-00000002 $NpcSettings_StarSpirit ~Vec3f:NPC_2
+00000002 $NpcSettings_StarSpirit ~Vec3f:2
 00850D0D $Script_Init_RematchSpirit 00000000 00000000 00000000 
 ~NoItems ~NoHP ~NoFP ~NoCoinBonus ~NoMovement
 001A0001 001A0001 001A0001 001A0001 001A0001 001A0001 001A0001 001A0001 
@@ -393,7 +393,7 @@ upon and honor the Star Spirits.[BR]
 
 #new:NpcGroup $NpcGroup_Ch3
 {
-00000003 $NpcSettings_StarSpirit ~Vec3f:NPC_3
+00000003 $NpcSettings_StarSpirit ~Vec3f:3
 00850D0D $Script_Init_RematchSpirit 00000000 00000000 00000000 
 ~NoItems ~NoHP ~NoFP ~NoCoinBonus ~NoMovement
 001B0001 001B0001 001B0001 001B0001 001B0001 001B0001 001B0001 001B0001 
@@ -403,7 +403,7 @@ upon and honor the Star Spirits.[BR]
 
 #new:NpcGroup $NpcGroup_Ch4
 {
-00000004 $NpcSettings_StarSpirit ~Vec3f:NPC_4
+00000004 $NpcSettings_StarSpirit ~Vec3f:4
 00850D0D $Script_Init_RematchSpirit 00000000 00000000 00000000 
 ~NoItems ~NoHP ~NoFP ~NoCoinBonus ~NoMovement
 001C0001 001C0001 001C0001 001C0001 001C0001 001C0001 001C0001 001C0001 
@@ -413,7 +413,7 @@ upon and honor the Star Spirits.[BR]
 
 #new:NpcGroup $NpcGroup_Ch5
 {
-00000005 $NpcSettings_StarSpirit ~Vec3f:NPC_5
+00000005 $NpcSettings_StarSpirit ~Vec3f:5
 00850D0D $Script_Init_RematchSpirit 00000000 00000000 00000000 
 ~NoItems ~NoHP ~NoFP ~NoCoinBonus ~NoMovement
 001D0001 001D0001 001D0001 001D0001 001D0001 001D0001 001D0001 001D0001 
@@ -423,7 +423,7 @@ upon and honor the Star Spirits.[BR]
 
 #new:NpcGroup $NpcGroup_Ch6
 {
-00000006 $NpcSettings_StarSpirit ~Vec3f:NPC_6
+00000006 $NpcSettings_StarSpirit ~Vec3f:6
 00850D0D $Script_Init_RematchSpirit 00000000 00000000 00000000 
 ~NoItems ~NoHP ~NoFP ~NoCoinBonus ~NoMovement
 001E0001 001E0001 001E0001 001E0001 001E0001 001E0001 001E0001 001E0001 
@@ -433,7 +433,7 @@ upon and honor the Star Spirits.[BR]
 
 #new:NpcGroup $NpcGroup_Ch7
 {
-00000007 $NpcSettings_StarSpirit ~Vec3f:NPC_7
+00000007 $NpcSettings_StarSpirit ~Vec3f:7
 00850D0D $Script_Init_RematchSpirit 00000000 00000000 00000000 
 ~NoItems ~NoHP ~NoFP ~NoCoinBonus ~NoMovement
 001F0001 001F0001 001F0001 001F0001 001F0001 001F0001 001F0001 001F0001 
@@ -443,7 +443,7 @@ upon and honor the Star Spirits.[BR]
 
 #new:NpcGroup $NpcGroup_Ch8
 {
-00000008 $NpcSettings_Peach ~Vec3f:NPC_8
+00000008 $NpcSettings_Peach ~Vec3f:8
 00850D0D $Script_Init_RematchSpirit 00000000 00000000 0000010E 
 ~NoItems ~NoHP ~NoFP ~NoCoinBonus ~NoMovement
 00D60004 00D60004 00D60004 00D60004 00D60004 00D60004 00D60004 00D60004 

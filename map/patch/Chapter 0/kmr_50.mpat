@@ -105,11 +105,11 @@ End
 	
 	#new:NpcGroupList $NpcGroup_1
 {
-	00000001 $NPC_Ember  000F0000
+	00000001 $Ember  000F0000
 	00000000 00000000 00000000
 }
 
-#new:NpcGroup $NPC_Ember
+#new:NpcGroup $Ember
 {
 00000001 $NpcSettings_80242C48 ~Vec3f:ember1
 00000D00 00000000 00000000 00000000 0000005A 

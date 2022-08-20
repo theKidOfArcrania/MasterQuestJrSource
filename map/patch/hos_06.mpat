@@ -88,7 +88,7 @@
 % ====================================================
 % Changed the way Merlow selects badges from his table.
 % Now you can supply up to 33` badges. As a bonus,
-% Flag_NPC_43 through Flag_NPC_51 are no longer used.
+% Flag_43 through Flag_51 are no longer used.
 % ====================================================
 
 % When the number of badges in the table is changed,

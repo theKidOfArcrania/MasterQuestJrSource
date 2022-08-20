@@ -259,7 +259,7 @@ $Script_Main $EntryList 00000003 00000000
 % NPC GROUPS 
 % ===========
 
-#import NPC_HammerBros.mpat
+#import HammerBros.mpat
 
 #new:NpcGroup $Floor_01_Floor_03
 {

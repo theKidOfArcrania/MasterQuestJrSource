@@ -280,8 +280,8 @@
 	</ZoneTree>
 	<MarkerTree>
 		<Node name="Root" id="6">
-			<Node name="NPC_TuffPuff_00" id="FFFFFFFF"/>
-			<Node name="NPC_TuffPuff_01" id="0"/>
+			<Node name="TuffPuff_00" id="FFFFFFFF"/>
+			<Node name="TuffPuff_01" id="0"/>
 			<Node name="Entry0" id="1"/>
 			<Node name="Entry1" id="2"/>
 			<Node name="Item80243EF0" id="3"/>
@@ -7279,12 +7279,12 @@
 			<MapObject ver="1" name="Entry0" id="1"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="600,145,15" yaw="270.000000">
-			<MapObject ver="1" name="NPC_TuffPuff_01" id="0"/>
+			<MapObject ver="1" name="TuffPuff_01" id="0"/>
 			<Movement type="Wander" data="258,91,F,1E,0,FFFF8001,0,1E5,91,37,E1,5F,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="440,145,15" yaw="90.000000">
-			<MapObject ver="1" name="NPC_TuffPuff_00" id="FFFFFFFF"/>
+			<MapObject ver="1" name="TuffPuff_00" id="FFFFFFFF"/>
 			<Movement type="Wander" data="1B8,91,F,1E,0,FFFF8001,0,1E5,91,37,E1,5F,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>

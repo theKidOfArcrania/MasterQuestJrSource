@@ -42,7 +42,7 @@
   
 #new:NpcGroup $NpcGroup_Traveler
 {
-00000000 $NpcSettings_Traveler ~Vec3f:NPC_Traveler
+00000000 $NpcSettings_Traveler ~Vec3f:Traveler
 00002D01 $Script_Init_Traveler 00000000 00000000 0000005A 
 ~NoItems ~NoHP ~NoFP ~NoCoinBonus
 ~NoMovement

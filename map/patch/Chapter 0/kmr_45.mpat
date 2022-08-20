@@ -154,7 +154,7 @@ End
 00000000 00000000 00000000	
 }
 	
-#import NPC_EnemyBooData.mpat	
+#import EnemyBooData.mpat	
 	
 #new:NpcGroup $Boo1
 {

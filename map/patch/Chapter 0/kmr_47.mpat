@@ -87,11 +87,11 @@ as a deranged psyche.[BR]
 	
 #new:NpcGroupList $NpcGroups_KMR_33
 {
-00000001 $NPC_Pokey1 000D0000
+00000001 $Pokey1 000D0000
 00000000 00000000 00000000
 }
 
-#new:NpcGroup $NPC_Pokey1
+#new:NpcGroup $Pokey1
 {
 00000003 $NpcSettings_Chomp ~Vec3f:pokey1
 00002C00 00000000 00000000 00000000 0000005A 

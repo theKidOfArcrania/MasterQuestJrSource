@@ -300,11 +300,11 @@
 	</ZoneTree>
 	<MarkerTree>
 		<Node name="Root" id="A">
-			<Node name="NPC_PiranhaPlant_00" id="FFFFFFFF"/>
-			<Node name="NPC_PiranhaPlant_01" id="0"/>
-			<Node name="NPC_PiranhaPlant_02" id="1"/>
-			<Node name="NPC_PiranhaPlant_03" id="2"/>
-			<Node name="NPC_Fuzzy_04" id="3"/>
+			<Node name="PiranhaPlant_00" id="FFFFFFFF"/>
+			<Node name="PiranhaPlant_01" id="0"/>
+			<Node name="PiranhaPlant_02" id="1"/>
+			<Node name="PiranhaPlant_03" id="2"/>
+			<Node name="Fuzzy_04" id="3"/>
 			<Node name="Entry0" id="4"/>
 			<Node name="Entry1" id="5"/>
 			<Node name="Entry2" id="6"/>
@@ -8531,27 +8531,27 @@
 			<MapObject ver="1" name="Entry0" id="4"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-140,0,300" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Fuzzy_04" id="3"/>
+			<MapObject ver="1" name="Fuzzy_04" id="3"/>
 			<Movement type="Wander" data="0,0,0,190,0,FFFF8001,0,0,0,0,190,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_PiranhaPlant_03" id="2"/>
+			<MapObject ver="1" name="PiranhaPlant_03" id="2"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="240,0,-240" yaw="0.000000">
-			<MapObject ver="1" name="NPC_PiranhaPlant_02" id="1"/>
+			<MapObject ver="1" name="PiranhaPlant_02" id="1"/>
 			<Movement type="Wander" data="0,0,0,190,0,FFFF8001,0,0,0,0,190,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="0.000000">
-			<MapObject ver="1" name="NPC_PiranhaPlant_01" id="0"/>
+			<MapObject ver="1" name="PiranhaPlant_01" id="0"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-240,0,-240" yaw="0.000000">
-			<MapObject ver="1" name="NPC_PiranhaPlant_00" id="FFFFFFFF"/>
+			<MapObject ver="1" name="PiranhaPlant_00" id="FFFFFFFF"/>
 			<Movement type="Wander" data="0,0,0,190,0,FFFF8001,0,0,0,0,190,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>

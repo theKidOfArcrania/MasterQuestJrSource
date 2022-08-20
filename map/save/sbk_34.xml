@@ -124,8 +124,8 @@
 			<Node name="Entry1" id="0"/>
 			<Node name="Entry2" id="1"/>
 			<Node name="Entry3" id="2"/>
-			<Node name="NPC_Nomadimouse_00" id="3"/>
-			<Node name="NPC_Nomadimouse_01" id="4"/>
+			<Node name="Nomadimouse_00" id="3"/>
+			<Node name="Nomadimouse_01" id="4"/>
 			<Node name="80242758" id="5"/>
 			<Node name="NewSave" id="6"/>
 			<Node name="SpringTest" id="7"/>
@@ -3216,12 +3216,12 @@
 			<MapObject ver="1" name="80242758" id="5"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="134,0,-50" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Nomadimouse_01" id="4"/>
+			<MapObject ver="1" name="Nomadimouse_01" id="4"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="114,0,-50" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Nomadimouse_00" id="3"/>
+			<MapObject ver="1" name="Nomadimouse_00" id="3"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>

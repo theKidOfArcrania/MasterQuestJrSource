@@ -257,15 +257,15 @@
 	</ZoneTree>
 	<MarkerTree>
 		<Node name="Root" id="17">
-			<Node name="NPC_WorldKammy_07" id="FFFFFFFF"/>
-			<Node name="NPC_Fuzzy_05" id="0"/>
-			<Node name="NPC_HammerBros_06" id="1"/>
-			<Node name="NPC_ShyGuy_01" id="2"/>
-			<Node name="NPC_ShyGuy_02" id="3"/>
-			<Node name="NPC_ShyGuy_03" id="4"/>
-			<Node name="NPC_ShyGuy_04" id="5"/>
-			<Node name="NPC_SkyGuy_08" id="6"/>
-			<Node name="NPC_SkyGuy_09" id="7"/>
+			<Node name="WorldKammy_07" id="FFFFFFFF"/>
+			<Node name="Fuzzy_05" id="0"/>
+			<Node name="HammerBros_06" id="1"/>
+			<Node name="ShyGuy_01" id="2"/>
+			<Node name="ShyGuy_02" id="3"/>
+			<Node name="ShyGuy_03" id="4"/>
+			<Node name="ShyGuy_04" id="5"/>
+			<Node name="SkyGuy_08" id="6"/>
+			<Node name="SkyGuy_09" id="7"/>
 			<Node name="Entry0" id="8"/>
 			<Node name="Item80243560" id="9"/>
 			<Node name="Entity802462C0" id="A"/>
@@ -280,7 +280,7 @@
 			<Node name="coin2" id="13"/>
 			<Node name="coin3" id="14"/>
 			<Node name="starpiece" id="15"/>
-			<Node name="NPC_New" id="16"/>
+			<Node name="New" id="16"/>
 		</Node>
 	</MarkerTree>
 	<LightSets>
@@ -7414,7 +7414,7 @@
 			<MapObject ver="1" name="Root" id="17"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-1100,60,50" yaw="270.000000">
-			<MapObject ver="1" name="NPC_New" id="16"/>
+			<MapObject ver="1" name="New" id="16"/>
 			<Movement type="Wander" data="FFFFFBB4,3C,32,1E,0,FFFF8001,0,FFFFFBB4,3C,32,AA,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
@@ -7461,47 +7461,47 @@
 			<MapObject ver="1" name="Entry0" id="8"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-550,60,70" yaw="270.000000">
-			<MapObject ver="1" name="NPC_SkyGuy_09" id="7"/>
+			<MapObject ver="1" name="SkyGuy_09" id="7"/>
 			<Movement type="Wander" data="FFFFFDDA,3C,46,1E,0,FFFF8001,0,FFFFFDDA,3C,46,C8,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-650,140,-105" yaw="270.000000">
-			<MapObject ver="1" name="NPC_SkyGuy_08" id="6"/>
+			<MapObject ver="1" name="SkyGuy_08" id="6"/>
 			<Movement type="Wander" data="FFFFFD76,8C,FFFFFF97,1E,0,FFFF8001,0,FFFFFD76,8C,FFFFFF97,C8,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="270.000000">
-			<MapObject ver="1" name="NPC_ShyGuy_04" id="5"/>
+			<MapObject ver="1" name="ShyGuy_04" id="5"/>
 			<Movement type="Patrol" data="6,1E,0,32,32,0,64,64,0,64,78,0,32,64,0,0,32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,FFFF8001,4B,0,32,64,0,0,1,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="270.000000">
-			<MapObject ver="1" name="NPC_ShyGuy_03" id="4"/>
+			<MapObject ver="1" name="ShyGuy_03" id="4"/>
 			<Movement type="Patrol" data="6,1E,0,32,32,0,64,64,0,64,78,0,32,64,0,0,32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,FFFF8001,4B,0,32,64,0,0,1,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="270.000000">
-			<MapObject ver="1" name="NPC_ShyGuy_02" id="3"/>
+			<MapObject ver="1" name="ShyGuy_02" id="3"/>
 			<Movement type="Patrol" data="6,1E,0,32,32,0,64,64,0,64,78,0,32,64,0,0,32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,FFFF8001,4B,0,32,64,0,0,1,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="270.000000">
-			<MapObject ver="1" name="NPC_ShyGuy_01" id="2"/>
+			<MapObject ver="1" name="ShyGuy_01" id="2"/>
 			<Movement type="Patrol" data="6,1E,0,32,32,0,64,64,0,64,78,0,32,64,0,0,32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,FFFF8001,4B,0,32,64,0,0,1,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="1050,0,0" yaw="270.000000">
-			<MapObject ver="1" name="NPC_HammerBros_06" id="1"/>
+			<MapObject ver="1" name="HammerBros_06" id="1"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="1050,0,0" yaw="270.000000">
-			<MapObject ver="1" name="NPC_Fuzzy_05" id="0"/>
+			<MapObject ver="1" name="Fuzzy_05" id="0"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="0,-1000,0" yaw="90.000000">
-			<MapObject ver="1" name="NPC_WorldKammy_07" id="FFFFFFFF"/>
+			<MapObject ver="1" name="WorldKammy_07" id="FFFFFFFF"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>

@@ -70,17 +70,17 @@ could have with just a little work.[BR]
 	 
 #new:NpcGroupList $NpcGroups_KMR_33
 {
-00000001 $NPC_Chomp 00030000
+00000001 $Chomp 00030000
 00000000 00000000 00000000	
 }
  
 #new:NpcGroupList $NpcGroups_KoopaKoot
 {
-00000001 $NPC_KoopKoot 05150001
+00000001 $KoopKoot 05150001
 00000000 00000000 00000000
 }
 
-#new:NpcGroup $NPC_KoopKoot
+#new:NpcGroup $KoopKoot
 {
 00000009 $BlankSettings ~Vec3f:koopakoot % 330 0 -100
 00A40D01 $Script_Init_8024E94C 00000000 00000000 00000000
@@ -97,7 +97,7 @@ could have with just a little work.[BR]
 00000000 00000000 00630000
 }
 
-#new:NpcGroup $NPC_Chomp
+#new:NpcGroup $Chomp
 {
 00000001 $NpcSettings_Chomp ~Vec3f:chomp
 00002C00 00000000 00000000 00000000 0000005A 

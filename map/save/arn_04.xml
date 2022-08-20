@@ -98,18 +98,18 @@
 		<Node name="Root" id="17">
 			<Node name="Entry0" id="FFFFFFFF"/>
 			<Node name="Entry1" id="0"/>
-			<Node name="NPC_Paragoomba_00" id="1"/>
-			<Node name="NPC_Goomba_01" id="2"/>
-			<Node name="NPC_Cleft_02" id="3"/>
-			<Node name="NPC_Cleft_03" id="4"/>
+			<Node name="Paragoomba_00" id="1"/>
+			<Node name="Goomba_01" id="2"/>
+			<Node name="Cleft_02" id="3"/>
+			<Node name="Cleft_03" id="4"/>
 			<Node name="Entity80244040" id="5"/>
 			<Node name="Entity80244078" id="6"/>
 			<Node name="Entity802440B0" id="7"/>
 			<Node name="Item802440E4" id="8"/>
-			<Node name="NPC_Paragoomba_00" id="9"/>
-			<Node name="NPC_Goomba_01" id="A"/>
-			<Node name="NPC_Cleft_02" id="B"/>
-			<Node name="NPC_Cleft_03" id="C"/>
+			<Node name="Paragoomba_00" id="9"/>
+			<Node name="Goomba_01" id="A"/>
+			<Node name="Cleft_02" id="B"/>
+			<Node name="Cleft_03" id="C"/>
 			<Node name="Rock1" id="D"/>
 			<Node name="Rock2" id="E"/>
 			<Node name="Rock3" id="F"/>
@@ -5057,22 +5057,22 @@
 			<MapObject ver="1" name="Rock1" id="D"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="550,230,125" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Cleft_03" id="C"/>
+			<MapObject ver="1" name="Cleft_03" id="C"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="80,177,160" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Cleft_02" id="B"/>
+			<MapObject ver="1" name="Cleft_02" id="B"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="360,208,100" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Goomba_01" id="A"/>
+			<MapObject ver="1" name="Goomba_01" id="A"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-350,190,150" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Paragoomba_00" id="9"/>
+			<MapObject ver="1" name="Paragoomba_00" id="9"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
@@ -5089,22 +5089,22 @@
 			<MapObject ver="1" name="Entity80244040" id="5"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="550,230,125" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Cleft_03" id="4"/>
+			<MapObject ver="1" name="Cleft_03" id="4"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="80,177,160" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Cleft_02" id="3"/>
+			<MapObject ver="1" name="Cleft_02" id="3"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="360,208,100" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Goomba_01" id="2"/>
+			<MapObject ver="1" name="Goomba_01" id="2"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-350,190,150" yaw="0.000000">
-			<MapObject ver="1" name="NPC_Paragoomba_00" id="1"/>
+			<MapObject ver="1" name="Paragoomba_00" id="1"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>

@@ -9,7 +9,7 @@
      End
 }
    
-#import NPC_SpyGuy.mpat
+#import SpyGuy.mpat
 
 @ $NpcGroupList_80242310
 {
@@ -18,11 +18,11 @@
 00000001 $NpcGroup_80241C60 10020001 
 00000001 $NpcGroup_80241EC0 10010001 
 00000001 $NpcGroup_80242120 10050001 
-00000004 $NPC_SpyGuy 101A0001 
+00000004 $SpyGuy 101A0001 
 00000000 00000000 00000000 
 }
 
-@ $NPC_SpyGuy
+@ $SpyGuy
 {
 % npc IDs for main enemy and projectiles
 [000] 5

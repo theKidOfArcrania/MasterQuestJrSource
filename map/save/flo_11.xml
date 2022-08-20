@@ -96,8 +96,8 @@
 	</ZoneTree>
 	<MarkerTree>
 		<Node name="Root" id="16">
-			<Node name="NPC_Lakitu_00" id="FFFFFFFF"/>
-			<Node name="NPC_Lakitu_01" id="0"/>
+			<Node name="Lakitu_00" id="FFFFFFFF"/>
+			<Node name="Lakitu_01" id="0"/>
 			<Node name="Path_80241AEC" id="1"/>
 			<Node name="Path_80241B4C" id="2"/>
 			<Node name="Path_80241BAC" id="3"/>
@@ -115,10 +115,10 @@
 			<Node name="Entry6" id="F"/>
 			<Node name="Entry7" id="10"/>
 			<Node name="Entity802430F0" id="11"/>
-			<Node name="NPC_Bzzap1" id="12"/>
-			<Node name="NPC_Bzzap2" id="13"/>
-			<Node name="NPC_Bzzap3" id="14"/>
-			<Node name="NPC_Bzzap4" id="15"/>
+			<Node name="Bzzap1" id="12"/>
+			<Node name="Bzzap2" id="13"/>
+			<Node name="Bzzap3" id="14"/>
+			<Node name="Bzzap4" id="15"/>
 		</Node>
 	</MarkerTree>
 	<LightSets>
@@ -5873,22 +5873,22 @@
 			<MapObject ver="1" name="Root" id="16"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-150,60,150" yaw="90.000000">
-			<MapObject ver="1" name="NPC_Bzzap4" id="15"/>
+			<MapObject ver="1" name="Bzzap4" id="15"/>
 			<Movement type="Wander" data="FFFFFF6A,37,96,C8,0,FFFF8001,0,FFFFFF6A,32,96,12C,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-150,60,-150" yaw="90.000000">
-			<MapObject ver="1" name="NPC_Bzzap3" id="14"/>
+			<MapObject ver="1" name="Bzzap3" id="14"/>
 			<Movement type="Wander" data="FFFFFF6A,37,FFFFFF6A,C8,0,FFFF8001,0,FFFFFF6A,32,FFFFFF6A,12C,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="150,60,150" yaw="90.000000">
-			<MapObject ver="1" name="NPC_Bzzap2" id="13"/>
+			<MapObject ver="1" name="Bzzap2" id="13"/>
 			<Movement type="Wander" data="96,37,96,C8,0,FFFF8001,0,96,32,96,12C,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="150,60,-150" yaw="90.000000">
-			<MapObject ver="1" name="NPC_Bzzap1" id="12"/>
+			<MapObject ver="1" name="Bzzap1" id="12"/>
 			<Movement type="Wander" data="96,37,FFFFFF6A,C8,0,FFFF8001,0,96,32,FFFFFF6A,12C,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
@@ -5998,12 +5998,12 @@
 			</Path>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="553,60,52" yaw="270.000000">
-			<MapObject ver="1" name="NPC_Lakitu_01" id="0"/>
+			<MapObject ver="1" name="Lakitu_01" id="0"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="553,60,52" yaw="270.000000">
-			<MapObject ver="1" name="NPC_Lakitu_00" id="FFFFFFFF"/>
+			<MapObject ver="1" name="Lakitu_00" id="FFFFFFFF"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>

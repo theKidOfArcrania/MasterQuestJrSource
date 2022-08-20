@@ -230,8 +230,8 @@
 	</ZoneTree>
 	<MarkerTree>
 		<Node name="Root" id="7">
-			<Node name="NPC_Bubulb_00" id="FFFFFFFF"/>
-			<Node name="NPC_Bzzap_01" id="0"/>
+			<Node name="Bubulb_00" id="FFFFFFFF"/>
+			<Node name="Bzzap_01" id="0"/>
 			<Node name="Path_80243384" id="1"/>
 			<Node name="Entry0" id="2"/>
 			<Node name="Entry1" id="3"/>
@@ -6183,12 +6183,12 @@
 			</Path>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="-175,55,15" yaw="90.000000">
-			<MapObject ver="1" name="NPC_Bzzap_01" id="0"/>
+			<MapObject ver="1" name="Bzzap_01" id="0"/>
 			<Movement type="Wander" data="FFFFFF51,37,F,1E,0,FFFF8001,0,FFFFFF51,37,F,C8,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>
 		<Marker ver="2" type="NPC" pos="617,0,108" yaw="270.000000">
-			<MapObject ver="1" name="NPC_Bubulb_00" id="FFFFFFFF"/>
+			<MapObject ver="1" name="Bubulb_00" id="FFFFFFFF"/>
 			<Movement type="Stationary" data="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 			<Sprite sprite="0" palette="0" animations="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"/>
 		</Marker>

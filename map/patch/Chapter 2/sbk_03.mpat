@@ -18,20 +18,20 @@ $Script_Main_EnterWalk $EntryList 00000005 00000000
 
 @ $NpcGroup_802409C8
 {
-[08] ~Vec3f:NPC_Pokey_03
-[E0] ~Vec3d:NPC_Pokey_03
+[08] ~Vec3f:Pokey_03
+[E0] ~Vec3d:Pokey_03
 }
 
 @ $NpcGroup_802407D8
 {
-[08] ~Vec3f:NPC_Pokey_02
-[E0] ~Vec3d:NPC_Pokey_02
+[08] ~Vec3f:Pokey_02
+[E0] ~Vec3d:Pokey_02
 }
 
 @ $NpcGroup_802405E8
 {
-[08] ~Vec3f:NPC_Pokey_01
-[E0] ~Vec3d:NPC_Pokey_01
+[08] ~Vec3f:Pokey_01
+[E0] ~Vec3d:Pokey_01
 }
 
 @ $Script_802401F4
