@@ -456,9 +456,21 @@ Mario stomps on a single enemy[BR]
 using tons of attack power.[End]
 }
 
+#message:23:021
+{
+100\% Guaranteed not a Yoshi Egg![BR]
+Restores 5 HP.[End]
+}
+
 #message:24:021
 {
-100% Guaranteed not a Yoshi Egg![BR]
+100\% Guaranteed not a Yoshi Egg![BR]
+Restores 5 HP.[End]
+}
+
+#message:25:021
+{
+100\% Guaranteed not a Yoshi Egg![BR]
 Restores 5 HP.[End]
 }
 
