@@ -28,19 +28,19 @@
     "raster": "{dumpDir}/sprite/npc/src/3C/Palette_00.png"
   },
   "Palette_07.png": {
-    "palette": "{modDir}/sprite/patch/palette14",
+    "palette": "{modDir}/sprite/patch/palette13",
     "raster": "{modDir}/sprite/patch/raster3"
   },
   "Raster_00.png": {
-    "palette": "{modDir}/sprite/patch/palette15",
+    "palette": "{modDir}/sprite/patch/palette14",
     "raster": "{modDir}/sprite/patch/raster4"
   },
   "Raster_01.png": {
-    "palette": "{modDir}/sprite/patch/palette15",
+    "palette": "{modDir}/sprite/patch/palette14",
     "raster": "{modDir}/sprite/patch/raster5"
   },
   "Raster_02.png": {
-    "palette": "{modDir}/sprite/patch/palette15",
+    "palette": "{modDir}/sprite/patch/palette14",
     "raster": "{modDir}/sprite/patch/raster6"
   },
   "Raster_03.png": {
@@ -84,15 +84,15 @@
     "raster": "{dumpDir}/sprite/npc/src/3C/Raster_0C.png"
   },
   "Raster_0D.png": {
-    "palette": "{modDir}/sprite/patch/palette16",
+    "palette": "{modDir}/sprite/patch/palette15",
     "raster": "{dumpDir}/sprite/npc/src/3C/Palette_07.png"
   },
   "Raster_0E.png": {
-    "palette": "{modDir}/sprite/patch/palette16",
+    "palette": "{modDir}/sprite/patch/palette15",
     "raster": "{dumpDir}/sprite/npc/src/3C/Raster_0C.png"
   },
   "Raster_0F.png": {
-    "palette": "{modDir}/sprite/patch/palette16",
+    "palette": "{modDir}/sprite/patch/palette15",
     "raster": "{dumpDir}/sprite/npc/src/3C/Raster_0F.png"
   },
   "Raster_10.png": {

@@ -3,10 +3,6 @@
     "palette": "{dumpDir}/sprite/npc/src/01/Palette_00.png",
     "raster": "{dumpDir}/sprite/npc/src/01/Palette_00.png"
   },
-  "Palette_002.png": {
-    "palette": "{modDir}/sprite/patch/palette0",
-    "raster": "{dumpDir}/sprite/npc/src/01/Palette_00.png"
-  },
   "Palette_01.png": {
     "palette": "{dumpDir}/sprite/npc/src/01/Palette_01.png",
     "raster": "{dumpDir}/sprite/npc/src/01/Palette_00.png"

@@ -8,7 +8,7 @@
     "raster": "{dumpDir}/sprite/npc/src/37/Palette_00.png"
   },
   "Palette_02.png": {
-    "palette": "{modDir}/sprite/patch/palette12",
+    "palette": "{modDir}/sprite/patch/palette11",
     "raster": "{dumpDir}/sprite/npc/src/37/Palette_00.png"
   },
   "Palette_03.png": {

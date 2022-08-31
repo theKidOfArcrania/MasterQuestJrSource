@@ -16,7 +16,7 @@
     "raster": "{dumpDir}/sprite/npc/src/D6/Palette_00.png"
   },
   "Palette_04.png": {
-    "palette": "{modDir}/sprite/patch/palette63",
+    "palette": "{modDir}/sprite/patch/palette62",
     "raster": "{dumpDir}/sprite/npc/src/D6/Palette_00.png"
   },
   "Palette_05.png": {
@@ -24,7 +24,7 @@
     "raster": "{dumpDir}/sprite/npc/src/D6/Palette_00.png"
   },
   "Palette_06.png": {
-    "palette": "{modDir}/sprite/patch/palette64",
+    "palette": "{modDir}/sprite/patch/palette63",
     "raster": "{dumpDir}/sprite/npc/src/D6/Palette_00.png"
   },
   "Palette_07.png": {

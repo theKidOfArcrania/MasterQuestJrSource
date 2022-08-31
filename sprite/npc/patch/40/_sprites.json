@@ -4,11 +4,11 @@
     "raster": "{dumpDir}/sprite/npc/src/40/Palette_00.png"
   },
   "Palette_01.png": {
-    "palette": "{modDir}/sprite/patch/palette21",
+    "palette": "{modDir}/sprite/patch/palette20",
     "raster": "{modDir}/sprite/patch/raster8"
   },
   "Palette_02.png": {
-    "palette": "{modDir}/sprite/patch/palette22",
+    "palette": "{modDir}/sprite/patch/palette21",
     "raster": "{modDir}/sprite/patch/raster8"
   },
   "Palette_03.png": {
