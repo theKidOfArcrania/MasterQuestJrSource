@@ -44,8 +44,6 @@ class Raster(namedtuple('Raster', ['size', 'data'])):
         with open(raster_file, 'rb') as f:
             data = zlib.decompress(f.read())
         w, h = struct.unpack('<HH', data[:4])
-        w = i.width
-        h = i.height
         if len(data) != w * h + 4:
             print(f'ERROR: {raster_file}: raster file ({w}x{h}) size unexpected: {len(data)}')
             return None
