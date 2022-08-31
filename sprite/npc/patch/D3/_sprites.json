@@ -1,0 +1,14 @@
+{
+  "Palette_00.png": {
+    "palette": "{dumpDir}/sprite/npc/src/D3/Palette_00.png",
+    "raster": "{dumpDir}/sprite/npc/src/D3/Palette_00.png"
+  },
+  "Palette_01.png": {
+    "palette": "{dumpDir}/sprite/npc/src/D3/Palette_01.png",
+    "raster": "{dumpDir}/sprite/npc/src/D3/Palette_00.png"
+  },
+  "Raster_00.png": {
+    "palette": "{dumpDir}/sprite/npc/src/D3/Palette_00.png",
+    "raster": "{dumpDir}/sprite/npc/src/D3/Palette_00.png"
+  }
+}

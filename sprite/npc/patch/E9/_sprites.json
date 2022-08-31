@@ -1,0 +1,10 @@
+{
+  "Palette_00.png": {
+    "palette": "{dumpDir}/sprite/npc/src/E9/Palette_00.png",
+    "raster": "{dumpDir}/sprite/npc/src/E9/Palette_00.png"
+  },
+  "Raster_00.png": {
+    "palette": "{dumpDir}/sprite/npc/src/E9/Palette_00.png",
+    "raster": "{dumpDir}/sprite/npc/src/E9/Palette_00.png"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "Palette_00.png": {
+    "palette": "{modDir}/sprite/patch/palette70",
+    "raster": "{modDir}/sprite/patch/raster107"
+  },
+  "Palette_01.png": {
+    "palette": "{modDir}/sprite/patch/palette71",
+    "raster": "{modDir}/sprite/patch/raster108"
+  },
+  "Palette_02.png": {
+    "palette": "{modDir}/sprite/patch/palette72",
+    "raster": "{modDir}/sprite/patch/raster107"
+  },
+  "Raster_00.png": {
+    "palette": "{modDir}/sprite/patch/palette70",
+    "raster": "{modDir}/sprite/patch/raster107"
+  },
+  "Raster_01.png": {
+    "palette": "{modDir}/sprite/patch/palette70",
+    "raster": "{modDir}/sprite/patch/raster109"
+  },
+  "Raster_02.png": {
+    "palette": "{modDir}/sprite/patch/palette70",
+    "raster": "{modDir}/sprite/patch/raster110"
+  },
+  "Raster_03.png": {
+    "palette": "{modDir}/sprite/patch/palette70",
+    "raster": "{modDir}/sprite/patch/raster111"
+  },
+  "Raster_04.png": {
+    "palette": "{modDir}/sprite/patch/palette70",
+    "raster": "{modDir}/sprite/patch/raster112"
+  },
+  "Raster_05.png": {
+    "palette": "{modDir}/sprite/patch/palette73",
+    "raster": "{modDir}/sprite/patch/raster108"
+  }
+}

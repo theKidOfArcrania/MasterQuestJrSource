@@ -1,0 +1,22 @@
+{
+  "Palette_00.png": {
+    "palette": "{dumpDir}/sprite/npc/src/13/Palette_00.png",
+    "raster": "{dumpDir}/sprite/npc/src/13/Palette_00.png"
+  },
+  "Palette_01.png": {
+    "palette": "{dumpDir}/sprite/npc/src/13/Palette_01.png",
+    "raster": "{dumpDir}/sprite/npc/src/13/Palette_00.png"
+  },
+  "Raster_00.png": {
+    "palette": "{dumpDir}/sprite/npc/src/13/Palette_00.png",
+    "raster": "{dumpDir}/sprite/npc/src/13/Palette_00.png"
+  },
+  "Raster_01.png": {
+    "palette": "{dumpDir}/sprite/npc/src/13/Palette_00.png",
+    "raster": "{dumpDir}/sprite/npc/src/13/Raster_01.png"
+  },
+  "Raster_02.png": {
+    "palette": "{dumpDir}/sprite/npc/src/13/Palette_00.png",
+    "raster": "{dumpDir}/sprite/npc/src/13/Raster_0A.png"
+  }
+}

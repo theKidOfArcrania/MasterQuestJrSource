@@ -1,0 +1,62 @@
+{
+  "Palette_00.png": {
+    "palette": "{dumpDir}/sprite/npc/src/86/Palette_00.png",
+    "raster": "{dumpDir}/sprite/npc/src/86/Palette_00.png"
+  },
+  "Palette_01.png": {
+    "palette": "{dumpDir}/sprite/npc/src/86/Palette_01.png",
+    "raster": "{dumpDir}/sprite/npc/src/86/Palette_00.png"
+  },
+  "Palette_02.png": {
+    "palette": "{dumpDir}/sprite/npc/src/86/Palette_02.png",
+    "raster": "{dumpDir}/sprite/npc/src/86/Palette_00.png"
+  },
+  "Palette_03.png": {
+    "palette": "{dumpDir}/sprite/npc/src/86/Palette_03.png",
+    "raster": "{dumpDir}/sprite/npc/src/86/Palette_00.png"
+  },
+  "Raster_00.png": {
+    "palette": "{dumpDir}/sprite/npc/src/86/Palette_00.png",
+    "raster": "{dumpDir}/sprite/npc/src/86/Palette_00.png"
+  },
+  "Raster_01.png": {
+    "palette": "{dumpDir}/sprite/npc/src/86/Palette_00.png",
+    "raster": "{dumpDir}/sprite/npc/src/86/Raster_01.png"
+  },
+  "Raster_02.png": {
+    "palette": "{dumpDir}/sprite/npc/src/86/Palette_00.png",
+    "raster": "{dumpDir}/sprite/npc/src/86/Raster_02.png"
+  },
+  "Raster_03.png": {
+    "palette": "{dumpDir}/sprite/npc/src/86/Palette_00.png",
+    "raster": "{dumpDir}/sprite/npc/src/86/Raster_03.png"
+  },
+  "Raster_04.png": {
+    "palette": "{dumpDir}/sprite/npc/src/86/Palette_00.png",
+    "raster": "{dumpDir}/sprite/npc/src/86/Raster_04.png"
+  },
+  "Raster_05.png": {
+    "palette": "{dumpDir}/sprite/npc/src/86/Palette_00.png",
+    "raster": "{dumpDir}/sprite/npc/src/86/Raster_05.png"
+  },
+  "Raster_06.png": {
+    "palette": "{dumpDir}/sprite/npc/src/86/Palette_00.png",
+    "raster": "{dumpDir}/sprite/npc/src/86/Raster_06.png"
+  },
+  "Raster_07.png": {
+    "palette": "{dumpDir}/sprite/npc/src/86/Palette_00.png",
+    "raster": "{dumpDir}/sprite/npc/src/86/Raster_07.png"
+  },
+  "Raster_08.png": {
+    "palette": "{dumpDir}/sprite/npc/src/86/Palette_00.png",
+    "raster": "{dumpDir}/sprite/npc/src/86/Raster_08.png"
+  },
+  "Raster_09.png": {
+    "palette": "{dumpDir}/sprite/npc/src/86/Palette_00.png",
+    "raster": "{dumpDir}/sprite/npc/src/86/Raster_09.png"
+  },
+  "Raster_0A.png": {
+    "palette": "{dumpDir}/sprite/npc/src/86/Palette_00.png",
+    "raster": "{dumpDir}/sprite/npc/src/86/Raster_0A.png"
+  }
+}

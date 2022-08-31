@@ -1,0 +1,230 @@
+{
+  "Raster_00.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_00.png",
+    "raster": "{dumpDir}/sprite/player/src/06/Palette_00.png"
+  },
+  "Raster_01.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_00.png",
+    "raster": "{dumpDir}/sprite/player/src/06/reference/Raster_01.png"
+  },
+  "Raster_02.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_00.png",
+    "raster": "{dumpDir}/sprite/player/src/06/reference/Raster_02.png"
+  },
+  "Raster_03.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_00.png",
+    "raster": "{dumpDir}/sprite/player/src/06/reference/Raster_03.png"
+  },
+  "Raster_04.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_00.png",
+    "raster": "{dumpDir}/sprite/player/src/06/reference/Raster_04.png"
+  },
+  "Raster_05.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_00.png",
+    "raster": "{dumpDir}/sprite/player/src/06/reference/Raster_05.png"
+  },
+  "Raster_06.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_00.png",
+    "raster": "{dumpDir}/sprite/player/src/06/reference/Raster_06.png"
+  },
+  "Raster_07.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_00.png",
+    "raster": "{dumpDir}/sprite/player/src/06/reference/Raster_07.png"
+  },
+  "Raster_08.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_00.png",
+    "raster": "{dumpDir}/sprite/player/src/06/reference/Raster_08.png"
+  },
+  "Raster_09.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_00.png",
+    "raster": "{dumpDir}/sprite/player/src/06/reference/Raster_09.png"
+  },
+  "Raster_0A.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_00.png",
+    "raster": "{dumpDir}/sprite/player/src/06/reference/Raster_0A.png"
+  },
+  "Raster_0B.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_00.png",
+    "raster": "{dumpDir}/sprite/player/src/06/reference/Raster_0B.png"
+  },
+  "Raster_0C.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_04.png",
+    "raster": "{dumpDir}/sprite/player/src/03/Palette_04.png"
+  },
+  "Raster_0D.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_00.png",
+    "raster": "{dumpDir}/sprite/player/src/03/reference/Raster_25.png"
+  },
+  "Raster_0E.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_00.png",
+    "raster": "{dumpDir}/sprite/player/src/03/reference/Raster_26.png"
+  },
+  "Raster_0F.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_00.png",
+    "raster": "{dumpDir}/sprite/player/src/03/reference/Raster_27.png"
+  },
+  "Raster_10.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_00.png",
+    "raster": "{dumpDir}/sprite/player/src/03/reference/Raster_28.png"
+  },
+  "Raster_11.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_00.png",
+    "raster": "{dumpDir}/sprite/player/src/06/reference/Raster_11.png"
+  },
+  "Raster_12.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_00.png",
+    "raster": "{dumpDir}/sprite/player/src/06/reference/Raster_12.png"
+  },
+  "Raster_13.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_00.png",
+    "raster": "{dumpDir}/sprite/player/src/06/reference/Raster_13.png"
+  },
+  "Raster_14.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_00.png",
+    "raster": "{dumpDir}/sprite/player/src/06/reference/Raster_14.png"
+  },
+  "Raster_15.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_00.png",
+    "raster": "{dumpDir}/sprite/player/src/06/reference/Raster_15.png"
+  },
+  "Raster_16.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_00.png",
+    "raster": "{dumpDir}/sprite/player/src/06/reference/Raster_16.png"
+  },
+  "Raster_17.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_00.png",
+    "raster": "{dumpDir}/sprite/player/src/06/reference/Raster_17.png"
+  },
+  "Raster_18.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_00.png",
+    "raster": "{dumpDir}/sprite/player/src/06/reference/Raster_18.png"
+  },
+  "Raster_19.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_00.png",
+    "raster": "{dumpDir}/sprite/player/src/06/reference/Raster_19.png"
+  },
+  "Raster_1A.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_00.png",
+    "raster": "{dumpDir}/sprite/player/src/06/reference/Raster_1A.png"
+  },
+  "Raster_1B.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_00.png",
+    "raster": "{dumpDir}/sprite/player/src/06/reference/Raster_1B.png"
+  },
+  "Raster_1C.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_00.png",
+    "raster": "{dumpDir}/sprite/player/src/06/reference/Raster_1C.png"
+  },
+  "Raster_1D.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_00.png",
+    "raster": "{dumpDir}/sprite/player/src/06/reference/Raster_1D.png"
+  },
+  "Raster_1E.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_00.png",
+    "raster": "{dumpDir}/sprite/player/src/06/reference/Raster_1E.png"
+  },
+  "Raster_1F.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_00.png",
+    "raster": "{dumpDir}/sprite/player/src/03/reference/Raster_2C.png"
+  },
+  "Raster_20.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_00.png",
+    "raster": "{dumpDir}/sprite/player/src/06/reference/Raster_20.png"
+  },
+  "Raster_21.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_00.png",
+    "raster": "{dumpDir}/sprite/player/src/06/reference/Raster_21.png"
+  },
+  "Raster_22.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_04.png",
+    "raster": "{dumpDir}/sprite/player/src/06/reference/Raster_22.png"
+  },
+  "Raster_23.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_00.png",
+    "raster": "{dumpDir}/sprite/player/src/06/reference/Raster_23.png"
+  },
+  "Raster_24.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_00.png",
+    "raster": "{dumpDir}/sprite/player/src/06/reference/Raster_24.png"
+  },
+  "Raster_25.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_00.png",
+    "raster": "{dumpDir}/sprite/player/src/06/reference/Raster_25.png"
+  },
+  "Raster_26.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_00.png",
+    "raster": "{dumpDir}/sprite/player/src/06/reference/Raster_26.png"
+  },
+  "Raster_27.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_02.png",
+    "raster": "{dumpDir}/sprite/player/src/03/Palette_02.png"
+  },
+  "Raster_28.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_02.png",
+    "raster": "{dumpDir}/sprite/player/src/03/reference/Raster_32.png"
+  },
+  "Raster_29.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_02.png",
+    "raster": "{dumpDir}/sprite/player/src/06/reference/Raster_29.png"
+  },
+  "Raster_2A.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_02.png",
+    "raster": "{dumpDir}/sprite/player/src/04/reference/Raster_2C.png"
+  },
+  "Raster_2B.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_02.png",
+    "raster": "{dumpDir}/sprite/player/src/03/reference/Raster_35.png"
+  },
+  "Raster_2C.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_02.png",
+    "raster": "{dumpDir}/sprite/player/src/03/reference/Raster_36.png"
+  },
+  "Raster_2D.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_03.png",
+    "raster": "{dumpDir}/sprite/player/src/03/Palette_03.png"
+  },
+  "Raster_2E.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_03.png",
+    "raster": "{dumpDir}/sprite/player/src/03/reference/Raster_38.png"
+  },
+  "Raster_2F.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_03.png",
+    "raster": "{dumpDir}/sprite/player/src/06/reference/Raster_2F.png"
+  },
+  "Raster_30.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_03.png",
+    "raster": "{dumpDir}/sprite/player/src/03/reference/Raster_3A.png"
+  },
+  "Raster_31.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_03.png",
+    "raster": "{dumpDir}/sprite/player/src/06/reference/Raster_31.png"
+  },
+  "Raster_32.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_03.png",
+    "raster": "{dumpDir}/sprite/player/src/03/reference/Raster_3B.png"
+  },
+  "Raster_33.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_03.png",
+    "raster": "{dumpDir}/sprite/player/src/03/reference/Raster_3C.png"
+  },
+  "Raster_34.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_04.png",
+    "raster": "{dumpDir}/sprite/player/src/03/reference/Raster_3D.png"
+  },
+  "Raster_35.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_04.png",
+    "raster": "{dumpDir}/sprite/player/src/03/reference/Raster_3E.png"
+  },
+  "Raster_36.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_04.png",
+    "raster": "{dumpDir}/sprite/player/src/06/reference/Raster_36.png"
+  },
+  "Raster_37.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_04.png",
+    "raster": "{dumpDir}/sprite/player/src/03/reference/Raster_40.png"
+  },
+  "Raster_38.png": {
+    "palette": "{dumpDir}/sprite/player/src/01/Palette_04.png",
+    "raster": "{dumpDir}/sprite/player/src/06/reference/Raster_38.png"
+  }
+}

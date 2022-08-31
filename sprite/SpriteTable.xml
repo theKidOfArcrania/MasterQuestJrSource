@@ -234,15 +234,15 @@
 		<Sprite id="E7" src="E7" name="Parade Shy Guys"/>
 		<Sprite id="E8" src="E8" name="Parade Twink"/>
 		<Sprite id="E9" src="E9" name="Leaf"/>
-		<Sprite id="EA" src="../patch/EA Spiked Paragoomba" name="Spiked Paragoomba"/>
-		<Sprite id="EB" src="../patch/EB Bristle" name="Bristle"/>
-		<Sprite id="EC" src="../patch/EC Dark Bones" name="Dark Bones1"/>
-		<Sprite id="ED" src="../patch/ED Dark Bones" name="Dark Bones2"/>
-		<Sprite id="EE" src="../patch/EE Pokey" name="Pokeys"/>
-    <Sprite id="EF" src="../patch/EF Filler1" name="Filler1"/>
-		<Sprite id="F0" src="../patch/F0 Dark Koopatrol1" name="Dark Koopatrol1"/>
-		<Sprite id="F1" src="../patch/F1 Dark Koopatrol2" name="Dark Koopatrol2"/>
-		<Sprite id="F2" src="../patch/F2 PsychoGuy" name="PsychoGuy"/>
+		<Sprite id="EA" src="EA Spiked Paragoomba" name="Spiked Paragoomba"/>
+		<Sprite id="EB" src="EB Bristle" name="Bristle"/>
+		<Sprite id="EC" src="EC Dark Bones" name="Dark Bones1"/>
+		<Sprite id="ED" src="ED Dark Bones" name="Dark Bones2"/>
+		<Sprite id="EE" src="EE Pokey" name="Pokeys"/>
+    <Sprite id="EF" src="EF Filler1" name="Filler1"/>
+		<Sprite id="F0" src="F0 Dark Koopatrol1" name="Dark Koopatrol1"/>
+		<Sprite id="F1" src="F1 Dark Koopatrol2" name="Dark Koopatrol2"/>
+		<Sprite id="F2" src="F2 PsychoGuy" name="PsychoGuy"/>
 	</NpcSprites>
 	<PlayerSprites>
 		<Sprite id="1" src="01" name="Mario 1"/>
