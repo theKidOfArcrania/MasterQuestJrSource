@@ -324,8 +324,8 @@ where COMMANDS is a list of commands executed from left to right of the followin
   compile          Compile the mod into a *.z64 file. NOTE this does not always
                    compile the map files as well!
   compress-sprites Compress sprite data by referencing our original assets to
-                   minimize amount of game assets, writing to the
-                   /sprite/*/patch folders
+                   minimize amount of game assets, writing all compressed data
+                   to the /imagedata folder
   copy-assets      Copy all the dumped assets into the mod folder (and
                    potentially dumping the mods from the ROM if needed)
   expand-sprites   Expand sprite data from our patch files to populate the
