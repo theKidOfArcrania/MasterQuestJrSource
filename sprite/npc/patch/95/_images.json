@@ -1,0 +1,158 @@
+{
+  "Palette_00.png": {
+    "palette": "{idatDir}/palette_34c0a816c71eb061f72aa73939a1021aecbe0c5210012d1e8b7df8e8f99a5fb9",
+    "raster": "{idatDir}/raster_75261724e661be4fc08fd65928c0ac9b37a83a65ebbd5126dcc8e98addb7f775"
+  },
+  "Palette_01.png": {
+    "palette": "{idatDir}/palette_7af7c51d7281a4f04470814af914dbd702c1eddae75888512b9b57a2d1e736e8",
+    "raster": "{idatDir}/raster_75261724e661be4fc08fd65928c0ac9b37a83a65ebbd5126dcc8e98addb7f775"
+  },
+  "Palette_02.png": {
+    "palette": "{idatDir}/palette_c8e36d99aa99e77c90abd7b080792ad9d87f30b3223bc272804e5550684c374a",
+    "raster": "{idatDir}/raster_75261724e661be4fc08fd65928c0ac9b37a83a65ebbd5126dcc8e98addb7f775"
+  },
+  "Palette_03.png": {
+    "palette": "{idatDir}/palette_b788a5d2da99681c6a7c15b8c62ace3dd8a8ba7d2b629808696cb2da88c1bd41",
+    "raster": "{idatDir}/raster_75261724e661be4fc08fd65928c0ac9b37a83a65ebbd5126dcc8e98addb7f775"
+  },
+  "Raster_00.png": {
+    "palette": "{idatDir}/palette_ccdaa9fd2f9a7cea524535356864d1f65819fdebcf87e2d70f2e7304cb4c8f99",
+    "raster": "{idatDir}/raster_75261724e661be4fc08fd65928c0ac9b37a83a65ebbd5126dcc8e98addb7f775"
+  },
+  "Raster_01.png": {
+    "palette": "{idatDir}/palette_ccdaa9fd2f9a7cea524535356864d1f65819fdebcf87e2d70f2e7304cb4c8f99",
+    "raster": "{idatDir}/raster_5a1753b1fc56144a0a04494fb03649f16283773aac0236bddf6f20a9d48c0343"
+  },
+  "Raster_02.png": {
+    "palette": "{idatDir}/palette_ccdaa9fd2f9a7cea524535356864d1f65819fdebcf87e2d70f2e7304cb4c8f99",
+    "raster": "{idatDir}/raster_2a03031eee1841ec1460e89573a04f4b01045ef4c2e97d81253e68f0c5684e15"
+  },
+  "Raster_03.png": {
+    "palette": "{idatDir}/palette_ccdaa9fd2f9a7cea524535356864d1f65819fdebcf87e2d70f2e7304cb4c8f99",
+    "raster": "{idatDir}/raster_281b2d6fd1ab3e4d01dac55f28c5c2e4ec3193db4eeb8f088f553085c7081fe4"
+  },
+  "Raster_04.png": {
+    "palette": "{idatDir}/palette_ccdaa9fd2f9a7cea524535356864d1f65819fdebcf87e2d70f2e7304cb4c8f99",
+    "raster": "{idatDir}/raster_ff4e7bdc954b89333cde04e3a22b8508f3402f8c2679ed6dbe5c5ff32383edc3"
+  },
+  "Raster_05.png": {
+    "palette": "{idatDir}/palette_ccdaa9fd2f9a7cea524535356864d1f65819fdebcf87e2d70f2e7304cb4c8f99",
+    "raster": "{idatDir}/raster_26f6062ddcdbc4863386309790c4ec5b378ddf5732f05f43023ef52d80dfa816"
+  },
+  "Raster_06.png": {
+    "palette": "{idatDir}/palette_ccdaa9fd2f9a7cea524535356864d1f65819fdebcf87e2d70f2e7304cb4c8f99",
+    "raster": "{idatDir}/raster_d6f95f9e648b95de11fa737a7826abeb919744cd53a9dbbd6b4bad24b97e22f8"
+  },
+  "Raster_07.png": {
+    "palette": "{idatDir}/palette_ccdaa9fd2f9a7cea524535356864d1f65819fdebcf87e2d70f2e7304cb4c8f99",
+    "raster": "{idatDir}/raster_57ba9cc8f240a605ed38e7360cb65bfcbea04579604b665bd127e0f4e8d1aa5c"
+  },
+  "Raster_08.png": {
+    "palette": "{idatDir}/palette_ccdaa9fd2f9a7cea524535356864d1f65819fdebcf87e2d70f2e7304cb4c8f99",
+    "raster": "{dumpDir}/sprite/npc/src/95/Raster_08.png"
+  },
+  "Raster_09.png": {
+    "palette": "{idatDir}/palette_ccdaa9fd2f9a7cea524535356864d1f65819fdebcf87e2d70f2e7304cb4c8f99",
+    "raster": "{idatDir}/raster_643df231690a2897f5ff3e8f5c9353853ff691a407796d4de2a55b1293e48813"
+  },
+  "Raster_0A.png": {
+    "palette": "{idatDir}/palette_ccdaa9fd2f9a7cea524535356864d1f65819fdebcf87e2d70f2e7304cb4c8f99",
+    "raster": "{idatDir}/raster_220699d12f96a8a8e5474ec51e736c388709e9842be0ee010cb3f25450476cb8"
+  },
+  "Raster_0B.png": {
+    "palette": "{idatDir}/palette_ccdaa9fd2f9a7cea524535356864d1f65819fdebcf87e2d70f2e7304cb4c8f99",
+    "raster": "{idatDir}/raster_28ab7cd0d77a3d59b21656968c3cb1d53ec80ec86f699de68f32053cdfba541d"
+  },
+  "Raster_0C.png": {
+    "palette": "{idatDir}/palette_ccdaa9fd2f9a7cea524535356864d1f65819fdebcf87e2d70f2e7304cb4c8f99",
+    "raster": "{dumpDir}/sprite/npc/src/95/Raster_0C.png"
+  },
+  "Raster_0D.png": {
+    "palette": "{idatDir}/palette_ccdaa9fd2f9a7cea524535356864d1f65819fdebcf87e2d70f2e7304cb4c8f99",
+    "raster": "{dumpDir}/sprite/npc/src/95/Raster_0D.png"
+  },
+  "Raster_0E.png": {
+    "palette": "{idatDir}/palette_ccdaa9fd2f9a7cea524535356864d1f65819fdebcf87e2d70f2e7304cb4c8f99",
+    "raster": "{idatDir}/raster_b2a50cb7b3916d7ee000c020bc9e8b56c677fb45ac08b4b3dc92fe31f031961b"
+  },
+  "Raster_0F.png": {
+    "palette": "{idatDir}/palette_ccdaa9fd2f9a7cea524535356864d1f65819fdebcf87e2d70f2e7304cb4c8f99",
+    "raster": "{idatDir}/raster_8a0ce3a9b3b3e3149571d68932ec029b633a02a8277f6d27569b3e950d1d59f0"
+  },
+  "Raster_10.png": {
+    "palette": "{idatDir}/palette_ccdaa9fd2f9a7cea524535356864d1f65819fdebcf87e2d70f2e7304cb4c8f99",
+    "raster": "{idatDir}/raster_0bc3f276e4e1c89ae55f0a8755b023addfa26a1027d540add6a3f266420ea148"
+  },
+  "Raster_11.png": {
+    "palette": "{idatDir}/palette_ccdaa9fd2f9a7cea524535356864d1f65819fdebcf87e2d70f2e7304cb4c8f99",
+    "raster": "{idatDir}/raster_916424de86c00992b00a4b5ca3996fc82b7ce36e8dcdf84a1df52cacbd1562c6"
+  },
+  "Raster_12.png": {
+    "palette": "{idatDir}/palette_ccdaa9fd2f9a7cea524535356864d1f65819fdebcf87e2d70f2e7304cb4c8f99",
+    "raster": "{idatDir}/raster_2f23bebaf58e118119c35e3da0adb33998f6a1e4c5731e82529745fd328ae42b"
+  },
+  "Raster_13.png": {
+    "palette": "{idatDir}/palette_ccdaa9fd2f9a7cea524535356864d1f65819fdebcf87e2d70f2e7304cb4c8f99",
+    "raster": "{idatDir}/raster_b0b75303df2c3367f90bf0b3fcdc032c07edc1f89b8585476e921d6811b62328"
+  },
+  "Raster_14.png": {
+    "palette": "{idatDir}/palette_ccdaa9fd2f9a7cea524535356864d1f65819fdebcf87e2d70f2e7304cb4c8f99",
+    "raster": "{idatDir}/raster_5d45dec0f9e536d20fb9f777baa6e35848964a722be1bf79270df4d1ed4f6d10"
+  },
+  "Raster_15.png": {
+    "palette": "{idatDir}/palette_ccdaa9fd2f9a7cea524535356864d1f65819fdebcf87e2d70f2e7304cb4c8f99",
+    "raster": "{idatDir}/raster_4d084424ce093ebe467f457dc5c83f35ee964687072063e4d92bfa1e3d0bb623"
+  },
+  "Raster_16.png": {
+    "palette": "{idatDir}/palette_ccdaa9fd2f9a7cea524535356864d1f65819fdebcf87e2d70f2e7304cb4c8f99",
+    "raster": "{idatDir}/raster_ac484409c054fcf09a28d6134540fc822a5cdcf4476cf971db94d8f001ab82f1"
+  },
+  "Raster_17.png": {
+    "palette": "{idatDir}/palette_ccdaa9fd2f9a7cea524535356864d1f65819fdebcf87e2d70f2e7304cb4c8f99",
+    "raster": "{idatDir}/raster_960f5e69745ed18e3cfdfe7b2854ddbf4e5c379053a96d55f54ce63727f993ce"
+  },
+  "Raster_18.png": {
+    "palette": "{idatDir}/palette_ccdaa9fd2f9a7cea524535356864d1f65819fdebcf87e2d70f2e7304cb4c8f99",
+    "raster": "{idatDir}/raster_e6805e240d366e6695ba47319b513bab19d93290d578f3bfb84f8c023cbedfb3"
+  },
+  "Raster_19.png": {
+    "palette": "{idatDir}/palette_ccdaa9fd2f9a7cea524535356864d1f65819fdebcf87e2d70f2e7304cb4c8f99",
+    "raster": "{idatDir}/raster_72aec5ee09f1e372d9562b55fd455fef67245bad794ca8a01461ab88946437fb"
+  },
+  "Raster_1A.png": {
+    "palette": "{idatDir}/palette_ccdaa9fd2f9a7cea524535356864d1f65819fdebcf87e2d70f2e7304cb4c8f99",
+    "raster": "{idatDir}/raster_ef5a6b8181cbbe2507efd4075e076247ab242e72898d720d5cc7b1d5f77b870b"
+  },
+  "Raster_1B.png": {
+    "palette": "{idatDir}/palette_ccdaa9fd2f9a7cea524535356864d1f65819fdebcf87e2d70f2e7304cb4c8f99",
+    "raster": "{dumpDir}/sprite/npc/src/95/Raster_1B.png"
+  },
+  "Raster_1C.png": {
+    "palette": "{idatDir}/palette_ccdaa9fd2f9a7cea524535356864d1f65819fdebcf87e2d70f2e7304cb4c8f99",
+    "raster": "{dumpDir}/sprite/npc/src/95/Raster_1C.png"
+  },
+  "Raster_1D.png": {
+    "palette": "{idatDir}/palette_ccdaa9fd2f9a7cea524535356864d1f65819fdebcf87e2d70f2e7304cb4c8f99",
+    "raster": "{idatDir}/raster_1c85b8aa8e8e1df21484de5006572f55096d9699ee7c4c699e11882dfaedacd0"
+  },
+  "Raster_1E.png": {
+    "palette": "{idatDir}/palette_ccdaa9fd2f9a7cea524535356864d1f65819fdebcf87e2d70f2e7304cb4c8f99",
+    "raster": "{idatDir}/raster_dbe77da5c469ac67177072569388afbeef8f59cccead68e6ad4af8fb7211e80d"
+  },
+  "Raster_1F.png": {
+    "palette": "{idatDir}/palette_ccdaa9fd2f9a7cea524535356864d1f65819fdebcf87e2d70f2e7304cb4c8f99",
+    "raster": "{idatDir}/raster_c177efb3f881bbf3948f1ac22512358f958244e34fc9420d7f8a08e8dbc278f4"
+  },
+  "Raster_20.png": {
+    "palette": "{idatDir}/palette_ccdaa9fd2f9a7cea524535356864d1f65819fdebcf87e2d70f2e7304cb4c8f99",
+    "raster": "{idatDir}/raster_8fbfca42e4a5a0cb495ebeffafa6a5d32921d7e1c8377dcc4df9e46f9df0d8c2"
+  },
+  "Raster_21.png": {
+    "palette": "{idatDir}/palette_b788a5d2da99681c6a7c15b8c62ace3dd8a8ba7d2b629808696cb2da88c1bd41",
+    "raster": "{dumpDir}/sprite/npc/src/95/Raster_0C.png"
+  },
+  "Raster_22.png": {
+    "palette": "{idatDir}/palette_b788a5d2da99681c6a7c15b8c62ace3dd8a8ba7d2b629808696cb2da88c1bd41",
+    "raster": "{dumpDir}/sprite/npc/src/95/Raster_0D.png"
+  }
+}

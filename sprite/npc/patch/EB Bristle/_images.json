@@ -1,0 +1,38 @@
+{
+  "Palette_00.png": {
+    "palette": "{idatDir}/palette_b7e5ee6b3d65cf7f402086d285ba503607975a86345f7cf0dddcf1f519ffe974",
+    "raster": "{idatDir}/raster_de217712994080e57cda1b63c2abe8e339f0e8e7ab0d0370f04cee0e13093ac1"
+  },
+  "Palette_01.png": {
+    "palette": "{idatDir}/palette_441199137c11bec9d6ff4144c6c22c7d333df0f099418d56212d724b07e485cf",
+    "raster": "{idatDir}/raster_78ede237548446b4042afb15b91cfbbee7996e5204b2e4f2ee3e8fabe2eaf2a0"
+  },
+  "Palette_02.png": {
+    "palette": "{idatDir}/palette_663207073245fd7508a60eae016f9a32d2dfea92a93022ebc0de766637b9eb5d",
+    "raster": "{idatDir}/raster_de217712994080e57cda1b63c2abe8e339f0e8e7ab0d0370f04cee0e13093ac1"
+  },
+  "Raster_00.png": {
+    "palette": "{idatDir}/palette_b7e5ee6b3d65cf7f402086d285ba503607975a86345f7cf0dddcf1f519ffe974",
+    "raster": "{idatDir}/raster_de217712994080e57cda1b63c2abe8e339f0e8e7ab0d0370f04cee0e13093ac1"
+  },
+  "Raster_01.png": {
+    "palette": "{idatDir}/palette_b7e5ee6b3d65cf7f402086d285ba503607975a86345f7cf0dddcf1f519ffe974",
+    "raster": "{idatDir}/raster_54e0c7ba23772df48dc006e5a648acd11f8af2728a0a759d668136548e101c17"
+  },
+  "Raster_02.png": {
+    "palette": "{idatDir}/palette_b7e5ee6b3d65cf7f402086d285ba503607975a86345f7cf0dddcf1f519ffe974",
+    "raster": "{idatDir}/raster_281454d871ab1e495c32195ceba5e87b34ebc3aee5d46aa35a4d4e88a92d679a"
+  },
+  "Raster_03.png": {
+    "palette": "{idatDir}/palette_b7e5ee6b3d65cf7f402086d285ba503607975a86345f7cf0dddcf1f519ffe974",
+    "raster": "{idatDir}/raster_dbc598d3b154f72331e0d5638291293478d2647230b4745359ea720d1cb4a1a4"
+  },
+  "Raster_04.png": {
+    "palette": "{idatDir}/palette_b7e5ee6b3d65cf7f402086d285ba503607975a86345f7cf0dddcf1f519ffe974",
+    "raster": "{idatDir}/raster_eb6e24967193eed8974761be621882a9be86244c9aaf0b5b765a5855ef698e36"
+  },
+  "Raster_05.png": {
+    "palette": "{idatDir}/palette_e1a0cb92bc8f90787e4ad2b1bb35065aef8f6085a98ef6e89c2663b1c05de0ef",
+    "raster": "{idatDir}/raster_78ede237548446b4042afb15b91cfbbee7996e5204b2e4f2ee3e8fabe2eaf2a0"
+  }
+}

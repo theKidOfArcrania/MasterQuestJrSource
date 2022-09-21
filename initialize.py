@@ -1,7 +1,8 @@
 from bs4 import BeautifulSoup
 from collections import OrderedDict, namedtuple
 from subprocess import check_call
-from PIL import Image
+from PIL import Image, ImageFile
+from hashlib import sha256
 import json
 import shutil
 import os
@@ -19,8 +20,9 @@ if not os.path.isfile(STAR_ROD_PATH + '/cfg/main.cfg'):
 
 SCRIPT_PATH = os.path.realpath(os.path.dirname(__file__))
 
-# TODO: MAKE SURE StarRod is not running in background
+IMAGEDATA_PATH = f'{SCRIPT_PATH}/imagedata'
 
+# TODO: MAKE SURE StarRod is not running in background
 
 class Palette(namedtuple('PaletteData', ['colors', 'transparency'])):
     @classmethod
@@ -31,6 +33,10 @@ class Palette(namedtuple('PaletteData', ['colors', 'transparency'])):
             print(f'ERROR: {palette_file}: palette file size unexpected: {len(data)}')
             return None
         return cls(data[:256 * 3], data[256 * 3:256 * 4])
+
+    def gethash(self, nonce):
+        return sha256(self.colors + self.transparency +
+                struct.pack('<Q', nonce)).hexdigest()
 
     def tofile(self, file):
         with open(file, 'wb') as f:
@@ -54,6 +60,9 @@ class Raster(namedtuple('Raster', ['size', 'data'])):
         with open(file, 'wb') as f:
             f.write(zlib.compress(data, level=9))
 
+    def gethash(self, nonce):
+        return sha256(self.data + struct.pack('<Q', nonce)).hexdigest()
+
 class SpriteIndex:
     def __init__(self, cfg = None):
         self.__palettes = {}
@@ -64,7 +73,7 @@ class SpriteIndex:
         self.__files = {}
         self.props = {
             'dumpDir': self.dump_path,
-            'modDir': SCRIPT_PATH,
+            'idatDir': IMAGEDATA_PATH,
         }
 
         self.__init_index()
@@ -102,11 +111,24 @@ class SpriteIndex:
     def get_image_info(self, path):
         if path not in self.__files:
             i = Image.open(path)
+            try:
+                i.load()
+            except:
+                ImageFile.LOAD_TRUNCATED_IMAGES = True
+                print(f'{path}: Image truncated')
+                try:
+                    i.load()
+                finally:
+                    ImageFile.LOAD_TRUNCATED_IMAGES = False
+
             if i.mode != 'P':
                 print(f'{path}: not a 8-bit palette image')
                 return None
-            if list(i.info.keys()) != ['transparency']:
-                print(f'{path}: contains metadata other than just transparency!')
+
+            for name in i.info.keys():
+                if name not in ['transparency', 'icc_profile', 'dpi',
+                        'Raw profile type exif']:
+                    print(f'{path}: contains unknown metadata field: {name}')
 
             trans = i.info.get('transparency', b'\xff'* 256)
             if type(trans) is int:
@@ -125,7 +147,6 @@ def spriteIndex():
     if _spriteIndex == None:
         print('Indexing sprites...')
         _spriteIndex = SpriteIndex()
-        print('Finished indexing sprites...')
     return _spriteIndex
 
 def read_cfg():
@@ -156,7 +177,7 @@ def _expand_sprites(root_dir, path=''):
             _expand_sprites(root_dir, path + f)
         elif f.lower().endswith('.xml'): # Always copy xml files
             shutil.copy(patch_file, f'{root_dir}/src/{path}')
-        elif f.lower() == '_sprites.json': # For sprite images we do a rough differ
+        elif f.lower() == '_images.json': # For sprite images we do a rough differ
             # Load json file
             with open(patch_file, 'r') as f:
                 image_data = json.load(f)
@@ -203,23 +224,31 @@ def expand_sprites():
     for dir in sprite_dirs:
         _expand_sprites(SCRIPT_PATH + dir)
 
-def _compress_sprites(root_dir, path='', next_vals = None):
+def _compress_sprites(root_dir, path=''):
     idx = spriteIndex()
-    if next_vals == None:
-        next_vals = [0, 0]
     if path == '':
         shutil.rmtree(root_dir + '/patch', ignore_errors = True)
         os.mkdir(root_dir + '/patch')
-        os.makedirs(SCRIPT_PATH + '/sprite/patch', exist_ok=True)
+        os.makedirs(IMAGEDATA_PATH, exist_ok=True)
     else:
         path += '/'
     sprites = {}
+
+    def getuniqpath(dir, prefix, obj):
+        nonce = 0
+        curhash = obj.gethash(0)
+        while os.path.isfile(dir + '/' + prefix + curhash):
+            curhash = obj.gethash(nonce)
+            nonce += 1
+        return prefix + curhash
+
+
     for f in sorted(os.listdir(root_dir + '/src/' + path)):
         src_file = f'{root_dir}/src/{path}{f}'
         if os.path.isdir(src_file) and f.lower() not in ['cache', 'temp']:
             # Make directory in patch
             os.mkdir(f'{root_dir}/patch/{path}{f}')
-            _compress_sprites(root_dir, path + f, next_vals)
+            _compress_sprites(root_dir, path + f)
         elif f.lower().endswith('.xml'): # Always copy xml files
             shutil.copy(src_file, f'{root_dir}/patch/{path}')
         elif f.lower().endswith('.png'): # For sprite images we do a rough differ
@@ -233,27 +262,27 @@ def _compress_sprites(root_dir, path='', next_vals = None):
             rref = idx.get_raster_ref(r)
 
             if pref == None:
-                tmpfile = f'sprite/patch/palette{next_vals[0]}'
-                next_vals[0] += 1
-                p.tofile(f'{SCRIPT_PATH}/{tmpfile}')
-                pref = f'{{modDir}}/{tmpfile}'
+                tmpfile = getuniqpath(IMAGEDATA_PATH, 'palette_', p)
+                p.tofile(f'{IMAGEDATA_PATH}/{tmpfile}')
+                pref = f'{{idatDir}}/{tmpfile}'
                 idx.set_palette_ref(p, pref)
 
             if rref == None:
-                tmpfile = f'sprite/patch/raster{next_vals[1]}'
-                next_vals[1] += 1
-                r.tofile(f'{SCRIPT_PATH}/{tmpfile}')
-                rref = f'{{modDir}}/{tmpfile}'
+                tmpfile = getuniqpath(IMAGEDATA_PATH, 'raster_', r)
+                r.tofile(f'{IMAGEDATA_PATH}/{tmpfile}')
+                rref = f'{{idatDir}}/{tmpfile}'
                 idx.set_raster_ref(r, rref)
 
             sprites[f] = {'raster': rref, 'palette': pref}
         else:
             print(f'ERROR: Unexpected file: {root_dir}/src/{path}{f}' )
     if len(sprites):
-        with open(f'{root_dir}/patch/{path}/_sprites.json', 'w') as f:
+        with open(f'{root_dir}/patch/{path}/_images.json', 'w') as f:
             json.dump(sprites, f, indent=2, sort_keys=True)
 
 def compress_sprites():
+    spriteIndex()
+    print('Compressing sprites...')
     sprite_dirs = ['/sprite/npc', '/sprite/player']
     shutil.rmtree(SCRIPT_PATH + '/sprite/patch', ignore_errors = True)
     for dir in sprite_dirs:
@@ -306,45 +335,84 @@ where COMMANDS is a list of commands executed from left to right of the followin
 """.format(sys.argv[0]))
     quit()
 
+class Job:
+    def combine(self, other):
+        return False
+
+    def execute(self):
+        pass
+
+class StarRodJob:
+    def __init__(self, actions = []):
+        assert type(actions) == list
+        self.__actions = list(args)
+
+    def combine(self, other):
+        if isinstance(other, StarRodJob):
+            self.__actions += other.__args
+            return True
+        else:
+            return False
+
+    def execute(self):
+        if len(self.__actions):
+            args = ['java', '-jar', STAR_ROD_PATH + '/StarRod.jar']
+            args += self.__actions
+
+            cfg = read_cfg()
+            cfg_old = OrderedDict(cfg)
+            cfg['ModPath'] = SCRIPT_PATH
+            write_cfg(cfg)
+
+            try:
+                check_call(args)
+            finally:
+                write_cfg(cfg_old)
+
+class FnJob:
+    def __init__(self, fn):
+        self.__fn = fn
+
+    def execute(self):
+        self.__fn()
+
+copied = False
+def do_job(cmd):
+    global copied
+    if cmd == 'copy-assets':
+        if copied:
+            print('WARNING: multiple copy_assets will be ignored')
+            return None
+        copied = True
+        return StarRodJob(copy_assets())
+    elif cmd == 'compile-maps':
+        return StarRodJob(compile_map())
+    elif cmd == 'compile':
+        return StarRodJob(['-CompileMod'])
+    elif cmd == 'compress-sprites':
+        return FnJob(compress_sprites)
+    elif cmd == 'expand-sprites':
+        return FnJob(expand_sprites)
+    elif cmd == 'package':
+        return StarRodJob(['-PackageMod'])
+    elif cmd == 'help':
+        help()
+    else:
+        print(f'Illegal command: {cmd}')
+        quit()
+
 def main():
-    args = ['java', '-jar', STAR_ROD_PATH + '/StarRod.jar']
-    copied = False
+    jobs = []
     if len(sys.argv) <= 1:
         help()
     for cmd in sys.argv[1:]:
-        if cmd == 'copy-assets':
-            if copied:
-                print('WARNING: multiple copy_assets will be ignored')
-                continue
-            args += copy_assets()
-            copied = True
-        elif cmd == 'compile-maps':
-            args += compile_map()
-        elif cmd == 'compile':
-            args.append('-CompileMod')
-        elif cmd == 'compress-sprites':
-            # TODO: proper ordering
-            compress_sprites()
-        elif cmd == 'expand-sprites':
-            # TODO: proper ordering
-            expand_sprites()
-        elif cmd == 'package':
-            args.append('-PackageMod')
-        elif cmd == 'help':
-            help()
-        else:
-            print(f'Illegal command: {cmd}')
-            quit()
+        job = do_job(cmd)
+        if job == None: continue
+        if len(jobs) == 0 or not jobs[-1].combine(job):
+            jobs.append(job)
 
-    cfg = read_cfg()
-    cfg_old = OrderedDict(cfg)
-    cfg['ModPath'] = SCRIPT_PATH
-    write_cfg(cfg)
-
-    try:
-        check_call(args)
-    finally:
-        write_cfg(cfg_old)
+    for job in jobs:
+        job.execute()
 
 if __name__ == '__main__':
     main()

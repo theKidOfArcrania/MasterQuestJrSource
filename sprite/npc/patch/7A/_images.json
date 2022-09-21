@@ -1,0 +1,74 @@
+{
+  "Palette_00.png": {
+    "palette": "{dumpDir}/sprite/npc/src/7A/Palette_00.png",
+    "raster": "{dumpDir}/sprite/npc/src/7A/Palette_00.png"
+  },
+  "Palette_01.png": {
+    "palette": "{dumpDir}/sprite/npc/src/79/Palette_02.png",
+    "raster": "{dumpDir}/sprite/npc/src/7A/Palette_00.png"
+  },
+  "Palette_02.png": {
+    "palette": "{dumpDir}/sprite/npc/src/79/Palette_04.png",
+    "raster": "{dumpDir}/sprite/npc/src/7A/Palette_00.png"
+  },
+  "Palette_03.png": {
+    "palette": "{idatDir}/palette_2ec94660799f704dfd0516dbd75cfb461506b07f84e8a624c28b712329de05af",
+    "raster": "{dumpDir}/sprite/npc/src/7A/Palette_00.png"
+  },
+  "Raster_00.png": {
+    "palette": "{dumpDir}/sprite/npc/src/7A/Palette_00.png",
+    "raster": "{dumpDir}/sprite/npc/src/7A/Palette_00.png"
+  },
+  "Raster_01.png": {
+    "palette": "{dumpDir}/sprite/npc/src/7A/Palette_00.png",
+    "raster": "{dumpDir}/sprite/npc/src/7A/Raster_01.png"
+  },
+  "Raster_02.png": {
+    "palette": "{dumpDir}/sprite/npc/src/7A/Palette_00.png",
+    "raster": "{dumpDir}/sprite/npc/src/7A/Raster_02.png"
+  },
+  "Raster_03.png": {
+    "palette": "{dumpDir}/sprite/npc/src/7A/Palette_00.png",
+    "raster": "{dumpDir}/sprite/npc/src/7A/Raster_03.png"
+  },
+  "Raster_04.png": {
+    "palette": "{dumpDir}/sprite/npc/src/7A/Palette_00.png",
+    "raster": "{dumpDir}/sprite/npc/src/7A/Raster_04.png"
+  },
+  "Raster_05.png": {
+    "palette": "{dumpDir}/sprite/npc/src/7A/Palette_00.png",
+    "raster": "{dumpDir}/sprite/npc/src/7A/Raster_05.png"
+  },
+  "Raster_06.png": {
+    "palette": "{dumpDir}/sprite/npc/src/7A/Palette_00.png",
+    "raster": "{dumpDir}/sprite/npc/src/7A/Raster_06.png"
+  },
+  "Raster_07.png": {
+    "palette": "{dumpDir}/sprite/npc/src/7A/Palette_00.png",
+    "raster": "{dumpDir}/sprite/npc/src/7A/Raster_07.png"
+  },
+  "Raster_08.png": {
+    "palette": "{dumpDir}/sprite/npc/src/7A/Palette_00.png",
+    "raster": "{dumpDir}/sprite/npc/src/7A/Raster_08.png"
+  },
+  "Raster_09.png": {
+    "palette": "{dumpDir}/sprite/npc/src/7A/Palette_00.png",
+    "raster": "{dumpDir}/sprite/npc/src/7A/Raster_09.png"
+  },
+  "Raster_0A.png": {
+    "palette": "{dumpDir}/sprite/npc/src/7A/Palette_00.png",
+    "raster": "{dumpDir}/sprite/npc/src/7A/Raster_0A.png"
+  },
+  "Raster_0B.png": {
+    "palette": "{dumpDir}/sprite/npc/src/7A/Palette_00.png",
+    "raster": "{dumpDir}/sprite/npc/src/7A/Raster_0B.png"
+  },
+  "Raster_0C.png": {
+    "palette": "{dumpDir}/sprite/npc/src/7A/Palette_00.png",
+    "raster": "{dumpDir}/sprite/npc/src/7A/Raster_0C.png"
+  },
+  "Raster_0D.png": {
+    "palette": "{dumpDir}/sprite/npc/src/7A/Palette_00.png",
+    "raster": "{dumpDir}/sprite/npc/src/7A/Raster_0D.png"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "body1.png": {
+    "palette": "{idatDir}/palette_6ab1ca73bd21e29452c45dcaefd968e0042866ab545273822497304d766a78ab",
+    "raster": "{idatDir}/raster_5f2e699d7631230ed3ab1522db91a2ce3986d69d9746bd3a3de7fe92718ce874"
+  },
+  "body2.png": {
+    "palette": "{idatDir}/palette_6ab1ca73bd21e29452c45dcaefd968e0042866ab545273822497304d766a78ab",
+    "raster": "{idatDir}/raster_e8bd82ea1d826903515ab3ea0f608d8469b83acf3ba2ddfb04c66892098d9d2c"
+  },
+  "body3.png": {
+    "palette": "{idatDir}/palette_6ab1ca73bd21e29452c45dcaefd968e0042866ab545273822497304d766a78ab",
+    "raster": "{idatDir}/raster_7d0cac02f4978f34c5c2a7e735a2d79654f04b9f1ede14591ffecc360a99afa0"
+  },
+  "body4.png": {
+    "palette": "{idatDir}/palette_6ab1ca73bd21e29452c45dcaefd968e0042866ab545273822497304d766a78ab",
+    "raster": "{idatDir}/raster_fdff155548ca4c6d984b37dbf0c34e0ad8b27f7d0bb2573088edbe84744fe933"
+  },
+  "dizzy1.png": {
+    "palette": "{idatDir}/palette_6ab1ca73bd21e29452c45dcaefd968e0042866ab545273822497304d766a78ab",
+    "raster": "{idatDir}/raster_25596a5ca3395165998b86a4a9fe2398f9a56b42db823eedf2e7d0279de99e33"
+  },
+  "dizzy2.png": {
+    "palette": "{idatDir}/palette_6ab1ca73bd21e29452c45dcaefd968e0042866ab545273822497304d766a78ab",
+    "raster": "{idatDir}/raster_ee74e171f3d8ade45665e9ec661ab1fdabe336b20b680780f9a8653aa72537b4"
+  },
+  "dizzy3.png": {
+    "palette": "{idatDir}/palette_6ab1ca73bd21e29452c45dcaefd968e0042866ab545273822497304d766a78ab",
+    "raster": "{idatDir}/raster_7e24cdfc0764e45ef881378c1a1a81f6ce8998a8b39ca9f690136253cee342d2"
+  },
+  "leftwing1.png": {
+    "palette": "{idatDir}/palette_6ab1ca73bd21e29452c45dcaefd968e0042866ab545273822497304d766a78ab",
+    "raster": "{idatDir}/raster_b7e7177f87681748ede5eb2e984994ea2ed8ea4e166b89d4a45e992012b516e1"
+  },
+  "leftwing2.png": {
+    "palette": "{idatDir}/palette_6ab1ca73bd21e29452c45dcaefd968e0042866ab545273822497304d766a78ab",
+    "raster": "{idatDir}/raster_154cd588eb12832a5a57430e97e8c814d5c89728edd543cec1af24705100f3db"
+  },
+  "leftwing3.png": {
+    "palette": "{idatDir}/palette_6ab1ca73bd21e29452c45dcaefd968e0042866ab545273822497304d766a78ab",
+    "raster": "{idatDir}/raster_cb725ec90ede78ebebfe009813c5bc7b088bf041affd45f3dcdb4582f178c946"
+  },
+  "leftwing4.png": {
+    "palette": "{idatDir}/palette_6ab1ca73bd21e29452c45dcaefd968e0042866ab545273822497304d766a78ab",
+    "raster": "{idatDir}/raster_ecd5d10e7726a0eed629fa0f875fd7bbfd6417531b072a644453386827f85b5f"
+  },
+  "pain.png": {
+    "palette": "{idatDir}/palette_6ab1ca73bd21e29452c45dcaefd968e0042866ab545273822497304d766a78ab",
+    "raster": "{idatDir}/raster_3f0b02defc2500eddfd5201ccc9ffcf512067c0912a55c9d57a6963fd64400a2"
+  },
+  "pain2.png": {
+    "palette": "{idatDir}/palette_6ab1ca73bd21e29452c45dcaefd968e0042866ab545273822497304d766a78ab",
+    "raster": "{idatDir}/raster_afa32c624a276cf1ec9445bc109fc4401cc6486bf4c3ec27e3ea1cdf19300cfa"
+  },
+  "rightwing1.png": {
+    "palette": "{idatDir}/palette_6ab1ca73bd21e29452c45dcaefd968e0042866ab545273822497304d766a78ab",
+    "raster": "{idatDir}/raster_8360615f4fd92f91b99a2b88b37ffebceb1ddc94e31687ffbd988f968177bfbb"
+  },
+  "rightwing2.png": {
+    "palette": "{idatDir}/palette_6ab1ca73bd21e29452c45dcaefd968e0042866ab545273822497304d766a78ab",
+    "raster": "{idatDir}/raster_17aa5d89ead77546ab49eca36449375ea28d49a22d5d551ea2ded9ff3b46bdb4"
+  },
+  "rightwing3.png": {
+    "palette": "{idatDir}/palette_6ab1ca73bd21e29452c45dcaefd968e0042866ab545273822497304d766a78ab",
+    "raster": "{idatDir}/raster_396e54ec097141af0ff16560e86bb61b2e4ffae602407c0b5aba98800b684bed"
+  },
+  "rightwing4.png": {
+    "palette": "{idatDir}/palette_6ab1ca73bd21e29452c45dcaefd968e0042866ab545273822497304d766a78ab",
+    "raster": "{idatDir}/raster_df39c531b14bd23db30be35eac87c0fabe0298d41ebb1326bb464db86c87dda1"
+  },
+  "sleep.png": {
+    "palette": "{idatDir}/palette_6ab1ca73bd21e29452c45dcaefd968e0042866ab545273822497304d766a78ab",
+    "raster": "{idatDir}/raster_89b571331071cc2a3eb0b8c771f26ef51f77fbcf64b88e7e6f6d836466ef0666"
+  }
+}
