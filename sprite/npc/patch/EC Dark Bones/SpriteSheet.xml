@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<SpriteSheet a="3" b="4">
+<?xml version="1.0" encoding="UTF-8"?>
+<SpriteSheet maxComponents="3" paletteGroups="4">
     <PaletteList>
         <Palette id="00" src="body1.png"/>
     </PaletteList>

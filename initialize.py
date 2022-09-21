@@ -126,7 +126,7 @@ class SpriteIndex:
                 return None
 
             for name in i.info.keys():
-                if name not in ['transparency', 'icc_profile', 'dpi',
+                if name not in ['transparency', 'icc_profile', 'dpi', 'srgb',
                         'Raw profile type exif']:
                     print(f'{path}: contains unknown metadata field: {name}')
 
@@ -284,7 +284,7 @@ def compress_sprites():
     spriteIndex()
     print('Compressing sprites...')
     sprite_dirs = ['/sprite/npc', '/sprite/player']
-    shutil.rmtree(SCRIPT_PATH + '/sprite/patch', ignore_errors = True)
+    shutil.rmtree(IMAGEDATA_PATH, ignore_errors = True)
     for dir in sprite_dirs:
         if not os.path.isdir(SCRIPT_PATH + dir + '/src'):
             print(f'ERROR: {dir}/src: not a directory')
@@ -345,7 +345,7 @@ class Job:
 class StarRodJob:
     def __init__(self, actions = []):
         assert type(actions) == list
-        self.__actions = list(args)
+        self.__actions = list(actions)
 
     def combine(self, other):
         if isinstance(other, StarRodJob):

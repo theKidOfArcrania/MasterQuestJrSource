@@ -20,7 +20,7 @@
     "raster": "{dumpDir}/sprite/npc/src/7D/Palette_04.png"
   },
   "Palette_05.png": {
-    "palette": "{idatDir}/palette_c3b2012290b16d5de78e19688f08936d7c853172f85e496862b704b5f83971cd",
+    "palette": "{idatDir}/palette_c6ec5db6f0a591aac0c4add474c70dc6bafd31317598ee7a933a70122d4ac97c",
     "raster": "{dumpDir}/sprite/npc/src/7D/Palette_00.png"
   },
   "Raster_00.png": {
