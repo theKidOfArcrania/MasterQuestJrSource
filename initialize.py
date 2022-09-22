@@ -3,6 +3,7 @@ from collections import OrderedDict, namedtuple
 from subprocess import check_call
 from PIL import Image, ImageFile
 from hashlib import sha256
+import enum
 import json
 import shutil
 import os
@@ -42,28 +43,45 @@ class Palette(namedtuple('PaletteData', ['colors', 'transparency'])):
         with open(file, 'wb') as f:
             f.write(zlib.compress(self.colors + self.transparency, level=9))
 
+class RasterModes(enum.Enum):
+    P = (1, 1)
+    RGB = (2, 3)
+    RGBA = (3, 4)
+    @property
+    def id(self): return self.value[0]
+    @property
+    def stride(self): return self.value[1]
 
+name_to_modes = RasterModes.__members__
+id_to_modes = {v.id: v for v in name_to_modes.values()}
 
-class Raster(namedtuple('Raster', ['size', 'data'])):
+class Raster(namedtuple('Raster', ['size', 'mode', 'data'])):
+    __header = struct.Struct('<HHB')
+
     @classmethod
     def fromfile(cls, raster_file=''):
         with open(raster_file, 'rb') as f:
             data = zlib.decompress(f.read())
-        w, h = struct.unpack('<HH', data[:4])
-        if len(data) != w * h + 4:
-            print(f'ERROR: {raster_file}: raster file ({w}x{h}) size unexpected: {len(data)}')
+        hdr_sz = cls.__header.size
+        w, h, mode = cls.__header.unpack(data[:hdr_sz])
+        if mode not in id_to_modes:
+            print(f'ERROR: {raster_file}: Invalid mode number: {mode}')
+        mode = id_to_modes[mode]
+        if len(data) != w * h * mode.stride + hdr_sz:
+            print(f'ERROR: {raster_file}: {mode.name} raster file ({w}x{h}) size unexpected: {len(data)}')
             return None
-        return cls((w, h), data[4:])
+        return cls((w, h), mode, data[hdr_sz:])
 
     def tofile(self, file):
-        data = struct.pack('<HH', self.size[0], self.size[1]) + self.data
+        data = type(self).__header.pack(self.size[0], self.size[1],
+                self.mode.id) + self.data
         with open(file, 'wb') as f:
             f.write(zlib.compress(data, level=9))
 
     def gethash(self, nonce):
         return sha256(self.data + struct.pack('<Q', nonce)).hexdigest()
 
-class SpriteIndex:
+class ImageIndex:
     def __init__(self, cfg = None):
         self.__palettes = {}
         self.__rasters = {}
@@ -76,7 +94,8 @@ class SpriteIndex:
             'idatDir': IMAGEDATA_PATH,
         }
 
-        self.__init_index()
+        self.__init_index('sprite')
+        self.__init_index('image')
 
     @property
     def dump_path(self): return self.__dumpPath
@@ -91,7 +110,7 @@ class SpriteIndex:
             if info == None: return
             p, r = info
             f = '{dumpDir}/' + dir
-            if p not in self.__palettes:
+            if p != None and p not in self.__palettes:
                 self.__palettes[p] = f
             if r not in self.__rasters:
                 self.__rasters[r] = f
@@ -121,33 +140,43 @@ class SpriteIndex:
                 finally:
                     ImageFile.LOAD_TRUNCATED_IMAGES = False
 
-            if i.mode != 'P':
-                print(f'{path}: not a 8-bit palette image')
-                return None
-
             for name in i.info.keys():
                 if name not in ['transparency', 'icc_profile', 'dpi', 'srgb',
                         'Raw profile type exif']:
                     print(f'{path}: contains unknown metadata field: {name}')
 
-            trans = i.info.get('transparency', b'\xff'* 256)
-            if type(trans) is int:
-                tp = [0xff] * 256
-                tp[trans] = 0
-                trans = bytes(tp)
-            p = Palette(bytes(i.getpalette()), trans)
-            r = Raster(i.size, i.tobytes())
+            if i.mode not in name_to_modes:
+                print(f'{path}: invalid image mode: {i.mode}.')
+                self.__files[path] = None
+                return None
+
+            mode = name_to_modes[i.mode]
+            if mode == RasterModes.P:
+                trans = i.info.get('transparency', b'\xff'* 256)
+                if type(trans) is int:
+                    tp = [0xff] * 256
+                    tp[trans] = 0
+                    trans = bytes(tp)
+                p = Palette(bytes(i.getpalette()), trans)
+            else:
+                assert mode == RasterModes.RGB or mode == RasterModes.RGBA
+                if 'transparency' in i.info.keys():
+                    print(f'{path}: contains unknown metadata field: {name}')
+                p = None
+
+            r = Raster(i.size, mode, i.tobytes())
             self.__files[path] = (p, r)
 
         return self.__files[path]
 
-_spriteIndex = None
-def spriteIndex():
-    global _spriteIndex
-    if _spriteIndex == None:
-        print('Indexing sprites...')
-        _spriteIndex = SpriteIndex()
-    return _spriteIndex
+_imageIndex = None
+def imageIndex():
+    global _imageIndex
+    if _imageIndex == None:
+        print('Indexing images...')
+        _imageIndex = ImageIndex()
+        print('Completed indexing images.')
+    return _imageIndex
 
 def read_cfg():
     res = OrderedDict()
@@ -184,18 +213,18 @@ def _expand_sprites(root_dir, path=''):
 
             for (img_file, desc) in image_data.items():
                 # Load palette/transparency information
-                palette_file = desc['palette'].format(**spriteIndex().props)
+                palette_file = desc['palette'].format(**imageIndex().props)
                 if palette_file.lower().endswith('.png'):
-                    palette = spriteIndex().get_image_info(palette_file)[0]
+                    palette = imageIndex().get_image_info(palette_file)[0]
                 else:
                     palette = Palette.fromfile(palette_file)
                     if palette == None:
                         continue
 
                 # Load raster information
-                raster_file = desc['raster'].format(**spriteIndex().props)
+                raster_file = desc['raster'].format(**imageIndex().props)
                 if raster_file.lower().endswith('.png'):
-                    raster = spriteIndex().get_image_info(raster_file)[1]
+                    raster = imageIndex().get_image_info(raster_file)[1]
                 else:
                     raster = Raster.fromfile(raster_file)
                     if raster == None:
@@ -225,7 +254,7 @@ def expand_sprites():
         _expand_sprites(SCRIPT_PATH + dir)
 
 def _compress_sprites(root_dir, path=''):
-    idx = spriteIndex()
+    idx = imageIndex()
     if path == '':
         shutil.rmtree(root_dir + '/patch', ignore_errors = True)
         os.mkdir(root_dir + '/patch')
@@ -281,7 +310,7 @@ def _compress_sprites(root_dir, path=''):
             json.dump(sprites, f, indent=2, sort_keys=True)
 
 def compress_sprites():
-    spriteIndex()
+    imageIndex()
     print('Compressing sprites...')
     sprite_dirs = ['/sprite/npc', '/sprite/player']
     shutil.rmtree(IMAGEDATA_PATH, ignore_errors = True)
