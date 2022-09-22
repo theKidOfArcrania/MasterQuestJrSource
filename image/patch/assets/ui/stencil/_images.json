@@ -1,0 +1,18 @@
+{
+  "blurry.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/stencil/blurry.png"
+  },
+  "mario_head.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/stencil/mario_head.png"
+  },
+  "sharp.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/stencil/sharp.png"
+  },
+  "star.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/stencil/star.png"
+  }
+}
