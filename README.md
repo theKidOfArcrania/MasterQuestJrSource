@@ -45,6 +45,4 @@ Which both cases does the exact same thing. Note that compile does not always
 compile map objects also.
 
 ## Credits
-
-thamz
-
+Emperor\_Thamz, Rainchus, JaThePlayer, Brotenko, theKidOfArcrania
