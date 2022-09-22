@@ -1,0 +1,146 @@
+{
+  "kzn_fpack_headtif.png": {
+    "palette": "{dumpDir}/image/texture/kzn_tex/kzn_fpack_headtif.png",
+    "raster": "{dumpDir}/image/texture/kzn_tex/kzn_fpack_headtif.png"
+  },
+  "kzn_fpack_kuki0tif.png": {
+    "palette": "{dumpDir}/image/texture/kzn_tex/kzn_fpack_kuki0tif.png",
+    "raster": "{dumpDir}/image/texture/kzn_tex/kzn_fpack_kuki0tif.png"
+  },
+  "kzn_fpack_kuki1tif.png": {
+    "palette": "{dumpDir}/image/texture/kzn_tex/kzn_fpack_kuki1tif.png",
+    "raster": "{dumpDir}/image/texture/kzn_tex/kzn_fpack_kuki1tif.png"
+  },
+  "kzn_fpack_shokushutif.png": {
+    "palette": "{dumpDir}/image/texture/kzn_tex/kzn_fpack_shokushutif.png",
+    "raster": "{dumpDir}/image/texture/kzn_tex/kzn_fpack_shokushutif.png"
+  },
+  "pra_batutif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/pra_tex/pra_batutif.png"
+  },
+  "pra_gabonn_1tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/pra_tex/pra_gabonn_1tif.png"
+  },
+  "pra_gabonn_2tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/pra_tex/pra_gabonn_2tif.png"
+  },
+  "pra_grayframetif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_grayframetif.png"
+  },
+  "pra_hansya3tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/pra_tex/pra_hansya3tif.png"
+  },
+  "pra_hatenatif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/isk_tex/isk_hatenatif.png"
+  },
+  "pra_ice_dossuntif.png": {
+    "palette": "{dumpDir}/image/texture/pra_tex/pra_ice_dossuntif.png",
+    "raster": "{dumpDir}/image/texture/pra_tex/pra_ice_dossuntif.png"
+  },
+  "pra_odo_iwahashi3tif.png": {
+    "palette": "{dumpDir}/image/texture/pra_tex/pra_odo_iwahashi3tif.png",
+    "raster": "{dumpDir}/image/texture/pra_tex/pra_odo_iwahashi3tif.png"
+  },
+  "pra_odo_iwatif.png": {
+    "palette": "{dumpDir}/image/texture/pra_tex/pra_odo_iwatif.png",
+    "raster": "{dumpDir}/image/texture/pra_tex/pra_odo_iwatif.png"
+  },
+  "pra_pen_snow2tif.png": {
+    "palette": "{dumpDir}/image/texture/pra_tex/pra_pen_snow2tif.png",
+    "raster": "{dumpDir}/image/texture/pra_tex/pra_pen_snow2tif.png"
+  },
+  "pra_pen_snowtif.png": {
+    "palette": "{dumpDir}/image/texture/pra_tex/pra_pen_snowtif.png",
+    "raster": "{dumpDir}/image/texture/pra_tex/pra_pen_snowtif.png"
+  },
+  "pra_pra_ana_atif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/pra_tex/pra_pra_ana_atif.png"
+  },
+  "pra_pra_daitif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/pra_tex/pra_pra_daitif.png"
+  },
+  "pra_pra_doortif.png": {
+    "palette": "{dumpDir}/image/texture/pra_tex/pra_pra_doortif.png",
+    "raster": "{dumpDir}/image/texture/pra_tex/pra_pra_doortif.png"
+  },
+  "pra_pra_field3tif.png": {
+    "palette": "{dumpDir}/image/texture/pra_tex/pra_pra_field3tif.png",
+    "raster": "{dumpDir}/image/texture/pra_tex/pra_pra_field3tif.png"
+  },
+  "pra_pra_hari_btif.png": {
+    "palette": "{dumpDir}/image/texture/pra_tex/pra_pra_hari_btif.png",
+    "raster": "{dumpDir}/image/texture/pra_tex/pra_pra_hari_btif.png"
+  },
+  "pra_pra_hashi1_itif.png": {
+    "palette": "{dumpDir}/image/texture/pra_tex/pra_pra_hashi1_itif.png",
+    "raster": "{dumpDir}/image/texture/pra_tex/pra_pra_hashi1_itif.png"
+  },
+  "pra_pra_hashi2_atif.png": {
+    "palette": "{dumpDir}/image/texture/pra_tex/pra_pra_hashi2_atif.png",
+    "raster": "{dumpDir}/image/texture/pra_tex/pra_pra_hashi2_atif.png"
+  },
+  "pra_pra_hashira3_btif.png": {
+    "palette": "{dumpDir}/image/texture/pra_tex/pra_pra_hashira3_btif.png",
+    "raster": "{dumpDir}/image/texture/pra_tex/pra_pra_hashira3_btif.png"
+  },
+  "pra_pra_hashira5tif.png": {
+    "palette": "{dumpDir}/image/texture/pra_tex/pra_pra_hashira5tif.png",
+    "raster": "{dumpDir}/image/texture/pra_tex/pra_pra_hashira5tif.png"
+  },
+  "pra_pra_hashira_btif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/pra_tex/pra_pra_hashira_btif.png"
+  },
+  "pra_pra_hashiratif.png": {
+    "palette": "{dumpDir}/image/texture/pra_tex/pra_pra_hashiratif.png",
+    "raster": "{dumpDir}/image/texture/pra_tex/pra_pra_hashiratif.png"
+  },
+  "pra_pra_icetif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/pra_tex/pra_pra_icetif.png"
+  },
+  "pra_pra_rennga02tif.png": {
+    "palette": "{dumpDir}/image/texture/pra_tex/pra_pra_rennga02tif.png",
+    "raster": "{dumpDir}/image/texture/pra_tex/pra_pra_rennga02tif.png"
+  },
+  "pra_pra_tenjou2tif.png": {
+    "palette": "{dumpDir}/image/texture/pra_tex/pra_pra_tenjou2tif.png",
+    "raster": "{dumpDir}/image/texture/pra_tex/pra_pra_tenjou2tif.png"
+  },
+  "pra_pra_walltif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/pra_tex/pra_pra_walltif.png"
+  },
+  "pra_pra_zoumetif.png": {
+    "palette": "{dumpDir}/image/texture/pra_tex/pra_pra_zoumetif.png",
+    "raster": "{dumpDir}/image/texture/pra_tex/pra_pra_zoumetif.png"
+  },
+  "pra_pra_zoushitatif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/pra_tex/pra_pra_zoushitatif.png"
+  },
+  "pra_pra_zoutogetif.png": {
+    "palette": "{dumpDir}/image/texture/pra_tex/pra_pra_zoutogetif.png",
+    "raster": "{dumpDir}/image/texture/pra_tex/pra_pra_zoutogetif.png"
+  },
+  "pra_pra_zouuetif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/pra_tex/pra_pra_zouuetif.png"
+  },
+  "pra_s_yama1tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/pra_tex/pra_s_yama1tif.png"
+  },
+  "pra_s_yama3tif.png": {
+    "palette": "{dumpDir}/image/texture/pra_tex/pra_s_yama3tif.png",
+    "raster": "{dumpDir}/image/texture/pra_tex/pra_s_yama3tif.png"
+  }
+}

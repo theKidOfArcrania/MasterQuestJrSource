@@ -1,0 +1,434 @@
+{
+  "1DC210.png": {
+    "palette": "{dumpDir}/image/assets/item/key/1DC210.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "1DC430.png": {
+    "palette": "{dumpDir}/image/assets/item/key/1DC210.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "1DC650.png": {
+    "palette": "{dumpDir}/image/assets/item/key/1DC210.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "1DC870.png": {
+    "palette": "{dumpDir}/image/assets/item/key/1DC210.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "EmptyBook.png": {
+    "palette": "{dumpDir}/image/assets/item/key/EmptyBook.png",
+    "raster": "{dumpDir}/image/assets/item/key/EmptyBook.png"
+  },
+  "EmptyBook_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/key/EmptyBook_alt.png",
+    "raster": "{dumpDir}/image/assets/item/key/EmptyBook.png"
+  },
+  "Letter.png": {
+    "palette": "{dumpDir}/image/assets/item/key/Letter.png",
+    "raster": "{dumpDir}/image/assets/item/key/Letter.png"
+  },
+  "Letter_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/key/Letter_alt.png",
+    "raster": "{dumpDir}/image/assets/item/key/Letter.png"
+  },
+  "LongLetter.png": {
+    "palette": "{dumpDir}/image/assets/item/key/LongLetter.png",
+    "raster": "{dumpDir}/image/assets/item/key/LongLetter.png"
+  },
+  "LongLetter_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/key/LongLetter_alt.png",
+    "raster": "{dumpDir}/image/assets/item/key/LongLetter.png"
+  },
+  "Postcard.png": {
+    "palette": "{dumpDir}/image/assets/item/key/Postcard.png",
+    "raster": "{dumpDir}/image/assets/item/key/Postcard.png"
+  },
+  "Postcard_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/key/Postcard_alt.png",
+    "raster": "{dumpDir}/image/assets/item/key/Postcard.png"
+  },
+  "TealLetter.png": {
+    "palette": "{dumpDir}/image/assets/item/key/TealLetter.png",
+    "raster": "{dumpDir}/image/assets/item/08E.png"
+  },
+  "TealLetter_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/key/TealLetter_alt.png",
+    "raster": "{dumpDir}/image/assets/item/08E.png"
+  },
+  "TravellersParasol.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/Parasol.png",
+    "raster": "{dumpDir}/image/assets/item/battle/Parasol.png"
+  },
+  "TravellersParasol_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/Parasol_alt.png",
+    "raster": "{dumpDir}/image/assets/item/battle/Parasol.png"
+  },
+  "artifact.png": {
+    "palette": "{dumpDir}/image/assets/item/key/artifact.png",
+    "raster": "{dumpDir}/image/assets/item/key/artifact.png"
+  },
+  "boo_portrait.png": {
+    "palette": "{dumpDir}/image/assets/item/key/boo_portrait.png",
+    "raster": "{dumpDir}/image/assets/item/key/boo_portrait.png"
+  },
+  "boo_record.png": {
+    "palette": "{dumpDir}/image/assets/item/key/boo_record.png",
+    "raster": "{dumpDir}/image/assets/item/key/boo_record.png"
+  },
+  "boo_record_mask.png": {
+    "palette": "{dumpDir}/sprite/npc/src/D6/Palette_03.png",
+    "raster": "{dumpDir}/image/assets/item/key/boo_record_mask.png"
+  },
+  "boo_weight.png": {
+    "palette": "{dumpDir}/image/assets/item/key/boo_weight.png",
+    "raster": "{dumpDir}/image/assets/item/key/boo_weight.png"
+  },
+  "book_cook.png": {
+    "palette": "{dumpDir}/image/assets/item/key/book_cook.png",
+    "raster": "{dumpDir}/image/assets/item/key/book_cook.png"
+  },
+  "book_lyrics.png": {
+    "palette": "{dumpDir}/image/assets/item/key/book_lyrics.png",
+    "raster": "{dumpDir}/image/assets/item/key/book_lyrics.png"
+  },
+  "book_melody.png": {
+    "palette": "{dumpDir}/image/assets/item/key/book_melody.png",
+    "raster": "{dumpDir}/image/assets/item/key/book_melody.png"
+  },
+  "cake_baked.png": {
+    "palette": "{dumpDir}/image/assets/item/key/cake_baked.png",
+    "raster": "{dumpDir}/image/assets/item/key/cake_baked.png"
+  },
+  "cake_batter.png": {
+    "palette": "{dumpDir}/image/assets/item/key/cake_batter.png",
+    "raster": "{dumpDir}/image/assets/item/key/cake_batter.png"
+  },
+  "cake_berries.png": {
+    "palette": "{dumpDir}/image/assets/item/key/cake_baked.png",
+    "raster": "{dumpDir}/image/assets/item/key/cake_berries.png"
+  },
+  "cake_bowl.png": {
+    "palette": "{dumpDir}/image/assets/item/key/cake_baked.png",
+    "raster": "{dumpDir}/image/assets/item/key/cake_bowl.png"
+  },
+  "cake_done.png": {
+    "palette": "{dumpDir}/image/assets/item/key/cake_baked.png",
+    "raster": "{dumpDir}/image/assets/item/key/cake_done.png"
+  },
+  "cake_icing.png": {
+    "palette": "{dumpDir}/image/assets/item/key/cake_baked.png",
+    "raster": "{dumpDir}/image/assets/item/key/cake_icing.png"
+  },
+  "cake_mix.png": {
+    "palette": "{dumpDir}/image/assets/item/key/cake_mix.png",
+    "raster": "{dumpDir}/image/assets/item/key/cake_mix.png"
+  },
+  "cake_pan.png": {
+    "palette": "{dumpDir}/image/assets/item/key/cake_baked.png",
+    "raster": "{dumpDir}/image/assets/item/key/cake_pan.png"
+  },
+  "calculator.png": {
+    "palette": "{dumpDir}/image/assets/item/key/calculator.png",
+    "raster": "{dumpDir}/image/assets/item/key/calculator.png"
+  },
+  "card_gold.png": {
+    "palette": "{dumpDir}/image/assets/item/key/card_gold.png",
+    "raster": "{dumpDir}/image/assets/item/key/card_gold.png"
+  },
+  "card_silver.png": {
+    "palette": "{dumpDir}/image/assets/item/key/card_silver.png",
+    "raster": "{dumpDir}/image/assets/item/key/card_gold.png"
+  },
+  "coin.png": {
+    "palette": "{dumpDir}/image/assets/item/key/coin.png",
+    "raster": "{dumpDir}/image/assets/item/key/coin.png"
+  },
+  "crystal_ball.png": {
+    "palette": "{dumpDir}/image/assets/item/key/crystal_ball.png",
+    "raster": "{dumpDir}/image/assets/item/key/crystal_ball.png"
+  },
+  "crystal_berry.png": {
+    "palette": "{dumpDir}/image/assets/item/key/crystal_berry.png",
+    "raster": "{dumpDir}/image/assets/item/key/crystal_berry.png"
+  },
+  "dictionary.png": {
+    "palette": "{dumpDir}/image/assets/item/key/dictionary.png",
+    "raster": "{dumpDir}/image/assets/item/key/dictionary.png"
+  },
+  "dojo_card_1.png": {
+    "palette": "{dumpDir}/image/assets/item/key/dojo_card_1.png",
+    "raster": "{dumpDir}/image/assets/item/key/dojo_card_1.png"
+  },
+  "dojo_card_2.png": {
+    "palette": "{dumpDir}/image/assets/item/key/dojo_card_2.png",
+    "raster": "{dumpDir}/image/assets/item/key/dojo_card_2.png"
+  },
+  "dojo_card_3.png": {
+    "palette": "{dumpDir}/image/assets/item/key/dojo_card_3.png",
+    "raster": "{dumpDir}/image/assets/item/key/dojo_card_3.png"
+  },
+  "dojo_card_3_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/key/dojo_card_3.png",
+    "raster": "{dumpDir}/image/assets/item/key/dojo_card_3.png"
+  },
+  "dojo_card_4.png": {
+    "palette": "{dumpDir}/image/assets/item/key/dojo_card_4.png",
+    "raster": "{dumpDir}/image/assets/item/key/dojo_card_4.png"
+  },
+  "dojo_card_5.png": {
+    "palette": "{dumpDir}/image/assets/item/key/dojo_card_5.png",
+    "raster": "{dumpDir}/image/assets/item/key/dojo_card_5.png"
+  },
+  "dolly.png": {
+    "palette": "{dumpDir}/image/assets/item/key/dolly.png",
+    "raster": "{dumpDir}/image/assets/item/key/dolly.png"
+  },
+  "fertile_soil.png": {
+    "palette": "{dumpDir}/image/assets/item/key/fertile_soil.png",
+    "raster": "{dumpDir}/image/assets/item/key/fertile_soil.png"
+  },
+  "forest_pass.png": {
+    "palette": "{dumpDir}/image/assets/item/key/forest_pass.png",
+    "raster": "{dumpDir}/image/assets/item/key/forest_pass.png"
+  },
+  "frying_pan.png": {
+    "palette": "{dumpDir}/image/assets/item/key/frying_pan.png",
+    "raster": "{dumpDir}/image/assets/item/key/frying_pan.png"
+  },
+  "gear_boots_1.png": {
+    "palette": "{dumpDir}/image/assets/item/key/gear_boots_1.png",
+    "raster": "{dumpDir}/image/assets/item/key/gear_boots_1.png"
+  },
+  "gear_boots_2.png": {
+    "palette": "{dumpDir}/image/assets/item/key/gear_boots_2.png",
+    "raster": "{dumpDir}/image/assets/item/key/gear_boots_2.png"
+  },
+  "gear_boots_3.png": {
+    "palette": "{dumpDir}/image/assets/item/key/gear_boots_3.png",
+    "raster": "{dumpDir}/image/assets/item/key/gear_boots_3.png"
+  },
+  "gear_hammer_1.png": {
+    "palette": "{dumpDir}/image/assets/item/key/gear_hammer_1.png",
+    "raster": "{dumpDir}/image/assets/item/key/gear_hammer_1.png"
+  },
+  "gear_hammer_2.png": {
+    "palette": "{dumpDir}/image/assets/item/key/gear_hammer_2.png",
+    "raster": "{dumpDir}/image/assets/item/key/gear_hammer_2.png"
+  },
+  "gear_hammer_3.png": {
+    "palette": "{dumpDir}/image/assets/item/Hammer3.png",
+    "raster": "{dumpDir}/image/assets/item/key/gear_hammer_3.png"
+  },
+  "gear_lucky_star.png": {
+    "palette": "{dumpDir}/image/assets/item/key/gear_lucky_star.png",
+    "raster": "{dumpDir}/image/assets/item/key/gear_lucky_star.png"
+  },
+  "gift.png": {
+    "palette": "{dumpDir}/image/assets/item/key/gift.png",
+    "raster": "{dumpDir}/image/assets/item/key/gift.png"
+  },
+  "heart.png": {
+    "palette": "{dumpDir}/image/assets/item/key/heart.png",
+    "raster": "{dumpDir}/image/assets/item/key/heart.png"
+  },
+  "heart_piece.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/heart_piece.png",
+    "raster": "{dumpDir}/image/assets/item/anim/heart_piece.png"
+  },
+  "jade_raven.png": {
+    "palette": "{dumpDir}/image/assets/item/key/jade_raven.png",
+    "raster": "{dumpDir}/image/assets/item/key/jade_raven.png"
+  },
+  "key_blue.png": {
+    "palette": "{dumpDir}/image/assets/item/key/key_blue.png",
+    "raster": "{dumpDir}/image/assets/item/key/key_blue.png"
+  },
+  "key_bowser_castle.png": {
+    "palette": "{dumpDir}/image/assets/item/key/key_bowser_castle.png",
+    "raster": "{dumpDir}/image/assets/item/key/key_bowser_castle.png"
+  },
+  "key_ice_palace.png": {
+    "palette": "{dumpDir}/image/assets/item/key/key_ice_palace.png",
+    "raster": "{dumpDir}/image/assets/item/key/key_ice_palace.png"
+  },
+  "key_koopa_fortress.png": {
+    "palette": "{dumpDir}/image/assets/item/key/key_koopa_fortress.png",
+    "raster": "{dumpDir}/image/assets/item/key/key_koopa_fortress.png"
+  },
+  "key_peach.png": {
+    "palette": "{dumpDir}/image/assets/item/key/key_peach.png",
+    "raster": "{dumpDir}/image/assets/item/key/key_peach.png"
+  },
+  "key_red.png": {
+    "palette": "{dumpDir}/image/assets/item/key/key_red.png",
+    "raster": "{dumpDir}/image/assets/item/key/key_blue.png"
+  },
+  "key_red_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/key/key_red.png",
+    "raster": "{dumpDir}/image/assets/item/key/key_blue.png"
+  },
+  "key_ruins.png": {
+    "palette": "{dumpDir}/image/assets/item/key/key_ruins.png",
+    "raster": "{dumpDir}/image/assets/item/key/key_ruins.png"
+  },
+  "key_storeroom.png": {
+    "palette": "{dumpDir}/image/assets/item/key/key_storeroom.png",
+    "raster": "{dumpDir}/image/assets/item/key/key_storeroom.png"
+  },
+  "key_tubba_castle.png": {
+    "palette": "{dumpDir}/image/assets/item/key/key_tubba_castle.png",
+    "raster": "{dumpDir}/image/assets/item/key/key_tubba_castle.png"
+  },
+  "kooper_shell.png": {
+    "palette": "{dumpDir}/image/assets/item/key/kooper_shell.png",
+    "raster": "{dumpDir}/image/assets/item/key/kooper_shell.png"
+  },
+  "koot_autograph_luigi.png": {
+    "palette": "{dumpDir}/image/assets/item/key/koot_autograph_merluvlee.png",
+    "raster": "{dumpDir}/image/assets/item/key/koot_autograph_merluvlee.png"
+  },
+  "koot_autograph_merluvlee.png": {
+    "palette": "{dumpDir}/image/assets/item/key/koot_autograph_luigi.png",
+    "raster": "{dumpDir}/image/assets/item/key/koot_autograph_luigi.png"
+  },
+  "koot_autograph_merluvlee_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/key/koot_autograph_luigi.png",
+    "raster": "{dumpDir}/image/assets/item/key/koot_autograph_luigi.png"
+  },
+  "koot_book.png": {
+    "palette": "{dumpDir}/image/assets/item/key/koot_book.png",
+    "raster": "{dumpDir}/image/assets/item/key/koot_book.png"
+  },
+  "koot_empty_wallet.png": {
+    "palette": "{dumpDir}/image/assets/item/key/koot_empty_wallet.png",
+    "raster": "{dumpDir}/image/assets/item/key/koot_empty_wallet.png"
+  },
+  "koot_glasses.png": {
+    "palette": "{dumpDir}/image/assets/item/key/koot_glasses.png",
+    "raster": "{dumpDir}/image/assets/item/key/koot_glasses.png"
+  },
+  "koot_package.png": {
+    "palette": "{dumpDir}/image/assets/item/key/koot_package.png",
+    "raster": "{dumpDir}/image/assets/item/key/koot_package.png"
+  },
+  "koot_photo.png": {
+    "palette": "{dumpDir}/image/assets/item/key/koot_photo.png",
+    "raster": "{dumpDir}/image/assets/item/key/koot_photo.png"
+  },
+  "koot_red_jar.png": {
+    "palette": "{dumpDir}/image/assets/item/key/koot_red_jar.png",
+    "raster": "{dumpDir}/image/assets/item/key/koot_red_jar.png"
+  },
+  "koot_shell.png": {
+    "palette": "{dumpDir}/image/assets/item/key/koot_shell.png",
+    "raster": "{dumpDir}/image/assets/item/key/koot_shell.png"
+  },
+  "koot_the_tape.png": {
+    "palette": "{dumpDir}/image/assets/item/key/koot_the_tape.png",
+    "raster": "{dumpDir}/image/assets/item/key/koot_the_tape.png"
+  },
+  "magic_bean.png": {
+    "palette": "{dumpDir}/image/assets/item/key/magic_bean.png",
+    "raster": "{dumpDir}/image/assets/item/key/magic_bean.png"
+  },
+  "mailbag.png": {
+    "palette": "{dumpDir}/image/assets/item/key/mailbag.png",
+    "raster": "{dumpDir}/image/assets/item/key/mailbag.png"
+  },
+  "map.png": {
+    "palette": "{dumpDir}/image/assets/item/key/map.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "miracle_water.png": {
+    "palette": "{dumpDir}/image/assets/item/key/miracle_water.png",
+    "raster": "{dumpDir}/image/assets/item/key/miracle_water.png"
+  },
+  "mystery_note.png": {
+    "palette": "{dumpDir}/image/assets/item/key/mystery_note.png",
+    "raster": "{dumpDir}/image/assets/item/key/mystery_note.png"
+  },
+  "mystic_key.png": {
+    "palette": "{dumpDir}/image/assets/item/key/mystic_key.png",
+    "raster": "{dumpDir}/image/assets/item/key/mystic_key.png"
+  },
+  "pulse_stone.png": {
+    "palette": "{dumpDir}/image/assets/item/key/pulse_stone.png",
+    "raster": "{dumpDir}/image/assets/item/key/pulse_stone.png"
+  },
+  "ruins_stone_moon.png": {
+    "palette": "{dumpDir}/image/assets/item/key/ruins_stone_moon.png",
+    "raster": "{dumpDir}/image/assets/item/key/ruins_stone_moon.png"
+  },
+  "ruins_stone_pyramid.png": {
+    "palette": "{dumpDir}/image/assets/item/key/ruins_stone_pyramid.png",
+    "raster": "{dumpDir}/image/assets/item/key/ruins_stone_pyramid.png"
+  },
+  "ruins_stone_star.png": {
+    "palette": "{dumpDir}/image/assets/item/key/ruins_stone_star.png",
+    "raster": "{dumpDir}/image/assets/item/key/ruins_stone_star.png"
+  },
+  "screwdriver.png": {
+    "palette": "{dumpDir}/image/assets/item/key/screwdriver.png",
+    "raster": "{dumpDir}/image/assets/item/key/screwdriver.png"
+  },
+  "seed_1.png": {
+    "palette": "{dumpDir}/image/assets/item/key/seed_1.png",
+    "raster": "{dumpDir}/image/assets/item/key/seed_1.png"
+  },
+  "seed_2.png": {
+    "palette": "{dumpDir}/image/assets/item/key/seed_2.png",
+    "raster": "{dumpDir}/image/assets/item/key/seed_2.png"
+  },
+  "seed_3.png": {
+    "palette": "{dumpDir}/image/assets/item/key/seed_3.png",
+    "raster": "{dumpDir}/image/assets/item/key/seed_3.png"
+  },
+  "seed_4.png": {
+    "palette": "{dumpDir}/image/assets/item/key/seed_4.png",
+    "raster": "{dumpDir}/image/assets/item/key/seed_4.png"
+  },
+  "snowman_bucket.png": {
+    "palette": "{dumpDir}/image/assets/item/key/snowman_bucket.png",
+    "raster": "{dumpDir}/image/assets/item/key/snowman_bucket.png"
+  },
+  "snowman_scarf.png": {
+    "palette": "{dumpDir}/image/assets/item/key/snowman_scarf.png",
+    "raster": "{dumpDir}/image/assets/item/key/snowman_scarf.png"
+  },
+  "star_point.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/sp_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/sp_0.png"
+  },
+  "star_stone.png": {
+    "palette": "{dumpDir}/image/assets/item/key/star_stone.png",
+    "raster": "{dumpDir}/image/assets/item/key/star_stone.png"
+  },
+  "suspicious_note.png": {
+    "palette": "{dumpDir}/image/assets/item/key/suspicious_note.png",
+    "raster": "{dumpDir}/image/assets/item/key/mystery_note.png"
+  },
+  "toad_doll.png": {
+    "palette": "{dumpDir}/image/assets/item/key/toad_doll.png",
+    "raster": "{dumpDir}/image/assets/item/key/toad_doll.png"
+  },
+  "toybox_train.png": {
+    "palette": "{dumpDir}/image/assets/item/key/toybox_train.png",
+    "raster": "{dumpDir}/image/assets/item/key/toybox_train.png"
+  },
+  "ultra_stone.png": {
+    "palette": "{dumpDir}/image/assets/item/key/ultra_stone.png",
+    "raster": "{dumpDir}/image/assets/item/key/crystal_ball.png"
+  },
+  "ultra_stone_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/key/ultra_stone.png",
+    "raster": "{dumpDir}/image/assets/item/key/crystal_ball.png"
+  },
+  "vase.png": {
+    "palette": "{dumpDir}/image/assets/item/key/vase.png",
+    "raster": "{dumpDir}/image/assets/item/key/vase.png"
+  },
+  "water_stone.png": {
+    "palette": "{dumpDir}/image/assets/item/key/water_stone.png",
+    "raster": "{dumpDir}/image/assets/item/key/water_stone.png"
+  }
+}

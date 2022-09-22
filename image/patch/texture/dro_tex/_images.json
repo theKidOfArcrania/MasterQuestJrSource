@@ -1,0 +1,142 @@
+{
+  "dro_berosaidetif.png": {
+    "palette": "{dumpDir}/image/texture/dro_tex/dro_berosaidetif.png",
+    "raster": "{dumpDir}/image/texture/dro_tex/dro_berosaidetif.png"
+  },
+  "dro_binn2tif.png": {
+    "palette": "{dumpDir}/image/texture/dro_tex/dro_binn2tif.png",
+    "raster": "{dumpDir}/image/texture/dro_tex/dro_binn2tif.png"
+  },
+  "dro_blocktif.png": {
+    "palette": "{dumpDir}/image/texture/dro_tex/dro_blocktif.png",
+    "raster": "{dumpDir}/image/texture/dro_tex/dro_blocktif.png"
+  },
+  "dro_d_t_doatif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/dro_tex/dro_d_t_doatif.png"
+  },
+  "dro_d_tubo01tif.png": {
+    "palette": "{dumpDir}/image/texture/dro_tex/dro_d_tubo01tif.png",
+    "raster": "{dumpDir}/image/texture/dro_tex/dro_d_tubo01tif.png"
+  },
+  "dro_doa1tif.png": {
+    "palette": "{dumpDir}/image/texture/dro_tex/dro_doa1tif.png",
+    "raster": "{dumpDir}/image/texture/dro_tex/dro_doa1tif.png"
+  },
+  "dro_flower_02tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/dro_tex/dro_flower_02tif.png"
+  },
+  "dro_frametif.png": {
+    "palette": "{dumpDir}/image/texture/dro_tex/dro_frametif.png",
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_frametif.png"
+  },
+  "dro_gyuutann2tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/dro_tex/dro_gyuutann2tif.png"
+  },
+  "dro_hasira1tif.png": {
+    "palette": "{dumpDir}/image/texture/dro_tex/dro_hasira1tif.png",
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_hasira1tif.png"
+  },
+  "dro_hata2tif.png": {
+    "palette": "{dumpDir}/image/texture/dro_tex/dro_hata2tif.png",
+    "raster": "{dumpDir}/image/texture/dro_tex/dro_hata2tif.png"
+  },
+  "dro_hon2tif.png": {
+    "palette": "{dumpDir}/image/texture/dro_tex/dro_hon2tif.png",
+    "raster": "{dumpDir}/image/texture/dro_tex/dro_hon2tif.png"
+  },
+  "dro_hon3tif.png": {
+    "palette": "{dumpDir}/image/texture/dro_tex/dro_hon3tif.png",
+    "raster": "{dumpDir}/image/texture/dro_tex/dro_hon2tif.png"
+  },
+  "dro_honetif.png": {
+    "palette": "{dumpDir}/image/texture/dro_tex/dro_honetif.png",
+    "raster": "{dumpDir}/image/texture/dro_tex/dro_honetif.png"
+  },
+  "dro_kabe1tif.png": {
+    "palette": "{dumpDir}/image/texture/dro_tex/dro_kabe1tif.png",
+    "raster": "{dumpDir}/image/texture/dro_tex/dro_kabe1tif.png"
+  },
+  "dro_kabe_htif.png": {
+    "palette": "{dumpDir}/image/texture/dro_tex/dro_kabe_htif.png",
+    "raster": "{dumpDir}/image/texture/dro_tex/dro_kabe_htif.png"
+  },
+  "dro_kannbanntif.png": {
+    "palette": "{dumpDir}/image/texture/dro_tex/dro_kannbanntif.png",
+    "raster": "{dumpDir}/image/texture/dro_tex/dro_kannbanntif.png"
+  },
+  "dro_kemutif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/dro_tex/dro_kemutif.png"
+  },
+  "dro_kinopiotif.png": {
+    "palette": "{dumpDir}/image/texture/dro_tex/dro_kinopiotif.png",
+    "raster": "{dumpDir}/image/texture/dro_tex/dro_kinopiotif.png"
+  },
+  "dro_kudamonotif.png": {
+    "palette": "{dumpDir}/image/texture/dro_tex/dro_kudamonotif.png",
+    "raster": "{dumpDir}/image/texture/dro_tex/dro_kudamonotif.png"
+  },
+  "dro_mado6tif.png": {
+    "palette": "{dumpDir}/image/texture/dro_tex/dro_mado6tif.png",
+    "raster": "{dumpDir}/image/texture/dro_tex/dro_mado6tif.png"
+  },
+  "dro_moyou2tif.png": {
+    "palette": "{dumpDir}/image/texture/dro_tex/dro_moyou2tif.png",
+    "raster": "{dumpDir}/image/texture/dro_tex/dro_moyou2tif.png"
+  },
+  "dro_nuno2tif.png": {
+    "palette": "{dumpDir}/image/texture/dro_tex/dro_nuno2tif.png",
+    "raster": "{dumpDir}/image/texture/dro_tex/dro_nuno2tif.png"
+  },
+  "dro_nunoyanetif.png": {
+    "palette": "{dumpDir}/image/texture/dro_tex/dro_nunoyanetif.png",
+    "raster": "{dumpDir}/image/texture/dro_tex/dro_nunoyanetif.png"
+  },
+  "dro_papyrustif.png": {
+    "palette": "{dumpDir}/image/texture/dro_tex/dro_papyrustif.png",
+    "raster": "{dumpDir}/image/texture/dro_tex/dro_papyrustif.png"
+  },
+  "dro_posuta2tif.png": {
+    "palette": "{dumpDir}/image/texture/dro_tex/dro_posuta2tif.png",
+    "raster": "{dumpDir}/image/texture/dro_tex/dro_posuta2tif.png"
+  },
+  "dro_posutatif.png": {
+    "palette": "{dumpDir}/image/texture/dro_tex/dro_posutatif.png",
+    "raster": "{dumpDir}/image/texture/dro_tex/dro_posutatif.png"
+  },
+  "dro_ranputif.png": {
+    "palette": "{dumpDir}/image/texture/dro_tex/dro_ranputif.png",
+    "raster": "{dumpDir}/image/texture/dro_tex/dro_ranputif.png"
+  },
+  "dro_road3tif.png": {
+    "palette": "{dumpDir}/image/texture/dro_tex/dro_road3tif.png",
+    "raster": "{dumpDir}/image/texture/dro_tex/dro_road3tif.png"
+  },
+  "dro_sabakureeftif.png": {
+    "palette": "{dumpDir}/image/texture/dro_tex/dro_sabakureeftif.png",
+    "raster": "{dumpDir}/image/texture/dro_tex/dro_sabakureeftif.png"
+  },
+  "dro_sakutif.png": {
+    "palette": "{dumpDir}/image/texture/dro_tex/dro_sakutif.png",
+    "raster": "{dumpDir}/image/texture/dro_tex/dro_sakutif.png"
+  },
+  "dro_spider_nettif.png": {
+    "palette": "{dumpDir}/image/texture/dro_tex/dro_spider_nettif.png",
+    "raster": "{dumpDir}/image/texture/dro_tex/dro_spider_nettif.png"
+  },
+  "dro_suna3tif.png": {
+    "palette": "{dumpDir}/image/texture/dro_tex/dro_suna3tif.png",
+    "raster": "{dumpDir}/image/texture/dro_tex/dro_suna3tif.png"
+  },
+  "dro_taru1tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/dro_tex/dro_taru1tif.png"
+  },
+  "dro_wall_ftif.png": {
+    "palette": "{dumpDir}/image/texture/dro_tex/dro_wall_ftif.png",
+    "raster": "{dumpDir}/image/texture/dro_tex/dro_wall_ftif.png"
+  }
+}

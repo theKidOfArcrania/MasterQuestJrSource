@@ -1,0 +1,78 @@
+{
+  "arn_bg.png": {
+    "palette": "{dumpDir}/image/bg/arn_bg.png",
+    "raster": "{dumpDir}/image/bg/arn_bg.png"
+  },
+  "fla_bg.png": {
+    "palette": "{dumpDir}/image/bg/fla_bg.png",
+    "raster": "{dumpDir}/image/bg/fla_bg.png"
+  },
+  "flb_bg.png": {
+    "palette": "{dumpDir}/image/bg/flb_bg.png",
+    "raster": "{dumpDir}/image/bg/flb_bg.png"
+  },
+  "hos_bg.png": {
+    "palette": "{dumpDir}/image/bg/hos_bg.png",
+    "raster": "{dumpDir}/image/bg/hos_bg.png"
+  },
+  "iwa_bg.png": {
+    "palette": "{dumpDir}/image/bg/iwa_bg.png",
+    "raster": "{dumpDir}/image/bg/iwa_bg.png"
+  },
+  "jan_bg.png": {
+    "palette": "{dumpDir}/image/bg/jan_bg.png",
+    "raster": "{dumpDir}/image/bg/jan_bg.png"
+  },
+  "kmr_bg.png": {
+    "palette": "{dumpDir}/image/bg/kmr_bg.png",
+    "raster": "{dumpDir}/image/bg/kmr_bg.png"
+  },
+  "kpa_bg.png": {
+    "palette": "{dumpDir}/image/bg/kpa_bg.png",
+    "raster": "{dumpDir}/image/bg/kpa_bg.png"
+  },
+  "nok_bg.png": {
+    "palette": "{dumpDir}/image/bg/nok_bg.png",
+    "raster": "{dumpDir}/image/bg/nok_bg.png"
+  },
+  "obk_bg.png": {
+    "palette": "{dumpDir}/image/bg/obk_bg.png",
+    "raster": "{dumpDir}/image/bg/obk_bg.png"
+  },
+  "omo_bg.png": {
+    "palette": "{dumpDir}/image/bg/omo_bg.png",
+    "raster": "{dumpDir}/image/bg/omo_bg.png"
+  },
+  "sam_bg.png": {
+    "palette": "{dumpDir}/image/bg/sam_bg.png",
+    "raster": "{dumpDir}/image/bg/sam_bg.png"
+  },
+  "sbk3_bg.png": {
+    "palette": "{dumpDir}/image/bg/sbk3_bg.png",
+    "raster": "{dumpDir}/image/bg/sbk3_bg.png"
+  },
+  "sbk_bg.png": {
+    "palette": "{dumpDir}/image/bg/sbk_bg.png",
+    "raster": "{dumpDir}/image/bg/sbk_bg.png"
+  },
+  "sbk_bg_alt.png": {
+    "palette": "{dumpDir}/image/bg/sbk_bg_alt.png",
+    "raster": "{dumpDir}/image/bg/sbk_bg.png"
+  },
+  "sra_bg.png": {
+    "palette": "{dumpDir}/image/bg/sra_bg.png",
+    "raster": "{dumpDir}/image/bg/sra_bg.png"
+  },
+  "title_bg.png": {
+    "palette": "{dumpDir}/image/bg/title_bg.png",
+    "raster": "{dumpDir}/image/bg/title_bg.png"
+  },
+  "yki_bg.png": {
+    "palette": "{dumpDir}/image/bg/yki_bg.png",
+    "raster": "{dumpDir}/image/bg/yki_bg.png"
+  },
+  "yos_bg.png": {
+    "palette": "{dumpDir}/image/bg/yos_bg.png",
+    "raster": "{dumpDir}/image/bg/yos_bg.png"
+  }
+}

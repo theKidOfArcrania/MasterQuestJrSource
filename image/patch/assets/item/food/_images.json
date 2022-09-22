@@ -1,0 +1,578 @@
+{
+  "Apple.png": {
+    "palette": "{dumpDir}/image/assets/item/food/Apple.png",
+    "raster": "{dumpDir}/image/assets/item/food/Apple.png"
+  },
+  "ApplePie.png": {
+    "palette": "{dumpDir}/image/assets/item/food/ApplePie.png",
+    "raster": "{dumpDir}/image/assets/item/food/ApplePie.png"
+  },
+  "ApplePie_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/ApplePie_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/ApplePie.png"
+  },
+  "Apple_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/Apple_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/Apple.png"
+  },
+  "BigCookie.png": {
+    "palette": "{dumpDir}/image/assets/item/food/BigCookie.png",
+    "raster": "{dumpDir}/image/assets/item/food/BigCookie.png"
+  },
+  "BigCookie_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/BigCookie_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/BigCookie.png"
+  },
+  "BlandMeal.png": {
+    "palette": "{dumpDir}/image/assets/item/food/BlandMeal.png",
+    "raster": "{dumpDir}/image/assets/item/food/BlandMeal.png"
+  },
+  "BlandMeal_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/BlandMeal_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/BlandMeal.png"
+  },
+  "BlueBerry.png": {
+    "palette": "{dumpDir}/image/assets/item/food/BlueBerry.png",
+    "raster": "{dumpDir}/image/assets/item/food/BlueBerry.png"
+  },
+  "BlueBerry_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/BlueBerry_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/BlueBerry.png"
+  },
+  "BoiledEgg.png": {
+    "palette": "{dumpDir}/image/assets/item/food/BoiledEgg.png",
+    "raster": "{dumpDir}/image/assets/item/food/BoiledEgg.png"
+  },
+  "BoiledEgg_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/BoiledEgg_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/BoiledEgg.png"
+  },
+  "BubbleBerry.png": {
+    "palette": "{dumpDir}/image/assets/item/food/BubbleBerry.png",
+    "raster": "{dumpDir}/image/assets/item/food/BubbleBerry.png"
+  },
+  "BubbleBerry_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/BubbleBerry_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/BubbleBerry.png"
+  },
+  "Cake.png": {
+    "palette": "{dumpDir}/image/assets/item/food/Cake.png",
+    "raster": "{dumpDir}/image/assets/item/food/Cake.png"
+  },
+  "CakeMix.png": {
+    "palette": "{dumpDir}/image/assets/item/food/CakeMix.png",
+    "raster": "{dumpDir}/image/assets/item/food/CakeMix.png"
+  },
+  "CakeMix_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/CakeMix_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/CakeMix.png"
+  },
+  "Cake_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/Cake_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/Cake.png"
+  },
+  "CocoPop.png": {
+    "palette": "{dumpDir}/image/assets/item/food/CocoPop.png",
+    "raster": "{dumpDir}/image/assets/item/food/CocoPop.png"
+  },
+  "CocoPop_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/CocoPop_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/CocoPop.png"
+  },
+  "Coconut.png": {
+    "palette": "{dumpDir}/image/assets/item/food/Coconut.png",
+    "raster": "{dumpDir}/image/assets/item/food/Coconut.png"
+  },
+  "Coconut_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/Coconut_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/Coconut.png"
+  },
+  "DeluxeFeast.png": {
+    "palette": "{dumpDir}/image/assets/item/food/DeluxeFeast.png",
+    "raster": "{dumpDir}/image/assets/item/food/BlandMeal.png"
+  },
+  "DeluxeFeast_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/DeluxeFeast_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/BlandMeal.png"
+  },
+  "DriedFruit.png": {
+    "palette": "{dumpDir}/image/assets/item/food/DriedFruit.png",
+    "raster": "{dumpDir}/image/assets/item/food/DriedFruit.png"
+  },
+  "DriedFruit_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/DriedFruit_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/DriedFruit.png"
+  },
+  "DriedPasta.png": {
+    "palette": "{dumpDir}/image/assets/item/food/DriedPasta.png",
+    "raster": "{dumpDir}/image/assets/item/food/DriedPasta.png"
+  },
+  "DriedPasta_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/DriedPasta_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/DriedPasta.png"
+  },
+  "DriedShroom.png": {
+    "palette": "{dumpDir}/image/assets/item/food/DriedShroom.png",
+    "raster": "{dumpDir}/image/assets/item/food/DriedShroom.png"
+  },
+  "DriedShroom_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/DriedShroom_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/DriedShroom.png"
+  },
+  "Egg.png": {
+    "palette": "{dumpDir}/image/assets/item/food/Egg.png",
+    "raster": "{dumpDir}/image/assets/item/food/Egg.png"
+  },
+  "EggMissile.png": {
+    "palette": "{dumpDir}/image/assets/item/food/EggMissile.png",
+    "raster": "{dumpDir}/image/assets/item/food/EggMissile.png"
+  },
+  "EggMissile_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/EggMissile_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/EggMissile.png"
+  },
+  "Egg_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/Egg_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/Egg.png"
+  },
+  "ElectroPop.png": {
+    "palette": "{dumpDir}/image/assets/item/food/ElectroPop.png",
+    "raster": "{dumpDir}/image/assets/item/food/ElectroPop.png"
+  },
+  "ElectroPop_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/ElectroPop_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/ElectroPop.png"
+  },
+  "FirePop.png": {
+    "palette": "{dumpDir}/image/assets/item/food/FirePop.png",
+    "raster": "{dumpDir}/image/assets/item/food/FirePop.png"
+  },
+  "FirePop_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/FirePop_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/FirePop.png"
+  },
+  "FriedEgg.png": {
+    "palette": "{dumpDir}/image/assets/item/food/FriedEgg.png",
+    "raster": "{dumpDir}/image/assets/item/food/FriedEgg.png"
+  },
+  "FriedEgg_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/FriedEgg_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/FriedEgg.png"
+  },
+  "FriedShroom.png": {
+    "palette": "{dumpDir}/image/assets/item/food/FriedShroom.png",
+    "raster": "{dumpDir}/image/assets/item/food/FriedShroom.png"
+  },
+  "FriedShroom_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/FriedShroom_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/FriedShroom.png"
+  },
+  "FrozenFries.png": {
+    "palette": "{dumpDir}/image/assets/item/food/FrozenFries.png",
+    "raster": "{dumpDir}/image/assets/item/food/FrozenFries.png"
+  },
+  "FrozenFries_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/FrozenFries_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/FrozenFries.png"
+  },
+  "Goomnut.png": {
+    "palette": "{dumpDir}/image/assets/item/food/Goomnut.png",
+    "raster": "{dumpDir}/image/assets/item/food/Goomnut.png"
+  },
+  "Goomnut_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/Goomnut_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/Goomnut.png"
+  },
+  "HealthyJuice.png": {
+    "palette": "{dumpDir}/image/assets/item/food/HealthyJuice.png",
+    "raster": "{dumpDir}/image/assets/item/food/HealthyJuice.png"
+  },
+  "HealthyJuice_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/HealthyJuice_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/HealthyJuice.png"
+  },
+  "HoneyCandy.png": {
+    "palette": "{dumpDir}/image/assets/item/food/HoneyCandy.png",
+    "raster": "{dumpDir}/image/assets/item/food/HoneyCandy.png"
+  },
+  "HoneyCandy_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/HoneyCandy_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/HoneyCandy.png"
+  },
+  "HoneyShroom.png": {
+    "palette": "{dumpDir}/image/assets/item/food/HoneyShroom.png",
+    "raster": "{dumpDir}/image/assets/item/food/HoneyShroom.png"
+  },
+  "HoneyShroom_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/HoneyShroom_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/HoneyShroom.png"
+  },
+  "HoneySuper.png": {
+    "palette": "{dumpDir}/image/assets/item/food/HoneySuper.png",
+    "raster": "{dumpDir}/image/assets/item/food/HoneyShroom.png"
+  },
+  "HoneySuper_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/HoneySuper_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/HoneyShroom.png"
+  },
+  "HoneySyrup.png": {
+    "palette": "{dumpDir}/image/assets/item/food/HoneySyrup.png",
+    "raster": "{dumpDir}/image/assets/item/food/HoneySyrup.png"
+  },
+  "HoneySyrup_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/HoneySyrup_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/HoneySyrup.png"
+  },
+  "HoneyUltra.png": {
+    "palette": "{dumpDir}/image/assets/item/food/HoneyUltra.png",
+    "raster": "{dumpDir}/image/assets/item/food/HoneyShroom.png"
+  },
+  "HoneyUltra_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/HoneyUltra_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/HoneyShroom.png"
+  },
+  "HotShroom.png": {
+    "palette": "{dumpDir}/image/assets/item/food/HotShroom.png",
+    "raster": "{dumpDir}/image/assets/item/food/HotShroom.png"
+  },
+  "HotShroom_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/HotShroom_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/HotShroom.png"
+  },
+  "IcedPotato.png": {
+    "palette": "{dumpDir}/image/assets/item/food/IcedPotato.png",
+    "raster": "{dumpDir}/image/assets/item/food/IcedPotato.png"
+  },
+  "IcedPotato_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/IcedPotato_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/IcedPotato.png"
+  },
+  "JamminJelly.png": {
+    "palette": "{dumpDir}/image/assets/item/food/JamminJelly.png",
+    "raster": "{dumpDir}/image/assets/item/food/JamminJelly.png"
+  },
+  "JamminJelly_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/JamminJelly_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/JamminJelly.png"
+  },
+  "JellyPop.png": {
+    "palette": "{dumpDir}/image/assets/item/food/JellyPop.png",
+    "raster": "{dumpDir}/image/assets/item/food/JellyPop.png"
+  },
+  "JellyPop_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/JellyPop_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/JellyPop.png"
+  },
+  "JellyShroom.png": {
+    "palette": "{dumpDir}/image/assets/item/food/JellyShroom.png",
+    "raster": "{dumpDir}/image/assets/item/food/JellyShroom.png"
+  },
+  "JellyShroom_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/JellyShroom_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/JellyShroom.png"
+  },
+  "JellySuper.png": {
+    "palette": "{dumpDir}/image/assets/item/food/JellySuper.png",
+    "raster": "{dumpDir}/image/assets/item/food/JellySuper.png"
+  },
+  "JellySuper_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/JellySuper_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/JellySuper.png"
+  },
+  "JellyUltra.png": {
+    "palette": "{dumpDir}/image/assets/item/food/JellyUltra.png",
+    "raster": "{dumpDir}/image/assets/item/food/JellyUltra.png"
+  },
+  "JellyUltra_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/JellyUltra_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/JellyUltra.png"
+  },
+  "KookyCookie.png": {
+    "palette": "{dumpDir}/image/assets/item/food/KookyCookie.png",
+    "raster": "{dumpDir}/image/assets/item/food/KookyCookie.png"
+  },
+  "KookyCookie_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/KookyCookie_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/KookyCookie.png"
+  },
+  "KoopaLeaf.png": {
+    "palette": "{dumpDir}/image/assets/item/food/KoopaLeaf.png",
+    "raster": "{dumpDir}/image/assets/item/food/KoopaLeaf.png"
+  },
+  "KoopaLeaf_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/KoopaLeaf_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/KoopaLeaf.png"
+  },
+  "KoopaTea.png": {
+    "palette": "{dumpDir}/image/assets/item/food/KoopaTea.png",
+    "raster": "{dumpDir}/image/assets/item/food/KoopaTea.png"
+  },
+  "KoopaTea_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/KoopaTea_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/KoopaTea.png"
+  },
+  "Koopasta.png": {
+    "palette": "{dumpDir}/image/assets/item/food/Koopasta.png",
+    "raster": "{dumpDir}/image/assets/item/food/Koopasta.png"
+  },
+  "Koopasta_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/Koopasta_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/Koopasta.png"
+  },
+  "Lemon.png": {
+    "palette": "{dumpDir}/image/assets/item/food/Lemon.png",
+    "raster": "{dumpDir}/image/assets/item/food/Lemon.png"
+  },
+  "LemonCandy.png": {
+    "palette": "{dumpDir}/image/assets/item/food/LemonCandy.png",
+    "raster": "{dumpDir}/image/assets/item/food/LemonCandy.png"
+  },
+  "LemonCandy_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/LemonCandy_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/LemonCandy.png"
+  },
+  "Lemon_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/Lemon_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/Lemon.png"
+  },
+  "LifeShroom.png": {
+    "palette": "{dumpDir}/image/assets/item/food/LifeShroom.png",
+    "raster": "{dumpDir}/image/assets/item/food/LifeShroom.png"
+  },
+  "LifeShroom_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/LifeShroom_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/LifeShroom.png"
+  },
+  "Lime.png": {
+    "palette": "{dumpDir}/image/assets/item/food/Lime.png",
+    "raster": "{dumpDir}/image/assets/item/food/Lime.png"
+  },
+  "LimeCandy.png": {
+    "palette": "{dumpDir}/image/assets/item/food/LimeCandy.png",
+    "raster": "{dumpDir}/image/assets/item/food/HoneyCandy.png"
+  },
+  "LimeCandy_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/LimeCandy_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/HoneyCandy.png"
+  },
+  "Lime_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/Lime_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/Lime.png"
+  },
+  "MapleShroom.png": {
+    "palette": "{dumpDir}/image/assets/item/food/MapleShroom.png",
+    "raster": "{dumpDir}/image/assets/item/food/MapleShroom.png"
+  },
+  "MapleShroom_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/MapleShroom_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/MapleShroom.png"
+  },
+  "MapleSuper.png": {
+    "palette": "{dumpDir}/image/assets/item/food/MapleSuper.png",
+    "raster": "{dumpDir}/image/assets/item/food/MapleSuper.png"
+  },
+  "MapleSuper_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/MapleSuper_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/MapleSuper.png"
+  },
+  "MapleSyrup.png": {
+    "palette": "{dumpDir}/image/assets/item/food/MapleSyrup.png",
+    "raster": "{dumpDir}/image/assets/item/food/MapleSyrup.png"
+  },
+  "MapleSyrup_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/MapleSyrup_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/MapleSyrup.png"
+  },
+  "MapleUltra.png": {
+    "palette": "{dumpDir}/image/assets/item/food/MapleUltra.png",
+    "raster": "{dumpDir}/image/assets/item/food/MapleSuper.png"
+  },
+  "MapleUltra_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/MapleUltra_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/MapleSuper.png"
+  },
+  "Melon.png": {
+    "palette": "{dumpDir}/image/assets/item/food/Melon.png",
+    "raster": "{dumpDir}/image/assets/item/food/Melon.png"
+  },
+  "Melon_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/Melon_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/Melon.png"
+  },
+  "Mistake.png": {
+    "palette": "{dumpDir}/image/assets/item/food/Mistake.png",
+    "raster": "{dumpDir}/image/assets/item/food/Mistake.png"
+  },
+  "Mistake_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/Mistake_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/Mistake.png"
+  },
+  "Mushroom.png": {
+    "palette": "{dumpDir}/image/assets/item/food/Mushroom.png",
+    "raster": "{dumpDir}/image/assets/item/food/Mushroom.png"
+  },
+  "Mushroom_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/Mushroom_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/Mushroom.png"
+  },
+  "NuttyCake.png": {
+    "palette": "{dumpDir}/image/assets/item/food/NuttyCake.png",
+    "raster": "{dumpDir}/image/assets/item/food/NuttyCake.png"
+  },
+  "NuttyCake_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/NuttyCake_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/NuttyCake.png"
+  },
+  "PotatoSalad.png": {
+    "palette": "{dumpDir}/image/assets/item/food/PotatoSalad.png",
+    "raster": "{dumpDir}/image/assets/item/food/PotatoSalad.png"
+  },
+  "PotatoSalad_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/PotatoSalad_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/PotatoSalad.png"
+  },
+  "RedBerry.png": {
+    "palette": "{dumpDir}/image/assets/item/food/RedBerry.png",
+    "raster": "{dumpDir}/image/assets/item/food/RedBerry.png"
+  },
+  "RedBerry_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/RedBerry_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/RedBerry.png"
+  },
+  "ShroomCake.png": {
+    "palette": "{dumpDir}/image/assets/item/food/ShroomCake.png",
+    "raster": "{dumpDir}/image/assets/item/food/ShroomCake.png"
+  },
+  "ShroomCake_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/ShroomCake_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/ShroomCake.png"
+  },
+  "ShroomSteak.png": {
+    "palette": "{dumpDir}/image/assets/item/food/ShroomSteak.png",
+    "raster": "{dumpDir}/image/assets/item/food/ShroomSteak.png"
+  },
+  "ShroomSteak_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/ShroomSteak_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/ShroomSteak.png"
+  },
+  "Spaghetti.png": {
+    "palette": "{dumpDir}/image/assets/item/food/Spaghetti.png",
+    "raster": "{dumpDir}/image/assets/item/food/Spaghetti.png"
+  },
+  "Spaghetti_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/Spaghetti_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/Spaghetti.png"
+  },
+  "SpecialShake.png": {
+    "palette": "{dumpDir}/image/assets/item/food/SpecialShake.png",
+    "raster": "{dumpDir}/image/assets/item/food/SpecialShake.png"
+  },
+  "SpecialShake_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/SpecialShake_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/SpecialShake.png"
+  },
+  "SpicySoup.png": {
+    "palette": "{dumpDir}/image/assets/item/food/SpicySoup.png",
+    "raster": "{dumpDir}/image/assets/item/food/SpicySoup.png"
+  },
+  "SpicySoup_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/SpicySoup_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/SpicySoup.png"
+  },
+  "StinkyHerb.png": {
+    "palette": "{dumpDir}/image/assets/item/food/StinkyHerb.png",
+    "raster": "{dumpDir}/image/assets/item/food/StinkyHerb.png"
+  },
+  "StinkyHerb_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/StinkyHerb_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/StinkyHerb.png"
+  },
+  "StrangeCake.png": {
+    "palette": "{dumpDir}/image/assets/item/food/StrangeCake.png",
+    "raster": "{dumpDir}/image/assets/item/food/StrangeCake.png"
+  },
+  "StrangeCake_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/StrangeCake_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/StrangeCake.png"
+  },
+  "StrangeLeaf.png": {
+    "palette": "{dumpDir}/image/assets/item/food/StrangeLeaf.png",
+    "raster": "{dumpDir}/image/assets/item/food/StrangeLeaf.png"
+  },
+  "StrangeLeaf_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/StrangeLeaf_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/StrangeLeaf.png"
+  },
+  "SuperShroom.png": {
+    "palette": "{dumpDir}/image/assets/item/food/SuperShroom.png",
+    "raster": "{dumpDir}/image/assets/item/food/SuperShroom.png"
+  },
+  "SuperShroom_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/SuperShroom_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/SuperShroom.png"
+  },
+  "SuperSoda.png": {
+    "palette": "{dumpDir}/image/assets/item/food/SuperSoda.png",
+    "raster": "{dumpDir}/image/assets/item/food/SuperSoda.png"
+  },
+  "SuperSoda_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/SuperSoda_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/SuperSoda.png"
+  },
+  "SweetShroom.png": {
+    "palette": "{dumpDir}/image/assets/item/food/SweetShroom.png",
+    "raster": "{dumpDir}/image/assets/item/food/SweetShroom.png"
+  },
+  "SweetShroom_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/SweetShroom_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/SweetShroom.png"
+  },
+  "TastyTonic.png": {
+    "palette": "{dumpDir}/image/assets/item/food/TastyTonic.png",
+    "raster": "{dumpDir}/image/assets/item/food/TastyTonic.png"
+  },
+  "TastyTonic_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/TastyTonic_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/TastyTonic.png"
+  },
+  "UltraShroom.png": {
+    "palette": "{dumpDir}/image/assets/item/food/UltraShroom.png",
+    "raster": "{dumpDir}/image/assets/item/food/UltraShroom.png"
+  },
+  "UltraShroom_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/UltraShroom_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/UltraShroom.png"
+  },
+  "WhackasBump.png": {
+    "palette": "{dumpDir}/image/assets/item/food/WhackasBump.png",
+    "raster": "{dumpDir}/image/assets/item/food/WhackasBump.png"
+  },
+  "WhackasBump_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/WhackasBump_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/WhackasBump.png"
+  },
+  "YellowBerry.png": {
+    "palette": "{dumpDir}/image/assets/item/food/YellowBerry.png",
+    "raster": "{dumpDir}/image/assets/item/food/YellowBerry.png"
+  },
+  "YellowBerry_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/YellowBerry_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/YellowBerry.png"
+  },
+  "YoshiCookie.png": {
+    "palette": "{dumpDir}/image/assets/item/food/YoshiCookie.png",
+    "raster": "{dumpDir}/image/assets/item/food/YoshiCookie.png"
+  },
+  "YoshiCookie_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/YoshiCookie_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/YoshiCookie.png"
+  },
+  "YummyMeal.png": {
+    "palette": "{dumpDir}/image/assets/item/food/YummyMeal.png",
+    "raster": "{dumpDir}/image/assets/item/food/BlandMeal.png"
+  },
+  "YummyMeal_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/food/YummyMeal_alt.png",
+    "raster": "{dumpDir}/image/assets/item/food/BlandMeal.png"
+  }
+}

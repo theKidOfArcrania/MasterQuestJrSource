@@ -1,0 +1,46 @@
+{
+  "party_akari.png": {
+    "palette": "{dumpDir}/image/compressed/party_akari.png",
+    "raster": "{dumpDir}/image/compressed/party_akari.png"
+  },
+  "party_kameki.png": {
+    "palette": "{dumpDir}/image/compressed/party_kameki.png",
+    "raster": "{dumpDir}/image/compressed/party_kameki.png"
+  },
+  "party_kurio.png": {
+    "palette": "{dumpDir}/image/compressed/party_kurio.png",
+    "raster": "{dumpDir}/image/compressed/party_kurio.png"
+  },
+  "party_opuku.png": {
+    "palette": "{dumpDir}/image/compressed/party_opuku.png",
+    "raster": "{dumpDir}/image/compressed/party_opuku.png"
+  },
+  "party_pareta.png": {
+    "palette": "{dumpDir}/image/compressed/party_pareta.png",
+    "raster": "{dumpDir}/image/compressed/party_pareta.png"
+  },
+  "party_pinki.png": {
+    "palette": "{dumpDir}/image/compressed/party_pinki.png",
+    "raster": "{dumpDir}/image/compressed/party_pinki.png"
+  },
+  "party_pokopi.png": {
+    "palette": "{dumpDir}/image/compressed/party_pokopi.png",
+    "raster": "{dumpDir}/image/compressed/party_pokopi.png"
+  },
+  "party_resa.png": {
+    "palette": "{dumpDir}/image/compressed/party_resa.png",
+    "raster": "{dumpDir}/image/compressed/party_resa.png"
+  },
+  "title_1.png": {
+    "palette": "{idatDir}/palette_b4b31ffc0173329e5bd38621c9e3be2a7a2f977882be3b6b8f59985fc289ed84",
+    "raster": "{idatDir}/raster_bc5792be99239423ead7c8dcc80c02f331d067b147fd33725c57840887b3c8ee"
+  },
+  "title_2.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/compressed/title_2.png"
+  },
+  "title_3.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/compressed/title_3.png"
+  }
+}

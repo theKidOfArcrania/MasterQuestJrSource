@@ -1,0 +1,266 @@
+{
+  "end_bg_yamatif.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_bg_yamatif.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_bg_yamatif.png"
+  },
+  "end_castle_atif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/end_tex/end_castle_atif.png"
+  },
+  "end_castle_btif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/end_tex/end_castle_btif.png"
+  },
+  "end_cycadtif.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_cycadtif.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_cycadtif.png"
+  },
+  "end_ensekitif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/end_tex/end_ensekitif.png"
+  },
+  "end_green_gradetif.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_green_gradetif.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_green_gradetif.png"
+  },
+  "end_greentif.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_greentif.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_greentif.png"
+  },
+  "end_heiho_neontif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/end_tex/end_heiho_neontif.png"
+  },
+  "end_hoppetif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/end_tex/end_hoppetif.png"
+  },
+  "end_iwatif.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_iwatif.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_iwatif.png"
+  },
+  "end_kagetif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/end_tex/end_kagetif.png"
+  },
+  "end_kamitif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/end_tex/end_kamitif.png"
+  },
+  "end_kawa_atif.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_kawa_atif.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_kawa_atif.png"
+  },
+  "end_kino_fbtif.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_kino_fbtif.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_kino_fbtif.png"
+  },
+  "end_kino_fbtif_AUX.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_kino_fbtif_AUX.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_kino_fbtif_AUX.png"
+  },
+  "end_kino_fctif.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_kino_fctif.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_kino_fctif.png"
+  },
+  "end_kino_fdtif.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_kino_fdtif.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_kino_fdtif.png"
+  },
+  "end_kino_fdtif_AUX.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_kino_fdtif_AUX.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_kino_fdtif_AUX.png"
+  },
+  "end_kobock_btif.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_kobock_btif.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_kobock_btif.png"
+  },
+  "end_kobock_btif_AUX.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_kobock_btif_AUX.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_kobock_btif_AUX.png"
+  },
+  "end_kobock_reeftif.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_kobock_reeftif.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_kobock_reeftif.png"
+  },
+  "end_kobock_reeftif_AUX.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_kobock_reeftif_AUX.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_kobock_reeftif_AUX.png"
+  },
+  "end_kokobock_eyetif.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_kokobock_eyetif.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_kokobock_eyetif.png"
+  },
+  "end_kubiwatif.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_kubiwatif.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_kubiwatif.png"
+  },
+  "end_kumo_anitif.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_kumo_anitif.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_kumo_anitif.png"
+  },
+  "end_light_aatif.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_light_aatif.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_light_aatif.png"
+  },
+  "end_light_btif.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_light_btif.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_light_btif.png"
+  },
+  "end_light_dtif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/end_tex/end_light_dtif.png"
+  },
+  "end_light_etif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/end_tex/end_light_etif.png"
+  },
+  "end_light_ftif.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_light_ftif.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_light_ftif.png"
+  },
+  "end_light_gtif.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_light_gtif.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_light_gtif.png"
+  },
+  "end_light_htif.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_light_htif.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_light_htif.png"
+  },
+  "end_light_htif_AUX.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_light_htif_AUX.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_light_htif_AUX.png"
+  },
+  "end_light_itif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/end_tex/end_light_itif.png"
+  },
+  "end_light_jtif.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_light_jtif.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_light_jtif.png"
+  },
+  "end_light_ltif.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_light_ltif.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_light_ltif.png"
+  },
+  "end_light_mtif.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_light_mtif.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_light_mtif.png"
+  },
+  "end_m_backtif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/end_tex/end_m_backtif.png"
+  },
+  "end_mac_britshcuttif.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_mac_britshcuttif.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_mac_britshcuttif.png"
+  },
+  "end_mac_britshtreetif.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_mac_britshtreetif.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_mac_britshtreetif.png"
+  },
+  "end_mac_fieldtif.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_mac_fieldtif.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_mac_fieldtif.png"
+  },
+  "end_mariohouse_btif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/end_tex/end_mariohouse_btif.png"
+  },
+  "end_me_btif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/end_tex/end_me_btif.png"
+  },
+  "end_midori03tif.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_midori03tif.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_midori03tif.png"
+  },
+  "end_nuno_greentif.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_nuno_greentif.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_nuno_greentif.png"
+  },
+  "end_nunotif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/end_tex/end_nunotif.png"
+  },
+  "end_pacntif.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_pacntif.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_pacntif.png"
+  },
+  "end_rainbowtif.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_rainbowtif.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_rainbowtif.png"
+  },
+  "end_reef_jantif.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_reef_jantif.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_reef_jantif.png"
+  },
+  "end_ryusei_gou_btif.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_ryusei_gou_btif.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_ryusei_gou_btif.png"
+  },
+  "end_ryusei_goutif.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_ryusei_goutif.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_ryusei_goutif.png"
+  },
+  "end_s_roadtif.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_s_roadtif.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_s_roadtif.png"
+  },
+  "end_snow_fieldtif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/end_tex/end_snow_fieldtif.png"
+  },
+  "end_starlinetif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/end_tex/end_starlinetif.png"
+  },
+  "end_sutif.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_sutif.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_sutif.png"
+  },
+  "end_treetif.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_treetif.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_treetif.png"
+  },
+  "end_tumikitif.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_tumikitif.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_tumikitif.png"
+  },
+  "end_umitif.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_umitif.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_umitif.png"
+  },
+  "end_umitif_AUX.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_umitif_AUX.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_umitif_AUX.png"
+  },
+  "end_yosflo_1tif.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_yosflo_1tif.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_yosflo_1tif.png"
+  },
+  "end_yosflo_2tif.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_yosflo_2tif.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_yosflo_2tif.png"
+  },
+  "end_yoshitif.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_yoshitif.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_yoshitif.png"
+  },
+  "end_yoshitif_AUX.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_yoshitif_AUX.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_yoshitif_AUX.png"
+  },
+  "end_yougantif.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_yougantif.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_yougantif.png"
+  },
+  "end_yuka_block3tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/end_tex/end_yuka_block3tif.png"
+  },
+  "end_yuka_block4tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/end_tex/end_yuka_block4tif.png"
+  }
+}

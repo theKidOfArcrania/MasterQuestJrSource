@@ -1,0 +1,214 @@
+{
+  "trd_ana_ctif.png": {
+    "palette": "{dumpDir}/image/texture/trd_tex/trd_ana_ctif.png",
+    "raster": "{dumpDir}/image/texture/kpa_tex/kpa_ana_ctif.png"
+  },
+  "trd_berosaidetif.png": {
+    "palette": "{dumpDir}/image/texture/trd_tex/trd_berosaidetif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_berosaidetif.png"
+  },
+  "trd_block_dtif.png": {
+    "palette": "{dumpDir}/image/texture/trd_tex/trd_block_dtif.png",
+    "raster": "{dumpDir}/image/texture/sbk_tex/sbk_iwa01tif.png"
+  },
+  "trd_block_e2ttif.png": {
+    "palette": "{dumpDir}/image/texture/trd_tex/trd_block_e2ttif.png",
+    "raster": "{dumpDir}/image/texture/sbk_tex/sbk_iwa01tif.png"
+  },
+  "trd_block_etif.png": {
+    "palette": "{dumpDir}/image/texture/trd_tex/trd_block_etif.png",
+    "raster": "{dumpDir}/image/texture/trd_tex/trd_block_etif.png"
+  },
+  "trd_block_etif_AUX.png": {
+    "palette": "{dumpDir}/image/texture/trd_tex/trd_block_etif_AUX.png",
+    "raster": "{dumpDir}/image/texture/sbk_tex/sbk_iwa01tif.png"
+  },
+  "trd_doatif.png": {
+    "palette": "{dumpDir}/image/texture/trd_tex/trd_doatif.png",
+    "raster": "{dumpDir}/image/texture/trd_tex/trd_doatif.png"
+  },
+  "trd_frametif.png": {
+    "palette": "{dumpDir}/image/texture/trd_tex/trd_frametif.png",
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_frametif.png"
+  },
+  "trd_futa1tif.png": {
+    "palette": "{dumpDir}/image/texture/trd_tex/trd_futa1tif.png",
+    "raster": "{dumpDir}/image/texture/trd_tex/trd_futa1tif.png"
+  },
+  "trd_grayframetif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_grayframetif.png"
+  },
+  "trd_green_etif.png": {
+    "palette": "{dumpDir}/image/texture/trd_tex/trd_green_etif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_green_etif.png"
+  },
+  "trd_green_etif_MIPMAP_1.png": {
+    "palette": "{dumpDir}/image/texture/trd_tex/trd_green_etif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_green_etif_MIPMAP_1.png"
+  },
+  "trd_hikaritif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/trd_tex/trd_hikaritif.png"
+  },
+  "trd_kabe10tif.png": {
+    "palette": "{dumpDir}/image/texture/trd_tex/trd_kabe10tif.png",
+    "raster": "{dumpDir}/image/texture/nok_tex/nok_kabe10tif.png"
+  },
+  "trd_kabe10tif_AUX.png": {
+    "palette": "{dumpDir}/image/texture/trd_tex/trd_kabe10tif_AUX.png",
+    "raster": "{dumpDir}/image/texture/nok_tex/nok_kabe10tif_AUX.png"
+  },
+  "trd_kabe3tif.png": {
+    "palette": "{dumpDir}/image/texture/trd_tex/trd_kabe3tif.png",
+    "raster": "{dumpDir}/image/texture/trd_tex/trd_kabe3tif.png"
+  },
+  "trd_kabe5tif.png": {
+    "palette": "{dumpDir}/image/texture/trd_tex/trd_kabe5tif.png",
+    "raster": "{dumpDir}/image/texture/trd_tex/trd_kabe5tif.png"
+  },
+  "trd_kabe6tif.png": {
+    "palette": "{dumpDir}/image/texture/trd_tex/trd_kabe6tif.png",
+    "raster": "{dumpDir}/image/texture/nok_tex/nok_kabe6tif.png"
+  },
+  "trd_kabe8tif.png": {
+    "palette": "{dumpDir}/image/texture/trd_tex/trd_kabe8tif.png",
+    "raster": "{dumpDir}/image/texture/nok_tex/nok_kabe8tif.png"
+  },
+  "trd_kabekusatif.png": {
+    "palette": "{dumpDir}/image/texture/trd_tex/trd_kabekusatif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_kabekusatif.png"
+  },
+  "trd_kabetif.png": {
+    "palette": "{dumpDir}/image/texture/trd_tex/trd_kabetif.png",
+    "raster": "{dumpDir}/image/texture/nok_tex/nok_kabetif.png"
+  },
+  "trd_kamitif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/end_tex/end_kamitif.png"
+  },
+  "trd_kawa_atif.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_kawa_atif.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_kawa_atif.png"
+  },
+  "trd_kitif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/trd_tex/trd_kitif.png"
+  },
+  "trd_komatif.png": {
+    "palette": "{dumpDir}/image/texture/trd_tex/trd_komatif.png",
+    "raster": "{dumpDir}/image/texture/trd_tex/trd_komatif.png"
+  },
+  "trd_kubiwatif.png": {
+    "palette": "{dumpDir}/image/texture/trd_tex/trd_kubiwatif.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_kubiwatif.png"
+  },
+  "trd_kusaritif.png": {
+    "palette": "{dumpDir}/image/texture/trd_tex/trd_kusaritif.png",
+    "raster": "{dumpDir}/image/texture/trd_tex/trd_kusaritif.png"
+  },
+  "trd_mado6tif.png": {
+    "palette": "{dumpDir}/image/texture/trd_tex/trd_mado6tif.png",
+    "raster": "{dumpDir}/image/texture/trd_tex/trd_mado6tif.png"
+  },
+  "trd_mado7tif.png": {
+    "palette": "{dumpDir}/image/texture/trd_tex/trd_mado7tif.png",
+    "raster": "{dumpDir}/image/texture/trd_tex/trd_mado7tif.png"
+  },
+  "trd_me_btif.png": {
+    "palette": "{dumpDir}/image/texture/trd_tex/trd_me_btif.png",
+    "raster": "{dumpDir}/image/texture/trd_tex/trd_me_btif.png"
+  },
+  "trd_nuno_ctif.png": {
+    "palette": "{dumpDir}/image/texture/trd_tex/trd_nuno_ctif.png",
+    "raster": "{dumpDir}/image/texture/trd_tex/trd_nuno_ctif.png"
+  },
+  "trd_nuno_etif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/trd_tex/trd_nuno_etif.png"
+  },
+  "trd_peachtif.png": {
+    "palette": "{dumpDir}/image/texture/trd_tex/trd_peachtif.png",
+    "raster": "{dumpDir}/image/texture/trd_tex/trd_peachtif.png"
+  },
+  "trd_saku2tif.png": {
+    "palette": "{dumpDir}/image/texture/trd_tex/trd_saku2tif.png",
+    "raster": "{dumpDir}/image/texture/trd_tex/trd_saku2tif.png"
+  },
+  "trd_saku3tif.png": {
+    "palette": "{dumpDir}/image/texture/trd_tex/trd_saku3tif.png",
+    "raster": "{dumpDir}/image/texture/trd_tex/trd_saku3tif.png"
+  },
+  "trd_saku4tif.png": {
+    "palette": "{dumpDir}/image/texture/trd_tex/trd_saku4tif.png",
+    "raster": "{dumpDir}/image/texture/trd_tex/trd_saku4tif.png"
+  },
+  "trd_saku5tif.png": {
+    "palette": "{dumpDir}/image/texture/trd_tex/trd_saku5tif.png",
+    "raster": "{dumpDir}/image/texture/trd_tex/trd_saku5tif.png"
+  },
+  "trd_sakutif.png": {
+    "palette": "{dumpDir}/image/texture/trd_tex/trd_sakutif.png",
+    "raster": "{dumpDir}/image/texture/trd_tex/trd_sakutif.png"
+  },
+  "trd_sui1tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/kpa_tex/kpa_sui1tif.png"
+  },
+  "trd_sui1tif_AUX.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/kpa_tex/kpa_sui1tif_AUX.png"
+  },
+  "trd_t_sui2tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/trd_tex/trd_t_sui2tif.png"
+  },
+  "trd_t_sui2tif_AUX.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/trd_tex/trd_t_sui2tif_AUX.png"
+  },
+  "trd_trd_block2tif.png": {
+    "palette": "{dumpDir}/image/texture/trd_tex/trd_trd_block2tif.png",
+    "raster": "{dumpDir}/image/texture/trd_tex/trd_trd_block2tif.png"
+  },
+  "trd_trd_kusaritif.png": {
+    "palette": "{dumpDir}/image/texture/trd_tex/trd_trd_kusaritif.png",
+    "raster": "{dumpDir}/image/texture/kpa_tex/kpa_trd_kusaritif.png"
+  },
+  "trd_trd_taki1tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/trd_tex/trd_trd_taki1tif.png"
+  },
+  "trd_trd_taki1tif_AUX.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/trd_tex/trd_trd_taki1tif_AUX.png"
+  },
+  "trd_trd_taki2tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/trd_tex/trd_trd_taki2tif.png"
+  },
+  "trd_trd_taki2tif_AUX.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/trd_tex/trd_trd_taki2tif_AUX.png"
+  },
+  "trd_water3tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/hos_tex/hos_water3tif.png"
+  },
+  "trd_water3tif_AUX.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/hos_tex/hos_water3tif_AUX.png"
+  },
+  "trd_water_sokotif.png": {
+    "palette": "{dumpDir}/image/texture/trd_tex/trd_water_sokotif.png",
+    "raster": "{dumpDir}/image/texture/hos_tex/hos_water_sokotif.png"
+  },
+  "trd_yuka3tif.png": {
+    "palette": "{dumpDir}/image/texture/trd_tex/trd_yuka3tif.png",
+    "raster": "{dumpDir}/image/texture/nok_tex/nok_yuka3tif.png"
+  },
+  "trd_yuka4tif.png": {
+    "palette": "{dumpDir}/image/texture/trd_tex/trd_yuka4tif.png",
+    "raster": "{dumpDir}/image/texture/trd_tex/trd_yuka4tif.png"
+  }
+}

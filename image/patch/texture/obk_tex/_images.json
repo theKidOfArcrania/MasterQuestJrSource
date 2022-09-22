@@ -1,0 +1,258 @@
+{
+  "obk_bedtif.png": {
+    "palette": "{dumpDir}/image/texture/obk_tex/obk_bedtif.png",
+    "raster": "{dumpDir}/image/texture/mim_tex/mim_bedtif.png"
+  },
+  "obk_danrotif.png": {
+    "palette": "{dumpDir}/image/texture/obk_tex/obk_danrotif.png",
+    "raster": "{dumpDir}/image/texture/mim_tex/mim_danrotif.png"
+  },
+  "obk_denki64tif.png": {
+    "palette": "{dumpDir}/image/texture/obk_tex/obk_denki64tif.png",
+    "raster": "{dumpDir}/image/texture/obk_tex/obk_denki64tif.png"
+  },
+  "obk_denki_3btif.png": {
+    "palette": "{dumpDir}/image/texture/obk_tex/obk_denki_3btif.png",
+    "raster": "{dumpDir}/image/texture/obk_tex/obk_denki_3btif.png"
+  },
+  "obk_denki_rtif.png": {
+    "palette": "{dumpDir}/image/texture/obk_tex/obk_denki_rtif.png",
+    "raster": "{dumpDir}/image/texture/obk_tex/obk_denki_rtif.png"
+  },
+  "obk_door_01_btif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/obk_tex/obk_door_01_btif.png"
+  },
+  "obk_door_1tif.png": {
+    "palette": "{dumpDir}/image/texture/obk_tex/obk_door_1tif.png",
+    "raster": "{dumpDir}/image/texture/obk_tex/obk_door_1tif.png"
+  },
+  "obk_doortif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/mim_tex/mim_doortif.png"
+  },
+  "obk_hashira_atif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/mim_tex/mim_hashira_atif.png"
+  },
+  "obk_hashira_u_1tif.png": {
+    "palette": "{dumpDir}/image/texture/obk_tex/obk_hashira_u_1tif.png",
+    "raster": "{dumpDir}/image/texture/obk_tex/obk_hashira_u_1tif.png"
+  },
+  "obk_hashiratif.png": {
+    "palette": "{dumpDir}/image/texture/obk_tex/obk_hashiratif.png",
+    "raster": "{dumpDir}/image/texture/mim_tex/mim_hashiratif.png"
+  },
+  "obk_hei_1tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/obk_tex/obk_hei_1tif.png"
+  },
+  "obk_heitif.png": {
+    "palette": "{dumpDir}/image/texture/obk_tex/obk_heitif.png",
+    "raster": "{dumpDir}/image/texture/obk_tex/obk_heitif.png"
+  },
+  "obk_hi_1_atif.png": {
+    "palette": "{dumpDir}/image/texture/obk_tex/obk_hi_1_atif.png",
+    "raster": "{dumpDir}/image/texture/obk_tex/obk_hi_1_atif.png"
+  },
+  "obk_hibitif.png": {
+    "palette": "{dumpDir}/image/texture/obk_tex/obk_hibitif.png",
+    "raster": "{dumpDir}/image/texture/kzn_tex/kzn_hibitif.png"
+  },
+  "obk_hokori1tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/dgb_tex/dgb_hokori1tif.png"
+  },
+  "obk_hon2tif.png": {
+    "palette": "{dumpDir}/image/texture/obk_tex/obk_hon2tif.png",
+    "raster": "{dumpDir}/image/texture/obk_tex/obk_hon2tif.png"
+  },
+  "obk_hon2tif_AUX.png": {
+    "palette": "{dumpDir}/image/texture/obk_tex/obk_hon2tif_AUX.png",
+    "raster": "{dumpDir}/image/texture/obk_tex/obk_hon2tif_AUX.png"
+  },
+  "obk_howahowa_mtif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/obk_tex/obk_howahowa_mtif.png"
+  },
+  "obk_howahowatif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/obk_tex/obk_howahowatif.png"
+  },
+  "obk_kabe_heyatif.png": {
+    "palette": "{dumpDir}/image/texture/obk_tex/obk_kabe_heyatif.png",
+    "raster": "{dumpDir}/image/texture/obk_tex/obk_kabe_heyatif.png"
+  },
+  "obk_kabebe_12tif.png": {
+    "palette": "{dumpDir}/image/texture/obk_tex/obk_kabebe_12tif.png",
+    "raster": "{dumpDir}/image/texture/obk_tex/obk_kabebe_12tif.png"
+  },
+  "obk_kabebe_mtif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/mim_tex/mim_kabebe_mtif.png"
+  },
+  "obk_kabebe_mtif_MIPMAP_1.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/mim_tex/mim_kabebe_mtif_MIPMAP_1.png"
+  },
+  "obk_kabebe_mtif_MIPMAP_2.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/mim_tex/mim_kabebe_mtif_MIPMAP_2.png"
+  },
+  "obk_kabebe_mtif_MIPMAP_3.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/mim_tex/mim_kabebe_mtif_MIPMAP_3.png"
+  },
+  "obk_kabebetif.png": {
+    "palette": "{dumpDir}/image/texture/obk_tex/obk_kabebetif.png",
+    "raster": "{dumpDir}/image/texture/obk_tex/obk_kabebetif.png"
+  },
+  "obk_kaidan_01tif.png": {
+    "palette": "{dumpDir}/image/texture/obk_tex/obk_kaidan_01tif.png",
+    "raster": "{dumpDir}/image/texture/obk_tex/obk_kaidan_01tif.png"
+  },
+  "obk_kaidan_3tif.png": {
+    "palette": "{dumpDir}/image/texture/obk_tex/obk_kaidan_3tif.png",
+    "raster": "{dumpDir}/image/texture/obk_tex/obk_kaidan_3tif.png"
+  },
+  "obk_kaidan_5tif.png": {
+    "palette": "{dumpDir}/image/texture/obk_tex/obk_kaidan_5tif.png",
+    "raster": "{dumpDir}/image/texture/mim_tex/mim_kaidan_5tif.png"
+  },
+  "obk_kaidan_6tif.png": {
+    "palette": "{dumpDir}/image/texture/obk_tex/obk_kaidan_6tif.png",
+    "raster": "{dumpDir}/image/texture/obk_tex/obk_kaidan_6tif.png"
+  },
+  "obk_kaidantif.png": {
+    "palette": "{dumpDir}/image/texture/obk_tex/obk_kaidantif.png",
+    "raster": "{dumpDir}/image/texture/obk_tex/obk_kaidantif.png"
+  },
+  "obk_kusari_stif.png": {
+    "palette": "{dumpDir}/image/texture/obk_tex/obk_kusari_stif.png",
+    "raster": "{dumpDir}/image/texture/obk_tex/obk_kusari_stif.png"
+  },
+  "obk_kusaritif.png": {
+    "palette": "{dumpDir}/image/texture/mim_tex/mim_kusaritif.png",
+    "raster": "{dumpDir}/image/texture/mim_tex/mim_kusaritif.png"
+  },
+  "obk_mado_3tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/obk_tex/obk_mado_3tif.png"
+  },
+  "obk_mattif.png": {
+    "palette": "{dumpDir}/image/texture/obk_tex/obk_mattif.png",
+    "raster": "{dumpDir}/image/texture/obk_tex/obk_mattif.png"
+  },
+  "obk_nuno_1tif.png": {
+    "palette": "{dumpDir}/image/texture/obk_tex/obk_nuno_1tif.png",
+    "raster": "{dumpDir}/image/texture/obk_tex/obk_nuno_1tif.png"
+  },
+  "obk_nuno_2tif.png": {
+    "palette": "{dumpDir}/image/texture/obk_tex/obk_nuno_2tif.png",
+    "raster": "{dumpDir}/image/texture/obk_tex/obk_nuno_2tif.png"
+  },
+  "obk_nuno_3tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/obk_tex/obk_nuno_3tif.png"
+  },
+  "obk_reco2tif.png": {
+    "palette": "{dumpDir}/image/texture/obk_tex/obk_reco2tif.png",
+    "raster": "{dumpDir}/image/texture/obk_tex/obk_reco2tif.png"
+  },
+  "obk_sofatif.png": {
+    "palette": "{dumpDir}/image/texture/obk_tex/obk_sofatif.png",
+    "raster": "{dumpDir}/image/texture/obk_tex/obk_sofatif.png"
+  },
+  "obk_sotokabetif.png": {
+    "palette": "{dumpDir}/image/texture/obk_tex/obk_sotokabetif.png",
+    "raster": "{dumpDir}/image/texture/obk_tex/obk_sotokabetif.png"
+  },
+  "obk_tabul_1tif.png": {
+    "palette": "{dumpDir}/image/texture/obk_tex/obk_tabul_1tif.png",
+    "raster": "{dumpDir}/image/texture/obk_tex/obk_tabul_1tif.png"
+  },
+  "obk_tabultif.png": {
+    "palette": "{dumpDir}/image/texture/obk_tex/obk_tabultif.png",
+    "raster": "{dumpDir}/image/texture/obk_tex/obk_tabultif.png"
+  },
+  "obk_takitif.png": {
+    "palette": "{dumpDir}/image/texture/obk_tex/obk_takitif.png",
+    "raster": "{dumpDir}/image/texture/obk_tex/obk_takitif.png"
+  },
+  "obk_takitif_AUX.png": {
+    "palette": "{dumpDir}/image/texture/obk_tex/obk_takitif_AUX.png",
+    "raster": "{dumpDir}/image/texture/obk_tex/obk_takitif_AUX.png"
+  },
+  "obk_tansutif.png": {
+    "palette": "{dumpDir}/image/texture/obk_tex/obk_tansutif.png",
+    "raster": "{dumpDir}/image/texture/obk_tex/obk_tansutif.png"
+  },
+  "obk_tere_e_a_2tif.png": {
+    "palette": "{dumpDir}/image/texture/obk_tex/obk_tere_e_a_2tif.png",
+    "raster": "{dumpDir}/image/texture/obk_tex/obk_tere_e_a_2tif.png"
+  },
+  "obk_tere_tere_ttif.png": {
+    "palette": "{dumpDir}/image/texture/obk_tex/obk_tere_tere_ttif.png",
+    "raster": "{dumpDir}/image/texture/obk_tex/obk_tere_tere_ttif.png"
+  },
+  "obk_tere_teretif.png": {
+    "palette": "{dumpDir}/image/texture/obk_tex/obk_tere_teretif.png",
+    "raster": "{dumpDir}/image/texture/obk_tex/obk_tere_teretif.png"
+  },
+  "obk_tererere_1tif.png": {
+    "palette": "{dumpDir}/image/texture/obk_tex/obk_tererere_1tif.png",
+    "raster": "{dumpDir}/image/texture/obk_tex/obk_tererere_1tif.png"
+  },
+  "obk_tererere_2tif.png": {
+    "palette": "{dumpDir}/image/texture/obk_tex/obk_tererere_2tif.png",
+    "raster": "{dumpDir}/image/texture/obk_tex/obk_tererere_2tif.png"
+  },
+  "obk_tkomonotif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/obk_tex/obk_tkomonotif.png"
+  },
+  "obk_to_1tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/obk_tex/obk_to_1tif.png"
+  },
+  "obk_tokeitif.png": {
+    "palette": "{dumpDir}/image/texture/obk_tex/obk_tokeitif.png",
+    "raster": "{dumpDir}/image/texture/obk_tex/obk_tokeitif.png"
+  },
+  "obk_totif.png": {
+    "palette": "{dumpDir}/image/texture/obk_tex/obk_totif.png",
+    "raster": "{dumpDir}/image/texture/obk_tex/obk_totif.png"
+  },
+  "obk_yuka_mctif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/obk_tex/obk_yuka_mctif.png"
+  },
+  "obk_yuka_mctif_MIPMAP_1.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/obk_tex/obk_yuka_mctif_MIPMAP_1.png"
+  },
+  "obk_yuka_mctif_MIPMAP_2.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/obk_tex/obk_yuka_mctif_MIPMAP_2.png"
+  },
+  "obk_yuka_mctif_MIPMAP_3.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/obk_tex/obk_yuka_mctif_MIPMAP_3.png"
+  },
+  "obk_yuka_t1tif.png": {
+    "palette": "{dumpDir}/image/texture/obk_tex/obk_yuka_t1tif.png",
+    "raster": "{dumpDir}/image/texture/mim_tex/mim_yuka_t1tif.png"
+  },
+  "obk_yuka_t1tif_MIPMAP_1.png": {
+    "palette": "{dumpDir}/image/texture/obk_tex/obk_yuka_t1tif.png",
+    "raster": "{dumpDir}/image/texture/mim_tex/mim_yuka_t1tif_MIPMAP_1.png"
+  },
+  "obk_yuka_tairu3tif.png": {
+    "palette": "{dumpDir}/image/texture/obk_tex/obk_yuka_tairu3tif.png",
+    "raster": "{dumpDir}/image/texture/mim_tex/mim_yuka_tairu3tif.png"
+  },
+  "obk_yuka_tairutif.png": {
+    "palette": "{dumpDir}/image/texture/obk_tex/obk_yuka_tairutif.png",
+    "raster": "{dumpDir}/image/texture/obk_tex/obk_yuka_tairutif.png"
+  }
+}

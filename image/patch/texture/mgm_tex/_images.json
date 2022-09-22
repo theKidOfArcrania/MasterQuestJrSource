@@ -1,0 +1,62 @@
+{
+  "mgm_1cointif.png": {
+    "palette": "{dumpDir}/image/texture/mgm_tex/mgm_1cointif.png",
+    "raster": "{dumpDir}/image/texture/mgm_tex/mgm_1cointif.png"
+  },
+  "mgm_3coinstif.png": {
+    "palette": "{dumpDir}/image/texture/mgm_tex/mgm_3coinstif.png",
+    "raster": "{dumpDir}/image/texture/mgm_tex/mgm_3coinstif.png"
+  },
+  "mgm_3timestif.png": {
+    "palette": "{dumpDir}/image/texture/mgm_tex/mgm_3timestif.png",
+    "raster": "{dumpDir}/image/texture/mgm_tex/mgm_3timestif.png"
+  },
+  "mgm_boardtif.png": {
+    "palette": "{dumpDir}/image/texture/mgm_tex/mgm_boardtif.png",
+    "raster": "{dumpDir}/image/texture/mgm_tex/mgm_boardtif.png"
+  },
+  "mgm_c1tif.png": {
+    "palette": "{dumpDir}/image/texture/mgm_tex/mgm_c1tif.png",
+    "raster": "{dumpDir}/image/texture/mgm_tex/mgm_c1tif.png"
+  },
+  "mgm_floortif.png": {
+    "palette": "{dumpDir}/image/texture/mgm_tex/mgm_floortif.png",
+    "raster": "{dumpDir}/image/texture/mgm_tex/mgm_floortif.png"
+  },
+  "mgm_hishitif.png": {
+    "palette": "{dumpDir}/image/texture/mgm_tex/mgm_hishitif.png",
+    "raster": "{dumpDir}/image/texture/mgm_tex/mgm_hishitif.png"
+  },
+  "mgm_kino_box_btif.png": {
+    "palette": "{dumpDir}/image/texture/mgm_tex/mgm_kino_box_btif.png",
+    "raster": "{dumpDir}/image/texture/mgm_tex/mgm_kino_box_btif.png"
+  },
+  "mgm_kino_box_gtif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/mgm_tex/mgm_kino_box_gtif.png"
+  },
+  "mgm_koopa_cardtif.png": {
+    "palette": "{dumpDir}/image/texture/mgm_tex/mgm_koopa_cardtif.png",
+    "raster": "{dumpDir}/image/texture/mgm_tex/mgm_koopa_cardtif.png"
+  },
+  "mgm_peach_cointif.png": {
+    "palette": "{dumpDir}/image/texture/mgm_tex/mgm_peach_cointif.png",
+    "raster": "{dumpDir}/image/texture/mgm_tex/mgm_peach_cointif.png"
+  },
+  "mgm_platetif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/mgm_tex/mgm_platetif.png"
+  },
+  "mgm_spottif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/mgm_tex/mgm_spottif.png"
+  },
+  "mgm_star_floortif.png": {
+    "palette": "{dumpDir}/image/texture/mgm_tex/mgm_star_floortif.png",
+    "raster": "{dumpDir}/image/texture/mgm_tex/mgm_star_floortif.png"
+  },
+  "mgm_t_dokankun3tif.png": {
+    "palette": "{dumpDir}/image/texture/mgm_tex/mgm_t_dokankun3tif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_t_dokankun3tif.png"
+  }
+}

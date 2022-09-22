@@ -1,0 +1,294 @@
+{
+  "bubble.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/bubble.png"
+  },
+  "fp_cost.png": {
+    "palette": "{dumpDir}/image/assets/ui/fp_cost.png",
+    "raster": "{dumpDir}/image/assets/ui/fp_cost.png"
+  },
+  "fp_cost_least.png": {
+    "palette": "{dumpDir}/image/assets/ui/fp_cost_least.png",
+    "raster": "{dumpDir}/image/assets/ui/fp_cost.png"
+  },
+  "fp_cost_least_alt.png": {
+    "palette": "{dumpDir}/image/assets/ui/fp_cost_least_alt.png",
+    "raster": "{dumpDir}/image/assets/ui/fp_cost.png"
+  },
+  "fp_cost_less.png": {
+    "palette": "{dumpDir}/image/assets/ui/fp_cost_less.png",
+    "raster": "{dumpDir}/image/assets/ui/fp_cost.png"
+  },
+  "move_basic.png": {
+    "palette": "{dumpDir}/image/assets/ui/move_basic.png",
+    "raster": "{dumpDir}/image/assets/ui/move_basic.png"
+  },
+  "move_basic_alt.png": {
+    "palette": "{dumpDir}/image/assets/ui/move_basic_alt.png",
+    "raster": "{dumpDir}/image/assets/ui/move_basic.png"
+  },
+  "move_partner_1.png": {
+    "palette": "{dumpDir}/image/assets/ui/move_partner_1.png",
+    "raster": "{dumpDir}/image/assets/ui/move_partner_1.png"
+  },
+  "move_partner_1_alt.png": {
+    "palette": "{dumpDir}/image/assets/ui/move_partner_1_alt.png",
+    "raster": "{dumpDir}/image/assets/ui/move_partner_1.png"
+  },
+  "move_partner_2.png": {
+    "palette": "{dumpDir}/image/assets/ui/move_partner_2.png",
+    "raster": "{dumpDir}/image/assets/ui/move_partner_1.png"
+  },
+  "move_partner_2_alt.png": {
+    "palette": "{dumpDir}/image/assets/ui/move_partner_2_alt.png",
+    "raster": "{dumpDir}/image/assets/ui/move_partner_1.png"
+  },
+  "move_partner_3.png": {
+    "palette": "{dumpDir}/image/assets/ui/move_partner_3.png",
+    "raster": "{dumpDir}/image/assets/ui/move_partner_1.png"
+  },
+  "move_partner_3_alt.png": {
+    "palette": "{dumpDir}/image/assets/ui/move_partner_3_alt.png",
+    "raster": "{dumpDir}/image/assets/ui/move_partner_1.png"
+  },
+  "partner_00.png": {
+    "palette": "{dumpDir}/image/assets/ui/partner_00.png",
+    "raster": "{dumpDir}/image/assets/ui/partner_00.png"
+  },
+  "partner_00_alt.png": {
+    "palette": "{dumpDir}/image/assets/ui/partner_00_alt.png",
+    "raster": "{dumpDir}/image/assets/ui/partner_00.png"
+  },
+  "partner_01.png": {
+    "palette": "{dumpDir}/image/assets/ui/partner_01.png",
+    "raster": "{dumpDir}/image/assets/ui/partner_01.png"
+  },
+  "partner_01_alt.png": {
+    "palette": "{dumpDir}/image/assets/ui/partner_01_alt.png",
+    "raster": "{dumpDir}/image/assets/ui/partner_01.png"
+  },
+  "partner_02.png": {
+    "palette": "{dumpDir}/image/assets/ui/partner_00.png",
+    "raster": "{dumpDir}/image/assets/ui/partner_00.png"
+  },
+  "partner_02_alt.png": {
+    "palette": "{dumpDir}/image/assets/ui/partner_00_alt.png",
+    "raster": "{dumpDir}/image/assets/ui/partner_00.png"
+  },
+  "partner_03.png": {
+    "palette": "{dumpDir}/image/assets/ui/partner_03.png",
+    "raster": "{dumpDir}/image/assets/ui/partner_03.png"
+  },
+  "partner_03_alt.png": {
+    "palette": "{dumpDir}/image/assets/ui/partner_03_alt.png",
+    "raster": "{dumpDir}/image/assets/ui/partner_03.png"
+  },
+  "partner_04.png": {
+    "palette": "{dumpDir}/image/assets/ui/partner_04.png",
+    "raster": "{dumpDir}/image/assets/ui/partner_04.png"
+  },
+  "partner_04_alt.png": {
+    "palette": "{dumpDir}/image/assets/ui/partner_04_alt.png",
+    "raster": "{dumpDir}/image/assets/ui/partner_04.png"
+  },
+  "partner_05.png": {
+    "palette": "{dumpDir}/image/assets/ui/partner_05.png",
+    "raster": "{dumpDir}/image/assets/ui/partner_05.png"
+  },
+  "partner_05_alt.png": {
+    "palette": "{dumpDir}/image/assets/ui/partner_05_alt.png",
+    "raster": "{dumpDir}/image/assets/ui/partner_05.png"
+  },
+  "partner_06.png": {
+    "palette": "{dumpDir}/image/assets/ui/partner_06.png",
+    "raster": "{dumpDir}/image/assets/ui/partner_06.png"
+  },
+  "partner_06_alt.png": {
+    "palette": "{dumpDir}/image/assets/ui/partner_06_alt.png",
+    "raster": "{dumpDir}/image/assets/ui/partner_06.png"
+  },
+  "partner_07.png": {
+    "palette": "{dumpDir}/image/assets/ui/partner_07.png",
+    "raster": "{dumpDir}/image/assets/ui/partner_07.png"
+  },
+  "partner_07_alt.png": {
+    "palette": "{dumpDir}/image/assets/ui/partner_07_alt.png",
+    "raster": "{dumpDir}/image/assets/ui/partner_07.png"
+  },
+  "partner_08.png": {
+    "palette": "{dumpDir}/image/assets/ui/partner_08.png",
+    "raster": "{dumpDir}/image/assets/ui/partner_08.png"
+  },
+  "partner_08_alt.png": {
+    "palette": "{dumpDir}/image/assets/ui/partner_08_alt.png",
+    "raster": "{dumpDir}/image/assets/ui/partner_08.png"
+  },
+  "partner_09.png": {
+    "palette": "{dumpDir}/image/assets/ui/partner_00.png",
+    "raster": "{dumpDir}/image/assets/ui/partner_00.png"
+  },
+  "partner_09_alt.png": {
+    "palette": "{dumpDir}/image/assets/ui/partner_00_alt.png",
+    "raster": "{dumpDir}/image/assets/ui/partner_00.png"
+  },
+  "partner_10.png": {
+    "palette": "{dumpDir}/image/assets/ui/partner_00.png",
+    "raster": "{dumpDir}/image/assets/ui/partner_00.png"
+  },
+  "partner_10_alt.png": {
+    "palette": "{dumpDir}/image/assets/ui/partner_00_alt.png",
+    "raster": "{dumpDir}/image/assets/ui/partner_00.png"
+  },
+  "partner_11.png": {
+    "palette": "{dumpDir}/image/assets/ui/partner_00.png",
+    "raster": "{dumpDir}/image/assets/ui/partner_00.png"
+  },
+  "partner_11_alt.png": {
+    "palette": "{dumpDir}/image/assets/ui/partner_00_alt.png",
+    "raster": "{dumpDir}/image/assets/ui/partner_00.png"
+  },
+  "popup_arrow_down.png": {
+    "palette": "{dumpDir}/image/assets/ui/popup_arrow_down.png",
+    "raster": "{dumpDir}/image/assets/ui/popup_arrow_down.png"
+  },
+  "popup_arrow_up.png": {
+    "palette": "{dumpDir}/image/assets/ui/popup_arrow_down.png",
+    "raster": "{dumpDir}/image/assets/ui/popup_arrow_up.png"
+  },
+  "popup_pointer.png": {
+    "palette": "{dumpDir}/image/assets/ui/popup_pointer.png",
+    "raster": "{dumpDir}/image/assets/ui/popup_pointer.png"
+  },
+  "pow_cost.png": {
+    "palette": "{dumpDir}/image/assets/ui/fp_cost.png",
+    "raster": "{dumpDir}/image/assets/ui/pow_cost.png"
+  },
+  "pow_cost_least.png": {
+    "palette": "{dumpDir}/image/assets/ui/fp_cost_least.png",
+    "raster": "{dumpDir}/image/assets/ui/pow_cost.png"
+  },
+  "pow_cost_least_alt.png": {
+    "palette": "{dumpDir}/image/assets/ui/fp_cost_least_alt.png",
+    "raster": "{dumpDir}/image/assets/ui/pow_cost.png"
+  },
+  "pow_cost_less.png": {
+    "palette": "{dumpDir}/image/assets/ui/fp_cost_less.png",
+    "raster": "{dumpDir}/image/assets/ui/pow_cost.png"
+  },
+  "sparkle_0.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/shimmer_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/shimmer_0.png"
+  },
+  "sparkle_1.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/shimmer_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/shimmer_1.png"
+  },
+  "sparkle_2.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/shimmer_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/shimmer_2.png"
+  },
+  "sparkle_3.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/shimmer_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/shimmer_3.png"
+  },
+  "sparkle_4.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/shimmer_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/shimmer_4.png"
+  },
+  "sparkle_5.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/shimmer_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/shimmer_5.png"
+  },
+  "sparkle_none.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/shimmer_6.png",
+    "raster": "{dumpDir}/image/assets/item/anim/shimmer_6.png"
+  },
+  "spirit_eldstar.png": {
+    "palette": "{dumpDir}/image/assets/ui/spirit_eldstar.png",
+    "raster": "{dumpDir}/image/assets/ui/spirit_eldstar.png"
+  },
+  "spirit_eldstar_alt.png": {
+    "palette": "{dumpDir}/image/assets/ui/spirit_eldstar_alt.png",
+    "raster": "{dumpDir}/image/assets/ui/spirit_eldstar.png"
+  },
+  "spirit_group.png": {
+    "palette": "{dumpDir}/image/assets/ui/spirit_group.png",
+    "raster": "{dumpDir}/image/assets/ui/spirit_group.png"
+  },
+  "spirit_group_alt.png": {
+    "palette": "{dumpDir}/image/assets/ui/spirit_group_alt.png",
+    "raster": "{dumpDir}/image/assets/ui/spirit_group.png"
+  },
+  "spirit_kalmar.png": {
+    "palette": "{dumpDir}/image/assets/ui/spirit_kalmar.png",
+    "raster": "{dumpDir}/image/assets/ui/spirit_kalmar.png"
+  },
+  "spirit_kalmar_alt.png": {
+    "palette": "{dumpDir}/image/assets/ui/spirit_kalmar_alt.png",
+    "raster": "{dumpDir}/image/assets/ui/spirit_kalmar.png"
+  },
+  "spirit_klevar.png": {
+    "palette": "{dumpDir}/image/assets/ui/spirit_klevar.png",
+    "raster": "{dumpDir}/image/assets/ui/spirit_klevar.png"
+  },
+  "spirit_klevar_alt.png": {
+    "palette": "{dumpDir}/image/assets/ui/spirit_klevar_alt.png",
+    "raster": "{dumpDir}/image/assets/ui/spirit_klevar.png"
+  },
+  "spirit_mamar.png": {
+    "palette": "{dumpDir}/image/assets/ui/spirit_mamar.png",
+    "raster": "{dumpDir}/image/assets/ui/spirit_mamar.png"
+  },
+  "spirit_mamar_alt.png": {
+    "palette": "{dumpDir}/image/assets/ui/spirit_mamar_alt.png",
+    "raster": "{dumpDir}/image/assets/ui/spirit_mamar.png"
+  },
+  "spirit_misstar.png": {
+    "palette": "{dumpDir}/image/assets/ui/spirit_misstar.png",
+    "raster": "{dumpDir}/image/assets/ui/spirit_misstar.png"
+  },
+  "spirit_misstar_alt.png": {
+    "palette": "{dumpDir}/image/assets/ui/spirit_misstar_alt.png",
+    "raster": "{dumpDir}/image/assets/ui/spirit_misstar.png"
+  },
+  "spirit_muskular.png": {
+    "palette": "{dumpDir}/image/assets/ui/spirit_muskular.png",
+    "raster": "{dumpDir}/image/assets/ui/spirit_muskular.png"
+  },
+  "spirit_muskular_alt.png": {
+    "palette": "{dumpDir}/image/assets/ui/spirit_muskular_alt.png",
+    "raster": "{dumpDir}/image/assets/ui/spirit_muskular.png"
+  },
+  "spirit_peach.png": {
+    "palette": "{dumpDir}/image/assets/ui/spirit_peach.png",
+    "raster": "{dumpDir}/image/assets/ui/spirit_peach.png"
+  },
+  "spirit_peach_alt.png": {
+    "palette": "{dumpDir}/image/assets/ui/spirit_peach_alt.png",
+    "raster": "{dumpDir}/image/assets/ui/spirit_peach.png"
+  },
+  "spirit_skolar.png": {
+    "palette": "{dumpDir}/image/assets/ui/spirit_skolar.png",
+    "raster": "{dumpDir}/image/assets/ui/spirit_skolar.png"
+  },
+  "spirit_skolar_alt.png": {
+    "palette": "{dumpDir}/image/assets/ui/spirit_skolar_alt.png",
+    "raster": "{dumpDir}/image/assets/ui/spirit_skolar.png"
+  },
+  "stat_flower.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/stat_flower.png"
+  },
+  "stat_heart.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/stat_heart.png"
+  },
+  "stat_mario.png": {
+    "palette": "{dumpDir}/image/assets/ui/stat_mario.png",
+    "raster": "{dumpDir}/image/assets/ui/stat_mario.png"
+  },
+  "stat_times.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/stat_times.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/stat_times.png"
+  }
+}

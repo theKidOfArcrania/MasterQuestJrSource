@@ -1,0 +1,462 @@
+{
+  "kmr_00_0tif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_00_0tif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_00_0tif.png"
+  },
+  "kmr_00_reef_ltif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_00_reef_ltif.png"
+  },
+  "kmr_00_reef_mtif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_00_reef_mtif.png"
+  },
+  "kmr_00a_reef_h2tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_00a_reef_h2tif.png"
+  },
+  "kmr_00b_reef_h2tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_00b_reef_h2tif.png"
+  },
+  "kmr_berandatif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_berandatif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_berandatif.png"
+  },
+  "kmr_berosaidetif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_berosaidetif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_berosaidetif.png"
+  },
+  "kmr_bintif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_bintif.png"
+  },
+  "kmr_block_smalltif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_block_smalltif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_block_smalltif.png"
+  },
+  "kmr_castle_pointtif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_castle_pointtif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_castle_pointtif.png"
+  },
+  "kmr_cha_kinokotif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_cha_kinokotif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_cha_kinokotif.png"
+  },
+  "kmr_dec_planttif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_dec_planttif.png",
+    "raster": "{dumpDir}/image/texture/kkj_tex/kkj_dec_planttif.png"
+  },
+  "kmr_dokantif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_dokantif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_dokantif.png"
+  },
+  "kmr_door_01_btif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_door_01_btif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_door_01_btif.png"
+  },
+  "kmr_dtif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_dtif.png"
+  },
+  "kmr_etif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_etif.png"
+  },
+  "kmr_fencetif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_fencetif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_fencetif.png"
+  },
+  "kmr_flower_01tif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_flower_01tif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_flower_01tif.png"
+  },
+  "kmr_frametif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_frametif.png",
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_frametif.png"
+  },
+  "kmr_graytif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_graytif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_graytif.png"
+  },
+  "kmr_gree_edge1tif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_gree_edge1tif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_gree_edge1tif.png"
+  },
+  "kmr_gree_edgetif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_gree_edgetif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_gree_edgetif.png"
+  },
+  "kmr_green_c_roadtif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_green_c_roadtif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_green_c_roadtif.png"
+  },
+  "kmr_green_ctif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_green_ctif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_green_ctif.png"
+  },
+  "kmr_green_edgetif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_green_edgetif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_green_edgetif.png"
+  },
+  "kmr_green_etif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_green_etif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_green_etif.png"
+  },
+  "kmr_green_etif_MIPMAP_1.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_green_etif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_green_etif_MIPMAP_1.png"
+  },
+  "kmr_green_wtif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_green_wtif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_green_wtif.png"
+  },
+  "kmr_hangatif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_hangatif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_hangatif.png"
+  },
+  "kmr_hashi53tif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_hashi53tif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_hashi53tif.png"
+  },
+  "kmr_heya_2tif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_heya_2tif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_heya_2tif.png"
+  },
+  "kmr_htif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_htif.png"
+  },
+  "kmr_in_2tif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_in_2tif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_in_2tif.png"
+  },
+  "kmr_iwashitatif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_iwashitatif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_iwashitatif.png"
+  },
+  "kmr_iwatemaetif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_iwatemaetif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_iwatemaetif.png"
+  },
+  "kmr_iwatif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_iwatif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_iwatif.png"
+  },
+  "kmr_iwayukatif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_iwayukatif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_iwayukatif.png"
+  },
+  "kmr_kanbantif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_kanbantif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_kanbantif.png"
+  },
+  "kmr_kemuritif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_kemuritif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_kemuritif.png"
+  },
+  "kmr_kidayotif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_kidayotif.png"
+  },
+  "kmr_kinopiotif.png": {
+    "palette": "{dumpDir}/image/texture/dro_tex/dro_kinopiotif.png",
+    "raster": "{dumpDir}/image/texture/dro_tex/dro_kinopiotif.png"
+  },
+  "kmr_kkg_doortif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_kkg_doortif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_kkg_doortif.png"
+  },
+  "kmr_kkg_madotif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_kkg_madotif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_kkg_madotif.png"
+  },
+  "kmr_kkg_wall_atif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_kkg_wall_atif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_kkg_wall_atif.png"
+  },
+  "kmr_kkg_wall_btif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_kkg_wall_btif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_kkg_wall_btif.png"
+  },
+  "kmr_kkg_wall_ctif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_kkg_wall_ctif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_kkg_wall_ctif.png"
+  },
+  "kmr_kkg_yukatif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_kkg_yukatif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_kkg_yukatif.png"
+  },
+  "kmr_kkg_yukatif_AUX.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_kkg_yukatif_AUX.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_kkg_yukatif_AUX.png"
+  },
+  "kmr_kmr_batu01tif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_kmr_batu01tif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_kmr_batu01tif.png"
+  },
+  "kmr_kmr_green_00c_1tif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_kmr_green_00c_1tif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_kmr_green_00c_1tif.png"
+  },
+  "kmr_kmr_green_00c_2tif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_kmr_green_00c_2tif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_kmr_green_00c_2tif.png"
+  },
+  "kmr_kmr_sakutif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_kmr_sakutif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_kmr_sakutif.png"
+  },
+  "kmr_kmr_waku3tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_kmr_waku3tif.png"
+  },
+  "kmr_krm_gaketif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_krm_gaketif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_krm_gaketif.png"
+  },
+  "kmr_krm_gaketif_AUX.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_krm_gaketif_AUX.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_krm_gaketif_AUX.png"
+  },
+  "kmr_kurikinokotif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_kurikinokotif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_kurikinokotif.png"
+  },
+  "kmr_layer_c2tif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_layer_c2tif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_krm_gaketif.png"
+  },
+  "kmr_layer_c2tif_AUX.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_layer_c2tif_AUX.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_layer_c2tif_AUX.png"
+  },
+  "kmr_layer_ctif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_layer_ctif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_krm_gaketif.png"
+  },
+  "kmr_m_backtif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/end_tex/end_m_backtif.png"
+  },
+  "kmr_m_carpettif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_m_carpettif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_m_carpettif.png"
+  },
+  "kmr_m_hanatif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_m_hanatif.png"
+  },
+  "kmr_m_hontif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_m_hontif.png",
+    "raster": "{dumpDir}/image/texture/dro_tex/dro_hon2tif.png"
+  },
+  "kmr_m_kanban2tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_m_kanban2tif.png"
+  },
+  "kmr_m_kanban3tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_m_kanban3tif.png"
+  },
+  "kmr_m_mado3tif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_m_mado3tif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_m_mado3tif.png"
+  },
+  "kmr_m_madotif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_m_madotif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_m_madotif.png"
+  },
+  "kmr_m_tikatif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_m_tikatif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_m_tikatif.png"
+  },
+  "kmr_m_turuhatif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_m_turuhatif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_m_turuhatif.png"
+  },
+  "kmr_m_turutif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_m_turutif.png"
+  },
+  "kmr_mac_edgetif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_mac_edgetif.png",
+    "raster": "{dumpDir}/image/texture/hos_tex/hos_mac_edgetif.png"
+  },
+  "kmr_mac_fieldtif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_mac_fieldtif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_mac_fieldtif.png"
+  },
+  "kmr_mac_house2tif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_mac_house2tif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_mac_house2tif.png"
+  },
+  "kmr_mac_house2tif_MIPMAP_1.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_mac_house2tif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_mac_house2tif_MIPMAP_1.png"
+  },
+  "kmr_mac_house2tif_MIPMAP_2.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_mac_house2tif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_mac_house2tif_MIPMAP_2.png"
+  },
+  "kmr_mac_house3tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_mac_house3tif.png"
+  },
+  "kmr_mac_house7tif.png": {
+    "palette": "{dumpDir}/image/texture/kkj_tex/kkj_mac_house7tif.png",
+    "raster": "{dumpDir}/image/texture/kkj_tex/kkj_mac_house7tif.png"
+  },
+  "kmr_mac_roof1tif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_mac_roof1tif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_mac_roof1tif.png"
+  },
+  "kmr_mattif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_mattif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_mattif.png"
+  },
+  "kmr_nagatif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_nagatif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_nagatif.png"
+  },
+  "kmr_nenrintif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_nenrintif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_nenrintif.png"
+  },
+  "kmr_ntif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_ntif.png"
+  },
+  "kmr_reef_00h_itif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_reef_00h_itif.png"
+  },
+  "kmr_reef_00htif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_reef_00htif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_reef_00htif.png"
+  },
+  "kmr_reef_htif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_reef_htif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_reef_htif.png"
+  },
+  "kmr_reef_i_kukitif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_reef_i_kukitif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_reef_i_kukitif.png"
+  },
+  "kmr_reef_itif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_reef_itif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_reef_itif.png"
+  },
+  "kmr_reef_jtif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_reef_jtif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_reef_jtif.png"
+  },
+  "kmr_reef_ltif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_reef_ltif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_reef_ltif.png"
+  },
+  "kmr_reef_mtif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_reef_mtif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_reef_mtif.png"
+  },
+  "kmr_reef_ntif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_reef_ntif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_reef_ntif.png"
+  },
+  "kmr_reef_ptif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_reef_ptif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_reef_ptif.png"
+  },
+  "kmr_s_roadberotif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_s_roadberotif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_s_roadberotif.png"
+  },
+  "kmr_s_roadtif.png": {
+    "palette": "{dumpDir}/image/texture/end_tex/end_s_roadtif.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_s_roadtif.png"
+  },
+  "kmr_skystartif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_skystartif.png"
+  },
+  "kmr_star_objtif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_star_objtif.png"
+  },
+  "kmr_t_dokankun3tif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_t_dokankun3tif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_t_dokankun3tif.png"
+  },
+  "kmr_t_iwahashiratif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_t_iwahashiratif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_t_iwahashiratif.png"
+  },
+  "kmr_t_iwahashitif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_t_iwahashitif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_t_iwahashitif.png"
+  },
+  "kmr_t_iwakabe2tif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_t_iwakabe2tif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_t_iwakabe2tif.png"
+  },
+  "kmr_t_iwayougantif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_t_iwayougantif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_t_iwayougantif.png"
+  },
+  "kmr_tatetif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_tatetif.png"
+  },
+  "kmr_teritif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_teritif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_teritif.png"
+  },
+  "kmr_to1_iwakabetif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_to1_iwakabetif.png"
+  },
+  "kmr_to1_iwakabetif_AUX.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_to1_iwakabetif_AUX.png"
+  },
+  "kmr_ttif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_ttif.png"
+  },
+  "kmr_uso_kinokotif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_uso_kinokotif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_uso_kinokotif.png"
+  },
+  "kmr_windou_frametif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_windou_frametif.png"
+  },
+  "kmr_wood_ctif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_wood_ctif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_wood_ctif.png"
+  },
+  "kmr_wood_dtif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_wood_dtif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_wood_dtif.png"
+  },
+  "kmr_wood_floor_ctif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_wood_floor_ctif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_wood_floor_ctif.png"
+  },
+  "kmr_woody_plate_jtif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_woody_plate_jtif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_woody_plate_jtif.png"
+  },
+  "kmr_yougantif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_yougantif.png"
+  },
+  "kmr_yougantif_AUX.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_yougantif_AUX.png"
+  },
+  "kmr_yuka6tif.png": {
+    "palette": "{dumpDir}/image/texture/kmr_tex/kmr_yuka6tif.png",
+    "raster": "{dumpDir}/image/texture/hos_tex/hos_yuka6tif.png"
+  }
+}

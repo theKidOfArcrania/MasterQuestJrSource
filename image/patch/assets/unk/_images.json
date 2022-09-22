@@ -1,0 +1,42 @@
+{
+  "1FDB30.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/unk/1FDB30.png"
+  },
+  "95E30_95FF0.png": {
+    "palette": "{dumpDir}/image/assets/unk/95E30_95FF0.png",
+    "raster": "{dumpDir}/image/assets/unk/95E30_95FF0.png"
+  },
+  "96010_961D0.png": {
+    "palette": "{dumpDir}/image/assets/unk/96010_961D0.png",
+    "raster": "{dumpDir}/image/assets/unk/96010_961D0.png"
+  },
+  "961F0_96390.png": {
+    "palette": "{dumpDir}/image/assets/unk/95E30_95FF0.png",
+    "raster": "{dumpDir}/image/assets/unk/961F0_96390.png"
+  },
+  "arrow_left.png": {
+    "palette": "{dumpDir}/image/assets/ui/popup_pointer.png",
+    "raster": "{dumpDir}/image/assets/unk/arrow_left.png"
+  },
+  "arrow_right.png": {
+    "palette": "{dumpDir}/image/assets/ui/popup_pointer.png",
+    "raster": "{dumpDir}/image/assets/unk/arrow_right.png"
+  },
+  "empty_circle.png": {
+    "palette": "{dumpDir}/image/assets/unk/empty_circle.png",
+    "raster": "{dumpDir}/image/assets/unk/empty_circle.png"
+  },
+  "filled_circle.png": {
+    "palette": "{dumpDir}/image/assets/ui/popup_pointer.png",
+    "raster": "{dumpDir}/image/assets/unk/filled_circle.png"
+  },
+  "large_circle_shadow.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/unk/large_circle_shadow.png"
+  },
+  "large_square_shadow.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/unk/large_square_shadow.png"
+  }
+}

@@ -1,0 +1,282 @@
+{
+  "02C.png": {
+    "palette": "{dumpDir}/sprite/npc/src/D6/Palette_03.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "02C_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/02C_alt.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "02D.png": {
+    "palette": "{dumpDir}/sprite/npc/src/D6/Palette_03.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "02D_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/02C_alt.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "02E.png": {
+    "palette": "{dumpDir}/sprite/npc/src/D6/Palette_03.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "02E_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/02C_alt.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "02F.png": {
+    "palette": "{dumpDir}/sprite/npc/src/D6/Palette_03.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "02F_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/02C_alt.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "030.png": {
+    "palette": "{dumpDir}/sprite/npc/src/D6/Palette_03.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "030_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/02C_alt.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "08D.png": {
+    "palette": "{dumpDir}/image/assets/item/08D.png",
+    "raster": "{dumpDir}/image/assets/item/08D.png"
+  },
+  "08D_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/02C_alt.png",
+    "raster": "{dumpDir}/image/assets/item/08D.png"
+  },
+  "08E.png": {
+    "palette": "{dumpDir}/image/assets/item/08D.png",
+    "raster": "{dumpDir}/image/assets/item/08E.png"
+  },
+  "08E_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/02C_alt.png",
+    "raster": "{dumpDir}/image/assets/item/08E.png"
+  },
+  "08F.png": {
+    "palette": "{dumpDir}/image/assets/item/08D.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "08F_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/02C_alt.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "0D6.png": {
+    "palette": "{dumpDir}/sprite/npc/src/D6/Palette_03.png",
+    "raster": "{dumpDir}/image/assets/item/0D6.png"
+  },
+  "0D6_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/02C_alt.png",
+    "raster": "{dumpDir}/image/assets/item/0D6.png"
+  },
+  "0D7.png": {
+    "palette": "{dumpDir}/sprite/npc/src/D6/Palette_03.png",
+    "raster": "{dumpDir}/image/assets/item/0D7.png"
+  },
+  "0D7_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/02C_alt.png",
+    "raster": "{dumpDir}/image/assets/item/0D7.png"
+  },
+  "0DF.png": {
+    "palette": "{dumpDir}/image/assets/item/0DF.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "0DF_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/0DF_alt.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "0E4.png": {
+    "palette": "{dumpDir}/image/assets/item/0E4.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "0E4_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/0DF_alt.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "0E5.png": {
+    "palette": "{dumpDir}/image/assets/item/0E4.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "0E5_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/0DF_alt.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "0E6.png": {
+    "palette": "{dumpDir}/image/assets/item/0E4.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "0E6_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/0DF_alt.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "0E7.png": {
+    "palette": "{dumpDir}/image/assets/item/0E7.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "0E7_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/0E7_alt.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "0EF.png": {
+    "palette": "{dumpDir}/image/assets/item/0EF.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "0EF_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/0EF_alt.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "0F1.png": {
+    "palette": "{dumpDir}/sprite/npc/src/D6/Palette_03.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "0F1_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/02C_alt.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "0F2.png": {
+    "palette": "{dumpDir}/sprite/npc/src/D6/Palette_03.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "0F2_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/02C_alt.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "0F3.png": {
+    "palette": "{dumpDir}/sprite/npc/src/D6/Palette_03.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "0F3_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/02C_alt.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "0F4.png": {
+    "palette": "{dumpDir}/sprite/npc/src/D6/Palette_03.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "0F4_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/02C_alt.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "0F5.png": {
+    "palette": "{dumpDir}/sprite/npc/src/D6/Palette_03.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "0F5_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/02C_alt.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "0F6.png": {
+    "palette": "{dumpDir}/sprite/npc/src/D6/Palette_03.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "0F6_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/02C_alt.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "0F7.png": {
+    "palette": "{dumpDir}/sprite/npc/src/D6/Palette_03.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "0F7_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/02C_alt.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "11F.png": {
+    "palette": "{dumpDir}/sprite/npc/src/D6/Palette_03.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "11F_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/02C_alt.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "127.png": {
+    "palette": "{dumpDir}/sprite/npc/src/D6/Palette_03.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "127_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/02C_alt.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "12D.png": {
+    "palette": "{dumpDir}/sprite/npc/src/D6/Palette_03.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "12D_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/02C_alt.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "12E.png": {
+    "palette": "{dumpDir}/sprite/npc/src/D6/Palette_03.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "12E_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/02C_alt.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "12F.png": {
+    "palette": "{dumpDir}/sprite/npc/src/D6/Palette_03.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "12F_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/02C_alt.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "Boots1.png": {
+    "palette": "{dumpDir}/image/assets/item/Boots1.png",
+    "raster": "{dumpDir}/image/assets/item/Boots1.png"
+  },
+  "Boots1_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/Boots1_alt.png",
+    "raster": "{dumpDir}/image/assets/item/Boots1.png"
+  },
+  "Boots2.png": {
+    "palette": "{dumpDir}/image/assets/item/Boots2.png",
+    "raster": "{dumpDir}/image/assets/item/Boots2.png"
+  },
+  "Boots2_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/Boots2_alt.png",
+    "raster": "{dumpDir}/image/assets/item/Boots2.png"
+  },
+  "Boots3.png": {
+    "palette": "{dumpDir}/image/assets/item/Boots3.png",
+    "raster": "{dumpDir}/image/assets/item/Boots3.png"
+  },
+  "Boots3_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/Boots3_alt.png",
+    "raster": "{dumpDir}/image/assets/item/Boots3.png"
+  },
+  "Hammer1.png": {
+    "palette": "{dumpDir}/image/assets/item/Hammer1.png",
+    "raster": "{dumpDir}/image/assets/item/Hammer1.png"
+  },
+  "Hammer1_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/Hammer1_alt.png",
+    "raster": "{dumpDir}/image/assets/item/Hammer1.png"
+  },
+  "Hammer2.png": {
+    "palette": "{dumpDir}/image/assets/item/Hammer2.png",
+    "raster": "{dumpDir}/image/assets/item/Hammer2.png"
+  },
+  "Hammer2_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/Hammer2_alt.png",
+    "raster": "{dumpDir}/image/assets/item/Hammer2.png"
+  },
+  "Hammer3.png": {
+    "palette": "{dumpDir}/image/assets/item/Hammer3.png",
+    "raster": "{dumpDir}/image/assets/item/Hammer3.png"
+  },
+  "Hammer3_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/Hammer3_alt.png",
+    "raster": "{dumpDir}/image/assets/item/Hammer3.png"
+  },
+  "Items.png": {
+    "palette": "{dumpDir}/image/assets/item/Items.png",
+    "raster": "{dumpDir}/image/assets/item/Items.png"
+  },
+  "Items_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/Items_alt.png",
+    "raster": "{dumpDir}/image/assets/item/Items.png"
+  }
+}

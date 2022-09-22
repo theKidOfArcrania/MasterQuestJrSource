@@ -1,0 +1,34 @@
+{
+  "gv__atif.png": {
+    "palette": "{dumpDir}/image/texture/gv__tex/gv__atif.png",
+    "raster": "{dumpDir}/image/texture/gv__tex/gv__atif.png"
+  },
+  "gv__entif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/gv__tex/gv__entif.png"
+  },
+  "gv__etif.png": {
+    "palette": "{dumpDir}/image/texture/gv__tex/gv__etif.png",
+    "raster": "{dumpDir}/image/texture/gv__tex/gv__etif.png"
+  },
+  "gv__gtif.png": {
+    "palette": "{dumpDir}/image/texture/gv__tex/gv__gtif.png",
+    "raster": "{dumpDir}/image/texture/gv__tex/gv__gtif.png"
+  },
+  "gv__mtif.png": {
+    "palette": "{dumpDir}/image/texture/gv__tex/gv__mtif.png",
+    "raster": "{dumpDir}/image/texture/gv__tex/gv__mtif.png"
+  },
+  "gv__otif.png": {
+    "palette": "{dumpDir}/image/texture/gv__tex/gv__otif.png",
+    "raster": "{dumpDir}/image/texture/gv__tex/gv__otif.png"
+  },
+  "gv__rtif.png": {
+    "palette": "{dumpDir}/image/texture/gv__tex/gv__rtif.png",
+    "raster": "{dumpDir}/image/texture/gv__tex/gv__rtif.png"
+  },
+  "gv__vtif.png": {
+    "palette": "{dumpDir}/image/texture/gv__tex/gv__vtif.png",
+    "raster": "{dumpDir}/image/texture/gv__tex/gv__vtif.png"
+  }
+}

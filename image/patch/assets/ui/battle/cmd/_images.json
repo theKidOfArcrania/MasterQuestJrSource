@@ -1,0 +1,78 @@
+{
+  "100pct.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cmd/100pct.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cmd/100pct.png"
+  },
+  "charge_1.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cmd/charge_1.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cmd/charge_1.png"
+  },
+  "charge_2.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cmd/charge_2.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cmd/charge_1.png"
+  },
+  "charge_3.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cmd/charge_3.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cmd/charge_1.png"
+  },
+  "charge_4.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cmd/charge_2.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cmd/charge_4.png"
+  },
+  "fill_result.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cmd/fill_result.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cmd/fill_result.png"
+  },
+  "flee_0.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cmd/flee_0.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cmd/flee_0.png"
+  },
+  "flee_1.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cmd/flee_0.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cmd/flee_1.png"
+  },
+  "flee_2.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cmd/flee_0.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cmd/flee_2.png"
+  },
+  "flee_ok.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cmd/flee_ok.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cmd/flee_ok.png"
+  },
+  "gauge.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cmd/fill_result.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cmd/gauge.png"
+  },
+  "gauge_result.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cmd/fill_result.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cmd/gauge_result.png"
+  },
+  "right_on.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cmd/right_on.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cmd/right_on.png"
+  },
+  "timing_1_chance.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cmd/fill_result.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cmd/timing_1_chance.png"
+  },
+  "timing_3_chances.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cmd/fill_result.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cmd/timing_3_chances.png"
+  },
+  "timing_miss.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cmd/charge_3.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cmd/timing_miss.png"
+  },
+  "timing_ok.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cmd/charge_1.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cmd/timing_ok.png"
+  },
+  "timing_ready.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cmd/timing_ready.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cmd/timing_ready.png"
+  },
+  "timing_wait.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cmd/timing_wait.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cmd/timing_wait.png"
+  }
+}

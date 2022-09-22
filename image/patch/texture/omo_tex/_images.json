@@ -1,0 +1,398 @@
+{
+  "omo_1tif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_1tif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_1tif.png"
+  },
+  "omo_2tif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_2tif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_2tif.png"
+  },
+  "omo_3tif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_3tif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_3tif.png"
+  },
+  "omo_4tif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_4tif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_4tif.png"
+  },
+  "omo_5tif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_5tif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_5tif.png"
+  },
+  "omo_a_2tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_a_2tif.png"
+  },
+  "omo_amiami2tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_amiami2tif.png"
+  },
+  "omo_ana_2tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_ana_2tif.png"
+  },
+  "omo_berosaidetif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_berosaidetif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_berosaidetif.png"
+  },
+  "omo_c_s23tif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_c_s23tif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_c_s23tif.png"
+  },
+  "omo_c_s2_2_utif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_c_s2_2_utif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_c_s2_2_utif.png"
+  },
+  "omo_c_s2_2tif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_c_s2_2tif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_c_s2_2tif.png"
+  },
+  "omo_c_s2_3_utif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_c_s2_3_utif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_c_s2_3_utif.png"
+  },
+  "omo_c_s2_3tif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_c_s2_3tif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_c_s2_2tif.png"
+  },
+  "omo_c_s2_4_utif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_c_s2_4_utif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_c_s2_4_utif.png"
+  },
+  "omo_c_s2_4tif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_c_s2_4tif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_c_s2_4tif.png"
+  },
+  "omo_c_s2_6_utif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_c_s2_6_utif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_c_s2_3_utif.png"
+  },
+  "omo_c_s2_6tif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_c_s2_6tif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_c_s2_6tif.png"
+  },
+  "omo_denkitif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_denkitif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_denkitif.png"
+  },
+  "omo_e1tif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_e1tif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_e1tif.png"
+  },
+  "omo_e2tif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_e2tif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_e2tif.png"
+  },
+  "omo_e_1_1tif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_e_1_1tif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_e_1_1tif.png"
+  },
+  "omo_e_2tif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_e_2tif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_e_2tif.png"
+  },
+  "omo_e_r2tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_e_r2tif.png"
+  },
+  "omo_e_rgtif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_e_rgtif.png"
+  },
+  "omo_e_rhtif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_e_rhtif.png"
+  },
+  "omo_e_ritif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_e_ritif.png"
+  },
+  "omo_etif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_etif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_etif.png"
+  },
+  "omo_frametif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_frametif.png",
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_frametif.png"
+  },
+  "omo_humitif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_humitif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_humitif.png"
+  },
+  "omo_i_2tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_i_2tif.png"
+  },
+  "omo_jamp2tif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_jamp2tif.png",
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_jamp2tif.png"
+  },
+  "omo_kabe2tif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_kabe2tif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_kabe2tif.png"
+  },
+  "omo_kabe_2tif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_kabe_2tif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_kabe_2tif.png"
+  },
+  "omo_kabetif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_kabetif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_kabetif.png"
+  },
+  "omo_kazaritif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_kazaritif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_kazaritif.png"
+  },
+  "omo_kmr_saku2tif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_kmr_saku2tif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_kmr_saku2tif.png"
+  },
+  "omo_kmr_saku333tif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_kmr_saku333tif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_kmr_saku333tif.png"
+  },
+  "omo_kmr_sakutif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_kmr_sakutif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_kmr_sakutif.png"
+  },
+  "omo_linetif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_linetif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_linetif.png"
+  },
+  "omo_m1_atif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_m1_atif.png"
+  },
+  "omo_m2_atif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_m2_atif.png"
+  },
+  "omo_m3_atif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_m3_atif.png"
+  },
+  "omo_m4_atif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_m4_atif.png"
+  },
+  "omo_m5_atif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_m5_atif.png"
+  },
+  "omo_m6_atif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_m6_atif.png"
+  },
+  "omo_mado_2tif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_mado_2tif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_mado_2tif.png"
+  },
+  "omo_mado_3_1tif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_mado_3_1tif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_mado_3_1tif.png"
+  },
+  "omo_madotif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_madotif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_madotif.png"
+  },
+  "omo_n_2tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_n_2tif.png"
+  },
+  "omo_nezi2tif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_nezi2tif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_nezi2tif.png"
+  },
+  "omo_nor_1btif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_nor_1btif.png"
+  },
+  "omo_nor_3ctif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_nor_3ctif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_nor_3ctif.png"
+  },
+  "omo_nor_nejitif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_nor_nejitif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_nor_nejitif.png"
+  },
+  "omo_nor_syarintif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_nor_syarintif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_nor_syarintif.png"
+  },
+  "omo_o_2tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_o_2tif.png"
+  },
+  "omo_omo_2_3tif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_omo_2_3tif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_omo_2_3tif.png"
+  },
+  "omo_omo_3tif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_omo_3tif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_omo_3tif.png"
+  },
+  "omo_omo_hibitif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_omo_hibitif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_omo_hibitif.png"
+  },
+  "omo_po_2tif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_po_2tif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_po_2tif.png"
+  },
+  "omo_potif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_potif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_po_2tif.png"
+  },
+  "omo_s_2tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_s_2tif.png"
+  },
+  "omo_senro_2tif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_senro_2tif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_senro_2tif.png"
+  },
+  "omo_senrotif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_senrotif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_senrotif.png"
+  },
+  "omo_senrotif_MIPMAP_1.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_senrotif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_senrotif_MIPMAP_1.png"
+  },
+  "omo_shirotif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_shirotif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_shirotif.png"
+  },
+  "omo_shirushi_1tif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_shirushi_1tif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_shirushi_1tif.png"
+  },
+  "omo_shirushi_2tif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_shirushi_2tif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_shirushi_2tif.png"
+  },
+  "omo_shirushi_3tif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_shirushi_3tif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_shirushi_2tif.png"
+  },
+  "omo_shirushi_4tif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_shirushi_4tif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_shirushi_1tif.png"
+  },
+  "omo_shy_atafuta0tif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_shy_atafuta0tif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_shy_atafuta0tif.png"
+  },
+  "omo_slot_3_1_2tif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_slot_3_1_2tif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_slot_3_1_2tif.png"
+  },
+  "omo_slot_3tif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_slot_3tif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_slot_3tif.png"
+  },
+  "omo_slot_cointif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_slot_cointif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_slot_cointif.png"
+  },
+  "omo_slot_miniheitif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_slot_miniheitif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_slot_miniheitif.png"
+  },
+  "omo_slot_startif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_slot_startif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_slot_startif.png"
+  },
+  "omo_slottif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_slottif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_slottif.png"
+  },
+  "omo_start1tif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_start1tif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_start1tif.png"
+  },
+  "omo_t_2tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_t_2tif.png"
+  },
+  "omo_tokeitif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_tokeitif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_tokeitif.png"
+  },
+  "omo_tumiki_1tif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_tumiki_1tif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_tumiki_1tif.png"
+  },
+  "omo_tumiki_2_1tif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_tumiki_2_1tif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_tumiki_2_1tif.png"
+  },
+  "omo_tumiki_3_1_2tif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_tumiki_3_1_2tif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_tumiki_3_1_2tif.png"
+  },
+  "omo_tumiki_4_1tif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_tumiki_4_1tif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_tumiki_4_1tif.png"
+  },
+  "omo_tumiki_4_atif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_tumiki_4_atif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_tumiki_4_atif.png"
+  },
+  "omo_tumiki_5_1tif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_tumiki_5_1tif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_tumiki_5_1tif.png"
+  },
+  "omo_tumiki_7_1tif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_tumiki_7_1tif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_tumiki_7_1tif.png"
+  },
+  "omo_tumiki_8_1tif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_tumiki_8_1tif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_tumiki_8_1tif.png"
+  },
+  "omo_wood_floor_ctif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_wood_floor_ctif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_wood_floor_ctif.png"
+  },
+  "omo_yaji1_1tif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_yaji1_1tif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_yaji1_1tif.png"
+  },
+  "omo_yaji1tif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_yaji1tif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_yaji1tif.png"
+  },
+  "omo_yaji_1tif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_yaji_1tif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_yaji1_1tif.png"
+  },
+  "omo_yajiruc_1itif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_yajiruc_1itif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_yajiruc_1itif.png"
+  },
+  "omo_yajitif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_yajitif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_yaji1tif.png"
+  },
+  "omo_yane_atif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_yane_atif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_yane_atif.png"
+  },
+  "omo_yuka_block3tif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_yuka_block3tif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_yuka_block3tif.png"
+  },
+  "omo_yuka_block4_1tif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_yuka_block4_1tif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_yuka_block4_1tif.png"
+  },
+  "omo_yuka_block4tif.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_yuka_block4tif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_yuka_block4tif.png"
+  },
+  "omo_yuka_block4tif_MIPMAP_1.png": {
+    "palette": "{dumpDir}/image/texture/omo_tex/omo_yuka_block4tif.png",
+    "raster": "{dumpDir}/image/texture/omo_tex/omo_yuka_block4tif_MIPMAP_1.png"
+  }
+}

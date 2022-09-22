@@ -1,0 +1,222 @@
+{
+  "coin_0.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/coin_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/coin_0.png"
+  },
+  "coin_1.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/coin_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/coin_1.png"
+  },
+  "coin_2.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/coin_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/coin_2.png"
+  },
+  "coin_3.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/coin_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/coin_3.png"
+  },
+  "coin_4.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/coin_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/coin_4.png"
+  },
+  "coin_5.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/coin_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/coin_5.png"
+  },
+  "coin_6.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/coin_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/coin_6.png"
+  },
+  "coin_7.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/coin_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/coin_7.png"
+  },
+  "coin_8.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/coin_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/coin_8.png"
+  },
+  "coin_9.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/coin_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/coin_9.png"
+  },
+  "fp_0.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/fp_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/fp_0.png"
+  },
+  "fp_1.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/fp_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/fp_1.png"
+  },
+  "fp_2.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/fp_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/fp_2.png"
+  },
+  "hand_0.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/hand_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/hand_0.png"
+  },
+  "hand_1.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/hand_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/hand_1.png"
+  },
+  "hand_2.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/hand_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/hand_2.png"
+  },
+  "hand_3.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/hand_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/hand_3.png"
+  },
+  "hand_4.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/hand_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/hand_4.png"
+  },
+  "hand_5.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/hand_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/hand_5.png"
+  },
+  "hand_6.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/hand_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/hand_6.png"
+  },
+  "hand_7.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/hand_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/hand_7.png"
+  },
+  "hand_8.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/hand_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/hand_8.png"
+  },
+  "hand_9.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/hand_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/hand_9.png"
+  },
+  "heart_0.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/heart_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/heart_0.png"
+  },
+  "heart_1.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/heart_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/heart_1.png"
+  },
+  "heart_piece.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/heart_piece.png",
+    "raster": "{dumpDir}/image/assets/item/anim/heart_piece.png"
+  },
+  "hp_0.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/hp_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/hp_0.png"
+  },
+  "hp_1.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/hp_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/hp_1.png"
+  },
+  "hp_2.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/hp_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/hp_2.png"
+  },
+  "shimmer_0.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/shimmer_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/shimmer_0.png"
+  },
+  "shimmer_1.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/shimmer_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/shimmer_1.png"
+  },
+  "shimmer_2.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/shimmer_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/shimmer_2.png"
+  },
+  "shimmer_3.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/shimmer_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/shimmer_3.png"
+  },
+  "shimmer_4.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/shimmer_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/shimmer_4.png"
+  },
+  "shimmer_5.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/shimmer_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/shimmer_5.png"
+  },
+  "shimmer_6.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/shimmer_6.png",
+    "raster": "{dumpDir}/image/assets/item/anim/shimmer_6.png"
+  },
+  "sp_0.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/sp_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/sp_0.png"
+  },
+  "sp_1.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/sp_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/sp_1.png"
+  },
+  "sp_2.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/sp_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/sp_2.png"
+  },
+  "sp_3.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/sp_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/sp_3.png"
+  },
+  "sp_4.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/sp_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/sp_4.png"
+  },
+  "sp_5.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/sp_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/sp_5.png"
+  },
+  "sp_6.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/sp_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/sp_6.png"
+  },
+  "sp_7.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/sp_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/sp_7.png"
+  },
+  "sp_small_0.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/sp_small_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/sp_small_0.png"
+  },
+  "sp_small_1.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/sp_small_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/sp_small_1.png"
+  },
+  "sp_small_2.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/sp_small_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/sp_small_2.png"
+  },
+  "sp_small_3.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/sp_small_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/sp_small_3.png"
+  },
+  "sp_small_4.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/sp_small_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/sp_small_4.png"
+  },
+  "sp_small_5.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/sp_small_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/sp_small_5.png"
+  },
+  "sp_small_6.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/sp_small_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/sp_small_6.png"
+  },
+  "sp_small_7.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/sp_small_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/sp_small_7.png"
+  },
+  "star_piece_0.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/star_piece_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/star_piece_0.png"
+  },
+  "star_piece_1.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/star_piece_0.png",
+    "raster": "{dumpDir}/image/assets/item/anim/star_piece_1.png"
+  },
+  "star_piece_2.png": {
+    "palette": "{dumpDir}/image/assets/item/anim/star_piece_2.png",
+    "raster": "{dumpDir}/image/assets/item/anim/star_piece_2.png"
+  }
+}

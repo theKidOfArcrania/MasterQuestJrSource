@@ -1,0 +1,218 @@
+{
+  "hp_0.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/hp_0.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/hp_0.png"
+  },
+  "hp_1.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/hp_0.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/hp_1.png"
+  },
+  "hp_2.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/hp_0.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/hp_2.png"
+  },
+  "hp_3.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/hp_0.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/hp_3.png"
+  },
+  "hp_4.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/hp_0.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/hp_4.png"
+  },
+  "hp_5.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/hp_0.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/hp_5.png"
+  },
+  "hp_6.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/hp_0.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/hp_6.png"
+  },
+  "hp_7.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/hp_0.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/hp_7.png"
+  },
+  "hp_8.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/hp_0.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/hp_8.png"
+  },
+  "hp_9.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/hp_0.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/hp_9.png"
+  },
+  "hp_bar.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/hp_bar.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/hp_bar.png"
+  },
+  "menu_defend.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/menu_defend.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/menu_defend.png"
+  },
+  "menu_defend_alt.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/menu_defend_alt.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/menu_defend.png"
+  },
+  "menu_flee.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/menu_flee.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/menu_flee.png"
+  },
+  "menu_flee_alt.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/menu_flee_alt.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/menu_flee.png"
+  },
+  "menu_hammer_1.png": {
+    "palette": "{dumpDir}/image/assets/item/Hammer1.png",
+    "raster": "{dumpDir}/image/assets/item/Hammer1.png"
+  },
+  "menu_hammer_1_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/Hammer1_alt.png",
+    "raster": "{dumpDir}/image/assets/item/Hammer1.png"
+  },
+  "menu_hammer_2.png": {
+    "palette": "{dumpDir}/image/assets/item/Hammer2.png",
+    "raster": "{dumpDir}/image/assets/item/Hammer2.png"
+  },
+  "menu_hammer_2_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/Hammer2_alt.png",
+    "raster": "{dumpDir}/image/assets/item/Hammer2.png"
+  },
+  "menu_hammer_3.png": {
+    "palette": "{dumpDir}/image/assets/item/Hammer3.png",
+    "raster": "{dumpDir}/image/assets/item/Hammer3.png"
+  },
+  "menu_hammer_3_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/Hammer3_alt.png",
+    "raster": "{dumpDir}/image/assets/item/Hammer3.png"
+  },
+  "menu_items.png": {
+    "palette": "{dumpDir}/image/assets/item/Items.png",
+    "raster": "{dumpDir}/image/assets/item/Items.png"
+  },
+  "menu_items_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/Items_alt.png",
+    "raster": "{dumpDir}/image/assets/item/Items.png"
+  },
+  "menu_jump_1.png": {
+    "palette": "{dumpDir}/image/assets/item/Boots1.png",
+    "raster": "{dumpDir}/image/assets/item/Boots1.png"
+  },
+  "menu_jump_1_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/Boots1_alt.png",
+    "raster": "{dumpDir}/image/assets/item/Boots1.png"
+  },
+  "menu_jump_2.png": {
+    "palette": "{dumpDir}/image/assets/item/Boots2.png",
+    "raster": "{dumpDir}/image/assets/item/Boots2.png"
+  },
+  "menu_jump_2_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/Boots2_alt.png",
+    "raster": "{dumpDir}/image/assets/item/Boots2.png"
+  },
+  "menu_jump_3.png": {
+    "palette": "{dumpDir}/image/assets/item/Boots3.png",
+    "raster": "{dumpDir}/image/assets/item/Boots3.png"
+  },
+  "menu_jump_3_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/Boots3_alt.png",
+    "raster": "{dumpDir}/image/assets/item/Boots3.png"
+  },
+  "menu_nothing.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/menu_nothing.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/menu_nothing.png"
+  },
+  "menu_nothing_alt.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/menu_nothing_alt.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/menu_nothing.png"
+  },
+  "menu_pouch.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/menu_pouch.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/menu_pouch.png"
+  },
+  "menu_pouch_alt.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/menu_pouch_alt.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/menu_pouch.png"
+  },
+  "menu_spirits.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/menu_spirits.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/menu_spirits.png"
+  },
+  "menu_starpowers.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/menu_starpowers.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/menu_starpowers.png"
+  },
+  "menu_starpowers_alt.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/menu_starpowers_alt.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/menu_starpowers.png"
+  },
+  "menu_strategies.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/menu_strategies.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/menu_strategies.png"
+  },
+  "menu_strategies_alt.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/menu_strategies_alt.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/menu_strategies.png"
+  },
+  "menu_unused.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/menu_unused.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/menu_unused.png"
+  },
+  "menu_unused_alt.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/menu_unused_alt.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/menu_unused.png"
+  },
+  "projector_beam.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/battle/projector_beam.png"
+  },
+  "projector_reel.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/battle/projector_reel.png"
+  },
+  "projector_spot.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/battle/projector_spot.png"
+  },
+  "rank_super.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/rank_super.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/rank_super.png"
+  },
+  "rank_ultra.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/rank_super.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/rank_super.png"
+  },
+  "swap_Z.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/swap_Z.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/swap_Z.png"
+  },
+  "swap_arrow_left.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/swap_arrow_left.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/swap_arrow_left.png"
+  },
+  "swap_arrow_right.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/swap_arrow_left.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/swap_arrow_right.png"
+  },
+  "swap_background.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/battle/swap_background.png"
+  },
+  "unused_count_1.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/unused_count_1.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/unused_count_1.png"
+  },
+  "unused_count_2.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/unused_count_1.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/unused_count_2.png"
+  },
+  "unused_count_3.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/unused_count_1.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/unused_count_3.png"
+  },
+  "unused_counter.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/unused_counter.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/unused_counter.png"
+  },
+  "yellow_arrow.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/yellow_arrow.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/yellow_arrow.png"
+  }
+}

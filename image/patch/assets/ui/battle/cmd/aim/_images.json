@@ -1,0 +1,82 @@
+{
+  "marker_0.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cmd/aim/marker_0.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cmd/aim/marker_0.png"
+  },
+  "marker_1.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cmd/aim/marker_1.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cmd/aim/marker_0.png"
+  },
+  "marker_2.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cmd/aim/marker_2.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cmd/aim/marker_0.png"
+  },
+  "marker_3.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cmd/aim/marker_3.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cmd/aim/marker_0.png"
+  },
+  "marker_4.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cmd/aim/marker_4.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cmd/aim/marker_0.png"
+  },
+  "marker_5.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cmd/aim/marker_5.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cmd/aim/marker_0.png"
+  },
+  "marker_6.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cmd/aim/marker_6.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cmd/aim/marker_0.png"
+  },
+  "marker_7.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cmd/aim/marker_7.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cmd/aim/marker_0.png"
+  },
+  "reticle_0.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cmd/aim/marker_0.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cmd/aim/reticle_0.png"
+  },
+  "reticle_1.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cmd/aim/marker_6.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cmd/aim/reticle_0.png"
+  },
+  "shimmer_0.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cmd/aim/marker_0.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cmd/aim/shimmer_0.png"
+  },
+  "shimmer_1.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cmd/aim/marker_1.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cmd/aim/shimmer_0.png"
+  },
+  "shimmer_2.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cmd/aim/marker_2.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cmd/aim/shimmer_0.png"
+  },
+  "shimmer_3.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cmd/aim/marker_3.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cmd/aim/shimmer_0.png"
+  },
+  "shimmer_4.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cmd/aim/marker_4.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cmd/aim/shimmer_0.png"
+  },
+  "shimmer_5.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cmd/aim/marker_5.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cmd/aim/shimmer_0.png"
+  },
+  "shimmer_6.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cmd/aim/marker_6.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cmd/aim/shimmer_0.png"
+  },
+  "shimmer_7.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cmd/aim/marker_7.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cmd/aim/shimmer_0.png"
+  },
+  "target_0.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cmd/aim/marker_5.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cmd/aim/target_0.png"
+  },
+  "target_1.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cmd/aim/marker_4.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cmd/aim/target_0.png"
+  }
+}

@@ -1,0 +1,346 @@
+{
+  "133F40_133FC0.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/133F40_133FC0.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/133F40_133FC0.png"
+  },
+  "133FE0_134060.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/133F40_133FC0.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/133FE0_134060.png"
+  },
+  "134F60_135120.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/134F60_135120.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/134F60_135120.png"
+  },
+  "bp_orb.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/pause/bp_orb.png"
+  },
+  "clock.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/clock.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/clock.png"
+  },
+  "cursor_hand.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/cursor_hand.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/cursor_hand.png"
+  },
+  "dash.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/dash.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/dash.png"
+  },
+  "desc_msg_next.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/desc_msg_next.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/desc_msg_next.png"
+  },
+  "desc_msg_prev.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/desc_msg_next.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/desc_msg_prev.png"
+  },
+  "header_badges.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/header_badges.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/header_badges.png"
+  },
+  "header_items.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/header_badges.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/header_items.png"
+  },
+  "header_map.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/header_badges.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/header_map.png"
+  },
+  "header_party.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/header_badges.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/header_party.png"
+  },
+  "header_spirits.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/header_badges.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/header_spirits.png"
+  },
+  "header_stats.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/header_badges.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/header_stats.png"
+  },
+  "jp_file.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/jp_file.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/jp_file.png"
+  },
+  "jp_file_disabled.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/jp_file_disabled.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/jp_file.png"
+  },
+  "jp_super.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/jp_super.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/jp_super.png"
+  },
+  "jp_ultra.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/jp_super.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/jp_ultra.png"
+  },
+  "label_available.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/label_available.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/label_available.png"
+  },
+  "label_badge_points.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/label_badge_points.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/label_badge_points.png"
+  },
+  "label_boots.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/label_boots.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/label_boots.png"
+  },
+  "label_bp_needed.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/label_bp_needed.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/label_bp_needed.png"
+  },
+  "label_check_abilities.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/label_check_abilities.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/label_check_abilities.png"
+  },
+  "label_flower_points.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/label_flower_points.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/label_flower_points.png"
+  },
+  "label_hammer.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/label_hammer.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/label_hammer.png"
+  },
+  "label_heart_points.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/label_heart_points.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/label_heart_points.png"
+  },
+  "label_star_energy.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/label_star_energy.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/label_star_energy.png"
+  },
+  "list_next_page.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/133F40_133FC0.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/133FE0_134060.png"
+  },
+  "list_prev_page.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/133F40_133FC0.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/133F40_133FC0.png"
+  },
+  "map.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/map.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/map.png"
+  },
+  "map_arrow_down.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/pause/map_arrow_down.png"
+  },
+  "map_arrow_left.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/pause/map_arrow_left.png"
+  },
+  "map_arrow_right.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/pause/map_arrow_right.png"
+  },
+  "map_arrow_up.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/pause/map_arrow_up.png"
+  },
+  "map_location.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/pause/map_location.png"
+  },
+  "map_path_marker.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/pause/map_path_marker.png"
+  },
+  "map_walk_0.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/map_walk_0.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/map_walk_0.png"
+  },
+  "map_walk_1.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/map_walk_0.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/map_walk_1.png"
+  },
+  "map_walk_2.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/map_walk_0.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/map_walk_2.png"
+  },
+  "mario_head_large.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/mario_head_large.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/mario_head_large.png"
+  },
+  "mario_head_small.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/mario_head_small.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/mario_head_small.png"
+  },
+  "partner_rank.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/partner_rank.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/partner_rank.png"
+  },
+  "small_text_0.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/small_text_0.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/small_text_0.png"
+  },
+  "small_text_1.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/small_text_0.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/small_text_1.png"
+  },
+  "small_text_2.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/small_text_0.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/small_text_2.png"
+  },
+  "small_text_3.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/small_text_0.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/small_text_3.png"
+  },
+  "small_text_4.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/small_text_0.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/small_text_4.png"
+  },
+  "small_text_5.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/small_text_0.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/small_text_5.png"
+  },
+  "small_text_6.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/small_text_0.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/small_text_6.png"
+  },
+  "small_text_7.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/small_text_0.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/small_text_7.png"
+  },
+  "small_text_8.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/small_text_0.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/small_text_8.png"
+  },
+  "small_text_9.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/small_text_0.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/small_text_9.png"
+  },
+  "small_text_bp.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/small_text_0.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/small_text_bp.png"
+  },
+  "spirits_bg.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/spirits_bg.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/spirits_bg.png"
+  },
+  "star_energy_bg.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/star_energy_bg.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/star_energy_bg.png"
+  },
+  "stat_boots0.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/stat_boots0.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/stat_boots0.png"
+  },
+  "stat_boots1.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/stat_boots1.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/stat_boots1.png"
+  },
+  "stat_boots2.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/stat_boots2.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/stat_boots2.png"
+  },
+  "stat_boots3.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/stat_boots3.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/stat_boots3.png"
+  },
+  "stat_bp.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/stat_bp.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/stat_bp.png"
+  },
+  "stat_fp.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/stat_fp.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/stat_fp.png"
+  },
+  "stat_hammer0.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/stat_boots0.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/stat_hammer0.png"
+  },
+  "stat_hammer1.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/stat_hammer1.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/stat_hammer1.png"
+  },
+  "stat_hammer2.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/stat_hammer2.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/stat_hammer2.png"
+  },
+  "stat_hammer3.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/stat_hammer3.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/stat_hammer3.png"
+  },
+  "stat_star_piece0.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/stat_star_piece0.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/stat_star_piece0.png"
+  },
+  "stat_star_piece1.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/stat_star_piece0.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/stat_star_piece1.png"
+  },
+  "stat_star_piece2.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/stat_star_piece2.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/stat_star_piece2.png"
+  },
+  "stat_times.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/stat_times.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/stat_times.png"
+  },
+  "unused_badge.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/unused_badge.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/unused_badge.png"
+  },
+  "unused_badge_alt.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/unused_badge_alt.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/unused_badge.png"
+  },
+  "unused_compass.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/unused_compass.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/unused_compass.png"
+  },
+  "unused_compass_alt.png": {
+    "palette": "{dumpDir}/image/assets/ui/pause/unused_compass_alt.png",
+    "raster": "{dumpDir}/image/assets/ui/pause/unused_compass.png"
+  },
+  "window_frame_LL.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/pause/window_frame_LL.png"
+  },
+  "window_frame_LR.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/pause/window_frame_LR.png"
+  },
+  "window_frame_UL.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/pause/window_frame_UL.png"
+  },
+  "window_frame_UR.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/pause/window_frame_UR.png"
+  },
+  "window_oblong_LL.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/pause/window_oblong_LL.png"
+  },
+  "window_oblong_LR.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/pause/window_oblong_LR.png"
+  },
+  "window_oblong_UL.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/pause/window_oblong_UL.png"
+  },
+  "window_oblong_UR.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/pause/window_oblong_UR.png"
+  },
+  "window_round_LL.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/pause/window_round_LL.png"
+  },
+  "window_round_LR.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/pause/window_round_LR.png"
+  },
+  "window_round_UL.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/pause/window_round_UL.png"
+  },
+  "window_round_UR.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/pause/window_round_UR.png"
+  }
+}

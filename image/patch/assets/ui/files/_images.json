@@ -1,0 +1,86 @@
+{
+  "copy_arrow.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/files/copy_arrow.png"
+  },
+  "filename_caret.png": {
+    "palette": "{dumpDir}/image/assets/ui/files/filename_caret.png",
+    "raster": "{dumpDir}/image/assets/ui/files/filename_caret.png"
+  },
+  "filename_space.png": {
+    "palette": "{dumpDir}/image/assets/ui/files/filename_space.png",
+    "raster": "{dumpDir}/image/assets/ui/files/filename_space.png"
+  },
+  "option_mono_off.png": {
+    "palette": "{dumpDir}/image/assets/ui/files/option_mono_off.png",
+    "raster": "{dumpDir}/image/assets/ui/files/option_mono_off.png"
+  },
+  "option_mono_on.png": {
+    "palette": "{dumpDir}/image/assets/ui/files/option_mono_on.png",
+    "raster": "{dumpDir}/image/assets/ui/files/option_mono_off.png"
+  },
+  "option_stereo_off.png": {
+    "palette": "{dumpDir}/image/assets/ui/files/option_mono_off.png",
+    "raster": "{dumpDir}/image/assets/ui/files/option_stereo_off.png"
+  },
+  "option_stereo_on.png": {
+    "palette": "{dumpDir}/image/assets/ui/files/option_mono_on.png",
+    "raster": "{dumpDir}/image/assets/ui/files/option_stereo_off.png"
+  },
+  "spirit_1.png": {
+    "palette": "{dumpDir}/image/assets/ui/files/spirit_1.png",
+    "raster": "{dumpDir}/image/assets/ui/files/spirit_1.png"
+  },
+  "spirit_1_missing.png": {
+    "palette": "{dumpDir}/image/assets/ui/files/spirit_1_missing.png",
+    "raster": "{dumpDir}/image/assets/ui/files/spirit_1_missing.png"
+  },
+  "spirit_2.png": {
+    "palette": "{dumpDir}/image/assets/ui/files/spirit_2.png",
+    "raster": "{dumpDir}/image/assets/ui/files/spirit_2.png"
+  },
+  "spirit_2_missing.png": {
+    "palette": "{dumpDir}/image/assets/ui/files/spirit_1_missing.png",
+    "raster": "{dumpDir}/image/assets/ui/files/spirit_2_missing.png"
+  },
+  "spirit_3.png": {
+    "palette": "{dumpDir}/image/assets/ui/files/spirit_3.png",
+    "raster": "{dumpDir}/image/assets/ui/files/spirit_3.png"
+  },
+  "spirit_3_missing.png": {
+    "palette": "{dumpDir}/image/assets/ui/files/spirit_1_missing.png",
+    "raster": "{dumpDir}/image/assets/ui/files/spirit_3_missing.png"
+  },
+  "spirit_4.png": {
+    "palette": "{dumpDir}/image/assets/ui/files/spirit_4.png",
+    "raster": "{dumpDir}/image/assets/ui/files/spirit_4.png"
+  },
+  "spirit_4_missing.png": {
+    "palette": "{dumpDir}/image/assets/ui/files/spirit_1_missing.png",
+    "raster": "{dumpDir}/image/assets/ui/files/spirit_4_missing.png"
+  },
+  "spirit_5.png": {
+    "palette": "{dumpDir}/image/assets/ui/files/spirit_5.png",
+    "raster": "{dumpDir}/image/assets/ui/files/spirit_5.png"
+  },
+  "spirit_5_missing.png": {
+    "palette": "{dumpDir}/image/assets/ui/files/spirit_1_missing.png",
+    "raster": "{dumpDir}/image/assets/ui/files/spirit_5_missing.png"
+  },
+  "spirit_6.png": {
+    "palette": "{dumpDir}/image/assets/ui/files/spirit_6.png",
+    "raster": "{dumpDir}/image/assets/ui/files/spirit_6.png"
+  },
+  "spirit_6_missing.png": {
+    "palette": "{dumpDir}/image/assets/ui/files/spirit_1_missing.png",
+    "raster": "{dumpDir}/image/assets/ui/files/spirit_6_missing.png"
+  },
+  "spirit_7.png": {
+    "palette": "{dumpDir}/image/assets/ui/files/spirit_7.png",
+    "raster": "{dumpDir}/image/assets/ui/files/spirit_7.png"
+  },
+  "spirit_7_missing.png": {
+    "palette": "{dumpDir}/image/assets/ui/files/spirit_1_missing.png",
+    "raster": "{dumpDir}/image/assets/ui/files/spirit_7_missing.png"
+  }
+}

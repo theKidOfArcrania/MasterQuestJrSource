@@ -1,0 +1,90 @@
+{
+  "a_down.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cont/a_down.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cont/a_down.png"
+  },
+  "a_up.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cont/a_down.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cont/a_up.png"
+  },
+  "b_down.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cont/b_down.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cont/b_down.png"
+  },
+  "b_up.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cont/b_down.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cont/b_up.png"
+  },
+  "c-down_down.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cont/c-down_down.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cont/c-down_down.png"
+  },
+  "c-down_up.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cont/c-down_down.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cont/c-down_up.png"
+  },
+  "c-left_down.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cont/c-down_down.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cont/c-left_down.png"
+  },
+  "c-left_up.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cont/c-down_down.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cont/c-left_up.png"
+  },
+  "c-right_down.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cont/c-down_down.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cont/c-right_down.png"
+  },
+  "c-right_up.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cont/c-down_down.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cont/c-right_up.png"
+  },
+  "c-up_down.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cont/c-down_down.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cont/c-up_down.png"
+  },
+  "c-up_up.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cont/c-down_down.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cont/c-up_up.png"
+  },
+  "start_1.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cont/start_1.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cont/start_1.png"
+  },
+  "start_2.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cont/start_1.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cont/start_1.png"
+  },
+  "start_text.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cont/start_text.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cont/start_text.png"
+  },
+  "stick_1.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cont/stick_1.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cont/stick_1.png"
+  },
+  "stick_2.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cont/stick_1.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cont/stick_2.png"
+  },
+  "stick_3.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cont/stick_1.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cont/stick_3.png"
+  },
+  "stick_4.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cont/stick_1.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cont/stick_4.png"
+  },
+  "stick_5.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cont/stick_1.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cont/stick_5.png"
+  },
+  "stick_6.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cont/stick_1.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cont/stick_6.png"
+  },
+  "stick_neutral.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/cont/stick_1.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/cont/stick_neutral.png"
+  }
+}

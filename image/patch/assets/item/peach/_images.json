@@ -1,0 +1,90 @@
+{
+  "BakingButter.png": {
+    "palette": "{dumpDir}/image/assets/item/peach/BakingButter.png",
+    "raster": "{dumpDir}/image/assets/item/peach/BakingButter.png"
+  },
+  "BakingButter_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/peach/BakingButter_alt.png",
+    "raster": "{dumpDir}/image/assets/item/peach/BakingButter.png"
+  },
+  "BakingCleanser.png": {
+    "palette": "{dumpDir}/image/assets/item/peach/BakingCleanser.png",
+    "raster": "{dumpDir}/image/assets/item/peach/BakingCleanser.png"
+  },
+  "BakingCleanser_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/peach/BakingCleanser_alt.png",
+    "raster": "{dumpDir}/image/assets/item/peach/BakingCleanser.png"
+  },
+  "BakingCream.png": {
+    "palette": "{dumpDir}/image/assets/item/peach/BakingCream.png",
+    "raster": "{dumpDir}/image/assets/item/peach/BakingCream.png"
+  },
+  "BakingCream_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/peach/BakingCream_alt.png",
+    "raster": "{dumpDir}/image/assets/item/peach/BakingCream.png"
+  },
+  "BakingEgg.png": {
+    "palette": "{dumpDir}/image/assets/item/peach/BakingEgg.png",
+    "raster": "{dumpDir}/image/assets/item/peach/BakingEgg.png"
+  },
+  "BakingEgg_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/peach/BakingEgg_alt.png",
+    "raster": "{dumpDir}/image/assets/item/peach/BakingEgg.png"
+  },
+  "BakingFlour.png": {
+    "palette": "{dumpDir}/image/assets/item/peach/BakingFlour.png",
+    "raster": "{dumpDir}/image/assets/item/peach/BakingFlour.png"
+  },
+  "BakingFlour_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/peach/BakingFlour_alt.png",
+    "raster": "{dumpDir}/image/assets/item/peach/BakingFlour.png"
+  },
+  "BakingMilk.png": {
+    "palette": "{dumpDir}/image/assets/item/peach/BakingMilk.png",
+    "raster": "{dumpDir}/image/assets/item/peach/BakingMilk.png"
+  },
+  "BakingMilk_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/peach/BakingMilk_alt.png",
+    "raster": "{dumpDir}/image/assets/item/peach/BakingMilk.png"
+  },
+  "BakingSalt.png": {
+    "palette": "{dumpDir}/image/assets/item/peach/BakingSalt.png",
+    "raster": "{dumpDir}/image/assets/item/peach/BakingSalt.png"
+  },
+  "BakingSalt_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/peach/BakingSalt_alt.png",
+    "raster": "{dumpDir}/image/assets/item/peach/BakingSalt.png"
+  },
+  "BakingStrawberry.png": {
+    "palette": "{dumpDir}/image/assets/item/peach/BakingStrawberry.png",
+    "raster": "{dumpDir}/image/assets/item/peach/BakingStrawberry.png"
+  },
+  "BakingStrawberry_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/peach/BakingStrawberry_alt.png",
+    "raster": "{dumpDir}/image/assets/item/peach/BakingStrawberry.png"
+  },
+  "BakingSugar.png": {
+    "palette": "{dumpDir}/image/assets/item/peach/BakingSugar.png",
+    "raster": "{dumpDir}/image/assets/item/peach/BakingSalt.png"
+  },
+  "BakingSugar_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/peach/BakingSugar_alt.png",
+    "raster": "{dumpDir}/image/assets/item/peach/BakingSalt.png"
+  },
+  "BakingWater.png": {
+    "palette": "{dumpDir}/image/assets/item/peach/BakingWater.png",
+    "raster": "{dumpDir}/image/assets/item/peach/BakingWater.png"
+  },
+  "BakingWater_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/peach/BakingWater_alt.png",
+    "raster": "{dumpDir}/image/assets/item/peach/BakingWater.png"
+  },
+  "sneaky_parasol.png": {
+    "palette": "{dumpDir}/image/assets/item/peach/sneaky_parasol.png",
+    "raster": "{dumpDir}/image/assets/item/peach/sneaky_parasol.png"
+  },
+  "sneaky_parasol_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/peach/sneaky_parasol.png",
+    "raster": "{dumpDir}/image/assets/item/peach/sneaky_parasol.png"
+  }
+}

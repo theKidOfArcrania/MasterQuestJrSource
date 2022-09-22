@@ -1,0 +1,158 @@
+{
+  "A2960.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/box/A2960.png"
+  },
+  "bg_flat.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/box/bg_flat.png"
+  },
+  "bg_tile.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/box/bg_tile.png"
+  },
+  "corner_00_LL.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/box/corner_00_LL.png"
+  },
+  "corner_00_LR.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/box/corner_00_LR.png"
+  },
+  "corner_00_UL.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/box/corner_00_UL.png"
+  },
+  "corner_00_UR.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/box/corner_00_UR.png"
+  },
+  "corner_01_LL.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/box/corner_01_LL.png"
+  },
+  "corner_01_LR.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/box/corner_01_LR.png"
+  },
+  "corner_01_UL.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/box/corner_01_UL.png"
+  },
+  "corner_01_UR.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/box/corner_01_UR.png"
+  },
+  "corner_02_LL.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/box/corner_02_LL.png"
+  },
+  "corner_02_LR.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/box/corner_02_LR.png"
+  },
+  "corner_02_UL.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/box/corner_02_UL.png"
+  },
+  "corner_02_UR.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/box/corner_02_UR.png"
+  },
+  "corner_03_LL.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/box/corner_03_LL.png"
+  },
+  "corner_03_LR.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/box/corner_03_LR.png"
+  },
+  "corner_03_UL.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/box/corner_03_UL.png"
+  },
+  "corner_03_UR.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/box/corner_03_UR.png"
+  },
+  "corner_04_LL.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/box/corner_04_LL.png"
+  },
+  "corner_04_LR.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/box/corner_04_LR.png"
+  },
+  "corner_04_UL.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/box/corner_04_UL.png"
+  },
+  "corner_04_UR.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/box/corner_04_UR.png"
+  },
+  "corner_05_LL.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/box/corner_05_LL.png"
+  },
+  "corner_05_LR.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/box/corner_05_LR.png"
+  },
+  "corner_05_UL.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/box/corner_05_UL.png"
+  },
+  "corner_05_UR.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/box/corner_05_UR.png"
+  },
+  "corner_06_LL.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/box/corner_06_LL.png"
+  },
+  "corner_06_LR.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/box/corner_06_LR.png"
+  },
+  "corner_06_UL.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/box/corner_05_UR.png"
+  },
+  "corner_06_UR.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/box/corner_06_UR.png"
+  },
+  "corner_07_LL.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/box/corner_07_LL.png"
+  },
+  "corner_07_LR.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/box/corner_07_LR.png"
+  },
+  "corner_07_UL.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/box/corner_07_UL.png"
+  },
+  "corner_07_UR.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/box/corner_07_UR.png"
+  },
+  "corner_08_LL.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/box/corner_08_LL.png"
+  },
+  "corner_08_LR.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/box/corner_08_LR.png"
+  },
+  "corner_08_UL.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/box/corner_08_UL.png"
+  },
+  "corner_08_UR.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/ui/box/corner_08_UR.png"
+  }
+}

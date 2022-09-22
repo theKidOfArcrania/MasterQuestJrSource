@@ -1,0 +1,26 @@
+{
+  "bg_1.png": {
+    "palette": "{dumpDir}/image/assets/intro/bg_1.png",
+    "raster": "{dumpDir}/image/assets/intro/bg_1.png"
+  },
+  "bg_2.png": {
+    "palette": "{dumpDir}/image/assets/intro/bg_2.png",
+    "raster": "{dumpDir}/image/assets/intro/bg_2.png"
+  },
+  "bg_3.png": {
+    "palette": "{dumpDir}/image/assets/intro/bg_3.png",
+    "raster": "{dumpDir}/image/assets/intro/bg_3.png"
+  },
+  "bg_4.png": {
+    "palette": "{dumpDir}/image/assets/intro/bg_4.png",
+    "raster": "{dumpDir}/image/assets/intro/bg_4.png"
+  },
+  "silhouette.png": {
+    "palette": "{dumpDir}/image/assets/intro/silhouette.png",
+    "raster": "{dumpDir}/image/assets/intro/silhouette.png"
+  },
+  "tape.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/intro/tape.png"
+  }
+}

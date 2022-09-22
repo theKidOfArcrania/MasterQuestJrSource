@@ -1,0 +1,138 @@
+{
+  "tik_bin_rbr01tif.png": {
+    "palette": "{dumpDir}/image/texture/tik_tex/tik_bin_rbr01tif.png",
+    "raster": "{dumpDir}/image/texture/tik_tex/tik_bin_rbr01tif.png"
+  },
+  "tik_doa1tif.png": {
+    "palette": "{dumpDir}/image/texture/tik_tex/tik_doa1tif.png",
+    "raster": "{dumpDir}/image/texture/tik_tex/tik_doa1tif.png"
+  },
+  "tik_frozentif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/tik_tex/tik_frozentif.png"
+  },
+  "tik_grayframetif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_grayframetif.png"
+  },
+  "tik_icetif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/tik_tex/tik_icetif.png"
+  },
+  "tik_kan1tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/tik_tex/tik_kan1tif.png"
+  },
+  "tik_kinoitatif.png": {
+    "palette": "{dumpDir}/image/texture/tik_tex/tik_kinoitatif.png",
+    "raster": "{dumpDir}/image/texture/flo_tex/flo_kinoitatif.png"
+  },
+  "tik_mac_doortif.png": {
+    "palette": "{dumpDir}/image/texture/tik_tex/tik_mac_doortif.png",
+    "raster": "{dumpDir}/image/texture/kgr_tex/kgr_mac_doortif.png"
+  },
+  "tik_oregl3tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/tik_tex/tik_oregl3tif.png"
+  },
+  "tik_t_chear2tif.png": {
+    "palette": "{dumpDir}/image/texture/tik_tex/tik_t_chear2tif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_t_chear2tif.png"
+  },
+  "tik_t_cheartif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_t_cheartif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_t_cheartif.png"
+  },
+  "tik_t_doatif.png": {
+    "palette": "{dumpDir}/image/texture/tik_tex/tik_t_doatif.png",
+    "raster": "{dumpDir}/image/texture/tik_tex/tik_t_doatif.png"
+  },
+  "tik_t_dokankun2tif.png": {
+    "palette": "{dumpDir}/image/texture/tik_tex/tik_t_dokankun2tif.png",
+    "raster": "{dumpDir}/image/texture/tik_tex/tik_t_dokankun2tif.png"
+  },
+  "tik_t_dokankun3tif.png": {
+    "palette": "{dumpDir}/image/texture/tik_tex/tik_t_dokankun3tif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_t_dokankun3tif.png"
+  },
+  "tik_t_ice3tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/tik_tex/tik_t_ice3tif.png"
+  },
+  "tik_t_katen1tif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_t_katen1tif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_t_katen1tif.png"
+  },
+  "tik_t_kazari1tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/tik_tex/tik_t_kazari1tif.png"
+  },
+  "tik_t_kazari1tif_AUX.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/tik_tex/tik_t_kazari1tif_AUX.png"
+  },
+  "tik_t_kiri1tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/tik_tex/tik_t_kiri1tif.png"
+  },
+  "tik_t_sakutif.png": {
+    "palette": "{dumpDir}/image/texture/tik_tex/tik_t_sakutif.png",
+    "raster": "{dumpDir}/image/texture/tik_tex/tik_t_sakutif.png"
+  },
+  "tik_t_sizuku1tif.png": {
+    "palette": "{dumpDir}/image/texture/tik_tex/tik_t_sizuku1tif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_t_sizuku1tif.png"
+  },
+  "tik_t_taki1tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_t_taki1tif.png"
+  },
+  "tik_t_taki1tif_AUX.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_t_taki1tif_AUX.png"
+  },
+  "tik_t_taki5tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/tik_tex/tik_t_taki5tif.png"
+  },
+  "tik_t_taki5tif_AUX.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/tik_tex/tik_t_taki5tif_AUX.png"
+  },
+  "tik_t_taki6tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/tik_tex/tik_t_taki6tif.png"
+  },
+  "tik_t_taki6tif_AUX.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/tik_tex/tik_t_taki6tif_AUX.png"
+  },
+  "tik_t_taki7tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/tik_tex/tik_t_taki7tif.png"
+  },
+  "tik_t_taki7tif_AUX.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/tik_tex/tik_t_taki7tif_AUX.png"
+  },
+  "tik_t_turara1tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/tik_tex/tik_t_turara1tif.png"
+  },
+  "tik_t_yuka1tif.png": {
+    "palette": "{dumpDir}/image/texture/tik_tex/tik_t_yuka1tif.png",
+    "raster": "{dumpDir}/image/texture/tik_tex/tik_t_yuka1tif.png"
+  },
+  "tik_tn_kabe3tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/tik_tex/tik_tn_kabe3tif.png"
+  },
+  "tik_tn_kabe3tif_AUX.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/tik_tex/tik_tn_kabe3tif_AUX.png"
+  },
+  "tik_togetif.png": {
+    "palette": "{dumpDir}/image/texture/tik_tex/tik_togetif.png",
+    "raster": "{dumpDir}/image/texture/dgb_tex/dgb_togetif.png"
+  }
+}

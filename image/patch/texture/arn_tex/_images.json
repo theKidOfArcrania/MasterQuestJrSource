@@ -1,0 +1,150 @@
+{
+  "arn_berosaidetif.png": {
+    "palette": "{dumpDir}/image/texture/arn_tex/arn_berosaidetif.png",
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_berosaidetif.png"
+  },
+  "arn_doa2tif.png": {
+    "palette": "{dumpDir}/image/texture/arn_tex/arn_doa2tif.png",
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_doa2tif.png"
+  },
+  "arn_doa3tif.png": {
+    "palette": "{dumpDir}/image/texture/arn_tex/arn_doa3tif.png",
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_doa3tif.png"
+  },
+  "arn_doatif.png": {
+    "palette": "{dumpDir}/image/texture/arn_tex/arn_doatif.png",
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_doatif.png"
+  },
+  "arn_frametif.png": {
+    "palette": "{dumpDir}/image/texture/arn_tex/arn_frametif.png",
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_frametif.png"
+  },
+  "arn_grayframetif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_grayframetif.png"
+  },
+  "arn_haguruma1tif.png": {
+    "palette": "{dumpDir}/image/texture/arn_tex/arn_haguruma1tif.png",
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_haguruma1tif.png"
+  },
+  "arn_hane1tif.png": {
+    "palette": "{dumpDir}/image/texture/arn_tex/arn_hane1tif.png",
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_hane1tif.png"
+  },
+  "arn_hari1tif.png": {
+    "palette": "{dumpDir}/image/texture/arn_tex/arn_hari1tif.png",
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_hari1tif.png"
+  },
+  "arn_haritif.png": {
+    "palette": "{dumpDir}/image/texture/arn_tex/arn_haritif.png",
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_hari1tif.png"
+  },
+  "arn_hasira1tif.png": {
+    "palette": "{dumpDir}/image/texture/arn_tex/arn_hasira1tif.png",
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_hasira1tif.png"
+  },
+  "arn_iwa_4tif.png": {
+    "palette": "{dumpDir}/image/texture/arn_tex/arn_iwa_4tif.png",
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_iwa_4tif.png"
+  },
+  "arn_jamp1tif.png": {
+    "palette": "{dumpDir}/image/texture/arn_tex/arn_jamp1tif.png",
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_jamp1tif.png"
+  },
+  "arn_jamp2tif.png": {
+    "palette": "{dumpDir}/image/texture/arn_tex/arn_jamp2tif.png",
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_jamp2tif.png"
+  },
+  "arn_jimen_edgetif.png": {
+    "palette": "{dumpDir}/image/texture/arn_tex/arn_jimen_edgetif.png",
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_jimen_edgetif.png"
+  },
+  "arn_jimenbtif.png": {
+    "palette": "{dumpDir}/image/texture/arn_tex/arn_jimenbtif.png",
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_jimenbtif.png"
+  },
+  "arn_jimenbtif_AUX.png": {
+    "palette": "{dumpDir}/image/texture/arn_tex/arn_jimenbtif_AUX.png",
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_jimenbtif_AUX.png"
+  },
+  "arn_jimenctif.png": {
+    "palette": "{dumpDir}/image/texture/arn_tex/arn_jimenctif.png",
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_jimenctif.png"
+  },
+  "arn_jimenctif_AUX.png": {
+    "palette": "{dumpDir}/image/texture/arn_tex/arn_jimenctif_AUX.png",
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_jimenbtif_AUX.png"
+  },
+  "arn_kabe10tif.png": {
+    "palette": "{dumpDir}/image/texture/arn_tex/arn_kabe10tif.png",
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_kabe10tif.png"
+  },
+  "arn_kabe1tif.png": {
+    "palette": "{dumpDir}/image/texture/arn_tex/arn_kabe1tif.png",
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_kabe1tif.png"
+  },
+  "arn_kabe2tif.png": {
+    "palette": "{dumpDir}/image/texture/arn_tex/arn_kabe2tif.png",
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_kabe2tif.png"
+  },
+  "arn_kabe6tif.png": {
+    "palette": "{dumpDir}/image/texture/arn_tex/arn_kabe6tif.png",
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_kabe6tif.png"
+  },
+  "arn_ki5tif.png": {
+    "palette": "{dumpDir}/image/texture/arn_tex/arn_ki5tif.png",
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_ki5tif.png"
+  },
+  "arn_kusatif.png": {
+    "palette": "{dumpDir}/image/texture/arn_tex/arn_kusatif.png",
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_kusatif.png"
+  },
+  "arn_mado1tif.png": {
+    "palette": "{dumpDir}/image/texture/arn_tex/arn_mado1tif.png",
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_mado1tif.png"
+  },
+  "arn_mado2tif.png": {
+    "palette": "{dumpDir}/image/texture/arn_tex/arn_mado2tif.png",
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_mado2tif.png"
+  },
+  "arn_renga1tif.png": {
+    "palette": "{dumpDir}/image/texture/arn_tex/arn_renga1tif.png",
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_renga1tif.png"
+  },
+  "arn_star1tif.png": {
+    "palette": "{dumpDir}/image/texture/arn_tex/arn_star1tif.png",
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_star1tif.png"
+  },
+  "arn_waku2tif.png": {
+    "palette": "{dumpDir}/image/texture/arn_tex/arn_waku2tif.png",
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_waku2tif.png"
+  },
+  "arn_yane1tif.png": {
+    "palette": "{dumpDir}/image/texture/arn_tex/arn_yane1tif.png",
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_yane1tif.png"
+  },
+  "arn_yane3tif.png": {
+    "palette": "{dumpDir}/image/texture/arn_tex/arn_yane3tif.png",
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_yane3tif.png"
+  },
+  "arn_zassoutif.png": {
+    "palette": "{dumpDir}/image/texture/arn_tex/arn_zassoutif.png",
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_zassoutif.png"
+  },
+  "arn_zimen2tif.png": {
+    "palette": "{dumpDir}/image/texture/arn_tex/arn_jimenbtif.png",
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_jimenbtif.png"
+  },
+  "arn_zimen4tif.png": {
+    "palette": "{dumpDir}/image/texture/arn_tex/arn_zimen4tif.png",
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_zimen4tif.png"
+  },
+  "sbk_suna2tif.png": {
+    "palette": "{dumpDir}/image/texture/sbk_tex/sbk_suna2tif.png",
+    "raster": "{dumpDir}/image/texture/sbk_tex/sbk_suna2tif.png"
+  },
+  "sbk_suna3tif.png": {
+    "palette": "{dumpDir}/image/texture/sbk_tex/sbk_suna3tif.png",
+    "raster": "{dumpDir}/image/texture/dro_tex/dro_suna3tif.png"
+  }
+}

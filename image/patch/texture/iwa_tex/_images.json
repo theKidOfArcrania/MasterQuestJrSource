@@ -1,0 +1,238 @@
+{
+  "iwa_back_2tif.png": {
+    "palette": "{dumpDir}/image/texture/iwa_tex/iwa_back_2tif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_back_2tif.png"
+  },
+  "iwa_berosaidetif.png": {
+    "palette": "{dumpDir}/image/texture/iwa_tex/iwa_berosaidetif.png",
+    "raster": "{dumpDir}/image/texture/dgb_tex/dgb_berosaidetif.png"
+  },
+  "iwa_dropwater_btif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_dropwater_btif.png"
+  },
+  "iwa_dropwater_btif_AUX.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_dropwater_btif_AUX.png"
+  },
+  "iwa_dropwatertif.png": {
+    "palette": "{dumpDir}/image/texture/iwa_tex/iwa_dropwatertif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_dropwatertif.png"
+  },
+  "iwa_frametif.png": {
+    "palette": "{dumpDir}/image/texture/iwa_tex/iwa_frametif.png",
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_frametif.png"
+  },
+  "iwa_g_and_btif.png": {
+    "palette": "{dumpDir}/image/texture/iwa_tex/iwa_g_and_btif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_g_and_btif.png"
+  },
+  "iwa_green_etif.png": {
+    "palette": "{dumpDir}/image/texture/iwa_tex/iwa_green_etif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_green_etif.png"
+  },
+  "iwa_green_etif_MIPMAP_1.png": {
+    "palette": "{dumpDir}/image/texture/iwa_tex/iwa_green_etif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_green_etif_MIPMAP_1.png"
+  },
+  "iwa_hanastif.png": {
+    "palette": "{dumpDir}/image/texture/iwa_tex/iwa_hanastif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_hanastif.png"
+  },
+  "iwa_hapa34tif.png": {
+    "palette": "{dumpDir}/image/texture/iwa_tex/iwa_hapa34tif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_hapa34tif.png"
+  },
+  "iwa_iwa_sakutif.png": {
+    "palette": "{dumpDir}/image/texture/iwa_tex/iwa_iwa_sakutif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_iwa_sakutif.png"
+  },
+  "iwa_iwa_togo_atif.png": {
+    "palette": "{dumpDir}/image/texture/iwa_tex/iwa_iwa_togo_atif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_iwa_togo_atif.png"
+  },
+  "iwa_iwa_walltif.png": {
+    "palette": "{dumpDir}/image/texture/iwa_tex/iwa_iwa_walltif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_iwa_walltif.png"
+  },
+  "iwa_iwa_walltif_AUX.png": {
+    "palette": "{dumpDir}/image/texture/iwa_tex/iwa_iwa_walltif_AUX.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_iwa_walltif_AUX.png"
+  },
+  "iwa_iwa_woodtif.png": {
+    "palette": "{dumpDir}/image/texture/iwa_tex/iwa_iwa_woodtif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_iwa_woodtif.png"
+  },
+  "iwa_iwasakutif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_iwasakutif.png"
+  },
+  "iwa_kabe12tif.png": {
+    "palette": "{dumpDir}/image/texture/iwa_tex/iwa_kabe12tif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_kabe12tif.png"
+  },
+  "iwa_kabekusatif.png": {
+    "palette": "{dumpDir}/image/texture/iwa_tex/iwa_kabekusatif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_kabekusatif.png"
+  },
+  "iwa_komonotif.png": {
+    "palette": "{dumpDir}/image/texture/iwa_tex/iwa_komonotif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_komonotif.png"
+  },
+  "iwa_mac_britshcuttif.png": {
+    "palette": "{dumpDir}/image/texture/iwa_tex/iwa_mac_britshcuttif.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_mac_britshcuttif.png"
+  },
+  "iwa_mac_britshtreetif.png": {
+    "palette": "{dumpDir}/image/texture/iwa_tex/iwa_mac_britshtreetif.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_mac_britshtreetif.png"
+  },
+  "iwa_mac_clocktif.png": {
+    "palette": "{dumpDir}/image/texture/iwa_tex/iwa_mac_clocktif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_mac_clocktif.png"
+  },
+  "iwa_mac_edgetif.png": {
+    "palette": "{dumpDir}/image/texture/iwa_tex/iwa_mac_edgetif.png",
+    "raster": "{dumpDir}/image/texture/hos_tex/hos_mac_edgetif.png"
+  },
+  "iwa_mac_fieldtif.png": {
+    "palette": "{dumpDir}/image/texture/iwa_tex/iwa_mac_fieldtif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_mac_fieldtif.png"
+  },
+  "iwa_mac_fumikiritif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_mac_fumikiritif.png"
+  },
+  "iwa_mac_house2tif.png": {
+    "palette": "{dumpDir}/image/texture/iwa_tex/iwa_mac_house2tif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_mac_house2tif.png"
+  },
+  "iwa_mac_house2tif_MIPMAP_1.png": {
+    "palette": "{dumpDir}/image/texture/iwa_tex/iwa_mac_house2tif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_mac_house2tif_MIPMAP_1.png"
+  },
+  "iwa_mac_house2tif_MIPMAP_2.png": {
+    "palette": "{dumpDir}/image/texture/iwa_tex/iwa_mac_house2tif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_mac_house2tif_MIPMAP_2.png"
+  },
+  "iwa_mac_kemuritif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_mac_kemuritif.png"
+  },
+  "iwa_mac_koushitif.png": {
+    "palette": "{dumpDir}/image/texture/iwa_tex/iwa_mac_koushitif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_mac_koushitif.png"
+  },
+  "iwa_mac_pistontif.png": {
+    "palette": "{dumpDir}/image/texture/iwa_tex/iwa_mac_pistontif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_mac_pistontif.png"
+  },
+  "iwa_mac_railwaytif.png": {
+    "palette": "{dumpDir}/image/texture/iwa_tex/iwa_mac_railwaytif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_mac_railwaytif.png"
+  },
+  "iwa_mac_roof1tif.png": {
+    "palette": "{dumpDir}/image/texture/iwa_tex/iwa_mac_roof1tif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_mac_roof1tif.png"
+  },
+  "iwa_mac_sakutif.png": {
+    "palette": "{dumpDir}/image/texture/iwa_tex/iwa_mac_sakutif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_mac_sakutif.png"
+  },
+  "iwa_mac_senrosakutif.png": {
+    "palette": "{dumpDir}/image/texture/iwa_tex/iwa_mac_senrosakutif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_mac_senrosakutif.png"
+  },
+  "iwa_midori03tif.png": {
+    "palette": "{dumpDir}/image/texture/iwa_tex/iwa_midori03tif.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_midori03tif.png"
+  },
+  "iwa_nejiwoodtif.png": {
+    "palette": "{dumpDir}/image/texture/iwa_tex/iwa_nejiwoodtif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_nejiwoodtif.png"
+  },
+  "iwa_noisetif.png": {
+    "palette": "{dumpDir}/image/texture/iwa_tex/iwa_noisetif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_noisetif.png"
+  },
+  "iwa_popo_4rtif.png": {
+    "palette": "{dumpDir}/image/texture/iwa_tex/iwa_popo_4rtif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_popo_4rtif.png"
+  },
+  "iwa_popo_5tif.png": {
+    "palette": "{dumpDir}/image/texture/iwa_tex/iwa_popo_5tif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_popo_5tif.png"
+  },
+  "iwa_reef_ltif.png": {
+    "palette": "{dumpDir}/image/texture/iwa_tex/iwa_reef_ltif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_reef_ltif.png"
+  },
+  "iwa_roadtif.png": {
+    "palette": "{dumpDir}/image/texture/iwa_tex/iwa_roadtif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_roadtif.png"
+  },
+  "iwa_rock_edge_atif.png": {
+    "palette": "{dumpDir}/image/texture/iwa_tex/iwa_rock_edge_atif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_rock_edge_atif.png"
+  },
+  "iwa_rock_edge_stif.png": {
+    "palette": "{dumpDir}/image/texture/iwa_tex/iwa_rock_edge_stif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_rock_edge_stif.png"
+  },
+  "iwa_rock_edgetif.png": {
+    "palette": "{dumpDir}/image/texture/iwa_tex/iwa_rock_edgetif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_rock_edgetif.png"
+  },
+  "iwa_ropetif.png": {
+    "palette": "{dumpDir}/image/texture/iwa_tex/iwa_ropetif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_ropetif.png"
+  },
+  "iwa_s_road_2tif.png": {
+    "palette": "{dumpDir}/image/texture/iwa_tex/iwa_s_road_2tif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_s_road_2tif.png"
+  },
+  "iwa_s_road_3tif.png": {
+    "palette": "{dumpDir}/image/texture/iwa_tex/iwa_s_road_3tif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_s_road_2tif.png"
+  },
+  "iwa_sakutif.png": {
+    "palette": "{dumpDir}/image/texture/iwa_tex/iwa_sakutif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_sakutif.png"
+  },
+  "iwa_steamtif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_steamtif.png"
+  },
+  "iwa_su_1tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_su_1tif.png"
+  },
+  "iwa_suberidaitif.png": {
+    "palette": "{dumpDir}/image/texture/iwa_tex/iwa_suberidaitif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_suberidaitif.png"
+  },
+  "iwa_sutif.png": {
+    "palette": "{dumpDir}/image/texture/iwa_tex/iwa_sutif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_sutif.png"
+  },
+  "iwa_syarintif.png": {
+    "palette": "{dumpDir}/image/texture/iwa_tex/iwa_syarintif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_syarintif.png"
+  },
+  "iwa_t_taki1tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_t_taki1tif.png"
+  },
+  "iwa_t_taki1tif_AUX.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_t_taki1tif_AUX.png"
+  },
+  "iwa_temae1tif.png": {
+    "palette": "{dumpDir}/image/texture/iwa_tex/iwa_temae1tif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_temae1tif.png"
+  },
+  "iwa_wood_pole_b_btif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_wood_pole_b_btif.png"
+  }
+}

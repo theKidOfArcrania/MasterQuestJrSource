@@ -1,0 +1,338 @@
+{
+  "sam_berosaidetif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_berosaidetif.png",
+    "raster": "{dumpDir}/image/texture/dgb_tex/dgb_berosaidetif.png"
+  },
+  "sam_binn2tif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_binn2tif.png",
+    "raster": "{dumpDir}/image/texture/dro_tex/dro_binn2tif.png"
+  },
+  "sam_bintif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_bintif.png"
+  },
+  "sam_dannro02tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_dannro02tif.png"
+  },
+  "sam_dannro02tif_AUX.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_dannro02tif_AUX.png"
+  },
+  "sam_doa1tif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_doa1tif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_doa1tif.png"
+  },
+  "sam_dokankuntif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_dokankuntif.png",
+    "raster": "{dumpDir}/image/texture/kmr_tex/kmr_dokantif.png"
+  },
+  "sam_flower_02tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/dro_tex/dro_flower_02tif.png"
+  },
+  "sam_frametif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_frametif.png",
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_frametif.png"
+  },
+  "sam_grayframetif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_grayframetif.png"
+  },
+  "sam_hasira1tif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_hasira1tif.png",
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_hasira1tif.png"
+  },
+  "sam_himo01tif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_himo01tif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_himo01tif.png"
+  },
+  "sam_hon01tif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_hon01tif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_hon01tif.png"
+  },
+  "sam_hon02tif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_hon02tif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_hon02tif.png"
+  },
+  "sam_hon03tif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_hon03tif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_hon03tif.png"
+  },
+  "sam_hon04tif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_hon04tif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_hon04tif.png"
+  },
+  "sam_hon2tif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_hon2tif.png",
+    "raster": "{dumpDir}/image/texture/dro_tex/dro_hon2tif.png"
+  },
+  "sam_hon3tif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_hon3tif.png",
+    "raster": "{dumpDir}/image/texture/dro_tex/dro_hon2tif.png"
+  },
+  "sam_hontif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_hontif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_hontif.png"
+  },
+  "sam_ice3tif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_ice3tif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_ice3tif.png"
+  },
+  "sam_kago2tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_kago2tif.png"
+  },
+  "sam_kagotif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_kagotif.png"
+  },
+  "sam_kakigouri1tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_kakigouri1tif.png"
+  },
+  "sam_kakigouri2tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_kakigouri2tif.png"
+  },
+  "sam_kami02tif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_kami02tif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_kami02tif.png"
+  },
+  "sam_kami03tif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_kami03tif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_kami03tif.png"
+  },
+  "sam_kazari2tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_kazari2tif.png"
+  },
+  "sam_keito1tif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_keito1tif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_keito1tif.png"
+  },
+  "sam_ki3tif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_ki3tif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_ki3tif.png"
+  },
+  "sam_kinoitatif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_kinoitatif.png",
+    "raster": "{dumpDir}/image/texture/flo_tex/flo_kinoitatif.png"
+  },
+  "sam_kinopiotif.png": {
+    "palette": "{dumpDir}/image/texture/dro_tex/dro_kinopiotif.png",
+    "raster": "{dumpDir}/image/texture/dro_tex/dro_kinopiotif.png"
+  },
+  "sam_nabe_atif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_nabe_atif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_nabe_atif.png"
+  },
+  "sam_nabe_btif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_nabe_btif.png"
+  },
+  "sam_nabe_ctif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_nabe_ctif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_nabe_ctif.png"
+  },
+  "sam_nabe_dtif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_nabe_dtif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_nabe_dtif.png"
+  },
+  "sam_odo_iwahashi3tif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_odo_iwahashi3tif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_odo_iwahashi3tif.png"
+  },
+  "sam_odo_iwatif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_odo_iwatif.png",
+    "raster": "{dumpDir}/image/texture/pra_tex/pra_odo_iwatif.png"
+  },
+  "sam_pen_snow2tif.png": {
+    "palette": "{dumpDir}/image/texture/pra_tex/pra_pen_snow2tif.png",
+    "raster": "{dumpDir}/image/texture/pra_tex/pra_pen_snow2tif.png"
+  },
+  "sam_pen_snow3tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_pen_snow3tif.png"
+  },
+  "sam_pen_snow3tif_MIPMAP_1.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_pen_snow3tif_MIPMAP_1.png"
+  },
+  "sam_pen_snow3tif_MIPMAP_2.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_pen_snow3tif_MIPMAP_2.png"
+  },
+  "sam_pen_snow3tif_MIPMAP_3.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_pen_snow3tif_MIPMAP_3.png"
+  },
+  "sam_pen_snowtif.png": {
+    "palette": "{dumpDir}/image/texture/pra_tex/pra_pen_snowtif.png",
+    "raster": "{dumpDir}/image/texture/pra_tex/pra_pen_snowtif.png"
+  },
+  "sam_ranpu01tif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_ranpu01tif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_ranpu01tif.png"
+  },
+  "sam_s_anatif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_s_anatif.png",
+    "raster": "{dumpDir}/image/texture/kpa_tex/kpa_ana_ctif.png"
+  },
+  "sam_s_dannro1tif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_s_dannro1tif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_s_dannro1tif.png"
+  },
+  "sam_s_dannro2tif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_s_dannro2tif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_s_dannro2tif.png"
+  },
+  "sam_s_danro3tif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_s_danro3tif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_s_danro3tif.png"
+  },
+  "sam_s_danro4tif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_s_danro4tif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_s_danro4tif.png"
+  },
+  "sam_s_doa1tif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_s_doa1tif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_s_doa1tif.png"
+  },
+  "sam_s_doa2tif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_s_doa2tif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_s_doa2tif.png"
+  },
+  "sam_s_doatif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_s_doatif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_s_doatif.png"
+  },
+  "sam_s_futon2tif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_s_futon2tif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_s_futon2tif.png"
+  },
+  "sam_s_futon3tif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_s_futon3tif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_s_futon3tif.png"
+  },
+  "sam_s_kabe1tif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_s_kabe1tif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_s_kabe1tif.png"
+  },
+  "sam_s_kabe2tif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_s_kabe2tif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_s_kabe2tif.png"
+  },
+  "sam_s_kabe3tif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_s_kabe3tif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_s_kabe3tif.png"
+  },
+  "sam_s_kabetif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_s_kabetif.png"
+  },
+  "sam_s_kazari1tif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_s_kazari1tif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_s_kazari1tif.png"
+  },
+  "sam_s_kemutif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_s_kemutif.png"
+  },
+  "sam_s_kesyou2tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_s_kesyou2tif.png"
+  },
+  "sam_s_mado1tif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_s_mado1tif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_s_mado1tif.png"
+  },
+  "sam_s_mado2tif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_s_mado2tif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_s_mado2tif.png"
+  },
+  "sam_s_mafuretif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_s_mafuretif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_s_mafuretif.png"
+  },
+  "sam_s_metif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_s_metif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_s_metif.png"
+  },
+  "sam_s_road1tif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_s_road1tif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_s_road1tif.png"
+  },
+  "sam_s_saku3tif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_s_saku3tif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_s_saku3tif.png"
+  },
+  "sam_s_sakutif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_s_sakutif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_s_sakutif.png"
+  },
+  "sam_s_treetif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_s_treetif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_s_treetif.png"
+  },
+  "sam_s_turara2tif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_s_turara2tif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_s_turara2tif.png"
+  },
+  "sam_s_zyuutantif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_s_zyuutantif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_s_zyuutantif.png"
+  },
+  "sam_sam_block01tif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_sam_block01tif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_sam_block01tif.png"
+  },
+  "sam_star1tif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_star1tif.png",
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_star1tif.png"
+  },
+  "sam_sui01tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/kpa_tex/kpa_sui1tif.png"
+  },
+  "sam_sui01tif_AUX.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_sui01tif_AUX.png"
+  },
+  "sam_t_chear2tif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_t_chear2tif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_t_chear2tif.png"
+  },
+  "sam_t_cheartif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_t_cheartif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_t_cheartif.png"
+  },
+  "sam_t_dokankun3tif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_t_dokankun3tif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_t_dokankun3tif.png"
+  },
+  "sam_t_katen1tif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_t_katen1tif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_t_katen1tif.png"
+  },
+  "sam_taru1tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/dro_tex/dro_taru1tif.png"
+  },
+  "sam_woody_plate_jtif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_woody_plate_jtif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_woody_plate_jtif.png"
+  },
+  "sam_yamatif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_yamatif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_yamatif.png"
+  },
+  "sam_yamatif_AUX.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_yamatif_AUX.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_yamatif_AUX.png"
+  },
+  "sam_yane_yukitif.png": {
+    "palette": "{dumpDir}/image/texture/sam_tex/sam_yane_yukitif.png",
+    "raster": "{dumpDir}/image/texture/sam_tex/sam_yane_yukitif.png"
+  }
+}

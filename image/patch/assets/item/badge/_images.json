@@ -1,0 +1,730 @@
+{
+  "AllorNothing.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/AllorNothing.png",
+    "raster": "{dumpDir}/image/assets/item/badge/AllorNothing.png"
+  },
+  "AllorNothing_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/AllorNothing_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/AllorNothing.png"
+  },
+  "AttackFXA.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/AttackFXA.png",
+    "raster": "{dumpDir}/image/assets/item/badge/AttackFXA.png"
+  },
+  "AttackFXA_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/AttackFXA_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/AttackFXA.png"
+  },
+  "AttackFXB.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/AttackFXB.png",
+    "raster": "{dumpDir}/image/assets/item/badge/AttackFXA.png"
+  },
+  "AttackFXB_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/AttackFXB_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/AttackFXA.png"
+  },
+  "AttackFXC.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/AttackFXC.png",
+    "raster": "{dumpDir}/image/assets/item/badge/AttackFXA.png"
+  },
+  "AttackFXC_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/AttackFXC_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/AttackFXA.png"
+  },
+  "AttackFXD.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/AttackFXD.png",
+    "raster": "{dumpDir}/image/assets/item/badge/AttackFXA.png"
+  },
+  "AttackFXD_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/AttackFXD_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/AttackFXA.png"
+  },
+  "AttackFXE.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/AttackFXE.png",
+    "raster": "{dumpDir}/image/assets/item/badge/AttackFXA.png"
+  },
+  "AttackFXE_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/AttackFXE_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/AttackFXA.png"
+  },
+  "AttackFXF.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/AttackFXF.png",
+    "raster": "{dumpDir}/image/assets/item/badge/AttackFXA.png"
+  },
+  "AttackFXF_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/AttackFXF_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/AttackFXA.png"
+  },
+  "AutoJump.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/AutoJump.png",
+    "raster": "{dumpDir}/image/assets/item/badge/AutoJump.png"
+  },
+  "AutoJump_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/AutoJump_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/AutoJump.png"
+  },
+  "AutoMultibounce.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/AutoMultibounce.png",
+    "raster": "{dumpDir}/image/assets/item/badge/AutoMultibounce.png"
+  },
+  "AutoMultibounce_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/AutoMultibounce_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/AutoMultibounce.png"
+  },
+  "AutoSmash.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/AutoJump.png",
+    "raster": "{dumpDir}/image/assets/item/badge/AutoSmash.png"
+  },
+  "AutoSmash_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/AutoJump_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/AutoSmash.png"
+  },
+  "Berserker.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/Berserker.png",
+    "raster": "{dumpDir}/image/assets/item/badge/Berserker.png"
+  },
+  "Berserker_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/Berserker_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/Berserker.png"
+  },
+  "BumpAttack.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/BumpAttack.png",
+    "raster": "{dumpDir}/image/assets/item/badge/BumpAttack.png"
+  },
+  "BumpAttack_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/BumpAttack_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/BumpAttack.png"
+  },
+  "ChillOut.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/ChillOut.png",
+    "raster": "{dumpDir}/image/assets/item/badge/ChillOut.png"
+  },
+  "ChillOut_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/ChillOut_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/ChillOut.png"
+  },
+  "CloseCall.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/CloseCall.png",
+    "raster": "{dumpDir}/image/assets/item/badge/CloseCall.png"
+  },
+  "CloseCall_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/CloseCall_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/CloseCall.png"
+  },
+  "CrazyHeart.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/CrazyHeart.png",
+    "raster": "{dumpDir}/image/assets/item/badge/CrazyHeart.png"
+  },
+  "CrazyHeart_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/CrazyHeart_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/CrazyHeart.png"
+  },
+  "DDownJump.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/DDownJump.png",
+    "raster": "{dumpDir}/image/assets/item/badge/DDownJump.png"
+  },
+  "DDownJump_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/DDownJump_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/DDownJump.png"
+  },
+  "DDownPound.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/DDownPound.png",
+    "raster": "{dumpDir}/image/assets/item/badge/DDownPound.png"
+  },
+  "DDownPound_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/DDownPound_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/DDownPound.png"
+  },
+  "DamageDodge.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/DamageDodge.png",
+    "raster": "{dumpDir}/image/assets/item/badge/DamageDodge.png"
+  },
+  "DamageDodge_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/DamageDodge_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/DamageDodge.png"
+  },
+  "DeepFocus.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/DeepFocus.png",
+    "raster": "{dumpDir}/image/assets/item/badge/DeepFocus.png"
+  },
+  "DeepFocus_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/DeepFocus_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/DeepFocus.png"
+  },
+  "DefendPlus.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/DefendPlus.png",
+    "raster": "{dumpDir}/image/assets/item/badge/DefendPlus.png"
+  },
+  "DefendPlus_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/DefendPlus_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/DefendPlus.png"
+  },
+  "DizzyAttack.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/DizzyAttack.png",
+    "raster": "{dumpDir}/image/assets/item/badge/DizzyAttack.png"
+  },
+  "DizzyAttack_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/DizzyAttack_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/DizzyAttack.png"
+  },
+  "DizzyStomp.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/DizzyStomp.png",
+    "raster": "{dumpDir}/image/assets/item/badge/DizzyStomp.png"
+  },
+  "DizzyStomp_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/DizzyStomp_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/DizzyStomp.png"
+  },
+  "DodgeMaster.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/DodgeMaster.png",
+    "raster": "{dumpDir}/image/assets/item/badge/DodgeMaster.png"
+  },
+  "DodgeMaster_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/DodgeMaster_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/DodgeMaster.png"
+  },
+  "DoubleDip.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/DoubleDip.png",
+    "raster": "{dumpDir}/image/assets/item/badge/DoubleDip.png"
+  },
+  "DoubleDip_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/DoubleDip_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/DoubleDip.png"
+  },
+  "DoublePain.png": {
+    "palette": "{idatDir}/palette_2d42105707d8e29b2bfc114ecbf553df4b6efcc54e22fea20ffb6ad0497f06d8",
+    "raster": "{idatDir}/raster_085b1d70c7ed5937b1e803cb1e06f25526de61aca0688d054c508dfc82f5024e"
+  },
+  "DoublePain_alt.png": {
+    "palette": "{idatDir}/palette_54c1b157508e3ced8252b3dc8942e9e00028b7eba1600d248869a7163d65f6e8",
+    "raster": "{idatDir}/raster_085b1d70c7ed5937b1e803cb1e06f25526de61aca0688d054c508dfc82f5024e"
+  },
+  "EarthquakeJump.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/EarthquakeJump.png",
+    "raster": "{dumpDir}/image/assets/item/badge/EarthquakeJump.png"
+  },
+  "EarthquakeJump_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/EarthquakeJump_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/EarthquakeJump.png"
+  },
+  "FPPlus.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/FPPlus.png",
+    "raster": "{dumpDir}/image/assets/item/badge/FPPlus.png"
+  },
+  "FPPlus_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/FPPlus_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/FPPlus.png"
+  },
+  "FeelingFine.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/FeelingFine.png",
+    "raster": "{dumpDir}/image/assets/item/badge/FeelingFine.png"
+  },
+  "FeelingFine_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/FeelingFine_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/FeelingFine.png"
+  },
+  "FireShield.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/FireShield.png",
+    "raster": "{dumpDir}/image/assets/item/badge/FireShield.png"
+  },
+  "FireShield_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/FireShield_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/FireShield.png"
+  },
+  "FirstAttack.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/FirstAttack.png",
+    "raster": "{dumpDir}/image/assets/item/badge/FirstAttack.png"
+  },
+  "FirstAttack_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/FirstAttack_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/FirstAttack.png"
+  },
+  "FlowerFanatic.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/FlowerFanatic.png",
+    "raster": "{dumpDir}/image/assets/item/badge/FlowerFanatic.png"
+  },
+  "FlowerFanatic_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/FlowerFanatic_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/FlowerFanatic.png"
+  },
+  "FlowerFinder.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/FlowerFinder.png",
+    "raster": "{dumpDir}/image/assets/item/badge/FlowerFinder.png"
+  },
+  "FlowerFinder_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/FlowerFinder_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/FlowerFinder.png"
+  },
+  "FlowerSaver.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/FlowerSaver.png",
+    "raster": "{dumpDir}/image/assets/item/badge/FlowerSaver.png"
+  },
+  "FlowerSaver_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/FlowerSaver_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/FlowerSaver.png"
+  },
+  "GroupFocus.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/GroupFocus.png",
+    "raster": "{dumpDir}/image/assets/item/badge/GroupFocus.png"
+  },
+  "GroupFocus_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/GroupFocus_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/GroupFocus.png"
+  },
+  "HPDrain.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/HPDrain.png",
+    "raster": "{dumpDir}/image/assets/item/badge/HPDrain.png"
+  },
+  "HPDrain_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/HPDrain_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/HPDrain.png"
+  },
+  "HPPlus.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/HPPlus.png",
+    "raster": "{dumpDir}/image/assets/item/badge/HPPlus.png"
+  },
+  "HPPlus_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/HPPlus_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/HPPlus.png"
+  },
+  "HammerThrow.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/HammerThrow.png",
+    "raster": "{dumpDir}/image/assets/item/badge/HammerThrow.png"
+  },
+  "HammerThrow_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/HammerThrow_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/HammerThrow.png"
+  },
+  "HappyCoin.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/HappyCoin.png",
+    "raster": "{dumpDir}/image/assets/item/badge/HappyCoin.png"
+  },
+  "HappyCoin_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/HappyCoin_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/HappyCoin.png"
+  },
+  "HappyFlower.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/HappyFlower.png",
+    "raster": "{dumpDir}/image/assets/item/badge/HappyFlower.png"
+  },
+  "HappyFlower_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/HappyFlower_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/HappyFlower.png"
+  },
+  "HappyHeart.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/HappyHeart.png",
+    "raster": "{dumpDir}/image/assets/item/badge/HappyHeart.png"
+  },
+  "HappyHeart_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/HappyHeart_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/HappyHeart.png"
+  },
+  "HealthyHealthy.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/FeelingFine.png",
+    "raster": "{dumpDir}/image/assets/item/badge/HealthyHealthy.png"
+  },
+  "HealthyHealthy_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/FeelingFine_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/HealthyHealthy.png"
+  },
+  "HeartFinder.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/HeartFinder.png",
+    "raster": "{dumpDir}/image/assets/item/badge/HeartFinder.png"
+  },
+  "HeartFinder_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/HeartFinder_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/HeartFinder.png"
+  },
+  "ISpy.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/ISpy.png",
+    "raster": "{dumpDir}/image/assets/item/badge/ISpy.png"
+  },
+  "ISpy_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/ISpy_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/ISpy.png"
+  },
+  "IcePower.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/IcePower.png",
+    "raster": "{dumpDir}/image/assets/item/badge/IcePower.png"
+  },
+  "IcePower_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/IcePower_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/IcePower.png"
+  },
+  "JumpCharge.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/JumpCharge.png",
+    "raster": "{dumpDir}/image/assets/item/badge/JumpCharge.png"
+  },
+  "JumpCharge0.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/JumpCharge0.png",
+    "raster": "{dumpDir}/image/assets/item/badge/JumpCharge.png"
+  },
+  "JumpCharge0_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/JumpCharge0_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/JumpCharge.png"
+  },
+  "JumpCharge_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/JumpCharge_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/JumpCharge.png"
+  },
+  "Kaiden.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/Kaiden.png",
+    "raster": "{dumpDir}/image/assets/item/badge/Kaiden.png"
+  },
+  "Kaiden_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/Kaiden_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/Kaiden.png"
+  },
+  "LastStand.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/CloseCall.png",
+    "raster": "{dumpDir}/image/assets/item/badge/LastStand.png"
+  },
+  "LastStand_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/CloseCall_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/LastStand.png"
+  },
+  "LuckyDay.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/LuckyDay.png",
+    "raster": "{dumpDir}/image/assets/item/badge/LuckyDay.png"
+  },
+  "LuckyDay_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/LuckyDay_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/LuckyDay.png"
+  },
+  "MedicineMan.png": {
+    "palette": "{idatDir}/palette_411ddd273042719512c3899be1906607917b4232d7be55f6609a1ba3ba706b51",
+    "raster": "{idatDir}/raster_d77919e97ba1b45d69f7cf469f4e9478780d4e52ce8c61e0f67eebc2fa3066ad"
+  },
+  "MedicineMan_alt.png": {
+    "palette": "{idatDir}/palette_7ab889f8bec673e0bced8959f2dd18d2b9b6d4c60e8f7c9c32ddf33b5a23db07",
+    "raster": "{idatDir}/raster_d77919e97ba1b45d69f7cf469f4e9478780d4e52ce8c61e0f67eebc2fa3066ad"
+  },
+  "MegaHPDrain.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/HPDrain.png",
+    "raster": "{dumpDir}/image/assets/item/badge/MegaHPDrain.png"
+  },
+  "MegaHPDrain_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/HPDrain_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/MegaHPDrain.png"
+  },
+  "MegaJump.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/MegaJump.png",
+    "raster": "{dumpDir}/image/assets/item/badge/MegaJump.png"
+  },
+  "MegaJump_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/MegaJump_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/MegaJump.png"
+  },
+  "MegaQuake.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/MegaQuake.png",
+    "raster": "{dumpDir}/image/assets/item/badge/MegaQuake.png"
+  },
+  "MegaQuake_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/MegaQuake_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/MegaQuake.png"
+  },
+  "MegaRush.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/MegaRush.png",
+    "raster": "{dumpDir}/image/assets/item/badge/MegaRush.png"
+  },
+  "MegaRush_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/MegaRush_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/MegaRush.png"
+  },
+  "MegaSmash.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/MegaSmash.png",
+    "raster": "{dumpDir}/image/assets/item/badge/MegaSmash.png"
+  },
+  "MegaSmash_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/MegaSmash_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/MegaSmash.png"
+  },
+  "MoneyMoney.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/MoneyMoney.png",
+    "raster": "{dumpDir}/image/assets/item/badge/MoneyMoney.png"
+  },
+  "MoneyMoney_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/MoneyMoney_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/MoneyMoney.png"
+  },
+  "Multibounce.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/Multibounce.png",
+    "raster": "{dumpDir}/image/assets/item/badge/AutoMultibounce.png"
+  },
+  "Multibounce_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/HammerThrow_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/AutoMultibounce.png"
+  },
+  "PDownDUp.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/PDownDUp.png",
+    "raster": "{dumpDir}/image/assets/item/badge/PDownDUp.png"
+  },
+  "PDownDUp_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/PDownDUp_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/PDownDUp.png"
+  },
+  "PUpDDown.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/PUpDDown.png",
+    "raster": "{dumpDir}/image/assets/item/badge/PUpDDown.png"
+  },
+  "PUpDDown_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/PUpDDown_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/PUpDDown.png"
+  },
+  "PayOff.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/PayOff.png",
+    "raster": "{dumpDir}/image/assets/item/badge/PayOff.png"
+  },
+  "PayOff_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/PayOff_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/PayOff.png"
+  },
+  "Peekaboo.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/Peekaboo.png",
+    "raster": "{dumpDir}/image/assets/item/badge/Peekaboo.png"
+  },
+  "Peekaboo_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/Peekaboo_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/Peekaboo.png"
+  },
+  "PowerBounce.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/PowerBounce.png",
+    "raster": "{dumpDir}/image/assets/item/badge/PowerBounce.png"
+  },
+  "PowerBounce_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/PowerBounce_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/PowerBounce.png"
+  },
+  "PowerJump.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/Multibounce.png",
+    "raster": "{dumpDir}/image/assets/item/badge/PowerJump.png"
+  },
+  "PowerJump_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/HammerThrow_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/PowerJump.png"
+  },
+  "PowerPlus.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/PowerPlus.png",
+    "raster": "{dumpDir}/image/assets/item/badge/PowerPlus.png"
+  },
+  "PowerPlus_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/PowerPlus_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/PowerPlus.png"
+  },
+  "PowerQuake.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/PowerQuake.png",
+    "raster": "{dumpDir}/image/assets/item/badge/MegaQuake.png"
+  },
+  "PowerQuake_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/PowerQuake_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/MegaQuake.png"
+  },
+  "PowerRush.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/MegaRush.png",
+    "raster": "{dumpDir}/image/assets/item/badge/PowerRush.png"
+  },
+  "PowerRush_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/MegaRush_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/PowerRush.png"
+  },
+  "PowerSmash.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/PowerSmash.png",
+    "raster": "{dumpDir}/image/assets/item/badge/PowerSmash.png"
+  },
+  "PowerSmash_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/PowerSmash_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/PowerSmash.png"
+  },
+  "PrettyLucky.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/PrettyLucky.png",
+    "raster": "{dumpDir}/image/assets/item/badge/PrettyLucky.png"
+  },
+  "PrettyLucky_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/PrettyLucky_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/PrettyLucky.png"
+  },
+  "QuakeHammer.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/QuakeHammer.png",
+    "raster": "{dumpDir}/image/assets/item/badge/MegaQuake.png"
+  },
+  "QuakeHammer_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/QuakeHammer_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/MegaQuake.png"
+  },
+  "QuickChange.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/QuickChange.png",
+    "raster": "{dumpDir}/image/assets/item/badge/QuickChange.png"
+  },
+  "QuickChange_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/QuickChange_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/QuickChange.png"
+  },
+  "Refund.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/Refund.png",
+    "raster": "{dumpDir}/image/assets/item/badge/Refund.png"
+  },
+  "Refund_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/Refund_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/Refund.png"
+  },
+  "RightOn.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/RightOn.png",
+    "raster": "{dumpDir}/image/assets/item/badge/RightOn.png"
+  },
+  "RightOn_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/RightOn_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/RightOn.png"
+  },
+  "RunawayPay.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/RunawayPay.png",
+    "raster": "{dumpDir}/image/assets/item/badge/RunawayPay.png"
+  },
+  "RunawayPay_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/RunawayPay_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/RunawayPay.png"
+  },
+  "SJumpChg.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/SJumpChg.png",
+    "raster": "{dumpDir}/image/assets/item/badge/JumpCharge.png"
+  },
+  "SJumpChg_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/SJumpChg_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/JumpCharge.png"
+  },
+  "SSmashChg.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/SSmashChg.png",
+    "raster": "{dumpDir}/image/assets/item/badge/SSmashChg.png"
+  },
+  "SSmashChg_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/SSmashChg_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/SSmashChg.png"
+  },
+  "ShellCrack.png": {
+    "palette": "{idatDir}/palette_d5e958353ae123027d3e956a3247898851d6760ad21f71c5df910e4b63935c29",
+    "raster": "{idatDir}/raster_0c755631490bb02283f69438d330dfaced631749854ef81f6c92421da698e692"
+  },
+  "ShellCrack_alt.png": {
+    "palette": "{idatDir}/palette_d07bff20f404f187f215cda20ec3e3040d6aef031ce2bf9ff561a9628a775184",
+    "raster": "{idatDir}/raster_43a22bebdb3a0a1953ac2a6469855d2712765a4d83901b3464f62c18b7e7d572"
+  },
+  "ShrinkSmash.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/ShrinkSmash.png",
+    "raster": "{dumpDir}/image/assets/item/badge/ShrinkSmash.png"
+  },
+  "ShrinkSmash_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/ShrinkSmash_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/ShrinkSmash.png"
+  },
+  "ShrinkStomp.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/ShrinkSmash.png",
+    "raster": "{dumpDir}/image/assets/item/badge/ShrinkStomp.png"
+  },
+  "ShrinkStomp_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/ShrinkSmash_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/ShrinkStomp.png"
+  },
+  "SleepStomp.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/SleepStomp.png",
+    "raster": "{dumpDir}/image/assets/item/badge/SleepStomp.png"
+  },
+  "SleepStomp_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/SleepStomp_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/SleepStomp.png"
+  },
+  "SlowGo.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/SlowGo.png",
+    "raster": "{dumpDir}/image/assets/item/badge/SlowGo.png"
+  },
+  "SlowGo_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/SlowGo_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/SlowGo.png"
+  },
+  "SmashCharge.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/SmashCharge.png",
+    "raster": "{dumpDir}/image/assets/item/badge/SSmashChg.png"
+  },
+  "SmashCharge0.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/SmashCharge0.png",
+    "raster": "{dumpDir}/image/assets/item/badge/SSmashChg.png"
+  },
+  "SmashCharge0_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/SmashCharge0_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/SSmashChg.png"
+  },
+  "SmashCharge_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/SmashCharge_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/SSmashChg.png"
+  },
+  "SpeedySpin.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/DizzyAttack.png",
+    "raster": "{dumpDir}/image/assets/item/0D6.png"
+  },
+  "SpeedySpin_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/DizzyAttack_alt.png",
+    "raster": "{dumpDir}/image/assets/item/0D6.png"
+  },
+  "SpikeShield.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/SpikeShield.png",
+    "raster": "{dumpDir}/image/assets/item/badge/SpikeShield.png"
+  },
+  "SpikeShield_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/SpikeShield_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/SpikeShield.png"
+  },
+  "SpinAttack.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/DizzyAttack.png",
+    "raster": "{dumpDir}/image/assets/item/0D7.png"
+  },
+  "SpinAttack_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/DizzyAttack_alt.png",
+    "raster": "{dumpDir}/image/assets/item/0D7.png"
+  },
+  "SpinSmash.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/SpinSmash.png",
+    "raster": "{dumpDir}/image/assets/item/badge/SpinSmash.png"
+  },
+  "SpinSmash_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/SpinSmash_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/SpinSmash.png"
+  },
+  "SuperFocus.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/SuperFocus.png",
+    "raster": "{dumpDir}/image/assets/item/badge/SuperFocus.png"
+  },
+  "SuperFocus_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/SuperFocus_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/SuperFocus.png"
+  },
+  "SuperJump.png": {
+    "palette": "{idatDir}/palette_0537ac361f85949e5978931ecf1bc2e58ceae52fbbd9af57a965fed8f92fc5c4",
+    "raster": "{idatDir}/raster_f329ccc601b4755cac9192ec8f797f555dbb2e791cffcb2c00f057cad5d96a56"
+  },
+  "SuperJump_alt.png": {
+    "palette": "{idatDir}/palette_e11875daea6be2671d57879930d39d2cca41cda955f8b1442c034698493c1a7a",
+    "raster": "{idatDir}/raster_f5e2fba821373a8bad5b976fd624ebf070705282593628f63a03e50c709f26b5"
+  },
+  "SuperSmash.png": {
+    "palette": "{idatDir}/palette_451d5acd6172ade7438e1e515c48ace273e6b3cdf99471d59ed2ff14f600175f",
+    "raster": "{idatDir}/raster_dabca0fd4391922021cccb49304ff1b4c6c8e5c134dee05a615f940c32c47c2f"
+  },
+  "SuperSmash_alt.png": {
+    "palette": "{idatDir}/palette_9a3a20128b15784a73122a1231e8a388e3092a69311fcccc4dbc838b9580833f",
+    "raster": "{idatDir}/raster_dabca0fd4391922021cccb49304ff1b4c6c8e5c134dee05a615f940c32c47c2f"
+  },
+  "TripleDip.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/TripleDip.png",
+    "raster": "{dumpDir}/image/assets/item/badge/TripleDip.png"
+  },
+  "TripleDip_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/DoubleDip_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/TripleDip.png"
+  },
+  "ZapTap.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/ZapTap.png",
+    "raster": "{dumpDir}/image/assets/item/badge/ZapTap.png"
+  },
+  "ZapTap_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/badge/ZapTap_alt.png",
+    "raster": "{dumpDir}/image/assets/item/badge/ZapTap.png"
+  }
+}

@@ -1,0 +1,1406 @@
+{
+  "01_BigSmokePuff_1.png": {
+    "palette": "{dumpDir}/image/assets/effect/01_BigSmokePuff_1.png",
+    "raster": "{dumpDir}/image/assets/effect/01_BigSmokePuff_1.png"
+  },
+  "01_BigSmokePuff_2.png": {
+    "palette": "{dumpDir}/image/assets/effect/01_BigSmokePuff_1.png",
+    "raster": "{dumpDir}/image/assets/effect/01_BigSmokePuff_2.png"
+  },
+  "01_BigSmokePuff_3.png": {
+    "palette": "{dumpDir}/image/assets/effect/01_BigSmokePuff_1.png",
+    "raster": "{dumpDir}/image/assets/effect/01_BigSmokePuff_3.png"
+  },
+  "01_BigSmokePuff_4.png": {
+    "palette": "{dumpDir}/image/assets/effect/01_BigSmokePuff_1.png",
+    "raster": "{dumpDir}/image/assets/effect/01_BigSmokePuff_4.png"
+  },
+  "01_BigSmokePuff_5.png": {
+    "palette": "{dumpDir}/image/assets/effect/01_BigSmokePuff_1.png",
+    "raster": "{dumpDir}/image/assets/effect/01_BigSmokePuff_5.png"
+  },
+  "01_BigSmokePuff_6.png": {
+    "palette": "{dumpDir}/image/assets/effect/01_BigSmokePuff_1.png",
+    "raster": "{dumpDir}/image/assets/effect/01_BigSmokePuff_6.png"
+  },
+  "01_BigSmokePuff_7.png": {
+    "palette": "{dumpDir}/image/assets/effect/01_BigSmokePuff_1.png",
+    "raster": "{dumpDir}/image/assets/effect/01_BigSmokePuff_7.png"
+  },
+  "0C_Footprint.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/0C_Footprint.png"
+  },
+  "0D_Flower_FloatingPetal.png": {
+    "palette": "{dumpDir}/image/assets/effect/0D_Flower_FloatingPetal.png",
+    "raster": "{dumpDir}/image/assets/effect/0D_Flower_FloatingPetal.png"
+  },
+  "0E_SnowFlake.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/0E_SnowFlake.png"
+  },
+  "0E_SnowPoint.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/0E_SnowPoint.png"
+  },
+  "0F_ShootingStar.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/0F_ShootingStar.png"
+  },
+  "0F_ShootingStar_3336A0.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/0F_ShootingStar_3336A0.png"
+  },
+  "0F_ShootingStar_3338A0.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/0F_ShootingStar_3338A0.png"
+  },
+  "10_Emote_Bubble.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/10_Emote_Bubble.png"
+  },
+  "10_Emote_Exclaim.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/10_Emote_Exclaim.png"
+  },
+  "10_Emote_Frustration.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/10_Emote_Frustration.png"
+  },
+  "10_Emote_Question.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/10_Emote_Question.png"
+  },
+  "10_Emote_Waiting.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/10_Emote_Waiting.png"
+  },
+  "12_ShapeSpell.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/12_ShapeSpell.png"
+  },
+  "13_GatherEnergy_Detail.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/13_GatherEnergy_Detail.png"
+  },
+  "13_GatherEnergy_Field.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/13_GatherEnergy_Field.png"
+  },
+  "13_GatherEnergy_Mask.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/13_GatherEnergy_Mask.png"
+  },
+  "15_AncientDust_Detail.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/15_AncientDust_Detail.png"
+  },
+  "15_AncientDust_Main.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/15_AncientDust_Main.png"
+  },
+  "16_ShatteringStones.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/16_ShatteringStones.png"
+  },
+  "19_Explosion_RoughEdges.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/19_Explosion_RoughEdges.png"
+  },
+  "19_Explosion_RougherEdges.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/19_Explosion_RougherEdges.png"
+  },
+  "19_Explosion_Shockwave.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/19_Explosion_Shockwave.png"
+  },
+  "19_Explosion_SolidCircle.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/19_Explosion_SolidCircle.png"
+  },
+  "1A_LightShimmer.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1A_LightShimmer.png"
+  },
+  "1B_GotItem.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1B_GotItem.png"
+  },
+  "1B_GotItem_349B40.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1B_GotItem_349B40.png"
+  },
+  "1C_SpikyWhiteAura.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1C_SpikyWhiteAura.png"
+  },
+  "1E_ShowDamage_0.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_0.png"
+  },
+  "1E_ShowDamage_1.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_1.png"
+  },
+  "1E_ShowDamage_2.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_2.png"
+  },
+  "1E_ShowDamage_3.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_3.png"
+  },
+  "1E_ShowDamage_4.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_4.png"
+  },
+  "1E_ShowDamage_5.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_5.png"
+  },
+  "1E_ShowDamage_6.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_6.png"
+  },
+  "1E_ShowDamage_7.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_7.png"
+  },
+  "1E_ShowDamage_8.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_8.png"
+  },
+  "1E_ShowDamage_9.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_9.png"
+  },
+  "1E_ShowDamage_Minus.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_Minus.png"
+  },
+  "1E_ShowDamage_Plus.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_Plus.png"
+  },
+  "1E_ShowDamage_Star.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_Star.png"
+  },
+  "1F_PurpleRing_Detail.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1F_PurpleRing_Detail.png"
+  },
+  "20_Fire_Detail.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/20_Fire_Detail.png"
+  },
+  "20_Fire_Main.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/20_Fire_Main.png"
+  },
+  "23_RisingBubble_356530.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/23_RisingBubble_356530.png"
+  },
+  "23_RisingBubble_3565B0.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/23_RisingBubble_3565B0.png"
+  },
+  "24_RingBlast.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/24_RingBlast.png"
+  },
+  "26_MusicNote_DottedHalf.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/26_MusicNote_DottedHalf.png"
+  },
+  "26_MusicNote_DottedHalf_Glow.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/26_MusicNote_DottedHalf_Glow.png"
+  },
+  "26_MusicNote_DottedQuarter.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/26_MusicNote_DottedQuarter.png"
+  },
+  "26_MusicNote_DottedQuarter_Glow.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/26_MusicNote_DottedQuarter_Glow.png"
+  },
+  "26_MusicNote_DoubleBeam.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/26_MusicNote_DoubleBeam.png"
+  },
+  "26_MusicNote_DoubleBeam_Glow.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/26_MusicNote_DoubleBeam_Glow.png"
+  },
+  "26_MusicNote_Eighth.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/26_MusicNote_Eighth.png"
+  },
+  "26_MusicNote_Eighth_Glow.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/26_MusicNote_Eighth_Glow.png"
+  },
+  "26_MusicNote_Half.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/26_MusicNote_Half.png"
+  },
+  "26_MusicNote_Half_Glow.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/26_MusicNote_Half_Glow.png"
+  },
+  "26_MusicNote_Quarter.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/26_MusicNote_Quarter.png"
+  },
+  "26_MusicNote_Quarter_Glow.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/26_MusicNote_Quarter_Glow.png"
+  },
+  "26_MusicNote_SingleBeam.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/26_MusicNote_SingleBeam.png"
+  },
+  "26_MusicNote_SingleBeam_Glow.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/26_MusicNote_SingleBeam_Glow.png"
+  },
+  "28_Sweat_Large.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/28_Sweat_Large.png"
+  },
+  "28_Sweat_Small.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/28_Sweat_Small.png"
+  },
+  "29_SleepBubble_35D510.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/29_SleepBubble_35D510.png"
+  },
+  "29_SleepBubble_35D590.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/29_SleepBubble_35D590.png"
+  },
+  "29_SleepBubble_35D610.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/29_SleepBubble_35D610.png"
+  },
+  "2C_LeavesFalling.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/2C_LeavesFalling.png"
+  },
+  "2D_Star.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_Star.png"
+  },
+  "2E_SmokePuff.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/2E_SmokePuff.png"
+  },
+  "2F_Star.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_Star.png"
+  },
+  "30_SnowFlake.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/0E_SnowFlake.png"
+  },
+  "30_SnowPoint.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/0E_SnowPoint.png"
+  },
+  "31_Debuff_Detail.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/31_Debuff_Detail.png"
+  },
+  "32_GreenImpact_Main.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/32_GreenImpact_Main.png"
+  },
+  "32_GreenImpact_VerticalVariation.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/32_GreenImpact_VerticalVariation.png"
+  },
+  "33_Block.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/33_Block.png"
+  },
+  "33_Detail.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/13_GatherEnergy_Detail.png"
+  },
+  "33_EnergyPoints.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/13_GatherEnergy_Field.png"
+  },
+  "33_EnergyPointsWithMist.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/33_EnergyPointsWithMist.png"
+  },
+  "33_Rays.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/33_Rays.png"
+  },
+  "33_SnakingWave.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/13_GatherEnergy_Mask.png"
+  },
+  "33_SpikyWave.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/33_SpikyWave.png"
+  },
+  "33_Streak.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/33_Streak.png"
+  },
+  "33_WavyWaves.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/33_WavyWaves.png"
+  },
+  "34_Ending_Bubble.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/34_Ending_Bubble.png"
+  },
+  "34_Ending_Cloud_1.png": {
+    "palette": "{dumpDir}/image/assets/effect/34_Ending_Cloud_1.png",
+    "raster": "{dumpDir}/image/assets/effect/34_Ending_Cloud_1.png"
+  },
+  "34_Ending_Cloud_2.png": {
+    "palette": "{dumpDir}/image/assets/effect/34_Ending_Cloud_1.png",
+    "raster": "{dumpDir}/image/assets/effect/34_Ending_Cloud_2.png"
+  },
+  "34_Ending_Cloud_3.png": {
+    "palette": "{dumpDir}/image/assets/effect/34_Ending_Cloud_1.png",
+    "raster": "{dumpDir}/image/assets/effect/34_Ending_Cloud_3.png"
+  },
+  "35_LightPoint.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/35_LightPoint.png"
+  },
+  "36_Lightning.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/36_Lightning.png"
+  },
+  "37_FireBreath_373BE0.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/37_FireBreath_373BE0.png"
+  },
+  "37_FireParticle.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/37_FireParticle.png"
+  },
+  "39_EnergyShockwave_Narrow.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/39_EnergyShockwave_Narrow.png"
+  },
+  "39_EnergyShockwave_Wide.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/39_EnergyShockwave_Wide.png"
+  },
+  "3B_Aura_Bowser.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/3B_Aura_Bowser.png"
+  },
+  "3B_Aura_Detail.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/3B_Aura_Detail.png"
+  },
+  "3B_Aura_Noise.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/20_Fire_Detail.png"
+  },
+  "3B_Aura_PoweredUp.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/3B_Aura_PoweredUp.png"
+  },
+  "3B_Aura_StarSpirit.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/3B_Aura_StarSpirit.png"
+  },
+  "3C_37ADD0.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/3C_37ADD0.png"
+  },
+  "3C_LightOrb.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/3C_LightOrb.png"
+  },
+  "3C_LightShining.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/3C_LightShining.png"
+  },
+  "3D_Water.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/3D_Water.png"
+  },
+  "3E_BlastAftermath_1.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/3E_BlastAftermath_1.png"
+  },
+  "3E_BlastAftermath_2.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/3E_BlastAftermath_2.png"
+  },
+  "3E_BlastAftermath_3.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/3E_BlastAftermath_3.png"
+  },
+  "3E_BlastAftermath_4.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/3E_BlastAftermath_4.png"
+  },
+  "3E_BlastAftermath_5.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/3E_BlastAftermath_5.png"
+  },
+  "3E_BlastAftermath_6.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/3E_BlastAftermath_6.png"
+  },
+  "3E_BlastAftermath_7.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/3E_BlastAftermath_7.png"
+  },
+  "3E_BlastAftermath_8.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/3E_BlastAftermath_8.png"
+  },
+  "3E_BlastAftermath_9.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/3E_BlastAftermath_9.png"
+  },
+  "3F_FireBall.png": {
+    "palette": "{dumpDir}/image/assets/effect/3F_FireBall.png",
+    "raster": "{dumpDir}/image/assets/effect/3F_FireBall.png"
+  },
+  "3F_FireFlower_1.png": {
+    "palette": "{dumpDir}/image/assets/effect/3F_FireFlower_1.png",
+    "raster": "{dumpDir}/image/assets/effect/3F_FireFlower_1.png"
+  },
+  "3F_FireFlower_2.png": {
+    "palette": "{dumpDir}/image/assets/effect/3F_FireFlower_1.png",
+    "raster": "{dumpDir}/image/assets/effect/3F_FireFlower_2.png"
+  },
+  "3F_FireFlower_3.png": {
+    "palette": "{dumpDir}/image/assets/effect/3F_FireFlower_1.png",
+    "raster": "{dumpDir}/image/assets/effect/3F_FireFlower_3.png"
+  },
+  "3F_FireFlower_4.png": {
+    "palette": "{dumpDir}/image/assets/effect/3F_FireFlower_1.png",
+    "raster": "{dumpDir}/image/assets/effect/3F_FireFlower_4.png"
+  },
+  "40_Recover_0.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_0.png"
+  },
+  "40_Recover_1.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_1.png"
+  },
+  "40_Recover_2.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_2.png"
+  },
+  "40_Recover_3.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_3.png"
+  },
+  "40_Recover_4.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_4.png"
+  },
+  "40_Recover_5.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_5.png"
+  },
+  "40_Recover_6.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_6.png"
+  },
+  "40_Recover_7.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_7.png"
+  },
+  "40_Recover_8.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_8.png"
+  },
+  "40_Recover_9.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_9.png"
+  },
+  "40_Recover_Flower.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/40_Recover_Flower.png"
+  },
+  "40_Recover_Heart.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/40_Recover_Heart.png"
+  },
+  "40_Recover_Minus.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_Minus.png"
+  },
+  "40_Recover_Plus.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_Plus.png"
+  },
+  "40_Recover_PoisonHeart.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/40_Recover_PoisonHeart.png"
+  },
+  "41_Disabled_0.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_0.png"
+  },
+  "41_Disabled_1.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_1.png"
+  },
+  "41_Disabled_2.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_2.png"
+  },
+  "41_Disabled_3.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_3.png"
+  },
+  "41_Disabled_4.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_4.png"
+  },
+  "41_Disabled_5.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_5.png"
+  },
+  "41_Disabled_6.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_6.png"
+  },
+  "41_Disabled_7.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_7.png"
+  },
+  "41_Disabled_8.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_8.png"
+  },
+  "41_Disabled_9.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_9.png"
+  },
+  "41_Disabled_Cross.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/41_Disabled_Cross.png"
+  },
+  "41_Disabled_Minus.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_Plus.png"
+  },
+  "41_Disabled_Plus.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_Minus.png"
+  },
+  "43_Firework.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/43_Firework.png"
+  },
+  "44_Confetti.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/44_Confetti.png"
+  },
+  "45_SnowfallFlake.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/0E_SnowFlake.png"
+  },
+  "45_SnowfallPoint.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/0E_SnowPoint.png"
+  },
+  "46_38E990.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/46_38E990.png"
+  },
+  "47_MagicSparkle.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/47_MagicSparkle.png"
+  },
+  "48_TextPopup_Good.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/48_TextPopup_Good.png"
+  },
+  "48_TextPopup_Gradient.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/48_TextPopup_Gradient.png"
+  },
+  "48_TextPopup_Lucky.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/48_TextPopup_Lucky.png"
+  },
+  "48_TextPopup_Miss.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/48_TextPopup_Miss.png"
+  },
+  "48_TextPopup_Nice.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/48_TextPopup_Nice.png"
+  },
+  "48_TextPopup_Super.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/48_TextPopup_Super.png"
+  },
+  "49_SmallSparkle_1.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/49_SmallSparkle_1.png"
+  },
+  "49_SmallSparkle_2.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/49_SmallSparkle_2.png"
+  },
+  "49_SmallSparkle_3.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/49_SmallSparkle_3.png"
+  },
+  "49_SmallSparkle_4.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/49_SmallSparkle_4.png"
+  },
+  "49_SmallSparkle_5.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/49_SmallSparkle_5.png"
+  },
+  "4A_ShockVolume.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/4A_ShockVolume.png"
+  },
+  "4A_ShockWave.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/4A_ShockWave.png"
+  },
+  "4B_Balloon_Blue.png": {
+    "palette": "{dumpDir}/image/assets/effect/4B_Balloon_Blue.png",
+    "raster": "{dumpDir}/image/assets/effect/4B_Balloon_Blue.png"
+  },
+  "4B_Balloon_Red.png": {
+    "palette": "{dumpDir}/image/assets/effect/4B_Balloon_Red.png",
+    "raster": "{dumpDir}/image/assets/effect/4B_Balloon_Blue.png"
+  },
+  "4B_Balloon_Yellow.png": {
+    "palette": "{dumpDir}/image/assets/effect/4B_Balloon_Yellow.png",
+    "raster": "{dumpDir}/image/assets/effect/4B_Balloon_Blue.png"
+  },
+  "4D_ChompDrop_Glow.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/4D_ChompDrop_Glow.png"
+  },
+  "4D_ChompDrop_Solid.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/4D_ChompDrop_Solid.png"
+  },
+  "4E_ChuckQuizmoStage_ChuckQuizmo.png": {
+    "palette": "{dumpDir}/image/assets/effect/4E_ChuckQuizmoStage_ChuckQuizmo.png",
+    "raster": "{dumpDir}/image/assets/effect/4E_ChuckQuizmoStage_ChuckQuizmo.png"
+  },
+  "4E_ChuckQuizmoStage_Emblem.png": {
+    "palette": "{dumpDir}/image/assets/effect/4E_ChuckQuizmoStage_Emblem.png",
+    "raster": "{dumpDir}/image/assets/effect/4E_ChuckQuizmoStage_Emblem.png"
+  },
+  "4E_ChuckQuizmoStage_Floor.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/4E_ChuckQuizmoStage_Floor.png"
+  },
+  "4E_ChuckQuizmoStage_Kooper.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/4E_ChuckQuizmoStage_Kooper.png"
+  },
+  "4E_ChuckQuizmoStage_LeftCrown.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/4E_ChuckQuizmoStage_LeftCrown.png"
+  },
+  "4E_ChuckQuizmoStage_Mario.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/4E_ChuckQuizmoStage_Mario.png"
+  },
+  "4E_ChuckQuizmoStage_Microphone.png": {
+    "palette": "{dumpDir}/image/assets/effect/4E_ChuckQuizmoStage_Microphone.png",
+    "raster": "{dumpDir}/image/assets/effect/4E_ChuckQuizmoStage_Microphone.png"
+  },
+  "4E_ChuckQuizmoStage_Podium.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/4E_ChuckQuizmoStage_Podium.png"
+  },
+  "4E_ChuckQuizmoStage_RightCrowd.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/4E_ChuckQuizmoStage_RightCrowd.png"
+  },
+  "4E_ChuckQuizmoStage_VannaT.png": {
+    "palette": "{dumpDir}/image/assets/effect/4E_ChuckQuizmoStage_VannaT.png",
+    "raster": "{dumpDir}/image/assets/effect/4E_ChuckQuizmoStage_VannaT.png"
+  },
+  "4F_RadiantOrb_Center.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/4F_RadiantOrb_Center.png"
+  },
+  "4F_RadiantOrb_Decorations.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/4F_RadiantOrb_Decorations.png"
+  },
+  "50_QuizmoAnswer_Correct.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/50_QuizmoAnswer_Correct.png"
+  },
+  "50_QuizmoAnswer_Wrong.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/50_QuizmoAnswer_Wrong.png"
+  },
+  "51_SmallUpgradeOrb_Bright.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/51_SmallUpgradeOrb_Bright.png"
+  },
+  "51_SmallUpgradeOrb_Diffuse.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/51_SmallUpgradeOrb_Diffuse.png"
+  },
+  "52_UpgradeOrb_Center.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/52_UpgradeOrb_Center.png"
+  },
+  "52_UpgradeOrb_Shockwave.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/52_UpgradeOrb_Shockwave.png"
+  },
+  "53_MerlinHouseStars_A.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/53_MerlinHouseStars_A.png"
+  },
+  "53_MerlinHouseStars_B.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/53_MerlinHouseStars_B.png"
+  },
+  "54_QuizmoAudience_Goompapa.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/54_QuizmoAudience_Goompapa.png"
+  },
+  "54_QuizmoAudience_JrTroopa.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/54_QuizmoAudience_JrTroopa.png"
+  },
+  "54_QuizmoAudience_KoopaBros.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/54_QuizmoAudience_KoopaBros.png"
+  },
+  "54_QuizmoAudience_Lakitu.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/54_QuizmoAudience_Lakitu.png"
+  },
+  "54_QuizmoAudience_Luigi.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/54_QuizmoAudience_Luigi.png"
+  },
+  "54_QuizmoAudience_Penguin.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/54_QuizmoAudience_Penguin.png"
+  },
+  "54_QuizmoAudience_ShyGuy.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/54_QuizmoAudience_ShyGuy.png"
+  },
+  "54_QuizmoAudience_Toad.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/54_QuizmoAudience_Toad.png"
+  },
+  "54_QuizmoAudience_Yoshi.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/54_QuizmoAudience_Yoshi.png"
+  },
+  "54_QuizmoAudience_YoshiKid.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/54_QuizmoAudience_YoshiKid.png"
+  },
+  "55_Butterfly_Wing_A.png": {
+    "palette": "{dumpDir}/image/assets/effect/55_Butterfly_Wing_A.png",
+    "raster": "{dumpDir}/image/assets/effect/55_Butterfly_Wing_A.png"
+  },
+  "55_Butterfly_Wing_B.png": {
+    "palette": "{dumpDir}/image/assets/effect/55_Butterfly_Wing_B.png",
+    "raster": "{dumpDir}/image/assets/effect/55_Butterfly_Wing_B.png"
+  },
+  "55_Butterfly_Wing_D.png": {
+    "palette": "{dumpDir}/image/assets/effect/55_Butterfly_Wing_D.png",
+    "raster": "{dumpDir}/image/assets/effect/55_Butterfly_Wing_D.png"
+  },
+  "55_Butterfly_Wing_F.png": {
+    "palette": "{dumpDir}/image/assets/effect/55_Butterfly_Wing_F.png",
+    "raster": "{dumpDir}/image/assets/effect/55_Butterfly_Wing_F.png"
+  },
+  "55_Butterfly_Wing_G.png": {
+    "palette": "{dumpDir}/image/assets/effect/55_Butterfly_Wing_F.png",
+    "raster": "{dumpDir}/image/assets/effect/55_Butterfly_Wing_G.png"
+  },
+  "55_Butterfly_Wing_H.png": {
+    "palette": "{dumpDir}/image/assets/effect/55_Butterfly_Wing_H.png",
+    "raster": "{dumpDir}/image/assets/effect/55_Butterfly_Wing_H.png"
+  },
+  "55_Butterfly_Wing_I.png": {
+    "palette": "{dumpDir}/image/assets/effect/55_Butterfly_Wing_H.png",
+    "raster": "{dumpDir}/image/assets/effect/55_Butterfly_Wing_I.png"
+  },
+  "55_Butterfly_Wing_J.png": {
+    "palette": "{dumpDir}/image/assets/effect/55_Butterfly_Wing_J.png",
+    "raster": "{dumpDir}/image/assets/effect/55_Butterfly_Wing_J.png"
+  },
+  "55_Butterfly_Wing_K.png": {
+    "palette": "{dumpDir}/image/assets/effect/55_Butterfly_Wing_K.png",
+    "raster": "{dumpDir}/image/assets/effect/55_Butterfly_Wing_K.png"
+  },
+  "56_StatChange_0.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_0.png"
+  },
+  "56_StatChange_1.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_1.png"
+  },
+  "56_StatChange_2.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_2.png"
+  },
+  "56_StatChange_3.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_3.png"
+  },
+  "56_StatChange_4.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_4.png"
+  },
+  "56_StatChange_5.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_5.png"
+  },
+  "56_StatChange_6.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_6.png"
+  },
+  "56_StatChange_7.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_7.png"
+  },
+  "56_StatChange_8.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_8.png"
+  },
+  "56_StatChange_9.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_9.png"
+  },
+  "56_StatChange_BlueArrow.png": {
+    "palette": "{dumpDir}/image/assets/effect/56_StatChange_BlueArrow.png",
+    "raster": "{dumpDir}/image/assets/effect/56_StatChange_BlueArrow.png"
+  },
+  "56_StatChange_Minus.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_Minus.png"
+  },
+  "56_StatChange_Plus.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_Plus.png"
+  },
+  "56_StatChange_RedArrow.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/56_StatChange_RedArrow.png"
+  },
+  "57_SnakingStatic.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/57_SnakingStatic.png"
+  },
+  "59_SquirtBeam.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/59_SquirtBeam.png"
+  },
+  "59_SquirtWave.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/59_SquirtWave.png"
+  },
+  "5A_WaterBlock.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/5A_WaterBlock.png"
+  },
+  "5A_WaterBlock_Bubble.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/5A_WaterBlock_Bubble.png"
+  },
+  "5B_WaterFall.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/5B_WaterFall.png"
+  },
+  "5C_WaterFountain.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/3D_Water.png"
+  },
+  "5D_TidalWave_Bubble.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/5D_TidalWave_Bubble.png"
+  },
+  "5E_Lightning.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/36_Lightning.png"
+  },
+  "5F_WaterDrop.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/5F_WaterDrop.png"
+  },
+  "60_SnowmanDoll_FaceMask.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/60_SnowmanDoll_FaceMask.png"
+  },
+  "60_SnowmanDoll_Surface.png": {
+    "palette": "{dumpDir}/image/assets/effect/60_SnowmanDoll_Surface.png",
+    "raster": "{dumpDir}/image/assets/effect/60_SnowmanDoll_Surface.png"
+  },
+  "61_FrightJar_1.png": {
+    "palette": "{dumpDir}/image/assets/effect/61_FrightJar_1.png",
+    "raster": "{dumpDir}/image/assets/effect/61_FrightJar_1.png"
+  },
+  "61_FrightJar_2.png": {
+    "palette": "{dumpDir}/image/assets/effect/61_FrightJar_2.png",
+    "raster": "{dumpDir}/image/assets/effect/61_FrightJar_2.png"
+  },
+  "62_StopWatch_Center.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/62_StopWatch_Center.png"
+  },
+  "62_StopWatch_Glow.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/62_StopWatch_Glow.png"
+  },
+  "63_Fire_Detail.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/63_Fire_Detail.png"
+  },
+  "63_Fire_Main.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/63_Fire_Main.png"
+  },
+  "63_Orb_Detail.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/63_Orb_Detail.png"
+  },
+  "63_Orb_Main.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/63_Orb_Main.png"
+  },
+  "64_ThrowSpiny_Gold.png": {
+    "palette": "{dumpDir}/image/assets/effect/64_ThrowSpiny_Gold.png",
+    "raster": "{dumpDir}/image/assets/effect/64_ThrowSpiny_Gold.png"
+  },
+  "64_ThrowSpiny_Red.png": {
+    "palette": "{dumpDir}/image/assets/effect/64_ThrowSpiny_Red.png",
+    "raster": "{dumpDir}/image/assets/effect/64_ThrowSpiny_Red.png"
+  },
+  "65_Fume.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/65_Fume.png"
+  },
+  "66_TubbaHeart.png": {
+    "palette": "{dumpDir}/image/assets/effect/66_TubbaHeart.png",
+    "raster": "{dumpDir}/image/assets/effect/66_TubbaHeart.png"
+  },
+  "67_Whirlwind_Detail.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/67_Whirlwind_Detail.png"
+  },
+  "69_CloudPuff.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/69_CloudPuff.png"
+  },
+  "6B_VariousDecorations.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/4F_RadiantOrb_Decorations.png"
+  },
+  "6D_ShinyFlare.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1A_LightShimmer.png"
+  },
+  "6E_HuffPuffBreath_Detail.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/6E_HuffPuffBreath_Detail.png"
+  },
+  "6E_HuffPuffBreath_Main.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/6E_HuffPuffBreath_Main.png"
+  },
+  "6F_Breath_Puff.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/6F_Breath_Puff.png"
+  },
+  "6F_Breath_Swirl.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/6F_Breath_Swirl.png"
+  },
+  "70_SmallParticles_Embers.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/70_SmallParticles_Embers.png"
+  },
+  "70_SmallParticles_Noise.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/70_SmallParticles_Noise.png"
+  },
+  "71_Hieroglyphics.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/71_Hieroglyphics.png"
+  },
+  "72_SmallParticles_Circle.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/0E_SnowPoint.png"
+  },
+  "72_SmallParticles_Noise.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/70_SmallParticles_Noise.png"
+  },
+  "72_SmallParticles_Shimmer.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/72_SmallParticles_Shimmer.png"
+  },
+  "72_SmallParticles_Snow.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/72_SmallParticles_Snow.png"
+  },
+  "72_SmallParticles_Star.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/72_SmallParticles_Star.png"
+  },
+  "73_StaticStatus.png": {
+    "palette": "{dumpDir}/image/assets/effect/73_StaticStatus.png",
+    "raster": "{dumpDir}/image/assets/effect/73_StaticStatus.png"
+  },
+  "74_MovingCloud.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/74_MovingCloud.png"
+  },
+  "75_StarField_A.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/53_MerlinHouseStars_A.png"
+  },
+  "75_StarField_B.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/53_MerlinHouseStars_B.png"
+  },
+  "77_Firework_Rocket.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/0E_SnowPoint.png"
+  },
+  "78_StarBeam_Eldstar.png": {
+    "palette": "{dumpDir}/image/assets/effect/78_StarBeam_Eldstar.png",
+    "raster": "{dumpDir}/image/assets/effect/78_StarBeam_Eldstar.png"
+  },
+  "78_StarBeam_Gradient.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/78_StarBeam_Gradient.png"
+  },
+  "78_StarBeam_Kalmar.png": {
+    "palette": "{dumpDir}/image/assets/effect/78_StarBeam_Kalmar.png",
+    "raster": "{dumpDir}/image/assets/effect/78_StarBeam_Kalmar.png"
+  },
+  "78_StarBeam_Klevar.png": {
+    "palette": "{dumpDir}/image/assets/effect/78_StarBeam_Klevar.png",
+    "raster": "{dumpDir}/image/assets/effect/78_StarBeam_Klevar.png"
+  },
+  "78_StarBeam_Mamar.png": {
+    "palette": "{dumpDir}/image/assets/effect/78_StarBeam_Mamar.png",
+    "raster": "{dumpDir}/image/assets/effect/78_StarBeam_Mamar.png"
+  },
+  "78_StarBeam_Misstar.png": {
+    "palette": "{dumpDir}/image/assets/effect/78_StarBeam_Misstar.png",
+    "raster": "{dumpDir}/image/assets/effect/78_StarBeam_Misstar.png"
+  },
+  "78_StarBeam_Muskular.png": {
+    "palette": "{dumpDir}/image/assets/effect/78_StarBeam_Muskular.png",
+    "raster": "{dumpDir}/image/assets/effect/78_StarBeam_Muskular.png"
+  },
+  "78_StarBeam_Skolar.png": {
+    "palette": "{dumpDir}/image/assets/effect/78_StarBeam_Skolar.png",
+    "raster": "{dumpDir}/image/assets/effect/78_StarBeam_Skolar.png"
+  },
+  "78_StarBeam_Twink.png": {
+    "palette": "{dumpDir}/image/assets/effect/78_StarBeam_Twink.png",
+    "raster": "{dumpDir}/image/assets/effect/78_StarBeam_Twink.png"
+  },
+  "79_ChapterText_1.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/79_ChapterText_1.png"
+  },
+  "79_ChapterText_2.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/79_ChapterText_2.png"
+  },
+  "79_ChapterText_3.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/79_ChapterText_3.png"
+  },
+  "79_ChapterText_4.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/79_ChapterText_4.png"
+  },
+  "79_ChapterText_5.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/79_ChapterText_5.png"
+  },
+  "79_ChapterText_6.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/79_ChapterText_6.png"
+  },
+  "79_ChapterText_7.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/79_ChapterText_7.png"
+  },
+  "79_ChapterText_8.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/79_ChapterText_8.png"
+  },
+  "79_ChapterText_Chapter.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/79_ChapterText_Chapter.png"
+  },
+  "79_ChapterText_EndOf.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/79_ChapterText_EndOf.png"
+  },
+  "79_ChapterText_ExclamationPoint.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/79_ChapterText_ExclamationPoint.png"
+  },
+  "79_ChapterText_HueRamp.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/79_ChapterText_HueRamp.png"
+  },
+  "79_ChapterText_Prologue.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/79_ChapterText_Prologue.png"
+  },
+  "7A_IceShard.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/7A_IceShard.png"
+  },
+  "7E_BreakingJunk.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/7E_BreakingJunk.png"
+  },
+  "7F_PartnerBuff_0.png": {
+    "palette": "{dumpDir}/image/assets/effect/7F_PartnerBuff_0.png",
+    "raster": "{dumpDir}/image/assets/effect/7F_PartnerBuff_0.png"
+  },
+  "7F_PartnerBuff_1.png": {
+    "palette": "{dumpDir}/image/assets/effect/7F_PartnerBuff_0.png",
+    "raster": "{dumpDir}/image/assets/effect/7F_PartnerBuff_1.png"
+  },
+  "7F_PartnerBuff_2.png": {
+    "palette": "{dumpDir}/image/assets/effect/7F_PartnerBuff_0.png",
+    "raster": "{dumpDir}/image/assets/effect/7F_PartnerBuff_2.png"
+  },
+  "7F_PartnerBuff_3.png": {
+    "palette": "{dumpDir}/image/assets/effect/7F_PartnerBuff_0.png",
+    "raster": "{dumpDir}/image/assets/effect/7F_PartnerBuff_3.png"
+  },
+  "7F_PartnerBuff_4.png": {
+    "palette": "{dumpDir}/image/assets/effect/7F_PartnerBuff_0.png",
+    "raster": "{dumpDir}/image/assets/effect/7F_PartnerBuff_4.png"
+  },
+  "7F_PartnerBuff_CloudNine.png": {
+    "palette": "{dumpDir}/image/assets/effect/7F_PartnerBuff_CloudNine.png",
+    "raster": "{dumpDir}/image/assets/effect/7F_PartnerBuff_CloudNine.png"
+  },
+  "7F_PartnerBuff_TurboCharge.png": {
+    "palette": "{dumpDir}/image/assets/effect/7F_PartnerBuff_TurboCharge.png",
+    "raster": "{dumpDir}/image/assets/effect/7F_PartnerBuff_TurboCharge.png"
+  },
+  "7F_PartnerBuff_WaterBlock.png": {
+    "palette": "{dumpDir}/image/assets/effect/7F_PartnerBuff_WaterBlock.png",
+    "raster": "{dumpDir}/image/assets/effect/7F_PartnerBuff_WaterBlock.png"
+  },
+  "80_VannaT_Clap_1.png": {
+    "palette": "{dumpDir}/image/assets/effect/80_VannaT_Clap_1.png",
+    "raster": "{dumpDir}/image/assets/effect/80_VannaT_Clap_1.png"
+  },
+  "80_VannaT_Clap_2.png": {
+    "palette": "{dumpDir}/image/assets/effect/80_VannaT_Clap_2.png",
+    "raster": "{dumpDir}/image/assets/effect/80_VannaT_Clap_2.png"
+  },
+  "80_VannaT_Hands.png": {
+    "palette": "{dumpDir}/image/assets/effect/80_VannaT_Hands.png",
+    "raster": "{dumpDir}/image/assets/effect/80_VannaT_Hands.png"
+  },
+  "80_VannaT_Idle.png": {
+    "palette": "{dumpDir}/image/assets/effect/80_VannaT_Idle.png",
+    "raster": "{dumpDir}/image/assets/effect/80_VannaT_Idle.png"
+  },
+  "81_IcePillar.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/81_IcePillar.png"
+  },
+  "82_SunRay_Beam.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/82_SunRay_Beam.png"
+  },
+  "82_SunRay_Variation.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/82_SunRay_Variation.png"
+  },
+  "83_RescueSpirit_Fragments.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/83_RescueSpirit_Fragments.png"
+  },
+  "83_RescueSpirit_LightBurst.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/83_RescueSpirit_LightBurst.png"
+  },
+  "83_RescueSpirit_LightOrb.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/83_RescueSpirit_LightOrb.png"
+  },
+  "83_RescueSpirit_Shockwave.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/83_RescueSpirit_Shockwave.png"
+  },
+  "85_StarOutline_Glow.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/85_StarOutline_Glow.png"
+  },
+  "86_415060.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/86_415060.png"
+  },
+  "Cloud.png": {
+    "palette": "{dumpDir}/image/assets/effect/Cloud.png",
+    "raster": "{dumpDir}/image/assets/effect/Cloud.png"
+  },
+  "Dust_Large.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/24_RingBlast.png"
+  },
+  "Dust_Medium.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/2E_SmokePuff.png"
+  },
+  "Dust_Small.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/Dust_Small.png"
+  },
+  "Flower.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/Flower.png"
+  },
+  "Flower_GoldPetal.png": {
+    "palette": "{dumpDir}/image/assets/effect/Flower_GoldPetal.png",
+    "raster": "{dumpDir}/image/assets/effect/0D_Flower_FloatingPetal.png"
+  },
+  "Flower_PinkPetal.png": {
+    "palette": "{dumpDir}/image/assets/effect/0D_Flower_FloatingPetal.png",
+    "raster": "{dumpDir}/image/assets/effect/0D_Flower_FloatingPetal.png"
+  },
+  "Leaf.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/2C_LeavesFalling.png"
+  },
+  "LilOink_Black.png": {
+    "palette": "{dumpDir}/image/assets/effect/LilOink_Black.png",
+    "raster": "{dumpDir}/image/assets/effect/LilOink_Black.png"
+  },
+  "LilOink_Flower.png": {
+    "palette": "{dumpDir}/image/assets/effect/LilOink_Flower.png",
+    "raster": "{dumpDir}/image/assets/effect/LilOink_Flower.png"
+  },
+  "LilOink_Gold.png": {
+    "palette": "{dumpDir}/image/assets/effect/LilOink_Gold.png",
+    "raster": "{dumpDir}/image/assets/effect/LilOink_Gold.png"
+  },
+  "LilOink_Question.png": {
+    "palette": "{dumpDir}/image/assets/effect/LilOink_Question.png",
+    "raster": "{dumpDir}/image/assets/effect/LilOink_Question.png"
+  },
+  "LilOink_Shroom.png": {
+    "palette": "{dumpDir}/image/assets/effect/LilOink_Shroom.png",
+    "raster": "{dumpDir}/image/assets/effect/LilOink_Shroom.png"
+  },
+  "LilOink_Silver.png": {
+    "palette": "{dumpDir}/image/assets/effect/LilOink_Silver.png",
+    "raster": "{dumpDir}/image/assets/effect/LilOink_Silver.png"
+  },
+  "LilOink_Star.png": {
+    "palette": "{dumpDir}/image/assets/effect/LilOink_Star.png",
+    "raster": "{dumpDir}/image/assets/effect/LilOink_Star.png"
+  },
+  "LilOink_Tiger.png": {
+    "palette": "{dumpDir}/image/assets/effect/LilOink_Tiger.png",
+    "raster": "{dumpDir}/image/assets/effect/LilOink_Tiger.png"
+  },
+  "LilOink_White.png": {
+    "palette": "{dumpDir}/image/assets/effect/LilOink_White.png",
+    "raster": "{dumpDir}/sprite/npc/src/47/Raster_35.png"
+  },
+  "ShockWave_Detail.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/32_GreenImpact_Main.png"
+  },
+  "ShockWave_Main.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/ShockWave_Main.png"
+  },
+  "ShockWave_VerticalVariation.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/32_GreenImpact_VerticalVariation.png"
+  },
+  "SolidStar.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/1E_ShowDamage_Star.png"
+  },
+  "Sparkles.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/effect/Sparkles.png"
+  },
+  "SpiritCard_Back.png": {
+    "palette": "{dumpDir}/image/assets/effect/SpiritCard_Back.png",
+    "raster": "{dumpDir}/image/assets/effect/SpiritCard_Back.png"
+  },
+  "SpiritCard_Colors.png": {
+    "palette": "{dumpDir}/image/assets/effect/SpiritCard_Colors.png",
+    "raster": "{dumpDir}/image/assets/effect/SpiritCard_Colors.png"
+  },
+  "SpiritCard_Corner.png": {
+    "palette": "{dumpDir}/image/assets/effect/SpiritCard_Corner.png",
+    "raster": "{dumpDir}/image/assets/effect/SpiritCard_Corner.png"
+  },
+  "SpiritCard_Eldstar.png": {
+    "palette": "{dumpDir}/image/assets/effect/SpiritCard_Eldstar.png",
+    "raster": "{dumpDir}/image/assets/effect/SpiritCard_Eldstar.png"
+  },
+  "SpiritCard_Kalmar.png": {
+    "palette": "{dumpDir}/image/assets/effect/SpiritCard_Kalmar.png",
+    "raster": "{dumpDir}/image/assets/effect/SpiritCard_Kalmar.png"
+  },
+  "SpiritCard_Klevar.png": {
+    "palette": "{dumpDir}/image/assets/effect/SpiritCard_Klevar.png",
+    "raster": "{dumpDir}/image/assets/effect/SpiritCard_Klevar.png"
+  },
+  "SpiritCard_Mamar.png": {
+    "palette": "{dumpDir}/image/assets/effect/SpiritCard_Mamar.png",
+    "raster": "{dumpDir}/image/assets/effect/SpiritCard_Mamar.png"
+  },
+  "SpiritCard_Misstar.png": {
+    "palette": "{dumpDir}/image/assets/effect/SpiritCard_Misstar.png",
+    "raster": "{dumpDir}/image/assets/effect/SpiritCard_Misstar.png"
+  },
+  "SpiritCard_Muskular.png": {
+    "palette": "{dumpDir}/image/assets/effect/SpiritCard_Muskular.png",
+    "raster": "{dumpDir}/image/assets/effect/SpiritCard_Muskular.png"
+  },
+  "SpiritCard_Skolar.png": {
+    "palette": "{dumpDir}/image/assets/effect/SpiritCard_Skolar.png",
+    "raster": "{dumpDir}/image/assets/effect/SpiritCard_Skolar.png"
+  },
+  "SpiritCard_WavePattern.png": {
+    "palette": "{dumpDir}/image/assets/effect/SpiritCard_WavePattern.png",
+    "raster": "{dumpDir}/image/assets/effect/SpiritCard_WavePattern.png"
+  }
+}

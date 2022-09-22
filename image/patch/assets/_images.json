@@ -1,0 +1,26 @@
+{
+  "logo_intelligent_systems.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/logo_intelligent_systems.png"
+  },
+  "logo_n64.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/logo_n64.png"
+  },
+  "logo_nintendo.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/logo_nintendo.png"
+  },
+  "text_no_controller.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/text_no_controller.png"
+  },
+  "text_star_point.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/text_star_point.png"
+  },
+  "text_star_points.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/text_star_points.png"
+  }
+}

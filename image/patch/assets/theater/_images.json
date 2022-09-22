@@ -1,0 +1,14 @@
+{
+  "curtain.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/theater/curtain.png"
+  },
+  "floor.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/theater/floor.png"
+  },
+  "wall.png": {
+    "palette": "{dumpDir}/image/assets/theater/wall.png",
+    "raster": "{dumpDir}/image/assets/theater/wall.png"
+  }
+}

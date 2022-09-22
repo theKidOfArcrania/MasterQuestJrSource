@@ -1,0 +1,186 @@
+{
+  "bonus_general.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/status/bonus_general.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/status/bonus_general.png"
+  },
+  "bonus_goombario.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/status/bonus_goombario.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/status/bonus_goombario.png"
+  },
+  "bonus_jump.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/status/bonus_jump.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/status/bonus_jump.png"
+  },
+  "bonus_smash.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/status/bonus_smash.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/status/bonus_smash.png"
+  },
+  "dizzy_1.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/status/dizzy_1.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/status/dizzy_1.png"
+  },
+  "dizzy_2.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/status/dizzy_1.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/status/dizzy_2.png"
+  },
+  "dizzy_3.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/status/dizzy_1.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/status/dizzy_3.png"
+  },
+  "dizzy_4.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/status/dizzy_1.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/status/dizzy_4.png"
+  },
+  "frozen_1.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/status/frozen_1.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/status/frozen_1.png"
+  },
+  "frozen_2.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/status/frozen_1.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/status/frozen_2.png"
+  },
+  "frozen_3.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/status/frozen_1.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/status/frozen_3.png"
+  },
+  "frozen_4.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/status/frozen_1.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/status/frozen_4.png"
+  },
+  "happy.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/status/happy.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/status/happy.png"
+  },
+  "hp_danger.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/status/hp_danger.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/status/hp_danger.png"
+  },
+  "hp_peril.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/status/hp_peril.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/status/hp_peril.png"
+  },
+  "hpdrain.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/status/hpdrain.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/status/hpdrain.png"
+  },
+  "pdown_1.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/status/pdown_1.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/status/pdown_1.png"
+  },
+  "pdown_2.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/status/pdown_1.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/status/pdown_2.png"
+  },
+  "poison_1.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/status/poison_1.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/status/poison_1.png"
+  },
+  "poison_2.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/status/poison_1.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/status/poison_2.png"
+  },
+  "refund.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/status/refund.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/status/refund.png"
+  },
+  "shrink_1.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/status/shrink_1.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/status/shrink_1.png"
+  },
+  "shrink_2.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/status/shrink_1.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/status/shrink_2.png"
+  },
+  "shrink_3.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/status/shrink_1.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/status/shrink_3.png"
+  },
+  "shrink_4.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/status/shrink_1.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/status/shrink_4.png"
+  },
+  "sleep_1.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/status/sleep_1.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/status/sleep_1.png"
+  },
+  "sleep_2.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/status/sleep_1.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/status/sleep_2.png"
+  },
+  "sleep_3.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/status/sleep_1.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/status/sleep_3.png"
+  },
+  "static_1.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/status/static_1.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/status/static_1.png"
+  },
+  "static_2.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/status/static_1.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/status/static_1.png"
+  },
+  "static_3.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/status/static_1.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/status/static_3.png"
+  },
+  "static_4.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/status/static_1.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/status/static_3.png"
+  },
+  "static_5.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/status/static_5.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/status/static_5.png"
+  },
+  "static_6.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/status/static_5.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/status/static_5.png"
+  },
+  "static_7.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/status/static_5.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/status/static_7.png"
+  },
+  "static_8.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/status/static_5.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/status/static_7.png"
+  },
+  "stop_1.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/status/stop_1.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/status/stop_1.png"
+  },
+  "stop_2.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/status/stop_1.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/status/stop_2.png"
+  },
+  "stop_3.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/status/stop_1.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/status/stop_3.png"
+  },
+  "stop_4.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/status/stop_1.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/status/stop_4.png"
+  },
+  "trans_1.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/status/shrink_1.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/status/trans_1.png"
+  },
+  "trans_2.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/status/shrink_1.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/status/trans_2.png"
+  },
+  "trans_3.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/status/shrink_1.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/status/trans_3.png"
+  },
+  "trans_4.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/status/shrink_1.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/status/trans_4.png"
+  },
+  "trans_5.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/status/shrink_1.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/status/trans_5.png"
+  },
+  "trans_6.png": {
+    "palette": "{dumpDir}/image/assets/ui/battle/status/shrink_1.png",
+    "raster": "{dumpDir}/image/assets/ui/battle/status/trans_6.png"
+  }
+}

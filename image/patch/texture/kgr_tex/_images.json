@@ -1,0 +1,54 @@
+{
+  "kgr_binn2tif.png": {
+    "palette": "{dumpDir}/image/texture/kgr_tex/kgr_binn2tif.png",
+    "raster": "{dumpDir}/image/texture/dro_tex/dro_binn2tif.png"
+  },
+  "kgr_grayframetif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_grayframetif.png"
+  },
+  "kgr_kinoitatif.png": {
+    "palette": "{dumpDir}/image/texture/kgr_tex/kgr_kinoitatif.png",
+    "raster": "{dumpDir}/image/texture/flo_tex/flo_kinoitatif.png"
+  },
+  "kgr_m_honetif.png": {
+    "palette": "{dumpDir}/image/texture/kgr_tex/kgr_m_honetif.png",
+    "raster": "{dumpDir}/image/texture/kgr_tex/kgr_m_honetif.png"
+  },
+  "kgr_m_kabe2tif.png": {
+    "palette": "{dumpDir}/image/texture/kgr_tex/kgr_m_kabe2tif.png",
+    "raster": "{dumpDir}/image/texture/kgr_tex/kgr_m_kabe2tif.png"
+  },
+  "kgr_m_kabetif.png": {
+    "palette": "{dumpDir}/image/texture/kgr_tex/kgr_m_kabetif.png",
+    "raster": "{dumpDir}/image/texture/kgr_tex/kgr_m_kabetif.png"
+  },
+  "kgr_mac_berotif.png": {
+    "palette": "{dumpDir}/image/texture/kgr_tex/kgr_mac_berotif.png",
+    "raster": "{dumpDir}/image/texture/kgr_tex/kgr_mac_berotif.png"
+  },
+  "kgr_mac_doortif.png": {
+    "palette": "{dumpDir}/image/texture/kgr_tex/kgr_mac_doortif.png",
+    "raster": "{dumpDir}/image/texture/kgr_tex/kgr_mac_doortif.png"
+  },
+  "kgr_mac_house2tif.png": {
+    "palette": "{dumpDir}/image/texture/kgr_tex/kgr_mac_house2tif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_mac_house2tif.png"
+  },
+  "kgr_mac_house2tif_MIPMAP_1.png": {
+    "palette": "{dumpDir}/image/texture/kgr_tex/kgr_mac_house2tif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_mac_house2tif_MIPMAP_1.png"
+  },
+  "kgr_mac_house2tif_MIPMAP_2.png": {
+    "palette": "{dumpDir}/image/texture/kgr_tex/kgr_mac_house2tif.png",
+    "raster": "{dumpDir}/image/texture/iwa_tex/iwa_mac_house2tif_MIPMAP_2.png"
+  },
+  "kgr_water3tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/hos_tex/hos_water3tif.png"
+  },
+  "kgr_water3tif_AUX.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/hos_tex/hos_water3tif_AUX.png"
+  }
+}

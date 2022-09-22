@@ -100,7 +100,7 @@ class ImageIndex:
     @property
     def dump_path(self): return self.__dumpPath
 
-    def __init_index(self, dir='sprite'):
+    def __init_index(self, dir):
         path = self.__dumpPath + '/' + dir
         if os.path.isdir(path):
             for f in sorted(os.listdir(path)):
@@ -193,20 +193,23 @@ def write_cfg(settings):
         for (key, value) in settings.items():
             f.write(f'{key} = {value}\n')
 
-def _expand_sprites(root_dir, path=''):
+# File extensions that should always be copied
+copied_extensions = ['txa', 'xml', 'mtl']
+
+def _expand_images(root_dir, src_dir, patch_dir, path=''):
     if path == '':
-        shutil.rmtree(root_dir + '/src', ignore_errors = True)
-        os.mkdir(root_dir + '/src')
+        shutil.rmtree(f'{root_dir}/{src_dir}', ignore_errors = True)
+        os.makedirs(f'{root_dir}/{src_dir}', exist_ok = True)
     else:
         path += '/'
-    for f in sorted(os.listdir(root_dir + '/patch/' + path)):
-        patch_file = f'{root_dir}/patch/{path}{f}'
+    for f in sorted(os.listdir(f'{root_dir}/{patch_dir}/{path}')):
+        patch_file = f'{root_dir}/{patch_dir}/{path}{f}'
         if os.path.isdir(patch_file): # Make directory in dest
-            os.mkdir(f'{root_dir}/src/{path}{f}')
-            _expand_sprites(root_dir, path + f)
-        elif f.lower().endswith('.xml'): # Always copy xml files
-            shutil.copy(patch_file, f'{root_dir}/src/{path}')
-        elif f.lower() == '_images.json': # For sprite images we do a rough differ
+            os.mkdir(f'{root_dir}/{src_dir}/{path}{f}')
+            _expand_images(root_dir, src_dir, patch_dir, path + f)
+        elif f.lower().rpartition('.')[2] in copied_extensions:
+            shutil.copy(patch_file, f'{root_dir}/{src_dir}/{path}')
+        elif f.lower() == '_images.json': # For images we do a rough differ
             # Load json file
             with open(patch_file, 'r') as f:
                 image_data = json.load(f)
@@ -235,33 +238,40 @@ def _expand_sprites(root_dir, path=''):
                 i.putpalette(palette.colors)
                 i.info['transparency'] = palette.transparency
                 i.frombytes(raster.data)
-                i.save(f'{root_dir}/src/{path}{img_file}')
+                i.save(f'{root_dir}/{src_dir}/{path}{img_file}')
         else:
-            print(f'ERROR: Unexpected file: {root_dir}/patch/{path}{f}' )
+            print(f'ERROR: Unexpected file: {root_dir}/{patch_dir}/{path}{f}' )
 
-def expand_sprites():
+def expand_images():
     line = input('Are you sure you want to do this? This WILL clear the ' + \
-            'entire sprite directory. (y/N) ').upper()
+            'entire image and sprite directories! (y/N) ').upper()
     if line != 'Y' and line != 'YES': return
 
-    sprite_dirs = ['/sprite/npc', '/sprite/player']
-    for dir in sprite_dirs:
-        if not os.path.isdir(SCRIPT_PATH + dir + '/patch'):
-            print(f'ERROR: {dir}/patch: not a directory')
+    image_dirs = [
+            ('/sprite/npc', 'src', 'patch'),
+            ('/sprite/player', 'src', 'patch'),
+            ('/image', 'assets', 'patch/assets'),
+            ('/image', 'bg', 'patch/bg'),
+            ('/image', 'compressed', 'patch/compressed'),
+            ('/image', 'texture', 'patch/texture'),
+    ]
+    for dir, _, patch_dir in image_dirs:
+        if not os.path.isdir(f'{SCRIPT_PATH}{dir}/{patch_dir}'):
+            print(f'ERROR: {dir}/{patch_dir}: not a directory')
             return
 
-    for dir in sprite_dirs:
-        _expand_sprites(SCRIPT_PATH + dir)
+    for dir, src_dir, patch_dir in sprite_dirs:
+        _expand_images(SCRIPT_PATH + dir, src_dir, patch_dir)
 
-def _compress_sprites(root_dir, path=''):
+def _compress_images(root_dir, src_dir = 'src', patch_dir = 'patch', path=''):
     idx = imageIndex()
     if path == '':
-        shutil.rmtree(root_dir + '/patch', ignore_errors = True)
-        os.mkdir(root_dir + '/patch')
+        shutil.rmtree(f'{root_dir}/{patch_dir}', ignore_errors = True)
+        os.makedirs(f'{root_dir}/{patch_dir}', exist_ok=True)
         os.makedirs(IMAGEDATA_PATH, exist_ok=True)
     else:
         path += '/'
-    sprites = {}
+    images = {}
 
     def getuniqpath(dir, prefix, obj):
         nonce = 0
@@ -271,30 +281,36 @@ def _compress_sprites(root_dir, path=''):
             nonce += 1
         return prefix + curhash
 
+    for f in sorted(os.listdir(f'{root_dir}/{src_dir}/{path}')):
+        src_file = f'{root_dir}/{src_dir}/{path}{f}'
+        if os.path.isdir(src_file):
+            # Ignore these directories
+            if f.lower() in ['cache', 'temp', 'patch']:
+                continue
 
-    for f in sorted(os.listdir(root_dir + '/src/' + path)):
-        src_file = f'{root_dir}/src/{path}{f}'
-        if os.path.isdir(src_file) and f.lower() not in ['cache', 'temp']:
             # Make directory in patch
-            os.mkdir(f'{root_dir}/patch/{path}{f}')
-            _compress_sprites(root_dir, path + f)
-        elif f.lower().endswith('.xml'): # Always copy xml files
-            shutil.copy(src_file, f'{root_dir}/patch/{path}')
-        elif f.lower().endswith('.png'): # For sprite images we do a rough differ
+            os.mkdir(f'{root_dir}/{patch_dir}/{path}{f}')
+            _compress_images(root_dir, src_dir, patch_dir, path + f)
+        elif f.lower().rpartition('.')[2] in copied_extensions:
+            shutil.copy(src_file, f'{root_dir}/{patch_dir}/{path}')
+        elif f.lower().endswith('.png'): # For images we do a rough differ
             info = idx.get_image_info(src_file)
             if info == None:
                 print(f'ERROR: {src_file} ignored because not a valid palette PNG file')
                 continue
 
             p, r = info
-            pref = idx.get_palette_ref(p)
             rref = idx.get_raster_ref(r)
 
-            if pref == None:
-                tmpfile = getuniqpath(IMAGEDATA_PATH, 'palette_', p)
-                p.tofile(f'{IMAGEDATA_PATH}/{tmpfile}')
-                pref = f'{{idatDir}}/{tmpfile}'
-                idx.set_palette_ref(p, pref)
+            if p != None:
+                pref = idx.get_palette_ref(p)
+                if pref == None:
+                    tmpfile = getuniqpath(IMAGEDATA_PATH, 'palette_', p)
+                    p.tofile(f'{IMAGEDATA_PATH}/{tmpfile}')
+                    pref = f'{{idatDir}}/{tmpfile}'
+                    idx.set_palette_ref(p, pref)
+            else:
+                pref = None
 
             if rref == None:
                 tmpfile = getuniqpath(IMAGEDATA_PATH, 'raster_', r)
@@ -302,25 +318,33 @@ def _compress_sprites(root_dir, path=''):
                 rref = f'{{idatDir}}/{tmpfile}'
                 idx.set_raster_ref(r, rref)
 
-            sprites[f] = {'raster': rref, 'palette': pref}
+            images[f] = {'raster': rref, 'palette': pref}
         else:
-            print(f'ERROR: Unexpected file: {root_dir}/src/{path}{f}' )
-    if len(sprites):
-        with open(f'{root_dir}/patch/{path}/_images.json', 'w') as f:
-            json.dump(sprites, f, indent=2, sort_keys=True)
+            print(f'ERROR: Unexpected file: {root_dir}/{src_dir}/{path}{f}' )
+    if len(images):
+        with open(f'{root_dir}/{patch_dir}/{path}/_images.json', 'w') as f:
+            json.dump(images, f, indent=2, sort_keys=True)
 
-def compress_sprites():
+def compress_images():
     imageIndex()
-    print('Compressing sprites...')
-    sprite_dirs = ['/sprite/npc', '/sprite/player']
+    print('Compressing images...')
+    image_dirs = [
+            ('/sprite/npc', 'src', 'patch'),
+            ('/sprite/player', 'src', 'patch'),
+            ('/image', 'assets', 'patch/assets'),
+            ('/image', 'bg', 'patch/bg'),
+            ('/image', 'compressed', 'patch/compressed'),
+            ('/image', 'texture', 'patch/texture'),
+    ]
     shutil.rmtree(IMAGEDATA_PATH, ignore_errors = True)
-    for dir in sprite_dirs:
-        if not os.path.isdir(SCRIPT_PATH + dir + '/src'):
-            print(f'ERROR: {dir}/src: not a directory')
+    for dir, src_dir, _ in image_dirs:
+        if not os.path.isdir(f'{SCRIPT_PATH}{dir}/{src_dir}'):
+            print(f'ERROR: {dir}/{src_dir}: not a directory')
             return
 
-    for dir in sprite_dirs:
-        _compress_sprites(SCRIPT_PATH + dir)
+    for dir, src_dir, patch_dir in image_dirs:
+        print(f'Compressing images in {dir}/{src_dir}')
+        _compress_images(SCRIPT_PATH + dir, src_dir, patch_dir)
 
 def copy_assets():
     cfg = read_cfg()
@@ -352,12 +376,12 @@ where COMMANDS is a list of commands executed from left to right of the followin
   compile-maps     Compile all the map files
   compile          Compile the mod into a *.z64 file. NOTE this does not always
                    compile the map files as well!
-  compress-sprites Compress sprite data by referencing our original assets to
+  compress-images  Compress image data by referencing our original assets to
                    minimize amount of game assets, writing all compressed data
                    to the /imagedata folder
   copy-assets      Copy all the dumped assets into the mod folder (and
                    potentially dumping the mods from the ROM if needed)
-  expand-sprites   Expand sprite data from our patch files to populate the
+  expand-images    Expand image data from our patch files to populate the
                    source folders
   help             Prints this help message and exits
   package          Packages this mod into a patch file
@@ -418,10 +442,10 @@ def do_job(cmd):
         return StarRodJob(compile_map())
     elif cmd == 'compile':
         return StarRodJob(['-CompileMod'])
-    elif cmd == 'compress-sprites':
-        return FnJob(compress_sprites)
-    elif cmd == 'expand-sprites':
-        return FnJob(expand_sprites)
+    elif cmd == 'compress-images':
+        return FnJob(compress_images)
+    elif cmd == 'expand-images':
+        return FnJob(expand_images)
     elif cmd == 'package':
         return StarRodJob(['-PackageMod'])
     elif cmd == 'help':

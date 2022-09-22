@@ -1,0 +1,10 @@
+{
+  "circle.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/shadow/circle.png"
+  },
+  "square.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/assets/shadow/square.png"
+  }
+}

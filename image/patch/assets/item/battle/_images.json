@@ -1,0 +1,226 @@
+{
+  "136.png": {
+    "palette": "{dumpDir}/sprite/npc/src/D6/Palette_03.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "136_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/02C_alt.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "137.png": {
+    "palette": "{dumpDir}/sprite/npc/src/D6/Palette_03.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "137_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/02C_alt.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "139.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/139.png",
+    "raster": "{dumpDir}/image/assets/item/battle/139.png"
+  },
+  "139_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/02C_alt.png",
+    "raster": "{dumpDir}/image/assets/item/battle/139.png"
+  },
+  "13E.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/13E.png",
+    "raster": "{dumpDir}/image/assets/item/battle/13E.png"
+  },
+  "13E_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/13E_alt.png",
+    "raster": "{dumpDir}/image/assets/item/battle/13E.png"
+  },
+  "13F.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/139.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "13F_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/02C_alt.png",
+    "raster": "{dumpDir}/image/assets/item/02C.png"
+  },
+  "DizzyDial.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/DizzyDial.png",
+    "raster": "{dumpDir}/image/assets/item/battle/DizzyDial.png"
+  },
+  "DizzyDial_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/DizzyDial_alt.png",
+    "raster": "{dumpDir}/image/assets/item/battle/DizzyDial.png"
+  },
+  "DustyHammer.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/DustyHammer.png",
+    "raster": "{dumpDir}/image/assets/item/battle/DustyHammer.png"
+  },
+  "DustyHammer_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/DustyHammer_alt.png",
+    "raster": "{dumpDir}/image/assets/item/battle/DustyHammer.png"
+  },
+  "FireFlower.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/FireFlower.png",
+    "raster": "{dumpDir}/image/assets/item/battle/FireFlower.png"
+  },
+  "FireFlower_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/FireFlower_alt.png",
+    "raster": "{dumpDir}/image/assets/item/battle/FireFlower.png"
+  },
+  "FrightJar.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/FrightJar.png",
+    "raster": "{dumpDir}/image/assets/item/battle/FrightJar.png"
+  },
+  "FrightJar_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/FrightJar_alt.png",
+    "raster": "{dumpDir}/image/assets/item/battle/FrightJar.png"
+  },
+  "HustleDrink.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/HustleDrink.png",
+    "raster": "{dumpDir}/image/assets/item/battle/HustleDrink.png"
+  },
+  "HustleDrink_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/HustleDrink_alt.png",
+    "raster": "{dumpDir}/image/assets/item/battle/HustleDrink.png"
+  },
+  "InsecticideHerb.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/InsecticideHerb.png",
+    "raster": "{dumpDir}/image/assets/item/battle/InsecticideHerb.png"
+  },
+  "InsecticideHerb_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/InsecticideHerb_alt.png",
+    "raster": "{dumpDir}/image/assets/item/battle/InsecticideHerb.png"
+  },
+  "MagicMirror.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/MagicMirror.png",
+    "raster": "{dumpDir}/image/assets/item/battle/MagicMirror.png"
+  },
+  "MagicMirror_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/MagicMirror_alt.png",
+    "raster": "{dumpDir}/image/assets/item/battle/MagicMirror.png"
+  },
+  "Mystery.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/Mystery.png",
+    "raster": "{dumpDir}/image/assets/item/battle/Mystery.png"
+  },
+  "Mystery_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/Mystery_alt.png",
+    "raster": "{dumpDir}/image/assets/item/battle/Mystery.png"
+  },
+  "POWBlock.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/POWBlock.png",
+    "raster": "{dumpDir}/image/assets/item/battle/POWBlock.png"
+  },
+  "POWBlock_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/POWBlock_alt.png",
+    "raster": "{dumpDir}/image/assets/item/battle/POWBlock.png"
+  },
+  "Parasol.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/Parasol.png",
+    "raster": "{dumpDir}/image/assets/item/battle/Parasol.png"
+  },
+  "Parasol_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/Parasol_alt.png",
+    "raster": "{dumpDir}/image/assets/item/battle/Parasol.png"
+  },
+  "Pebble.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/Pebble.png",
+    "raster": "{dumpDir}/image/assets/item/battle/Pebble.png"
+  },
+  "Pebble_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/Pebble_alt.png",
+    "raster": "{dumpDir}/image/assets/item/battle/Pebble.png"
+  },
+  "PleaseComeBack.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/PleaseComeBack.png",
+    "raster": "{dumpDir}/image/assets/item/battle/PleaseComeBack.png"
+  },
+  "PleaseComeBack_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/PleaseComeBack_alt.png",
+    "raster": "{dumpDir}/image/assets/item/battle/PleaseComeBack.png"
+  },
+  "PowerStar.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/PowerStar.png",
+    "raster": "{dumpDir}/image/assets/item/battle/PowerStar.png"
+  },
+  "PowerStar_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/PowerStar_alt.png",
+    "raster": "{dumpDir}/image/assets/item/battle/PowerStar.png"
+  },
+  "RepelGel.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/RepelGel.png",
+    "raster": "{dumpDir}/image/assets/item/battle/RepelGel.png"
+  },
+  "RepelGel_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/RepelGel_alt.png",
+    "raster": "{dumpDir}/image/assets/item/battle/RepelGel.png"
+  },
+  "ShootingStar.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/ShootingStar.png",
+    "raster": "{dumpDir}/image/assets/item/battle/ShootingStar.png"
+  },
+  "ShootingStar_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/ShootingStar_alt.png",
+    "raster": "{dumpDir}/image/assets/item/battle/ShootingStar.png"
+  },
+  "SleepySheep.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/SleepySheep.png",
+    "raster": "{dumpDir}/image/assets/item/battle/SleepySheep.png"
+  },
+  "SleepySheep_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/SleepySheep_alt.png",
+    "raster": "{dumpDir}/image/assets/item/battle/SleepySheep.png"
+  },
+  "SnowmanDoll.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/SnowmanDoll.png",
+    "raster": "{dumpDir}/image/assets/item/battle/SnowmanDoll.png"
+  },
+  "SnowmanDoll_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/SnowmanDoll_alt.png",
+    "raster": "{dumpDir}/image/assets/item/battle/SnowmanDoll.png"
+  },
+  "StoneCap.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/StoneCap.png",
+    "raster": "{dumpDir}/image/assets/item/battle/StoneCap.png"
+  },
+  "StoneCap_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/StoneCap_alt.png",
+    "raster": "{dumpDir}/image/assets/item/battle/StoneCap.png"
+  },
+  "StopWatch.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/StopWatch.png",
+    "raster": "{dumpDir}/image/assets/item/battle/StopWatch.png"
+  },
+  "StopWatch_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/StopWatch_alt.png",
+    "raster": "{dumpDir}/image/assets/item/battle/StopWatch.png"
+  },
+  "ThunderBolt.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/ThunderBolt.png",
+    "raster": "{dumpDir}/image/assets/item/battle/ThunderBolt.png"
+  },
+  "ThunderBolt_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/ThunderBolt_alt.png",
+    "raster": "{dumpDir}/image/assets/item/battle/ThunderBolt.png"
+  },
+  "ThunderRage.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/ThunderRage.png",
+    "raster": "{dumpDir}/image/assets/item/battle/ThunderRage.png"
+  },
+  "ThunderRage_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/ThunderRage_alt.png",
+    "raster": "{dumpDir}/image/assets/item/battle/ThunderRage.png"
+  },
+  "VoltShroom.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/VoltShroom.png",
+    "raster": "{dumpDir}/image/assets/item/battle/VoltShroom.png"
+  },
+  "VoltShroom_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/VoltShroom_alt.png",
+    "raster": "{dumpDir}/image/assets/item/battle/VoltShroom.png"
+  },
+  "XBandage.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/XBandage.png",
+    "raster": "{dumpDir}/image/assets/item/battle/XBandage.png"
+  },
+  "XBandage_alt.png": {
+    "palette": "{dumpDir}/image/assets/item/battle/XBandage_alt.png",
+    "raster": "{dumpDir}/image/assets/item/battle/XBandage.png"
+  }
+}

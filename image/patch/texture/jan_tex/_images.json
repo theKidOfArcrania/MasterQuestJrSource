@@ -1,0 +1,374 @@
+{
+  "jan_bananahatif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_bananahatif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_bananahatif.png"
+  },
+  "jan_berosaidetif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_berosaidetif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_berosaidetif.png"
+  },
+  "jan_block_ctif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_block_ctif.png",
+    "raster": "{dumpDir}/image/texture/isk_tex/isk_block_ctif.png"
+  },
+  "jan_boaltif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_boaltif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_boaltif.png"
+  },
+  "jan_cycad_reeftif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_cycad_reeftif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_cycad_reeftif.png"
+  },
+  "jan_cycadtif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_cycadtif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_cycadtif.png"
+  },
+  "jan_daikinohatif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_daikinohatif.png"
+  },
+  "jan_dekaikitif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_dekaikitif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_dekaikitif.png"
+  },
+  "jan_flower_02tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/dro_tex/dro_flower_02tif.png"
+  },
+  "jan_frametif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_frametif.png",
+    "raster": "{dumpDir}/image/texture/arn_tex/arn_frametif.png"
+  },
+  "jan_green_ctif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_green_ctif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_green_ctif.png"
+  },
+  "jan_hana_ftif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_hana_ftif.png",
+    "raster": "{dumpDir}/image/assets/effect/0D_Flower_FloatingPetal.png"
+  },
+  "jan_hikiato2tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_hikiato2tif.png"
+  },
+  "jan_hoppetif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/end_tex/end_hoppetif.png"
+  },
+  "jan_hunsuitif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_hunsuitif.png",
+    "raster": "{dumpDir}/image/texture/flo_tex/flo_hunsuitif.png"
+  },
+  "jan_iwashitatif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_iwashitatif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_iwashitatif.png"
+  },
+  "jan_iwatemaetif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_iwatemaetif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_iwatemaetif.png"
+  },
+  "jan_iwayukatif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_iwayukatif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_iwayukatif.png"
+  },
+  "jan_j_isi2tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_j_isi2tif.png"
+  },
+  "jan_j_isitif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_j_isitif.png"
+  },
+  "jan_j_iwatif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_j_iwatif.png"
+  },
+  "jan_j_iwatif_AUX.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_j_iwatif_AUX.png"
+  },
+  "jan_j_kazariha2tif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_j_kazariha2tif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_j_kazariha2tif.png"
+  },
+  "jan_j_sakutif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_j_sakutif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_j_sakutif.png"
+  },
+  "jan_j_tuta02tif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_j_tuta02tif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_j_tuta02tif.png"
+  },
+  "jan_j_tuta06tif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_j_tuta06tif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_j_tuta06tif.png"
+  },
+  "jan_j_tutatif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_j_tutatif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_j_tutatif.png"
+  },
+  "jan_j_tutitif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_j_tutitif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_j_tutitif.png"
+  },
+  "jan_j_tutitif_AUX.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_j_tutitif_AUX.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_j_tutitif_AUX.png"
+  },
+  "jan_jan_jimentif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_jan_jimentif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_jan_jimentif.png"
+  },
+  "jan_jan_jimentif_AUX.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_jan_jimentif_AUX.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_jan_jimentif_AUX.png"
+  },
+  "jan_jan_kabemizutif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_jan_kabemizutif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_jan_kabemizutif.png"
+  },
+  "jan_jan_kabetif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_jan_kabetif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_jan_kabetif.png"
+  },
+  "jan_jan_kabetif_AUX.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_jan_kabetif_AUX.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_jan_kabetif_AUX.png"
+  },
+  "jan_jan_kukitif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_jan_kukitif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_jan_kukitif.png"
+  },
+  "jan_jan_marutatif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_jan_marutatif.png",
+    "raster": "{dumpDir}/image/texture/flo_tex/flo_marutakuntif.png"
+  },
+  "jan_jan_marutatif_AUX.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_jan_marutatif_AUX.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_jan_marutatif_AUX.png"
+  },
+  "jan_jan_mizukabetif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_jan_mizukabetif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_jan_mizukabetif.png"
+  },
+  "jan_jan_reef02tif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_jan_reef02tif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_jan_reef02tif.png"
+  },
+  "jan_jan_reeftif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_jan_reeftif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_jan_reeftif.png"
+  },
+  "jan_jan_sigemi_02tif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_jan_sigemi_02tif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_jan_sigemi_02tif.png"
+  },
+  "jan_jan_sigemitif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_jan_sigemitif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_jan_sigemitif.png"
+  },
+  "jan_jan_treetif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_jan_treetif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_jan_treetif.png"
+  },
+  "jan_janguluhatif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_janguluhatif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_janguluhatif.png"
+  },
+  "jan_jangulukusa4tif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_jangulukusa4tif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_jangulukusa4tif.png"
+  },
+  "jan_jangulukusa_02tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_jangulukusa_02tif.png"
+  },
+  "jan_jangulukusatif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_jangulukusatif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_jangulukusatif.png"
+  },
+  "jan_jankitif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_jankitif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_jankitif.png"
+  },
+  "jan_jb_hasira3tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_jb_hasira3tif.png"
+  },
+  "jan_jb_isitif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_jb_isitif.png"
+  },
+  "jan_jb_moyou2tif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_jb_moyou2tif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_jb_moyou2tif.png"
+  },
+  "jan_jb_moyou3tif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_jb_moyou3tif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_jb_moyou3tif.png"
+  },
+  "jan_kagotif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_kagotif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_kagotif.png"
+  },
+  "jan_kanbantif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_kanbantif.png"
+  },
+  "jan_kassya2tif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_kassya2tif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_kassya2tif.png"
+  },
+  "jan_kassyatif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_kassyatif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_kassyatif.png"
+  },
+  "jan_kinoha5tif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_kinoha5tif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_kinoha5tif.png"
+  },
+  "jan_kinoita3tif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_kinoita3tif.png",
+    "raster": "{dumpDir}/image/texture/flo_tex/flo_kinoita3tif.png"
+  },
+  "jan_kinoita4tif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_kinoita4tif.png",
+    "raster": "{dumpDir}/image/texture/flo_tex/flo_kinoita3tif.png"
+  },
+  "jan_kinoitatif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_kinoitatif.png",
+    "raster": "{dumpDir}/image/texture/flo_tex/flo_kinoitatif.png"
+  },
+  "jan_kinokusa2tif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_kinokusa2tif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_kinokusa2tif.png"
+  },
+  "jan_kinokusa6tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_kinokusa6tif.png"
+  },
+  "jan_kinokusatif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_kinokusatif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_kinokusatif.png"
+  },
+  "jan_kinometif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_kinometif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_kinometif.png"
+  },
+  "jan_kinopiotif.png": {
+    "palette": "{dumpDir}/image/texture/dro_tex/dro_kinopiotif.png",
+    "raster": "{dumpDir}/image/texture/dro_tex/dro_kinopiotif.png"
+  },
+  "jan_kokekusatif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_kokekusatif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_kokekusatif.png"
+  },
+  "jan_kujira_haratif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_kujira_haratif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_kujira_haratif.png"
+  },
+  "jan_kusa5tif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_kusa5tif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_kusa5tif.png"
+  },
+  "jan_kusatif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_kusatif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_kusatif.png"
+  },
+  "jan_mac_house6tif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_mac_house6tif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_mac_house6tif.png"
+  },
+  "jan_nami2tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_nami2tif.png"
+  },
+  "jan_nami2tif_AUX.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_nami2tif.png"
+  },
+  "jan_naminami4tif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/flo_tex/flo_naminami4tif.png"
+  },
+  "jan_naminami4tif_AUX.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/flo_tex/flo_naminami4tif_AUX.png"
+  },
+  "jan_namitif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_namitif.png"
+  },
+  "jan_qchannosutif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_qchannosutif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_qchannosutif.png"
+  },
+  "jan_rock_btif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_rock_btif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_rock_btif.png"
+  },
+  "jan_ropetif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_ropetif.png"
+  },
+  "jan_sima4tif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_sima4tif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_sima4tif.png"
+  },
+  "jan_sunahama4tif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_sunahama4tif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_sunahama4tif.png"
+  },
+  "jan_t_dokankun3tif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_t_dokankun3tif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_t_dokankun3tif.png"
+  },
+  "jan_t_iwahashitif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_t_iwahashitif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_t_iwahashitif.png"
+  },
+  "jan_t_iwayougantif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_t_iwayougantif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_t_iwayougantif.png"
+  },
+  "jan_t_sizuku1tif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_t_sizuku1tif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_t_sizuku1tif.png"
+  },
+  "jan_to1_iwakabetif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_to1_iwakabetif.png"
+  },
+  "jan_to1_iwakabetif_AUX.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_to1_iwakabetif_AUX.png"
+  },
+  "jan_tree_jantif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_tree_jantif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_tree_jantif.png"
+  },
+  "jan_tutitutitif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_tutitutitif.png"
+  },
+  "jan_yasiha4tif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_yasiha4tif.png",
+    "raster": "{dumpDir}/image/texture/end_tex/end_reef_jantif.png"
+  },
+  "jan_yasiki2tif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_yasiki2tif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_yasiki2tif.png"
+  },
+  "jan_yasimi2tif.png": {
+    "palette": "{dumpDir}/image/texture/jan_tex/jan_yasimi2tif.png",
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_yasimi2tif.png"
+  },
+  "jan_yougantif.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_yougantif.png"
+  },
+  "jan_yougantif_AUX.png": {
+    "palette": null,
+    "raster": "{dumpDir}/image/texture/jan_tex/jan_yougantif_AUX.png"
+  }
+}
