@@ -384,7 +384,8 @@ where COMMANDS is a list of commands executed from left to right of the followin
   expand-images    Expand image data from our patch files to populate the
                    source folders
   help             Prints this help message and exits
-  package          Packages this mod into a patch file
+  package          Packages this mod into a patch file. This should be done
+                   after a successful compile.
 """.format(sys.argv[0]))
     quit()
 
