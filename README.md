@@ -27,7 +27,9 @@ python3 initialize.py copy-assets expand-images compile-maps
 This will first copy all the assets from the dump first, then expand all the
 image data diffs when compared to the underlying ROM dump, and then compile all
 the map shape/hit objects. This allows us to minimize the amount of assets that
-we would have lying in a public repo source tree.
+we would have lying in a public repo source tree. If you are queried about
+whether to clear the image/sprite directories, select yes at this point (since
+the only thing that's removed is dumped data).
 
 NOTE: If you think you have modified any image/sprite assets **make sure** to
 run `python3 initialize.py compress-images` early and often so that git can

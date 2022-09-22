@@ -215,14 +215,17 @@ def _expand_images(root_dir, src_dir, patch_dir, path=''):
                 image_data = json.load(f)
 
             for (img_file, desc) in image_data.items():
-                # Load palette/transparency information
-                palette_file = desc['palette'].format(**imageIndex().props)
-                if palette_file.lower().endswith('.png'):
-                    palette = imageIndex().get_image_info(palette_file)[0]
+                if desc['palette'] == None:
+                    palette_file = None
                 else:
-                    palette = Palette.fromfile(palette_file)
-                    if palette == None:
-                        continue
+                    # Load palette/transparency information
+                    palette_file = desc['palette'].format(**imageIndex().props)
+                    if palette_file.lower().endswith('.png'):
+                        palette = imageIndex().get_image_info(palette_file)[0]
+                    else:
+                        palette = Palette.fromfile(palette_file)
+                        if palette == None:
+                            continue
 
                 # Load raster information
                 raster_file = desc['raster'].format(**imageIndex().props)
@@ -233,10 +236,11 @@ def _expand_images(root_dir, src_dir, patch_dir, path=''):
                     if raster == None:
                         continue
 
-                # Create 8-bit image from palette/raster
-                i = Image.new('P', raster.size)
-                i.putpalette(palette.colors)
-                i.info['transparency'] = palette.transparency
+                # Create image from palette/raster
+                i = Image.new(raster.mode.name, raster.size)
+                if raster.mode == RasterModes.P:
+                    i.putpalette(palette.colors)
+                    i.info['transparency'] = palette.transparency
                 i.frombytes(raster.data)
                 i.save(f'{root_dir}/{src_dir}/{path}{img_file}')
         else:
@@ -260,7 +264,7 @@ def expand_images():
             print(f'ERROR: {dir}/{patch_dir}: not a directory')
             return
 
-    for dir, src_dir, patch_dir in sprite_dirs:
+    for dir, src_dir, patch_dir in image_dirs:
         _expand_images(SCRIPT_PATH + dir, src_dir, patch_dir)
 
 def _compress_images(root_dir, src_dir = 'src', patch_dir = 'patch', path=''):
@@ -403,7 +407,7 @@ class StarRodJob:
 
     def combine(self, other):
         if isinstance(other, StarRodJob):
-            self.__actions += other.__args
+            self.__actions += other.__actions
             return True
         else:
             return False
