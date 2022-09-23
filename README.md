@@ -16,7 +16,7 @@ initialize the paper mario ROM file. If possible you should dump assets first.
 
 Next, make sure all the python dependencies are installed:
 ```
-pip3 install bs4 pillow
+pip3 install bs4 pillow lxml
 ```
 
 Then, when initializing the project, run the following set of commands:

@@ -7,6 +7,7 @@ cache
 # Editor files
 /logs
 /editor
+/auxfiles/main.cfg
 
 # Original game data
 src

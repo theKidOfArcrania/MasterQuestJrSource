@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 from collections import OrderedDict, namedtuple
-from subprocess import check_call
+from subprocess import check_call, check_output
 from PIL import Image, ImageFile
 from hashlib import sha256
 from functools import partial
@@ -17,11 +17,9 @@ import traceback
 import zlib
 
 SCRIPT_PATH = os.path.realpath(os.path.dirname(__file__))
-
 IMAGEDATA_PATH = f'{SCRIPT_PATH}/imagedata'
 
 # TODO: MAKE SURE StarRod is not running in background
-
 try:
     import tkinter as tk
     from tkinter import messagebox, filedialog, dialog
@@ -39,11 +37,17 @@ def warn(msg, show=False):
     if not HEADLESS and show:
         messagebox.showwarning(title='StarRodAux', message=msg)
 
-
 def info(msg, show=False):
     print(f'INFO: {msg}')
     if not HEADLESS and show:
         messagebox.showinfo(title='StarRodAux', message=msg)
+
+def askyesno(msg):
+    if HEADLESS:
+        line = input(f'{msg} (y/N) ').upper()
+        return line == 'Y' or line == 'YES'
+    else:
+        return messagebox.askyesno(title='StarRodAux', message=msg)
 
 
 class Palette(namedtuple('PaletteData', ['colors', 'transparency'])):
@@ -203,11 +207,14 @@ def read_cfg(file=None):
     if file == None:
         file = STAR_ROD_PATH + '/cfg/main.cfg'
     res = OrderedDict()
-    with open(file, 'r') as f:
-        for line in f:
-            if line.startswith('%'): continue
-            key, _, value = line.strip().partition(' = ')
-            res[key] = value
+    try:
+        with open(file, 'r') as f:
+            for line in f:
+                if line.startswith('%'): continue
+                key, _, value = line.strip().partition(' = ')
+                res[key] = value
+    except:
+        return {}
     return res
 
 def write_cfg(settings, file=None):
@@ -272,9 +279,8 @@ def _expand_images(root_dir, src_dir, patch_dir, path=''):
             error(f'Unexpected file: {root_dir}/{patch_dir}/{path}{f}' )
 
 def expand_images():
-    line = input('Are you sure you want to do this? This WILL clear the ' + \
-            'entire image and sprite directories! (y/N) ').upper()
-    if line != 'Y' and line != 'YES': return
+    if not askyesno('Are you sure you want to do this? This WILL clear the ' +
+            'entire image and sprite directories!'): return
 
     image_dirs = [
             ('/sprite/npc', 'src', 'patch'),
@@ -375,17 +381,6 @@ def compress_images():
         info(f'Compressing images in {dir}/{src_dir}')
         _compress_images(SCRIPT_PATH + dir, src_dir, patch_dir)
 
-def copy_assets():
-    cfg = read_cfg()
-    args = ['-CopyAssets']
-    if not os.path.isfile(cfg['RomPath']):
-        error(f'Cannot find ROM at: {cfg["RomPath"]}')
-        return []
-    if not os.path.isdir(os.path.dirname(cfg['RomPath']) + '/dump'):
-        info('We need to dump assets first. Doing it at this point.', show=True)
-        args = ['-DumpAssets'] + args
-    return args
-
 def compile_map():
     with open(SCRIPT_PATH + '/map/MapTable.xml') as f:
         data = f.read()
@@ -439,13 +434,24 @@ class FnJob:
     def execute(self):
         self.__fn()
 
+copied = False
 def copy_assets():
     global copied
     if copied:
         warn('multiple copy_assets will be ignored')
         return None
     copied = True
-    return StarRodJob(copy_assets())
+
+    cfg = read_cfg()
+    args = ['-CopyAssets']
+    if not os.path.isfile(cfg['RomPath']):
+        error(f'Cannot find ROM at: {cfg["RomPath"]}')
+        return []
+    if not os.path.isdir(os.path.dirname(cfg['RomPath']) + '/dump'):
+        info('We need to dump assets first. Doing it at this point.', show=True)
+        args = ['-DumpAssets'] + args
+
+    return StarRodJob(args)
 
 def print_help(maxwidth=70):
     msg = '''{} COMMANDS...
@@ -519,39 +525,59 @@ def show_gui():
 def main():
     global STAR_ROD_PATH
 
-    STAR_ROD_PATH = os.getenv('STAR_ROD_PATH')
-    while not os.path.isfile(STAR_ROD_PATH + "/StarRod.jar"):
-        if HEADLESS:
-            STAR_ROD_PATH = input('Path to star-rod directory: ')
+    try:
+        vers = check_output(['java', '-cp', SCRIPT_PATH + '/auxfiles', 'getvers'])
+        if int(vers.partition(b'.')[0]) < 12:
+            error('Requires java 12 or later!')
+            quit()
+    except FileNotFoundError:
+        error(f'Unable to find java, did you install it?')
+        quit()
 
-    if not os.path.isfile(STAR_ROD_PATH + '/cfg/main.cfg'):
+    aux_path = f'{SCRIPT_PATH}/auxfiles/main.cfg'
+    STAR_ROD_PATH = read_cfg(aux_path).get('STAR_ROD_PATH', '')
+    while not os.path.isfile(STAR_ROD_PATH + "/StarRod.jar"):
+        if STAR_ROD_PATH:
+            error(f'Invalid StarRod path: {STAR_ROD_PATH}')
+        if HEADLESS:
+            STAR_ROD_PATH = input('Path to StarRod directory: ')
+        else:
+            messagebox.showinfo(title='StarRodAux',
+                    message='Please give the path to StarRod directory')
+            res = filedialog.askdirectory(title='Path to StarRod directory')
+            if not res: quit()
+            STAR_ROD_PATH = res
+        write_cfg({'STAR_ROD_PATH': STAR_ROD_PATH}, aux_path)
+
+    cfg = read_cfg()
+    if cfg.get('RomPath', 'null') == 'null':
         error('You must run StarRod first to initialize its configurations!')
         quit()
 
-    try:
-        joblist = []
-        if len(sys.argv) <= 1:
-            if HEADLESS:
-                print_help()
-            else:
-                show_gui()
-        for cmd in sys.argv[1:]:
-            if cmd not in jobs:
-                error(f'Illegal command: {cmd}')
-                quit()
-            job = jobs[cmd][2]()
-            if job == None: continue
-            if len(joblist) == 0 or not joblist[-1].combine(job):
-                joblist.append(job)
+    joblist = []
+    if len(sys.argv) <= 1:
+        if HEADLESS:
+            print_help()
+        else:
+            show_gui()
+    for cmd in sys.argv[1:]:
+        if cmd not in jobs:
+            error(f'Illegal command: {cmd}')
+            quit()
+        job = jobs[cmd][2]()
+        if job == None: continue
+        if len(joblist) == 0 or not joblist[-1].combine(job):
+            joblist.append(job)
 
-        for job in joblist:
-            job.execute()
+    for job in joblist:
+        job.execute()
+
+if __name__ == '__main__':
+    try:
+        main()
     except SystemExit:
         pass
     except KeyboardInterrupt:
         print('Interrupted!')
     except:
         error('A python error has occurred:\n\n' + traceback.format_exc())
-
-if __name__ == '__main__':
-    main()
