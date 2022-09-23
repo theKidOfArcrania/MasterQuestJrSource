@@ -8,6 +8,7 @@ cache
 /logs
 /editor
 /auxfiles/main.cfg
+/build
 
 # Original game data
 src
@@ -15,3 +16,4 @@ raw
 
 # vim swap files
 *.sw?
+.venv

@@ -8,43 +8,60 @@ NOTE: This is ONLY tested with star rod 0.5.3. If you change to different versio
 beware you **will** have to tweak some code to get it to compile after you copy
 in the assets!
 
-First ensure that star rod is installed, and you should set `STAR_ROD_PATH`
-environment variable to where the directory to star rod is located. If this is
-not set, the initialization script will ask you for the path to star rod. When
-running star rod for the first time, you may need to run it first so that it can
-initialize the paper mario ROM file. If possible you should dump assets first.
+Make sure you have [java >=12](https://adoptopenjdk.net/) installed on your
+machine. You will have to run StarRod first to get its settings initialized
+(with a ROM/mod directory selected)!
 
-Next, make sure all the python dependencies are installed:
+When running staraux for the first time, you might be queried about where
+StarRod is installed. Make sure you select the directory corresponding to the
+StarRod installation location.
+
+### For windows users
+Run `staraux.exe`, which should bring a GUI frontend similar to StarRod, with a
+few additional options:
+  1. Select **copy-assets**. This command, similar to the StarRod's
+     corresponding command, copies all the dumped assets from the ROM into our
+     mod directory.
+  2. Select **expand-images**. This command will take our compressed image data
+     and expand those out to what StarRod would expect. This allows us to
+     further minimize the amount of assets that we would have lying in a public
+     repo source tree. If you are queried about whether to clear the
+     image/sprite directories, **select yes** at this point (since the only
+     thing that's removed is dumped data).
+  3. Select **compile-maps**. This will compile all the map shape/collision
+     data.
+
+Note that `staraux.exe` is created by running
+```
+pyinstaller --onefile staraux.py
+```
+
+### For linux/mac users
+First make sure that all the python is installed, and the needed dependencies
+are installed as well:
 ```
 pip3 install bs4 pillow lxml
 ```
 
 Then, when initializing the project, run the following set of commands:
 ```
-python3 initialize.py copy-assets expand-images compile-maps
+python3 staraux.py copy-assets expand-images compile-maps
 ```
 
-This will first copy all the assets from the dump first, then expand all the
-image data diffs when compared to the underlying ROM dump, and then compile all
-the map shape/hit objects. This allows us to minimize the amount of assets that
-we would have lying in a public repo source tree. If you are queried about
-whether to clear the image/sprite directories, select yes at this point (since
-the only thing that's removed is dumped data).
+## Contributing to image assets
+When you want to modify an image asset, whether that be an image or a sprite,
+you MUST recompress all images by running the `compress-images` command in
+staraux. Otherwise, git WILL NOT know that you modified some image asset!
 
-NOTE: If you think you have modified any image/sprite assets **make sure** to
-run `python3 initialize.py compress-images` early and often so that git can
-actually track any changes that you made, since direct changes made i.e. via
-StarRod will not affect the git repo. The underlying operation for
-compress-images is designed to be idempotent, i.e. running the command multiple
-times in quick succession will have no overall effect and would just be
-equivalent as if you ran the command only once.
+You can run the compression command as much as you want. TAKE ADVANTAGE OF THIS.
+In fancy terms, the command is designed to be idempotent, which means running it
+multiple times in quick succession generally can be the same behavior as if you
+just ran it once only.
 
-When you want to build everything, you can use star rod GUI or run:
-```
-python3 initialize.py compile package
-```
-Which both cases does the exact same thing. Note that compile does not always
-compile map objects also.
+## Contributing to map data
+If you tried to modify some map, you MUST recalculate the map collision/shape
+data, either in StarRod or staraux. Otherwise, the resulting shape/collision
+data may not be up-to-date when you compile the mod.
 
 ## Credits
 Emperor\_Thamz, Rainchus, JaThePlayer, Brotenko, theKidOfArcrania
