@@ -1,5 +1,7 @@
 # Paper Mario Master Quest Jr
 
+![alt text](https://i.imgur.com/ln51Cu0.png)
+
 This is where the source code of 1.x Master Quest Jr code lies.
 
 Want to download the mod file? Visit https://github.com/Brotenko/PMMasterQuest
