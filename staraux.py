@@ -16,7 +16,10 @@ import threading
 import traceback
 import zlib
 
-SCRIPT_PATH = os.path.realpath(os.path.dirname(__file__))
+if '_MEI' in __file__:
+    SCRIPT_PATH = os.path.realpath('.')
+else:
+    SCRIPT_PATH = os.path.realpath(__file__)
 IMAGEDATA_PATH = f'{SCRIPT_PATH}/imagedata'
 
 # TODO: MAKE SURE StarRod is not running in background
