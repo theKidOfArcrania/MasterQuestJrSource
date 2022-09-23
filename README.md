@@ -2,6 +2,9 @@
 
 This is where the source code of 1.x Master Quest Jr code lies.
 
+Want to download the mod file? Visit https://github.com/Brotenko/PMMasterQuest
+to get downloads for PMMQ.
+
 ## Getting started
 
 NOTE: This is ONLY tested with star rod 0.5.3. If you change to different versions
