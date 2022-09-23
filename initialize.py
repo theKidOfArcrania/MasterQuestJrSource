@@ -3,6 +3,7 @@ from collections import OrderedDict, namedtuple
 from subprocess import check_call
 from PIL import Image, ImageFile
 from hashlib import sha256
+from functools import partial
 import enum
 import json
 import shutil
@@ -10,14 +11,10 @@ import os
 import os.path
 import sys
 import struct
+import textwrap
+import threading
+import traceback
 import zlib
-
-STAR_ROD_PATH = os.getenv('STAR_ROD_PATH')
-while not os.path.isfile(STAR_ROD_PATH + "/StarRod.jar"):
-    STAR_ROD_PATH = input('Path to star-rod directory: ')
-
-if not os.path.isfile(STAR_ROD_PATH + '/cfg/main.cfg'):
-    print('ERROR: you must run StarRod first to initialize its configurations!')
 
 SCRIPT_PATH = os.path.realpath(os.path.dirname(__file__))
 
@@ -25,13 +22,37 @@ IMAGEDATA_PATH = f'{SCRIPT_PATH}/imagedata'
 
 # TODO: MAKE SURE StarRod is not running in background
 
+try:
+    import tkinter as tk
+    from tkinter import messagebox, filedialog, dialog
+    HEADLESS = False
+except:
+    HEADLESS = True
+
+def error(msg):
+    print(f'ERROR: {msg}')
+    if not HEADLESS:
+        messagebox.showerror(title="StarRodAux", message=msg)
+
+def warn(msg, show=False):
+    print(f'WARNING: {msg}')
+    if not HEADLESS and show:
+        messagebox.showwarning(title='StarRodAux', message=msg)
+
+
+def info(msg, show=False):
+    print(f'INFO: {msg}')
+    if not HEADLESS and show:
+        messagebox.showinfo(title='StarRodAux', message=msg)
+
+
 class Palette(namedtuple('PaletteData', ['colors', 'transparency'])):
     @classmethod
     def fromfile(cls, palette_file=''):
         with open(palette_file, 'rb') as f:
             data = zlib.decompress(f.read())
         if len(data) != 256 * 4:
-            print(f'ERROR: {palette_file}: palette file size unexpected: {len(data)}')
+            error(f'{palette_file}: palette file size unexpected: {len(data)}')
             return None
         return cls(data[:256 * 3], data[256 * 3:256 * 4])
 
@@ -65,10 +86,10 @@ class Raster(namedtuple('Raster', ['size', 'mode', 'data'])):
         hdr_sz = cls.__header.size
         w, h, mode = cls.__header.unpack(data[:hdr_sz])
         if mode not in id_to_modes:
-            print(f'ERROR: {raster_file}: Invalid mode number: {mode}')
+            error(f'{raster_file}: Invalid mode number: {mode}')
         mode = id_to_modes[mode]
         if len(data) != w * h * mode.stride + hdr_sz:
-            print(f'ERROR: {raster_file}: {mode.name} raster file ({w}x{h}) size unexpected: {len(data)}')
+            error(f'{raster_file}: {mode.name} raster file ({w}x{h}) size unexpected: {len(data)}')
             return None
         return cls((w, h), mode, data[hdr_sz:])
 
@@ -134,7 +155,7 @@ class ImageIndex:
                 i.load()
             except:
                 ImageFile.LOAD_TRUNCATED_IMAGES = True
-                print(f'{path}: Image truncated')
+                warn(f'{path}: Image truncated')
                 try:
                     i.load()
                 finally:
@@ -143,10 +164,10 @@ class ImageIndex:
             for name in i.info.keys():
                 if name not in ['transparency', 'icc_profile', 'dpi', 'srgb',
                         'Raw profile type exif']:
-                    print(f'{path}: contains unknown metadata field: {name}')
+                    warn(f'{path}: contains unknown metadata field: {name}')
 
             if i.mode not in name_to_modes:
-                print(f'{path}: invalid image mode: {i.mode}.')
+                warn(f'{path}: invalid image mode: {i.mode}.')
                 self.__files[path] = None
                 return None
 
@@ -161,7 +182,7 @@ class ImageIndex:
             else:
                 assert mode == RasterModes.RGB or mode == RasterModes.RGBA
                 if 'transparency' in i.info.keys():
-                    print(f'{path}: contains unknown metadata field: {name}')
+                    warn(f'{path}: contains unknown metadata field: {name}')
                 p = None
 
             r = Raster(i.size, mode, i.tobytes())
@@ -173,22 +194,26 @@ _imageIndex = None
 def imageIndex():
     global _imageIndex
     if _imageIndex == None:
-        print('Indexing images...')
+        info('Indexing images...')
         _imageIndex = ImageIndex()
-        print('Completed indexing images.')
+        info('Completed indexing images.')
     return _imageIndex
 
-def read_cfg():
+def read_cfg(file=None):
+    if file == None:
+        file = STAR_ROD_PATH + '/cfg/main.cfg'
     res = OrderedDict()
-    with open(STAR_ROD_PATH + '/cfg/main.cfg', 'r') as f:
+    with open(file, 'r') as f:
         for line in f:
             if line.startswith('%'): continue
             key, _, value = line.strip().partition(' = ')
             res[key] = value
     return res
 
-def write_cfg(settings):
-    with open(STAR_ROD_PATH + '/cfg/main.cfg', 'w') as f:
+def write_cfg(settings, file=None):
+    if file == None:
+        file = STAR_ROD_PATH + '/cfg/main.cfg'
+    with open(file, 'w') as f:
         f.write('% Auto-generated config file, modify with care.\n')
         for (key, value) in settings.items():
             f.write(f'{key} = {value}\n')
@@ -244,7 +269,7 @@ def _expand_images(root_dir, src_dir, patch_dir, path=''):
                 i.frombytes(raster.data)
                 i.save(f'{root_dir}/{src_dir}/{path}{img_file}')
         else:
-            print(f'ERROR: Unexpected file: {root_dir}/{patch_dir}/{path}{f}' )
+            error(f'Unexpected file: {root_dir}/{patch_dir}/{path}{f}' )
 
 def expand_images():
     line = input('Are you sure you want to do this? This WILL clear the ' + \
@@ -261,7 +286,7 @@ def expand_images():
     ]
     for dir, _, patch_dir in image_dirs:
         if not os.path.isdir(f'{SCRIPT_PATH}{dir}/{patch_dir}'):
-            print(f'ERROR: {dir}/{patch_dir}: not a directory')
+            error(f'{dir}/{patch_dir}: not a directory')
             return
 
     for dir, src_dir, patch_dir in image_dirs:
@@ -300,7 +325,7 @@ def _compress_images(root_dir, src_dir = 'src', patch_dir = 'patch', path=''):
         elif f.lower().endswith('.png'): # For images we do a rough differ
             info = idx.get_image_info(src_file)
             if info == None:
-                print(f'ERROR: {src_file} ignored because not a valid palette PNG file')
+                error(f'{src_file} ignored because not a valid palette PNG file')
                 continue
 
             p, r = info
@@ -324,14 +349,14 @@ def _compress_images(root_dir, src_dir = 'src', patch_dir = 'patch', path=''):
 
             images[f] = {'raster': rref, 'palette': pref}
         else:
-            print(f'ERROR: Unexpected file: {root_dir}/{src_dir}/{path}{f}' )
+            error(f'Unexpected file: {root_dir}/{src_dir}/{path}{f}' )
     if len(images):
         with open(f'{root_dir}/{patch_dir}/{path}/_images.json', 'w') as f:
             json.dump(images, f, indent=2, sort_keys=True)
 
 def compress_images():
     imageIndex()
-    print('Compressing images...')
+    info('Compressing images...')
     image_dirs = [
             ('/sprite/npc', 'src', 'patch'),
             ('/sprite/player', 'src', 'patch'),
@@ -343,20 +368,21 @@ def compress_images():
     shutil.rmtree(IMAGEDATA_PATH, ignore_errors = True)
     for dir, src_dir, _ in image_dirs:
         if not os.path.isdir(f'{SCRIPT_PATH}{dir}/{src_dir}'):
-            print(f'ERROR: {dir}/{src_dir}: not a directory')
+            error(f'{dir}/{src_dir}: not a directory')
             return
 
     for dir, src_dir, patch_dir in image_dirs:
-        print(f'Compressing images in {dir}/{src_dir}')
+        info(f'Compressing images in {dir}/{src_dir}')
         _compress_images(SCRIPT_PATH + dir, src_dir, patch_dir)
 
 def copy_assets():
     cfg = read_cfg()
     args = ['-CopyAssets']
     if not os.path.isfile(cfg['RomPath']):
-        raise ValueError(f'Cannot find ROM at: {cfg["RomPath"]}')
+        error(f'Cannot find ROM at: {cfg["RomPath"]}')
+        return []
     if not os.path.isdir(os.path.dirname(cfg['RomPath']) + '/dump'):
-        print('We need to dump assets first')
+        info('We need to dump assets first. Doing it at this point.', show=True)
         args = ['-DumpAssets'] + args
     return args
 
@@ -371,27 +397,6 @@ def compile_map():
         args += ['-CompileShape', name, '-CompileHit', name]
 
     return args
-
-def help():
-    print("""
-python {} COMMANDS...
-
-where COMMANDS is a list of commands executed from left to right of the following:
-  compile-maps     Compile all the map files
-  compile          Compile the mod into a *.z64 file. NOTE this does not always
-                   compile the map files as well!
-  compress-images  Compress image data by referencing our original assets to
-                   minimize amount of game assets, writing all compressed data
-                   to the /imagedata folder
-  copy-assets      Copy all the dumped assets into the mod folder (and
-                   potentially dumping the mods from the ROM if needed)
-  expand-images    Expand image data from our patch files to populate the
-                   source folders
-  help             Prints this help message and exits
-  package          Packages this mod into a patch file. This should be done
-                   after a successful compile.
-""".format(sys.argv[0]))
-    quit()
 
 class Job:
     def combine(self, other):
@@ -434,43 +439,119 @@ class FnJob:
     def execute(self):
         self.__fn()
 
-copied = False
-def do_job(cmd):
+def copy_assets():
     global copied
-    if cmd == 'copy-assets':
-        if copied:
-            print('WARNING: multiple copy_assets will be ignored')
-            return None
-        copied = True
-        return StarRodJob(copy_assets())
-    elif cmd == 'compile-maps':
-        return StarRodJob(compile_map())
-    elif cmd == 'compile':
-        return StarRodJob(['-CompileMod'])
-    elif cmd == 'compress-images':
-        return FnJob(compress_images)
-    elif cmd == 'expand-images':
-        return FnJob(expand_images)
-    elif cmd == 'package':
-        return StarRodJob(['-PackageMod'])
-    elif cmd == 'help':
-        help()
-    else:
-        print(f'Illegal command: {cmd}')
-        quit()
+    if copied:
+        warn('multiple copy_assets will be ignored')
+        return None
+    copied = True
+    return StarRodJob(copy_assets())
+
+def print_help(maxwidth=70):
+    msg = '''{} COMMANDS...
+
+where COMMANDS is a list of commands executed from left to right of the following:
+'''.format(sys.argv[0])
+    namelen = max(len(name) for name, _, _ in job_descs) + 4
+    for name, desc, _ in job_descs:
+        msg += '  ' + name.ljust(namelen - 2)
+        if namelen > maxwidth // 2:
+            desc = '\n'.join(textwrap.wrap(desc, maxwidth - 4))
+            msg += '\n' + textwrap.indent(desc, ' ' * 4)
+        else:
+            desc = '\n'.join(textwrap.wrap(desc, maxwidth - namelen))
+            msg += textwrap.indent(desc, ' ' * namelen).strip()
+        msg += '\n'
+
+    print(msg)
+    quit()
+
+job_descs = [
+  ('compile', 'Compile the mod into a *.z64 file. NOTE this does not always ' +
+      'compile the map files as well!', lambda: StarRodJob(['-CompileMod'])),
+  ('compile-maps', 'Compile all the map files', lambda: StarRodJob(compile_map())),
+  ('compress-images', 'Compress image data by referencing our original ' +
+      'assets to minimize amount of game assets, writing all compressed ' +
+      'data to the /imagedata folder', lambda: FnJob(compress_images)),
+  ('copy-assets', 'Copy all the dumped assets into the mod folder (and ' +
+      'potentially dumping the mods from the ROM if needed)', copy_assets),
+  ('expand-images', 'Expand image data from our patch files to populate the ' +
+      'source folders', lambda: FnJob(expand_images)),
+  ('help', 'Prints this help message and exits', print_help),
+  ('package', 'Packages this mod into a patch file. This should be done ' +
+      'after a successful compile.', lambda: StarRodJob(['-PackageMod']) )
+]
+jobs = {job[0]: job for job in job_descs}
+
+def show_gui():
+    root = tk.Tk()
+
+    def do_job(job):
+        dlg = tk.Toplevel(root)
+        dlg.title('StarRodAux')
+        lbl = tk.Label(dlg, text='Running job...')
+        lbl.grid(row=0, column=0, padx=40, pady=40)
+        dlg.resizable(width=False, height=False)
+        dlg.grab_set()
+        dlg.transient(root)
+
+        def execute(job):
+            try:
+                job = job()
+                if job != None:
+                    job.execute()
+            except:
+                error('A python error has occurred:\n\n' + traceback.format_exc())
+            finally:
+                dlg.destroy()
+        t = threading.Thread(target=execute, args=(job,))
+        t.start()
+
+    row = 0
+    for name, _, job in job_descs:
+        if name == 'help': continue
+        b = tk.Button(root, text=name, width=30, command=partial(do_job, job))
+        b.grid(row=row, column=0, padx=10, pady=5)
+        row += 1
+    root.resizable(width=False, height=False)
+    root.mainloop()
 
 def main():
-    jobs = []
-    if len(sys.argv) <= 1:
-        help()
-    for cmd in sys.argv[1:]:
-        job = do_job(cmd)
-        if job == None: continue
-        if len(jobs) == 0 or not jobs[-1].combine(job):
-            jobs.append(job)
+    global STAR_ROD_PATH
 
-    for job in jobs:
-        job.execute()
+    STAR_ROD_PATH = os.getenv('STAR_ROD_PATH')
+    while not os.path.isfile(STAR_ROD_PATH + "/StarRod.jar"):
+        if HEADLESS:
+            STAR_ROD_PATH = input('Path to star-rod directory: ')
+
+    if not os.path.isfile(STAR_ROD_PATH + '/cfg/main.cfg'):
+        error('You must run StarRod first to initialize its configurations!')
+        quit()
+
+    try:
+        joblist = []
+        if len(sys.argv) <= 1:
+            if HEADLESS:
+                print_help()
+            else:
+                show_gui()
+        for cmd in sys.argv[1:]:
+            if cmd not in jobs:
+                error(f'Illegal command: {cmd}')
+                quit()
+            job = jobs[cmd][2]()
+            if job == None: continue
+            if len(joblist) == 0 or not joblist[-1].combine(job):
+                joblist.append(job)
+
+        for job in joblist:
+            job.execute()
+    except SystemExit:
+        pass
+    except KeyboardInterrupt:
+        print('Interrupted!')
+    except:
+        error('A python error has occurred:\n\n' + traceback.format_exc())
 
 if __name__ == '__main__':
     main()
