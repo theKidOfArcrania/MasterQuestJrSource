@@ -7,7 +7,7 @@ This is where the source code of 1.x Master Quest Jr code lies.
 Want to download the mod file? Visit https://github.com/Brotenko/PMMasterQuest
 to get downloads for PMMQ.
 
-## Getting started
+## Getting Started
 
 NOTE: This is ONLY tested with star rod 0.5.3. If you change to different versions
 beware you **will** have to tweak some code to get it to compile after you copy
@@ -21,7 +21,7 @@ When running staraux for the first time, you might be queried about where
 StarRod is installed. Make sure you select the directory corresponding to the
 StarRod installation location.
 
-### For windows users
+### For Windows Users
 Run `staraux.exe`, which should bring a GUI frontend similar to StarRod, with a
 few additional options:
   1. Select **copy-assets**. This command, similar to the StarRod's
@@ -41,7 +41,7 @@ Note that `staraux.exe` is created by running
 pyinstaller --onefile staraux.py
 ```
 
-### For linux/mac users
+### For Linux/Mac Users
 First make sure that all the python is installed, and the needed dependencies
 are installed as well:
 ```
@@ -53,7 +53,10 @@ Then, when initializing the project, run the following set of commands:
 python3 staraux.py copy-assets expand-images compile-maps
 ```
 
-## Contributing to image assets
+(If you run `python3 staraux.py` by itself, you'll have a GUI front-end similiar
+to the one described for Windows users).
+
+## Contributing to Image Assets
 When you want to modify an image asset, whether that be an image or a sprite,
 you MUST recompress all images by running the `compress-images` command in
 staraux. Otherwise, git WILL NOT know that you modified some image asset!
@@ -63,7 +66,7 @@ In fancy terms, the command is designed to be idempotent, which means running it
 multiple times in quick succession generally can be the same behavior as if you
 just ran it once only.
 
-## Contributing to map data
+## Contributing to Map Data
 If you tried to modify some map, you MUST recalculate the map collision/shape
 data, either in StarRod or staraux. Otherwise, the resulting shape/collision
 data may not be up-to-date when you compile the mod.
